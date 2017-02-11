@@ -1,0 +1,75 @@
+<?php
+/**
+ * The template for displaying the footer.
+ *
+ * Contains the closing of the #content div and all content after.
+ *
+ * @link https://developer.wordpress.org/themes/basics/template-files/#template-partials
+ *
+ * @package polestar
+ * @license GPL 2.0 
+ */
+
+?>
+
+		</div><!-- .polestar-container -->
+	</div><!-- #content -->
+
+	<?php do_action( 'polestar_footer_before' ); ?>
+
+	<footer id="colophon" class="site-footer <?php if ( is_active_sidebar( 'sidebar-footer' ) ) echo 'footer-active-sidebar'; ?>" role="contentinfo">
+
+		<?php do_action( 'polestar_footer_top' ); ?>
+
+		<div class="polestar-container">
+			<?php
+				if ( is_active_sidebar( 'sidebar-footer' ) ) {
+					$polestar_footer_sidebars = wp_get_sidebars_widgets();
+					?>
+					<div class="widgets widgets-<?php echo count( $polestar_footer_sidebars['sidebar-footer'] ) ?>" role="complementary" aria-label="<?php esc_html_e( 'Footer Widgets', 'polestar' ); ?>">
+						<?php dynamic_sidebar( 'sidebar-footer' ); ?>
+					</div>
+					<?php
+				}
+			?>
+		</div><!-- .polestar-container -->
+		<div class="bottom-bar">
+			<div class="polestar-container">
+				<div class="site-info">
+					<?php 
+					polestar_footer_text();
+
+					$credit_text = apply_filters(
+						'polestar_footer_credits',
+						sprintf( esc_html__( 'Theme by %s', 'puro-starter-theme' ), '<a href="https://purothemes.com/" rel="designer">Puro Themes</a>' )
+					);
+
+					if ( get_theme_mod( 'footer_text' ) ) {
+						echo ' - ';
+					}
+
+					if ( ! empty( $credit_text ) ) {	
+						echo wp_kses_post( $credit_text );
+					}
+					?>
+				</div><!-- .site-info -->
+				<?php wp_nav_menu( array( 'theme_location' => 'menu-2', 'container_class' => 'footer-menu', 'depth' => 1, 'fallback_cb' => '' ) ); ?>
+			</div></div><!-- .polestar-container -->
+		</div><!-- .bottom-bar -->
+
+		<?php do_action( 'polestar_footer_bottom' ); ?>
+		
+	</footer><!-- #colophon -->
+</div><!-- #page -->
+
+<?php if ( get_theme_mod( 'scroll_to_top' ) ) : ?>
+	<div id="scroll-to-top">
+		<span class="screen-reader-text"><?php esc_html_e( 'Scroll to top', 'polestar' ); ?></span>
+		<?php polestar_display_icon( 'up-arrow' ); ?>
+	</div>
+<?php endif; ?>
+
+<?php wp_footer(); ?>
+
+</body>
+</html>

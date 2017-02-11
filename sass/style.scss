@@ -1,0 +1,133 @@
+/*!
+Theme Name: Polestar
+Author: Puro
+Author URI: https://purothemes.com/
+Description: A clean, multipurpose, responsive theme ready for your business or blog site. Create stunning landing pages with Page Builder by SiteOrigin. Show off your latest posts with Jetpack Featured Content and Polestar's posts slider.
+Version: dev
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: polestar
+Tags: two-columns, right-sidebar, custom-background, custom-menu, custom-logo, featured-images, footer-widgets, sticky-post, threaded-comments, translation-ready, blog, ecommerce
+*/
+/*--------------------------------------------------------------
+>>> IMPORTANT NOTICE:
+----------------------------------------------------------------
+Please don't edit this file; any changes made here will be lost
+during the theme update process. If you need to make CSS 
+modifications, use the Additional CSS section in the Customizer 
+or a child theme.
+--------------------------------------------------------------*/
+/*--------------------------------------------------------------
+>>> TABLE OF CONTENTS:
+----------------------------------------------------------------
+# - Normalize
+# - Typography
+	## - Headings
+	## - Copy 
+# - Elements
+	## - Lists
+	## - Tables
+# - Forms
+	## - Buttons
+	## - Fields
+# - Navigation
+	## - Links
+	## - Menus
+	## - Breadcrumbs
+	## - Scroll to Top
+# - Accessibility
+# - Alignments
+# - Animations
+# - Clearings
+# - Jetpack
+	## - Infinite Scroll
+	## - Sharing
+# - Widgets
+	## - Calendar Widget
+	## - Search Widget
+	## - Tag Cloud Widget
+# - Site
+	## - Layout
+	## - Header
+	## - Posts and pages
+		## - Posts
+		## - Archives, Search Results & 404
+		## - Search Form
+		## - Related Posts
+		## - Author Box
+	## - Comments
+	## - Footer
+# - Media
+	## - Captions
+	## - Galleries
+	## - FlexSlider
+	## - Posts Slider	
+--------------------------------------------------------------*/
+@import "variables-site/variables-site";
+@import "mixins/mixins-master";
+@import "mixins/bourbon";
+
+/*--------------------------------------------------------------
+# - Normalize
+--------------------------------------------------------------*/
+@import "normalize";
+
+/*--------------------------------------------------------------
+# - Typography
+--------------------------------------------------------------*/
+@import "typography/typography";
+
+/*--------------------------------------------------------------
+# - Elements
+--------------------------------------------------------------*/
+@import "elements/elements";
+
+/*--------------------------------------------------------------
+# - Forms
+--------------------------------------------------------------*/
+@import "forms/forms";
+
+/*--------------------------------------------------------------
+# - Navigation
+--------------------------------------------------------------*/
+@import "navigation/navigation";
+
+/*--------------------------------------------------------------
+# - Accessibility
+--------------------------------------------------------------*/
+@import "modules/accessibility";
+
+/*--------------------------------------------------------------
+# - Alignments
+--------------------------------------------------------------*/
+@import "modules/alignments";
+
+/*--------------------------------------------------------------
+# - Animations
+--------------------------------------------------------------*/
+@import "modules/animations";
+
+/*--------------------------------------------------------------
+# - Clearings
+--------------------------------------------------------------*/
+@import "modules/clearings";
+	
+/*--------------------------------------------------------------
+# - Jetpack
+--------------------------------------------------------------*/
+@import "modules/jetpack";
+
+/*--------------------------------------------------------------
+# - Widgets
+--------------------------------------------------------------*/
+@import "site/secondary/widgets";
+
+/*--------------------------------------------------------------
+# - Content
+--------------------------------------------------------------*/
+@import "site/site";
+
+/*--------------------------------------------------------------
+# - Media
+--------------------------------------------------------------*/
+@import "media/media";

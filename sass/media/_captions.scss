@@ -1,0 +1,16 @@
+.wp-caption {
+	font-size: 13px; 
+	max-width: 100%;
+
+	img[class*="wp-image-"] {
+		@include center-block;
+	}
+
+	.wp-caption-text {
+		line-height: 3; 
+	}
+}
+
+.wp-caption-text {
+	text-align: center;
+}

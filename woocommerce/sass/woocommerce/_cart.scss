@@ -1,0 +1,196 @@
+.woocommerce-cart .entry-content {
+	padding: 0;
+}
+
+table.cart {
+	text-align: left;
+	
+	thead {
+		border: 1px solid $color__background-hr-dark;
+		
+		@media (max-width: 768px) {
+			display: none;
+		}			
+		
+		th {
+			background: $color__background-hr;
+			font-size: 14px; 
+		}		
+	}
+	
+	th,
+	td {
+		padding: 16px;
+		
+		@media (max-width: 768px) {
+			display: block;
+			text-align: right;
+		}		
+	}
+
+	.cart_item {
+		border: 1px solid $color__background-hr-dark;
+		font-size: 14px;
+		
+		@media (max-width: 768px) {
+
+			td:before {
+			    content: attr(data-title) ": ";
+			    font-weight: 700;
+			    float: left;						
+			}	
+
+			td:first-of-type {
+				padding-top: 30px;
+			}
+
+			td:last-of-type {
+				padding-bottom: 30px; 
+			}
+		}
+		
+		a {
+			color: $color__text-medium;
+			font-weight: bold;
+			font-weight: 600;
+			
+			&:hover {
+				color: $color__text-light;
+			}
+		}
+
+		.product-remove {
+			font-size: 20px; 
+			text-align: center;
+			
+			&:before {
+				content: none; 
+			}
+
+			@media (max-width: 768px) {
+				text-align: left;
+			}
+		}
+
+		.product-thumbnail {
+			
+			img {
+				height: auto; 
+				width: 80px;
+			}
+			
+			&:before {
+				content: none; 
+			}			
+		}
+
+		.product-quantity {
+
+			input {
+				font-size: 14px; 
+				width: 60px; 
+			}
+		}
+	}
+
+	td.actions {
+		padding: 30px 0 0; 
+		text-align: right;
+		
+		@media (max-width: 768px) {
+			display: block;
+			
+			* {
+				width: 100%; 
+			}
+		}
+		
+		.coupon {
+			float: left;
+			
+			@media (max-width: 768px) {
+				float: none;
+				margin-bottom: 5px;
+			}
+
+			label {
+				color: $color__text-dark;
+				font-size: 14px;
+				font-weight: bold;
+				font-weight: 600;
+				
+				@media (max-width: 768px) {
+					display: none;
+				}				
+			}
+
+			input {
+				margin-right: 5px; 
+				
+				@media (max-width: 768px) {
+					margin-bottom: 10px; 
+				}
+			}
+		}
+	}
+}
+
+.cart-collaterals {
+	width: 100%; 
+}
+
+.cart_totals {
+	float: right;
+	margin-top: 60px; 
+	text-align: left;
+	width: 40%;
+	
+	@media (max-width: 768px) {
+		width: 100%; 
+	}
+
+	h2 {
+		margin-top: 0;
+
+		@media (max-width: 768px) {
+			
+			.responsive & {
+				font-size: 23px; 	
+			}
+		}		
+		
+		@media (max-width: 480px) {
+
+			.responsive & {
+				font-size: 20px; 	
+			}
+		}			
+		
+	}
+	
+	table {
+		margin-bottom: 30px;
+		
+		tr {
+			border-bottom: 1px solid $color__background-hr-dark; 
+		}
+		
+		th,
+		td {
+			padding: 8px 0;
+		}
+
+		th {
+			color: $color__text-dark;
+		}
+		
+		td {
+			text-align: right;
+		}
+	}
+
+	.checkout-button {
+		float: right;
+		font-size: 16px; 
+	}
+}

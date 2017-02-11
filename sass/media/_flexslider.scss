@@ -1,0 +1,66 @@
+.flexslider {
+	position: relative;
+
+	.slides,
+	.flex-direction-nav {
+		list-style: none;
+		margin: 0;		
+	}
+
+	.slide {
+		background-repeat: no-repeat;
+		display: none;
+		overflow: hidden;
+		position: relative;		
+	}
+	
+	.flex-direction-nav a {
+		background: rgba(0, 0, 0, .65);
+		cursor: pointer;
+		display: block;
+		height: 50px;
+		opacity: 0;
+		padding-top: 16px; 
+		position: absolute;
+		margin-top: -25px;
+		text-align: center;
+		top: 50%;
+		transition: all .3s ease-in-out;
+		width: 50px;
+		z-index: 10;
+		
+		&:hover {
+			
+			svg path {
+				fill: rgba(255, 255, 255, .9);
+			}
+		}
+		
+		@at-root .flexslider:hover .flex-direction-nav a {
+			opacity: 1;
+		}
+
+		&.flex-prev {
+			padding-right: 3px;
+		}		
+			
+		&.flex-next {
+			padding-left: 3px; 
+			right: 0;
+		}
+
+		&:focus {
+			outline: 0; 
+		}
+
+		svg {
+			height: 18px;
+			width: auto;
+						
+			path {
+				fill: rgba(255, 255, 255, .6);
+				transition: .3s; 
+			}
+		}
+	}
+}

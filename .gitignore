@@ -1,0 +1,6 @@
+config.codekit
+.DS_Store
+dist/
+tmp
+/sass/maps
+/config.codekit3

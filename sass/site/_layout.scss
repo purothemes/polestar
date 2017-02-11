@@ -1,0 +1,58 @@
+.polestar-container {
+	margin: 0 auto;
+	max-width: none; 
+	padding: 0 25px;
+	position: relative;
+	width: 1190px; // 1140px container.
+	
+	.responsive & {
+		max-width: 1190px; // 1140px container.
+		width: 100%; 
+	}
+	
+	.full-width & {
+		max-width: none;
+	}
+}
+
+.site-content {
+	@include clearfix;
+}
+
+// Content area without sidebar.
+.content-area {
+	width: 100%; 
+}
+
+// Content area with sidebar.
+.sidebar .content-area {
+	float: left;
+	width: 70%;	 	
+	
+	@media (max-width: 768px) {
+		border: 0;
+		padding-right: 0;
+		width: 100%; 	
+	}
+}
+
+// No sidebar template and setting.
+.page-layout-no-sidebar.sidebar .content-area,
+.page-template-no-sidebar.sidebar .content-area {
+	float: none;
+	width: 100%; 
+}
+
+// Sidebar.
+.widget-area {
+	float: right;	
+	padding-left: 4%;
+	width: 30%;	
+	
+	@media (max-width: 768px) {
+    	border-top: 1px solid $color__background-hr-dark;
+    	margin-top: 60px;
+		padding: 50px 0 0;		
+		width: 100%;
+	}
+}

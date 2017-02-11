@@ -1,0 +1,47 @@
+.woocommerce-message,
+.woocommerce-error,
+.woocommerce-info {
+	align-items: center;
+	background: $color__background-hr;
+	@include clearfix();
+	color: $color__text-dark;
+	display: flex;
+	margin: 0 0 25px;
+	min-height: 71px;
+	padding: 15px 20px;
+	position: relative;
+	width: auto;
+	word-wrap: break-word;
+	
+	@media (max-width: 768px) {
+		display: block;
+		font-size: 14px; 
+	}
+
+	.button {
+		position: absolute;
+		right: 20px;
+		top: 15px;
+				
+		@media (max-width: 768px) {
+			float: right;
+			font-size: 13px;
+			position: static;
+		}		
+	}
+
+	.showcoupon {
+		margin-left: 10px; 
+	}
+}
+
+.woocommerce-error {
+	display: block;
+	font-size: 14px; 
+	list-style: none;
+	padding: 20px 20px;
+	
+	li {
+		line-height: 2.5; 
+	}
+}

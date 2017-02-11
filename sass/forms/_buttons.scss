@@ -1,0 +1,40 @@
+.button,
+button,
+input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+	background: $color__accent;
+	border: 0;
+	border-radius: 2px;
+	color: #fff;
+	font-family: $font__main;
+	font-size: 14px;
+	line-height: normal;  
+	padding: 13px 25px 12px;
+	text-transform: uppercase;
+	transition: .3s;
+
+	&:hover {
+		background: rgba(77, 143, 251, .8);
+		color: #fff;
+	}
+
+	&:visited {
+		color: #fff; 
+	}
+
+	&:active,
+	&:focus {
+		background: $color__accent;
+		color: #fff;
+		outline: none;
+	}
+
+	&[disabled] {
+		opacity: 0.6;
+		
+		&:hover {
+			box-shadow: none;
+		}
+	}
+}
