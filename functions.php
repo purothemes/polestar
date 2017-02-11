@@ -193,28 +193,6 @@ function polestar_enqueue_flexslider() {
 	wp_enqueue_script( 'jquery-flexslider' );
 }
 
-if ( ! function_exists( 'polestar_remove_current_menu_class' ) ) :
-/**
- * Unset the current menu class.
- */	
-function polestar_remove_current_menu_class( $classes ) {
-    $disallowed_class_names = array(
-        'current-menu-item',
-        'current_page_item',
-    );
-    foreach ( $classes as $class ) {
-        if ( in_array( $class, $disallowed_class_names ) ) {
-            $key = array_search( $class, $classes );
-            if ( false !== $key ) {
-                unset( $classes[$key] );
-            }
-        }
-    }
-    return $classes;
-}
-endif;
-add_filter( 'nav_menu_css_class', 'polestar_remove_current_menu_class', 10, 1 );
-
 /**
  * Customizer additions.
  */
