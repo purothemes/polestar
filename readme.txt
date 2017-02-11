@@ -2,7 +2,7 @@
 
 Contributors: Puro
 
-Tags: two-columns, right-sidebar, custom-background, custom-menu, custom-logo, featured-images, footer-widgets, sticky-post, threaded-comments, translation-ready, blog, ecommerce
+Tags: two-columns, right-sidebar, custom-background, custom-menu, custom-logo, featured-images, footer-widgets, sticky-post, threaded-comments, translation-ready, blog, e-commerce
 
 Requires at least: 4.1
 Tested up to: 4.7.2
