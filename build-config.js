@@ -25,6 +25,7 @@ module.exports = {
     js: {
         src: [
             'js/**/*.js',
+            'woocommerce/js/**/*.js',
             'inc/*/js/**/*.js',
             '!inc/customizer-library/js/**',                        // Ignore inc/customizer-library/js/ contents.
             '!{node_modules,node_modules/**}',                      // Ignore node_modules/ and contents.

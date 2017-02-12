@@ -22,7 +22,7 @@ get_header(); ?>
 				echo sharing_display();
 			}
 
-			if ( get_theme_mod( 'post_navigation' ) ) :
+			if ( get_theme_mod( 'post_navigation', true ) ) :
 				polestar_the_post_navigation();
 			endif;
 

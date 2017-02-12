@@ -12,13 +12,13 @@
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 	<?php 
-	if ( is_single() && has_post_thumbnail() && get_theme_mod( 'post_featured_image', customizer_library_get_default( 'post_featured_image' ) ) ) : ?>
+	if ( is_single() && has_post_thumbnail() && get_theme_mod( 'post_featured_image', true ) ) : ?>
 		<div class="entry-thumbnail">
 			<?php polestar_entry_thumbnail_meta(); ?>
 			<?php the_post_thumbnail(); ?>			
 			</a>
 		</div>
-	<?php elseif ( has_post_thumbnail() && get_theme_mod( 'archive_featured_image', customizer_library_get_default( 'archive_featured_image' ) ) ) : ?>
+	<?php elseif ( has_post_thumbnail() && get_theme_mod( 'archive_featured_image', true ) ) : ?>
 		<div class="entry-thumbnail">
 			<?php polestar_entry_thumbnail_meta(); ?>
 			<a href="<?php the_permalink(); ?>">			

@@ -41,7 +41,7 @@
 
 					$credit_text = apply_filters(
 						'polestar_footer_credits',
-						sprintf( esc_html__( 'Theme by %s', 'puro-starter-theme' ), '<a href="https://purothemes.com/" rel="designer">Puro Themes</a>' )
+						sprintf( esc_html__( 'Theme by %s', 'polestar' ), '<a href="https://purothemes.com/" rel="designer">Puro Themes</a>' )
 					);
 
 					if ( get_theme_mod( 'footer_text' ) ) {
@@ -62,7 +62,7 @@
 	</footer><!-- #colophon -->
 </div><!-- #page -->
 
-<?php if ( get_theme_mod( 'scroll_to_top' ) ) : ?>
+<?php if ( get_theme_mod( 'scroll_to_top', true ) ) : ?>
 	<div id="scroll-to-top">
 		<span class="screen-reader-text"><?php esc_html_e( 'Scroll to top', 'polestar' ); ?></span>
 		<?php polestar_display_icon( 'up-arrow' ); ?>

@@ -8,7 +8,7 @@
  * @license GPL 2.0 
  */
 
-define( 'POLESTAR_THEME_VERSION', 'dev' );
+define( 'POLESTAR_THEME_VERSION', '' );
 define( 'POLESTAR_THEME_JS_PREFIX', '' );
 define( 'POLESTAR_THEME_CSS_PREFIX', '' );
 
