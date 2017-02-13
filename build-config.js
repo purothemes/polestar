@@ -15,7 +15,7 @@ module.exports = {
         ],
         external: {
             src: [
-                'woocommerce/sass/**/*.scss',
+                'woocommerce/sass/*.scss',
             ],
             include: [
                 'woocommerce/sass'
