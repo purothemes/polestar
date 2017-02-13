@@ -1,5 +1,5 @@
 /*!
-Version:  dev
+Version: dev
 */
 /*--------------------------------------------------------------
 # Layout
@@ -177,12 +177,67 @@ textarea {
   textarea:focus {
     border-color: #d9d9d9; }
 
+input[type="checkbox"] {
+  margin-right: 2px; }
+
 select {
   border: 1px solid #ebebeb;
   max-width: 100%; }
 
 textarea {
   width: 100%; }
+
+/*--------------------------------------------------------------
+# WooCommerce Forms
+--------------------------------------------------------------*/
+.woocommerce form .form-row {
+  margin-bottom: 25px; }
+  .woocommerce form .form-row::after {
+    clear: both;
+    content: "";
+    display: table; }
+  .woocommerce form .form-row label {
+    color: #2d2d2d;
+    display: block;
+    font-size: 14px;
+    font-weight: 600;
+    margin-bottom: 4px; }
+    .woocommerce form .form-row label .required {
+      color: rgba(255, 0, 0, 0.6); }
+    .woocommerce form .form-row label.checkbox {
+      display: inline; }
+  .woocommerce form .form-row select {
+    width: 100%; }
+  .woocommerce form .form-row .input-text {
+    box-sizing: border-box;
+    width: 100%; }
+  .woocommerce form .form-row.woocommerce-invalid label {
+    color: rgba(255, 0, 0, 0.6); }
+  .woocommerce form .form-row.woocommerce-invalid .select2-container,
+  .woocommerce form .form-row.woocommerce-invalid input.input-text,
+  .woocommerce form .form-row.woocommerce-invalid select {
+    border-color: rgba(255, 0, 0, 0.6); }
+  .woocommerce form .form-row.woocommerce-validated .select2-container,
+  .woocommerce form .form-row.woocommerce-validated input.input-text,
+  .woocommerce form .form-row.woocommerce-validated select {
+    border-color: rgba(0, 128, 0, 0.6); }
+
+.woocommerce form .form-row-first,
+.woocommerce form .form-row-last {
+  float: left;
+  overflow: visible;
+  width: 47.8260869565%; }
+  @media (max-width: 768px) {
+    .woocommerce form .form-row-first,
+    .woocommerce form .form-row-last {
+      float: none;
+      width: 100%; } }
+
+.woocommerce form .form-row-last {
+  float: right; }
+
+.woocommerce form .form-row-wide {
+  clear: both; }
 
 /*--------------------------------------------------------------
 # Main
@@ -658,14 +713,6 @@ textarea {
         margin-right: 0;
         width: 100%; } }
 
-.woocommerce-account .woocommerce-MyAccount-navigation {
-  float: left;
-  width: 30%; }
-
-.woocommerce-account .woocommerce-MyAccount-content {
-  float: right;
-  width: 68%; }
-
 /*--------------------------------------------------------------
 # Notifications
 --------------------------------------------------------------*/
@@ -676,6 +723,7 @@ textarea {
   background: #f6f6f6;
   color: #2d2d2d;
   display: flex;
+  font-size: 14px;
   margin: 0 0 25px;
   min-height: 71px;
   padding: 15px 20px;
@@ -875,52 +923,6 @@ table.cart {
       float: none;
       width: 100%; } }
 
-.woocommerce form .form-row {
-  margin-bottom: 25px; }
-  .woocommerce form .form-row::after {
-    clear: both;
-    content: "";
-    display: table; }
-  .woocommerce form .form-row label {
-    color: #2d2d2d;
-    display: block;
-    font-size: 14px;
-    font-weight: 600; }
-    .woocommerce form .form-row label.checkbox {
-      display: inline; }
-  .woocommerce form .form-row select {
-    width: 100%; }
-  .woocommerce form .form-row .input-text {
-    box-sizing: border-box;
-    width: 100%; }
-  .woocommerce form .form-row.woocommerce-invalid label {
-    color: rgba(255, 0, 0, 0.6); }
-  .woocommerce form .form-row.woocommerce-invalid .select2-container,
-  .woocommerce form .form-row.woocommerce-invalid input.input-text,
-  .woocommerce form .form-row.woocommerce-invalid select {
-    border-color: rgba(255, 0, 0, 0.6); }
-  .woocommerce form .form-row.woocommerce-validated .select2-container,
-  .woocommerce form .form-row.woocommerce-validated input.input-text,
-  .woocommerce form .form-row.woocommerce-validated select {
-    border-color: rgba(0, 128, 0, 0.6); }
-
-.woocommerce form .form-row-first,
-.woocommerce form .form-row-last {
-  float: left;
-  overflow: visible;
-  width: 47.8260869565%; }
-  @media (max-width: 768px) {
-    .woocommerce form .form-row-first,
-    .woocommerce form .form-row-last {
-      float: none;
-      width: 100%; } }
-
-.woocommerce form .form-row-last {
-  float: right; }
-
-.woocommerce form .form-row-wide {
-  clear: both; }
-
 .woocommerce #order_review_heading,
 .woocommerce #order_review {
   clear: right;
@@ -1007,3 +1009,43 @@ table.cart {
   float: right;
   font-size: 16px;
   margin-top: 30px; }
+
+/*--------------------------------------------------------------
+# Account Dashboard
+--------------------------------------------------------------*/
+.woocommerce-account h2 {
+  font-size: 23px;
+  margin-bottom: 10px; }
+
+.woocommerce-account .login {
+  max-width: 50%; }
+  .woocommerce-account .login label[for*="rememberme"] {
+    font-size: 13px;
+    font-weight: normal;
+    line-height: normal;
+    margin-top: 10px; }
+  .woocommerce-account .login .lost_password {
+    font-size: 13px; }
+
+.woocommerce-account .woocommerce-MyAccount-navigation {
+  border: 1px solid #ebebeb;
+  float: left;
+  margin-right: 4%;
+  width: 26%; }
+  .woocommerce-account .woocommerce-MyAccount-navigation ul {
+    font-size: 14px;
+    list-style: none;
+    margin: 0;
+    padding: 15px 25px; }
+    .woocommerce-account .woocommerce-MyAccount-navigation ul li {
+      line-height: 2.5; }
+      .woocommerce-account .woocommerce-MyAccount-navigation ul li a {
+        color: #626262; }
+        .woocommerce-account .woocommerce-MyAccount-navigation ul li a:hover {
+          color: #4d8ffb; }
+
+.woocommerce-account .woocommerce-MyAccount-content {
+  float: right;
+  width: 68%; }
+
+/*# sourceMappingURL=sass/maps/woocommerce.css.map */

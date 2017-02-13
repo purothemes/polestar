@@ -29,6 +29,10 @@ textarea {
 	}
 }
 
+input[type="checkbox"] {
+	margin-right: 2px; 
+}
+
 select {
 	border: 1px solid $color__background-hr-dark;
 	max-width: 100%;

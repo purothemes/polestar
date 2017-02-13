@@ -1,0 +1,80 @@
+.woocommerce {
+
+	form {
+
+		.form-row {
+			@include clearfix();
+			margin-bottom: 25px; 
+
+			label {
+				color: $color__text-dark;
+				display: block;
+				font-size: 14px;
+				font-weight: 600;
+				margin-bottom: 4px;   
+
+				.required {
+					color: rgba(255, 0, 0, .6);
+				}
+
+				&.inline {
+				}
+
+				&.checkbox {
+					display: inline;
+				}
+			}
+
+			select {
+				width: 100%;
+			}
+
+			.input-text {
+				box-sizing: border-box;
+				width: 100%;
+			}
+
+			&.woocommerce-invalid {
+
+				label {
+					color: rgba(255, 0, 0, .6);
+				}
+				
+				.select2-container,
+				input.input-text,
+				select {
+					border-color: rgba(255, 0, 0, .6);
+				}
+			}
+
+			&.woocommerce-validated {
+
+				.select2-container,
+				input.input-text,
+				select {
+					border-color: rgba(0, 128, 0, .6);
+				}
+			}			
+		}
+
+		.form-row-first,
+		.form-row-last {
+			float: left;
+			overflow: visible;
+			width: 47.8260869565%;
+			
+			@media (max-width: 768px) {
+				float: none;
+				width: 100%; 
+			}
+		}
+
+		.form-row-last {
+			float: right;
+		}
+
+		.form-row-wide {
+			clear: both;
+		}
+	}
+}
