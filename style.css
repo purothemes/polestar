@@ -3,7 +3,7 @@ Theme Name: Polestar
 Author: Puro
 Author URI: https://purothemes.com/
 Description: A clean, multipurpose, responsive theme ready for your business or blog site. Create stunning landing pages with Page Builder by SiteOrigin. Show off your latest posts with Jetpack Featured Content and Polestar's posts slider.
-Version: dev
+Version: 1.0.0
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Text Domain: polestar
@@ -1405,6 +1405,7 @@ a {
       padding-right: 0;
       width: 100%; } }
 
+.page-template-full-width .content-area,
 .page-layout-no-sidebar.sidebar .content-area,
 .page-template-no-sidebar.sidebar .content-area {
   float: none;
