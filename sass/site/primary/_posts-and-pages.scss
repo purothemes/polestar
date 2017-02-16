@@ -24,7 +24,7 @@
 }
 
 .entry-header {
-	margin-bottom: 25px; 
+	margin-bottom: 25px;
 }
 
 /*--------------------------------------------------------------
@@ -94,40 +94,7 @@
 		&:last-of-type:after {
 			content: none; 
 		}
-
-		// &:before {
-		// 	color: $color__text-light;
-		// 	display: inline-block;
-		// 	font-family: $font__icon;
-		// 	font-size: 13px;
-		// 	line-height: 1;
-		// 	margin-right: 6px;
-		// }
-
-		// &.entry-date:before {
-		// 	content: "\e901";
-		// }
-
-		// &.byline:before {
-		// 	content: "\f040";
-		// }
-
-		// &.comments-link:before {
-		// 	content: "\e900";
-		// }	
-	}
-
-	// svg {
-	// 	height: 12px;
-	// 	margin-right: 3px;
-	// 	position: relative;
-	// 	top: 2px;
-	// 	width: auto;  
-
-	// 	path {
-	// 		fill: $color__text-light;
-	// 	}
-	// }		
+	}	
 
 	.updated:not(.published) {
 		display: none;
@@ -139,8 +106,12 @@
 	display: inline;
 }
 
+.entry-thumbnail,
+.entry-video {
+	margin-bottom: 25px; 
+}
+
 .entry-thumbnail {
-	margin: 25px 0;
 	position: relative;
 	text-align: center;
 	
@@ -149,6 +120,7 @@
 		left: 10px; 
 		position: absolute;
 		top: 10px;
+		z-index: 1;  
 
 		ul {
 			display: inline-block;
@@ -224,33 +196,6 @@
 	}
 }
 
-// .entry-image {
-// 	height: 420px;
-// 	margin: 0 0 60px;
-// 	overflow: hidden;
-// 	position: relative;
-// 	text-align: center;
-// 	width: 100%; 
-
-// 	@media (max-width: 768px) {
-// 		height: 380px; 
-// 	}
-
-// 	@media (max-width: 480px) {
-// 		height: 155px; 
-// 	}			
-
-// 	img {
-// 		height: auto;
-// 		margin: auto;
-// 		position: absolute;
-// 		top: 50%;
-// 		left: 50%;
-// 		transform: translate(-50%, -50%);
-// 		width: 100%;
-// 	}
-// }
-
 .more-wrapper {
 	display: block;
 	font-size: 14px;
@@ -259,8 +204,8 @@
 	span {
 		font-size: 13px;
 		position: relative;
-		right: -1px;
-		top: 1px;
+    	right: -4px;
+    	top: 1.5px;
 	} 
 	
 	a {
@@ -284,7 +229,7 @@
 
 	.page-links-title {
 		background: none;
-		color: $color__text-medium;
+		color: $color__text-dark;
 		font-weight: 600; 
 		padding: 0;
 		text-transform: none;
@@ -370,10 +315,14 @@
 }
 
 /*--------------------------------------------------------------
-## - Archives, Search Results & 404
+## - Pages, Archives, Search Results & 404
 --------------------------------------------------------------*/
 .page-header {
-	margin-bottom: 25px; 
+	margin-bottom: 25px;
+	
+	.page-title {
+		margin-top: 0; 
+	}
 }
 
 .archive:not(.woocommerce) .page-title {
@@ -433,7 +382,7 @@
 		padding: 0;
 		position: relative;
 		right: 36px;
-		top: 3px;
+		top: 2px;
 
 		svg {
 			height: 16px;
@@ -594,5 +543,16 @@
 		div {
 			font-size: 14px; 
 		}	
+	}
+}
+
+/*--------------------------------------------------------------
+## - Post Password Form
+--------------------------------------------------------------*/
+.post-password-form {
+	
+	label {
+		color: $color__text-dark;
+		font-weight: 600; 
 	}
 }

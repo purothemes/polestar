@@ -63,6 +63,10 @@
     content: "\f111";
 }
 
+.icon-circle:before {
+    content: "\f111";
+}
+
 .icon-xing:before {
     content: "\f168";
 }
@@ -108,53 +112,57 @@
 }
 
 .icon-weibo:before {
-  content: "\f18a";
+    content: "\f18a";
 }
 
 .icon-stack-exchange:before {
-  content: "\f18d";
+    content: "\f18d";
 }
 
 .icon-wordpress:before {
-  content: "\f19a";
+    content: "\f19a";
 }
 
 .icon-delicious:before {
-  content: "\f1a5";
+    content: "\f1a5";
 }
 
 .icon-digg:before {
-  content: "\f1a6";
+    content: "\f1a6";
 }
 
 .icon-behance2:before {
-  content: "\f1b4";
+    content: "\f1b4";
 }
 
 .icon-deviantart:before {
-  content: "\f1bd";
+    content: "\f1bd";
 }
 
 .icon-soundcloud:before {
-  content: "\f1be";
+    content: "\f1be";
 }
 
 .icon-vine:before {
-  content: "\f1ca";
+    content: "\f1ca";
 }
 
 .icon-codepen:before {
-  content: "\f1cb";
+    content: "\f1cb";
+}
+
+.icon-circle-o-notch:before {
+    content: "\f1ce";
 }
 
 .icon-vimeo:before {
-  content: "\f27d";
+    content: "\f27d";
 }
 
 .icon-reddit-alien:before {
-  content: "\f281";
+    content: "\f281";
 }
 
 .icon-behance:before {
-  content: "\eaa8";
+    content: "\eaa8";
 }

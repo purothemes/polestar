@@ -45,4 +45,8 @@
 	li {
 		line-height: 2.5; 
 	}
+
+	~ p {
+		margin-bottom: 26px; 
+	}
 }

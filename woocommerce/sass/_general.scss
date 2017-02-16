@@ -22,6 +22,23 @@
 			padding: 0;
 		}
 	}
+
+	// Loading overlay.
+	.blockUI:before {
+		-webkit-animation: fa-spin 2s infinite linear;
+  		animation: fa-spin 2s infinite linear;
+		content: "\f1ce";
+		font-family: $font__icon;
+		font-size: 30px;
+		height: 30px;
+		left: 50%;
+		line-height: 30px;
+		margin-top: -15px;
+		margin-left: -15px;
+		position: absolute;
+		top: 50%;
+		width: 30px;
+	}	
 	
 	// Breadcrumbs.
 	.woocommerce-breadcrumb {

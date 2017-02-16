@@ -29,6 +29,12 @@
 		margin-right: 4%; 
 		width: 26%;
 		
+		@media (max-width: 768px) {
+			float: none;
+			margin: 0;
+			width: 100%; 
+		}		
+		
 		ul {
 			font-size: 14px; 
 			list-style: none;
@@ -51,6 +57,53 @@
 
 	.woocommerce-MyAccount-content {
 		float: right;
-		width: 68%;
+		width: 70%;
+		
+		@media (max-width: 768px) {
+			float: none;
+			margin-top: 50px; 
+			width: 100%; 
+		}
+
+		h3 {
+			margin-top: 0;
+		}
+
+		p {
+			margin-bottom: 26px; 
+		}
+
+		// Addresses.
+		.col2-set {
+			float: none;
+			width: 100%; 
+		}
+
+		.woocommerce-Address {
+			float: left;
+			position: relative;
+			width: 50%;
+			
+			@media (max-width: 768px) {
+				float: none;
+				width: 100%; 
+			}
+			
+			&.col-1 {
+				padding-right: 2.5%;
+					
+				@media (max-width: 768px) {
+					padding-right: 0; 
+				}				
+			}
+
+			&.col-2 {
+				padding-left: 2.5%;
+				
+				@media (max-width: 768px) {
+					padding-left: 0; 
+				}					
+			}
+		}
 	}	
 }
