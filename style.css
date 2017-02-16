@@ -216,9 +216,9 @@ input[type="search"]::-webkit-search-decoration {
   -webkit-appearance: none; }
 
 fieldset {
-  border: 1px solid #c0c0c0;
-  margin: 0 2px;
-  padding: 0.35em 0.625em 0.75em; }
+  border: 0;
+  margin: 0;
+  padding: 0; }
 
 legend {
   border: 0;
@@ -310,7 +310,7 @@ h6 {
   text-transform: uppercase; }
 
 p {
-  margin: 0 0 27px; }
+  margin: 0 0 26px; }
 
 dfn,
 cite,
@@ -322,7 +322,7 @@ blockquote {
   border-left: 3px solid #4d8ffb;
   font-style: italic;
   font-size: 16px;
-  margin: 0 0 27px;
+  margin: 0 0 26px;
   padding: 15px 0 15px 25px; }
   blockquote p {
     margin-bottom: 0; }
@@ -335,13 +335,13 @@ blockquote {
     margin-top: 15px; }
 
 address {
-  margin: 0 0 27px; }
+  margin: 0 0 26px; }
 
 pre {
   background: #eee;
   font: 14px "Courier 10 Pitch", Courier, monospace;
   line-height: 1.6;
-  margin-bottom: 27px;
+  margin-bottom: 26px;
   max-width: 100%;
   overflow: auto;
   padding: 25px; }
@@ -458,6 +458,7 @@ input[type="submit"] {
   border: 0;
   border-radius: 2px;
   color: #fff;
+  display: inline-block;
   font-family: "Open Sans", sans-serif;
   font-size: 14px;
   line-height: normal;
@@ -554,6 +555,12 @@ select {
 
 textarea {
   width: 100%; }
+
+fieldset legend {
+  color: #2d2d2d;
+  font-family: "Montserrat", sans-serif;
+  font-size: 18px;
+  padding: 10px 0; }
 
 /*--------------------------------------------------------------
 # - Navigation
@@ -1202,6 +1209,26 @@ a {
     position: absolute;
     width: 2px; }
 
+.fa-spin {
+  -webkit-animation: fa-spin 2s infinite linear;
+  animation: fa-spin 2s infinite linear; }
+
+@-webkit-keyframes fa-spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg); }
+  100% {
+    -webkit-transform: rotate(359deg);
+    transform: rotate(359deg); } }
+
+@keyframes fa-spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg); }
+  100% {
+    -webkit-transform: rotate(359deg);
+    transform: rotate(359deg); } }
+
 /*--------------------------------------------------------------
 # - Clearings
 --------------------------------------------------------------*/
@@ -1405,9 +1432,7 @@ a {
       padding-right: 0;
       width: 100%; } }
 
-.page-template-full-width .content-area,
-.page-layout-no-sidebar.sidebar .content-area,
-.page-template-no-sidebar.sidebar .content-area {
+.page-template-full-width .content-area {
   float: none;
   width: 100%; }
 
@@ -1418,7 +1443,7 @@ a {
   @media (max-width: 768px) {
     .widget-area {
       border-top: 1px solid #ebebeb;
-      margin-top: 60px;
+      margin-top: 50px;
       padding: 50px 0 0;
       width: 100%; } }
 
@@ -1626,15 +1651,19 @@ a {
 .group-blog .byline {
   display: inline; }
 
+.entry-thumbnail,
+.entry-video {
+  margin-bottom: 25px; }
+
 .entry-thumbnail {
-  margin: 25px 0;
   position: relative;
   text-align: center; }
   .entry-thumbnail .thumbnail-meta {
     display: block;
     left: 10px;
     position: absolute;
-    top: 10px; }
+    top: 10px;
+    z-index: 1; }
     .entry-thumbnail .thumbnail-meta ul {
       display: inline-block;
       list-style: none;
@@ -1695,8 +1724,8 @@ a {
   .more-wrapper span {
     font-size: 13px;
     position: relative;
-    right: -1px;
-    top: 1px; }
+    right: -4px;
+    top: 1.5px; }
   .more-wrapper a {
     color: #2d2d2d;
     font-weight: 600; }
@@ -1711,7 +1740,7 @@ a {
     font-weight: 500; }
   .page-links .page-links-title {
     background: none;
-    color: #626262;
+    color: #2d2d2d;
     font-weight: 600;
     padding: 0;
     text-transform: none; }
@@ -1748,10 +1777,12 @@ a {
     color: #fff; }
 
 /*--------------------------------------------------------------
-## - Archives, Search Results & 404
+## - Pages, Archives, Search Results & 404
 --------------------------------------------------------------*/
 .page-header {
   margin-bottom: 25px; }
+  .page-header .page-title {
+    margin-top: 0; }
 
 .archive:not(.woocommerce) .page-title {
   font-size: 18px;
@@ -1796,7 +1827,7 @@ a {
   padding: 0;
   position: relative;
   right: 36px;
-  top: 3px; }
+  top: 2px; }
   .search-form button[type="submit"] svg {
     height: 16px;
     width: 16px; }
@@ -1923,6 +1954,13 @@ a {
           color: #4d8ffb; }
     .author-box .author-description div {
       font-size: 14px; }
+
+/*--------------------------------------------------------------
+## - Post Password Form
+--------------------------------------------------------------*/
+.post-password-form label {
+  color: #2d2d2d;
+  font-weight: 600; }
 
 /*--------------------------------------------------------------
 ## - Comments
@@ -2089,7 +2127,7 @@ a {
 --------------------------------------------------------------*/
 .site-footer {
   background: #fff;
-  margin-top: 50px; }
+  margin-top: 75px; }
   .site-footer.footer-active-sidebar {
     border-top: 1px solid #ebebeb; }
   .page-layout-no-footer-margin .site-footer {
@@ -2192,8 +2230,7 @@ object {
 /*--------------------------------------------------------------
 ## - Galleries
 --------------------------------------------------------------*/
-.gallery,
-.gallery-format-slider {
+.gallery {
   margin-bottom: 27px; }
 
 .gallery-item {
