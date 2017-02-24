@@ -14,7 +14,7 @@
 	<?php 
 	if ( is_single() && has_post_thumbnail() && get_theme_mod( 'post_featured_image', true ) ) : ?>
 		<div class="entry-thumbnail">
-			<?php polestar_entry_thumbnail_meta(); ?>
+			<?php if ( get_theme_mod( 'post_categories', true ) ) polestar_entry_thumbnail_meta(); ?>
 			<?php the_post_thumbnail(); ?>			
 			</a>
 		</div>
@@ -50,7 +50,13 @@
 
 	<div class="entry-content">
 		<?php
-			the_content();
+			if ( is_single() ) :
+				the_content();
+			elseif ( get_theme_mod( 'archive_post_content' ) == 'excerpt' ) : 
+				the_excerpt();
+			else : 
+				the_content();
+			endif;
 
 			wp_link_pages( array(
 				'before' => '<div class="page-links"><span class="page-links-title">' . esc_html__( 'Pages:', 'polestar' ) . '</span>',

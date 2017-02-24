@@ -29,7 +29,7 @@ function polestar_theme_options() {
 	    'priority' => '10'
 	);
 
-	// Branding.
+	// Header.
 	$section = 'header';
 
 	$sections[] = array(
@@ -47,6 +47,7 @@ function polestar_theme_options() {
 		'description' => esc_html__( 'A custom logo to be displayed instead of the site title.', 'polestar' ),
 		'default' => '',
 		'mime_type' => 'image',
+		'priority' => '10',
 	);
 
 	$options['tagline'] = array(
@@ -56,6 +57,7 @@ function polestar_theme_options() {
 	    'type' => 'checkbox',
 	    'description' => esc_html__( 'Display the website tagline below the logo or site title.', 'polestar' ),
 	    'default' => false,
+	    'priority' => '20'
 	);
 
 	$options['header_layout'] = array(
@@ -69,6 +71,7 @@ function polestar_theme_options() {
 		),
 	    'description' => esc_html__( 'Choose the header layout.', 'polestar' ),
 	    'default' => 'default',
+	    'priority' => '30'
 	);	
 
 	$options['sticky_header'] = array(
@@ -78,6 +81,7 @@ function polestar_theme_options() {
 	    'type' => 'checkbox',
 	    'description' => esc_html__( 'Sticks the header to the top of the screen as the user scrolls down.', 'polestar' ),
 	    'default' => true,
+	    'priority' => '40'
 	);
 
 	$options['sticky_header_scaling'] = array(
@@ -87,7 +91,46 @@ function polestar_theme_options() {
 	    'type' => 'checkbox',
 	    'description' => esc_html__( 'Scales the logo down as the header becomes sticky.', 'polestar' ),
 	    'default' => false,
-	);	
+	    'priority' => '50'
+	);
+
+	$options['header_background_color'] = array(
+	    'id' => 'header_background_color',
+	    'label'   => esc_html__( 'Background Color', 'polestar' ),
+	    'section' => $section,
+	    'type'    => 'color',
+	    'default' => '#ffffff',
+	    'priority' => '60'
+	);
+
+	$options['header_border_color'] = array(
+	    'id' => 'header_border_color',
+	    'label'   => esc_html__( 'Border Color', 'polestar' ),
+	    'section' => $section,
+	    'type'    => 'color',
+	    'default' => '#ebebeb',
+	    'priority' => '70'
+	);
+
+	$options['header_padding'] = array(
+	    'id' => 'header_padding',
+	    'label'   => esc_html__( 'Padding', 'polestar' ),
+	    'section' => $section,
+	    'type'    => 'number',
+	    'description' => esc_html__( 'Header top and bottom padding in px.', 'polestar' ),
+	    'default' => 25,
+	    'priority' => '80'
+	);
+
+	$options['header_margin'] = array(
+	    'id' => 'header_margin',
+	    'label'   => esc_html__( 'Bottom Margin', 'polestar' ),
+	    'section' => $section,
+	    'type'    => 'number',
+	    'description' => esc_html__( 'Header bottom margin in px.', 'polestar' ),
+	    'default' => 60,
+	    'priority' => '90'
+	);				
 
 	// Navigation.
 	$section = 'navigation';
@@ -113,9 +156,24 @@ function polestar_theme_options() {
 	    'label' => esc_html__( 'Mobile Menu', 'polestar' ),
 	    'section' => $section,
 	    'type' => 'checkbox',
-	    'description' => esc_html__( 'Use a mobile menu for small screen devices.', 'polestar' ),
+	    'description' => esc_html__( 'Use a mobile menu for small screen devices. Header Menu setting must be enabled.', 'polestar' ),
 	    'default' => true,
-	);			
+	);
+
+	$options['mobile_menu_collapse'] = array(
+	    'id' => 'mobile_menu_collapse',
+	    'label' => esc_html__( 'Mobile Menu Collapse', 'polestar' ),
+	    'section' => $section,
+	    'type' => 'number',
+	    'description' => esc_html__( 'The pixel resolution when the primary menu collapses into the mobile menu.', 'polestar' ),
+		'input_attrs'	=> array(
+			'min'	=> 480,
+			'max'	=> 3000,
+			'step'	=> 1
+		),
+		'default' => 1100,
+		'sanitize_callback'	=> 'customizer_library_sanitize_number_range',
+	);				
 
 	$options['menu_search'] = array(
 	    'id' => 'menu_search',
@@ -164,6 +222,46 @@ function polestar_theme_options() {
 	    'default' => true,
 	);
 
+	$options['archive_post_content'] = array(
+	    'id' => 'archive_post_content',
+	    'label' => esc_html__( 'Archive Post Content', 'polestar' ),
+	    'section' => $section,
+	    'type' => 'select',
+	    'choices' => array(
+    		'full' => 'Full Post Content',
+    		'excerpt' => 'Post Excerpt',
+		),
+	    'description' => esc_html__( 'Choose how to display your post content on blog and archive pages. Select Full Post Content if using the "more" quicktag.', 'polestar' ),
+	    'default' => 'full',
+	);
+
+	$options['read_more_text'] = array(
+	    'id' => 'read_more_text',
+	    'label'   => esc_html__( 'Read More Text', 'polestar' ),
+	    'section' => $section,
+	    'type'    => 'text',
+	    'description' => esc_html__( 'The link text displayed when posts are split using the "more" quicktag.', 'polestar' ),
+	    'default' => esc_html__( 'Continue reading', 'polestar' ),
+	);	
+
+	$options['excerpt_length'] = array(
+	    'id' => 'excerpt_length',
+	    'label'   => esc_html__( 'Excerpt Length', 'polestar' ),
+	    'section' => $section,
+	    'type'    => 'number',
+	    'description' => esc_html__( 'If no manual post excerpt is added one will be generated. How many words should it be?', 'polestar' ),
+	    'default' => 55,
+	);
+
+	$options['excerpt_more'] = array(
+	    'id' => 'excerpt_more',
+	    'label' => esc_html__( 'Post Excerpt Read More Link', 'polestar' ),
+	    'section' => $section,
+	    'type' => 'checkbox',
+	    'description' => esc_html__( 'Display the Read More text below the post excerpt.', 'polestar' ),
+	    'default' => true,
+	);		
+
 	$options['post_featured_image'] = array(
 	    'id' => 'post_featured_image',
 	    'label' => esc_html__( 'Post Featured Image', 'polestar' ),
@@ -180,6 +278,58 @@ function polestar_theme_options() {
 	    'type' => 'checkbox',
 	    'description' => esc_html__( 'Display the post categories on the archive and single post pages.', 'polestar' ),
 	    'default' => true,
+	);
+
+	$options['post_author_box'] = array(
+	    'id' => 'post_author_box',
+	    'label' => esc_html__( 'Post Author Box', 'polestar' ),
+	    'section' => $section,
+	    'type' => 'checkbox',
+	    'description' => esc_html__( 'Display the post author biographical info.', 'polestar' ),
+	    'default' => true,
+	);
+
+	$options['related_posts'] = array(
+	    'id' => 'related_posts',
+	    'label' => esc_html__( 'Related Posts', 'polestar' ),
+	    'section' => $section,
+	    'type' => 'checkbox',
+	    'description' => esc_html__( 'Display related posts on the single post page.', 'polestar' ),
+	    'default' => true,
+	);			
+
+	// Sidebar.
+	$section = 'sidebar';
+
+	$sections[] = array(
+	    'id' => $section,
+	    'title' => esc_html__( 'Sidebar', 'polestar' ),
+	    'priority' => '40',
+	    'panel' => $panel
+	);
+
+	$options['sidebar_position'] = array(
+	    'id' => 'sidebar_position',
+	    'label' => esc_html__( 'Position', 'polestar' ),
+	    'section' => $section,
+	    'type' => 'select',
+	    'choices' => array(
+    		'right' => 'Right',
+    		'left' => 'Left',
+		),
+	    'description' => esc_html__( 'Choose the sidebar position.', 'polestar' ),
+	    'default' => 'right',
+	    'priority' => '10'
+	);
+
+	$options['sidebar_width'] = array(
+	    'id' => 'sidebar_width',
+	    'label'   => esc_html__( 'Width', 'polestar' ),
+	    'section' => $section,
+	    'type'    => 'number',
+	    'description' => esc_html__( 'Enter the sidebar width as a percentage.', 'polestar' ),
+	    'default' => 30,
+	    'priority' => '20'
 	);		
 
 	// Footer.
@@ -188,8 +338,21 @@ function polestar_theme_options() {
 	$sections[] = array(
 	    'id' => $section,
 	    'title' => esc_html__( 'Footer', 'polestar' ),
-	    'priority' => '40',
+	    'priority' => '50',
 	    'panel' => $panel
+	);
+
+	$options['footer_layout'] = array(
+	    'id' => 'footer_layout',
+	    'label' => esc_html__( 'Footer Layout', 'polestar' ),
+	    'section' => $section,
+	    'type' => 'select',
+	    'choices' => array(
+    		'default' => 'Default',
+    		'full-width' => 'Full-Width',
+		),
+	    'description' => esc_html__( 'Choose the footer layout.', 'polestar' ),
+	    'default' => 'default',
 	);
 
 	$options['footer_text'] = array(

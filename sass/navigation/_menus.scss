@@ -209,7 +209,7 @@
 	right: -5px;
 	top: 6px;
 	transform: rotate(0deg);
-	transition: .5 ease-in-out;
+	transition: all .5s ease-in-out;
 	width: 36px;
 
 	span {
@@ -377,28 +377,6 @@ $sel: '';
     }
 }
 
-@media (max-width: 1100px) {
-
-	#masthead.mobile-menu #mobile-menu-button {
-		display: inline-block; 
-	}
-
-	#masthead.mobile-menu .main-navigation ul {
-		display: none; 
-	}
-	
-	#masthead.mobile-menu .main-navigation .search-icon {
-		display: none;
-	}
-}
-
-@media (min-width: 1100px) {
-
-	#masthead.mobile-menu #mobile-navigation {
-		display: none !important;
-	}
-}
-
 /*--------------------------------------------------------------
 ## Posts, Post and Comment Navigation
 --------------------------------------------------------------*/
@@ -431,55 +409,6 @@ $sel: '';
 		}			
 	}
 }
-
-// .pagination {	
-// 	text-align: center;
-	
-// 	.page-numbers {
-// 		border: 2px solid $color__background-hr-dark;
-// 		border-radius: 2px;
-// 		color: $color__text-medium;
-// 		display: inline-block;
-// 		font-size: 14px;
-// 		line-height: normal;  
-// 		margin-right: 3px;
-// 		padding: 13px 17px 12px;
-// 		text-transform: uppercase;
-// 		transition: .3s;
-		
-// 		&:visited {
-// 			color: $color__text-medium;
-// 		}		
-
-// 		&:hover {
-// 			border: 2px solid $color__accent;
-// 			color: $color__accent;
-// 		}
-
-// 		&.next,
-// 		&.prev {
-// 			padding: 12px 13px; 
-// 		}
-// 	}
-
-// 	.dots {
-// 		border: 0; 
-// 		font-family: "Gill Sans", "Gill Sans MT", Calibri, sans-serif;
-// 		font-size: 13px; 
-// 		padding-right: 0;
-// 		padding-left: 0; 
-		
-// 		&:hover {
-// 			border: 0; 
-// 			color: $color__text-medium;
-// 		}
-// 	}
-
-// 	.current {
-// 		border-color: $color__accent;
-// 		color: $color__accent;
-// 	}
-// }
 
 .pagination {	
 	text-align: center;
@@ -533,38 +462,6 @@ $sel: '';
 		color: #fff;
 	}
 }
-
-// .pagination {	
-// 	text-align: center;
-	
-// 	.page-numbers {
-// 		border-bottom: 3px solid #fff;
-// 		color: $color__text-dark;
-// 		display: inline-block;
-// 		margin-right: 3px;
-// 		padding: 0 10px 8px;
-
-// 		&:hover {
-// 			border-bottom: 3px solid $color__accent;
-// 		}
-// 	}
-
-// 	.dots {
-// 		background: none;
-// 		font-family: "Gill Sans", "Gill Sans MT", Calibri, sans-serif;
-// 		font-size: 13px; 
-// 		padding-right: 0;
-// 		padding-left: 0; 
-		
-// 		&:hover {
-// 			border: 0;
-// 		}
-// 	}
-
-// 	.current {
-// 		border-bottom: 3px solid $color__accent;
-// 	}
-// }
 
 .post-navigation {
 	font-size: 16px; 

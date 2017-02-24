@@ -26,9 +26,11 @@ get_header(); ?>
 				polestar_the_post_navigation();
 			endif;
 
-			polestar_author_box();		
+			if ( get_theme_mod( 'post_author_box', true ) ) :
+				polestar_author_box();
+			endif;
 
-			if ( ! is_attachment() ) :
+			if ( get_theme_mod( 'related_posts' ) && ! is_attachment() ) :
 				polestar_related_posts( $post->ID );
 			endif;
 

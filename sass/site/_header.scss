@@ -1,7 +1,7 @@
 .site-header {
 	background: #fff;
 	border-bottom: 1px solid $color__background-hr-dark;
-	margin-bottom: 50px; 
+	margin-bottom: 60px;
 	padding: 25px 0;
 	position: relative;
 	width: 100%;
@@ -31,6 +31,7 @@
 	
 	.site-branding {
 		display: table-cell;
+		padding-right: 20px; 
 		vertical-align: middle;
 
 		.site-title {
@@ -42,6 +43,11 @@
 			a {
 				color: $color__text-dark;
 			}
+		}
+
+		img {
+			display: inline-block;
+			vertical-align: middle;
 		}
 
 		.site-description {
@@ -144,11 +150,6 @@
 			margin: 0 auto 20px auto;
 			padding: 0;
 			text-align: center;
-
-			img {
-				display: inline-block;
-				max-width: 100%;
-			}
 		}
 
 		.main-navigation {

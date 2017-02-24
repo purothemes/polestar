@@ -27,7 +27,11 @@
 // Content area with sidebar.
 .sidebar .content-area {
 	float: left;
-	width: 70%;	 	
+	width: 70%;	
+	
+	@at-root .sidebar-left#{&} {
+		float: right;
+	}		 	
 	
 	@media (max-width: 768px) {
 		border: 0;
@@ -44,9 +48,15 @@
 
 // Sidebar.
 .widget-area {
-	float: right;	
+	float: right;
 	padding-left: 4%;
-	width: 30%;	
+	width: 30%;
+	
+	@at-root .sidebar-left & {
+		float: left;
+		padding-right: 4%; 
+		padding-left: 0; 
+	}	
 	
 	@media (max-width: 768px) {
     	border-top: 1px solid $color__background-hr-dark;

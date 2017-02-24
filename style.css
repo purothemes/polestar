@@ -719,7 +719,7 @@ a {
   right: -5px;
   top: 6px;
   transform: rotate(0deg);
-  transition: .5 ease-in-out;
+  transition: all .5s ease-in-out;
   width: 36px; }
   #mobile-menu-button span {
     display: block;
@@ -836,18 +836,6 @@ a {
 
 #mobile-navigation ul ul ul ul ul ul li a {
   padding-left: 125px; }
-
-@media (max-width: 1100px) {
-  #masthead.mobile-menu #mobile-menu-button {
-    display: inline-block; }
-  #masthead.mobile-menu .main-navigation ul {
-    display: none; }
-  #masthead.mobile-menu .main-navigation .search-icon {
-    display: none; } }
-
-@media (min-width: 1100px) {
-  #masthead.mobile-menu #mobile-navigation {
-    display: none !important; } }
 
 /*--------------------------------------------------------------
 ## Posts, Post and Comment Navigation
@@ -1267,6 +1255,7 @@ a {
 --------------------------------------------------------------*/
 .infinite-scroll .posts-navigation,
 .infinite-scroll .pagination,
+.infinite-scroll .woocommerce-pagination,
 .infinite-scroll.neverending .site-footer {
   display: none; }
 
@@ -1426,6 +1415,8 @@ a {
 .sidebar .content-area {
   float: left;
   width: 70%; }
+  .sidebar-left.sidebar .content-area {
+    float: right; }
   @media (max-width: 768px) {
     .sidebar .content-area {
       border: 0;
@@ -1440,6 +1431,10 @@ a {
   float: right;
   padding-left: 4%;
   width: 30%; }
+  .sidebar-left .widget-area {
+    float: left;
+    padding-right: 4%;
+    padding-left: 0; }
   @media (max-width: 768px) {
     .widget-area {
       border-top: 1px solid #ebebeb;
@@ -1453,7 +1448,7 @@ a {
 .site-header {
   background: #fff;
   border-bottom: 1px solid #ebebeb;
-  margin-bottom: 50px;
+  margin-bottom: 60px;
   padding: 25px 0;
   position: relative;
   width: 100%;
@@ -1471,6 +1466,7 @@ a {
     width: 100%; }
   .site-header .site-branding {
     display: table-cell;
+    padding-right: 20px;
     vertical-align: middle; }
     .site-header .site-branding .site-title {
       font-family: "Montserrat", sans-serif;
@@ -1479,6 +1475,9 @@ a {
       margin: 0; }
       .site-header .site-branding .site-title a {
         color: #2d2d2d; }
+    .site-header .site-branding img {
+      display: inline-block;
+      vertical-align: middle; }
     .site-header .site-branding .site-description {
       color: #626262;
       font-family: "Montserrat", sans-serif;
@@ -1543,9 +1542,6 @@ a {
     margin: 0 auto 20px auto;
     padding: 0;
     text-align: center; }
-    .site-header.centered .site-branding img {
-      display: inline-block;
-      max-width: 100%; }
   .site-header.centered .main-navigation {
     text-align: center; }
   .site-header.centered .site-branding,
@@ -1702,14 +1698,25 @@ a {
     transform: scale(0, 0);
     width: 60px;
     z-index: 5; }
+    @media (max-width: 480px) {
+      .entry-thumbnail .icon-add {
+        height: 52px;
+        margin: -26px 0 0 -26px;
+        padding: 13.5px 0 0 0;
+        width: 52px; } }
     .entry-thumbnail:hover .icon-add {
       transform: scale(1, 1); }
     .entry-thumbnail .icon-add svg {
       height: 30px;
-      margin-right: -15px;
+      margin-right: -15.6px;
       position: absolute;
       right: 50%;
       width: 30px; }
+      @media (max-width: 480px) {
+        .entry-thumbnail .icon-add svg {
+          height: 26px;
+          margin-right: -13.5px;
+          width: 26px; } }
       .entry-thumbnail .icon-add svg path {
         fill: #fff;
         opacity: .7; }
@@ -1719,8 +1726,7 @@ a {
 
 .more-wrapper {
   display: block;
-  font-size: 14px;
-  text-transform: capitalize; }
+  font-size: 14px; }
   .more-wrapper span {
     font-size: 13px;
     position: relative;

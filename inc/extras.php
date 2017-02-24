@@ -38,6 +38,10 @@ function polestar_body_classes( $classes ) {
 		 $classes[] = 'sidebar';
 	}
 
+	if ( get_theme_mod( 'sidebar_position' ) == 'left' ) {
+		 $classes[] = 'sidebar-left';
+	}
+
 	// WooCommerce sidebar.
 	if ( is_active_sidebar( 'sidebar-shop' ) && ! is_product() ) {
 		 $classes[] = 'woocommerce-sidebar';
@@ -106,3 +110,12 @@ function polestar_post_class_filter( $classes ) {
 }
 endif;
 add_filter( 'post_class', 'polestar_post_class_filter' );
+
+/**
+ * Add our SiteOrigin Premium affiliate ID.
+ */
+function polestar_siteorigin_premium( $id ) {
+    return 1;
+}
+add_filter( 'siteorigin_premium_affiliate_id', 'polestar_siteorigin_premium' );
+

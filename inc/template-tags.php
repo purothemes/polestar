@@ -105,7 +105,7 @@ if ( ! function_exists( 'polestar_footer_text' ) ) :
  */
 function polestar_footer_text() {
 
-	$text = get_theme_mod( 'footer_text', esc_html__( 'Copyright &copy; {year} {sitename} - ', 'polestar' ) );
+	$text = get_theme_mod( 'footer_text', esc_html__( 'Copyright &copy; {year} {sitename}', 'polestar' ) );
 
 	$text = str_replace(
 		array( '{sitename}', '{year}'),
@@ -322,7 +322,10 @@ function polestar_display_logo() {
 		?></a><?php
 
 	} elseif ( function_exists( 'has_custom_logo' ) && has_custom_logo() ) {
-		?><?php the_custom_logo(); ?><?php
+		?><?php the_custom_logo();
+		if ( get_theme_mod( 'tagline' ) ) : ?>
+			<p class="site-description"><?php bloginfo( 'description' ); ?></p>
+		<?php endif;
 	}
 	else {
 		if ( is_front_page() ) : ?>
@@ -339,17 +342,6 @@ function polestar_display_logo() {
 	}
 }
 endif;
-
-if ( ! function_exists( 'polestar_read_more_link' ) ) :
-/**
- * Filter the read more link.
- */
-function polestar_read_more_link() {
-	$read_more_text = esc_html__( 'Continue reading', 'polestar' );
-	return the_title( '<span class="screen-reader-text">"', '"</span>', false ) . '<span class="more-wrapper"><a href="' . get_permalink() . '">' . $read_more_text . ' <span class="icon-long-arrow-right"></span></a></span>';
-}
-endif;
-add_filter( 'the_content_more_link', 'polestar_read_more_link' );
 
 if ( ! function_exists( 'polestar_post_meta' ) ) :
 /**

@@ -17,7 +17,7 @@
 
 	<?php do_action( 'polestar_footer_before' ); ?>
 
-	<footer id="colophon" class="site-footer <?php if ( is_active_sidebar( 'sidebar-footer' ) ) echo 'footer-active-sidebar'; ?>" role="contentinfo">
+	<footer id="colophon" class="site-footer <?php if ( is_active_sidebar( 'sidebar-footer' ) ) echo 'footer-active-sidebar'; if ( get_theme_mod( 'footer_layout' ) == 'full-width' ) echo ' full-width';  ?>" role="contentinfo">
 
 		<?php do_action( 'polestar_footer_top' ); ?>
 
@@ -41,14 +41,11 @@
 
 					$credit_text = apply_filters(
 						'polestar_footer_credits',
-						sprintf( esc_html__( 'Theme by %s', 'polestar' ), '<a href="https://purothemes.com/" rel="designer">Puro Themes</a>' )
+						sprintf( esc_html__( 'Theme by %s', 'polestar' ), '<a href="https://purothemes.com/" rel="designer">Puro</a>' )
 					);
 
-					if ( get_theme_mod( 'footer_text' ) ) {
-						echo ' - ';
-					}
-
-					if ( ! empty( $credit_text ) ) {	
+					if ( ! empty( $credit_text ) ) {
+						?> &ndash; </span><?php
 						echo wp_kses_post( $credit_text );
 					}
 					?>
