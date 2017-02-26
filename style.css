@@ -1573,9 +1573,6 @@ a {
 /*--------------------------------------------------------------
 ## - Posts and pages
 --------------------------------------------------------------*/
-.site-main .sticky {
-  display: block; }
-
 .hentry {
   border-bottom: 1px solid #ebebeb;
   margin: 0 0 50px;
