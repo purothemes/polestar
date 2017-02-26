@@ -117,7 +117,7 @@ function polestar_theme_options() {
 	    'label'   => esc_html__( 'Padding', 'polestar' ),
 	    'section' => $section,
 	    'type'    => 'number',
-	    'description' => esc_html__( 'Header top and bottom padding in px.', 'polestar' ),
+	    'description' => esc_html__( 'Top and bottom padding in px.', 'polestar' ),
 	    'default' => 25,
 	    'priority' => '80'
 	);
@@ -127,7 +127,7 @@ function polestar_theme_options() {
 	    'label'   => esc_html__( 'Bottom Margin', 'polestar' ),
 	    'section' => $section,
 	    'type'    => 'number',
-	    'description' => esc_html__( 'Header bottom margin in px.', 'polestar' ),
+	    'description' => esc_html__( 'Bottom margin in px.', 'polestar' ),
 	    'default' => 60,
 	    'priority' => '90'
 	);				
@@ -269,7 +269,25 @@ function polestar_theme_options() {
 	    'type' => 'checkbox',
 	    'description' => esc_html__( 'Display the featured image on the single post page.', 'polestar' ),
 	    'default' => true,
+	);
+
+	$options['post_date'] = array(
+	    'id' => 'post_date',
+	    'label' => esc_html__( 'Post Date', 'polestar' ),
+	    'section' => $section,
+	    'type' => 'checkbox',
+	    'description' => esc_html__( 'Display the post date on the archive and single post pages.', 'polestar' ),
+	    'default' => true,
 	);		
+
+	$options['post_author'] = array(
+	    'id' => 'post_author',
+	    'label' => esc_html__( 'Post Author', 'polestar' ),
+	    'section' => $section,
+	    'type' => 'checkbox',
+	    'description' => esc_html__( 'Display the post author on the archive and single post pages.', 'polestar' ),
+	    'default' => true,
+	);				
 
 	$options['post_categories'] = array(
 	    'id' => 'post_categories',
@@ -278,7 +296,25 @@ function polestar_theme_options() {
 	    'type' => 'checkbox',
 	    'description' => esc_html__( 'Display the post categories on the archive and single post pages.', 'polestar' ),
 	    'default' => true,
-	);
+	);	
+
+	$options['post_comment_count'] = array(
+	    'id' => 'post_comment_count',
+	    'label' => esc_html__( 'Post Comment Count', 'polestar' ),
+	    'section' => $section,
+	    'type' => 'checkbox',
+	    'description' => esc_html__( 'Display the post comment count on the archive and single post pages.', 'polestar' ),
+	    'default' => true,
+	);	
+
+	$options['post_tags'] = array(
+	    'id' => 'post_tags',
+	    'label' => esc_html__( 'Post Tags', 'polestar' ),
+	    'section' => $section,
+	    'type' => 'checkbox',
+	    'description' => esc_html__( 'Display the post tags on single post pages.', 'polestar' ),
+	    'default' => true,
+	);	
 
 	$options['post_author_box'] = array(
 	    'id' => 'post_author_box',
@@ -362,7 +398,41 @@ function polestar_theme_options() {
 	    'type' => 'text',
 	    'description' => esc_html__( '{site-title} and {year} can be used to display your website title and the current year.', 'polestar' ),
 	    'default' => esc_html__( 'Copyright &copy; {year} {sitename}', 'polestar' )
-	);	
+	);
+
+	$options['footer_background_color'] = array(
+	    'id' => 'footer_background_color',
+	    'label'   => esc_html__( 'Background Color', 'polestar' ),
+	    'section' => $section,
+	    'type'    => 'color',
+	    'default' => '#ffffff',
+	);
+
+	$options['footer_border_color'] = array(
+	    'id' => 'footer_border_color',
+	    'label'   => esc_html__( 'Border Color', 'polestar' ),
+	    'section' => $section,
+	    'type'    => 'color',
+	    'default' => '#ebebeb',
+	);
+
+	$options['footer_padding'] = array(
+	    'id' => 'footer_padding',
+	    'label'   => esc_html__( 'Padding', 'polestar' ),
+	    'section' => $section,
+	    'type'    => 'number',
+	    'description' => esc_html__( 'Top and bottom padding in px.', 'polestar' ),
+	    'default' => 50,
+	);
+
+	$options['footer_margin'] = array(
+	    'id' => 'footer_margin',
+	    'label'   => esc_html__( 'Top Margin', 'polestar' ),
+	    'section' => $section,
+	    'type'    => 'number',
+	    'description' => esc_html__( 'Top margin in px.', 'polestar' ),
+	    'default' => 75,
+	);		
 
 	// Adds the sections to the $options array.
 	$options['sections'] = $sections;
