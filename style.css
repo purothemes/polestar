@@ -1649,8 +1649,12 @@ a {
   margin-bottom: 25px; }
 
 .entry-thumbnail {
+  height: 100%;
+  margin-right: auto;
+  margin-left: auto;
   position: relative;
-  text-align: center; }
+  text-align: center;
+  width: 100%; }
   .entry-thumbnail .thumbnail-meta {
     display: block;
     left: 10px;
