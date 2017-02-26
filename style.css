@@ -2136,7 +2136,7 @@ a {
   .page-layout-no-footer-margin .site-footer {
     margin-top: 0; }
   .site-footer .widgets {
-    padding-top: 50px;
+    padding: 50px 0;
     width: 100%; }
     .site-footer .widgets::after {
       clear: both;
@@ -2164,7 +2164,7 @@ a {
       width: 7.525%; }
     .site-footer .widgets .widget {
       box-sizing: content-box;
-      margin: 0 2.75% 75px 0;
+      margin: 0 2.75% 0 0;
       float: left; }
       .site-footer .widgets .widget:last-of-type {
         margin-right: 0; }
