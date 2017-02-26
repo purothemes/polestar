@@ -11,10 +11,23 @@ jQuery( function( $ ) {
 		return (
 			rect.bottom >= 0 &&
 			rect.right >= 0 &&
-			rect.top <= (window.innerHeight || document.documentElement.clientHeight) &&
-			rect.left <= (window.innerWidth || document.documentElement.clientWidth)
+			rect.top <= ( window.innerHeight || document.documentElement.clientHeight ) &&
+			rect.left <= ( window.innerWidth || document.documentElement.clientWidth )
 		);
 	};		
+
+	// Entry thumbnail container size.
+	$( document ).ready( function() {
+		$( '.entry-thumbnail' ).each( function() {
+			img = $( this ).find( 'img' );
+			img_width = img.width();
+			img_height = img.height();
+			$( this ).css( {
+				width: img_width,
+				height: img_height,
+			} );
+		} );		
+	} );
 
 	// Burst animation.
 	var mousePos = {x: 0, y: 0};
