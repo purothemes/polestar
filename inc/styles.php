@@ -148,6 +148,80 @@ function polestar_build_styles() {
 	    ) );	    	    
 
 	}
+
+	// Footer background color.
+	$setting = 'footer_background_color';
+	$mod = get_theme_mod( $setting, customizer_library_get_default( $setting ) );
+
+	if ( $mod !== customizer_library_get_default( $setting ) ) {
+
+		$color = sanitize_hex_color( $mod );
+
+		Customizer_Library_Styles()->add( array(
+			'selectors' => array(
+				'.site-footer',
+			),
+			'declarations' => array(
+				'background' => $color
+			)
+		) );
+	}
+
+	// Footer border color.
+	$setting = 'footer_border_color';
+	$mod = get_theme_mod( $setting, customizer_library_get_default( $setting ) );
+
+	if ( $mod !== customizer_library_get_default( $setting ) ) {
+
+		$color = sanitize_hex_color( $mod );
+
+		Customizer_Library_Styles()->add( array(
+			'selectors' => array(
+				'.site-footer.footer-active-sidebar',
+				'.site-footer .bottom-bar'			
+			),
+			'declarations' => array(
+				'border-color' => $color
+			)
+		) );
+	}
+
+	// Footer padding.
+	$setting = 'footer_padding';
+	$mod = get_theme_mod( $setting, customizer_library_get_default( $setting ) );
+
+	if ( $mod !== customizer_library_get_default( $setting ) ) {
+
+		$number = customizer_library_sanitize_number_absint( $mod, $setting );
+
+		Customizer_Library_Styles()->add( array(
+			'selectors' => array(
+				'.site-footer .widgets'			
+			),
+			'declarations' => array(
+				'padding-top' => $number . 'px',
+				'padding-bottom' => $number . 'px',
+			)
+		) );
+	}
+
+	// Footer margin.
+	$setting = 'footer_margin';
+	$mod = get_theme_mod( $setting, customizer_library_get_default( $setting ) );
+
+	if ( $mod !== customizer_library_get_default( $setting ) ) {
+
+		$number = customizer_library_sanitize_number_absint( $mod, $setting );
+
+		Customizer_Library_Styles()->add( array(
+			'selectors' => array(
+				'.site-footer'
+			),
+			'declarations' => array(
+				'margin-top' => $number . 'px',
+			)
+		) );
+	}		
 }
 endif;
 add_action( 'customizer_library_styles', 'polestar_build_styles' );
@@ -158,8 +232,6 @@ if ( ! function_exists( 'polestar_styles' ) ) :
  *
  * By using the "Customizer_Library_Styles" filter, different components can print CSS in the header.
  * It is organized this way to ensure there is only one "style" tag.
- *
- * @since  1.0.0.
  *
  * @return void
  */
