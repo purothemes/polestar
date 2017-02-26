@@ -56,7 +56,5 @@ $post_class = ( is_singular() ) ? 'entry' : 'archive-entry';
 		?>
 	</div><!-- .entry-content -->	
 
-	<footer class="entry-footer">
-		<?php polestar_entry_footer(); ?>
-	</footer><!-- .entry-footer -->
+	<?php polestar_entry_footer(); ?>
 </article><!-- #post-## -->
