@@ -93,8 +93,8 @@ if ( ! function_exists( 'polestar_entry_footer' ) ) :
  */
 function polestar_entry_footer() {
 
-	if ( is_single() && has_tag() ) {
-		echo '<span class="tags-links">' . get_the_tag_list( '', esc_html__( '', 'polestar' ) ) . '</span>';
+	if ( is_single() && has_tag() && get_theme_mod( 'post_tags', true ) ) {
+		echo '<footer class="entry-footer"><span class="tags-links">' . get_the_tag_list( '', esc_html__( '', 'polestar' ) ) . '</span></footer>';
 	}	
 }
 endif;
