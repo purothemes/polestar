@@ -1,15 +1,11 @@
 <?php
 /**
- * Implements styles set in the theme customizer
- *
- * @package Customizer Library Demo
+ * Implements styles set in the theme customizer.
  */
 
 if ( ! function_exists( 'polestar_build_styles' ) && class_exists( 'Customizer_Library_Styles' ) ) :
 /**
  * Process user options to generate CSS needed to implement the choices.
- *
- * @since  1.0.0.
  *
  * @return void
  */
