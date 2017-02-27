@@ -70,7 +70,7 @@ if ( ! function_exists( 'polestar_unset_current_menu_class' ) ) :
 /**
  * Unset the current menu class.
  */	
-function polestar_remove_current_menu_class( $classes ) {
+function polestar_unset_current_menu_class( $classes ) {
     $disallowed_class_names = array(
         'current-menu-item',
         'current_page_item',
