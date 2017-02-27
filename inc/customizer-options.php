@@ -171,7 +171,7 @@ function polestar_theme_options() {
 			'max'	=> 3000,
 			'step'	=> 1
 		),
-		'default' => 1100,
+		'default' => 780,
 		'sanitize_callback'	=> 'customizer_library_sanitize_number_range',
 	);				
 
