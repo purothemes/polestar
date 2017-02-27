@@ -197,7 +197,7 @@ function polestar_theme_options() {
 	    'label' => esc_html__( 'Footer Text', 'polestar' ),
 	    'section' => $section,
 	    'type' => 'text',
-	    'description' => esc_html__( '{site-title} and {year} can be used to display your website title and the current year.', 'polestar' ),
+	    'description' => esc_html__( '{sitename} and {year} can be used to display your website title and the current year.', 'polestar' ),
 	    'default' => esc_html__( 'Copyright &copy; {year} {sitename}', 'polestar' )
 	);	
 
