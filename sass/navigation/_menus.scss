@@ -377,7 +377,7 @@ $sel: '';
     }
 }
 
-@media (max-width: 1100px) {
+@media (max-width: 768px) {
 
 	#masthead.mobile-menu #mobile-menu-button {
 		display: inline-block; 
@@ -392,7 +392,7 @@ $sel: '';
 	}
 }
 
-@media (min-width: 1100px) {
+@media (min-width: 768px) {
 
 	#masthead.mobile-menu #mobile-navigation {
 		display: none !important;
