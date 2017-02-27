@@ -23,8 +23,8 @@ jQuery( function( $ ) {
 			img_width = img.width();
 			img_height = img.height();
 			$( this ).css( {
-				width: img_width,
-				height: img_height,
+				maxWidth: img_width,
+				maxHeight: img_height,
 			} );
 		} );		
 	} );
@@ -230,10 +230,10 @@ jQuery( function( $ ) {
 			container: ".search-form"
 		} );
 
-		var resetMenu = function () {
+		var resetMenu = function() {
 			$( '.main-navigation ul ul' ).each( function() {
 				var $$ = $( this );
-				var width = Math.max.apply( Math, $$.find( '> li > a' ).map( function () {
+				var width = Math.max.apply( Math, $$.find( '> li > a' ).map( function() {
 					return $( this ).width();
 				} ).get() );
 				$$.find( '> li > a' ).width( width );
