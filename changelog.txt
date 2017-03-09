@@ -1,5 +1,8 @@
 == Changelog ==
 
+= 0.9.4 - 09 March 2017 =
+* Added readme.txt to release build.
+
 = 0.9.3 - 09 March 2017 =
 * Added internationalization to footer copyright text date.
 * Added missing escaping of links.
