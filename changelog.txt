@@ -1,5 +1,12 @@
 == Changelog ==
 
+= 0.9.3 - 09 March 2017 =
+* Added internationalization to footer copyright text date.
+* Added missing escaping of links.
+* Changed to core WP function for single post navigation.
+* Optimized related posts function.
+* Added missing prefix to theme menu JavaScript.
+
 = 0.9.2 - 27 February 2017 =
 * Changed the mobile menu collapse default to 768px.
 * Corrected Footer Text setting description.
