@@ -217,7 +217,7 @@ jQuery( function( $ ) {
 			container: ".search-form"
 		} );
 
-		var resetMenu = function () {
+		var polestarResetMenu = function () {
 			$( '.main-navigation ul ul' ).each( function() {
 				var $$ = $( this );
 				var width = Math.max.apply( Math, $$.find( '> li > a' ).map( function () {
@@ -226,8 +226,8 @@ jQuery( function( $ ) {
 				$$.find( '> li > a' ).width( width );
 			} );
 		};
-		resetMenu();
-		$( window ).resize( resetMenu );
+		polestarResetMenu();
+		$( window ).resize( polestarResetMenu );
 
 		// Add keyboard access to the menu.
 		$( '.menu-item' ).children( 'a' ).focus( function() {
