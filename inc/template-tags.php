@@ -108,8 +108,8 @@ function polestar_footer_text() {
 	$text = get_theme_mod( 'footer_text', esc_html__( 'Copyright &copy; {year} {sitename} - ', 'polestar' ) );
 
 	$text = str_replace(
-		array( '{sitename}', '{year}'),
-		array( get_bloginfo( 'sitename' ), date( 'Y' ) ),
+		array( '{sitename}', '{year}' ),
+		array( get_bloginfo( 'sitename' ), date_i18n( __( 'Y', 'bookmark' ) ) ),
 		$text
 	);
 	echo wp_kses_post( $text );
