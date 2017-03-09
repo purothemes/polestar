@@ -109,7 +109,7 @@ function polestar_footer_text() {
 
 	$text = str_replace(
 		array( '{sitename}', '{year}' ),
-		array( get_bloginfo( 'sitename' ), date_i18n( __( 'Y', 'bookmark' ) ) ),
+		array( get_bloginfo( 'sitename' ), date_i18n( __( 'Y', 'polestar' ) ) ),
 		$text
 	);
 	echo wp_kses_post( $text );
