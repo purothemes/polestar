@@ -390,34 +390,6 @@ function polestar_entry_thumbnail_meta() {
 }
 endif;
 
-if ( ! function_exists( 'polestar_the_post_navigation' ) ) :
-/**
- * Display navigation to next/previous posts.
- */
-function polestar_the_post_navigation() {
-	// Don't print empty markup if there's nowhere to navigate.
-	$previous = ( is_attachment() ) ? get_post( get_post()->post_parent ) : get_adjacent_post( false, '', true );
-	$next     = get_adjacent_post( false, '', false );
-
-	if ( ! $next && ! $previous ) {
-		return;
-	}
-	?>
-	<nav class="navigation post-navigation" role="navigation">
-		<h2 class="screen-reader-text"><?php esc_html_e( 'Post navigation', 'polestar' ); ?></h2>
-		<div class="nav-links">
-			<div class="nav-previous">
-				<?php previous_post_link ( '%link', '<span class="sub-title"> ' . esc_html__( 'Previous Post', 'polestar' ) . '</span> <div>%title</div>' ); ?>
-			</div>
-			<div class="nav-next">
-				<?php next_post_link( '%link', '<span class="sub-title">' . esc_html__( 'Next Post', 'polestar' ) . ' </span> <div>%title</div>' ); ?>
-			</div>
-		</div><!-- .nav-links -->
-	</nav><!-- .navigation -->
-	<?php
-}
-endif;
-
 if ( ! function_exists( 'polestar_related_posts' ) ) :
 /**
  * Display related posts on single posts.
@@ -461,7 +433,7 @@ function polestar_related_posts( $post_id ) {
 				<p><?php esc_html_e( 'No related posts.', 'polestar' ); ?></p>
 			<?php endif; ?>
 		</div>
-		<?php wp_reset_query();
+		<?php wp_reset_postdata();
 	}
 }
 endif;
