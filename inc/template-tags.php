@@ -343,6 +343,41 @@ function polestar_display_logo() {
 }
 endif;
 
+if ( ! function_exists( 'polestar_excerpt_length' ) ) :
+/**
+ * Filter the excerpt length.
+ */
+function polestar_excerpt_length( $length ) {
+	return get_theme_mod( 'excerpt_length', 55 );
+}
+add_filter( 'excerpt_length', 'polestar_excerpt_length', 10 );
+endif;
+
+if ( ! function_exists( 'polestar_excerpt_more' ) ) :
+/**
+ * Add a more link to the excerpt.
+ */
+function polestar_excerpt_more( $more ) {
+	if ( is_search() ) return;
+	if ( get_theme_mod( 'archive_post_content' ) == 'excerpt' && get_theme_mod( 'excerpt_more', true ) ) {
+		$read_more_text = get_theme_mod( 'read_more_text', esc_html__( 'Continue reading', 'polestar' ) );
+		return the_title( '<span class="screen-reader-text">"', '"</span>', false ) . '<p><span class="more-wrapper"><a href="' . esc_url( get_permalink() ) . '">' . $read_more_text . ' <span class="icon-long-arrow-right"></span></a></span></p>';
+	}
+}
+endif;
+add_filter( 'excerpt_more', 'polestar_excerpt_more' );
+
+if ( ! function_exists( 'polestar_read_more_link' ) ) :
+/**
+ * Filter the read more link.
+ */
+function polestar_read_more_link() {
+	$read_more_text = esc_html__( 'Continue reading', 'polestar' );
+	return the_title( '<span class="screen-reader-text">"', '"</span>', false ) . '<span class="more-wrapper"><a href="' . esc_url( get_permalink() ) . '">' . $read_more_text . ' <span class="icon-long-arrow-right"></span></a></span>';
+}
+endif;
+add_filter( 'the_content_more_link', 'polestar_read_more_link' );
+
 if ( ! function_exists( 'polestar_post_meta' ) ) :
 /**
  * Print HTML with meta information for the sticky status, current post-date/time, author, comment count and post categories.
@@ -381,34 +416,6 @@ function polestar_entry_thumbnail_meta() {
 		echo get_the_category_list();
 	}
 	echo '</div>';
-}
-endif;
-
-if ( ! function_exists( 'polestar_the_post_navigation' ) ) :
-/**
- * Display navigation to next/previous posts.
- */
-function polestar_the_post_navigation() {
-	// Don't print empty markup if there's nowhere to navigate.
-	$previous = ( is_attachment() ) ? get_post( get_post()->post_parent ) : get_adjacent_post( false, '', true );
-	$next     = get_adjacent_post( false, '', false );
-
-	if ( ! $next && ! $previous ) {
-		return;
-	}
-	?>
-	<nav class="navigation post-navigation" role="navigation">
-		<h2 class="screen-reader-text"><?php esc_html_e( 'Post navigation', 'polestar' ); ?></h2>
-		<div class="nav-links">
-			<div class="nav-previous">
-				<?php previous_post_link ( '%link', '<span class="sub-title"> ' . esc_html__( 'Previous Post', 'polestar' ) . '</span> <div>%title</div>' ); ?>
-			</div>
-			<div class="nav-next">
-				<?php next_post_link( '%link', '<span class="sub-title">' . esc_html__( 'Next Post', 'polestar' ) . ' </span> <div>%title</div>' ); ?>
-			</div>
-		</div><!-- .nav-links -->
-	</nav><!-- .navigation -->
-	<?php
 }
 endif;
 
