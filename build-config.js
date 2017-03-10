@@ -4,6 +4,7 @@ module.exports = {
     version: {
         src: [
             'functions.php',
+            'readme.txt'
         ]
     },
     sass: {
