@@ -201,6 +201,17 @@ require get_template_directory() . '/inc/customizer-options.php';
 require get_template_directory() . '/inc/styles.php';
 
 /**
+ * Puro Extras.
+ */
+require get_template_directory() . '/inc/extras/extras.php';
+require get_template_directory() . '/inc/extras-options.php';
+
+/**
+ * Recommended plugins.
+ */
+require get_template_directory() . '/inc/recommended-plugins.php';
+
+/**
  * Custom template tags.
  */
 require get_template_directory() . '/inc/template-tags.php';
