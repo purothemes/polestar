@@ -21,6 +21,14 @@ Version: dev
   padding-right: 4%;
   padding-left: 0; }
 
+.woocommerce.woocommerce-sidebar .content-area {
+  float: left; }
+
+.woocommerce.woocommerce-sidebar .widget-area {
+  float: right;
+  padding-right: 0;
+  padding-left: 4%; }
+
 /*--------------------------------------------------------------
 # Fonts
 --------------------------------------------------------------*/
@@ -92,9 +100,10 @@ input[type="submit"] {
   color: #fff;
   display: inline-block;
   font-family: "Open Sans", sans-serif;
-  font-size: 14px;
+  font-size: 13px;
+  letter-spacing: 1px;
   line-height: normal;
-  padding: 13px 25px 12px;
+  padding: 11px 25px;
   text-transform: uppercase;
   transition: .3s; }
   .button:hover, .woocommerce .products .product .added_to_cart:hover,
@@ -154,9 +163,10 @@ textarea {
   border: 1px solid #ebebeb;
   border-radius: 2px;
   box-sizing: border-box;
+  font-size: 14px;
   line-height: normal;
   outline: none;
-  padding: 11px 13px;
+  padding: 9px 13px 10px;
   transition: .3s;
   max-width: 100%;
   -webkit-appearance: none; }
