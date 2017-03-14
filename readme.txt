@@ -141,3 +141,11 @@ Released under [GPL version 2](https://www.gnu.org/licenses/old-licenses/gpl-2.0
 Normalize.css, Copyright Nicolas Gallagher and Jonathan Neal
 Released under the [MIT License](http://opensource.org/licenses/MIT)
 [Source](https://github.com/necolas/normalize.css/)
+
+Puro Extras, Copyright Puro 2017
+Released under [GPL version 2](https://www.gnu.org/licenses/old-licenses/gpl-2.0.en.html)
+[Source](https://github.com/purothemes/extras)
+
+TGM Plugin Activation, Copyright 2011 Thomas Griffin
+Released under [GPL version 2](https://www.gnu.org/licenses/old-licenses/gpl-2.0.en.html)
+[Source](https://github.com/TGMPA/TGM-Plugin-Activation)
