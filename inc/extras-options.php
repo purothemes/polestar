@@ -79,7 +79,6 @@ add_filter( 'puro_page_settings_defaults', 'polestar_setup_page_setting_defaults
  */
 function polestar_about_page( $about ) {
 
-	$about['documentation_url'] = 'https://purothemes.com/documentation/polestar-theme/';
 	$about['premium_url'] = 'https://purothemes.com/themes/polestar/';
 	$about['review'] = true;
 
