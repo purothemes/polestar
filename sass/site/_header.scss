@@ -7,7 +7,7 @@
 	width: 100%;
 	z-index: 999;
 	
-	.page-layout-no-header-margin & {
+	.no-header-margin & {
 		margin-bottom: 0;
 	}
 	
@@ -94,7 +94,6 @@
 			background: rgba(0, 0, 0, .035);
 			border: 0;
 			box-sizing: border-box;
-			font-size: 16px; 
 			height: 48px; 
 			padding: 0 15px;
 			right: 15px;
