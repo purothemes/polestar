@@ -432,7 +432,33 @@ function polestar_theme_options() {
 	    'type'    => 'number',
 	    'description' => esc_html__( 'Top margin in px.', 'polestar' ),
 	    'default' => 75,
-	);		
+	);
+
+	// WooCommerce.
+	if ( function_exists( 'is_woocommerce' ) ) {
+		$section = 'woocommerce';
+
+		$sections[] = array(
+		    'id' => $section,
+		    'title' => esc_html__( 'WooCommerce', 'polestar' ),
+		    'priority' => '60',
+		    'panel' => $panel
+		);
+
+		$options['woocommerce_sidebar_position'] = array(
+		    'id' => 'woocommerce_sidebar_position',
+		    'label' => esc_html__( 'Shop Sidebar Position', 'polestar' ),
+		    'section' => $section,
+		    'type' => 'select',
+		    'choices' => array(
+	    		'left' => 'Left',
+	    		'right' => 'Right',
+			),
+		    'description' => esc_html__( 'Choose the shop sidebar position.', 'polestar' ),
+		    'default' => 'left',
+		    'priority' => '10'
+		);	
+	}	
 
 	// Adds the sections to the $options array.
 	$options['sections'] = $sections;
