@@ -188,11 +188,16 @@
 
 	// Jetpack Subscriptions.
 	.comment-subscription-form {
-		font-weight: normal; 
-		margin: 0 0 8px;
+		margin: 15px 0 8px;
+		
+		~ p {
+			margin-top: 0; 
+		}
 		
 		label {
 			color: $color__text-medium;
+			font-size: 13px;
+			font-weight: normal;
 		}	
 	}		
 }
