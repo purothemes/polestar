@@ -1427,7 +1427,7 @@ a {
       padding-right: 0;
       width: 100%; } }
 
-.page-template-full-width .content-area {
+.page-layout-no-sidebar .content-area {
   float: none;
   width: 100%; }
 
@@ -1457,7 +1457,7 @@ a {
   position: relative;
   width: 100%;
   z-index: 999; }
-  .page-layout-no-header-margin .site-header {
+  .no-header-margin .site-header {
     margin-bottom: 0; }
   @media (max-width: 600px) {
     .admin-bar .site-header.sticky.stuck {
@@ -1514,7 +1514,6 @@ a {
       background: rgba(0, 0, 0, 0.035);
       border: 0;
       box-sizing: border-box;
-      font-size: 16px;
       height: 48px;
       padding: 0 15px;
       right: 15px;
@@ -2122,10 +2121,13 @@ a {
   clear: both; }
 
 #commentform .comment-subscription-form {
-  font-weight: normal;
-  margin: 0 0 8px; }
+  margin: 15px 0 8px; }
+  #commentform .comment-subscription-form ~ p {
+    margin-top: 0; }
   #commentform .comment-subscription-form label {
-    color: #626262; }
+    color: #626262;
+    font-size: 13px;
+    font-weight: normal; }
 
 .no-comments {
   font-size: 14px;
@@ -2145,7 +2147,7 @@ a {
   margin-top: 75px; }
   .site-footer.footer-active-sidebar {
     border-top: 1px solid #ebebeb; }
-  .page-layout-no-footer-margin .site-footer {
+  .no-footer-margin .site-footer {
     margin-top: 0; }
   .site-footer .widgets {
     padding: 50px 0;
