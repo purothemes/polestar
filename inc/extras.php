@@ -15,23 +15,38 @@
  * @return array
  */
 function polestar_body_classes( $classes ) {
-	// Group blog.
-	if ( is_multi_author() ) {
-		$classes[] = 'group-blog';
-	}
-
-	// Header margin.
-	if ( is_home() && polestar_has_featured_posts() ) {
-		$classes[] = 'no-header-margin';
-	}
 
 	// Mobile compatibility classes.
 	$classes[] = 'css3-animations';
 	$classes[] = 'no-js';
 	$classes[] = 'no-touch';
 
+	// Group blog.
+	if ( is_multi_author() ) {
+		$classes[] = 'group-blog';
+	}
+
+	// Non-singlar pages.
+	if ( ! is_singular() ) {
+		$classes[] = 'hfeed';
+	}		
+
 	// Responsive layout.
 	$classes[] = 'responsive';
+
+	// Add the page setting classes.
+	$page_settings = puro_page_setting();
+
+	if ( ! empty( $page_settings ) ) {
+		if ( ! empty( $page_settings['layout'] ) ) $classes[] = 'page-layout-' . $page_settings['layout'];
+		if ( empty( $page_settings['header_margin'] ) ) $classes[] = 'no-header-margin';
+		if ( empty( $page_settings['footer_margin'] ) ) $classes[] = 'no-footer-margin';
+	}	
+
+	// Header margin.
+	if ( is_home() && polestar_has_featured_posts() ) {
+		$classes[] = 'no-header-margin';
+	}
 
 	// Sidebar.
 	if ( is_active_sidebar( 'sidebar-main' ) ) {
@@ -45,11 +60,10 @@ function polestar_body_classes( $classes ) {
 	// WooCommerce sidebar.
 	if ( is_active_sidebar( 'sidebar-shop' ) && ! is_product() ) {
 		 $classes[] = 'woocommerce-sidebar';
-	}		
+	}
 
-	// Non-singlar pages.
-	if ( ! is_singular() ) {
-		$classes[] = 'hfeed';
+	if ( get_theme_mod( 'woocommerce_sidebar_position' ) == 'right' ) {
+		 $classes[] = 'woocommerce-sidebar-position';
 	}		
 
 	return $classes;
@@ -118,4 +132,3 @@ function polestar_siteorigin_premium( $id ) {
     return 1;
 }
 add_filter( 'siteorigin_premium_affiliate_id', 'polestar_siteorigin_premium' );
-
