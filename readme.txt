@@ -108,7 +108,7 @@ Polestar WordPress Theme is derived from [Underscores WordPress Theme](http://un
 
 == Images ==
 
-Screenshot image "Stars Snow" sourced from https://unsplash.com by [Averie Woodard](https://unsplash.com/@averieclaire) licensed under [CC0 1.0 Universal (CC0 1.0)](http://creativecommons.org/publicdomain/zero/1.0/).
+Screenshot image "Half Dome Village, Yosemite Valley, United States" sourced from https://unsplash.com by [Billy Chester](https://unsplash.com/@billychester) licensed under [CC0 1.0 Universal (CC0 1.0)](http://creativecommons.org/publicdomain/zero/1.0/).
 
 == Fonts and Icons ==
 
