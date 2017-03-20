@@ -49,6 +49,15 @@ Version: dev
 /*--------------------------------------------------------------
 # Menus
 --------------------------------------------------------------*/
+.woocommerce .woocommerce-breadcrumb {
+  color: #828282;
+  font-size: 12px;
+  margin-bottom: 15px; }
+  .woocommerce .woocommerce-breadcrumb a {
+    color: #828282; }
+    .woocommerce .woocommerce-breadcrumb a:hover {
+      color: #4d8ffb; }
+
 .woocommerce .woocommerce-pagination {
   border: none !important;
   text-align: center; }
@@ -101,7 +110,7 @@ input[type="submit"] {
   display: inline-block;
   font-family: "Open Sans", sans-serif;
   font-size: 13px;
-  letter-spacing: 1px;
+  letter-spacing: .5px;
   line-height: normal;
   padding: 11px 25px;
   text-transform: uppercase;
@@ -302,10 +311,9 @@ fieldset legend {
       color: #4d8ffb; }
 
 .woocommerce.archive .page-title {
-  font-size: 32px;
+  font-size: 29px;
   line-height: normal;
-  margin: 0;
-  padding: 0; }
+  margin: 0 0 25px; }
   @media (max-width: 768px) {
     .woocommerce.archive.responsive .page-title {
       font-size: 26px; } }
