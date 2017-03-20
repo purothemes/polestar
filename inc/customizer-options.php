@@ -94,44 +94,6 @@ function polestar_theme_options() {
 	    'priority' => '50'
 	);
 
-	$options['header_background_color'] = array(
-	    'id' => 'header_background_color',
-	    'label'   => esc_html__( 'Background Color', 'polestar' ),
-	    'section' => $section,
-	    'type'    => 'color',
-	    'default' => '#ffffff',
-	    'priority' => '60'
-	);
-
-	$options['header_border_color'] = array(
-	    'id' => 'header_border_color',
-	    'label'   => esc_html__( 'Border Color', 'polestar' ),
-	    'section' => $section,
-	    'type'    => 'color',
-	    'default' => '#ebebeb',
-	    'priority' => '70'
-	);
-
-	$options['header_padding'] = array(
-	    'id' => 'header_padding',
-	    'label'   => esc_html__( 'Padding', 'polestar' ),
-	    'section' => $section,
-	    'type'    => 'number',
-	    'description' => esc_html__( 'Top and bottom padding in px.', 'polestar' ),
-	    'default' => 25,
-	    'priority' => '80'
-	);
-
-	$options['header_margin'] = array(
-	    'id' => 'header_margin',
-	    'label'   => esc_html__( 'Bottom Margin', 'polestar' ),
-	    'section' => $section,
-	    'type'    => 'number',
-	    'description' => esc_html__( 'Bottom margin in px.', 'polestar' ),
-	    'default' => 60,
-	    'priority' => '90'
-	);				
-
 	// Navigation.
 	$section = 'navigation';
 
@@ -158,22 +120,7 @@ function polestar_theme_options() {
 	    'type' => 'checkbox',
 	    'description' => esc_html__( 'Use a mobile menu for small screen devices. Header Menu setting must be enabled.', 'polestar' ),
 	    'default' => true,
-	);
-
-	$options['mobile_menu_collapse'] = array(
-	    'id' => 'mobile_menu_collapse',
-	    'label' => esc_html__( 'Mobile Menu Collapse', 'polestar' ),
-	    'section' => $section,
-	    'type' => 'number',
-	    'description' => esc_html__( 'The pixel resolution when the primary menu collapses into the mobile menu.', 'polestar' ),
-		'input_attrs'	=> array(
-			'min'	=> 480,
-			'max'	=> 3000,
-			'step'	=> 1
-		),
-		'default' => 780,
-		'sanitize_callback'	=> 'customizer_library_sanitize_number_range',
-	);				
+	);			
 
 	$options['menu_search'] = array(
 	    'id' => 'menu_search',
