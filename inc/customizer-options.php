@@ -303,17 +303,7 @@ function polestar_theme_options() {
 	    'description' => esc_html__( 'Choose the sidebar position.', 'polestar' ),
 	    'default' => 'right',
 	    'priority' => '10'
-	);
-
-	$options['sidebar_width'] = array(
-	    'id' => 'sidebar_width',
-	    'label'   => esc_html__( 'Width', 'polestar' ),
-	    'section' => $section,
-	    'type'    => 'number',
-	    'description' => esc_html__( 'Enter the sidebar width as a percentage.', 'polestar' ),
-	    'default' => 30,
-	    'priority' => '20'
-	);		
+	);	
 
 	// Footer.
 	$section = 'footer';
@@ -345,40 +335,6 @@ function polestar_theme_options() {
 	    'type' => 'text',
 	    'description' => esc_html__( '{site-title} and {year} can be used to display your website title and the current year.', 'polestar' ),
 	    'default' => esc_html__( 'Copyright &copy; {year} {sitename}', 'polestar' )
-	);
-
-	$options['footer_background_color'] = array(
-	    'id' => 'footer_background_color',
-	    'label'   => esc_html__( 'Background Color', 'polestar' ),
-	    'section' => $section,
-	    'type'    => 'color',
-	    'default' => '#ffffff',
-	);
-
-	$options['footer_border_color'] = array(
-	    'id' => 'footer_border_color',
-	    'label'   => esc_html__( 'Border Color', 'polestar' ),
-	    'section' => $section,
-	    'type'    => 'color',
-	    'default' => '#ebebeb',
-	);
-
-	$options['footer_padding'] = array(
-	    'id' => 'footer_padding',
-	    'label'   => esc_html__( 'Padding', 'polestar' ),
-	    'section' => $section,
-	    'type'    => 'number',
-	    'description' => esc_html__( 'Top and bottom padding in px.', 'polestar' ),
-	    'default' => 50,
-	);
-
-	$options['footer_margin'] = array(
-	    'id' => 'footer_margin',
-	    'label'   => esc_html__( 'Top Margin', 'polestar' ),
-	    'section' => $section,
-	    'type'    => 'number',
-	    'description' => esc_html__( 'Top margin in px.', 'polestar' ),
-	    'default' => 75,
 	);
 
 	// WooCommerce.

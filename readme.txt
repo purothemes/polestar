@@ -9,11 +9,11 @@ Tested up to: 4.7.2
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
-A clean, lightweight, multipurpose, responsive theme ready for your business or blog site.
+Lead the way with Polestar. It's fast loading, responsive, lightweight and flexible design is perfectly suited for building dynamic pages with SiteOrigin's Page Builder and selling with WooCommerce.
 
 == Description ==
 
-A clean, lightweight, multipurpose, responsive theme ready for your business or blog site. Create stunning landing pages with Page Builder by SiteOrigin. Show off your latest posts with Jetpack Featured Content and Polestar's posts slider.
+Lead the way with Polestar. It's fast loading, responsive, lightweight and flexible design is perfectly suited for building dynamic pages with SiteOrigin's Page Builder and selling with WooCommerce. Polestar features a sticky header, beautiful header search, scroll to top and just the right amount of Customizer theme settings. Page level settings let you adjust the theme layout on a page by page basis, perfect for landing pages. If you run a blog, Polestar is ready with awesome features including a full-width posts slider integrated with Jetpack Featured Content, an author box and related posts section.
 
 == Installation ==
 
