@@ -17,7 +17,7 @@ jQuery( function( $ ) {
 	};		
 
 	// Entry thumbnail container size.
-	$( document ).ready( function() {
+	$( window ).load( function() {
 		$( '.entry-thumbnail' ).each( function() {
 			img = $( this ).find( 'img' );
 			img_width = img.width();
