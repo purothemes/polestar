@@ -1128,4 +1128,10 @@ fieldset legend {
         .woocommerce-account .woocommerce-MyAccount-content .woocommerce-Address.col-2 {
           padding-left: 0; } }
 
+/*--------------------------------------------------------------
+# Order Tracking
+--------------------------------------------------------------*/
+.track_order p {
+  margin-bottom: 26px; }
+
 /*# sourceMappingURL=sass/maps/woocommerce.css.map */
