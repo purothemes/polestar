@@ -377,6 +377,18 @@ $sel: '';
     }
 }
 
+@media (max-width: 768px) {
+	
+	#masthead.mobile-menu .main-navigation ul,
+	#masthead.mobile-menu .main-navigation .search-icon { 
+		display: none;
+	}
+
+	#masthead.mobile-menu #mobile-menu-button {
+		display: inline-block;
+	}
+}
+
 /*--------------------------------------------------------------
 ## Posts, Post and Comment Navigation
 --------------------------------------------------------------*/
