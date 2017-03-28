@@ -1459,7 +1459,7 @@ a {
   padding: 25px 0;
   position: relative;
   width: 100%;
-  z-index: 999; }
+  z-index: 9999; }
   .no-header-margin .site-header {
     margin-bottom: 0; }
   @media (max-width: 600px) {
