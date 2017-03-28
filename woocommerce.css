@@ -172,7 +172,7 @@ textarea {
   border: 1px solid #ebebeb;
   border-radius: 2px;
   box-sizing: border-box;
-  font-size: 14px;
+  font-weight: normal;
   line-height: normal;
   outline: none;
   padding: 9px 13px 10px;
@@ -206,6 +206,9 @@ select {
 
 textarea {
   width: 100%; }
+
+label {
+  font-size: 0.9em; }
 
 fieldset legend {
   color: #2d2d2d;
@@ -313,7 +316,7 @@ fieldset legend {
 .woocommerce.archive .page-title {
   font-size: 29px;
   line-height: normal;
-  margin: 0 0 25px; }
+  margin: 0; }
   @media (max-width: 768px) {
     .woocommerce.archive.responsive .page-title {
       font-size: 26px; } }
@@ -752,6 +755,29 @@ fieldset legend {
       .woocommerce .product .products .product {
         margin-right: 0;
         width: 100%; } }
+
+/*--------------------------------------------------------------
+# Widgets
+--------------------------------------------------------------*/
+/*--------------------------------------------------------------
+## - Search Widget
+--------------------------------------------------------------*/
+.widget_product_search .woocommerce-product-search input[type="search"] {
+  padding-right: 43px; }
+
+.widget_product_search .woocommerce-product-search button[type="submit"] {
+  background: none;
+  border: none;
+  color: inherit;
+  padding: 0;
+  position: relative;
+  right: 36px;
+  top: 2px; }
+  .widget_product_search .woocommerce-product-search button[type="submit"] svg {
+    height: 16px;
+    width: 16px; }
+    .widget_product_search .woocommerce-product-search button[type="submit"] svg path {
+      fill: #828282; }
 
 /*--------------------------------------------------------------
 # Notifications

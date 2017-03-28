@@ -59,7 +59,7 @@
 	&.archive .page-title {
 		font-size: 29px;
 		line-height: normal;
-		margin: 0 0 25px;
+		margin: 0;
 		
 		@media (max-width: 768px) {
 			@at-root .woocommerce.archive.responsive .page-title {
