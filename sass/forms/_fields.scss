@@ -17,7 +17,7 @@ textarea {
 	border: 1px solid $color__background-hr-dark;
 	border-radius: 2px;
 	box-sizing: border-box;
-	font-size: 14px; 
+	font-weight: normal; 
 	line-height: normal;
 	outline: none;
 	padding: 9px 13px 10px;
@@ -41,6 +41,10 @@ select {
 
 textarea {
 	width: 100%;
+}
+
+label {
+	font-size: 0.9em; 
 }
 
 fieldset legend {
