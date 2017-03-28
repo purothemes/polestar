@@ -21,10 +21,10 @@ Version: dev
   padding-right: 4%;
   padding-left: 0; }
 
-.woocommerce.woocommerce-sidebar .content-area {
+.woocommerce.woocommerce-sidebar-right .content-area {
   float: left; }
 
-.woocommerce.woocommerce-sidebar .widget-area {
+.woocommerce.woocommerce-sidebar-right .widget-area {
   float: right;
   padding-right: 0;
   padding-left: 4%; }
