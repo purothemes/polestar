@@ -199,6 +199,7 @@ function polestar_enqueue_flexslider() {
 require get_template_directory() . '/inc/customizer-library/customizer-library.php';
 require get_template_directory() . '/inc/customizer-options.php';
 require get_template_directory() . '/inc/styles.php';
+require get_template_directory() . '/inc/mods.php';
 
 /**
  * Puro Extras.
