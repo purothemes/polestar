@@ -106,11 +106,55 @@ function polestar_theme_options() {
 
 	$options['accent_color'] = array(
 	    'id' => 'accent_color',
-	    'label'   => esc_html__( 'Accent Color', 'polestar-premium' ),
+	    'label'   => esc_html__( 'Accent Color', 'polestar' ),
 	    'section' => $section,
 	    'type'    => 'color',
 	    'default' => '#4d8ffb',
 	);
+
+	$options['heading_color'] = array(
+	    'id' => 'heading_color',
+	    'label'   => esc_html__( 'Heading Color', 'polestar' ),
+	    'section' => $section,
+	    'type'    => 'color',
+	    'default' => '#2d2d2d',
+	);
+
+	$options['text_color'] = array(
+	    'id' => 'text_color',
+	    'label'   => esc_html__( 'Text Color', 'polestar' ),
+	    'section' => $section,
+	    'type'    => 'color',
+	    'default' => '#626262',
+	);
+
+	// Fonts.
+	$section = 'fonts';
+
+	$sections[] = array(
+	    'id' => $section,
+	    'title' => esc_html__( 'Fonts', 'polestar' ),
+	    'priority' => '18',
+	    'panel' => $panel
+	);	
+
+	$options['heading_font'] = array(
+		'id' => 'heading_font',
+		'label'   => esc_html__( 'Heading Font', 'polestar' ),
+		'section' => $section,
+		'type'    => 'select',
+		'choices' => customizer_library_get_font_choices(),
+		'default' => 'Montserrat'
+	);	
+
+	$options['body_font'] = array(
+		'id' => 'body_font',
+		'label'   => esc_html__( 'Body Font', 'polestar' ),
+		'section' => $section,
+		'type'    => 'select',
+		'choices' => customizer_library_get_font_choices(),
+		'default' => 'Open Sans'
+	);			
 
 	// Navigation.
 	$section = 'navigation';
