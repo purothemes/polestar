@@ -686,12 +686,12 @@ a {
     text-align: left; }
     .main-navigation li:last-of-type {
       margin-right: 0; }
+    .main-navigation li a {
+      color: #2d2d2d;
+      display: block; }
     .main-navigation li:hover > a,
     .main-navigation li.focus > a {
       color: #626262; }
-  .main-navigation a {
-    color: #2d2d2d;
-    display: block; }
   .main-navigation .current a,
   .main-navigation .current_page_item > a,
   .main-navigation .current-menu-item > a,
