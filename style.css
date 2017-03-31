@@ -909,15 +909,15 @@ a {
     background: #4d8ffb;
     color: #fff; }
 
-.post-navigation {
+.site-content .post-navigation {
   font-size: 16px; }
-  .post-navigation a {
+  .site-content .post-navigation a {
     color: #626262;
     font-weight: bold;
     font-weight: 600; }
-    .post-navigation a:hover {
+    .site-content .post-navigation a:hover {
       color: #4d8ffb; }
-    .post-navigation a .sub-title {
+    .site-content .post-navigation a .sub-title {
       border-bottom: 2px solid #ebebeb;
       color: #828282;
       display: inline-block;
@@ -927,7 +927,7 @@ a {
       line-height: normal;
       margin-bottom: 10px;
       padding-bottom: 3px; }
-    .post-navigation a div {
+    .site-content .post-navigation a div {
       line-height: normal; }
 
 .comment-navigation {
