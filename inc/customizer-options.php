@@ -94,6 +94,24 @@ function polestar_theme_options() {
 	    'priority' => '50'
 	);
 
+	// Colors.
+	$section = 'polestar_colors';
+
+	$sections[] = array(
+	    'id' => $section,
+	    'title' => esc_html__( 'Colors', 'polestar' ),
+	    'priority' => '15',
+	    'panel' => $panel
+	);	
+
+	$options['accent_color'] = array(
+	    'id' => 'accent_color',
+	    'label'   => esc_html__( 'Accent Color', 'polestar-premium' ),
+	    'section' => $section,
+	    'type'    => 'color',
+	    'default' => '#4d8ffb',
+	);
+
 	// Navigation.
 	$section = 'navigation';
 
