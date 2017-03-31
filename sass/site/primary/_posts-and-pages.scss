@@ -46,7 +46,7 @@
 	}	
 
 	a {
-		color: inherit;
+		color: $color__text-dark;
 		text-decoration: none;
 
 		&:hover {
@@ -56,7 +56,6 @@
 }
 
 .entry-meta {
-	font-family: $font__main;
 	line-height: normal;
 
 	> span {

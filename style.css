@@ -414,7 +414,6 @@ figure {
 
 table {
   border: 1px solid #ebebeb;
-  font-family: "Open Sans", sans-serif;
   margin: 0 0 27px;
   width: 100%; }
   table a {
@@ -1620,13 +1619,12 @@ a {
     .responsive .entry-title {
       font-size: 23px; } }
   .entry-title a {
-    color: inherit;
+    color: #2d2d2d;
     text-decoration: none; }
     .entry-title a:hover {
       color: #626262; }
 
 .entry-meta {
-  font-family: "Open Sans", sans-serif;
   line-height: normal; }
   .entry-meta > span {
     color: #828282;
@@ -2044,7 +2042,6 @@ a {
     .comment-list .comment .comment-reply-link,
     .comment-list .pingback .comment-reply-link {
       color: #2d2d2d;
-      font-family: "Open Sans", sans-serif;
       font-size: 12px;
       font-weight: bold;
       font-weight: 600;
@@ -2072,7 +2069,6 @@ a {
   margin-bottom: 15px; }
   .comment-reply-title #cancel-comment-reply-link {
     color: #828282;
-    font-family: "Open Sans", sans-serif;
     font-size: 13px;
     margin-left: .25em; }
     .comment-reply-title #cancel-comment-reply-link:hover {
