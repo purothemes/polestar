@@ -120,8 +120,124 @@ function polestar_build_styles() {
 				'border-color' => $color
 			)
 		) );
+
+		if ( function_exists( 'is_woocommerce' ) ) {
+
+			Customizer_Library_Styles()->add( array(
+				'selectors' => array(
+					'.woocommerce .woocommerce-breadcrumb a:hover',
+					'.woocommerce .star-rating',
+					'.woocommerce .star-rating:before',
+					'.woocommerce .price ins',
+					'.woocommerce .product .summary .woocommerce-review-link:hover',
+					'.woocommerce .product .summary .variations .reset_variations:hover',
+					'.woocommerce .product .summary .stock',
+					'.woocommerce .product .summary .product_meta a:hover',
+					'.woocommerce .product .woocommerce-Reviews .stars a:hover',
+					'.woocommerce-account .woocommerce-MyAccount-navigation ul li a:hover'
+				),
+				'declarations' => array(
+					'color' => $color
+				)
+			) );
+
+			Customizer_Library_Styles()->add( array(
+				'selectors' => array(
+					'.woocommerce .woocommerce-pagination ul li a:hover',
+					'.woocommerce .woocommerce-pagination ul li a.current',
+					'.woocommerce .woocommerce-pagination ul li > span:hover',
+					'.woocommerce .woocommerce-pagination ul li > span.current',
+					'.button',
+					'.woocommerce .products .product .added_to_cart',
+					'button',
+					'input[type="button"]',
+					'input[type="reset"]',
+					'input[type="submit"]',
+					'.woocommerce .onsale'
+				),
+				'declarations' => array(
+					'background' => $color
+				)
+			) );
+
+			Customizer_Library_Styles()->add( array(
+				'selectors' => array(
+					'.woocommerce .product .woocommerce-tabs .wc-tabs li.active'
+				),
+				'declarations' => array(
+					'border-color' => $color
+				)
+			) );								
+
+		}
 		
-	}	
+	}
+
+	// Heading color.
+	$setting = 'heading_color';
+	$mod = get_theme_mod( $setting, customizer_library_get_default( $setting ) );
+
+	if ( $mod !== customizer_library_get_default( $setting ) ) {
+
+		$color = sanitize_hex_color( $mod );
+
+		Customizer_Library_Styles()->add( array(
+			'selectors' => array(
+				'h1',
+				'h2',
+				'h3',
+				'h4',
+				'h5',
+				'h6',			
+				'.entry-title',
+				'.entry-title a',
+			),
+			'declarations' => array(
+				'color' => $color
+			)
+		) );
+	}
+
+	// Heading font.
+	$setting = 'heading_font';
+	$mod = get_theme_mod( $setting, customizer_library_get_default( $setting ) );
+	$stack = customizer_library_get_font_stack( $mod );
+	if ( $mod != customizer_library_get_default( $setting ) ) {
+		Customizer_Library_Styles()->add( array(
+			'selectors' => array(
+				'h1',
+				'h2',
+				'h3',
+				'h4',
+				'h5',
+				'h6',			
+				'.entry-title',
+				'.entry-title a',
+			),
+			'declarations' => array(
+				'font-family' => $stack
+			)
+		) );
+	}
+
+	// Body font.
+	$setting = 'body_font';
+	$mod = get_theme_mod( $setting, customizer_library_get_default( $setting ) );
+	$stack = customizer_library_get_font_stack( $mod );
+	if ( $mod != customizer_library_get_default( $setting ) ) {
+		Customizer_Library_Styles()->add( array(
+			'selectors' => array(
+				'body',
+				'button',
+				'input',
+				'select',
+				'textarea'
+			),
+			'declarations' => array(
+				'font-family' => $stack
+			)
+		) );
+	}		
 		
 }
 endif;
