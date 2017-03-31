@@ -489,7 +489,6 @@ input[type="submit"] {
   input[type="reset"]:focus,
   input[type="submit"]:active,
   input[type="submit"]:focus {
-    background: #4d8ffb;
     color: #fff;
     outline: none; }
   .button[disabled], .pagination [disabled].page-numbers, #infinite-handle span button[disabled], .page-links span[disabled],
