@@ -33,7 +33,12 @@
 
 			@media (max-width: 768px) {
 				float: none;
+				margin-bottom: 25px; 
 				width: 100% !important;
+				
+				&:last-of-type {
+					margin-bottom: 0;
+				}
 			}
 		}
 	}

@@ -2211,7 +2211,10 @@ a {
       @media (max-width: 768px) {
         .site-footer .widgets .widget {
           float: none;
-          width: 100% !important; } }
+          margin-bottom: 25px;
+          width: 100% !important; }
+          .site-footer .widgets .widget:last-of-type {
+            margin-bottom: 0; } }
   .site-footer .site-info {
     float: left;
     font-size: 13px;
