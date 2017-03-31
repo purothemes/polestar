@@ -32,7 +32,7 @@ function polestar_build_styles() {
 				'.main-navigation .current-menu-item > a',
 				'.main-navigation .current_page_ancestor > a',
 				'.main-navigation .current-menu-ancestor > a',
-				'.post-navigation a:hover',
+				'.site-content .post-navigation a:hover',
 				'.comment-navigation a:hover',
 				'.footer-menu .menu li a:hover',
 				'.footer-menu .menu li a:hover:before',
