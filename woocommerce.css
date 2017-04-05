@@ -96,125 +96,6 @@ Version: dev
           top: 1px; }
 
 /*--------------------------------------------------------------
-# Forms
---------------------------------------------------------------*/
-.button, .woocommerce .products .product .added_to_cart,
-button,
-input[type="button"],
-input[type="reset"],
-input[type="submit"] {
-  background: #4d8ffb;
-  border: 0;
-  border-radius: 2px;
-  color: #fff;
-  display: inline-block;
-  font-size: 13px;
-  letter-spacing: .5px;
-  line-height: normal;
-  padding: 11px 25px;
-  text-transform: uppercase;
-  transition: .3s; }
-  .button:hover, .woocommerce .products .product .added_to_cart:hover,
-  button:hover,
-  input[type="button"]:hover,
-  input[type="reset"]:hover,
-  input[type="submit"]:hover {
-    background: rgba(77, 143, 251, 0.8);
-    color: #fff; }
-  .button:visited, .woocommerce .products .product .added_to_cart:visited,
-  button:visited,
-  input[type="button"]:visited,
-  input[type="reset"]:visited,
-  input[type="submit"]:visited {
-    color: #fff; }
-  .button:active, .woocommerce .products .product .added_to_cart:active, .button:focus, .woocommerce .products .product .added_to_cart:focus,
-  button:active,
-  button:focus,
-  input[type="button"]:active,
-  input[type="button"]:focus,
-  input[type="reset"]:active,
-  input[type="reset"]:focus,
-  input[type="submit"]:active,
-  input[type="submit"]:focus {
-    color: #fff;
-    outline: none; }
-  .button[disabled], .woocommerce .products .product [disabled].added_to_cart,
-  button[disabled],
-  input[type="button"][disabled],
-  input[type="reset"][disabled],
-  input[type="submit"][disabled] {
-    opacity: 0.6; }
-    .button[disabled]:hover, .woocommerce .products .product [disabled].added_to_cart:hover,
-    button[disabled]:hover,
-    input[type="button"][disabled]:hover,
-    input[type="reset"][disabled]:hover,
-    input[type="submit"][disabled]:hover {
-      box-shadow: none; }
-
-input[type="text"],
-input[type="email"],
-input[type="url"],
-input[type="password"],
-input[type="search"],
-input[type="number"],
-input[type="tel"],
-input[type="range"],
-input[type="date"],
-input[type="month"],
-input[type="week"],
-input[type="time"],
-input[type="datetime"],
-input[type="datetime-local"],
-input[type="color"],
-textarea {
-  border: 1px solid #ebebeb;
-  border-radius: 2px;
-  box-sizing: border-box;
-  font-weight: normal;
-  line-height: normal;
-  outline: none;
-  padding: 9px 13px 10px;
-  transition: .3s;
-  max-width: 100%;
-  -webkit-appearance: none; }
-  input[type="text"]:focus,
-  input[type="email"]:focus,
-  input[type="url"]:focus,
-  input[type="password"]:focus,
-  input[type="search"]:focus,
-  input[type="number"]:focus,
-  input[type="tel"]:focus,
-  input[type="range"]:focus,
-  input[type="date"]:focus,
-  input[type="month"]:focus,
-  input[type="week"]:focus,
-  input[type="time"]:focus,
-  input[type="datetime"]:focus,
-  input[type="datetime-local"]:focus,
-  input[type="color"]:focus,
-  textarea:focus {
-    border-color: #d9d9d9; }
-
-input[type="checkbox"] {
-  margin-right: 2px; }
-
-select {
-  border: 1px solid #ebebeb;
-  max-width: 100%; }
-
-textarea {
-  width: 100%; }
-
-label {
-  font-size: 0.9em; }
-
-fieldset legend {
-  color: #2d2d2d;
-  font-family: "Montserrat", sans-serif;
-  font-size: 18px;
-  padding: 10px 0; }
-
-/*--------------------------------------------------------------
 # WooCommerce Forms
 --------------------------------------------------------------*/
 .woocommerce form .form-row {
@@ -224,10 +105,7 @@ fieldset legend {
     content: "";
     display: table; }
   .woocommerce form .form-row label {
-    color: #2d2d2d;
     display: block;
-    font-size: 14px;
-    font-weight: 600;
     margin-bottom: 4px; }
     .woocommerce form .form-row label .required {
       color: rgba(255, 0, 0, 0.6); }
@@ -269,7 +147,7 @@ fieldset legend {
 /*--------------------------------------------------------------
 # Main
 --------------------------------------------------------------*/
-.underline, .woocommerce .product .woocommerce-tabs h2, .woocommerce .product .upsells h2, .woocommerce .product .related h2 {
+.underline, .woocommerce .product .woocommerce-tabs h2, .woocommerce .product .upsells > h2, .woocommerce .product .related > h2 {
   border-bottom: 2px solid #ebebeb;
   display: inline-block;
   margin: 0 0 20px;
@@ -483,10 +361,10 @@ fieldset legend {
       display: block;
       margin: 0 auto;
       width: 100%; }
-    .woocommerce .products .product h3 {
+    .woocommerce .products .product .woocommerce-loop-product__title {
       font-size: 16px;
       margin: 15px 0 5px; }
-      .woocommerce .products .product h3:hover {
+      .woocommerce .products .product .woocommerce-loop-product__title:hover {
         color: #626262; }
     .woocommerce .products .product .star-rating {
       display: block;
@@ -501,7 +379,6 @@ fieldset legend {
     .woocommerce .products .product .button, .woocommerce .products .product .added_to_cart {
       display: inline-block; }
     .woocommerce .products .product .added_to_cart {
-      display: inline-block;
       margin-top: 10px; }
 
 .woocommerce .price {
@@ -572,19 +449,16 @@ fieldset legend {
     .woocommerce .product .summary .price {
       font-size: 18px;
       margin-bottom: 25px; }
-    .woocommerce .product .summary div[itemprop="description"] {
+    .woocommerce .product .summary .woocommerce-product-details__short-description {
       margin-bottom: 25px; }
-      .woocommerce .product .summary div[itemprop="description"] p {
+      .woocommerce .product .summary .woocommerce-product-details__short-description p {
         margin-bottom: 26px; }
-        .woocommerce .product .summary div[itemprop="description"] p:only-of-type, .woocommerce .product .summary div[itemprop="description"] p:last-of-type {
+        .woocommerce .product .summary .woocommerce-product-details__short-description p:only-of-type, .woocommerce .product .summary .woocommerce-product-details__short-description p:last-of-type {
           margin-bottom: 0; }
     .woocommerce .product .summary .variations {
       font-size: 14px;
       margin-bottom: 30px; }
       .woocommerce .product .summary .variations .label {
-        color: #2d2d2d;
-        font-weight: bold;
-        font-weight: 600;
         text-transform: capitalize; }
       .woocommerce .product .summary .variations select {
         font-size: 14px; }
@@ -724,11 +598,11 @@ fieldset legend {
     content: "\e021"; }
   .woocommerce .product .woocommerce-Reviews .stars.selected a:not(.active):before {
     content: "\e020"; }
-  .woocommerce .product .upsells h2 {
+  .woocommerce .product .upsells > h2 {
     font-size: 16px; }
   .woocommerce .product .upsells .product {
     margin-bottom: 50px; }
-  .woocommerce .product .related h2 {
+  .woocommerce .product .related > h2 {
     font-size: 16px; }
   .woocommerce .product .related .product {
     margin-bottom: 25px; }
@@ -859,7 +733,6 @@ fieldset legend {
       .woocommerce-cart table.cart thead {
         display: none; } }
     .woocommerce-cart table.cart thead th {
-      background: #f6f6f6;
       font-size: 14px; }
   .woocommerce-cart table.cart th,
   .woocommerce-cart table.cart td {
@@ -917,14 +790,9 @@ fieldset legend {
         .woocommerce-cart table.cart td.actions .coupon {
           float: none;
           margin-bottom: 5px; } }
-      .woocommerce-cart table.cart td.actions .coupon label {
-        color: #2d2d2d;
-        font-size: 14px;
-        font-weight: bold;
-        font-weight: 600; }
-        @media (max-width: 768px) {
-          .woocommerce-cart table.cart td.actions .coupon label {
-            display: none; } }
+      @media (max-width: 768px) {
+        .woocommerce-cart table.cart td.actions .coupon label {
+          display: none; } }
       .woocommerce-cart table.cart td.actions .coupon input {
         margin-right: 5px; }
         @media (max-width: 768px) {
@@ -957,8 +825,6 @@ fieldset legend {
     .woocommerce-cart .cart_totals table th,
     .woocommerce-cart .cart_totals table td {
       padding: 8px 0; }
-    .woocommerce-cart .cart_totals table th {
-      color: #2d2d2d; }
     .woocommerce-cart .cart_totals table td {
       text-align: right; }
   .woocommerce-cart .cart_totals .checkout-button {
@@ -968,6 +834,9 @@ fieldset legend {
 /*--------------------------------------------------------------
 # Checkout
 --------------------------------------------------------------*/
+.woocommerce-checkout .entry-content {
+  padding: 0; }
+
 .woocommerce .checkout_coupon .form-row-first,
 .woocommerce .checkout_coupon .form-row-last {
   float: left;
@@ -1031,9 +900,6 @@ fieldset legend {
 .woocommerce table.woocommerce-checkout-review-order-table tfoot td {
   padding: 20px; }
 
-.woocommerce table.woocommerce-checkout-review-order-table tfoot th {
-  color: #2d2d2d; }
-
 .woocommerce table.woocommerce-checkout-review-order-table tfoot td {
   text-align: left; }
 
@@ -1045,13 +911,10 @@ fieldset legend {
     padding: 20px;
     position: relative;
     text-align: left; }
-    .woocommerce #payment .payment_methods li label {
-      color: #2d2d2d;
-      font-weight: 700; }
-      .woocommerce #payment .payment_methods li label a {
-        font-size: 12px;
-        font-weight: normal;
-        margin-left: 5px; }
+    .woocommerce #payment .payment_methods li label a {
+      font-size: 12px;
+      font-weight: normal;
+      margin-left: 5px; }
     .woocommerce #payment .payment_methods li input {
       margin-right: 5px; }
     .woocommerce #payment .payment_methods li img {

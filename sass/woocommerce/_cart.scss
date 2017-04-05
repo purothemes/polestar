@@ -19,8 +19,7 @@
 			}			
 			
 			th {
-				background: $color__background-hr;
-				font-size: 14px; 
+				font-size: 14px;
 			}		
 		}
 		
@@ -120,10 +119,6 @@
 				}
 
 				label {
-					color: $color__text-dark;
-					font-size: 14px;
-					font-weight: bold;
-					font-weight: 600;
 					
 					@media (max-width: 768px) {
 						display: none;
@@ -184,10 +179,6 @@
 			th,
 			td {
 				padding: 8px 0;
-			}
-
-			th {
-				color: $color__text-dark;
 			}
 			
 			td {

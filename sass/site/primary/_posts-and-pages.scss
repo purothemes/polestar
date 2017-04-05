@@ -27,7 +27,7 @@
 /*--------------------------------------------------------------
 ## - Posts
 --------------------------------------------------------------*/
-.entry-title {
+.site-content .entry-title {
 	color: $color__text-dark;
 	font-size: 29px; 
 	line-height: normal;
@@ -209,7 +209,7 @@
 	}
 }
 
-.more-wrapper {
+.site-content .more-wrapper {
 	display: block;
 	font-size: 14px;
 	
@@ -234,14 +234,9 @@
 	text-align: left;
 
 	.page-links-title {
-		color: $color__text-dark;
-		font-size: 14px;
-		font-weight: 500;  
-	}
-
-	.page-links-title {
 		background: none;
 		color: $color__text-dark;
+		font-size: 14px;
 		font-weight: 600; 
 		padding: 0;
 		text-transform: none;
@@ -521,16 +516,5 @@
 		div {
 			font-size: 14px; 
 		}	
-	}
-}
-
-/*--------------------------------------------------------------
-## - Post Password Form
---------------------------------------------------------------*/
-.post-password-form {
-	
-	label {
-		color: $color__text-dark;
-		font-weight: 600; 
 	}
 }

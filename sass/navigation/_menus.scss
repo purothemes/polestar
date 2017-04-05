@@ -454,20 +454,20 @@ $sel: '';
 				top: 1px;
 			}
 		}
-	}
 
-	.dots {
-		background: none;
-		font-family: "Gill Sans", "Gill Sans MT", Calibri, sans-serif;
-		font-size: 13px; 
-		padding-right: 0;
-		padding-left: 0; 
-		
-		&:hover {
+		&.dots {
 			background: none;
-			box-shadow: none;
-			color: $color__text-medium;
-		}
+			font-family: "Gill Sans", "Gill Sans MT", Calibri, sans-serif;
+			font-size: 13px; 
+			padding-right: 0;
+			padding-left: 0; 
+			
+			&:hover {
+				background: none;
+				box-shadow: none;
+				color: $color__text-medium;
+			}
+		}		
 	}
 
 	.current {

@@ -303,7 +303,7 @@
 			}
 
 			// Product Title.
-			h3 {
+			.woocommerce-loop-product__title {
 				font-size: 16px; 
 				margin: 15px 0 5px;
 				
@@ -337,8 +337,7 @@
 			// Added to Cart Button.
 			.added_to_cart {
 				@extend .button;
-				display: inline-block;
-				margin-top: 10px; 
+				margin-top: 10px;
 			}
 
 		}
@@ -451,7 +450,7 @@
 				margin-bottom: 25px;
 			}
 
-			div[itemprop="description"] {
+			.woocommerce-product-details__short-description {
 				margin-bottom: 25px;
 				
 				p {
@@ -469,9 +468,6 @@
 				margin-bottom: 30px; 
 
 				.label {
-					color: $color__text-dark;
-					font-weight: bold;
-					font-weight: 600;
 					text-transform: capitalize;
 				}
 
@@ -558,7 +554,6 @@
 			}
 
 			.wc-tabs {
-				// border-bottom: 1px solid $color__background-hr; 
 				list-style: none;
 				margin: 0;
 				overflow: hidden;
@@ -727,7 +722,7 @@
 
 		.upsells {
 			
-			h2 {
+			> h2 {
 				@extend .underline;
 				font-size: 16px;
 			}
@@ -739,7 +734,7 @@
 
 		.related {
 
-			h2 {
+			> h2 {
 				@extend .underline;
 				font-size: 16px;
 			}

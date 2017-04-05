@@ -896,16 +896,16 @@ a {
       .pagination .page-numbers.next span:before, .pagination .page-numbers.prev span:before {
         position: relative;
         top: 1px; }
-  .pagination .dots {
-    background: none;
-    font-family: "Gill Sans", "Gill Sans MT", Calibri, sans-serif;
-    font-size: 13px;
-    padding-right: 0;
-    padding-left: 0; }
-    .pagination .dots:hover {
+    .pagination .page-numbers.dots {
       background: none;
-      box-shadow: none;
-      color: #626262; }
+      font-family: "Gill Sans", "Gill Sans MT", Calibri, sans-serif;
+      font-size: 13px;
+      padding-right: 0;
+      padding-left: 0; }
+      .pagination .page-numbers.dots:hover {
+        background: none;
+        box-shadow: none;
+        color: #626262; }
   .pagination .current {
     background: #4d8ffb;
     color: #fff; }
@@ -1604,21 +1604,21 @@ a {
 /*--------------------------------------------------------------
 ## - Posts
 --------------------------------------------------------------*/
-.entry-title {
+.site-content .entry-title {
   color: #2d2d2d;
   font-size: 29px;
   line-height: normal;
   margin: 0; }
   @media (max-width: 768px) {
-    .responsive .entry-title {
+    .responsive .site-content .entry-title {
       font-size: 26px; } }
   @media (max-width: 480px) {
-    .responsive .entry-title {
+    .responsive .site-content .entry-title {
       font-size: 23px; } }
-  .entry-title a {
+  .site-content .entry-title a {
     color: #2d2d2d;
     text-decoration: none; }
-    .entry-title a:hover {
+    .site-content .entry-title a:hover {
       color: #626262; }
 
 .entry-meta {
@@ -1734,29 +1734,26 @@ a {
     display: block;
     line-height: 0; }
 
-.more-wrapper {
+.site-content .more-wrapper {
   display: block;
   font-size: 14px; }
-  .more-wrapper span {
+  .site-content .more-wrapper span {
     font-size: 13px;
     position: relative;
     right: -4px;
     top: 1.5px; }
-  .more-wrapper a {
+  .site-content .more-wrapper a {
     color: #2d2d2d;
     font-weight: 600; }
-    .more-wrapper a:hover {
+    .site-content .more-wrapper a:hover {
       color: #4d8ffb; }
 
 .page-links {
   text-align: left; }
   .page-links .page-links-title {
-    color: #2d2d2d;
-    font-size: 14px;
-    font-weight: 500; }
-  .page-links .page-links-title {
     background: none;
     color: #2d2d2d;
+    font-size: 14px;
     font-weight: 600;
     padding: 0;
     text-transform: none; }
@@ -1972,13 +1969,6 @@ a {
       font-size: 14px; }
 
 /*--------------------------------------------------------------
-## - Post Password Form
---------------------------------------------------------------*/
-.post-password-form label {
-  color: #2d2d2d;
-  font-weight: 600; }
-
-/*--------------------------------------------------------------
 ## - Comments
 --------------------------------------------------------------*/
 .comment-list {
@@ -2076,10 +2066,8 @@ a {
   margin-bottom: 25px; }
 
 #commentform label {
-  color: #2d2d2d;
   display: block;
   font-size: 14px;
-  font-weight: 600;
   line-height: normal;
   margin-bottom: 8px; }
 

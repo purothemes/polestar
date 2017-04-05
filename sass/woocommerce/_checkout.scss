@@ -1,3 +1,7 @@
+.woocommerce-checkout .entry-content {
+	padding: 0; 
+}
+
 .woocommerce {
 
 	.checkout_coupon {
@@ -92,10 +96,6 @@
 			td {
 				padding: 20px;
 			}
-
-			th {
-				color: $color__text-dark;
-			}
 			
 			td {
 				text-align: left;
@@ -116,8 +116,6 @@
 				text-align: left;
 				
 				label {
-					color: $color__text-dark;
-					font-weight: 700;
 					
 					a {
 						font-size: 12px; 
