@@ -1080,6 +1080,48 @@ fieldset legend {
   margin-top: 30px; }
 
 /*--------------------------------------------------------------
+# Order Received
+--------------------------------------------------------------*/
+.woocommerce-order-received h2,
+.woocommerce-order-received h3 {
+  margin-bottom: 10px; }
+
+.woocommerce-order-received p {
+  margin: 0 0 25px; }
+
+.woocommerce-order-received table {
+  border: 1px solid #ebebeb;
+  margin: 0 0 25px;
+  text-align: left; }
+  .woocommerce-order-received table thead th {
+    padding: 16px; }
+  .woocommerce-order-received table th,
+  .woocommerce-order-received table td {
+    border: 1px solid #f6f6f6;
+    padding: 8px 16px; }
+
+.woocommerce-order-received section {
+  margin-bottom: 50px; }
+
+.woocommerce-order-received .woocommerce-thankyou-order-details {
+  background: #f6f6f6;
+  list-style: none;
+  margin: 0 0 25px;
+  padding: 13px 26px; }
+  .woocommerce-order-received .woocommerce-thankyou-order-details li {
+    border-bottom: 1px solid #ebebeb;
+    font-size: 12px;
+    padding: 13px 0;
+    text-transform: uppercase; }
+    .woocommerce-order-received .woocommerce-thankyou-order-details li strong {
+      display: block;
+      font-size: 15px;
+      padding-top: 3px;
+      text-transform: none; }
+    .woocommerce-order-received .woocommerce-thankyou-order-details li:last-of-type {
+      border: 0; }
+
+/*--------------------------------------------------------------
 # Account Dashboard
 --------------------------------------------------------------*/
 .woocommerce-account h2 {
