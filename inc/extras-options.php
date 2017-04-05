@@ -79,10 +79,15 @@ add_filter( 'puro_page_settings_defaults', 'polestar_setup_page_setting_defaults
  */
 function polestar_about_page( $about ) {
 
+	$about['documentation_url'] = 'https://purothemes.com/documentation/polestar-wordpress-theme/';
+
 	$about['premium_url'] = 'https://purothemes.com/themes/polestar/';
+
 	$about['review'] = true;
 
-	$about['description'] = esc_html__( 'A clean, lightweight, multipurpose, responsive theme ready for your business or blog site.', 'polestar' );
+	$about['video_url'] = 'https://purothemes.com/themes/polestar/#video';
+
+	$about['description'] = esc_html__( 'Lead the way with Polestar. It\'s fast loading, responsive, lightweight and flexible design is perfectly suited for building dynamic pages with SiteOrigin\'s Page Builder and selling with WooCommerce.', 'polestar' );
 
 	$about['sections'] = array(
 		'customize',
