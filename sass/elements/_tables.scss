@@ -6,17 +6,14 @@ table {
 	a {
 		text-decoration: none;
 	}
-	
-	thead {
 
-		th {
-			color: $color__text-dark; 
-			text-transform: uppercase;
-		}
-	}
+	thead th {
+		padding: 16px;
+		text-transform: uppercase;
+	}		
 
 	th {
-		font-weight: bold;
+		color: $color__text-dark;
 		font-weight: 600; 
 	}
 

@@ -419,10 +419,10 @@ table {
   table a {
     text-decoration: none; }
   table thead th {
-    color: #2d2d2d;
+    padding: 16px;
     text-transform: uppercase; }
   table th {
-    font-weight: bold;
+    color: #2d2d2d;
     font-weight: 600; }
   table th,
   table td {
