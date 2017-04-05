@@ -110,6 +110,7 @@ function polestar_theme_options() {
 	    'section' => $section,
 	    'type'    => 'color',
 	    'default' => '#4d8ffb',
+	    'priority' => '10'
 	);
 
 	$options['heading_color'] = array(
@@ -118,6 +119,7 @@ function polestar_theme_options() {
 	    'section' => $section,
 	    'type'    => 'color',
 	    'default' => '#2d2d2d',
+	    'priority' => '20'
 	);
 
 	$options['text_color'] = array(
@@ -126,7 +128,17 @@ function polestar_theme_options() {
 	    'section' => $section,
 	    'type'    => 'color',
 	    'default' => '#626262',
+	    'priority' => '30'
 	);
+
+	$options['secondary_text_color'] = array(
+	    'id' => 'secondary_text_color',
+	    'label'   => esc_html__( 'Secondary Text Color', 'polestar' ),
+	    'section' => $section,
+	    'type'    => 'color',
+	    'default' => '#828282',
+	    'priority' => '40'
+	);	
 
 	// Fonts.
 	$section = 'fonts';
