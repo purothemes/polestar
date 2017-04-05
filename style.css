@@ -1329,6 +1329,43 @@ a {
 .site-footer .widget input {
   font-size: 14px; }
 
+.widget-area .widget .button, .widget-area .widget .pagination .page-numbers, .pagination .widget-area .widget .page-numbers, .widget-area .widget #infinite-handle span button, #infinite-handle span .widget-area .widget button, .widget-area .widget .page-links span, .page-links .widget-area .widget span,
+.widget-area .widget button,
+.widget-area .widget input[type="button"],
+.widget-area .widget input[type="reset"],
+.widget-area .widget input[type="submit"],
+.site-footer .widget .button,
+.site-footer .widget .pagination .page-numbers, .pagination
+.site-footer .widget .page-numbers,
+.site-footer .widget #infinite-handle span button, #infinite-handle span
+.site-footer .widget button,
+.site-footer .widget .page-links span, .page-links
+.site-footer .widget span,
+.site-footer .widget button,
+.site-footer .widget input[type="button"],
+.site-footer .widget input[type="reset"],
+.site-footer .widget input[type="submit"] {
+  color: #fff;
+  font-size: 13px; }
+  .widget-area .widget .button:hover, .widget-area .widget .pagination .page-numbers:hover, .pagination .widget-area .widget .page-numbers:hover, .widget-area .widget #infinite-handle span button:hover, #infinite-handle span .widget-area .widget button:hover, .widget-area .widget .page-links span:hover, .page-links .widget-area .widget span:hover,
+  .widget-area .widget button:hover,
+  .widget-area .widget input[type="button"]:hover,
+  .widget-area .widget input[type="reset"]:hover,
+  .widget-area .widget input[type="submit"]:hover,
+  .site-footer .widget .button:hover,
+  .site-footer .widget .pagination .page-numbers:hover, .pagination
+  .site-footer .widget .page-numbers:hover,
+  .site-footer .widget #infinite-handle span button:hover, #infinite-handle span
+  .site-footer .widget button:hover,
+  .site-footer .widget .page-links span:hover, .page-links
+  .site-footer .widget span:hover,
+  .site-footer .widget button:hover,
+  .site-footer .widget input[type="button"]:hover,
+  .site-footer .widget input[type="reset"]:hover,
+  .site-footer .widget input[type="submit"]:hover {
+    background: rgba(77, 143, 251, 0.8);
+    color: #fff; }
+
 /*--------------------------------------------------------------
 ## - Calendar Widget
 --------------------------------------------------------------*/

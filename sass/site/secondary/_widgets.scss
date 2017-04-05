@@ -36,7 +36,21 @@
 
 	input {
 		font-size: 14px; 
-	}			
+	}
+
+	.button,
+	button,
+	input[type="button"],
+	input[type="reset"],
+	input[type="submit"] {
+		color: #fff; 
+		font-size: 13px;
+		
+		&:hover {
+			background: rgba(77, 143, 251, .8);
+			color: #fff;
+		}		 
+	}	
 }
 
 /*--------------------------------------------------------------

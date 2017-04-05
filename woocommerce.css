@@ -652,6 +652,69 @@ Version: dev
       fill: #828282; }
 
 /*--------------------------------------------------------------
+## - Cart and Proudct List Widget
+--------------------------------------------------------------*/
+.cart_list,
+.product_list_widget {
+  list-style: none;
+  margin: 0;
+  padding: 0; }
+  .cart_list li,
+  .product_list_widget li {
+    border-bottom: 1px solid #f6f6f6;
+    list-style: none;
+    margin: 0;
+    padding: 8px 0; }
+    .cart_list li a,
+    .product_list_widget li a {
+      display: block;
+      font-weight: 600;
+      line-height: normal; }
+    .cart_list li ins,
+    .product_list_widget li ins {
+      background: none; }
+    .cart_list li .amount,
+    .cart_list li .quantity,
+    .product_list_widget li .amount,
+    .product_list_widget li .quantity {
+      font-size: 13px; }
+    .cart_list li img,
+    .product_list_widget li img {
+      float: right;
+      height: auto;
+      margin-left: 4px;
+      width: 45px; }
+
+.widget_shopping_cart .total,
+.widget_shopping_cart .total {
+  border: 1px solid #f6f6f6;
+  border-right: 0;
+  border-left: 0;
+  margin-bottom: 10px;
+  padding: 8px 0; }
+  .widget_shopping_cart .total strong,
+  .widget_shopping_cart .total strong {
+    font-weight: 600; }
+
+.widget_shopping_cart .cart_list li,
+.widget_shopping_cart .cart_list li {
+  padding-left: 25px;
+  position: relative; }
+  .widget_shopping_cart .cart_list li:last-of-type,
+  .widget_shopping_cart .cart_list li:last-of-type {
+    border-bottom: 0; }
+  .widget_shopping_cart .cart_list li .remove,
+  .widget_shopping_cart .cart_list li .remove {
+    font-size: 16px;
+    left: 0;
+    position: absolute;
+    top: 7px; }
+
+.widget_shopping_cart .checkout,
+.widget_shopping_cart .checkout {
+  margin-left: 5px; }
+
+/*--------------------------------------------------------------
 # Notifications
 --------------------------------------------------------------*/
 .woocommerce-message,
