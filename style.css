@@ -544,7 +544,9 @@ textarea {
   width: 100%; }
 
 label {
-  font-size: 0.9em; }
+  color: #2d2d2d;
+  font-size: 14px;
+  font-weight: 600; }
 
 fieldset legend {
   color: #2d2d2d;

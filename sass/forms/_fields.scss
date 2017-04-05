@@ -44,7 +44,9 @@ textarea {
 }
 
 label {
-	font-size: 0.9em; 
+	color: $color__text-dark;
+	font-size: 14px;
+	font-weight: 600; 
 }
 
 fieldset legend {
