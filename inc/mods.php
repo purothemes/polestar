@@ -1,6 +1,6 @@
 <?php
 /**
- * Functions used to implement options
+ * Functions used to implement options.
  *
  * @package polestar
  * @license GPL 2.0 
