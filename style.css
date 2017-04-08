@@ -1304,6 +1304,13 @@ a {
   .site-footer .widget .widget-title ~ * {
     font-size: 14px; }
 
+.widget-area .widget a,
+.site-footer .widget a {
+  color: #626262; }
+  .widget-area .widget a:hover,
+  .site-footer .widget a:hover {
+    color: #4d8ffb; }
+
 .widget-area .widget .button, .widget-area .widget .pagination .page-numbers, .pagination .widget-area .widget .page-numbers, .widget-area .widget #infinite-handle span button, #infinite-handle span .widget-area .widget button, .widget-area .widget .page-links span, .page-links .widget-area .widget span,
 .site-footer .widget .button,
 .site-footer .widget .pagination .page-numbers, .pagination
@@ -2377,3 +2384,5 @@ object {
         @media (max-width: 480px) {
           .featured-posts-slider .slides .slide .slide-content .entry-excerpt {
             display: none; } }
+
+/*# sourceMappingURL=sass/maps/style.css.map */

@@ -38,6 +38,8 @@ function polestar_build_styles() {
 				'.footer-menu .menu li a:hover',
 				'.footer-menu .menu li a:hover:before',
 				'.breadcrumbs a:hover',
+				'.widget-area .widget a:hover',
+  				'.site-footer .widget a:hover',
 				'.widget #wp-calendar tfoot #prev a:hover',
 				'.widget #wp-calendar tfoot #next a:hover',
 				'.entry-meta > span a:hover',

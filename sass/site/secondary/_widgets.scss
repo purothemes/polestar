@@ -17,6 +17,14 @@
 		}		
 	}
 
+	a {
+		color: $color__text-medium;
+
+		&:hover {
+			color: $color__accent;
+		}
+	}
+
 	.button {
 		color: #fff;
 		
