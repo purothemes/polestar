@@ -173,12 +173,15 @@ function polestar_scripts() {
 
 	// Google Fonts.
 	$heading_font = get_theme_mod( 'heading_font' );
-	if ( $heading_font == '' || $heading_font == 'Montserrat' ) {
+	$body_font = get_theme_mod( 'body_font' );
+	$site_title_font = get_theme_mod( 'site_title_font' );
+	$site_tagline_font = get_theme_mod( 'site_tagline_font' );
+
+	if ( $heading_font == 'Montserrat' || $site_title_font == 'Montserrat' || $site_tagline_font == 'Montserrat' ) {
 		wp_enqueue_style( 'google-font-montserrat', '//fonts.googleapis.com/css?family=Montserrat:400,700' );	
 	}
 
-	$body_font = get_theme_mod( 'body_font' );
-	if ( $body_font == '' || $body_font == 'Open Sans' ) {
+	if ( $body_font == 'Open Sans' ) {
 		wp_enqueue_style( 'google-font-open-sans', '//fonts.googleapis.com/css?family=Open+Sans:400,600,700' );	
 	}
 
