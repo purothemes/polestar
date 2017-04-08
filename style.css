@@ -436,7 +436,7 @@ table {
 /*--------------------------------------------------------------
 # - Forms
 --------------------------------------------------------------*/
-.button, .pagination .page-numbers, #infinite-handle span button, #infinite-handle span button:hover, .page-links span,
+.button, .pagination .page-numbers, #infinite-handle span button, .page-links span,
 button,
 input[type="button"],
 input[type="reset"],
@@ -446,7 +446,7 @@ input[type="submit"] {
   border-radius: 2px;
   color: #fff;
   display: inline-block;
-  font-size: 14px;
+  font-size: .9em;
   letter-spacing: .5px;
   line-height: normal;
   padding: 11px 25px;
@@ -545,7 +545,7 @@ textarea {
 
 label {
   color: #2d2d2d;
-  font-size: 14px;
+  font-size: .9em;
   font-weight: 600; }
 
 fieldset legend {
@@ -747,7 +747,6 @@ a {
 #mobile-navigation {
   background: #fff;
   border-bottom: 1px solid #f6f6f6;
-  display: none;
   left: 0;
   overflow-y: scroll;
   padding: 0 25px 25px;
@@ -803,13 +802,14 @@ a {
     #mobile-navigation .search-form[style] {
       margin-top: 0 !important; }
     #mobile-navigation .search-form input[type="search"] {
+      border: 0;
       font-size: 14px;
       padding-right: 40px;
       width: 100%; }
     #mobile-navigation .search-form button[type="submit"] {
       position: absolute;
       right: 14px;
-      top: 14px; }
+      top: 12px; }
       #mobile-navigation .search-form button[type="submit"] svg {
         height: 16px;
         width: 16px; }
@@ -828,13 +828,6 @@ a {
 
 #mobile-navigation ul ul ul ul ul ul li a {
   padding-left: 125px; }
-
-@media (max-width: 768px) {
-  #masthead.mobile-menu .main-navigation ul,
-  #masthead.mobile-menu .main-navigation .search-icon {
-    display: none; }
-  #masthead.mobile-menu #mobile-menu-button {
-    display: inline-block; } }
 
 /*--------------------------------------------------------------
 ## Posts, Post and Comment Navigation
@@ -972,10 +965,6 @@ a {
       font-size: 13px;
       margin-right: 30px;
       vertical-align: middle; }
-      .footer-menu .menu li a {
-        color: inherit; }
-        .footer-menu .menu li a:hover, .footer-menu .menu li a:hover:before {
-          color: #4d8ffb; }
       .footer-menu .menu li:last-of-type {
         margin-right: 0; }
         .footer-menu .menu li:last-of-type a {
@@ -1271,6 +1260,11 @@ a {
     background: none;
     display: block;
     padding: 0; }
+    #infinite-handle span button {
+      font-size: 1em; }
+      #infinite-handle span button:hover {
+        line-height: normal;
+        padding: 11px 25px; }
 
 .infinite-loader .spinner {
   margin: 0 auto; }
@@ -1310,12 +1304,24 @@ a {
   .site-footer .widget .widget-title ~ * {
     font-size: 14px; }
 
-.widget-area .widget a,
-.site-footer .widget a {
-  color: #626262; }
-  .widget-area .widget a:hover,
-  .site-footer .widget a:hover {
-    color: #4d8ffb; }
+.widget-area .widget .button, .widget-area .widget .pagination .page-numbers, .pagination .widget-area .widget .page-numbers, .widget-area .widget #infinite-handle span button, #infinite-handle span .widget-area .widget button, .widget-area .widget .page-links span, .page-links .widget-area .widget span,
+.site-footer .widget .button,
+.site-footer .widget .pagination .page-numbers, .pagination
+.site-footer .widget .page-numbers,
+.site-footer .widget #infinite-handle span button, #infinite-handle span
+.site-footer .widget button,
+.site-footer .widget .page-links span, .page-links
+.site-footer .widget span {
+  color: #fff; }
+  .widget-area .widget .button:hover, .widget-area .widget .pagination .page-numbers:hover, .pagination .widget-area .widget .page-numbers:hover, .widget-area .widget #infinite-handle span button:hover, #infinite-handle span .widget-area .widget button:hover, .widget-area .widget .page-links span:hover, .page-links .widget-area .widget span:hover,
+  .site-footer .widget .button:hover,
+  .site-footer .widget .pagination .page-numbers:hover, .pagination
+  .site-footer .widget .page-numbers:hover,
+  .site-footer .widget #infinite-handle span button:hover, #infinite-handle span
+  .site-footer .widget button:hover,
+  .site-footer .widget .page-links span:hover, .page-links
+  .site-footer .widget span:hover {
+    color: #fff; }
 
 .widget-area .widget ul,
 .site-footer .widget ul {
@@ -1328,43 +1334,6 @@ a {
 .widget-area .widget input,
 .site-footer .widget input {
   font-size: 14px; }
-
-.widget-area .widget .button, .widget-area .widget .pagination .page-numbers, .pagination .widget-area .widget .page-numbers, .widget-area .widget #infinite-handle span button, #infinite-handle span .widget-area .widget button, .widget-area .widget .page-links span, .page-links .widget-area .widget span,
-.widget-area .widget button,
-.widget-area .widget input[type="button"],
-.widget-area .widget input[type="reset"],
-.widget-area .widget input[type="submit"],
-.site-footer .widget .button,
-.site-footer .widget .pagination .page-numbers, .pagination
-.site-footer .widget .page-numbers,
-.site-footer .widget #infinite-handle span button, #infinite-handle span
-.site-footer .widget button,
-.site-footer .widget .page-links span, .page-links
-.site-footer .widget span,
-.site-footer .widget button,
-.site-footer .widget input[type="button"],
-.site-footer .widget input[type="reset"],
-.site-footer .widget input[type="submit"] {
-  color: #fff;
-  font-size: 13px; }
-  .widget-area .widget .button:hover, .widget-area .widget .pagination .page-numbers:hover, .pagination .widget-area .widget .page-numbers:hover, .widget-area .widget #infinite-handle span button:hover, #infinite-handle span .widget-area .widget button:hover, .widget-area .widget .page-links span:hover, .page-links .widget-area .widget span:hover,
-  .widget-area .widget button:hover,
-  .widget-area .widget input[type="button"]:hover,
-  .widget-area .widget input[type="reset"]:hover,
-  .widget-area .widget input[type="submit"]:hover,
-  .site-footer .widget .button:hover,
-  .site-footer .widget .pagination .page-numbers:hover, .pagination
-  .site-footer .widget .page-numbers:hover,
-  .site-footer .widget #infinite-handle span button:hover, #infinite-handle span
-  .site-footer .widget button:hover,
-  .site-footer .widget .page-links span:hover, .page-links
-  .site-footer .widget span:hover,
-  .site-footer .widget button:hover,
-  .site-footer .widget input[type="button"]:hover,
-  .site-footer .widget input[type="reset"]:hover,
-  .site-footer .widget input[type="submit"]:hover {
-    background: rgba(77, 143, 251, 0.8);
-    color: #fff; }
 
 /*--------------------------------------------------------------
 ## - Calendar Widget
@@ -2104,7 +2073,6 @@ a {
 
 #commentform label {
   display: block;
-  font-size: 14px;
   line-height: normal;
   margin-bottom: 8px; }
 
@@ -2228,11 +2196,6 @@ a {
         float: none;
         text-align: center;
         width: 100%; } }
-    .site-footer .site-info a {
-      color: inherit;
-      text-decoration: none; }
-      .site-footer .site-info a:hover {
-        color: #4d8ffb; }
   .site-footer .bottom-bar {
     border-top: 1px solid #ebebeb;
     overflow: auto;
@@ -2243,6 +2206,10 @@ a {
       width: 1190px; }
     .responsive .site-footer .bottom-bar div:only-of-type {
       width: 100%; }
+    .site-footer .bottom-bar a {
+      color: inherit; }
+      .site-footer .bottom-bar a:hover {
+        color: #4d8ffb; }
 
 /*--------------------------------------------------------------
 # - Media
@@ -2410,5 +2377,3 @@ object {
         @media (max-width: 480px) {
           .featured-posts-slider .slides .slide .slide-content .entry-excerpt {
             display: none; } }
-
-/*# sourceMappingURL=sass/maps/style.css.map */

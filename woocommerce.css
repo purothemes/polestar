@@ -1,5 +1,5 @@
 /*!
-Version: dev
+Version: 0.9.5
 */
 /*--------------------------------------------------------------
 # Layout
@@ -229,7 +229,7 @@ Version: dev
     border-radius: 2px;
     font-size: 13px;
     line-height: normal;
-    padding: 12px 15px 12px;
+    padding: 10px 15px;
     position: relative; }
     .woocommerce .woocommerce-ordering .ordering-selector-wrapper .current {
       display: inline-block; }
@@ -271,7 +271,7 @@ Version: dev
       .woocommerce .woocommerce-ordering .ordering-selector-wrapper .ordering-dropdown li {
         color: #828282;
         cursor: pointer;
-        padding: 12px 15px 12px;
+        padding: 10px 15px;
         position: relative;
         white-space: nowrap; }
         .woocommerce .woocommerce-ordering .ordering-selector-wrapper .ordering-dropdown li:hover {
@@ -652,7 +652,7 @@ Version: dev
       fill: #828282; }
 
 /*--------------------------------------------------------------
-## - Cart and Proudct List Widget
+## - Cart and Product List Widget
 --------------------------------------------------------------*/
 .cart_list,
 .product_list_widget {
@@ -664,7 +664,7 @@ Version: dev
     border-bottom: 1px solid #f6f6f6;
     list-style: none;
     margin: 0;
-    padding: 8px 0; }
+    padding: 10px 0; }
     .cart_list li a,
     .product_list_widget li a {
       display: block;
@@ -691,7 +691,7 @@ Version: dev
   border-right: 0;
   border-left: 0;
   margin-bottom: 10px;
-  padding: 8px 0; }
+  padding: 10px 0; }
   .widget_shopping_cart .total strong,
   .widget_shopping_cart .total strong {
     font-weight: 600; }
@@ -1125,5 +1125,3 @@ Version: dev
 --------------------------------------------------------------*/
 .track_order p {
   margin-bottom: 26px; }
-
-/*# sourceMappingURL=sass/maps/woocommerce.css.map */

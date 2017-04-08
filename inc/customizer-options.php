@@ -94,80 +94,6 @@ function polestar_theme_options() {
 	    'priority' => '50'
 	);
 
-	// Colors.
-	$section = 'polestar_colors';
-
-	$sections[] = array(
-	    'id' => $section,
-	    'title' => esc_html__( 'Colors', 'polestar' ),
-	    'priority' => '15',
-	    'panel' => $panel
-	);	
-
-	$options['accent_color'] = array(
-	    'id' => 'accent_color',
-	    'label'   => esc_html__( 'Accent Color', 'polestar' ),
-	    'section' => $section,
-	    'type'    => 'color',
-	    'default' => '#4d8ffb',
-	    'priority' => '10'
-	);
-
-	$options['heading_color'] = array(
-	    'id' => 'heading_color',
-	    'label'   => esc_html__( 'Heading Color', 'polestar' ),
-	    'section' => $section,
-	    'type'    => 'color',
-	    'default' => '#2d2d2d',
-	    'priority' => '20'
-	);
-
-	$options['text_color'] = array(
-	    'id' => 'text_color',
-	    'label'   => esc_html__( 'Text Color', 'polestar' ),
-	    'section' => $section,
-	    'type'    => 'color',
-	    'default' => '#626262',
-	    'priority' => '30'
-	);
-
-	$options['secondary_text_color'] = array(
-	    'id' => 'secondary_text_color',
-	    'label'   => esc_html__( 'Secondary Text Color', 'polestar' ),
-	    'section' => $section,
-	    'type'    => 'color',
-	    'default' => '#828282',
-	    'priority' => '40'
-	);	
-
-	// Fonts.
-	$section = 'fonts';
-
-	$sections[] = array(
-	    'id' => $section,
-	    'title' => esc_html__( 'Fonts', 'polestar' ),
-	    'priority' => '18',
-	    'panel' => $panel
-	);	
-
-	$options['heading_font'] = array(
-		'id' => 'heading_font',
-		'label'   => esc_html__( 'Heading Font', 'polestar' ),
-		'section' => $section,
-		'type'    => 'select',
-		'choices' => customizer_library_get_font_choices(),
-		'default' => 'Montserrat'
-	);	
-
-	$options['body_font'] = array(
-		'id' => 'body_font',
-		'label'   => esc_html__( 'Body Font', 'polestar' ),
-		'section' => $section,
-		'type'    => 'select',
-		'choices' => customizer_library_get_font_choices(),
-		'default' => 'Open Sans'
-	);			
-
 	// Navigation.
 	$section = 'navigation';
 
@@ -185,6 +111,7 @@ function polestar_theme_options() {
 	    'type' => 'checkbox',
 	    'description' => esc_html__( 'Display the main menu in the header.', 'polestar' ),
 	    'default' => true,
+	    'priority' => '10'
 	);
 
 	$options['mobile_menu'] = array(
@@ -194,6 +121,7 @@ function polestar_theme_options() {
 	    'type' => 'checkbox',
 	    'description' => esc_html__( 'Use a mobile menu for small screen devices. Header Menu setting must be enabled.', 'polestar' ),
 	    'default' => true,
+	    'priority' => '20'
 	);			
 
 	$options['menu_search'] = array(
@@ -203,6 +131,7 @@ function polestar_theme_options() {
 	    'type' => 'checkbox',
 	    'description' => esc_html__( 'Display a search icon in the main menu.', 'polestar' ),
 	    'default' => true,
+	    'priority' => '30'
 	);		
 
 	$options['post_navigation'] = array(
@@ -212,8 +141,8 @@ function polestar_theme_options() {
 	    'type' => 'checkbox',
 	    'description' => esc_html__( 'Display the next/previous post navigation.', 'polestar' ),
 	    'default' => true,
+	    'priority' => '40'
 	);		
-
 
 	$options['scroll_to_top'] = array(
 	    'id' => 'scroll_to_top',
@@ -222,7 +151,74 @@ function polestar_theme_options() {
 	    'type' => 'checkbox',
 	    'description' => esc_html__( 'Display the scroll to top button.', 'polestar' ),
 	    'default' => true,
+	    'priority' => '50'
 	);		
+
+	// Typography.
+	$section = 'typography';
+
+	$sections[] = array(
+	    'id' => $section,
+	    'title' => esc_html__( 'Typography', 'polestar' ),
+	    'priority' => '30',
+	    'panel' => $panel
+	);
+
+	$options['heading_font'] = array(
+		'id' => 'heading_font',
+		'label'   => esc_html__( 'Heading Font', 'polestar' ),
+		'section' => $section,
+		'type'    => 'select',
+		'choices' => customizer_library_get_font_choices(),
+		'default' => 'Montserrat',
+		'priority' => '10'
+	);	
+
+	$options['body_font'] = array(
+		'id' => 'body_font',
+		'label'   => esc_html__( 'Body Font', 'polestar' ),
+		'section' => $section,
+		'type'    => 'select',
+		'choices' => customizer_library_get_font_choices(),
+		'default' => 'Open Sans',
+		'priority' => '20'
+	);		
+
+	$options['accent_color'] = array(
+	    'id' => 'accent_color',
+	    'label'   => esc_html__( 'Accent Color', 'polestar' ),
+	    'section' => $section,
+	    'type'    => 'color',
+	    'default' => '#4d8ffb',
+	    'priority' => '30'
+	);
+
+	$options['heading_color'] = array(
+	    'id' => 'heading_color',
+	    'label'   => esc_html__( 'Heading Color', 'polestar' ),
+	    'section' => $section,
+	    'type'    => 'color',
+	    'default' => '#2d2d2d',
+	    'priority' => '40'
+	);
+
+	$options['text_color'] = array(
+	    'id' => 'text_color',
+	    'label'   => esc_html__( 'Text Color', 'polestar' ),
+	    'section' => $section,
+	    'type'    => 'color',
+	    'default' => '#626262',
+	    'priority' => '50'
+	);
+
+	$options['secondary_text_color'] = array(
+	    'id' => 'secondary_text_color',
+	    'label'   => esc_html__( 'Secondary Text Color', 'polestar' ),
+	    'section' => $section,
+	    'type'    => 'color',
+	    'default' => '#828282',
+	    'priority' => '60'
+	);				
 
 	// Blog.
 	$section = 'blog';
@@ -230,7 +226,7 @@ function polestar_theme_options() {
 	$sections[] = array(
 	    'id' => $section,
 	    'title' => esc_html__( 'Blog', 'polestar' ),
-	    'priority' => '30',
+	    'priority' => '50',
 	    'panel' => $panel
 	);
 
@@ -361,7 +357,7 @@ function polestar_theme_options() {
 	$sections[] = array(
 	    'id' => $section,
 	    'title' => esc_html__( 'Sidebar', 'polestar' ),
-	    'priority' => '40',
+	    'priority' => '60',
 	    'panel' => $panel
 	);
 
@@ -385,7 +381,7 @@ function polestar_theme_options() {
 	$sections[] = array(
 	    'id' => $section,
 	    'title' => esc_html__( 'Footer', 'polestar' ),
-	    'priority' => '50',
+	    'priority' => '70',
 	    'panel' => $panel
 	);
 
@@ -400,6 +396,7 @@ function polestar_theme_options() {
 		),
 	    'description' => esc_html__( 'Choose the footer layout.', 'polestar' ),
 	    'default' => 'default',
+	    'priority' => '10'
 	);
 
 	$options['footer_text'] = array(
@@ -408,7 +405,8 @@ function polestar_theme_options() {
 	    'section' => $section,
 	    'type' => 'text',
 	    'description' => esc_html__( '{site-title} and {year} can be used to display your website title and the current year.', 'polestar' ),
-	    'default' => esc_html__( 'Copyright &copy; {year} {sitename}', 'polestar' )
+	    'default' => esc_html__( 'Copyright &copy; {year} {sitename}', 'polestar' ),
+	    'priority' => '20'
 	);
 
 	// WooCommerce.
@@ -418,7 +416,7 @@ function polestar_theme_options() {
 		$sections[] = array(
 		    'id' => $section,
 		    'title' => esc_html__( 'WooCommerce', 'polestar' ),
-		    'priority' => '60',
+		    'priority' => '80',
 		    'panel' => $panel
 		);
 

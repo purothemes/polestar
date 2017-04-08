@@ -54,15 +54,6 @@
 			text-align: center;
 			width: 100%;
 		} 		
-
-		a {
-			color: inherit;
-			text-decoration: none;
-
-			&:hover {
-				color: $color__accent;
-			}
-		}
 	}
 
 	.bottom-bar {
@@ -78,6 +69,14 @@
 
 		@at-root .responsive & div:only-of-type {
 			width: 100%; 
-		}	
+		}
+
+		a {
+			color: inherit;
+			
+			&:hover {
+				color: $color__accent;
+			} 
+		}
 	}
 }

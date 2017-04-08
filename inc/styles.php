@@ -38,8 +38,6 @@ function polestar_build_styles() {
 				'.footer-menu .menu li a:hover',
 				'.footer-menu .menu li a:hover:before',
 				'.breadcrumbs a:hover',
-				'.widget-area .widget a:hover',
-				'.site-footer .widget a:hover',
 				'.widget #wp-calendar tfoot #prev a:hover',
 				'.widget #wp-calendar tfoot #next a:hover',
 				'.entry-meta > span a:hover',
@@ -188,7 +186,6 @@ function polestar_build_styles() {
 				'.widget #wp-calendar caption',
 				'.widget #wp-calendar tfoot #prev a',
 				'.widget #wp-calendar tfoot #next a',
-				'.site-header .site-branding .site-title a',
 				'.site-content .entry-title',
 				'.site-content .entry-title a',
 				'.site-content .more-wrapper a',
@@ -204,6 +201,19 @@ function polestar_build_styles() {
 				'color' => $color
 			)
 		) );
+
+		if ( ! function_exists( 'polestar_premium_setup' ) ) {
+
+			Customizer_Library_Styles()->add( array(
+				'selectors' => array(
+					'.site-header .site-branding .site-title a',
+				),
+				'declarations' => array(
+					'color' => $color
+				)
+			) );							
+
+		}
 
 		// Background.
 		Customizer_Library_Styles()->add( array(
@@ -287,9 +297,6 @@ function polestar_build_styles() {
 				'.pagination .page-numbers',
 				'.pagination .page-numbers:visited',
 				'.site-content .post-navigation a',
-				'.widget-area .widget a',
-				'.site-footer .widget a',
-				'.site-header .site-branding .site-description',
 				'.entry-title a:hover',
 				'.page-links .page-links-title:hover',
 				'.page-links a span',
@@ -308,6 +315,19 @@ function polestar_build_styles() {
 				'color' => $color
 			)
 		) );
+
+		if ( ! function_exists( 'polestar_premium_setup' ) ) {
+
+			Customizer_Library_Styles()->add( array(
+				'selectors' => array(
+					'.site-header .site-branding .site-description'
+				),
+				'declarations' => array(
+					'color' => $color
+				)
+			) );							
+
+		}		
 
 		// Border Color.
 		Customizer_Library_Styles()->add( array(
@@ -451,14 +471,26 @@ function polestar_build_styles() {
 				'h6',
 				'fieldset legend',
 				'.main-navigation li',
-				'#mobile-navigation ul li',
-				'.site-header .site-branding .site-title',
-				'.site-header .site-branding .site-description'
+				'#mobile-navigation ul li'
 			),
 			'declarations' => array(
 				'font-family' => $stack
 			)
 		) );
+
+		if ( ! function_exists( 'polestar_premium_setup' ) ) {
+
+			Customizer_Library_Styles()->add( array(
+				'selectors' => array(
+					'.site-header .site-branding .site-title',
+					'.site-header .site-branding .site-description'
+				),
+				'declarations' => array(
+					'font-family' => $stack
+				)
+			) );							
+
+		}
 
 		// WooCommerce
 		if ( function_exists( 'is_woocommerce' ) ) {
@@ -497,6 +529,51 @@ function polestar_build_styles() {
 }
 endif;
 add_action( 'customizer_library_styles', 'polestar_build_styles' );
+
+function polestar_mobile_menu_collapse() {
+		$setting = 'mobile_menu_collapse';
+		$mod = get_theme_mod( $setting, customizer_library_get_default( $setting ) );
+
+		if ( ! $mod ) {
+			$number = 780;
+		} else {
+			$number = customizer_library_sanitize_number_absint( $mod, $setting );
+		}		
+
+		$number_min = $number + 1;
+		
+	    Customizer_Library_Styles()->add( array(    	
+	        'selectors' => array(
+	            '#masthead.mobile-menu .main-navigation ul',
+	            '#masthead.mobile-menu .main-navigation .search-icon'
+	        ),
+	        'declarations' => array(
+	            'display' => 'none',
+	        ),
+	        'media' => '(max-width:' . $number . 'px)'
+	    ) );
+
+	    Customizer_Library_Styles()->add( array(    	
+	        'selectors' => array(
+	            '#masthead.mobile-menu #mobile-menu-button'
+	            	        ),
+	        'declarations' => array(
+	            'display' => 'inline-block',
+	        ),
+	        'media' => '(max-width:' . $number . 'px)'
+	    ) );
+
+	    Customizer_Library_Styles()->add( array(    	
+	        'selectors' => array(
+	            '.site-header #mobile-navigation'
+	            	        ),
+	        'declarations' => array(
+	            'display' => 'none !important',
+	        ),
+	        'media' => '(min-width:' . $number_min . 'px)'
+	    ) );
+}
+add_action( 'customizer_library_styles', 'polestar_mobile_menu_collapse' );
 
 if ( ! function_exists( 'polestar_styles' ) ) :
 /**
