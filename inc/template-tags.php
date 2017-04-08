@@ -372,7 +372,7 @@ if ( ! function_exists( 'polestar_read_more_link' ) ) :
  * Filter the read more link.
  */
 function polestar_read_more_link() {
-	$read_more_text = esc_html__( 'Continue reading', 'polestar' );
+	$read_more_text = get_theme_mod( 'read_more_text', esc_html__( 'Continue reading', 'polestar' ) );
 	return the_title( '<span class="screen-reader-text">"', '"</span>', false ) . '<span class="more-wrapper"><a href="' . esc_url( get_permalink() ) . '">' . $read_more_text . ' <span class="icon-long-arrow-right"></span></a></span>';
 }
 endif;
