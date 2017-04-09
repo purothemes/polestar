@@ -802,7 +802,6 @@ a {
     #mobile-navigation .search-form[style] {
       margin-top: 0 !important; }
     #mobile-navigation .search-form input[type="search"] {
-      border: 0;
       font-size: 14px;
       padding-right: 40px;
       width: 100%; }
