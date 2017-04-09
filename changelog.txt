@@ -1,7 +1,11 @@
 == Changelog ==
 
 = 0.9.5 - 09 April 2017 =
-* Various updates.
+* Added About page.
+* Added plugin recommendations.
+* Added WooCommerce Customizer settings.
+* Added Page Settings.
+* Added new Customizer settings.
 
 = 0.9.4 - 09 March 2017 =
 * Added readme.txt to release build.
