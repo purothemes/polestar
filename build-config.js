@@ -4,6 +4,7 @@ module.exports = {
     version: {
         src: [
             'functions.php',
+            'readme.txt'
         ]
     },
     sass: {
@@ -15,16 +16,17 @@ module.exports = {
         ],
         external: {
             src: [
-                'woocommerce/sass/**/*.scss',
+                'inc/extras/css/*.scss'
             ],
             include: [
-                'woocommerce/sass'
+                'inc/extras/css'
             ],
         }        
     },
     js: {
         src: [
             'js/**/*.js',
+            'woocommerce/js/**/*.js',
             'inc/*/js/**/*.js',
             '!inc/customizer-library/js/**',                        // Ignore inc/customizer-library/js/ contents.
             '!{node_modules,node_modules/**}',                      // Ignore node_modules/ and contents.
@@ -44,7 +46,6 @@ module.exports = {
             'inc/customizer-library/js/**',                         // Add the unminified inc/customizer-library/js/ contents.
             '!{build,build/**}',                                    // Ignore build/ and contents.
             '!{sass,sass/**}',                                      // Ignore sass/ and contents.
-            '!{woocommerce/sass,woocommerce/sass/**}',              // Ignore /woocommerce/sass/ and contents
             '!{tmp,tmp/**}',                                        // Ignore tmp/ and contents.
             '!config.codekit3',                                     // Not the CodeKit file. (If there is one.)
             '!phpunit.xml',                                         // Not the unit tests configuration file. (If there is one.)

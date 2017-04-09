@@ -2,9 +2,10 @@
 ## - Infinite Scroll
 --------------------------------------------------------------*/
 // Globally hidden elements when Infinite Scroll is supported and in use.
-.infinite-scroll .posts-navigation, // Older / Newer Posts Navigation (always hidden).
-.infinite-scroll .pagination, // Pagination Navigation (always hidden).
-.infinite-scroll.neverending .site-footer { // Theme Footer (when set to scrolling).
+.infinite-scroll .posts-navigation, // Older / Newer posts navigation (always hidden).
+.infinite-scroll .pagination, // Pagination navigation (always hidden).
+.infinite-scroll .woocommerce-pagination, // WooCommercep pagination navigation (always hidden).
+.infinite-scroll.neverending .site-footer { // Theme footer (when set to scrolling).
 	display: none;
 }
 
@@ -23,9 +24,11 @@
 		
 		button {
 			@extend .button;
+			font-size: 1em; 
 
 			&:hover {
-				@extend .button;
+				line-height: normal;
+				padding: 11px 25px;
 			}
 		}
 	}

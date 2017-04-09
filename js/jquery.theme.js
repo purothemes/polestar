@@ -11,10 +11,23 @@ jQuery( function( $ ) {
 		return (
 			rect.bottom >= 0 &&
 			rect.right >= 0 &&
-			rect.top <= (window.innerHeight || document.documentElement.clientHeight) &&
-			rect.left <= (window.innerWidth || document.documentElement.clientWidth)
+			rect.top <= ( window.innerHeight || document.documentElement.clientHeight ) &&
+			rect.left <= ( window.innerWidth || document.documentElement.clientWidth )
 		);
 	};		
+
+	// Entry thumbnail container size.
+	$( window ).load( function() {
+		$( '.entry-thumbnail' ).each( function() {
+			img = $( this ).find( 'img' );
+			img_width = img.width();
+			img_height = img.height();
+			$( this ).css( {
+				maxWidth: img_width,
+				maxHeight: img_height,
+			} );
+		} );		
+	} );
 
 	// Burst animation.
 	var mousePos = {x: 0, y: 0};
@@ -217,17 +230,17 @@ jQuery( function( $ ) {
 			container: ".search-form"
 		} );
 
-		var resetMenu = function () {
+		var polestarResetMenu = function() {
 			$( '.main-navigation ul ul' ).each( function() {
 				var $$ = $( this );
-				var width = Math.max.apply( Math, $$.find( '> li > a' ).map( function () {
+				var width = Math.max.apply( Math, $$.find( '> li > a' ).map( function() {
 					return $( this ).width();
 				} ).get() );
 				$$.find( '> li > a' ).width( width );
 			} );
 		};
-		resetMenu();
-		$( window ).resize( resetMenu );
+		polestarResetMenu();
+		$( window ).resize( polestarResetMenu );
 
 		// Add keyboard access to the menu.
 		$( '.menu-item' ).children( 'a' ).focus( function() {
@@ -364,7 +377,7 @@ jQuery( function( $ ) {
         } );
     }
 
-    jQuery( window ).on( 'scroll', polestarSelected );     
+    jQuery( window ).on( 'scroll', polestarSelected );   	
 
 	// Mobile menu.
 	var $mobileMenu = false;
@@ -421,8 +434,6 @@ jQuery( function( $ ) {
 			
 			$$.removeClass( 'to-close' );
 		} );
-
-		$( '#mobile-navigation a[href*="#"]:not([href="#"])' ).polestarSmoothScroll();
 
 	} );   
 

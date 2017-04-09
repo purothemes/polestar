@@ -1,10 +1,10 @@
-/*
+/*!
 Version: dev
 */
 
-@import "../../sass/variables-site/variables-site";
-@import "../../sass/mixins/mixins-master";
-@import "../../sass/mixins/bourbon";
+@import "variables-site/variables-site";
+@import "mixins/mixins-master";
+@import "mixins/bourbon";
 
 /*--------------------------------------------------------------
 # Layout
@@ -22,14 +22,19 @@ Version: dev
 @import "woocommerce/menus";
 
 /*--------------------------------------------------------------
-# Forms
+# WooCommerce Forms
 --------------------------------------------------------------*/
-@import "../../sass/forms/forms";
+@import "woocommerce/forms";
 
 /*--------------------------------------------------------------
 # Main
 --------------------------------------------------------------*/
 @import "woocommerce/general";
+
+/*--------------------------------------------------------------
+# Widgets
+--------------------------------------------------------------*/
+@import "woocommerce/widgets";
 
 /*--------------------------------------------------------------
 # Notifications
@@ -45,3 +50,18 @@ Version: dev
 # Checkout
 --------------------------------------------------------------*/
 @import "woocommerce/checkout";
+
+/*--------------------------------------------------------------
+# Order Received
+--------------------------------------------------------------*/
+@import "woocommerce/order-received";
+
+/*--------------------------------------------------------------
+# Account Dashboard
+--------------------------------------------------------------*/
+@import "woocommerce/dashboard";
+
+/*--------------------------------------------------------------
+# Order Tracking
+--------------------------------------------------------------*/
+@import "woocommerce/order-tracking";

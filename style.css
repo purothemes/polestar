@@ -2,12 +2,13 @@
 Theme Name: Polestar
 Author: Puro
 Author URI: https://purothemes.com/
-Description: A clean, multipurpose, responsive theme ready for your business or blog site. Create stunning landing pages with Page Builder by SiteOrigin. Show off your latest posts with Jetpack Featured Content and Polestar's posts slider.
+Theme URI: https://purothemes.com/themes/polestar/
+Description: Lead the way with Polestar. It's fast loading, responsive, lightweight and flexible design is perfectly suited for building dynamic pages with SiteOrigin's Page Builder and selling with WooCommerce. Polestar features a sticky header, beautiful header search, scroll to top and just the right amount of Customizer theme settings. Page level settings let you adjust the theme layout on a page by page basis, perfect for landing pages. If you run a blog, Polestar is ready with awesome features including a full-width posts slider integrated with Jetpack Featured Content, an author box and related posts section. For assistance, check out our <a href="http://purothemes.com/documentation/">theme documentation</a> (http://purothemes.com/documentation/) or ask a question on our <a href="https://purothemes.com/support/">support forum</a> (https://purothemes.com/support/).
 Version: dev
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Text Domain: polestar
-Tags: two-columns, right-sidebar, custom-background, custom-menu, custom-logo, featured-images, footer-widgets, sticky-post, threaded-comments, translation-ready, blog, ecommerce
+Tags: two-columns, right-sidebar, custom-background, custom-menu, custom-logo, featured-images, footer-widgets, sticky-post, threaded-comments, translation-ready, blog, e-commerce
 */
 /*--------------------------------------------------------------
 >>> IMPORTANT NOTICE:
@@ -216,9 +217,9 @@ input[type="search"]::-webkit-search-decoration {
   -webkit-appearance: none; }
 
 fieldset {
-  border: 1px solid #c0c0c0;
-  margin: 0 2px;
-  padding: 0.35em 0.625em 0.75em; }
+  border: 0;
+  margin: 0;
+  padding: 0; }
 
 legend {
   border: 0;
@@ -267,19 +268,6 @@ h6 {
   font-family: "Montserrat", sans-serif;
   font-weight: 400;
   margin: 25px 0; }
-  h1 a,
-  h1 a:visited,
-  h2 a,
-  h2 a:visited,
-  h3 a,
-  h3 a:visited,
-  h4 a,
-  h4 a:visited,
-  h5 a,
-  h5 a:visited,
-  h6 a,
-  h6 a:visited {
-    color: #2d2d2d; }
 
 h1 {
   font-size: 29px; }
@@ -310,7 +298,7 @@ h6 {
   text-transform: uppercase; }
 
 p {
-  margin: 0 0 27px; }
+  margin: 0 0 26px; }
 
 dfn,
 cite,
@@ -322,7 +310,7 @@ blockquote {
   border-left: 3px solid #4d8ffb;
   font-style: italic;
   font-size: 16px;
-  margin: 0 0 27px;
+  margin: 0 0 26px;
   padding: 15px 0 15px 25px; }
   blockquote p {
     margin-bottom: 0; }
@@ -335,13 +323,13 @@ blockquote {
     margin-top: 15px; }
 
 address {
-  margin: 0 0 27px; }
+  margin: 0 0 26px; }
 
 pre {
   background: #eee;
   font: 14px "Courier 10 Pitch", Courier, monospace;
   line-height: 1.6;
-  margin-bottom: 27px;
+  margin-bottom: 26px;
   max-width: 100%;
   overflow: auto;
   padding: 25px; }
@@ -426,16 +414,15 @@ figure {
 
 table {
   border: 1px solid #ebebeb;
-  font-family: "Open Sans", sans-serif;
   margin: 0 0 27px;
   width: 100%; }
   table a {
     text-decoration: none; }
   table thead th {
-    color: #2d2d2d;
+    padding: 16px;
     text-transform: uppercase; }
   table th {
-    font-weight: bold;
+    color: #2d2d2d;
     font-weight: 600; }
   table th,
   table td {
@@ -449,7 +436,7 @@ table {
 /*--------------------------------------------------------------
 # - Forms
 --------------------------------------------------------------*/
-.button, .pagination .page-numbers, #infinite-handle span button, #infinite-handle span button:hover, .page-links span,
+.button, .pagination .page-numbers, #infinite-handle span button, .page-links span,
 button,
 input[type="button"],
 input[type="reset"],
@@ -458,10 +445,11 @@ input[type="submit"] {
   border: 0;
   border-radius: 2px;
   color: #fff;
-  font-family: "Open Sans", sans-serif;
-  font-size: 14px;
+  display: inline-block;
+  font-size: .9em;
+  letter-spacing: .5px;
   line-height: normal;
-  padding: 13px 25px 12px;
+  padding: 11px 25px;
   text-transform: uppercase;
   transition: .3s; }
   .button:hover, .pagination .page-numbers:hover, #infinite-handle span button:hover, .page-links span:hover,
@@ -486,7 +474,6 @@ input[type="submit"] {
   input[type="reset"]:focus,
   input[type="submit"]:active,
   input[type="submit"]:focus {
-    background: #4d8ffb;
     color: #fff;
     outline: none; }
   .button[disabled], .pagination [disabled].page-numbers, #infinite-handle span button[disabled], .page-links span[disabled],
@@ -521,9 +508,10 @@ textarea {
   border: 1px solid #ebebeb;
   border-radius: 2px;
   box-sizing: border-box;
+  font-weight: normal;
   line-height: normal;
   outline: none;
-  padding: 11px 13px;
+  padding: 9px 13px 10px;
   transition: .3s;
   max-width: 100%;
   -webkit-appearance: none; }
@@ -545,12 +533,26 @@ textarea {
   textarea:focus {
     border-color: #d9d9d9; }
 
+input[type="checkbox"] {
+  margin-right: 2px; }
+
 select {
   border: 1px solid #ebebeb;
   max-width: 100%; }
 
 textarea {
   width: 100%; }
+
+label {
+  color: #2d2d2d;
+  font-size: .9em;
+  font-weight: 600; }
+
+fieldset legend {
+  color: #2d2d2d;
+  font-family: "Montserrat", sans-serif;
+  font-size: 18px;
+  padding: 10px 0; }
 
 /*--------------------------------------------------------------
 # - Navigation
@@ -665,18 +667,18 @@ a {
     font-family: "Montserrat", sans-serif;
     font-size: 14px;
     line-height: normal;
-    margin: 0 25px -10px 0;
+    margin: 0 30px -10px 0;
     padding: 0 0 10px;
     position: relative;
     text-align: left; }
     .main-navigation li:last-of-type {
       margin-right: 0; }
+    .main-navigation li a {
+      color: #2d2d2d;
+      display: block; }
     .main-navigation li:hover > a,
     .main-navigation li.focus > a {
       color: #626262; }
-  .main-navigation a {
-    color: #2d2d2d;
-    display: block; }
   .main-navigation .current a,
   .main-navigation .current_page_item > a,
   .main-navigation .current-menu-item > a,
@@ -709,7 +711,7 @@ a {
   right: -5px;
   top: 6px;
   transform: rotate(0deg);
-  transition: .5 ease-in-out;
+  transition: all .5s ease-in-out;
   width: 36px; }
   #mobile-menu-button span {
     display: block;
@@ -745,7 +747,6 @@ a {
 #mobile-navigation {
   background: #fff;
   border-bottom: 1px solid #f6f6f6;
-  display: none;
   left: 0;
   overflow-y: scroll;
   padding: 0 25px 25px;
@@ -801,13 +802,14 @@ a {
     #mobile-navigation .search-form[style] {
       margin-top: 0 !important; }
     #mobile-navigation .search-form input[type="search"] {
+      border: 0;
       font-size: 14px;
       padding-right: 40px;
       width: 100%; }
     #mobile-navigation .search-form button[type="submit"] {
       position: absolute;
       right: 14px;
-      top: 14px; }
+      top: 12px; }
       #mobile-navigation .search-form button[type="submit"] svg {
         height: 16px;
         width: 16px; }
@@ -826,18 +828,6 @@ a {
 
 #mobile-navigation ul ul ul ul ul ul li a {
   padding-left: 125px; }
-
-@media (max-width: 1100px) {
-  #masthead.mobile-menu #mobile-menu-button {
-    display: inline-block; }
-  #masthead.mobile-menu .main-navigation ul {
-    display: none; }
-  #masthead.mobile-menu .main-navigation .search-icon {
-    display: none; } }
-
-@media (min-width: 1100px) {
-  #masthead.mobile-menu #mobile-navigation {
-    display: none !important; } }
 
 /*--------------------------------------------------------------
 ## Posts, Post and Comment Navigation
@@ -885,8 +875,8 @@ a {
     color: #626262;
     display: inline-block;
     margin-right: 3px;
-    padding-right: 17px;
-    padding-left: 17px; }
+    padding-right: 16px;
+    padding-left: 16px; }
     .pagination .page-numbers:visited {
       color: #626262; }
     .pagination .page-numbers:hover {
@@ -894,33 +884,34 @@ a {
       color: #fff; }
     .pagination .page-numbers.next, .pagination .page-numbers.prev {
       font-size: 14px;
-      padding: 13px 14px 12px; }
+      line-height: 1.3;
+      padding: 11px 13px; }
       .pagination .page-numbers.next span:before, .pagination .page-numbers.prev span:before {
         position: relative;
         top: 1px; }
-  .pagination .dots {
-    background: none;
-    font-family: "Gill Sans", "Gill Sans MT", Calibri, sans-serif;
-    font-size: 13px;
-    padding-right: 0;
-    padding-left: 0; }
-    .pagination .dots:hover {
+    .pagination .page-numbers.dots {
       background: none;
-      box-shadow: none;
-      color: #626262; }
+      font-family: "Gill Sans", "Gill Sans MT", Calibri, sans-serif;
+      font-size: 13px;
+      padding-right: 0;
+      padding-left: 0; }
+      .pagination .page-numbers.dots:hover {
+        background: none;
+        box-shadow: none;
+        color: #626262; }
   .pagination .current {
     background: #4d8ffb;
     color: #fff; }
 
-.post-navigation {
+.site-content .post-navigation {
   font-size: 16px; }
-  .post-navigation a {
+  .site-content .post-navigation a {
     color: #626262;
     font-weight: bold;
     font-weight: 600; }
-    .post-navigation a:hover {
+    .site-content .post-navigation a:hover {
       color: #4d8ffb; }
-    .post-navigation a .sub-title {
+    .site-content .post-navigation a .sub-title {
       border-bottom: 2px solid #ebebeb;
       color: #828282;
       display: inline-block;
@@ -930,7 +921,7 @@ a {
       line-height: normal;
       margin-bottom: 10px;
       padding-bottom: 3px; }
-    .post-navigation a div {
+    .site-content .post-navigation a div {
       line-height: normal; }
 
 .comment-navigation {
@@ -972,24 +963,23 @@ a {
     .footer-menu .menu li {
       display: inline-block;
       font-size: 13px;
-      margin-right: 25px;
+      margin-right: 30px;
       vertical-align: middle; }
-      .footer-menu .menu li a {
-        color: inherit; }
-        .footer-menu .menu li a:hover, .footer-menu .menu li a:hover:before {
-          color: #4d8ffb; }
       .footer-menu .menu li:last-of-type {
         margin-right: 0; }
+        .footer-menu .menu li:last-of-type a {
+          margin-right: 0; }
 
 /*--------------------------------------------------------------
 ## Footer Menu Social Icons
 --------------------------------------------------------------*/
 .footer-menu a[href*="behance.net"], .footer-menu a[href*="codepen.io"], .footer-menu a[href*="delicious.com"], .footer-menu a[href*="deviantart.com"], .footer-menu a[href*="digg.com"], .footer-menu a[href*="dribbble.com"], .footer-menu a[href*="facebook.com"], .footer-menu a[href*="flickr.com"], .footer-menu a[href*="foursquare.com"], .footer-menu a[href*="github.com"], .footer-menu a[href*="plus.google.com"], .footer-menu a[href*="instagram.com"], .footer-menu a[href*="linkedin.com"], .footer-menu a[href*="pinterest.com"], .footer-menu a[href*="reddit.com"], .footer-menu a[href*="soundcloud.com"], .footer-menu a[href*="stackexchange.com"], .footer-menu a[href*="stackoverflow.com"], .footer-menu a[href*="tumblr.com"], .footer-menu a[href*="twitter.com"], .footer-menu a[href*="vimeo.com"], .footer-menu a[href*="vine.co"], .footer-menu a[href*="vk.com"], .footer-menu a[href*="weibo.com"], .footer-menu a[href*="wordpress.com"], .footer-menu a[href*="xing"], .footer-menu a[href*="youtube.com"] {
   font-size: 0;
+  margin-right: -16px;
   text-align: center; }
   .footer-menu a[href*="behance.net"]:before, .footer-menu a[href*="codepen.io"]:before, .footer-menu a[href*="delicious.com"]:before, .footer-menu a[href*="deviantart.com"]:before, .footer-menu a[href*="digg.com"]:before, .footer-menu a[href*="dribbble.com"]:before, .footer-menu a[href*="facebook.com"]:before, .footer-menu a[href*="flickr.com"]:before, .footer-menu a[href*="foursquare.com"]:before, .footer-menu a[href*="github.com"]:before, .footer-menu a[href*="plus.google.com"]:before, .footer-menu a[href*="instagram.com"]:before, .footer-menu a[href*="linkedin.com"]:before, .footer-menu a[href*="pinterest.com"]:before, .footer-menu a[href*="reddit.com"]:before, .footer-menu a[href*="soundcloud.com"]:before, .footer-menu a[href*="stackexchange.com"]:before, .footer-menu a[href*="stackoverflow.com"]:before, .footer-menu a[href*="tumblr.com"]:before, .footer-menu a[href*="twitter.com"]:before, .footer-menu a[href*="vimeo.com"]:before, .footer-menu a[href*="vine.co"]:before, .footer-menu a[href*="vk.com"]:before, .footer-menu a[href*="weibo.com"]:before, .footer-menu a[href*="wordpress.com"]:before, .footer-menu a[href*="xing"]:before, .footer-menu a[href*="youtube.com"]:before {
     font-family: "polestar-icons";
-    font-size: 14px;
+    font-size: 18px;
     transition: .2s; }
 
 .footer-menu a[href*="behance.net"]:before {
@@ -1199,6 +1189,26 @@ a {
     position: absolute;
     width: 2px; }
 
+.fa-spin {
+  -webkit-animation: fa-spin 2s infinite linear;
+  animation: fa-spin 2s infinite linear; }
+
+@-webkit-keyframes fa-spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg); }
+  100% {
+    -webkit-transform: rotate(359deg);
+    transform: rotate(359deg); } }
+
+@keyframes fa-spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg); }
+  100% {
+    -webkit-transform: rotate(359deg);
+    transform: rotate(359deg); } }
+
 /*--------------------------------------------------------------
 # - Clearings
 --------------------------------------------------------------*/
@@ -1237,6 +1247,7 @@ a {
 --------------------------------------------------------------*/
 .infinite-scroll .posts-navigation,
 .infinite-scroll .pagination,
+.infinite-scroll .woocommerce-pagination,
 .infinite-scroll.neverending .site-footer {
   display: none; }
 
@@ -1249,6 +1260,11 @@ a {
     background: none;
     display: block;
     padding: 0; }
+    #infinite-handle span button {
+      font-size: 1em; }
+      #infinite-handle span button:hover {
+        line-height: normal;
+        padding: 11px 25px; }
 
 .infinite-loader .spinner {
   margin: 0 auto; }
@@ -1265,6 +1281,13 @@ a {
     margin-bottom: 15px; }
     .site-content #primary .sharedaddy h3:before {
       content: none; }
+
+/*--------------------------------------------------------------
+# - Contact Form 7
+--------------------------------------------------------------*/
+.wpcf7 div.wpcf7-response-output {
+  margin: 0;
+  padding: 10px 15px; }
 
 /*--------------------------------------------------------------
 # - Widgets
@@ -1287,6 +1310,25 @@ a {
   .widget-area .widget a:hover,
   .site-footer .widget a:hover {
     color: #4d8ffb; }
+
+.widget-area .widget .button, .widget-area .widget .pagination .page-numbers, .pagination .widget-area .widget .page-numbers, .widget-area .widget #infinite-handle span button, #infinite-handle span .widget-area .widget button, .widget-area .widget .page-links span, .page-links .widget-area .widget span,
+.site-footer .widget .button,
+.site-footer .widget .pagination .page-numbers, .pagination
+.site-footer .widget .page-numbers,
+.site-footer .widget #infinite-handle span button, #infinite-handle span
+.site-footer .widget button,
+.site-footer .widget .page-links span, .page-links
+.site-footer .widget span {
+  color: #fff; }
+  .widget-area .widget .button:hover, .widget-area .widget .pagination .page-numbers:hover, .pagination .widget-area .widget .page-numbers:hover, .widget-area .widget #infinite-handle span button:hover, #infinite-handle span .widget-area .widget button:hover, .widget-area .widget .page-links span:hover, .page-links .widget-area .widget span:hover,
+  .site-footer .widget .button:hover,
+  .site-footer .widget .pagination .page-numbers:hover, .pagination
+  .site-footer .widget .page-numbers:hover,
+  .site-footer .widget #infinite-handle span button:hover, #infinite-handle span
+  .site-footer .widget button:hover,
+  .site-footer .widget .page-links span:hover, .page-links
+  .site-footer .widget span:hover {
+    color: #fff; }
 
 .widget-area .widget ul,
 .site-footer .widget ul {
@@ -1359,7 +1401,7 @@ a {
   .widget .search-form button[type="submit"] {
     position: absolute;
     right: 14px;
-    top: 11px; }
+    top: 13px; }
     .widget .search-form button[type="submit"] svg {
       height: 16px;
       width: 16px; }
@@ -1396,14 +1438,15 @@ a {
 .sidebar .content-area {
   float: left;
   width: 70%; }
+  .sidebar-left.sidebar .content-area {
+    float: right; }
   @media (max-width: 768px) {
     .sidebar .content-area {
       border: 0;
       padding-right: 0;
       width: 100%; } }
 
-.page-layout-no-sidebar.sidebar .content-area,
-.page-template-no-sidebar.sidebar .content-area {
+.page-layout-no-sidebar .content-area {
   float: none;
   width: 100%; }
 
@@ -1411,10 +1454,14 @@ a {
   float: right;
   padding-left: 4%;
   width: 30%; }
+  .sidebar-left .widget-area {
+    float: left;
+    padding-right: 4%;
+    padding-left: 0; }
   @media (max-width: 768px) {
     .widget-area {
       border-top: 1px solid #ebebeb;
-      margin-top: 60px;
+      margin-top: 50px;
       padding: 50px 0 0;
       width: 100%; } }
 
@@ -1424,12 +1471,12 @@ a {
 .site-header {
   background: #fff;
   border-bottom: 1px solid #ebebeb;
-  margin-bottom: 50px;
-  padding: 20px 0;
+  margin-bottom: 60px;
+  padding: 25px 0;
   position: relative;
   width: 100%;
-  z-index: 999; }
-  .page-layout-no-header-margin .site-header {
+  z-index: 9999; }
+  .no-header-margin .site-header {
     margin-bottom: 0; }
   @media (max-width: 600px) {
     .admin-bar .site-header.sticky.stuck {
@@ -1442,6 +1489,7 @@ a {
     width: 100%; }
   .site-header .site-branding {
     display: table-cell;
+    padding-right: 20px;
     vertical-align: middle; }
     .site-header .site-branding .site-title {
       font-family: "Montserrat", sans-serif;
@@ -1450,6 +1498,9 @@ a {
       margin: 0; }
       .site-header .site-branding .site-title a {
         color: #2d2d2d; }
+    .site-header .site-branding img {
+      display: inline-block;
+      vertical-align: middle; }
     .site-header .site-branding .site-description {
       color: #626262;
       font-family: "Montserrat", sans-serif;
@@ -1482,7 +1533,6 @@ a {
       background: rgba(0, 0, 0, 0.035);
       border: 0;
       box-sizing: border-box;
-      font-size: 16px;
       height: 48px;
       padding: 0 15px;
       right: 15px;
@@ -1514,9 +1564,6 @@ a {
     margin: 0 auto 20px auto;
     padding: 0;
     text-align: center; }
-    .site-header.centered .site-branding img {
-      display: inline-block;
-      max-width: 100%; }
   .site-header.centered .main-navigation {
     text-align: center; }
   .site-header.centered .site-branding,
@@ -1548,15 +1595,13 @@ a {
 /*--------------------------------------------------------------
 ## - Posts and pages
 --------------------------------------------------------------*/
-.site-main .sticky {
-  display: block; }
-
 .hentry {
   border-bottom: 1px solid #ebebeb;
   margin: 0 0 50px;
   padding: 0; }
   .hentry:last-of-type {
-    border: 0; }
+    border: 0;
+    margin-bottom: 0; }
   .hentry:only-of-type {
     border: 0;
     margin: 0; }
@@ -1572,25 +1617,24 @@ a {
 /*--------------------------------------------------------------
 ## - Posts
 --------------------------------------------------------------*/
-.entry-title {
+.site-content .entry-title {
   color: #2d2d2d;
   font-size: 29px;
   line-height: normal;
   margin: 0; }
   @media (max-width: 768px) {
-    .responsive .entry-title {
+    .responsive .site-content .entry-title {
       font-size: 26px; } }
   @media (max-width: 480px) {
-    .responsive .entry-title {
+    .responsive .site-content .entry-title {
       font-size: 23px; } }
-  .entry-title a {
-    color: inherit;
+  .site-content .entry-title a {
+    color: #2d2d2d;
     text-decoration: none; }
-    .entry-title a:hover {
+    .site-content .entry-title a:hover {
       color: #626262; }
 
 .entry-meta {
-  font-family: "Open Sans", sans-serif;
   line-height: normal; }
   .entry-meta > span {
     color: #828282;
@@ -1622,15 +1666,23 @@ a {
 .group-blog .byline {
   display: inline; }
 
+.entry-thumbnail,
+.entry-video {
+  margin-bottom: 25px; }
+
 .entry-thumbnail {
-  margin: 25px 0;
+  height: 100%;
+  margin-right: auto;
+  margin-left: auto;
   position: relative;
-  text-align: center; }
+  text-align: center;
+  width: 100%; }
   .entry-thumbnail .thumbnail-meta {
     display: block;
     left: 10px;
     position: absolute;
-    top: 10px; }
+    top: 10px;
+    z-index: 1; }
     .entry-thumbnail .thumbnail-meta ul {
       display: inline-block;
       list-style: none;
@@ -1669,14 +1721,25 @@ a {
     transform: scale(0, 0);
     width: 60px;
     z-index: 5; }
+    @media (max-width: 480px) {
+      .entry-thumbnail .icon-add {
+        height: 52px;
+        margin: -26px 0 0 -26px;
+        padding: 13.5px 0 0 0;
+        width: 52px; } }
     .entry-thumbnail:hover .icon-add {
       transform: scale(1, 1); }
     .entry-thumbnail .icon-add svg {
       height: 30px;
-      margin-right: -15px;
+      margin-right: -15.6px;
       position: absolute;
       right: 50%;
       width: 30px; }
+      @media (max-width: 480px) {
+        .entry-thumbnail .icon-add svg {
+          height: 26px;
+          margin-right: -13.5px;
+          width: 26px; } }
       .entry-thumbnail .icon-add svg path {
         fill: #fff;
         opacity: .7; }
@@ -1684,30 +1747,26 @@ a {
     display: block;
     line-height: 0; }
 
-.more-wrapper {
+.site-content .more-wrapper {
   display: block;
-  font-size: 14px;
-  text-transform: capitalize; }
-  .more-wrapper span {
+  font-size: 14px; }
+  .site-content .more-wrapper span {
     font-size: 13px;
     position: relative;
-    right: -1px;
-    top: 1px; }
-  .more-wrapper a {
+    right: -4px;
+    top: 1.5px; }
+  .site-content .more-wrapper a {
     color: #2d2d2d;
     font-weight: 600; }
-    .more-wrapper a:hover {
+    .site-content .more-wrapper a:hover {
       color: #4d8ffb; }
 
 .page-links {
   text-align: left; }
   .page-links .page-links-title {
+    background: none;
     color: #2d2d2d;
     font-size: 14px;
-    font-weight: 500; }
-  .page-links .page-links-title {
-    background: none;
-    color: #626262;
     font-weight: 600;
     padding: 0;
     text-transform: none; }
@@ -1744,10 +1803,12 @@ a {
     color: #fff; }
 
 /*--------------------------------------------------------------
-## - Archives, Search Results & 404
+## - Pages, Archives, Search Results & 404
 --------------------------------------------------------------*/
 .page-header {
   margin-bottom: 25px; }
+  .page-header .page-title {
+    margin-top: 0; }
 
 .archive:not(.woocommerce) .page-title {
   font-size: 18px;
@@ -1792,7 +1853,7 @@ a {
   padding: 0;
   position: relative;
   right: 36px;
-  top: 3px; }
+  top: 2px; }
   .search-form button[type="submit"] svg {
     height: 16px;
     width: 16px; }
@@ -1981,7 +2042,6 @@ a {
     .comment-list .comment .comment-reply-link,
     .comment-list .pingback .comment-reply-link {
       color: #2d2d2d;
-      font-family: "Open Sans", sans-serif;
       font-size: 12px;
       font-weight: bold;
       font-weight: 600;
@@ -2009,7 +2069,6 @@ a {
   margin-bottom: 15px; }
   .comment-reply-title #cancel-comment-reply-link {
     color: #828282;
-    font-family: "Open Sans", sans-serif;
     font-size: 13px;
     margin-left: .25em; }
     .comment-reply-title #cancel-comment-reply-link:hover {
@@ -2020,10 +2079,7 @@ a {
   margin-bottom: 25px; }
 
 #commentform label {
-  color: #2d2d2d;
   display: block;
-  font-size: 14px;
-  font-weight: 600;
   line-height: normal;
   margin-bottom: 8px; }
 
@@ -2069,10 +2125,13 @@ a {
   clear: both; }
 
 #commentform .comment-subscription-form {
-  font-weight: normal;
-  margin: 0 0 8px; }
+  margin: 15px 0 8px; }
+  #commentform .comment-subscription-form ~ p {
+    margin-top: 0; }
   #commentform .comment-subscription-form label {
-    color: #626262; }
+    color: #626262;
+    font-size: 13px;
+    font-weight: normal; }
 
 .no-comments {
   font-size: 14px;
@@ -2080,18 +2139,22 @@ a {
   font-weight: 600;
   margin: 0; }
 
+.commentform-error {
+  font-size: 14px;
+  margin: 0 0 25px; }
+
 /*--------------------------------------------------------------
 ## - Footer
 --------------------------------------------------------------*/
 .site-footer {
   background: #fff;
-  margin-top: 50px; }
+  margin-top: 75px; }
   .site-footer.footer-active-sidebar {
     border-top: 1px solid #ebebeb; }
-  .page-layout-no-footer-margin .site-footer {
+  .no-footer-margin .site-footer {
     margin-top: 0; }
   .site-footer .widgets {
-    padding-top: 50px;
+    padding: 50px 0;
     width: 100%; }
     .site-footer .widgets::after {
       clear: both;
@@ -2119,14 +2182,17 @@ a {
       width: 7.525%; }
     .site-footer .widgets .widget {
       box-sizing: content-box;
-      margin: 0 2.75% 75px 0;
+      margin: 0 2.75% 0 0;
       float: left; }
       .site-footer .widgets .widget:last-of-type {
         margin-right: 0; }
       @media (max-width: 768px) {
         .site-footer .widgets .widget {
           float: none;
-          width: 100% !important; } }
+          margin-bottom: 25px;
+          width: 100% !important; }
+          .site-footer .widgets .widget:last-of-type {
+            margin-bottom: 0; } }
   .site-footer .site-info {
     float: left;
     font-size: 13px;
@@ -2137,11 +2203,6 @@ a {
         float: none;
         text-align: center;
         width: 100%; } }
-    .site-footer .site-info a {
-      color: inherit;
-      text-decoration: none; }
-      .site-footer .site-info a:hover {
-        color: #4d8ffb; }
   .site-footer .bottom-bar {
     border-top: 1px solid #ebebeb;
     overflow: auto;
@@ -2152,6 +2213,10 @@ a {
       width: 1190px; }
     .responsive .site-footer .bottom-bar div:only-of-type {
       width: 100%; }
+    .site-footer .bottom-bar a {
+      color: inherit; }
+      .site-footer .bottom-bar a:hover {
+        color: #4d8ffb; }
 
 /*--------------------------------------------------------------
 # - Media
@@ -2188,8 +2253,7 @@ object {
 /*--------------------------------------------------------------
 ## - Galleries
 --------------------------------------------------------------*/
-.gallery,
-.gallery-format-slider {
+.gallery {
   margin-bottom: 27px; }
 
 .gallery-item {

@@ -1,7 +1,7 @@
 .main-navigation {
 	display: table-cell;
 	text-align: right;
-	vertical-align: middle; 
+	vertical-align: middle;
 	
 	> div {
 		display: inline-block;
@@ -144,7 +144,7 @@
 		font-family: $font__headings; 
 		font-size: 14px;
 		line-height: normal;
-		margin: 0 25px -10px 0; // Total right margin is 30px. 5px additional space per item due to inline-block.
+		margin: 0 30px -10px 0; // Total right margin is 35px. 5px additional space per item due to inline-block.
 		padding: 0 0 10px; 
 		position: relative;
 		text-align: left;
@@ -153,15 +153,15 @@
 			margin-right: 0;
 		}
 
+		a {
+			color: $color__text-dark; 
+			display: block;
+		}		
+
 		&:hover > a,
 		&.focus > a {
 			color: $color__text-medium;
 		}
-	}
-
-	a {
-		color: $color__text-dark; 
-		display: block;
 	}
 
 	.current a,
@@ -209,7 +209,7 @@
 	right: -5px;
 	top: 6px;
 	transform: rotate(0deg);
-	transition: .5 ease-in-out;
+	transition: all .5s ease-in-out;
 	width: 36px;
 
 	span {
@@ -266,7 +266,6 @@
 #mobile-navigation {
 	background: #fff;
 	border-bottom: 1px solid $color__background-hr;
-	display: none;
 	left: 0;
 	overflow-y: scroll;
 	padding: 0 25px 25px;
@@ -348,15 +347,20 @@
 		}
 		
 		input[type="search"] {
+			border: 0; 
 			font-size: 14px; 
 			padding-right: 40px;
 			width: 100%;
+			
+			// @include placeholder {
+			// 	color: #fff; 
+			// }			
 		}
 
 		button[type="submit"] {
 			position: absolute;
 			right: 14px;
-			top: 14px;
+			top: 12px;
 			
 			svg {
 				height: 16px;
@@ -375,28 +379,6 @@ $sel: '';
         padding-left: 25px * $i;
       }
     }
-}
-
-@media (max-width: 1100px) {
-
-	#masthead.mobile-menu #mobile-menu-button {
-		display: inline-block; 
-	}
-
-	#masthead.mobile-menu .main-navigation ul {
-		display: none; 
-	}
-	
-	#masthead.mobile-menu .main-navigation .search-icon {
-		display: none;
-	}
-}
-
-@media (min-width: 1100px) {
-
-	#masthead.mobile-menu #mobile-navigation {
-		display: none !important;
-	}
 }
 
 /*--------------------------------------------------------------
@@ -432,55 +414,6 @@ $sel: '';
 	}
 }
 
-// .pagination {	
-// 	text-align: center;
-	
-// 	.page-numbers {
-// 		border: 2px solid $color__background-hr-dark;
-// 		border-radius: 2px;
-// 		color: $color__text-medium;
-// 		display: inline-block;
-// 		font-size: 14px;
-// 		line-height: normal;  
-// 		margin-right: 3px;
-// 		padding: 13px 17px 12px;
-// 		text-transform: uppercase;
-// 		transition: .3s;
-		
-// 		&:visited {
-// 			color: $color__text-medium;
-// 		}		
-
-// 		&:hover {
-// 			border: 2px solid $color__accent;
-// 			color: $color__accent;
-// 		}
-
-// 		&.next,
-// 		&.prev {
-// 			padding: 12px 13px; 
-// 		}
-// 	}
-
-// 	.dots {
-// 		border: 0; 
-// 		font-family: "Gill Sans", "Gill Sans MT", Calibri, sans-serif;
-// 		font-size: 13px; 
-// 		padding-right: 0;
-// 		padding-left: 0; 
-		
-// 		&:hover {
-// 			border: 0; 
-// 			color: $color__text-medium;
-// 		}
-// 	}
-
-// 	.current {
-// 		border-color: $color__accent;
-// 		color: $color__accent;
-// 	}
-// }
-
 .pagination {	
 	text-align: center;
 	
@@ -490,8 +423,8 @@ $sel: '';
 		color: $color__text-medium;
 		display: inline-block;
 		margin-right: 3px;
-		padding-right: 17px;
-		padding-left: 17px; 
+		padding-right: 16px;
+		padding-left: 16px; 
 		
 		&:visited {
 			color: $color__text-medium;
@@ -504,28 +437,29 @@ $sel: '';
 
 		&.next,
 		&.prev {
-			font-size: 14px; 
-			padding: 13px 14px 12px;
+			font-size: 14px;
+			line-height: 1.3;
+			padding: 11px 13px;
 			
 			span:before {
 				position: relative;
 				top: 1px;
 			}
 		}
-	}
 
-	.dots {
-		background: none;
-		font-family: "Gill Sans", "Gill Sans MT", Calibri, sans-serif;
-		font-size: 13px; 
-		padding-right: 0;
-		padding-left: 0; 
-		
-		&:hover {
+		&.dots {
 			background: none;
-			box-shadow: none;
-			color: $color__text-medium;
-		}
+			font-family: "Gill Sans", "Gill Sans MT", Calibri, sans-serif;
+			font-size: 13px; 
+			padding-right: 0;
+			padding-left: 0; 
+			
+			&:hover {
+				background: none;
+				box-shadow: none;
+				color: $color__text-medium;
+			}
+		}		
 	}
 
 	.current {
@@ -534,39 +468,7 @@ $sel: '';
 	}
 }
 
-// .pagination {	
-// 	text-align: center;
-	
-// 	.page-numbers {
-// 		border-bottom: 3px solid #fff;
-// 		color: $color__text-dark;
-// 		display: inline-block;
-// 		margin-right: 3px;
-// 		padding: 0 10px 8px;
-
-// 		&:hover {
-// 			border-bottom: 3px solid $color__accent;
-// 		}
-// 	}
-
-// 	.dots {
-// 		background: none;
-// 		font-family: "Gill Sans", "Gill Sans MT", Calibri, sans-serif;
-// 		font-size: 13px; 
-// 		padding-right: 0;
-// 		padding-left: 0; 
-		
-// 		&:hover {
-// 			border: 0;
-// 		}
-// 	}
-
-// 	.current {
-// 		border-bottom: 3px solid $color__accent;
-// 	}
-// }
-
-.post-navigation {
+.site-content .post-navigation {
 	font-size: 16px; 
 
 	a {
@@ -649,23 +551,15 @@ $sel: '';
 		li {
 			display: inline-block;
 			font-size: 13px; 
-			margin-right: 25px;
-			vertical-align: middle;			
-			
-			a {
-				color: inherit;
-
-				&:hover,
-				&:hover:before {
-					color: $color__accent;
-				}			
-			}	
-
-			&:hover > a {
-			}		
+			margin-right: 30px; 
+			vertical-align: middle;				
 
 			&:last-of-type {
 				margin-right: 0;
+				
+				a {
+					margin-right: 0;
+				}
 			}
 		}						
 	}
@@ -677,14 +571,15 @@ $sel: '';
 .footer-menu {
 
 	a[href*="behance.net"], a[href*="codepen.io"], a[href*="delicious.com"], a[href*="deviantart.com"], a[href*="digg.com"], a[href*="dribbble.com"], a[href*="facebook.com"], a[href*="flickr.com"], a[href*="foursquare.com"], a[href*="github.com"], a[href*="plus.google.com"], a[href*="instagram.com"], a[href*="linkedin.com"], a[href*="pinterest.com"], a[href*="reddit.com"], a[href*="soundcloud.com"], a[href*="stackexchange.com"], a[href*="stackoverflow.com"], a[href*="tumblr.com"], a[href*="twitter.com"], a[href*="vimeo.com"], a[href*="vine.co"], a[href*="vk.com"], a[href*="weibo.com"], a[href*="wordpress.com"], a[href*="xing"], a[href*="youtube.com"] {		
-		font-size: 0; 
+		font-size: 0;
+		margin-right: -16px; 
 		text-align: center;
 		
 		&:before {
 			font-family: $font__icon;
-			font-size: 14px;
+			font-size: 18px;
 			transition: .2s;
-		}		
+		}
 	}	
 
 	a[href*="behance.net"]:before {

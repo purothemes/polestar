@@ -93,8 +93,8 @@ if ( ! function_exists( 'polestar_entry_footer' ) ) :
  */
 function polestar_entry_footer() {
 
-	if ( is_single() && has_tag() ) {
-		echo '<span class="tags-links">' . get_the_tag_list( '', esc_html__( '', 'polestar' ) ) . '</span>';
+	if ( is_single() && has_tag() && get_theme_mod( 'post_tags', true ) ) {
+		echo '<footer class="entry-footer"><span class="tags-links">' . get_the_tag_list( '', esc_html__( '', 'polestar' ) ) . '</span></footer>';
 	}	
 }
 endif;
@@ -105,11 +105,11 @@ if ( ! function_exists( 'polestar_footer_text' ) ) :
  */
 function polestar_footer_text() {
 
-	$text = get_theme_mod( 'footer_text', esc_html__( 'Copyright &copy; {year} {sitename} - ', 'polestar' ) );
+	$text = get_theme_mod( 'footer_text', esc_html__( 'Copyright &copy; {year} {sitename}', 'polestar' ) );
 
 	$text = str_replace(
-		array( '{sitename}', '{year}'),
-		array( get_bloginfo( 'sitename' ), date( 'Y' ) ),
+		array( '{sitename}', '{year}' ),
+		array( get_bloginfo( 'sitename' ), date_i18n( esc_html__( 'Y', 'polestar' ) ) ),
 		$text
 	);
 	echo wp_kses_post( $text );
@@ -322,7 +322,10 @@ function polestar_display_logo() {
 		?></a><?php
 
 	} elseif ( function_exists( 'has_custom_logo' ) && has_custom_logo() ) {
-		?><?php the_custom_logo(); ?><?php
+		?><?php the_custom_logo();
+		if ( get_theme_mod( 'tagline' ) ) : ?>
+			<p class="site-description"><?php bloginfo( 'description' ); ?></p>
+		<?php endif;
 	}
 	else {
 		if ( is_front_page() ) : ?>
@@ -340,13 +343,37 @@ function polestar_display_logo() {
 }
 endif;
 
+if ( ! function_exists( 'polestar_excerpt_length' ) ) :
+/**
+ * Filter the excerpt length.
+ */
+function polestar_excerpt_length( $length ) {
+	return get_theme_mod( 'excerpt_length', 55 );
+}
+add_filter( 'excerpt_length', 'polestar_excerpt_length', 10 );
+endif;
+
+if ( ! function_exists( 'polestar_excerpt_more' ) ) :
+/**
+ * Add a more link to the excerpt.
+ */
+function polestar_excerpt_more( $more ) {
+	if ( is_search() ) return;
+	if ( get_theme_mod( 'archive_post_content' ) == 'excerpt' && get_theme_mod( 'excerpt_more', true ) ) {
+		$read_more_text = get_theme_mod( 'read_more_text', esc_html__( 'Continue reading', 'polestar' ) );
+		return the_title( '<span class="screen-reader-text">"', '"</span>', false ) . '<p><span class="more-wrapper"><a href="' . esc_url( get_permalink() ) . '">' . $read_more_text . ' <span class="icon-long-arrow-right"></span></a></span></p>';
+	}
+}
+endif;
+add_filter( 'excerpt_more', 'polestar_excerpt_more' );
+
 if ( ! function_exists( 'polestar_read_more_link' ) ) :
 /**
  * Filter the read more link.
  */
 function polestar_read_more_link() {
-	$read_more_text = esc_html__( 'Continue reading', 'polestar' );
-	return the_title( '<span class="screen-reader-text">"', '"</span>', false ) . '<span class="more-wrapper"><a href="' . get_permalink() . '">' . $read_more_text . ' <span class="icon-long-arrow-right"></span></a></span>';
+	$read_more_text = get_theme_mod( 'read_more_text', esc_html__( 'Continue reading', 'polestar' ) );
+	return the_title( '<span class="screen-reader-text">"', '"</span>', false ) . '<span class="more-wrapper"><a href="' . esc_url( get_permalink() ) . '">' . $read_more_text . ' <span class="icon-long-arrow-right"></span></a></span>';
 }
 endif;
 add_filter( 'the_content_more_link', 'polestar_read_more_link' );
@@ -356,17 +383,19 @@ if ( ! function_exists( 'polestar_post_meta' ) ) :
  * Print HTML with meta information for the sticky status, current post-date/time, author, comment count and post categories.
  */
 function polestar_post_meta() {
-	if ( is_home() || is_archive() || is_search() ) {
+	if ( ( is_home() || is_archive() || is_search() ) && get_theme_mod( 'post_date', true ) ) {
 		echo '<span class="entry-date"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark"><time class="published" datetime="' . esc_attr( get_the_date( 'c' ) ) . '">' . esc_html( get_the_date( apply_filters( 'polestar_date_format', 'F d, Y' ) ) ) . '</time><time class="updated" datetime="' . esc_attr( get_the_modified_date( 'c' ) ) . '">' . esc_html( get_the_modified_date() ) . '</time></span></a>';
 	}
 
-	if ( is_single() ) {
+	if ( is_single() && get_theme_mod( 'post_date', true ) ) {
 		echo '<span class="entry-date"><time class="published" datetime="' . esc_attr( get_the_date( 'c' ) ) . '">' . esc_html( get_the_date( apply_filters( 'polestar_date_format', 'F d, Y' ) ) ) . '</time><time class="updated" datetime="' . esc_attr( get_the_modified_date( 'c' ) ) . '">' . esc_html( get_the_modified_date() ) . '</time></span>';
 	}
 
-	echo '<span class="byline"><span class="author vcard"><a class="url fn n" href="' . esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ) . '" rel="author">' . esc_html( get_the_author() ) . '</a></span></span>';
+	if ( get_theme_mod( 'post_author', true ) ) {
+		echo '<span class="byline"><span class="author vcard"><a class="url fn n" href="' . esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ) . '" rel="author">' . esc_html( get_the_author() ) . '</a></span></span>';
+	}
 	
-	if ( comments_open() ) { 
+	if ( comments_open() && get_theme_mod( 'post_comment_count', true ) ) { 
 		echo '<span class="comments-link">';
   		comments_popup_link( esc_html__( 'Leave a comment', 'polestar' ), esc_html__( 'One Comment', 'polestar' ), esc_html__( '% Comments', 'polestar' ) );
   		echo '</span>';
@@ -387,34 +416,6 @@ function polestar_entry_thumbnail_meta() {
 		echo get_the_category_list();
 	}
 	echo '</div>';
-}
-endif;
-
-if ( ! function_exists( 'polestar_the_post_navigation' ) ) :
-/**
- * Display navigation to next/previous posts.
- */
-function polestar_the_post_navigation() {
-	// Don't print empty markup if there's nowhere to navigate.
-	$previous = ( is_attachment() ) ? get_post( get_post()->post_parent ) : get_adjacent_post( false, '', true );
-	$next     = get_adjacent_post( false, '', false );
-
-	if ( ! $next && ! $previous ) {
-		return;
-	}
-	?>
-	<nav class="navigation post-navigation" role="navigation">
-		<h2 class="screen-reader-text"><?php esc_html_e( 'Post navigation', 'polestar' ); ?></h2>
-		<div class="nav-links">
-			<div class="nav-previous">
-				<?php previous_post_link ( '%link', '<span class="sub-title"> ' . esc_html__( 'Previous Post', 'polestar' ) . '</span> <div>%title</div>' ); ?>
-			</div>
-			<div class="nav-next">
-				<?php next_post_link( '%link', '<span class="sub-title">' . esc_html__( 'Next Post', 'polestar' ) . ' </span> <div>%title</div>' ); ?>
-			</div>
-		</div><!-- .nav-links -->
-	</nav><!-- .navigation -->
-	<?php
 }
 endif;
 

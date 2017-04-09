@@ -19,10 +19,18 @@
 
 	a {
 		color: $color__text-medium;
-		
+
 		&:hover {
 			color: $color__accent;
-		} 
+		}
+	}
+
+	.button {
+		color: #fff;
+		
+		&:hover {
+			color: #fff;
+		} 		
 	}
 
 	ul {
@@ -36,7 +44,7 @@
 
 	input {
 		font-size: 14px; 
-	}			
+	}	
 }
 
 /*--------------------------------------------------------------
@@ -130,7 +138,7 @@
 	button[type="submit"] {
 		position: absolute;
 		right: 14px;
-		top: 11px;
+		top: 13px;
 		
 		svg {
 			height: 16px;

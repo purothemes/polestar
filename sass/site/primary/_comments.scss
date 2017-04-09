@@ -71,7 +71,6 @@
 
 		.comment-reply-link {
 			color: $color__text-dark;
-			font-family: $font__main; 
 			font-size: 12px;
 			font-weight: bold; 
 			font-weight: 600; 
@@ -112,7 +111,6 @@
 	
 	#cancel-comment-reply-link {
 		color: $color__text-light; 
-		font-family: $font__main; 
 		font-size: 13px; 
 		margin-left: .25em;
 		
@@ -130,10 +128,7 @@
 	}
 
 	label {
-		color: $color__text-dark;
 		display: block;
-		font-size: 14px;
-		font-weight: 600; 
 		line-height: normal;
 		margin-bottom: 8px; 
 	}
@@ -188,11 +183,16 @@
 
 	// Jetpack Subscriptions.
 	.comment-subscription-form {
-		font-weight: normal; 
-		margin: 0 0 8px;
+		margin: 15px 0 8px;
+		
+		~ p {
+			margin-top: 0; 
+		}
 		
 		label {
 			color: $color__text-medium;
+			font-size: 13px;
+			font-weight: normal;
 		}	
 	}		
 }
@@ -202,4 +202,9 @@
 	font-weight: bold; 
 	font-weight: 600;
 	margin: 0; 
+}
+
+.commentform-error {
+	font-size: 14px;
+	margin: 0 0 25px; 
 }

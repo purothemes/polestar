@@ -8,9 +8,9 @@
  * @license GPL 2.0 
  */
 
-define( 'POLESTAR_THEME_VERSION', 'dev' );
-define( 'POLESTAR_THEME_JS_PREFIX', '' );
-define( 'POLESTAR_THEME_CSS_PREFIX', '' );
+define( 'PURO_THEME_VERSION', '' );
+define( 'PURO_THEME_JS_PREFIX', '' );
+define( 'PURO_THEME_CSS_PREFIX', '' );
 
 if ( ! function_exists( 'polestar_setup' ) ) :
 /**
@@ -150,15 +150,15 @@ add_action( 'widgets_init', 'polestar_widgets_init' );
 function polestar_scripts() {
 
 	// Theme stylesheet.
-	wp_enqueue_style( 'polestar-style', get_template_directory_uri() . '/style' . POLESTAR_THEME_CSS_PREFIX . '.css', array(), POLESTAR_THEME_VERSION );
+	wp_enqueue_style( 'polestar-style', get_template_directory_uri() . '/style' . PURO_THEME_CSS_PREFIX . '.css', array(), PURO_THEME_VERSION );
 
 	// FitVids.
 	if ( ! class_exists( 'Jetpack' ) ) {
-		wp_enqueue_script( 'jquery-fitvids', get_template_directory_uri() . '/js/jquery.fitvids' . POLESTAR_THEME_JS_PREFIX . '.js', array( 'jquery' ), '1.1', true );
+		wp_enqueue_script( 'jquery-fitvids', get_template_directory_uri() . '/js/jquery.fitvids' . PURO_THEME_JS_PREFIX . '.js', array( 'jquery' ), '1.1', true );
 	}
 
 	// Flexslider.
-	wp_register_script( 'jquery-flexslider', get_template_directory_uri() . '/js/jquery.flexslider' . POLESTAR_THEME_JS_PREFIX . '.js', array( 'jquery' ), '2.6.3', true );
+	wp_register_script( 'jquery-flexslider', get_template_directory_uri() . '/js/jquery.flexslider' . PURO_THEME_JS_PREFIX . '.js', array( 'jquery' ), '2.6.3', true );
 
 	
 	if ( ( is_home() && polestar_has_featured_posts() ) || ( function_exists( 'is_woocommerce' ) && is_product() ) ) {
@@ -166,14 +166,24 @@ function polestar_scripts() {
 	}
 
     // Theme JavaScript.
-    wp_enqueue_script( 'polestar-script', get_template_directory_uri() . '/js/jquery.theme' . POLESTAR_THEME_JS_PREFIX . '.js', array( 'jquery' ), POLESTAR_THEME_VERSION, true );
+    wp_enqueue_script( 'polestar-script', get_template_directory_uri() . '/js/jquery.theme' . PURO_THEME_JS_PREFIX . '.js', array( 'jquery' ), PURO_THEME_VERSION, true );
     
 	// Theme icons.
-	wp_enqueue_style( 'polestar-icons', get_template_directory_uri() . '/css/polestar-icons' . POLESTAR_THEME_CSS_PREFIX . '.css', array(), POLESTAR_THEME_VERSION );    
+	wp_enqueue_style( 'polestar-icons', get_template_directory_uri() . '/css/polestar-icons' . PURO_THEME_CSS_PREFIX . '.css', array(), PURO_THEME_VERSION );    
 
 	// Google Fonts.
-	wp_enqueue_style( 'google-font-montserrat', '//fonts.googleapis.com/css?family=Montserrat:400,700' );	
-	wp_enqueue_style( 'google-font-open-sans', '//fonts.googleapis.com/css?family=Open+Sans:400,600,700' );
+	$heading_font = get_theme_mod( 'heading_font' );
+	$body_font = get_theme_mod( 'body_font' );
+	$site_title_font = get_theme_mod( 'site_title_font' );
+	$site_tagline_font = get_theme_mod( 'site_tagline_font' );
+
+	if ( $heading_font == 'Montserrat' || $site_title_font == 'Montserrat' || $site_tagline_font == 'Montserrat' ) {
+		wp_enqueue_style( 'google-font-montserrat', '//fonts.googleapis.com/css?family=Montserrat:400,700' );	
+	}
+
+	if ( $body_font == 'Open Sans' ) {
+		wp_enqueue_style( 'google-font-open-sans', '//fonts.googleapis.com/css?family=Open+Sans:400,600,700' );	
+	}
 
 	// Comment reply.
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
@@ -181,7 +191,7 @@ function polestar_scripts() {
 	}	
 
 	// Skip link focus fix.
-	wp_enqueue_script( 'polestar-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix' . POLESTAR_THEME_JS_PREFIX . '.js', array(), POLESTAR_THEME_VERSION, true );
+	wp_enqueue_script( 'polestar-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix' . PURO_THEME_JS_PREFIX . '.js', array(), PURO_THEME_VERSION, true );
 
 }
 add_action( 'wp_enqueue_scripts', 'polestar_scripts' );
@@ -193,33 +203,24 @@ function polestar_enqueue_flexslider() {
 	wp_enqueue_script( 'jquery-flexslider' );
 }
 
-if ( ! function_exists( 'polestar_remove_current_menu_class' ) ) :
-/**
- * Unset the current menu class.
- */	
-function polestar_remove_current_menu_class( $classes ) {
-    $disallowed_class_names = array(
-        'current-menu-item',
-        'current_page_item',
-    );
-    foreach ( $classes as $class ) {
-        if ( in_array( $class, $disallowed_class_names ) ) {
-            $key = array_search( $class, $classes );
-            if ( false !== $key ) {
-                unset( $classes[$key] );
-            }
-        }
-    }
-    return $classes;
-}
-endif;
-add_filter( 'nav_menu_css_class', 'polestar_remove_current_menu_class', 10, 1 );
-
 /**
  * Customizer additions.
  */
 require get_template_directory() . '/inc/customizer-library/customizer-library.php';
 require get_template_directory() . '/inc/customizer-options.php';
+require get_template_directory() . '/inc/styles.php';
+require get_template_directory() . '/inc/mods.php';
+
+/**
+ * Puro Extras.
+ */
+require get_template_directory() . '/inc/extras/extras.php';
+require get_template_directory() . '/inc/extras-options.php';
+
+/**
+ * Recommended plugins.
+ */
+require get_template_directory() . '/inc/recommended-plugins.php';
 
 /**
  * Custom template tags.

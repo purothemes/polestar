@@ -2,12 +2,13 @@
 Theme Name: Polestar
 Author: Puro
 Author URI: https://purothemes.com/
-Description: A clean, multipurpose, responsive theme ready for your business or blog site. Create stunning landing pages with Page Builder by SiteOrigin. Show off your latest posts with Jetpack Featured Content and Polestar's posts slider.
+Theme URI: https://purothemes.com/themes/polestar/
+Description: Lead the way with Polestar. It's fast loading, responsive, lightweight and flexible design is perfectly suited for building dynamic pages with SiteOrigin's Page Builder and selling with WooCommerce. Polestar features a sticky header, beautiful header search, scroll to top and just the right amount of Customizer theme settings. Page level settings let you adjust the theme layout on a page by page basis, perfect for landing pages. If you run a blog, Polestar is ready with awesome features including a full-width posts slider integrated with Jetpack Featured Content, an author box and related posts section. For assistance, check out our <a href="http://purothemes.com/documentation/">theme documentation</a> (http://purothemes.com/documentation/) or ask a question on our <a href="https://purothemes.com/support/">support forum</a> (https://purothemes.com/support/).
 Version: dev
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Text Domain: polestar
-Tags: two-columns, right-sidebar, custom-background, custom-menu, custom-logo, featured-images, footer-widgets, sticky-post, threaded-comments, translation-ready, blog, ecommerce
+Tags: two-columns, right-sidebar, custom-background, custom-menu, custom-logo, featured-images, footer-widgets, sticky-post, threaded-comments, translation-ready, blog, e-commerce
 */
 /*--------------------------------------------------------------
 >>> IMPORTANT NOTICE:
@@ -116,6 +117,11 @@ or a child theme.
 # - Jetpack
 --------------------------------------------------------------*/
 @import "modules/jetpack";
+	
+/*--------------------------------------------------------------
+# - Contact Form 7
+--------------------------------------------------------------*/
+@import "modules/contact-form-7";	
 
 /*--------------------------------------------------------------
 # - Widgets

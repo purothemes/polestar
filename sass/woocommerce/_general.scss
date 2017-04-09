@@ -22,6 +22,23 @@
 			padding: 0;
 		}
 	}
+
+	// Loading overlay.
+	.blockUI:before {
+		-webkit-animation: fa-spin 2s infinite linear;
+  		animation: fa-spin 2s infinite linear;
+		content: "\f1ce";
+		font-family: $font__icon;
+		font-size: 30px;
+		height: 30px;
+		left: 50%;
+		line-height: 30px;
+		margin-top: -15px;
+		margin-left: -15px;
+		position: absolute;
+		top: 50%;
+		width: 30px;
+	}	
 	
 	// Breadcrumbs.
 	.woocommerce-breadcrumb {
@@ -40,10 +57,9 @@
 
 	// Page Title.
 	&.archive .page-title {
-		font-size: 32px;
+		font-size: 29px;
 		line-height: normal;
 		margin: 0;
-		padding: 0; 
 		
 		@media (max-width: 768px) {
 			@at-root .woocommerce.archive.responsive .page-title {
@@ -95,7 +111,7 @@
 			border-radius: 2px;
 			font-size: 13px;
 			line-height: normal;
-			padding: 12px 15px 12px;
+			padding: 10px 15px;
 			position: relative;
 
 			.current {
@@ -153,7 +169,7 @@
 				li {
 					color: $color__text-light;
 					cursor: pointer;
-					padding: 12px 15px 12px;
+					padding: 10px 15px;
 					position: relative;
 					white-space: nowrap;
 
@@ -287,7 +303,7 @@
 			}
 
 			// Product Title.
-			h3 {
+			.woocommerce-loop-product__title {
 				font-size: 16px; 
 				margin: 15px 0 5px;
 				
@@ -321,8 +337,7 @@
 			// Added to Cart Button.
 			.added_to_cart {
 				@extend .button;
-				display: inline-block;
-				margin-top: 10px; 
+				margin-top: 10px;
 			}
 
 		}
@@ -435,7 +450,7 @@
 				margin-bottom: 25px;
 			}
 
-			div[itemprop="description"] {
+			.woocommerce-product-details__short-description {
 				margin-bottom: 25px;
 				
 				p {
@@ -453,9 +468,6 @@
 				margin-bottom: 30px; 
 
 				.label {
-					color: $color__text-dark;
-					font-weight: bold;
-					font-weight: 600;
 					text-transform: capitalize;
 				}
 
@@ -542,7 +554,6 @@
 			}
 
 			.wc-tabs {
-				// border-bottom: 1px solid $color__background-hr; 
 				list-style: none;
 				margin: 0;
 				overflow: hidden;
@@ -711,7 +722,7 @@
 
 		.upsells {
 			
-			h2 {
+			> h2 {
 				@extend .underline;
 				font-size: 16px;
 			}
@@ -723,7 +734,7 @@
 
 		.related {
 
-			h2 {
+			> h2 {
 				@extend .underline;
 				font-size: 16px;
 			}
@@ -773,18 +784,5 @@
 			}				
 
 		}		
-	}
-}
-
-.woocommerce-account {
-
-	.woocommerce-MyAccount-navigation {
-		float: left;
-		width: 30%;
-	}
-
-	.woocommerce-MyAccount-content {
-		float: right;
-		width: 68%;
 	}
 }

@@ -24,11 +24,11 @@ add_filter( 'woocommerce_enqueue_styles', '__return_false' );
 function polestar_woocommerce_scripts() {
 
 	// WooCommerce stylesheet.
-	wp_enqueue_style( 'polestar-woocommerce-style', get_template_directory_uri() . '/woocommerce' . POLESTAR_THEME_CSS_PREFIX . '.css', array(), POLESTAR_THEME_VERSION );
+	wp_enqueue_style( 'polestar-woocommerce-style', get_template_directory_uri() . '/woocommerce' . PURO_THEME_CSS_PREFIX . '.css', array(), PURO_THEME_VERSION );
 
 	// WooCommerce JavaScript.
 	if ( is_woocommerce() || is_cart() ) {
-		wp_enqueue_script( 'polestar-woocommerce-script', get_template_directory_uri() . '/woocommerce/js/jquery.woocommerce'  . POLESTAR_THEME_JS_PREFIX .  '.js', array( 'jquery' ), POLESTAR_THEME_VERSION, true );
+		wp_enqueue_script( 'polestar-woocommerce-script', get_template_directory_uri() . '/woocommerce/js/jquery.woocommerce'  . PURO_THEME_JS_PREFIX .  '.js', array( 'jquery' ), PURO_THEME_VERSION, true );
 	}
 
 	$script_data = array(

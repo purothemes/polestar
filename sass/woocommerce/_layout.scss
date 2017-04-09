@@ -23,5 +23,19 @@
 			padding-right: 4%; 
 			padding-left: 0;
 		}
+	}
+
+	// Content area with right aligned sidebar.
+	&.woocommerce-sidebar-right {
+
+		.content-area {
+			float: left;
+		}
+
+		.widget-area {
+			float: right;
+			padding-right: 0; 
+			padding-left: 4%;
+		}
 	}			
 }

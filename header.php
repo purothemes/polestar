@@ -24,7 +24,7 @@
 <div id="page" class="site">
 	<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'polestar' ); ?></a>
 
-		<header id="masthead" class="site-header<?php if ( get_theme_mod( 'header_layout' ) == 'centered' ) echo ' centered'; if ( get_theme_mod( 'sticky_header' ) ) echo ' sticky'; if ( get_theme_mod( 'mobile_menu' ) ) echo ' mobile-menu'; ?>" role="banner" <?php if ( get_theme_mod( 'sticky_header_scaling' ) ) echo ' data-scale-logo="true"'; ?> >
+		<header id="masthead" class="site-header<?php if ( get_theme_mod( 'header_layout' ) == 'centered' ) echo ' centered'; if ( get_theme_mod( 'sticky_header', true ) ) echo ' sticky'; if ( get_theme_mod( 'mobile_menu', true ) ) echo ' mobile-menu'; ?>" role="banner" <?php if ( get_theme_mod( 'sticky_header_scaling', true ) ) echo ' data-scale-logo="true"'; ?> >
 
 			<div class="polestar-container">
 		
@@ -36,18 +36,18 @@
 
 					<nav id="site-navigation" class="main-navigation" role="navigation">
 
-						<?php if ( get_theme_mod( 'mobile_menu' ) ) : ?>	
+						<?php if ( get_theme_mod( 'mobile_menu', true ) ) : ?>	
 							<a href="#menu" id="mobile-menu-button">
 								<?php polestar_display_icon( 'menu' ); ?>							
 								<span class="screen-reader-text"><?php esc_html_e( 'Menu', 'polestar' ); ?></span>
 							</a>
 						<?php endif; ?>
 					
-						<?php if ( get_theme_mod( 'header_menu' ) ) : ?>
+						<?php if ( get_theme_mod( 'header_menu', true ) ) : ?>
 							<?php wp_nav_menu( array( 'theme_location' => 'menu-1', 'menu_id' => 'primary-menu' ) ); ?>
 						<?php endif; ?>
 
-						<?php if ( get_theme_mod( 'menu_search' ) ) : ?>
+						<?php if ( get_theme_mod( 'menu_search', customizer_library_get_default( 'menu_search' ) ) ) : ?>
 							<a class="search-icon">
 								<label class="screen-reader-text"><?php esc_html_e( 'Open search bar', 'polestar' ); ?></label>
 								<?php polestar_display_icon( 'search' ); ?>
@@ -55,7 +55,7 @@
 						<?php endif; ?>
 					</nav><!-- #site-navigation -->
 
-					<?php if ( get_theme_mod( 'menu_search' ) ) : ?>	
+					<?php if ( get_theme_mod( 'menu_search', true ) ) : ?>	
 						<div id="header-search">
 							<div class="polestar-container">
 								<label for='s' class='screen-reader-text'><?php esc_html_e( 'Search for:', 'polestar' ); ?></label>

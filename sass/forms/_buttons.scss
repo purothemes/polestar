@@ -7,10 +7,11 @@ input[type="submit"] {
 	border: 0;
 	border-radius: 2px;
 	color: #fff;
-	font-family: $font__main;
-	font-size: 14px;
-	line-height: normal;  
-	padding: 13px 25px 12px;
+	display: inline-block;
+	font-size: .9em;
+	letter-spacing: .5px; 
+	line-height: normal; 
+	padding: 11px 25px;
 	text-transform: uppercase;
 	transition: .3s;
 
@@ -25,7 +26,6 @@ input[type="submit"] {
 
 	&:active,
 	&:focus {
-		background: $color__accent;
 		color: #fff;
 		outline: none;
 	}

@@ -1,13 +1,13 @@
 .site-header {
 	background: #fff;
 	border-bottom: 1px solid $color__background-hr-dark;
-	margin-bottom: 50px; 
-	padding: 20px 0;
+	margin-bottom: 60px;
+	padding: 25px 0;
 	position: relative;
 	width: 100%;
-	z-index: 999;
+	z-index: 9999;
 	
-	.page-layout-no-header-margin & {
+	.no-header-margin & {
 		margin-bottom: 0;
 	}
 	
@@ -31,6 +31,7 @@
 	
 	.site-branding {
 		display: table-cell;
+		padding-right: 20px; 
 		vertical-align: middle;
 
 		.site-title {
@@ -42,6 +43,11 @@
 			a {
 				color: $color__text-dark;
 			}
+		}
+
+		img {
+			display: inline-block;
+			vertical-align: middle;
 		}
 
 		.site-description {
@@ -88,7 +94,6 @@
 			background: rgba(0, 0, 0, .035);
 			border: 0;
 			box-sizing: border-box;
-			font-size: 16px; 
 			height: 48px; 
 			padding: 0 15px;
 			right: 15px;
@@ -96,7 +101,11 @@
 			
 			&:-webkit-autofill {
 		    	-webkit-box-shadow: 0 0 0 50px #f6f6f6 inset !important;
-			}			
+			}
+
+			// @include placeholder {
+			// 	color: #fff; 
+			// }						
 		}
 
 		button[type="submit"] {
@@ -144,11 +153,6 @@
 			margin: 0 auto 20px auto;
 			padding: 0;
 			text-align: center;
-
-			img {
-				display: inline-block;
-				max-width: 100%;
-			}
 		}
 
 		.main-navigation {

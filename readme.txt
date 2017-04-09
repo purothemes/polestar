@@ -2,18 +2,18 @@
 
 Contributors: Puro
 
-Tags: two-columns, right-sidebar, custom-background, custom-menu, custom-logo, featured-images, footer-widgets, sticky-post, threaded-comments, translation-ready, blog, ecommerce
+Tags: two-columns, right-sidebar, custom-background, custom-menu, custom-logo, featured-images, footer-widgets, sticky-post, threaded-comments, translation-ready, blog, e-commerce
 
 Requires at least: 4.1
 Tested up to: 4.7.2
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
-A clean, lightweight, multipurpose, responsive theme ready for your business or blog site.
+Lead the way with Polestar. It's fast loading, responsive, lightweight and flexible design is perfectly suited for building dynamic pages with SiteOrigin's Page Builder and selling with WooCommerce.
 
 == Description ==
 
-A clean, lightweight, multipurpose, responsive theme ready for your business or blog site. Create stunning landing pages with Page Builder by SiteOrigin. Show off your latest posts with Jetpack Featured Content and Polestar's posts slider.
+Lead the way with Polestar. It's fast loading, responsive, lightweight and flexible design is perfectly suited for building dynamic pages with SiteOrigin's Page Builder and selling with WooCommerce. Polestar features a sticky header, beautiful header search, scroll to top and just the right amount of Customizer theme settings. Page level settings let you adjust the theme layout on a page by page basis, perfect for landing pages. If you run a blog, Polestar is ready with awesome features including a full-width posts slider integrated with Jetpack Featured Content, an author box and related posts section.
 
 == Installation ==
 
@@ -108,7 +108,7 @@ Polestar WordPress Theme is derived from [Underscores WordPress Theme](http://un
 
 == Images ==
 
-Screenshot image "Stars Snow" sourced from https://unsplash.com by [Averie Woodard](https://unsplash.com/@averieclaire) licensed under [CC0 1.0 Universal (CC0 1.0)](http://creativecommons.org/publicdomain/zero/1.0/).
+Screenshot image "Half Dome Village, Yosemite Valley, United States" sourced from https://unsplash.com by [Billy Chester](https://unsplash.com/@billychester) licensed under [CC0 1.0 Universal (CC0 1.0)](http://creativecommons.org/publicdomain/zero/1.0/).
 
 == Fonts and Icons ==
 
@@ -141,3 +141,11 @@ Released under [GPL version 2](https://www.gnu.org/licenses/old-licenses/gpl-2.0
 Normalize.css, Copyright Nicolas Gallagher and Jonathan Neal
 Released under the [MIT License](http://opensource.org/licenses/MIT)
 [Source](https://github.com/necolas/normalize.css/)
+
+Puro Extras, Copyright Puro 2017
+Released under [GPL version 2](https://www.gnu.org/licenses/old-licenses/gpl-2.0.en.html)
+[Source](https://github.com/purothemes/extras)
+
+TGM Plugin Activation, Copyright 2011 Thomas Griffin
+Released under [GPL version 2](https://www.gnu.org/licenses/old-licenses/gpl-2.0.en.html)
+[Source](https://github.com/TGMPA/TGM-Plugin-Activation)

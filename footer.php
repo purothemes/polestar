@@ -10,6 +10,9 @@
  * @license GPL 2.0 
  */
 
+$footer_widgets = is_active_sidebar( 'sidebar-footer' ) == true;
+$footer_widgets_page_setting = puro_page_setting( 'footer_widgets', true );
+
 ?>
 
 		</div><!-- .polestar-container -->
@@ -17,22 +20,25 @@
 
 	<?php do_action( 'polestar_footer_before' ); ?>
 
-	<footer id="colophon" class="site-footer <?php if ( is_active_sidebar( 'sidebar-footer' ) ) echo 'footer-active-sidebar'; ?>" role="contentinfo">
+	<footer id="colophon" class="site-footer <?php if ( ! is_page() && $footer_widgets || is_page() && ( $footer_widgets && $footer_widgets_page_setting ) ) echo 'footer-active-sidebar'; if ( get_theme_mod( 'footer_layout' ) == 'full-width' ) echo ' full-width';  ?>" role="contentinfo">
 
 		<?php do_action( 'polestar_footer_top' ); ?>
 
-		<div class="polestar-container">
-			<?php
-				if ( is_active_sidebar( 'sidebar-footer' ) ) {
-					$polestar_footer_sidebars = wp_get_sidebars_widgets();
-					?>
-					<div class="widgets widgets-<?php echo count( $polestar_footer_sidebars['sidebar-footer'] ) ?>" role="complementary" aria-label="<?php esc_html_e( 'Footer Widgets', 'polestar' ); ?>">
-						<?php dynamic_sidebar( 'sidebar-footer' ); ?>
-					</div>
-					<?php
-				}
-			?>
-		</div><!-- .polestar-container -->
+		<?php if ( ! is_page() || is_page() && $footer_widgets_page_setting ) : ?>
+			<div class="polestar-container">
+				<?php
+					if ( is_active_sidebar( 'sidebar-footer' ) ) {
+						$polestar_footer_sidebars = wp_get_sidebars_widgets();
+						?>
+						<div class="widgets widgets-<?php echo count( $polestar_footer_sidebars['sidebar-footer'] ) ?>" role="complementary" aria-label="<?php esc_html_e( 'Footer Widgets', 'polestar' ); ?>">
+							<?php dynamic_sidebar( 'sidebar-footer' ); ?>
+						</div>
+						<?php
+					}
+				?>
+			</div><!-- .polestar-container -->				
+		<?php endif; ?>	
+			
 		<div class="bottom-bar">
 			<div class="polestar-container">
 				<div class="site-info">
@@ -41,14 +47,11 @@
 
 					$credit_text = apply_filters(
 						'polestar_footer_credits',
-						sprintf( esc_html__( 'Theme by %s', 'puro-starter-theme' ), '<a href="https://purothemes.com/" rel="designer">Puro Themes</a>' )
+						sprintf( esc_html__( 'Theme by %s', 'polestar' ), '<a href="https://purothemes.com/" rel="designer">Puro</a>' )
 					);
 
-					if ( get_theme_mod( 'footer_text' ) ) {
-						echo ' - ';
-					}
-
-					if ( ! empty( $credit_text ) ) {	
+					if ( ! empty( $credit_text ) ) {
+						?> &ndash; </span><?php
 						echo wp_kses_post( $credit_text );
 					}
 					?>
@@ -62,7 +65,7 @@
 	</footer><!-- #colophon -->
 </div><!-- #page -->
 
-<?php if ( get_theme_mod( 'scroll_to_top' ) ) : ?>
+<?php if ( get_theme_mod( 'scroll_to_top', true ) ) : ?>
 	<div id="scroll-to-top">
 		<span class="screen-reader-text"><?php esc_html_e( 'Scroll to top', 'polestar' ); ?></span>
 		<?php polestar_display_icon( 'up-arrow' ); ?>

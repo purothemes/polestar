@@ -1,7 +1,3 @@
-.site-main .sticky {
-	display: block;
-}
-
 .hentry {
 	border-bottom: 1px solid $color__background-hr-dark;
 	margin: 0 0 50px;
@@ -9,6 +5,7 @@
 	
 	&:last-of-type {
 		border: 0;
+		margin-bottom: 0; 
 	}
 
 	&:only-of-type {
@@ -24,13 +21,13 @@
 }
 
 .entry-header {
-	margin-bottom: 25px; 
+	margin-bottom: 25px;
 }
 
 /*--------------------------------------------------------------
 ## - Posts
 --------------------------------------------------------------*/
-.entry-title {
+.site-content .entry-title {
 	color: $color__text-dark;
 	font-size: 29px; 
 	line-height: normal;
@@ -49,7 +46,7 @@
 	}	
 
 	a {
-		color: inherit;
+		color: $color__text-dark;
 		text-decoration: none;
 
 		&:hover {
@@ -59,7 +56,6 @@
 }
 
 .entry-meta {
-	font-family: $font__main;
 	line-height: normal;
 
 	> span {
@@ -94,40 +90,7 @@
 		&:last-of-type:after {
 			content: none; 
 		}
-
-		// &:before {
-		// 	color: $color__text-light;
-		// 	display: inline-block;
-		// 	font-family: $font__icon;
-		// 	font-size: 13px;
-		// 	line-height: 1;
-		// 	margin-right: 6px;
-		// }
-
-		// &.entry-date:before {
-		// 	content: "\e901";
-		// }
-
-		// &.byline:before {
-		// 	content: "\f040";
-		// }
-
-		// &.comments-link:before {
-		// 	content: "\e900";
-		// }	
-	}
-
-	// svg {
-	// 	height: 12px;
-	// 	margin-right: 3px;
-	// 	position: relative;
-	// 	top: 2px;
-	// 	width: auto;  
-
-	// 	path {
-	// 		fill: $color__text-light;
-	// 	}
-	// }		
+	}	
 
 	.updated:not(.published) {
 		display: none;
@@ -139,16 +102,25 @@
 	display: inline;
 }
 
+.entry-thumbnail,
+.entry-video {
+	margin-bottom: 25px; 
+}
+
 .entry-thumbnail {
-	margin: 25px 0;
+	height: 100%;
+	margin-right: auto;
+	margin-left: auto;
 	position: relative;
 	text-align: center;
+	width: 100%; 
 	
 	.thumbnail-meta {
 		display: block;
 		left: 10px; 
 		position: absolute;
 		top: 10px;
+		z-index: 1;  
 
 		ul {
 			display: inline-block;
@@ -200,16 +172,29 @@
 		width: 60px;
 		z-index: 5;
 		
+		@media (max-width: 480px) {
+			height: 52px;
+			margin: -26px 0 0 -26px;
+			padding: 13.5px 0 0 0;
+			width: 52px;  
+		}
+		
 		@at-root .entry-thumbnail:hover .icon-add {
 			transform: scale(1, 1)
 		}
 		
 		svg {
 			height: 30px;
-			margin-right: -15px; 
+			margin-right: -15.6px; 
 			position: absolute;
 			right: 50%;
 			width: 30px;
+			
+			@media (max-width: 480px) {
+				height: 26px;
+				margin-right: -13.5px; 
+				width: 26px;  
+			}			
 
 			path {
 				fill: #fff;
@@ -224,43 +209,15 @@
 	}
 }
 
-// .entry-image {
-// 	height: 420px;
-// 	margin: 0 0 60px;
-// 	overflow: hidden;
-// 	position: relative;
-// 	text-align: center;
-// 	width: 100%; 
-
-// 	@media (max-width: 768px) {
-// 		height: 380px; 
-// 	}
-
-// 	@media (max-width: 480px) {
-// 		height: 155px; 
-// 	}			
-
-// 	img {
-// 		height: auto;
-// 		margin: auto;
-// 		position: absolute;
-// 		top: 50%;
-// 		left: 50%;
-// 		transform: translate(-50%, -50%);
-// 		width: 100%;
-// 	}
-// }
-
-.more-wrapper {
+.site-content .more-wrapper {
 	display: block;
 	font-size: 14px;
-	text-transform: capitalize;
 	
 	span {
 		font-size: 13px;
 		position: relative;
-		right: -1px;
-		top: 1px;
+    	right: -4px;
+    	top: 1.5px;
 	} 
 	
 	a {
@@ -277,14 +234,9 @@
 	text-align: left;
 
 	.page-links-title {
+		background: none;
 		color: $color__text-dark;
 		font-size: 14px;
-		font-weight: 500;  
-	}
-
-	.page-links-title {
-		background: none;
-		color: $color__text-medium;
 		font-weight: 600; 
 		padding: 0;
 		text-transform: none;
@@ -314,40 +266,6 @@
 	}		
 }
 
-// .page-links {
-// 	text-align: left;
-
-// 	.page-links-title {
-// 		background: none;
-// 		border-bottom: 3px solid #fff;
-// 		color: $color__text-medium;
-// 		font-size: 14px;
-// 		font-weight: 600; 
-// 		padding: 0;
-// 		text-transform: none;
-		
-// 		&:hover {
-// 			border-bottom: 3px solid #fff;
-// 		}
-// 	}
-
-// 	span {
-// 		border-bottom: 3px solid $color__accent;
-// 		color: $color__text-dark;
-// 		display: inline-block;
-// 		margin-right: 3px;
-// 		padding: 0 10px 5px;
-
-// 		&:hover {
-// 			border-color: $color__accent;
-// 		}
-// 	}
-
-// 	a span {
-// 		border-color: #fff; 
-// 	}		
-// }
-
 .single .entry-footer {
 	margin: 0 0 50px;
 }
@@ -370,10 +288,14 @@
 }
 
 /*--------------------------------------------------------------
-## - Archives, Search Results & 404
+## - Pages, Archives, Search Results & 404
 --------------------------------------------------------------*/
 .page-header {
-	margin-bottom: 25px; 
+	margin-bottom: 25px;
+	
+	.page-title {
+		margin-top: 0; 
+	}
 }
 
 .archive:not(.woocommerce) .page-title {
@@ -433,7 +355,7 @@
 		padding: 0;
 		position: relative;
 		right: 36px;
-		top: 3px;
+		top: 2px;
 
 		svg {
 			height: 16px;
