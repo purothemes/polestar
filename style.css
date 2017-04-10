@@ -379,11 +379,11 @@ hr {
   background-color: #f6f6f6;
   border: 0;
   height: 1px;
-  margin-bottom: 27px; }
+  margin-bottom: 26px; }
 
 ul,
 ol {
-  margin: 0 0 27px 25px;
+  margin: 0 0 26px 25px;
   padding: 0; }
 
 ul {
@@ -398,7 +398,7 @@ li > ol {
   margin-bottom: 0; }
 
 dl {
-  margin: 0 0 27px; }
+  margin: 0 0 26px; }
   dl dt {
     font-weight: bold;
     font-weight: 600; }
@@ -414,7 +414,7 @@ figure {
 
 table {
   border: 1px solid #ebebeb;
-  margin: 0 0 27px;
+  margin: 0 0 26px;
   width: 100%; }
   table a {
     text-decoration: none; }
