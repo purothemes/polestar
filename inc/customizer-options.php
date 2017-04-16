@@ -411,6 +411,7 @@ function polestar_theme_options() {
 
 	// WooCommerce.
 	if ( function_exists( 'is_woocommerce' ) ) {
+
 		$section = 'woocommerce';
 
 		$sections[] = array(
@@ -433,7 +434,27 @@ function polestar_theme_options() {
 		    'default' => 'left',
 		    'priority' => '10'
 		);	
-	}	
+	}
+
+	if ( ! function_exists( 'polestar_premium_init' ) ) {
+
+		$section = 'more_options';
+
+		$sections[] = array(
+		    'id' => $section,
+		    'title' => esc_html__( 'More Options', 'polestar' ),
+		    'priority' => '90',
+		    'panel' => $panel
+		);	
+
+		$options['polestar_premium'] = array(
+			'id' => 'polestar_premium',
+			'label' => esc_html__( 'Polestar Premium', 'polestar' ),
+			'section' => $section,
+			'type' => 'content',
+			'content' => '<p>' . esc_html__( 'Polestar Premium adds loads of extra customization settings and useful features. They\'ll save you time and make your site more professional.', 'polestar' ) . '</p> <p><a href="https://purothemes.com/themes/polestar" class="button-primary" target="_blank">' . esc_html__( 'Find Out More', 'polestar' ) . '</a><p>',
+		);
+	}
 
 	// Adds the sections to the $options array.
 	$options['sections'] = $sections;

@@ -347,14 +347,9 @@
 		}
 		
 		input[type="search"] {
-			border: 0; 
 			font-size: 14px; 
 			padding-right: 40px;
-			width: 100%;
-			
-			// @include placeholder {
-			// 	color: #fff; 
-			// }			
+			width: 100%;		
 		}
 
 		button[type="submit"] {

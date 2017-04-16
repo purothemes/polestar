@@ -379,11 +379,11 @@ hr {
   background-color: #f6f6f6;
   border: 0;
   height: 1px;
-  margin-bottom: 27px; }
+  margin-bottom: 26px; }
 
 ul,
 ol {
-  margin: 0 0 27px 25px;
+  margin: 0 0 26px 25px;
   padding: 0; }
 
 ul {
@@ -398,7 +398,7 @@ li > ol {
   margin-bottom: 0; }
 
 dl {
-  margin: 0 0 27px; }
+  margin: 0 0 26px; }
   dl dt {
     font-weight: bold;
     font-weight: 600; }
@@ -414,7 +414,7 @@ figure {
 
 table {
   border: 1px solid #ebebeb;
-  margin: 0 0 27px;
+  margin: 0 0 26px;
   width: 100%; }
   table a {
     text-decoration: none; }
@@ -802,7 +802,6 @@ a {
     #mobile-navigation .search-form[style] {
       margin-top: 0 !important; }
     #mobile-navigation .search-form input[type="search"] {
-      border: 0;
       font-size: 14px;
       padding-right: 40px;
       width: 100%; }
@@ -1598,18 +1597,15 @@ a {
 .hentry {
   border-bottom: 1px solid #ebebeb;
   margin: 0 0 50px;
-  padding: 0; }
+  padding: 0 0 25px; }
   .hentry:last-of-type {
     border: 0;
-    margin-bottom: 0; }
+    padding: 0; }
   .hentry:only-of-type {
     border: 0;
+    margin: 0;
+    padding: 0;
     margin: 0; }
-
-.page-content,
-.entry-content,
-.entry-summary {
-  padding: 0 0 25px; }
 
 .entry-header {
   margin-bottom: 25px; }
@@ -1861,6 +1857,52 @@ a {
       fill: #828282; }
 
 /*--------------------------------------------------------------
+## - Author Box
+--------------------------------------------------------------*/
+.author-box {
+  display: table;
+  border: 2px solid #f6f6f6;
+  border-right: 0;
+  border-left: 0;
+  margin: 0;
+  padding: 30px 0;
+  margin-bottom: 50px;
+  width: 100%; }
+  .author-box .author-avatar {
+    display: table-cell;
+    vertical-align: top;
+    width: 105px; }
+    @media (max-width: 480px) {
+      .author-box .author-avatar {
+        display: block;
+        width: 100%; } }
+    .author-box .author-avatar img {
+      border-radius: 40px;
+      display: block;
+      height: 80px;
+      width: 80px; }
+      @media (max-width: 480px) {
+        .author-box .author-avatar img {
+          margin: 0 auto 15px; } }
+  .author-box .author-description {
+    display: table-cell;
+    vertical-align: top; }
+    .author-box .author-description h3 {
+      font-size: 18px;
+      line-height: normal;
+      margin: 0; }
+    .author-box .author-description span {
+      display: block;
+      font-size: 13px;
+      margin-bottom: 10px; }
+      .author-box .author-description span a {
+        color: #626262; }
+        .author-box .author-description span a:hover {
+          color: #4d8ffb; }
+    .author-box .author-description div {
+      font-size: 14px; }
+
+/*--------------------------------------------------------------
 ## - Related Posts
 --------------------------------------------------------------*/
 .yarpp-related,
@@ -1934,52 +1976,6 @@ a {
         .yarpp-related ol li .related-post-date:hover,
         .related-posts-section ol li .related-post-date:hover {
           color: #4d8ffb; }
-
-/*--------------------------------------------------------------
-## - Author Box
---------------------------------------------------------------*/
-.author-box {
-  display: table;
-  border: 2px solid #f6f6f6;
-  border-right: 0;
-  border-left: 0;
-  margin: 0;
-  padding: 30px 0;
-  margin-bottom: 50px;
-  width: 100%; }
-  .author-box .author-avatar {
-    display: table-cell;
-    vertical-align: top;
-    width: 105px; }
-    @media (max-width: 480px) {
-      .author-box .author-avatar {
-        display: block;
-        width: 100%; } }
-    .author-box .author-avatar img {
-      border-radius: 40px;
-      display: block;
-      height: 80px;
-      width: 80px; }
-      @media (max-width: 480px) {
-        .author-box .author-avatar img {
-          margin: 0 auto 15px; } }
-  .author-box .author-description {
-    display: table-cell;
-    vertical-align: top; }
-    .author-box .author-description h3 {
-      font-size: 18px;
-      line-height: normal;
-      margin: 0; }
-    .author-box .author-description span {
-      display: block;
-      font-size: 13px;
-      margin-bottom: 10px; }
-      .author-box .author-description span a {
-        color: #626262; }
-        .author-box .author-description span a:hover {
-          color: #4d8ffb; }
-    .author-box .author-description div {
-      font-size: 14px; }
 
 /*--------------------------------------------------------------
 ## - Comments
