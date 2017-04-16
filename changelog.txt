@@ -1,5 +1,12 @@
 == Changelog ==
 
+= 0.9.6 - 16 April 2017 =
+* Fixed incorrect Sass partial imports for Flexslider and the blog posts slider.
+* Fixed mobile search field missing border.
+* Fixed related posts Customizer default value.
+* Updated WooCommerce template files.
+* Refactored content padding to allow the footer margin page setting to function properly.
+
 = 0.9.5 - 09 April 2017 =
 * Added About page.
 * Added plugin recommendations.
