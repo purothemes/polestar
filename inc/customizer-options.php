@@ -441,7 +441,7 @@ function polestar_theme_options() {
 		    'section' => $section,
 		    'type' => 'checkbox',
 		    'description' => esc_html__( 'Display the WooCommerce mini cart in the main menu.', 'polestar' ),
-		    'default' => true,
+		    'default' => false,
 		);				
 	}
 
