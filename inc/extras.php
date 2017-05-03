@@ -58,7 +58,7 @@ function polestar_body_classes( $classes ) {
 	}
 
 	// WooCommerce sidebar.
-	if ( is_active_sidebar( 'sidebar-shop' ) && ! is_product() ) {
+	if ( is_active_sidebar( 'sidebar-shop' ) && ( function_exists( 'is_woocommerce' ) && ! is_product() ) ) {
 		 $classes[] = 'woocommerce-sidebar';
 	}
 
