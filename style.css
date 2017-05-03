@@ -586,7 +586,8 @@ a {
     list-style: none;
     margin: 0;
     padding: 0; }
-    .main-navigation ul ul.sub-menu {
+    .main-navigation ul .sub-menu,
+    .main-navigation ul .children {
       background: #fff;
       border: 1px solid #ebebeb;
       box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075);
@@ -599,23 +600,30 @@ a {
       transform-origin: center top;
       visibility: hidden;
       z-index: 99999; }
-      .main-navigation ul ul.sub-menu ul {
+      .main-navigation ul .sub-menu ul,
+      .main-navigation ul .children ul {
         left: 100%;
         top: -1px;
         transform-origin: left center; }
-      .main-navigation ul ul.sub-menu li {
+      .main-navigation ul .sub-menu li,
+      .main-navigation ul .children li {
         margin: 0;
         padding: 0;
         min-width: 100%; }
-        .main-navigation ul ul.sub-menu li:hover > ul,
-        .main-navigation ul ul.sub-menu li.focus > ul {
+        .main-navigation ul .sub-menu li:hover > ul,
+        .main-navigation ul .sub-menu li.focus > ul,
+        .main-navigation ul .children li:hover > ul,
+        .main-navigation ul .children li.focus > ul {
           left: 100%; }
-        .main-navigation ul ul.sub-menu li:first-of-type a {
+        .main-navigation ul .sub-menu li:first-of-type a,
+        .main-navigation ul .children li:first-of-type a {
           padding-top: 15px; }
-        .main-navigation ul ul.sub-menu li:last-of-type a {
+        .main-navigation ul .sub-menu li:last-of-type a,
+        .main-navigation ul .children li:last-of-type a {
           border: 0;
           padding-bottom: 15px; }
-      .main-navigation ul ul.sub-menu a {
+      .main-navigation ul .sub-menu a,
+      .main-navigation ul .children a {
         border-bottom: 1px solid #f6f6f6;
         font-size: 13px;
         outline: none;

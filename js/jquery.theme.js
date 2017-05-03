@@ -238,7 +238,7 @@ jQuery( function( $ ) {
 		} );
 
 		var polestarResetMenu = function() {
-			$( '.main-navigation .sub-menu .sub-menu' ).each( function() {
+			$( '.main-navigation ul ul' ).each( function() {
 				var $$ = $( this );
 				var width = Math.max.apply( Math, $$.find( '> li > a' ).map( function() {
 					return $( this ).width();

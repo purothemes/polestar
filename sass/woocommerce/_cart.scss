@@ -262,7 +262,6 @@
 		transform: scale(0.95);
 		transition: all 0.15s ease-in;
 		transform-origin: center top;
-		visibility: hidden;
 		width: 303px;
 		z-index: 99999;
 		
@@ -284,6 +283,12 @@
 					&:hover {
 						color: $color__accent;
 					}
+				}
+
+				&.empty {
+					font-weight: 600;
+					line-height: 1;
+					padding-bottom: 0; 
 				}
 			}
 		}

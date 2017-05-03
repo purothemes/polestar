@@ -939,7 +939,6 @@ Version: dev
   transform: scale(0.95);
   transition: all 0.15s ease-in;
   transform-origin: center top;
-  visibility: hidden;
   width: 303px;
   z-index: 99999; }
   .site-header .shopping-cart-dropdown * {
@@ -954,6 +953,10 @@ Version: dev
         color: #626262; }
         .site-header .shopping-cart-dropdown .widget li a:hover {
           color: #4d8ffb; }
+      .site-header .shopping-cart-dropdown .widget li.empty {
+        font-weight: 600;
+        line-height: 1;
+        padding-bottom: 0; }
   .site-header .shopping-cart-dropdown .buttons a {
     display: inline-block; }
 
