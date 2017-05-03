@@ -917,7 +917,7 @@ Version: dev
     height: 18px;
     font-size: 9px;
     line-height: 1;
-    padding: 5.4px 0 0 1px;
+    padding: 5.4px 0 0 0;
     position: absolute;
     right: 0;
     text-align: center;
@@ -956,6 +956,41 @@ Version: dev
             color: #4d8ffb; }
     .main-navigation .shopping-cart .shopping-cart-dropdown .buttons a {
       display: inline-block; }
+
+#mobile-navigation .shopping-cart-link {
+  display: inline-block;
+  margin-bottom: 15px;
+  position: relative; }
+  #mobile-navigation .shopping-cart-link svg {
+    display: inline-block;
+    height: auto;
+    margin-right: 5px;
+    vertical-align: sub;
+    width: 20px; }
+  #mobile-navigation .shopping-cart-link .shopping-cart-text {
+    color: #2d2d2d;
+    font-family: "Montserrat", sans-serif;
+    font-size: .95em; }
+    #mobile-navigation .shopping-cart-link .shopping-cart-text:hover {
+      color: #626262; }
+  #mobile-navigation .shopping-cart-link .shopping-cart-count {
+    background: #4d8ffb;
+    border-radius: 50%;
+    color: #fff;
+    height: 18px;
+    font-family: "Montserrat", sans-serif;
+    font-size: 9px;
+    line-height: 1;
+    padding: 5.4px 0 0 0;
+    position: absolute;
+    right: -27px;
+    text-align: center;
+    top: 3px;
+    width: 18px; }
+  #mobile-navigation .shopping-cart-link:hover svg {
+    fill: #626262; }
+  #mobile-navigation .shopping-cart-link:hover .shopping-cart-count {
+    background: rgba(77, 143, 251, 0.8); }
 
 /*--------------------------------------------------------------
 # Checkout

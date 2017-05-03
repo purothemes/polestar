@@ -223,7 +223,7 @@
 	    height: 18px;
 	    font-size: 9px;
 	    line-height: 1;
-	    padding: 5.4px 0 0 1px;
+	    padding: 5.4px 0 0 0;
 	    position: absolute;
 	    right: 0;
 	    text-align: center;
@@ -283,5 +283,59 @@
 		.buttons a {
 			display: inline-block;
 		}
+	}
+}
+
+#mobile-navigation {
+
+	.shopping-cart-link {
+		display: inline-block;
+		margin-bottom: 15px;
+		position: relative;
+
+		svg {
+			display: inline-block;
+			height: auto;
+			margin-right: 5px;
+			vertical-align: sub; 
+			width: 20px;
+		}
+
+		.shopping-cart-text {
+			color: $color__text-dark;
+			font-family: $font__headings;  
+			font-size: .95em;
+			
+			&:hover {
+				color: $color__text-medium;
+			}
+		}
+
+		.shopping-cart-count {
+		    background: $color__accent;
+		    border-radius: 50%;
+		    color: #fff;
+		    height: 18px;
+		    font-family: $font__headings; 
+		    font-size: 9px;
+		    line-height: 1;
+		    padding: 5.4px 0 0 0;
+		    position: absolute;
+		    right: -27px;
+		    text-align: center;
+		    top: 3px;
+		    width: 18px;		
+		}
+
+		&:hover {
+
+			svg {
+				fill: $color__text-medium;
+			}
+			
+			.shopping-cart-count {
+				background: rgba(77, 143, 251, .8);
+			}
+		}		
 	}
 }

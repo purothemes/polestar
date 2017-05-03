@@ -798,6 +798,7 @@ a {
   #mobile-navigation > ul {
     margin-bottom: 15px; }
   #mobile-navigation .search-form {
+    margin-bottom: 15px;
     position: relative; }
     #mobile-navigation .search-form[style] {
       margin-top: 0 !important; }
