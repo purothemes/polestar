@@ -197,6 +197,8 @@
 
 	.shopping-cart {
 		display: inline-block;
+		margin: 0 20px -10px 30px;
+	    padding: 0 0 10px;		
 	}
 
 	.shopping-cart-text {
@@ -211,8 +213,6 @@
 
 		svg {
 			display: inline-block;
-			margin: 0 20px -10px 30px;
-	    	padding: 0 0 10px;
 			position: relative;
 			height: auto;
 			vertical-align: text-bottom;
@@ -226,9 +226,9 @@
 		    height: 18px;
 		    font-size: 9px;
 		    line-height: 1;
-		    padding: 5.4px 0 0 .5px;
+		    padding: 5.4px 0 0;
 		    position: absolute;
-		    right: 0;
+		    right: -19px;
 		    text-align: center;
 		    top: -9px;
 		    width: 18px;		

@@ -889,7 +889,9 @@ Version: dev
     font-size: 16px; }
 
 .site-header .shopping-cart {
-  display: inline-block; }
+  display: inline-block;
+  margin: 0 20px -10px 30px;
+  padding: 0 0 10px; }
 
 .site-header .shopping-cart-text {
   color: #2d2d2d;
@@ -901,8 +903,6 @@ Version: dev
   position: relative; }
   .site-header .shopping-cart-link svg {
     display: inline-block;
-    margin: 0 20px -10px 30px;
-    padding: 0 0 10px;
     position: relative;
     height: auto;
     vertical-align: text-bottom;
@@ -914,9 +914,9 @@ Version: dev
     height: 18px;
     font-size: 9px;
     line-height: 1;
-    padding: 5.4px 0 0 .5px;
+    padding: 5.4px 0 0;
     position: absolute;
-    right: 0;
+    right: -19px;
     text-align: center;
     top: -9px;
     width: 18px; }
