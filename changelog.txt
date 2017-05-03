@@ -1,5 +1,11 @@
 == Changelog ==
 
+= 0.9.7 - 03 May 2017 =
+* Added ability to close header search using the escape key.
+* Fixed table cell border color.
+* Minor style adjustments to buttons and the blog posts slider.
+* Added WooCommerce mini cart and related setting.
+
 = 0.9.6 - 16 April 2017 =
 * Fixed incorrect Sass partial imports for Flexslider and the blog posts slider.
 * Fixed mobile search field missing border.
