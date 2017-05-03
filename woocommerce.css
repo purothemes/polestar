@@ -1,5 +1,5 @@
 /*!
-Version: 0.9.5
+Version: dev
 */
 /*--------------------------------------------------------------
 # Layout
@@ -894,6 +894,69 @@ Version: 0.9.5
     float: right;
     font-size: 16px; }
 
+.main-navigation .shopping-cart {
+  display: inline-block;
+  margin: 0;
+  position: relative; }
+  .main-navigation .shopping-cart > li > a {
+    padding: 0; }
+  .main-navigation .shopping-cart .shopping-cart-text {
+    display: none; }
+  .main-navigation .shopping-cart svg {
+    display: inline-block;
+    margin: 0 20px -10px 30px;
+    padding: 0 0 10px;
+    position: relative;
+    height: auto;
+    vertical-align: text-bottom;
+    width: 20px; }
+  .main-navigation .shopping-cart .shopping-cart-count {
+    background: #4d8ffb;
+    border-radius: 50%;
+    color: #fff;
+    height: 18px;
+    font-size: 9px;
+    line-height: 1;
+    padding: 5.4px 0 0 1px;
+    position: absolute;
+    right: 0;
+    text-align: center;
+    top: -9px;
+    width: 18px; }
+  .main-navigation .shopping-cart:hover svg {
+    fill: #626262; }
+  .main-navigation .shopping-cart:hover .shopping-cart-count {
+    background: rgba(77, 143, 251, 0.8); }
+  .main-navigation .shopping-cart .shopping-cart-dropdown {
+    background: #fff;
+    border: 1px solid #ebebeb;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075);
+    opacity: 0;
+    position: absolute;
+    right: 0;
+    text-align: left;
+    top: 100%;
+    transform: scale(0.95);
+    transition: all 0.15s ease-in;
+    transform-origin: center top;
+    visibility: hidden;
+    width: 303px;
+    z-index: 99999; }
+    .main-navigation .shopping-cart .shopping-cart-dropdown * {
+      font-family: "Open Sans", sans-serif; }
+    .main-navigation .shopping-cart .shopping-cart-dropdown .widget {
+      margin: 15px 25px 25px; }
+      .main-navigation .shopping-cart .shopping-cart-dropdown .widget li {
+        font-weight: normal;
+        line-height: 2;
+        width: 100%; }
+        .main-navigation .shopping-cart .shopping-cart-dropdown .widget li a {
+          color: #626262; }
+          .main-navigation .shopping-cart .shopping-cart-dropdown .widget li a:hover {
+            color: #4d8ffb; }
+    .main-navigation .shopping-cart .shopping-cart-dropdown .buttons a {
+      display: inline-block; }
+
 /*--------------------------------------------------------------
 # Checkout
 --------------------------------------------------------------*/
@@ -1125,3 +1188,5 @@ Version: 0.9.5
 --------------------------------------------------------------*/
 .track_order p {
   margin-bottom: 26px; }
+
+/*# sourceMappingURL=sass/maps/woocommerce.css.map */

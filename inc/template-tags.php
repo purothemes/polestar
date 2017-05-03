@@ -51,6 +51,31 @@ function polestar_breadcrumbs() {
 endif;
 add_action( 'polestar_content_top', 'polestar_breadcrumbs' );
 
+if ( ! function_exists( 'polestar_mini_cart' ) ) :
+/**
+ * Display the WooCommerce mini cart.
+ */
+function polestar_mini_cart() {
+	if ( class_exists( 'Woocommerce' ) && ! ( is_cart() || is_checkout() ) ) : ?>
+		<?php global $woocommerce; ?>
+		<ul class="shopping-cart">
+			<li>
+				<a class="shopping-cart-link" href="<?php echo $woocommerce->cart->get_cart_url(); ?>">
+					<span class="screen-reader-text"><?php esc_html_e( 'View shopping cart', 'polestar' ); ?></span>
+					<?php polestar_display_icon( 'cart' ); ?>
+					<span class="shopping-cart-text"><?php esc_html_e( ' View Cart ', 'polestar' ); ?></span>
+					<span class="shopping-cart-count"><?php echo WC()->cart->cart_contents_count; ?></span>
+				</a>
+				<ul class="shopping-cart-dropdown" id="cart-drop">
+					<?php the_widget( 'WC_Widget_Cart' );?>
+				</ul>
+			</li>
+		</ul>
+	<?php endif; ?>
+<?php
+}
+endif;
+
 if ( ! function_exists( 'polestar_comment' ) ) :
 /**
  * The callback function for wp_list_comments in comments.php.
@@ -165,6 +190,12 @@ function polestar_display_icon( $type ) {
 				<path d="M18.984 12.984h-6v6h-1.969v-6h-6v-1.969h6v-6h1.969v6h6v1.969z"></path>
 			</svg>
 		<?php break;
+
+		case 'cart' : ?>
+			<svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32">
+			<path d="M31.914 5.4l-2.914 11.6c0 0.139-0.028 0.27-0.078 0.389-0.102 0.24-0.293 0.432-0.532 0.533-0.12 0.051-0.252 0.078-0.39 0.078h-19l0.8 4h17.2c0.553 0 1 0.447 1 1s-0.447 1-1 1h-18c-0.553 0-1-0.447-1-1l-3.8-19h-3.2c-0.552 0-1-0.448-1-1s0.448-1 1-1h4c0.553 0 1 0.448 1 1l0.2 1h24.8c0.553 0 1 0.448 1 1 0 0.143-0.032 0.277-0.086 0.4zM8.6 16h3.4v-10h-5.4l2 10zM18 6h-5v10h5v-10zM24 6h-5v10h5v-10zM25 6v10h2.253l2.533-10h-4.786zM11 26c1.657 0 3 1.344 3 3s-1.343 3-3 3-3-1.344-3-3 1.343-3 3-3zM11 30c0.553 0 1-0.447 1-1s-0.447-1-1-1-1 0.447-1 1 0.447 1 1 1zM25 26c1.657 0 3 1.344 3 3s-1.343 3-3 3-3-1.344-3-3 1.343-3 3-3zM25 30c0.553 0 1-0.447 1-1s-0.447-1-1-1-1 0.447-1 1 0.447 1 1 1z"></path>
+			</svg>
+		<?php break;		
 
 		case 'close' : ?>
 			<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24" height="24" viewBox="0 0 24 24">
