@@ -426,7 +426,7 @@ table {
     font-weight: 600; }
   table th,
   table td {
-    border: 1px solid #f6f6f6;
+    border: 1px solid #ebebeb;
     padding: 8px 16px; }
     @media (max-width: 768px) {
       table th,
