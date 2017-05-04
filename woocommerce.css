@@ -954,6 +954,7 @@ Version: dev
         .site-header .shopping-cart-dropdown .widget li a:hover {
           color: #4d8ffb; }
       .site-header .shopping-cart-dropdown .widget li.empty {
+        font-size: .95em;
         font-weight: 600;
         line-height: 1;
         padding-bottom: 0; }
