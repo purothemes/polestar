@@ -220,6 +220,13 @@ jQuery( function( $ ) {
 		}
 	} );
 
+	// Close the header search with the escape key.
+	$( document ).keyup( function( e ) {
+		if ( e.keyCode == 27 ) { // Escape key maps to keycode '27'.
+			$( '#close-search.animate-in' ).trigger( 'click' );
+		}
+	} );	
+
 	// Main menu.
 	// Remove the no-js body class.
 	$( 'body.no-js' ).removeClass( 'no-js' );	
@@ -395,6 +402,11 @@ jQuery( function( $ ) {
 			if ( $( '#header-search form' ).length ) {
 				$mobileMenu.append( $( '#header-search form' ).clone() );
 			}
+
+			if ( $( '.main-navigation .shopping-cart' ).length ) {
+				$mobileMenu.append( $( '.main-navigation .shopping-cart .shopping-cart-link' ).clone() );
+			}
+			
         	$mobileMenu.find( '#primary-menu' ).show().css( 'opacity', 1 );
 			$mobileMenu.find( '.menu-item-has-children > a, .page_item_has_children > a' ).after( '<button class="dropdown-toggle" aria-expanded="false"><i class="icon-chevron-down" aria-hidden="true"></i></button>' );
 			$mobileMenu.find( '.dropdown-toggle' ).click( function( e ) {

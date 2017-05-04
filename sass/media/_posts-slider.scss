@@ -5,7 +5,7 @@
 		background-color: $color__text-medium;
 		background-position: center;
 		background-size: cover;
-		height: 420px;
+		height: 520px;
 		
 		@media (max-width: 768px) {
 			height: 380px; 
@@ -25,25 +25,30 @@
 
 		.slide-content {
 			text-align: center;
-			padding: 7% 10%;
+			padding: 10% 10%;
 			position: absolute;
 			width: 100%; 
-			z-index: 3;		
+			z-index: 3;
+			
+			@media (max-width: 768px) {
+				padding-top: 7%; 
+			}	
 
 			.entry-title {
 				font-size: 46px;
-				margin-bottom: 15px; 
+				margin-bottom: 0; 
 				position: relative;
 				text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
 				z-index: 3;
 				
 				@media (max-width: 768px) {
-					font-size: 41px; 
+					font-size: 41px;
+					line-height: 1.1;
+					margin-bottom: 10px; 
 				}
 
 				@media (max-width: 480px) {
 					font-size: 26px;
-					line-height: normal;
 				}				
 
 				a {
@@ -57,7 +62,12 @@
 
 			.entry-excerpt {
 				color: rgba(255, 255, 255, .9);
+				font-size: 18px; 
 				text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
+				
+				@media (max-width: 768px) {
+					font-size: 16px; 
+				}				
 				
 				@media (max-width: 480px) {
 					display: none;

@@ -115,6 +115,7 @@ function polestar_build_styles() {
 			// Color.
 			Customizer_Library_Styles()->add( array(
 				'selectors' => array(
+					'.site-header .shopping-cart-dropdown .widget li a:hover',
 					'.woocommerce .woocommerce-breadcrumb a:hover',
 					'.woocommerce .woocommerce-breadcrumb a:hover',
 					'.woocommerce .star-rating',
@@ -136,6 +137,7 @@ function polestar_build_styles() {
 			// Background.
 			Customizer_Library_Styles()->add( array(
 				'selectors' => array(
+					'.site-header .shopping-cart-link .shopping-cart-count',
 					'.woocommerce .woocommerce-pagination ul li a:hover',
 					'.woocommerce .woocommerce-pagination ul li a.current',
 					'.woocommerce .woocommerce-pagination ul li > span:hover',
@@ -146,6 +148,16 @@ function polestar_build_styles() {
 					'background' => $color
 				)
 			) );
+
+			// Background RGBA.
+			Customizer_Library_Styles()->add( array(
+				'selectors' => array(
+					'.site-header .shopping-cart-link:hover .shopping-cart-count'
+				),
+				'declarations' => array(
+					'background' => 'rgba(' . $color_rgb . ', 0.8)'
+				)
+			) );			
 
 			// Border Color.
 			Customizer_Library_Styles()->add( array(
@@ -203,6 +215,31 @@ function polestar_build_styles() {
 				'color' => $color
 			)
 		) );
+
+		// WooCommerce
+		if ( function_exists( 'is_woocommerce' ) ) {
+
+			// Color.
+			Customizer_Library_Styles()->add( array(
+				'selectors' => array(
+					'.site-header .shopping-cart-text'
+				),
+				'declarations' => array(
+					'color' => $color
+				)
+			) );			
+
+			// Fill.
+			Customizer_Library_Styles()->add( array(
+				'selectors' => array(
+					'.site-header .shopping-cart-link svg'
+				),
+				'declarations' => array(
+					'fill' => $color
+				)
+			) );
+
+		} // endif is_woocommerce.	
 
 		if ( ! function_exists( 'polestar_premium_setup' ) ) {
 
@@ -311,7 +348,10 @@ function polestar_build_styles() {
 				'.comment-list .pingback .author a:hover',
 				'#commentform .comment-notes a',
 				'#commentform .logged-in-as a',
-				'#commentform .comment-subscription-form label'
+				'#commentform .comment-subscription-form label',
+				'.widget-area .widget a', 
+				'.site-footer .widget a',
+				'.site-header .shopping-cart-dropdown .widget li a'
 			),
 			'declarations' => array(
 				'color' => $color
@@ -359,6 +399,7 @@ function polestar_build_styles() {
 			// Color.
 			Customizer_Library_Styles()->add( array(
 				'selectors' => array(
+					'.site-header .shopping-cart-link:hover .shopping-cart-text',
 					'.woocommerce .woocommerce-pagination ul li a',
 					'.woocommerce .woocommerce-pagination ul li > span',
 					'.woocommerce .products .product h3:hover',
@@ -378,7 +419,8 @@ function polestar_build_styles() {
 			// Fill.
 			Customizer_Library_Styles()->add( array(
 				'selectors' => array(
-					'.woocommerce .woocommerce-ordering .ordering-selector-wrapper svg path'
+					'.site-header .shopping-cart-link:hover svg',
+					'.woocommerce .woocommerce-ordering .ordering-selector-wrapper svg path',
 				),
 				'declarations' => array(
 					'fill' => $color
@@ -499,6 +541,7 @@ function polestar_build_styles() {
 
 			Customizer_Library_Styles()->add( array(
 				'selectors' => array(
+					'.site-header .shopping-cart-link',
 					'.woocommerce .product .woocommerce-tabs .wc-tabs li'
 				),
 				'declarations' => array(
@@ -526,7 +569,20 @@ function polestar_build_styles() {
 				'font-family' => $stack
 			)
 		) );
-	}		
+
+		if ( function_exists( 'is_woocommerce' ) ) {
+									
+			Customizer_Library_Styles()->add( array(
+				'selectors' => array(
+					'.site-header .shopping-cart-dropdown *'
+				),
+				'declarations' => array(
+					'font-family' => $stack
+				)
+			) );
+
+		} // endif is_woocommerce.			
+	}			
 		
 }
 endif;

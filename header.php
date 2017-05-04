@@ -47,6 +47,8 @@
 							<?php wp_nav_menu( array( 'theme_location' => 'menu-1', 'menu_id' => 'primary-menu' ) ); ?>
 						<?php endif; ?>
 
+						<?php if ( get_theme_mod( 'mini_cart', false ) ) polestar_mini_cart(); ?>	
+
 						<?php if ( get_theme_mod( 'menu_search', customizer_library_get_default( 'menu_search' ) ) ) : ?>
 							<a class="search-icon">
 								<label class="screen-reader-text"><?php esc_html_e( 'Open search bar', 'polestar' ); ?></label>

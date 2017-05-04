@@ -433,7 +433,16 @@ function polestar_theme_options() {
 		    'description' => esc_html__( 'Choose the shop sidebar position.', 'polestar' ),
 		    'default' => 'left',
 		    'priority' => '10'
-		);	
+		);
+
+		$options['mini_cart'] = array(
+		    'id' => 'mini_cart',
+		    'label' => esc_html__( 'Mini Cart', 'polestar' ),
+		    'section' => $section,
+		    'type' => 'checkbox',
+		    'description' => esc_html__( 'Display the WooCommerce mini cart in the main menu.', 'polestar' ),
+		    'default' => false,
+		);				
 	}
 
 	if ( ! function_exists( 'polestar_premium_init' ) ) {
