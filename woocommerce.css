@@ -894,7 +894,6 @@ Version: dev
   padding: 0 0 10px; }
 
 .site-header .shopping-cart-text {
-  color: #2d2d2d;
   display: none; }
 
 .site-header .shopping-cart-link {
@@ -960,6 +959,7 @@ Version: dev
         line-height: 1;
         padding-bottom: 0; }
   .site-header .shopping-cart-dropdown .buttons a {
+    color: #fff;
     display: inline-block; }
 
 #mobile-navigation .shopping-cart-text {

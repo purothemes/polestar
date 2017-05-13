@@ -203,7 +203,6 @@
 	}
 
 	.shopping-cart-text {
-		color: $color__text-dark; 
 		display: none;
 	}
 
@@ -297,6 +296,7 @@
 		}
 
 		.buttons a {
+			color: #fff; 
 			display: inline-block;
 		}
 	}
