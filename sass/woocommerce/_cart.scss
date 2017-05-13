@@ -193,6 +193,7 @@
 	}
 }
 
+// Mini cart.
 .site-header {
 
 	.shopping-cart {
@@ -262,6 +263,7 @@
 		transform: scale(0.95);
 		transition: all 0.15s ease-in;
 		transform-origin: center top;
+		visibility: hidden;
 		width: 303px;
 		z-index: 99999;
 		
@@ -300,6 +302,7 @@
 	}
 }
 
+// Mobile menu mini cart.
 #mobile-navigation {
 
 	.shopping-cart-text {
