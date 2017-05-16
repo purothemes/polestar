@@ -57,6 +57,11 @@ function polestar_body_classes( $classes ) {
 		 $classes[] = 'sidebar-left';
 	}
 
+	// WooCommerce columns.
+	if ( get_theme_mod( 'archive_columns' ) ) {
+		$classes[] = 'wc-columns-' . get_theme_mod( 'archive_columns' );
+	}		
+
 	// WooCommerce sidebar.
 	if ( is_active_sidebar( 'sidebar-shop' ) && ( function_exists( 'is_woocommerce' ) && ! is_product() ) ) {
 		 $classes[] = 'woocommerce-sidebar';
