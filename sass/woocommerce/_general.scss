@@ -245,7 +245,7 @@
 		color: $color__accent;
 	}	
 
-	// Products List.
+	// Products list.
 	.products {
 		clear: both;
 		@include clearfix;
@@ -260,49 +260,96 @@
 			text-align: center;
 			width: 31%;
 			
-			@media (min-width: 769px) {
-
-				&:nth-of-type(3n+1) {
-					clear: both;
-				}				
-			
-				&:nth-of-type(3n+3) {
-					margin-right: 0; 
+			@at-root .wc-columns-2#{&} {
+				width: 48.25%;
+				
+				@media (min-width: 769px) {			
+				
+					&:nth-of-type(2n+2) {
+						margin-right: 0; 
+					}					
 				}					
+			}
+
+			@at-root .wc-columns-3#{&} {
+				width: 31%;
+				
+				@media (min-width: 769px) {			
+				
+					&:nth-of-type(3n+3) {
+						margin-right: 0; 
+					}					
+				}									
+			}			
+
+			@at-root .wc-columns-4#{&} {
+				width: 22.375%;
+				
+				@media (min-width: 769px) {			
+				
+					&:nth-of-type(4n+4) {
+						margin-right: 0; 
+					}					
+				}						
 			}				
+
+			@at-root .wc-columns-5#{&} {
+				width: 17.2%;
+				
+				@media (min-width: 769px) {			
+				
+					&:nth-of-type(5n+5) {
+						margin-right: 0; 
+					}					
+				}					
+			}							
 			
 			@media (max-width: 768px) {
+
+				@at-root {
+					.wc-columns-2#{&},
+					.wc-columns-3#{&},
+					.wc-columns-4#{&},
+					.wc-columns-5#{&} {
+						width: 48.25%;
+					}
+				}				
 
 				&:nth-of-type(2n+2) {
 					margin-right: 0;
 				}				
-				
-				width: 46.5%
-
+			
 			}				
 			
 			@media (max-width: 480px) {
-				margin-right: 0;
-				width: 100%; 
+
+				@at-root {
+					.wc-columns-2#{&},
+					.wc-columns-3#{&},
+					.wc-columns-4#{&},
+					.wc-columns-5#{&} {
+						width: 100%;
+					}
+				}				
 			}				
 
 			.woocommerce-LoopProduct-link {
 				display: block;
 			}			
 			
-			// Sale Sticker.
+			// Sale sticker.
 			.onsale {
 				font-size: 12px;
 			}
 
-			// Product Image.
+			// Product image.
 			img {
 				display: block;
 				margin: 0 auto;
 				width: 100%; 
 			}
 
-			// Product Title.
+			// Product title.
 			.woocommerce-loop-product__title {
 				font-size: 16px; 
 				margin: 15px 0 5px;
@@ -312,7 +359,7 @@
 				}
 			}
 
-			// Star Rating.
+			// Star rating.
 			.star-rating {
 				display: block;
 				float: left;
@@ -320,7 +367,7 @@
 				margin: 0 auto 10px;
 			}		
 
-			// Product Price.
+			// Product price.
 			.price {
 				color: $color__text-medium;
 				display: block;
@@ -329,12 +376,12 @@
 				 
 			}
 
-			// Add to Cart Button.
+			// Add to Cart button.
 			.button {
 				display: inline-block;
 			}
 			
-			// Added to Cart Button.
+			// Added to Cart button.
 			.added_to_cart {
 				@extend .button;
 				margin-top: 10px;
@@ -342,7 +389,6 @@
 
 		}
 	}
-
 
 	.price {
 		color: $color__text-medium;
@@ -720,6 +766,7 @@
 			}			
 		}
 
+		// Upsells.
 		.upsells {
 			
 			> h2 {
@@ -732,6 +779,7 @@
 			}
 		}
 
+		// Related products.
 		.related {
 
 			> h2 {
@@ -751,7 +799,9 @@
 			}
 		}
 
-		.products .product {
+		// Upsells and related products.
+		.woocommerce-tabs ~ .products .product {
+			margin-right: 3.5%; 
 			width: 22.37%;
 			
 			@media (min-width: 769px) {
