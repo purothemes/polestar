@@ -421,6 +421,21 @@ function polestar_theme_options() {
 		    'panel' => $panel
 		);
 
+		$options['archive_columns'] = array(
+		    'id' => 'archive_columns',
+		    'label' => esc_html__( 'Products Per Row', 'polestar' ),
+		    'section' => $section,
+		    'type' => 'range',
+		    'description' => esc_html__( 'Set the number of products per row on shop archive pages.', 'polestar' ),
+			'input_attrs' => array(
+		        'min'   => 2,
+		        'max'   => 5,
+		        'step'  => 1
+			),
+			'default' => 3,
+			'priority' => '10'
+		);			
+
 		$options['woocommerce_sidebar_position'] = array(
 		    'id' => 'woocommerce_sidebar_position',
 		    'label' => esc_html__( 'Shop Sidebar Position', 'polestar' ),
@@ -432,8 +447,8 @@ function polestar_theme_options() {
 			),
 		    'description' => esc_html__( 'Choose the shop sidebar position.', 'polestar' ),
 		    'default' => 'left',
-		    'priority' => '10'
-		);
+		    'priority' => '20'
+		);		
 
 		$options['mini_cart'] = array(
 		    'id' => 'mini_cart',
@@ -442,6 +457,7 @@ function polestar_theme_options() {
 		    'type' => 'checkbox',
 		    'description' => esc_html__( 'Display the WooCommerce mini cart in the main menu.', 'polestar' ),
 		    'default' => false,
+		    'priority' => '30'
 		);				
 	}
 
