@@ -60,6 +60,34 @@ function polestar_woocommerce_wrapper_after() {
 }
 add_action( 'woocommerce_after_main_content', 'polestar_woocommerce_wrapper_after' );
 
+if ( ! function_exists( 'polestar_woocommerce_update_cart_count' ) ) :
+/**
+ * Update cart count with the masthead cart icon.
+ */
+function polestar_woocommerce_update_cart_count( $fragments ) {
+	ob_start();
+	?>
+	<span class="shopping-cart-count"><?php echo WC()->cart->cart_contents_count; ?></span>
+	<?php
+
+	$fragments['span.shopping-cart-count'] = ob_get_clean();
+
+	return $fragments;
+}
+endif;
+add_filter( 'add_to_cart_fragments', 'polestar_woocommerce_update_cart_count' );
+
+if ( ! function_exists( 'polestar_woocommerce_columns' ) ) :
+/**
+ * Set the number of products per row.
+ * @link https://docs.woocommerce.com/document/change-number-of-products-per-row/
+ */
+function polestar_woocommerce_columns() {
+	return get_theme_mod( 'archive_columns', 3 );
+}
+endif;
+add_filter( 'loop_shop_columns', 'polestar_woocommerce_columns' );
+
 /**
  * Custom WooCommerce template tags.
  */
