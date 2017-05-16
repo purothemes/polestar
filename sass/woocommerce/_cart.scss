@@ -193,6 +193,7 @@
 	}
 }
 
+// Mini cart.
 .site-header {
 
 	.shopping-cart {
@@ -202,7 +203,6 @@
 	}
 
 	.shopping-cart-text {
-		color: $color__text-dark; 
 		display: none;
 	}
 
@@ -262,6 +262,7 @@
 		transform: scale(0.95);
 		transition: all 0.15s ease-in;
 		transform-origin: center top;
+		visibility: hidden;
 		width: 303px;
 		z-index: 99999;
 		
@@ -277,12 +278,12 @@
 				line-height: 2; 
 				width: 100%;
 				
+				&:hover a {
+					color: $color__accent;
+				}
+				
 				a {
 					color: $color__text-medium;
-					
-					&:hover {
-						color: $color__accent;
-					}
 				}
 
 				&.empty {
@@ -294,15 +295,27 @@
 			}
 		}
 
-		.buttons a {
-			display: inline-block;
+		.buttons {
+			text-align: center;
+			
+			a {
+				color: #fff; 
+				display: inline-block;
+			
+				&.button {
+					font-size: 12px;
+					padding: 10px 24px;
+				}
+			}
 		}
 	}
 }
 
+// Mobile menu mini cart.
 #mobile-navigation {
 
 	.shopping-cart-text {
+		color: $color__text-dark;
 		display: inline-block;
 		margin-left: 5px;
 	}	
@@ -319,6 +332,13 @@
 		.shopping-cart-count {
 			top: 2px;
 			right: -25px; 
+		}
+
+		&:hover {
+			
+			.shopping-cart-text {
+				color: $color__text-medium; 
+			}
 		}
 	}
 }

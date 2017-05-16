@@ -339,19 +339,39 @@ Version: dev
     position: relative;
     text-align: center;
     width: 31%; }
-    @media (min-width: 769px) {
-      .woocommerce .products .product:nth-of-type(3n+1) {
-        clear: both; }
-      .woocommerce .products .product:nth-of-type(3n+3) {
-        margin-right: 0; } }
-    @media (max-width: 768px) {
-      .woocommerce .products .product {
-        width: 46.5%; }
-        .woocommerce .products .product:nth-of-type(2n+2) {
+    .wc-columns-2.woocommerce .products .product {
+      width: 48.25%; }
+      @media (min-width: 769px) {
+        .wc-columns-2.woocommerce .products .product:nth-of-type(2n+2) {
           margin-right: 0; } }
+    .wc-columns-3.woocommerce .products .product {
+      width: 31%; }
+      @media (min-width: 769px) {
+        .wc-columns-3.woocommerce .products .product:nth-of-type(3n+3) {
+          margin-right: 0; } }
+    .wc-columns-4.woocommerce .products .product {
+      width: 22.375%; }
+      @media (min-width: 769px) {
+        .wc-columns-4.woocommerce .products .product:nth-of-type(4n+4) {
+          margin-right: 0; } }
+    .wc-columns-5.woocommerce .products .product {
+      width: 17.2%; }
+      @media (min-width: 769px) {
+        .wc-columns-5.woocommerce .products .product:nth-of-type(5n+5) {
+          margin-right: 0; } }
+    @media (max-width: 768px) {
+      .wc-columns-2.woocommerce .products .product,
+      .wc-columns-3.woocommerce .products .product,
+      .wc-columns-4.woocommerce .products .product,
+      .wc-columns-5.woocommerce .products .product {
+        width: 48.25%; }
+      .woocommerce .products .product:nth-of-type(2n+2) {
+        margin-right: 0; } }
     @media (max-width: 480px) {
-      .woocommerce .products .product {
-        margin-right: 0;
+      .wc-columns-2.woocommerce .products .product,
+      .wc-columns-3.woocommerce .products .product,
+      .wc-columns-4.woocommerce .products .product,
+      .wc-columns-5.woocommerce .products .product {
         width: 100%; } }
     .woocommerce .products .product .woocommerce-LoopProduct-link {
       display: block; }
@@ -609,22 +629,23 @@ Version: dev
   @media (min-width: 769px) {
     .woocommerce .product .related .product {
       margin-bottom: 0; } }
-  .woocommerce .product .products .product {
+  .woocommerce .product .woocommerce-tabs ~ .products .product {
+    margin-right: 3.5%;
     width: 22.37%; }
     @media (min-width: 769px) {
-      .woocommerce .product .products .product:nth-of-type(3n+1) {
+      .woocommerce .product .woocommerce-tabs ~ .products .product:nth-of-type(3n+1) {
         clear: none; }
-      .woocommerce .product .products .product:nth-of-type(3n+3) {
+      .woocommerce .product .woocommerce-tabs ~ .products .product:nth-of-type(3n+3) {
         margin-right: 3.5%; }
-      .woocommerce .product .products .product:nth-of-type(3n+4) {
+      .woocommerce .product .woocommerce-tabs ~ .products .product:nth-of-type(3n+4) {
         margin-right: 0; } }
     @media (max-width: 768px) {
-      .woocommerce .product .products .product {
+      .woocommerce .product .woocommerce-tabs ~ .products .product {
         width: 48.25%; }
-        .woocommerce .product .products .product:nth-of-type(3n+2) {
+        .woocommerce .product .woocommerce-tabs ~ .products .product:nth-of-type(3n+2) {
           margin-right: 0; } }
     @media (max-width: 480px) {
-      .woocommerce .product .products .product {
+      .woocommerce .product .woocommerce-tabs ~ .products .product {
         margin-right: 0;
         width: 100%; } }
 
@@ -705,8 +726,16 @@ Version: dev
     position: absolute;
     top: 7px; }
 
-.widget_shopping_cart .checkout {
-  margin-left: 5px; }
+.widget_shopping_cart .buttons {
+  text-align: center; }
+  .widget_shopping_cart .buttons a {
+    color: #fff;
+    display: inline-block; }
+    .widget_shopping_cart .buttons a.button, .widget_shopping_cart .buttons .woocommerce .products .product a.added_to_cart, .woocommerce .products .product .widget_shopping_cart .buttons a.added_to_cart {
+      font-size: 12px;
+      padding: 10px 24px; }
+    .widget_shopping_cart .buttons a.checkout {
+      margin-left: 5px; }
 
 /*--------------------------------------------------------------
 # Notifications
@@ -894,7 +923,6 @@ Version: dev
   padding: 0 0 10px; }
 
 .site-header .shopping-cart-text {
-  color: #2d2d2d;
   display: none; }
 
 .site-header .shopping-cart-link {
@@ -939,6 +967,7 @@ Version: dev
   transform: scale(0.95);
   transition: all 0.15s ease-in;
   transform-origin: center top;
+  visibility: hidden;
   width: 303px;
   z-index: 99999; }
   .site-header .shopping-cart-dropdown * {
@@ -949,19 +978,26 @@ Version: dev
       font-weight: normal;
       line-height: 2;
       width: 100%; }
+      .site-header .shopping-cart-dropdown .widget li:hover a {
+        color: #4d8ffb; }
       .site-header .shopping-cart-dropdown .widget li a {
         color: #626262; }
-        .site-header .shopping-cart-dropdown .widget li a:hover {
-          color: #4d8ffb; }
       .site-header .shopping-cart-dropdown .widget li.empty {
         font-size: .95em;
         font-weight: 600;
         line-height: 1;
         padding-bottom: 0; }
-  .site-header .shopping-cart-dropdown .buttons a {
-    display: inline-block; }
+  .site-header .shopping-cart-dropdown .buttons {
+    text-align: center; }
+    .site-header .shopping-cart-dropdown .buttons a {
+      color: #fff;
+      display: inline-block; }
+      .site-header .shopping-cart-dropdown .buttons a.button, .site-header .shopping-cart-dropdown .buttons .woocommerce .products .product a.added_to_cart, .woocommerce .products .product .site-header .shopping-cart-dropdown .buttons a.added_to_cart {
+        font-size: 12px;
+        padding: 10px 24px; }
 
 #mobile-navigation .shopping-cart-text {
+  color: #2d2d2d;
   display: inline-block;
   margin-left: 5px; }
 
@@ -974,6 +1010,8 @@ Version: dev
   #mobile-navigation .shopping-cart-link .shopping-cart-count {
     top: 2px;
     right: -25px; }
+  #mobile-navigation .shopping-cart-link:hover .shopping-cart-text {
+    color: #626262; }
 
 /*--------------------------------------------------------------
 # Checkout
