@@ -354,6 +354,18 @@
 				font-size: 16px; 
 				margin: 15px 0 5px;
 				
+				// Above 769px, if the WooCommerce sidebar is active and 4 or 5 columns are being used, reduce the product title font size.
+				@media (min-width: 769px) {
+
+					@at-root .woocommerce-sidebar.wc-columns-4#{&} {
+						font-size: 0.9333em;
+					}
+					
+					@at-root .woocommerce-sidebar.wc-columns-5#{&} {
+						font-size: 0.9333em;
+					}					
+				}
+
 				&:hover {
 					color: $color__text-medium;
 				}
@@ -372,8 +384,7 @@
 				color: $color__text-medium;
 				display: block;
 				font-size: 14px;
-				margin-bottom: 10px;
-				 
+				margin-bottom: 10px;				
 			}
 
 			// Add to Cart button.

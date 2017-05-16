@@ -384,6 +384,11 @@ Version: dev
     .woocommerce .products .product .woocommerce-loop-product__title {
       font-size: 16px;
       margin: 15px 0 5px; }
+      @media (min-width: 769px) {
+        .woocommerce-sidebar.wc-columns-4.woocommerce .products .product .woocommerce-loop-product__title {
+          font-size: 0.9333em; }
+        .woocommerce-sidebar.wc-columns-5.woocommerce .products .product .woocommerce-loop-product__title {
+          font-size: 0.9333em; } }
       .woocommerce .products .product .woocommerce-loop-product__title:hover {
         color: #626262; }
     .woocommerce .products .product .star-rating {
