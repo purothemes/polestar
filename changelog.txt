@@ -1,5 +1,9 @@
 == Changelog ==
 
+= 0.9.8 - 16 May 2017 =
+* Improved WooCommerce mini-cart styling. Fixed hover area bug.
+* Added WooCommerce shop archive columns setting.
+
 = 0.9.7 - 04 May 2017 =
 * Added ability to close header search using the escape key.
 * Fixed table cell border color.
