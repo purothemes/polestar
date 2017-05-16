@@ -15,7 +15,6 @@ if ( ! defined( 'ABSPATH' ) ) {
 global $post, $product, $woocommerce;
 $gallery = $product->get_gallery_image_ids();
 $image_link  = wp_get_attachment_url( get_post_thumbnail_id() );
-
 if ( $gallery || $image_link ) { ?>
 
 	<div class="product-images-carousel flexslider">
@@ -28,16 +27,13 @@ if ( $gallery || $image_link ) { ?>
 			} ?>
 
 			<?php foreach ( $gallery as $image ) {
-
 				$image_link = wp_get_attachment_url( $image );
 				$image_title = esc_attr( get_the_title( $image ) );
-
 				?>
 				<li class="slide product-gallery-thumb">
 					<img src="<?php echo $image_link; ?>" title="<?php echo $image_title ?>" />
 				</li>
 				<?php
-
 			} ?>
 
 		</ul>
