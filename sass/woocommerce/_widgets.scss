@@ -102,7 +102,21 @@
 		}
 	}
 
-	.checkout {
-		margin-left: 5px; 
-	}
+	.buttons {
+		text-align: center;
+		
+		a {
+			color: #fff; 
+			display: inline-block;
+		
+			&.button {
+				font-size: 12px;
+				padding: 10px 24px;
+			}
+
+			&.checkout {
+				margin-left: 5px; 
+			}
+		}
+	}	
 }
