@@ -114,7 +114,8 @@ Version: dev
     display: block;
     margin-bottom: 4px; }
     .woocommerce form .form-row label .required {
-      color: rgba(255, 0, 0, 0.6); }
+      color: rgba(255, 0, 0, 0.6);
+      text-decoration: none; }
     .woocommerce form .form-row label.checkbox {
       display: inline; }
   .woocommerce form .form-row select {
