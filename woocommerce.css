@@ -1147,10 +1147,10 @@ Version: dev
     .woocommerce #payment .payment_methods li input {
       margin-right: 5px; }
     .woocommerce #payment .payment_methods li img {
-      max-height: 40px;
+      max-height: 50px;
       position: absolute;
       right: 0;
-      top: 15px; }
+      top: 8px; }
     .woocommerce #payment .payment_methods li .payment_box {
       font-size: 14px;
       padding: 10px 0 0; }
