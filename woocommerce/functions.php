@@ -13,6 +13,21 @@
 add_theme_support( 'woocommerce' );
 
 /**
+ * Add support for WooCommerce galleries.
+ * @link https://woocommerce.wordpress.com/2017/02/28/adding-support-for-woocommerce-2-7s-new-gallery-feature-to-your-theme/
+ */
+add_theme_support( 'wc-product-gallery-slider' );
+
+if ( get_theme_mod( 'product_gallery' ) == 'slider_zoom' ) :
+	add_theme_support( 'wc-product-gallery-zoom' );
+elseif ( get_theme_mod( 'product_gallery' ) == 'slider_lightbox' ) :
+	add_theme_support( 'wc-product-gallery-lightbox' );
+elseif ( get_theme_mod( 'product_gallery' ) == 'slider_zoom_lightbox' ) :
+	add_theme_support( 'wc-product-gallery-zoom' );
+	add_theme_support( 'wc-product-gallery-lightbox' );
+endif;
+
+/**
  * Remove the default WooCommerce stylesheets.
  * @link https://docs.woocommerce.com/document/disable-the-default-stylesheet/
  */

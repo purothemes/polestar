@@ -417,40 +417,33 @@ Version: dev
   position: relative; }
   .woocommerce .product .images {
     float: left;
-    margin-bottom: 50px;
+    margin: 0 0 50px;
     width: 48%; }
-    @media (max-width: 786px) {
-      .woocommerce .product .images {
-        float: none;
-        width: 100%; } }
-    .woocommerce .product .images img {
-      display: block;
-      width: 100%;
-      height: auto; }
-    .woocommerce .product .images .product-images-slider {
-      border: 0;
-      margin-bottom: 20px; }
-    .woocommerce .product .images .slides,
-    .woocommerce .product .images .flex-direction-nav {
+    .woocommerce .product .images.woocommerce-product-gallery {
+      position: relative; }
+    .woocommerce .product .images .woocommerce-product-gallery__wrapper {
+      margin: 0;
+      transition: all cubic-bezier(0.795, -0.035, 0, 1) 0.5s; }
+      .woocommerce .product .images .woocommerce-product-gallery__wrapper img {
+        display: block; }
+    .woocommerce .product .images .woocommerce-product-gallery__wrapper .zoomImg {
+      background-color: #fff; }
+    .woocommerce .product .images .flex-control-thumbs {
       list-style: none;
       margin: 0; }
-      .woocommerce .product .images .slides > li,
-      .woocommerce .product .images .flex-direction-nav > li {
-        display: none;
-        -webkit-backface-visibility: hidden; }
-    .woocommerce .product .images .product-images-carousel .slide {
-      cursor: pointer;
-      opacity: 0.6; }
-      .woocommerce .product .images .product-images-carousel .slide.flex-active-slide {
-        cursor: default;
-        opacity: 1; }
-    .woocommerce .product .images .product-images-carousel .flex-direction-nav a {
-      height: 30px;
-      margin: -20px 0 0;
-      width: 28px; }
-      .woocommerce .product .images .product-images-carousel .flex-direction-nav a:before {
-        font-size: 15px;
-        padding: 3px 10px; }
+      .woocommerce .product .images .flex-control-thumbs li {
+        cursor: pointer;
+        float: left;
+        margin: 2.5% 2.5% 0 0;
+        width: 23.125%; }
+        .woocommerce .product .images .flex-control-thumbs li:nth-of-type(4n+4) {
+          margin-right: 0; }
+        .woocommerce .product .images .flex-control-thumbs li img {
+          display: block;
+          box-shadow: #000 0em 0em 0em;
+          opacity: .5; }
+          .woocommerce .product .images .flex-control-thumbs li img.flex-active, .woocommerce .product .images .flex-control-thumbs li img:hover {
+            opacity: 1; }
   .woocommerce .product .summary {
     float: right;
     padding-top: 0;

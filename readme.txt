@@ -13,7 +13,7 @@ Lead the way with Polestar. It's fast loading, responsive, lightweight and flexi
 
 == Description ==
 
-Lead the way with Polestar. It's fast loading, responsive, lightweight and flexible design is perfectly suited for building dynamic pages with SiteOrigin's Page Builder and selling with WooCommerce. Polestar features a sticky header, beautiful header search, scroll to top and just the right amount of Customizer theme settings. Page level settings let you adjust the theme layout on a page by page basis, perfect for landing pages. If you run a blog, Polestar is ready with awesome features including a full-width posts slider integrated with Jetpack Featured Content, an author box and related posts section.
+Lead the way with Polestar. It's fast loading, responsive, lightweight and flexible design is perfectly suited for building dynamic pages with SiteOrigin's Page Builder and selling with WooCommerce. Ecommerce features include a menu mini-cart and product quick-view. Polestar features a sticky header, beautiful header search, scroll to top and just the right amount of Customizer theme settings. Page level settings let you adjust the theme layout on a page by page basis, perfect for landing pages. If you run a blog, Polestar is ready with awesome features including a full-width posts slider integrated with Jetpack Featured Content, an author box and related posts section.
 
 == Installation ==
 
