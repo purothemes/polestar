@@ -1188,6 +1188,8 @@ Version: dev
   margin: 0 0 25px;
   text-align: left; }
   .woocommerce-order-received table thead th {
+    background: #f6f6f6;
+    border: 1px solid #ebebeb;
     padding: 16px; }
   .woocommerce-order-received table th,
   .woocommerce-order-received table td {
