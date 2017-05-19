@@ -862,6 +862,7 @@ Version: dev
 .woocommerce-cart table.cart {
   text-align: left; }
   .woocommerce-cart table.cart thead {
+    background: #f6f6f6;
     border: 1px solid #ebebeb; }
     @media (max-width: 768px) {
       .woocommerce-cart table.cart thead {
