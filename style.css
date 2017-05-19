@@ -457,7 +457,7 @@ input[type="submit"] {
   input[type="button"]:hover,
   input[type="reset"]:hover,
   input[type="submit"]:hover {
-    background: rgba(77, 143, 251, 0.8);
+    background-color: rgba(77, 143, 251, 0.8);
     color: #fff; }
   .button:visited, .pagination .page-numbers:visited, #infinite-handle span button:visited, .page-links span:visited,
   button:visited,

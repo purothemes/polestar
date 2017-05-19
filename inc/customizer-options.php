@@ -457,11 +457,11 @@ function polestar_theme_options() {
 		    'type' => 'select',
 		    'choices' => array(
 	    		'slider' => 'Gallery Slider',
+	    		'slider_lightbox' => 'Gallery Slider + Lightbox',
 	    		'slider_zoom' => 'Gallery Slider + Zoom',
-	    		'slider_zoom_lightbox' => 'Gallery Slider + Zoom + Lightbox',
-	    		'slider_lightbox' => 'Gallery Slider + Lightbox'
+	    		'slider_lightbox_zoom' => 'Gallery Slider + Lightbox + Zoom'
 			),
-		    'default' => 'slider',
+		    'default' => 'slider_lightbox',
 		    'priority' => '30'
 		);				
 

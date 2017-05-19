@@ -47,6 +47,12 @@ Version: dev
   font-style: normal; }
 
 /*--------------------------------------------------------------
+# PhotoSwipe
+--------------------------------------------------------------*/
+.pswp button:hover {
+  background-color: transparent; }
+
+/*--------------------------------------------------------------
 # Menus
 --------------------------------------------------------------*/
 .woocommerce .woocommerce-breadcrumb {
@@ -419,13 +425,17 @@ Version: dev
     float: left;
     margin: 0 0 50px;
     width: 48%; }
+    @media (max-width: 780px) {
+      .woocommerce .product .images {
+        width: 100%; } }
     .woocommerce .product .images.woocommerce-product-gallery {
       position: relative; }
     .woocommerce .product .images .woocommerce-product-gallery__wrapper {
       margin: 0;
       transition: all cubic-bezier(0.795, -0.035, 0, 1) 0.5s; }
       .woocommerce .product .images .woocommerce-product-gallery__wrapper img {
-        display: block; }
+        display: block;
+        width: 100%; }
     .woocommerce .product .images .woocommerce-product-gallery__wrapper .zoomImg {
       background-color: #fff; }
     .woocommerce .product .images .flex-control-thumbs {
@@ -444,6 +454,45 @@ Version: dev
           opacity: .5; }
           .woocommerce .product .images .flex-control-thumbs li img.flex-active, .woocommerce .product .images .flex-control-thumbs li img:hover {
             opacity: 1; }
+    .woocommerce .product .images .woocommerce-product-gallery__trigger {
+      background: #fff;
+      border-radius: 100%;
+      box-sizing: content-box;
+      font-size: 2em;
+      height: 36px;
+      position: absolute;
+      right: .5em;
+      text-indent: -9999px;
+      top: .5em;
+      width: 36px;
+      z-index: 9; }
+      .woocommerce .product .images .woocommerce-product-gallery__trigger:before {
+        content: "";
+        display: block;
+        width: 10px;
+        height: 10px;
+        border: 2px solid #000;
+        border-radius: 100%;
+        position: absolute;
+        top: 9px;
+        left: 9px;
+        box-sizing: content-box; }
+      .woocommerce .product .images .woocommerce-product-gallery__trigger:after {
+        content: "";
+        display: block;
+        width: 2px;
+        height: 8px;
+        background: #000;
+        border-radius: 6px;
+        position: absolute;
+        top: 19px;
+        left: 22px;
+        -webkit-transform: rotate(-45deg);
+        -moz-transform: rotate(-45deg);
+        -ms-transform: rotate(-45deg);
+        -o-transform: rotate(-45deg);
+        transform: rotate(-45deg);
+        box-sizing: content-box; }
   .woocommerce .product .summary {
     float: right;
     padding-top: 0;
