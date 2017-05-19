@@ -4,6 +4,7 @@
 * Improved WooCommerce archive page type responsive behaviour.
 * Updated WooCommerce gallery to slideshow and lightbox.
 * Added setting for all WooCommerce gallery combinations.
+* Small style adjustments to WooCommerce Cart, Checkout and Order Received pages.
 
 = 0.9.8 - 16 May 2017 =
 * Improved WooCommerce mini-cart styling. Fixed hover area bug.
