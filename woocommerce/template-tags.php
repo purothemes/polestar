@@ -63,6 +63,16 @@ function polestar_woocommerce_description_title() {
 endif;
 add_filter( 'woocommerce_product_description_heading', 'polestar_woocommerce_description_title' );
 
+if ( ! function_exists( 'polestar_woocommerce_paypal_icon' ) ) :
+/**
+ * Add a consistent PayPal icon.
+ */
+function polestar_woocommerce_paypal_icon( $url ) {
+	return get_stylesheet_directory_uri() . '/woocommerce/images/paypal-icon.png';
+}
+endif;
+add_filter( 'woocommerce_paypal_icon', 'polestar_woocommerce_paypal_icon' );
+
 if ( ! function_exists( 'polestar_woocommerce_reviews_title' ) ) :
 /**
  * Remove the product reviews title.

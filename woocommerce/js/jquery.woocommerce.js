@@ -5,29 +5,6 @@
  */
 jQuery( function( $ ) {
 
-	// Product images slider.
-	$( document ).ready( function() {
-		if ( $.isFunction( $.fn.flexslider ) ) {
-			$( '.product-images-carousel' ).flexslider( {
-				animation: "slide",
-				controlNav: false,
-				animationLoop: false,
-				slideshow: false,
-				itemWidth: 100,
-				itemMargin: 20,
-				maxItems: 4,
-				asNavFor: '.product-images-slider'
-			} );
-			$( '.product-images-slider' ).flexslider( {
-				animation: "slide",
-				animationLoop: false,
-				slideshow: false,
-				controlNav: false,
-				directionNav: false
-			} );
-		}
-	} );
-
 	// Product archive order drop-down.
 	$('.woocommerce-ordering select').each( function() {
 		var $$ = $( this );

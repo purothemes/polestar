@@ -3,7 +3,7 @@ Theme Name: Polestar
 Author: Puro
 Author URI: https://purothemes.com/
 Theme URI: https://purothemes.com/themes/polestar/
-Description: Lead the way with Polestar. It's fast loading, responsive, lightweight and flexible design is perfectly suited for building dynamic pages with SiteOrigin's Page Builder and selling with WooCommerce. Polestar features a sticky header, beautiful header search, scroll to top and just the right amount of Customizer theme settings. Page level settings let you adjust the theme layout on a page by page basis, perfect for landing pages. If you run a blog, Polestar is ready with awesome features including a full-width posts slider integrated with Jetpack Featured Content, an author box and related posts section. For assistance, check out our <a href="http://purothemes.com/documentation/">theme documentation</a> (http://purothemes.com/documentation/) or ask a question on our <a href="https://purothemes.com/support/">support forum</a> (https://purothemes.com/support/).
+Description: Lead the way with Polestar. It's fast loading, responsive, lightweight and flexible design is perfectly suited for building dynamic pages with SiteOrigin's Page Builder and selling with WooCommerce. Ecommerce features include a menu mini-cart and product quick-view. Polestar features a sticky header, beautiful header search, scroll to top and just the right amount of Customizer theme settings. Page level settings let you adjust the theme layout on a page by page basis, perfect for landing pages. If you run a blog, Polestar is ready with awesome features including a full-width posts slider integrated with Jetpack Featured Content, an author box and related posts section. For assistance, check out our <a href="http://purothemes.com/documentation/">theme documentation</a> (http://purothemes.com/documentation/) or ask a question on our <a href="https://purothemes.com/support/">support forum</a> (https://purothemes.com/support/).
 Version: dev
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
@@ -457,7 +457,7 @@ input[type="submit"] {
   input[type="button"]:hover,
   input[type="reset"]:hover,
   input[type="submit"]:hover {
-    background: rgba(77, 143, 251, 0.8);
+    background-color: rgba(77, 143, 251, 0.8);
     color: #fff; }
   .button:visited, .pagination .page-numbers:visited, #infinite-handle span button:visited, .page-links span:visited,
   button:visited,

@@ -95,7 +95,7 @@ function polestar_build_styles() {
 				'input[type="submit"]:hover'
 			),
 			'declarations' => array(
-				'background' => 'rgba(' . $color_rgb . ', 0.8)'
+				'background-color' => 'rgba(' . $color_rgb . ', 0.8)'
 			)
 		) );				
 

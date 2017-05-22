@@ -354,6 +354,18 @@
 				font-size: 16px; 
 				margin: 15px 0 5px;
 				
+				// Above 769px, if the WooCommerce sidebar is active and 4 or 5 columns are being used, reduce the product title font size.
+				@media (min-width: 769px) {
+
+					@at-root .woocommerce-sidebar.wc-columns-4#{&} {
+						font-size: 0.9333em;
+					}
+					
+					@at-root .woocommerce-sidebar.wc-columns-5#{&} {
+						font-size: 0.9333em;
+					}					
+				}
+
 				&:hover {
 					color: $color__text-medium;
 				}
@@ -372,8 +384,7 @@
 				color: $color__text-medium;
 				display: block;
 				font-size: 14px;
-				margin-bottom: 10px;
-				 
+				margin-bottom: 10px;				
 			}
 
 			// Add to Cart button.
@@ -406,60 +417,99 @@
 
 		.images {
 			float: left;
-			margin-bottom: 50px; 
+			margin: 0 0 50px; 
 			width: 48%;
 			
-			@media (max-width: 786px) {
-				float: none;
+			@media (max-width: 780px) {
 				width: 100%; 
-			}				
-
-			img {
-				display: block;
-    			width: 100%;
-    			height: auto;
-    		}
-
-			.product-images-slider {
-				border: 0;
-				margin-bottom: 20px;
 			}
 
-			.slides,
-			.flex-direction-nav {
+			&.woocommerce-product-gallery {
+				position: relative;
+			}
+
+			.woocommerce-product-gallery__wrapper {
+				margin: 0;
+				transition: all cubic-bezier(0.795, -0.035, 0.000, 1.000) .5s;
+				
+				img {
+					display: block;
+					width: 100%; 
+				}
+			}
+
+			.woocommerce-product-gallery__wrapper .zoomImg {
+				background-color: #fff;
+			}
+
+			.flex-control-thumbs {
 				list-style: none;
 				margin: 0;
-				
-				> li {
-					display: none;
-   					-webkit-backface-visibility: hidden;
-				}
-			}
 
-			.product-images-carousel {
-
-				.slide {
+				li {
 					cursor: pointer;
-					opacity : 0.6;
-
-					&.flex-active-slide {
-						cursor: default;
-						opacity: 1;
+					float: left;
+					margin: 2.5% 2.5% 0 0;
+					width: 23.125%;
+					
+					&:nth-of-type(4n+4) {
+						margin-right: 0; 
 					}
-				}
 
-				.flex-direction-nav a {
-					height: 30px;
-					margin: -20px 0 0;
-					width: 28px;
-
-					&:before {
-						font-size: 15px;
-						padding: 3px 10px;
+					img {
+						display: block;
+						box-shadow: #000 0em 0em 0em;
+						opacity: .5;
+						
+						&.flex-active,
+						&:hover {
+							opacity: 1;
+						}
 					}
 				}
 			}
-		}		
+
+			.woocommerce-product-gallery__trigger {
+				background: #fff;
+				border-radius: 100%;
+				box-sizing: content-box;
+				font-size: 2em;
+				height: 36px;
+				position: absolute;
+				right: .5em;
+				text-indent: -9999px;
+				top: .5em;
+				width: 36px;
+				z-index: 9;
+
+				&:before {
+					content: "";
+					display: block;
+					width: 10px;
+					height: 10px;
+					border: 2px solid #000;
+					border-radius: 100%;
+					position: absolute;
+					top: 9px;
+					left: 9px;
+					box-sizing: content-box;
+				}
+
+				&:after {
+					content: "";
+					display: block;
+					width: 2px;
+					height: 8px;
+					background: #000;
+					border-radius: 6px;
+					position: absolute;
+					top: 19px;
+					left: 22px;
+					@include transform(rotate(-45deg));
+					box-sizing: content-box;
+				}
+			}			
+		}
 
 		.summary {
 			float: right;
