@@ -6,32 +6,43 @@
  * @license GPL 2.0 
  */
 
-/**
- * Add support for WooCommerce.
- * @link https://docs.woocommerce.com/document/declare-woocommerce-support-in-third-party-theme/
- */
-add_theme_support( 'woocommerce' );
+function polestar_woocommerce_setup() {
 
-/**
- * Add support for WooCommerce galleries.
- * @link https://woocommerce.wordpress.com/2017/02/28/adding-support-for-woocommerce-2-7s-new-gallery-feature-to-your-theme/
- */
-add_theme_support( 'wc-product-gallery-slider' );
+	/**
+	 * Add support for WooCommerce.
+	 * @link https://docs.woocommerce.com/document/declare-woocommerce-support-in-third-party-theme/
+	 */
+	add_theme_support( 'woocommerce' );
 
-if ( get_theme_mod( 'product_gallery' ) == 'slider_lightbox' ) :
-	add_theme_support( 'wc-product-gallery-lightbox' );
-elseif ( get_theme_mod( 'product_gallery' ) == 'slider_zoom' ) :
-	add_theme_support( 'wc-product-gallery-zoom' );
-elseif ( get_theme_mod( 'product_gallery' ) == 'slider_lightbox_zoom' ) :
-	add_theme_support( 'wc-product-gallery-lightbox' );
-	add_theme_support( 'wc-product-gallery-zoom' );
-endif;
+	/**
+	 * Add support for WooCommerce galleries.
+	 * @link https://woocommerce.wordpress.com/2017/02/28/adding-support-for-woocommerce-2-7s-new-gallery-feature-to-your-theme/
+	 */
+	add_theme_support( 'wc-product-gallery-slider' );
 
-/**
- * Remove the default WooCommerce stylesheets.
- * @link https://docs.woocommerce.com/document/disable-the-default-stylesheet/
- */
-add_filter( 'woocommerce_enqueue_styles', '__return_false' );
+	if ( get_theme_mod( 'product_gallery' ) == 'slider_lightbox' )  {
+		add_theme_support( 'wc-product-gallery-lightbox' );
+	}
+	elseif ( get_theme_mod( 'product_gallery' ) == 'slider_zoom' ) {
+		add_theme_support( 'wc-product-gallery-zoom' );
+	}
+	elseif ( get_theme_mod( 'product_gallery' ) == 'slider_lightbox_zoom' ) {
+		add_theme_support( 'wc-product-gallery-lightbox' );
+		add_theme_support( 'wc-product-gallery-zoom' );
+	}
+
+	/**
+	 * Remove the default WooCommerce stylesheets.
+	 * @link https://docs.woocommerce.com/document/disable-the-default-stylesheet/
+	 */
+	add_filter( 'woocommerce_enqueue_styles', '__return_false' );
+
+	// Remove the default WooCommerce containers.
+	remove_action( 'woocommerce_before_main_content', 'woocommerce_output_content_wrapper' );
+	remove_action( 'woocommerce_after_main_content', 'woocommerce_output_content_wrapper_end' );	
+
+}
+add_action( 'after_setup_theme', 'polestar_woocommerce_setup' );
 
 /**
  * Enqueue WooCommerce scripts and styles.
@@ -54,10 +65,6 @@ function polestar_woocommerce_scripts() {
 
 }
 add_action( 'wp_enqueue_scripts', 'polestar_woocommerce_scripts' );
-
-// Remove the default WooCommerce containers.
-remove_action( 'woocommerce_before_main_content', 'woocommerce_output_content_wrapper' );
-remove_action( 'woocommerce_after_main_content', 'woocommerce_output_content_wrapper_end' );
 
 /**
  * Markup to be outputted before WooCommerce content.
