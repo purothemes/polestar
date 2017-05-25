@@ -1,6 +1,6 @@
 <?php
 /**
- * YARPP Template: Polestar.
+ * YARPP Template: Polestar
  *
  * @link https://wordpress.org/plugins/yet-another-related-posts-plugin/
  *
