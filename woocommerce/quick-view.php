@@ -34,7 +34,7 @@ while ( have_posts() ) : the_post();
 
 			<div class="product-info-wrapper">
 
-				<span class="quickview-close-icon">X</span>
+				<span class="quickview-close-icon"><?php polestar_display_icon( 'close' ); ?></span>
 
 				<a href="<?php the_permalink(); ?>">
 					<?php do_action( 'polestar_woocommerce_quick_view_title' ); ?>

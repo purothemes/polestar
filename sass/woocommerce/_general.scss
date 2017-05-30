@@ -409,7 +409,11 @@
 				position: absolute;
 				transform: translateX(-50%);
 				visibility: hidden;
-				white-space: nowrap; 
+				white-space: nowrap;
+				
+				@at-root .wc-columns-2 {
+					font-size: 1em; 		
+				}				
 			}
 
 			.product-quick-view-button {
@@ -540,7 +544,8 @@
 			}			
 		}
 
-		.summary {
+		.summary,
+		.product-info-wrapper {
 			float: right;
 			padding-top: 0;
 			width: 48%;
