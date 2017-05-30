@@ -403,6 +403,7 @@
 			.product-quick-view-button,
 			.product_type_grouped,
 			.product_type_variable {
+				font-size: .8666em; 
 				left: 50%; 
 				opacity: 0;
 				position: absolute;
@@ -610,8 +611,10 @@
 				}
 			}
 
-			.woocommerce-variation .woocommerce-variation-price {
+			.woocommerce-variation .woocommerce-variation-price .price {
+				display: block;
 				margin-top: -25px; 
+				width: 100%; 
 			}
 
 			.stock {
