@@ -473,7 +473,17 @@ function polestar_theme_options() {
 		    'description' => esc_html__( 'Display the WooCommerce mini cart in the main menu.', 'polestar' ),
 		    'default' => false,
 		    'priority' => '40'
-		);				
+		);
+
+		$options['quick_view'] = array(
+		    'id' => 'quick_view',
+		    'label' => esc_html__( 'Quick View', 'polestar' ),
+		    'section' => $section,
+		    'type' => 'checkbox',
+		    'description' => esc_html__( 'Display a Quick View button on hover on product archive pages.', 'polestar' ),
+		    'default' => true,
+		    'priority' => '50'
+		);						
 	}
 
 	if ( ! function_exists( 'polestar_premium_init' ) ) {

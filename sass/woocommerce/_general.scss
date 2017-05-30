@@ -331,11 +331,23 @@
 						width: 100%;
 					}
 				}				
-			}				
+			}
 
-			.woocommerce-LoopProduct-link {
-				display: block;
-			}			
+			// Product thumbnail container.
+			.loop-product-thumbnail {
+				position: relative;
+				
+				&:hover {
+
+					.add_to_cart_button,
+					.product-quick-view-button,
+					.product_type_grouped,
+					.product_type_variable {
+						opacity: 1;
+						visibility: visible;
+					}
+				}
+			}						
 			
 			// Sale sticker.
 			.onsale {
@@ -381,15 +393,32 @@
 
 			// Product price.
 			.price {
-				color: $color__text-medium;
 				display: block;
 				font-size: 14px;
 				margin-bottom: 10px;				
 			}
 
-			// Add to Cart button.
-			.button {
-				display: inline-block;
+			// Add to Cart and Quick View buttons.
+			.add_to_cart_button,
+			.product-quick-view-button,
+			.product_type_grouped,
+			.product_type_variable {
+				left: 50%; 
+				opacity: 0;
+				position: absolute;
+				transform: translateX(-50%);
+				visibility: hidden;
+				white-space: nowrap; 
+			}
+
+			.product-quick-view-button {
+				top: 30%; 
+			}
+
+			.add_to_cart_button,
+			.product_type_grouped,
+			.product_type_variable  {
+				bottom: 30%; 
 			}
 			
 			// Added to Cart button.
@@ -403,7 +432,6 @@
 
 	.price {
 		color: $color__text-medium;
-		display: block;
 		
 		ins {
 			background: none;
