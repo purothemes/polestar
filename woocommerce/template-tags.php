@@ -57,9 +57,11 @@ function polestar_woocommerce_archive_product_image() { ?>
 		<?php woocommerce_template_loop_product_link_open(); ?>
 		<?php woocommerce_template_loop_product_thumbnail(); ?>
 		<?php woocommerce_template_loop_product_link_close(); ?>
-		<?php woocommerce_template_loop_add_to_cart(); ?>
 		<?php if ( get_theme_mod( 'quick_view', true ) ) {
 			polestar_woocommerce_quick_view_button();
+		} ?>		
+		<?php if ( get_theme_mod( 'add_to_cart', true ) ) {
+			woocommerce_template_loop_add_to_cart();
 		} ?>
 	</div>
 <?php }

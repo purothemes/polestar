@@ -483,7 +483,17 @@ function polestar_theme_options() {
 		    'description' => esc_html__( 'Display a Quick View button on hover on product archive pages.', 'polestar' ),
 		    'default' => true,
 		    'priority' => '50'
-		);						
+		);	
+
+		$options['add_to_cart'] = array(
+		    'id' => 'add_to_cart',
+		    'label' => esc_html__( 'Add to Cart', 'polestar' ),
+		    'section' => $section,
+		    'type' => 'checkbox',
+		    'description' => esc_html__( 'Display an Add to Cart button on hover on product archive pages.', 'polestar' ),
+		    'default' => true,
+		    'priority' => '60'
+		);							
 	}
 
 	if ( ! function_exists( 'polestar_premium_init' ) ) {
