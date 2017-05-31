@@ -1076,7 +1076,7 @@ a {
 --------------------------------------------------------------*/
 .breadcrumbs {
   color: #828282;
-  font-size: 12px;
+  font-size: 0.8666em;
   margin-bottom: 15px; }
   .breadcrumbs a {
     color: #828282; }
