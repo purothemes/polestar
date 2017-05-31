@@ -99,17 +99,6 @@ function polestar_woocommerce_update_cart_count( $fragments ) {
 endif;
 add_filter( 'add_to_cart_fragments', 'polestar_woocommerce_update_cart_count' );
 
-if ( ! function_exists( 'polestar_woocommerce_columns' ) ) :
-/**
- * Set the number of products per row.
- * @link https://docs.woocommerce.com/document/change-number-of-products-per-row/
- */
-function polestar_woocommerce_columns() {
-	return get_theme_mod( 'archive_columns', 3 );
-}
-endif;
-add_filter( 'loop_shop_columns', 'polestar_woocommerce_columns' );
-
 /**
  * Custom WooCommerce template tags.
  */
