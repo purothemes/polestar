@@ -1,3 +1,4 @@
+// Repeated styles we need for @extend.
 .underline {
 	border-bottom: 2px solid $color__background-hr-dark;
 	display: inline-block;
@@ -8,6 +9,7 @@
 
 .woocommerce {
 
+	// Reset copy styles.
 	p {
 		margin-bottom: 0;
 	}
@@ -43,7 +45,7 @@
 	// Breadcrumbs.
 	.woocommerce-breadcrumb {
 		color: $color__text-light;
-		font-size: 12px;
+		font-size: 0.8666em;
 		margin-bottom: 15px;
 
 		a {
@@ -399,11 +401,8 @@
 			}
 
 			// Add to Cart and Quick View buttons.
-			.add_to_cart_button,
-			.product-quick-view-button,
-			.product_type_grouped,
-			.product_type_variable {
-				font-size: .8666em; 
+			.button,
+			.added_to_cart {
 				left: 50%; 
 				opacity: 0;
 				position: absolute;
@@ -411,27 +410,74 @@
 				visibility: hidden;
 				white-space: nowrap;
 				
-				@at-root .wc-columns-2 {
-					font-size: 1em; 		
-				}				
+				@at-root {
+	
+					// 4 and 5 columns.
+					.wc-columns-4#{&},
+					.wc-columns-5#{&} {
+						font-size: .8666em; 
+					}
+
+					// Sidebar present, 4 and 5 columns.
+					.woocommerce-sidebar.wc-columns-4#{&},
+					.woocommerce-sidebar.wc-columns-5#{&} {
+						font-size: .8em;
+						padding: 11px 20px;
+					}
+				}							
 			}
 
 			.product-quick-view-button {
-				top: 30%; 
+				top: 30%;
+
+				@at-root {
+
+					// 5 columns.
+					.wc-columns-5#{&} {
+						top: 25%;
+					}					
+
+					// Sidebar present; 3, 4 and 5 columns.
+					.woocommerce-sidebar.wc-columns-3#{&},
+					.woocommerce-sidebar.wc-columns-4#{&},
+					.woocommerce-sidebar.wc-columns-5#{&} {
+						top: 25%;
+					}
+
+					// Sidebar present 4 and 5 columns.
+					.woocommerce-sidebar.wc-columns-4#{&},
+					.woocommerce-sidebar.wc-columns-5#{&} {
+						top: 15%;
+					}					
+				}															
 			}
 
 			.add_to_cart_button,
 			.product_type_grouped,
 			.product_type_variable  {
-				bottom: 30%; 
+				bottom: 30%;
+				
+				@at-root {
+
+					// 5 columns.
+					.wc-columns-5#{&} {
+						bottom: 25%;
+					}
+
+					// Sidebar present 4 and 5 columns.
+					.woocommerce-sidebar.wc-columns-4#{&},
+					.woocommerce-sidebar.wc-columns-5#{&} {
+						bottom: 20%;
+					}
+				}													
 			}
 			
 			// Added to Cart button.
 			.added_to_cart {
-				@extend .button;
-				margin-top: 10px;
+				bottom: 1%;
+				opacity: 1;
+				visibility: visible;
 			}
-
 		}
 	}
 

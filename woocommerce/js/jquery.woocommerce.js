@@ -72,7 +72,7 @@ jQuery( function( $ ) {
 
 		$( window ).mouseup( function( e ) {
 			var container = $( $content );
-			if ( ( ! container.is( e.target ) && container.has( e.target ).length === 0 ) || $( '.quickview-close-icon svg' ).is( e.target ) ) {
+			if ( ( ! container.is( e.target ) && container.has( e.target ).length === 0 ) || $( '.quickview-close-icon' ).is( e.target ) ) {
 				$( $container).fadeOut( 300 );
 				// Enable scrolling.
 				$( 'body' ).css( 'overflow', '' );
