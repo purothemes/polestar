@@ -275,7 +275,7 @@ function polestar_theme_options() {
 	    'label' => esc_html__( 'Post Excerpt Read More Link', 'polestar' ),
 	    'section' => $section,
 	    'type' => 'checkbox',
-	    'description' => esc_html__( 'Display the Read More text below the post excerpt.', 'polestar' ),
+	    'description' => esc_html__( 'Display the Read More link below the post excerpt.', 'polestar' ),
 	    'default' => true,
 	);		
 
