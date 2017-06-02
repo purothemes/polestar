@@ -1,5 +1,9 @@
 == Changelog ==
 
+= 1.0.0 - 31 May 2017 =
+* Added WooCommerce archive hover Quick View button and Customizer setting.
+* Added WooCommerce archive hover Add to Cart button and Customizer setting.
+
 = 0.9.9 - 22 May 2017 =
 * Improved WooCommerce archive page type responsive behaviour.
 * Updated WooCommerce gallery to slideshow and lightbox.
