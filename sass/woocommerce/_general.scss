@@ -269,7 +269,11 @@
 				
 					&:nth-of-type(2n+2) {
 						margin-right: 0; 
-					}					
+					}	
+
+					&:nth-child(2n+3) {
+						clear: left;
+					}										
 				}					
 			}
 
@@ -280,7 +284,11 @@
 				
 					&:nth-of-type(3n+3) {
 						margin-right: 0; 
-					}					
+					}	
+
+					&:nth-child(3n+4) {
+						clear: left;
+					}										
 				}									
 			}			
 
@@ -291,7 +299,11 @@
 				
 					&:nth-of-type(4n+4) {
 						margin-right: 0; 
-					}					
+					}
+
+					&:nth-child(4n+5) {
+						clear: left;
+					}											
 				}						
 			}				
 
@@ -302,7 +314,11 @@
 				
 					&:nth-of-type(5n+5) {
 						margin-right: 0; 
-					}					
+					}	
+
+					&:nth-child(5n+6) {
+						clear: left;
+					}									
 				}					
 			}							
 			
@@ -410,66 +426,54 @@
 				visibility: hidden;
 				white-space: nowrap;
 				
-				@at-root {
-	
-					// 4 and 5 columns.
-					.wc-columns-4#{&},
-					.wc-columns-5#{&} {
-						font-size: .8666em; 
-					}
+				@media (min-width: 768px) {
 
-					// Sidebar present, 4 and 5 columns.
-					.woocommerce-sidebar.wc-columns-4#{&},
-					.woocommerce-sidebar.wc-columns-5#{&} {
-						font-size: .8em;
-						padding: 11px 20px;
-					}
+					@at-root {
+		
+						// 4 and 5 columns.
+						.wc-columns-4#{&},
+						.wc-columns-5#{&} {
+							font-size: .8666em;
+							padding: 11px 20px;
+						}
+					}					
 				}							
 			}
 
+			// Quick View button.
 			.product-quick-view-button {
 				top: 30%;
+				
+				@media (min-width: 768px) {
+				
+					@at-root {
 
-				@at-root {
-
-					// 5 columns.
-					.wc-columns-5#{&} {
-						top: 25%;
-					}					
-
-					// Sidebar present; 3, 4 and 5 columns.
-					.woocommerce-sidebar.wc-columns-3#{&},
-					.woocommerce-sidebar.wc-columns-4#{&},
-					.woocommerce-sidebar.wc-columns-5#{&} {
-						top: 25%;
-					}
-
-					// Sidebar present 4 and 5 columns.
-					.woocommerce-sidebar.wc-columns-4#{&},
-					.woocommerce-sidebar.wc-columns-5#{&} {
-						top: 15%;
-					}					
-				}															
+						// 4 and 5 columns.
+						.wc-columns-4#{&},
+						.wc-columns-5#{&} {
+							top: 15%;
+						}
+					}	
+				}														
 			}
 
+			// Add to Cart and related buttons.
 			.add_to_cart_button,
 			.product_type_grouped,
 			.product_type_variable  {
 				bottom: 30%;
 				
-				@at-root {
+				@media (min-width: 768px) {
+				
+					@at-root {
 
-					// 5 columns.
-					.wc-columns-5#{&} {
-						bottom: 25%;
-					}
-
-					// Sidebar present 4 and 5 columns.
-					.woocommerce-sidebar.wc-columns-4#{&},
-					.woocommerce-sidebar.wc-columns-5#{&} {
-						bottom: 20%;
-					}
-				}													
+						// 4 and 5 columns.
+						.wc-columns-4#{&},
+						.wc-columns-5#{&} {
+							bottom: 15%;
+						}
+					}	
+				}												
 			}
 			
 			// Added to Cart button.
