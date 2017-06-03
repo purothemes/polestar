@@ -196,7 +196,7 @@
 	.onsale {
 		background: $color__accent;
 		color: #fff;
-		font-size: 11px;
+		font-size: 12px;
 		left: 10px; 
 		line-height: normal;  
 		padding: 6px 12px 5px;
@@ -366,11 +366,6 @@
 					}
 				}
 			}						
-			
-			// Sale sticker.
-			.onsale {
-				font-size: 12px;
-			}
 
 			// Product image.
 			img {
@@ -381,19 +376,18 @@
 
 			// Product title.
 			.woocommerce-loop-product__title {
-				font-size: 16px; 
+				font-size: 1.0666em; 
 				margin: 15px 0 5px;
 				
-				// Above 769px, if the WooCommerce sidebar is active and 4 or 5 columns are being used, reduce the product title font size.
-				@media (min-width: 769px) {
-
-					@at-root .woocommerce-sidebar.wc-columns-4#{&} {
-						font-size: 0.9333em;
-					}
+				@at-root {
 					
-					@at-root .woocommerce-sidebar.wc-columns-5#{&} {
-						font-size: 0.9333em;
-					}					
+					.wc-columns-2#{&} {
+						font-size: 1.2em; 
+					}
+
+					.wc-columns-5#{&} {
+						font-size: 1em; 
+					}
 				}
 
 				&:hover {
@@ -412,8 +406,20 @@
 			// Product price.
 			.price {
 				display: block;
-				font-size: 14px;
-				margin-bottom: 10px;				
+				font-size: 0.9333em;
+				margin-bottom: 10px;
+				
+				@at-root {
+					
+					.wc-columns-2#{&} {
+						font-size: 1.0666em; 
+					}
+
+
+					.wc-columns-5#{&} {
+						font-size: 0.8666em; 
+					}					
+				}							
 			}
 
 			// Add to Cart and Quick View buttons.
@@ -425,62 +431,65 @@
 				transform: translateX(-50%);
 				visibility: hidden;
 				white-space: nowrap;
+				z-index: 2;	
 				
-				@media (min-width: 768px) {
+				@media (min-width: 768px) and (max-width: 1024px) {
 
-					@at-root {
-		
-						// 4 and 5 columns.
-						.wc-columns-4#{&},
-						.wc-columns-5#{&} {
+					@at-root { 
+
+						.wc-columns-3#{&} {
 							font-size: .8666em;
-							padding: 11px 20px;
-						}
-					}					
-				}							
-			}
-
-			// Quick View button.
-			.product-quick-view-button {
-				top: 30%;
-				
-				@media (min-width: 768px) {
-				
-					@at-root {
-
-						// 4 and 5 columns.
-						.wc-columns-4#{&},
-						.wc-columns-5#{&} {
-							top: 15%;
 						}
 					}	
 				}														
 			}
 
-			// Add to Cart and related buttons.
-			.add_to_cart_button,
-			.product_type_grouped,
-			.product_type_variable  {
-				bottom: 30%;
-				
-				@media (min-width: 768px) {
-				
-					@at-root {
+			// Quick View button.
+			.product-quick-view-button {
+				top: 25%;
 
-						// 4 and 5 columns.
+				@media (min-width: 768px) and (max-width: 1024px) {
+
+					@at-root { 
+
+						.wc-columns-3#{&} {
+							top: 15%;
+						}						
+
 						.wc-columns-4#{&},
 						.wc-columns-5#{&} {
-							bottom: 15%;
+							display: none;
 						}
 					}	
-				}												
+				}																													
+			}
+
+			// Add to Cart button.
+			.add_to_cart_button  {
+				bottom: 25%;
+
+				@media (min-width: 768px) and (max-width: 1024px) {
+					
+					@at-root {
+
+						.wc-columns-4#{&},
+						.wc-columns-5#{&} {
+							display: none;
+						}
+					}		
+				}																												
+			}
+
+			// Select Options button.
+			.product_type_variable {
+				padding: 11px 15px;
 			}
 			
 			// Added to Cart button.
 			.added_to_cart {
 				bottom: 1%;
 				opacity: 1;
-				visibility: visible;
+				visibility: visible;					
 			}
 		}
 	}
