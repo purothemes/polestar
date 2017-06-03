@@ -69,6 +69,7 @@ function polestar_build_styles() {
 				'#infinite-handle span button:hover',
 				'.page-links span',
 				'button',
+				'.added_to_cart',
 				'input[type="button"]',
 				'input[type="reset"]',
 				'input[type="submit"]',
@@ -90,6 +91,7 @@ function polestar_build_styles() {
 				'#infinite-handle span button:hover',
 				'.page-links span:hover',
 				'button:hover',
+				'.added_to_cart:hover',
 				'input[type="button"]:hover',
 				'input[type="reset"]:hover',
 				'input[type="submit"]:hover'
