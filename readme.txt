@@ -23,11 +23,11 @@ Lead the way with Polestar. It's fast loading, responsive, lightweight and flexi
 
 == Documentation ==
 
-[Documentation](http://purothemes.com/documentation/) is available on purothemes.com.
+[Documentation](https://purothemes.com/documentation/polestar-wordpress-theme/) is available on purothemes.com.
 
 == Support ==
 
-[Support](http://purothemes.com/support/forum/) is available on purothemes.com.
+[Support](https://purothemes.com/support/forum/polestar-theme/) is available on purothemes.com.
 
 == Frequently Asked Questions ==
 

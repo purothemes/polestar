@@ -275,7 +275,7 @@ function polestar_theme_options() {
 	    'label' => esc_html__( 'Post Excerpt Read More Link', 'polestar' ),
 	    'section' => $section,
 	    'type' => 'checkbox',
-	    'description' => esc_html__( 'Display the Read More text below the post excerpt.', 'polestar' ),
+	    'description' => esc_html__( 'Display the Read More link below the post excerpt.', 'polestar' ),
 	    'default' => true,
 	);		
 
@@ -473,7 +473,27 @@ function polestar_theme_options() {
 		    'description' => esc_html__( 'Display the WooCommerce mini cart in the main menu.', 'polestar' ),
 		    'default' => false,
 		    'priority' => '40'
-		);				
+		);
+
+		$options['quick_view'] = array(
+		    'id' => 'quick_view',
+		    'label' => esc_html__( 'Quick View', 'polestar' ),
+		    'section' => $section,
+		    'type' => 'checkbox',
+		    'description' => esc_html__( 'Display a Quick View button on hover on product archive pages.', 'polestar' ),
+		    'default' => true,
+		    'priority' => '50'
+		);	
+
+		$options['add_to_cart'] = array(
+		    'id' => 'add_to_cart',
+		    'label' => esc_html__( 'Add to Cart', 'polestar' ),
+		    'section' => $section,
+		    'type' => 'checkbox',
+		    'description' => esc_html__( 'Display an Add to Cart button on hover on product archive pages.', 'polestar' ),
+		    'default' => true,
+		    'priority' => '60'
+		);							
 	}
 
 	if ( ! function_exists( 'polestar_premium_init' ) ) {

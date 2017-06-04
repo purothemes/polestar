@@ -222,7 +222,7 @@ jQuery( function( $ ) {
 
 	// Close the header search with the escape key.
 	$( document ).keyup( function( e ) {
-		if ( e.keyCode == 27 ) { // Escape key maps to keycode '27'.
+		if ( e.keyCode == 27 ) { // Escape key maps to keycode 27.
 			$( '#close-search.animate-in' ).trigger( 'click' );
 		}
 	} );	

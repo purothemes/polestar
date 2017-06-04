@@ -1,3 +1,4 @@
+// Repeated styles we need for @extend.
 .underline {
 	border-bottom: 2px solid $color__background-hr-dark;
 	display: inline-block;
@@ -8,6 +9,7 @@
 
 .woocommerce {
 
+	// Reset copy styles.
 	p {
 		margin-bottom: 0;
 	}
@@ -43,7 +45,7 @@
 	// Breadcrumbs.
 	.woocommerce-breadcrumb {
 		color: $color__text-light;
-		font-size: 12px;
+		font-size: 0.8666em;
 		margin-bottom: 15px;
 
 		a {
@@ -194,7 +196,7 @@
 	.onsale {
 		background: $color__accent;
 		color: #fff;
-		font-size: 11px;
+		font-size: 12px;
 		left: 10px; 
 		line-height: normal;  
 		padding: 6px 12px 5px;
@@ -267,7 +269,11 @@
 				
 					&:nth-of-type(2n+2) {
 						margin-right: 0; 
-					}					
+					}	
+
+					&:nth-child(2n+3) {
+						clear: left;
+					}										
 				}					
 			}
 
@@ -278,7 +284,11 @@
 				
 					&:nth-of-type(3n+3) {
 						margin-right: 0; 
-					}					
+					}	
+
+					&:nth-child(3n+4) {
+						clear: left;
+					}										
 				}									
 			}			
 
@@ -289,7 +299,11 @@
 				
 					&:nth-of-type(4n+4) {
 						margin-right: 0; 
-					}					
+					}
+
+					&:nth-child(4n+5) {
+						clear: left;
+					}											
 				}						
 			}				
 
@@ -300,7 +314,11 @@
 				
 					&:nth-of-type(5n+5) {
 						margin-right: 0; 
-					}					
+					}	
+
+					&:nth-child(5n+6) {
+						clear: left;
+					}									
 				}					
 			}							
 			
@@ -331,16 +349,23 @@
 						width: 100%;
 					}
 				}				
-			}				
-
-			.woocommerce-LoopProduct-link {
-				display: block;
-			}			
-			
-			// Sale sticker.
-			.onsale {
-				font-size: 12px;
 			}
+
+			// Product thumbnail container.
+			.loop-product-thumbnail {
+				position: relative;
+				
+				&:hover {
+
+					.add_to_cart_button,
+					.product-quick-view-button,
+					.product_type_grouped,
+					.product_type_variable {
+						opacity: 1;
+						visibility: visible;
+					}
+				}
+			}						
 
 			// Product image.
 			img {
@@ -351,19 +376,18 @@
 
 			// Product title.
 			.woocommerce-loop-product__title {
-				font-size: 16px; 
+				font-size: 1.0666em; 
 				margin: 15px 0 5px;
 				
-				// Above 769px, if the WooCommerce sidebar is active and 4 or 5 columns are being used, reduce the product title font size.
-				@media (min-width: 769px) {
-
-					@at-root .woocommerce-sidebar.wc-columns-4#{&} {
-						font-size: 0.9333em;
-					}
+				@at-root {
 					
-					@at-root .woocommerce-sidebar.wc-columns-5#{&} {
-						font-size: 0.9333em;
-					}					
+					.wc-columns-2#{&} {
+						font-size: 1.2em; 
+					}
+
+					.wc-columns-5#{&} {
+						font-size: 1em; 
+					}
 				}
 
 				&:hover {
@@ -381,29 +405,97 @@
 
 			// Product price.
 			.price {
-				color: $color__text-medium;
 				display: block;
-				font-size: 14px;
-				margin-bottom: 10px;				
+				font-size: 0.9333em;
+				margin-bottom: 10px;
+				
+				@at-root {
+					
+					.wc-columns-2#{&} {
+						font-size: 1.0666em; 
+					}
+
+
+					.wc-columns-5#{&} {
+						font-size: 0.8666em; 
+					}					
+				}							
+			}
+
+			// Add to Cart and Quick View buttons.
+			.button,
+			.added_to_cart {
+				left: 50%; 
+				opacity: 0;
+				position: absolute;
+				transform: translateX(-50%);
+				visibility: hidden;
+				white-space: nowrap;
+				z-index: 2;	
+				
+				@media (min-width: 768px) and (max-width: 1024px) {
+
+					@at-root { 
+
+						.wc-columns-3#{&} {
+							font-size: .8666em;
+						}
+					}	
+				}														
+			}
+
+			// Quick View button.
+			.product-quick-view-button {
+				top: 25%;
+
+				@media (min-width: 768px) and (max-width: 1024px) {
+
+					@at-root { 
+
+						.wc-columns-3#{&} {
+							top: 15%;
+						}						
+
+						.wc-columns-4#{&},
+						.wc-columns-5#{&} {
+							display: none;
+						}
+					}	
+				}																													
 			}
 
 			// Add to Cart button.
-			.button {
-				display: inline-block;
+			.add_to_cart_button  {
+				bottom: 25%;
+
+				@media (min-width: 768px) and (max-width: 1024px) {
+					
+					@at-root {
+
+						.wc-columns-4#{&},
+						.wc-columns-5#{&} {
+							display: none;
+						}
+					}		
+				}																												
+			}
+
+			// Select Options button.
+			.product_type_variable {
+				padding: 11px 15px;
 			}
 			
 			// Added to Cart button.
 			.added_to_cart {
-				@extend .button;
-				margin-top: 10px;
+				bottom: 1%;
+				opacity: 1;
+				visibility: visible;					
 			}
-
 		}
 	}
 
 	.price {
 		color: $color__text-medium;
-		display: block;
 		
 		ins {
 			background: none;
@@ -511,7 +603,8 @@
 			}			
 		}
 
-		.summary {
+		.summary,
+		.product-info-wrapper {
 			float: right;
 			padding-top: 0;
 			width: 48%;
@@ -582,8 +675,10 @@
 				}
 			}
 
-			.woocommerce-variation .woocommerce-variation-price {
+			.woocommerce-variation .woocommerce-variation-price .price {
+				display: block;
 				margin-top: -25px; 
+				width: 100%; 
 			}
 
 			.stock {

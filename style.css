@@ -438,6 +438,7 @@ table {
 --------------------------------------------------------------*/
 .button, .pagination .page-numbers, #infinite-handle span button, .page-links span,
 button,
+.added_to_cart,
 input[type="button"],
 input[type="reset"],
 input[type="submit"] {
@@ -454,6 +455,7 @@ input[type="submit"] {
   transition: .3s; }
   .button:hover, .pagination .page-numbers:hover, #infinite-handle span button:hover, .page-links span:hover,
   button:hover,
+  .added_to_cart:hover,
   input[type="button"]:hover,
   input[type="reset"]:hover,
   input[type="submit"]:hover {
@@ -461,6 +463,7 @@ input[type="submit"] {
     color: #fff; }
   .button:visited, .pagination .page-numbers:visited, #infinite-handle span button:visited, .page-links span:visited,
   button:visited,
+  .added_to_cart:visited,
   input[type="button"]:visited,
   input[type="reset"]:visited,
   input[type="submit"]:visited {
@@ -468,6 +471,8 @@ input[type="submit"] {
   .button:active, .pagination .page-numbers:active, #infinite-handle span button:active, .page-links span:active, .button:focus, .pagination .page-numbers:focus, #infinite-handle span button:focus, .page-links span:focus,
   button:active,
   button:focus,
+  .added_to_cart:active,
+  .added_to_cart:focus,
   input[type="button"]:active,
   input[type="button"]:focus,
   input[type="reset"]:active,
@@ -478,12 +483,14 @@ input[type="submit"] {
     outline: none; }
   .button[disabled], .pagination [disabled].page-numbers, #infinite-handle span button[disabled], .page-links span[disabled],
   button[disabled],
+  .added_to_cart[disabled],
   input[type="button"][disabled],
   input[type="reset"][disabled],
   input[type="submit"][disabled] {
     opacity: 0.6; }
     .button[disabled]:hover, .pagination [disabled].page-numbers:hover, #infinite-handle span button[disabled]:hover, .page-links span[disabled]:hover,
     button[disabled]:hover,
+    .added_to_cart[disabled]:hover,
     input[type="button"][disabled]:hover,
     input[type="reset"][disabled]:hover,
     input[type="submit"][disabled]:hover {
@@ -1076,7 +1083,7 @@ a {
 --------------------------------------------------------------*/
 .breadcrumbs {
   color: #828282;
-  font-size: 12px;
+  font-size: 0.8666em;
   margin-bottom: 15px; }
   .breadcrumbs a {
     color: #828282; }
@@ -2392,5 +2399,3 @@ object {
         @media (max-width: 480px) {
           .featured-posts-slider .slides .slide .slide-content .entry-excerpt {
             display: none; } }
-
-/*# sourceMappingURL=sass/maps/style.css.map */

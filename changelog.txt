@@ -1,5 +1,9 @@
 == Changelog ==
 
+= 1.0.0 - 04 June 2017 =
+* Added WooCommerce product Quick View.
+* Added Customizer settings for Quick View and Add to Cart buttons on product hover. WooCommerce settings only appear if WooCommerce is activated. 
+
 = 0.9.9 - 22 May 2017 =
 * Improved WooCommerce archive page type responsive behaviour.
 * Updated WooCommerce gallery to slideshow and lightbox.

@@ -24,7 +24,7 @@
 <div id="page" class="site">
 	<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'polestar' ); ?></a>
 
-		<header id="masthead" class="site-header<?php if ( get_theme_mod( 'header_layout' ) == 'centered' ) echo ' centered'; if ( get_theme_mod( 'sticky_header', true ) ) echo ' sticky'; if ( get_theme_mod( 'mobile_menu', true ) ) echo ' mobile-menu'; ?>" role="banner" <?php if ( get_theme_mod( 'sticky_header_scaling', true ) ) echo ' data-scale-logo="true"'; ?> >
+		<header id="masthead" class="site-header<?php if ( get_theme_mod( 'header_layout' ) == 'centered' ) echo ' centered'; if ( get_theme_mod( 'sticky_header', true ) ) echo ' sticky'; if ( get_theme_mod( 'mobile_menu', true ) ) echo ' mobile-menu'; ?>" role="banner" <?php if ( get_theme_mod( 'sticky_header_scaling', true ) ) echo 'data-scale-logo="true"' ?> >
 
 			<div class="polestar-container">
 		
