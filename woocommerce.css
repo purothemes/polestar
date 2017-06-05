@@ -460,7 +460,7 @@ input.button.added:after,
         font-size: 0.8666em; }
     .woocommerce .products .product .button,
     .woocommerce .products .product .added_to_cart {
-      font-size: 0.9333em;
+      font-size: .9333em;
       left: 50%;
       opacity: 0;
       position: absolute;
@@ -1195,7 +1195,9 @@ input.button.added:after,
   .site-header .shopping-cart-dropdown * {
     font-family: "Open Sans", sans-serif; }
   .site-header .shopping-cart-dropdown .widget {
-    margin: 15px 25px 25px; }
+    margin: 15px 25px 25px;
+    max-height: 70vh;
+    overflow-y: auto; }
     .site-header .shopping-cart-dropdown .widget li {
       font-weight: normal;
       line-height: 2;
