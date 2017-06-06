@@ -69,7 +69,7 @@ function polestar_theme_options() {
     		'default' => 'Default',
     		'centered' => 'Centered',
 		),
-	    'description' => esc_html__( 'Choose the header layout.', 'polestar' ),
+	    'description' => esc_html__( 'Select the header layout.', 'polestar' ),
 	    'default' => 'default',
 	    'priority' => '30'
 	);	
