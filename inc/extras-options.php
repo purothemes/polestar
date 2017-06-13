@@ -22,8 +22,9 @@ function polestar_page_settings( $settings, $type, $id ) {
 		'type'    => 'select',
 		'label'   => esc_html__( 'Page Layout', 'polestar' ),
 		'options' => array(
-			'default'     => esc_html__( 'Default', 'polestar' ),
-			'no-sidebar'  => esc_html__( 'No Sidebar', 'polestar' ),
+			'default'     			=> esc_html__( 'Default', 'polestar' ),
+			'no-sidebar'  			=> esc_html__( 'No Sidebar', 'polestar' ),
+			'full-width-no-sidebar'	=> esc_html__( 'Full Width, No Sidebar', 'polestar' )
 		),
 	);
 
