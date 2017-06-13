@@ -1465,6 +1465,14 @@ a {
   float: none;
   width: 100%; }
 
+.page-layout-full-width-no-sidebar .content-area {
+  float: none;
+  width: 100%; }
+
+.page-layout-full-width-no-sidebar .site-content .polestar-container {
+  max-width: none;
+  padding: 0; }
+
 .widget-area {
   float: right;
   padding-left: 4%;
@@ -2399,3 +2407,5 @@ object {
         @media (max-width: 480px) {
           .featured-posts-slider .slides .slide .slide-content .entry-excerpt {
             display: none; } }
+
+/*# sourceMappingURL=sass/maps/style.css.map */

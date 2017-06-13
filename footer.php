@@ -24,7 +24,7 @@ $footer_widgets_page_setting = puro_page_setting( 'footer_widgets', true );
 
 		<?php do_action( 'polestar_footer_top' ); ?>
 
-		<?php if ( ! is_page() || is_page() && $footer_widgets_page_setting ) : ?>
+		<?php if ( $footer_widgets_page_setting ) : ?>
 			<div class="polestar-container">
 				<?php
 					if ( is_active_sidebar( 'sidebar-footer' ) ) {

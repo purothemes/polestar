@@ -1,5 +1,10 @@
 == Changelog ==
 
+= 1.0.1 - 13 June 2017 =
+* Added overflow to WooCommerce mini-cart to ensure all products can be viewed when cart has many items in it.
+* Expanded Page Settings to include posts.
+* Added Full Width No Sidebar page layout option to accommodate non-SiteOrigin Page Builders.
+
 = 1.0.0 - 04 June 2017 =
 * Added WooCommerce product Quick View.
 * Added Customizer settings for Quick View and Add to Cart buttons on product hover. WooCommerce settings only appear if WooCommerce is activated. 

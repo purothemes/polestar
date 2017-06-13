@@ -273,6 +273,8 @@
 		
 		.widget {
 			margin: 15px 25px 25px;
+			max-height: 70vh;
+			overflow-y: auto;
 			
 			li {
 				font-weight: normal;
