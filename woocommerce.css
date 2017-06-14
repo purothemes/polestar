@@ -137,8 +137,11 @@ input.button.added:after,
 /*--------------------------------------------------------------
 # WooCommerce Forms
 --------------------------------------------------------------*/
+.woocommerce form p:first-of-type {
+  margin-bottom: 26px; }
+
 .woocommerce form .form-row {
-  margin-bottom: 25px; }
+  margin-bottom: 26px; }
   .woocommerce form .form-row::after {
     clear: both;
     content: "";
@@ -149,6 +152,8 @@ input.button.added:after,
     .woocommerce form .form-row label .required {
       color: rgba(255, 0, 0, 0.6);
       text-decoration: none; }
+    .woocommerce form .form-row label.inline {
+      font-weight: normal; }
     .woocommerce form .form-row label.checkbox {
       display: inline; }
   .woocommerce form .form-row select {
@@ -183,6 +188,16 @@ input.button.added:after,
 
 .woocommerce form .form-row-wide {
   clear: both; }
+
+.woocommerce .login .clear ~ .form-row {
+  margin-bottom: 0; }
+
+.woocommerce .login .button {
+  margin-bottom: 13px; }
+
+.woocommerce .login .lost_password {
+  font-size: 0.8666em;
+  margin-bottom: 26px; }
 
 /*--------------------------------------------------------------
 # Main
@@ -471,6 +486,8 @@ input.button.added:after,
       @media (min-width: 768px) and (max-width: 1024px) {
         .wc-columns-3.woocommerce .products .product .button, .woocommerce .products .product .added_to_cart {
           font-size: .8666em; } }
+    .woocommerce .products .product .added_to_cart {
+      font-size: 0.8em; }
     .woocommerce .products .product .product-quick-view-button {
       top: 25%; }
       @media (min-width: 768px) and (max-width: 1024px) {
@@ -1008,10 +1025,10 @@ input.button.added:after,
         float: right;
         font-size: 13px;
         position: static; } }
-  .woocommerce-message .showcoupon,
-  .woocommerce-error .showcoupon,
-  .woocommerce-info .showcoupon {
-    margin-left: 10px; }
+  .woocommerce-message a,
+  .woocommerce-error a,
+  .woocommerce-info a {
+    margin-left: 5px; }
 
 .woocommerce-error {
   display: block;
