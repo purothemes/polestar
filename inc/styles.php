@@ -565,7 +565,8 @@ function polestar_build_styles() {
 				'button',
 				'input',
 				'select',
-				'textarea'
+				'textarea',
+				'.comment-reply-title #cancel-comment-reply-link'
 			),
 			'declarations' => array(
 				'font-family' => $stack
