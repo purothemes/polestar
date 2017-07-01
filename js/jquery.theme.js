@@ -99,8 +99,7 @@ jQuery( function( $ ) {
 			if ( ! $( '#scroll-to-top' ).hasClass( 'show' ) ) {
 				$( '#scroll-to-top' ).css( 'pointer-events', 'auto' ).addClass( 'show' );
 			}
-		}
-		else {
+		} else {
 			if ( $( '#scroll-to-top' ).hasClass( 'show' ) ) {
 				$( '#scroll-to-top' ).css( 'pointer-events', 'none' ).removeClass( 'show' );
 			}
@@ -131,7 +130,7 @@ jQuery( function( $ ) {
 		$( window ).resize( smSetup ).scroll( smSetup );
 
 		// Sticky header shadow.
-		var smShadow = function () {
+		var smShadow = function() {
             if ( $( window ).scrollTop() > 0 ) {
                 $( $mh ).addClass( 'stuck' );
             }
