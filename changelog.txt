@@ -3,7 +3,7 @@
 = 1.0.2 - 03 July 2017 =
 * WooCommerce style improvements for Add to Cart button and login form.
 * Comment reply style improvements.
-* Minor code style improvements.
+* Added support for Max Mega Menu plugin.
 
 = 1.0.1 - 13 June 2017 =
 * Added overflow to WooCommerce mini-cart to ensure all products can be viewed when cart has many items in it.
