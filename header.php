@@ -36,7 +36,9 @@
 
 					<nav id="site-navigation" class="main-navigation" role="navigation">
 
-						<?php if ( get_theme_mod( 'mobile_menu', true ) ) : ?>	
+						<?php $mega_menu_active = function_exists( 'max_mega_menu_is_enabled' ) && max_mega_menu_is_enabled( 'menu-1' ); ?>
+
+						<?php if ( get_theme_mod( 'mobile_menu', true ) && ! $mega_menu_active ) : ?>	
 							<a href="#menu" id="mobile-menu-button">
 								<?php polestar_display_icon( 'menu' ); ?>							
 								<span class="screen-reader-text"><?php esc_html_e( 'Menu', 'polestar' ); ?></span>
@@ -47,9 +49,9 @@
 							<?php wp_nav_menu( array( 'theme_location' => 'menu-1', 'menu_id' => 'primary-menu' ) ); ?>
 						<?php endif; ?>
 
-						<?php if ( get_theme_mod( 'mini_cart', false ) ) polestar_mini_cart(); ?>	
+						<?php if ( get_theme_mod( 'mini_cart', false ) && ! $mega_menu_active ) polestar_mini_cart(); ?>	
 
-						<?php if ( get_theme_mod( 'menu_search', customizer_library_get_default( 'menu_search' ) ) ) : ?>
+						<?php if ( get_theme_mod( 'menu_search', true ) && ! $mega_menu_active ) : ?>
 							<a class="search-icon">
 								<label class="screen-reader-text"><?php esc_html_e( 'Open search bar', 'polestar' ); ?></label>
 								<?php polestar_display_icon( 'search' ); ?>

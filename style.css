@@ -714,6 +714,13 @@ a {
         transition: .3s; }
       .main-navigation .search-icon svg:hover path {
         fill: #626262; }
+  .main-navigation #mega-menu-wrap-primary {
+    display: inline-block; }
+    .main-navigation #mega-menu-wrap-primary .mega-sub-menu li {
+      min-width: auto; }
+    .main-navigation #mega-menu-wrap-primary ul ul a {
+      white-space: normal;
+      width: auto !important; }
 
 /*--------------------------------------------------------------
 ## Mobile Menu
@@ -1104,7 +1111,7 @@ a {
   padding-top: 15px;
   position: fixed;
   right: 20px;
-  transform: scale(0, 0);
+  transform: scale(0);
   transition: .2s;
   text-align: center;
   width: 45px;
@@ -1122,7 +1129,7 @@ a {
     opacity: .9; }
   #scroll-to-top.show {
     opacity: 1;
-    transform: scale(1, 1); }
+    transform: scale(1); }
 
 /*--------------------------------------------------------------
 # - Accessibility
@@ -2085,12 +2092,17 @@ a {
   font-size: 16px;
   margin-bottom: 0; }
 
+.comment-respond {
+  margin-top: 30px; }
+
 .comment-reply-title {
   margin-bottom: 15px; }
   .comment-reply-title #cancel-comment-reply-link {
     color: #828282;
+    font-family: "Open Sans", sans-serif;
     font-size: 13px;
-    margin-left: .25em; }
+    margin-left: .5em;
+    text-transform: none; }
     .comment-reply-title #cancel-comment-reply-link:hover {
       color: #4d8ffb; }
 

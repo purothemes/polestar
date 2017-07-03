@@ -106,13 +106,19 @@
 	margin-bottom: 0;
 }
 
+.comment-respond {
+	margin-top: 30px;
+}
+
 .comment-reply-title {
 	margin-bottom: 15px;
 	
 	#cancel-comment-reply-link {
-		color: $color__text-light; 
+		color: $color__text-light;
+		font-family: $font__main; 
 		font-size: 13px; 
-		margin-left: .25em;
+		margin-left: .5em;
+		text-transform: none; 
 		
 		&:hover {
 			color: $color__accent;

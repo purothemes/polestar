@@ -47,6 +47,10 @@ function polestar_setup() {
 	 */
 	add_theme_support( 'post-thumbnails' );
 
+	// Custom image sizes.
+	add_image_size( 'polestar-247x164-crop', 247, 163, true );
+	add_image_size( 'polestar-354x234-crop', 354, 234, true );	
+
 	/*
 	 * Enable support for the custom logo.
 	 */
@@ -79,10 +83,6 @@ function polestar_setup() {
 		'image',
 		'video',
 	) );	
-
-	// Custom image sizes.
-	add_image_size( 'polestar-247x164-crop', 247, 163, true );
-	add_image_size( 'polestar-354x234-crop', 354, 234, true );
 
 	// Setup the WordPress core custom background feature.
 	add_theme_support( 'custom-background', apply_filters( 'polestar_custom_background_args', array(
