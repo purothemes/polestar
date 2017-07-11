@@ -156,18 +156,17 @@ function polestar_scripts() {
 	if ( ! class_exists( 'Jetpack' ) ) {
 		wp_enqueue_script( 'jquery-fitvids', get_template_directory_uri() . '/js/jquery.fitvids' . PURO_THEME_JS_PREFIX . '.js', array( 'jquery' ), '1.1', true );
 	}
-
+	
 	// Flexslider.
 	wp_register_script( 'jquery-flexslider', get_template_directory_uri() . '/js/jquery.flexslider' . PURO_THEME_JS_PREFIX . '.js', array( 'jquery' ), '2.6.3', true );
 
-	
 	if ( is_home() && polestar_has_featured_posts() ) {
 		wp_enqueue_script( 'jquery-flexslider' );
 	}
 
     // Theme JavaScript.
     wp_enqueue_script( 'polestar-script', get_template_directory_uri() . '/js/jquery.theme' . PURO_THEME_JS_PREFIX . '.js', array( 'jquery' ), PURO_THEME_VERSION, true );
-    
+
 	// Theme icons.
 	wp_enqueue_style( 'polestar-icons', get_template_directory_uri() . '/css/polestar-icons' . PURO_THEME_CSS_PREFIX . '.css', array(), PURO_THEME_VERSION );    
 
