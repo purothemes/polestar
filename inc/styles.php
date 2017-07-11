@@ -301,6 +301,7 @@ function polestar_build_styles() {
 			// Fill.
 			Customizer_Library_Styles()->add( array(
 				'selectors' => array(
+					'.woocommerce .woocommerce-ordering .ordering-selector-wrapper:hover',
 					'.woocommerce .woocommerce-ordering .ordering-selector-wrapper:hover svg path'
 				),
 				'declarations' => array(
