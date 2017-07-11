@@ -622,22 +622,79 @@ a {
         .main-navigation ul .children li:hover > ul,
         .main-navigation ul .children li.focus > ul {
           left: 100%; }
-        .main-navigation ul .sub-menu li:first-of-type a,
-        .main-navigation ul .children li:first-of-type a {
+        .main-navigation ul .sub-menu li a,
+        .main-navigation ul .children li a {
+          border-bottom: 1px solid #f6f6f6;
+          font-size: 13px;
+          outline: none;
+          margin: 0 25px;
+          max-width: 100%;
+          padding: 10px 0;
+          white-space: nowrap; }
+        .main-navigation ul .sub-menu li:first-of-type > a,
+        .main-navigation ul .children li:first-of-type > a {
           padding-top: 15px; }
-        .main-navigation ul .sub-menu li:last-of-type a,
-        .main-navigation ul .children li:last-of-type a {
-          border: 0;
+        .main-navigation ul .sub-menu li:last-of-type > a,
+        .main-navigation ul .children li:last-of-type > a {
           padding-bottom: 15px; }
-      .main-navigation ul .sub-menu a,
-      .main-navigation ul .children a {
-        border-bottom: 1px solid #f6f6f6;
-        font-size: 13px;
-        outline: none;
-        margin: 0 25px;
-        max-width: 100%;
-        padding: 10px 0;
-        white-space: nowrap; }
+        .main-navigation ul .sub-menu li:only-of-type > a,
+        .main-navigation ul .children li:only-of-type > a {
+          padding: 15px 0; }
+    .main-navigation ul .left .sub-menu,
+    .main-navigation ul .left .children {
+      right: 0; }
+      .main-navigation ul .left .sub-menu ul,
+      .main-navigation ul .left .children ul {
+        left: initial;
+        left: auto;
+        right: 100%; }
+      .main-navigation ul .left .sub-menu li:hover > ul,
+      .main-navigation ul .left .sub-menu li.focus > ul,
+      .main-navigation ul .left .children li:hover > ul,
+      .main-navigation ul .left .children li.focus > ul {
+        left: initial;
+        left: auto;
+        right: 100%; }
+      .main-navigation ul .left .sub-menu .menu-item-has-children > a:before,
+      .main-navigation ul .left .sub-menu .page_item_has_children > a:before,
+      .main-navigation ul .left .children .menu-item-has-children > a:before,
+      .main-navigation ul .left .children .page_item_has_children > a:before {
+        content: "\f053";
+        font-size: 9px;
+        font-family: "polestar-icons";
+        line-height: normal;
+        padding-right: 12px;
+        position: relative;
+        transform: rotate(45deg);
+        top: 0; }
+      .main-navigation ul .left .sub-menu .menu-item-has-children > a:after,
+      .main-navigation ul .left .sub-menu .page_item_has_children > a:after,
+      .main-navigation ul .left .children .menu-item-has-children > a:after,
+      .main-navigation ul .left .children .page_item_has_children > a:after {
+        content: none; }
+    .main-navigation ul .sub-menu .left.menu-item-has-children > a:before, .main-navigation ul .sub-menu .left.page_item_has_children > a:before {
+      content: "\f053";
+      font-size: 9px;
+      font-family: "polestar-icons";
+      line-height: normal;
+      padding-right: 12px;
+      position: relative;
+      transform: rotate(45deg);
+      top: 0; }
+    .main-navigation ul .sub-menu .left.menu-item-has-children > a:after, .main-navigation ul .sub-menu .left.page_item_has_children > a:after {
+      content: none; }
+    .main-navigation ul .sub-menu .left .sub-menu,
+    .main-navigation ul .sub-menu .left .children {
+      left: initial;
+      left: auto;
+      right: 100%; }
+      .main-navigation ul .sub-menu .left .sub-menu li:hover > ul,
+      .main-navigation ul .sub-menu .left .sub-menu li.focus > ul,
+      .main-navigation ul .sub-menu .left .children li:hover > ul,
+      .main-navigation ul .sub-menu .left .children li.focus > ul {
+        left: initial;
+        left: auto;
+        right: 100%; }
     body.no-touch .main-navigation ul li:hover > ul,
     body.no-touch .main-navigation ul li.focus > ul {
       opacity: 1;

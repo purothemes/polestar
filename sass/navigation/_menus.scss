@@ -41,34 +41,115 @@
 				&:hover > ul,
 				&.focus > ul {
 					left: 100%;
+				}			
+
+				a {
+	    			border-bottom: 1px solid $color__background-hr;
+	    			font-size: 13px;
+	    			outline: none;
+	    			margin: 0 25px;
+	    			max-width: 100%;
+	    			padding: 10px 0;
+	    			white-space: nowrap;
 				}
 
-				&:first-of-type {
-					
-					a {
-						padding-top: 15px; 
-					}
+				&:first-of-type > a {
+					padding-top: 15px; 
 				}
 
-				&:last-of-type {
-					
-					a {
-						border: 0; 
-						padding-bottom: 15px; 
-					}
-				}				
-			}
+				&:last-of-type > a {
+					padding-bottom: 15px; 
+				}	
 
-			a {
-    			border-bottom: 1px solid $color__background-hr;
-    			font-size: 13px;
-    			outline: none;
-    			margin: 0 25px;
-    			max-width: 100%;
-    			padding: 10px 0;
-    			white-space: nowrap;
+				&:only-of-type > a {
+					padding: 15px 0;
+				}										
 			}
 		}
+
+		// If a class of 'left' is added to a menu item, break drop down menu items to the left.
+		.left {
+
+			.sub-menu,
+			.children {
+				right: 0; 
+				
+				ul {
+					left: initial;
+					left: auto;
+					right: 100%;   
+				}
+
+				li {
+
+					&:hover > ul,
+					&.focus > ul {
+						left: initial;
+						left: auto;
+						right: 100%;  
+					}			
+				}
+
+				.menu-item-has-children,
+				.page_item_has_children {
+					
+					> a:before {
+						content: "\f053";
+						font-size: 9px; 
+						font-family: $font__icon;
+						line-height: normal;
+						padding-right: 12px;
+						position: relative;
+						transform: rotate(45deg); 
+						top: 0;
+					}			 
+
+					> a:after {
+						content: none; 
+					}
+				}				
+			}				
+		}
+
+		// If a class of 'left' is added to a sub-menu item, break drop down menu items to the left.
+		.sub-menu .left {
+
+			&.menu-item-has-children,
+			&.page_item_has_children {
+				
+				> a:before {
+					content: "\f053";
+					font-size: 9px; 
+					font-family: $font__icon;
+					line-height: normal;
+					padding-right: 12px;
+					position: relative;
+					transform: rotate(45deg); 
+					top: 0;
+				}			 
+
+				> a:after {
+					content: none; 
+				}
+			}
+
+			.sub-menu,
+			.children {
+				left: initial;
+				left: auto;
+				right: 100%;   
+
+				li {
+
+					&:hover > ul,
+					&.focus > ul {
+						left: initial;
+						left: auto;
+						right: 100%;  
+					}			
+				}
+			}					
+		}		
 
 		@at-root body.no-touch & {
 
