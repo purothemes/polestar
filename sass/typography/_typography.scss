@@ -10,7 +10,7 @@ textarea {
 	color: $color__text-medium;
 	font-size: 15px;
 	font-family: $font__main;
-	@include font-smoothing(subpixel-antialiased); 
+	@include font-smoothing(subpixel-antialiased);
 	line-height: $font__line-height-body; 
 }
 

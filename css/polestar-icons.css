@@ -1,168 +1,121 @@
-@font-face {  
-    font-family: 'polestar-icons';
-    font-style: normal;
-    font-weight: normal;
-    src: url('fonts/polestar-icons.eot?cjflxa');
-    src: url('fonts/polestar-icons.eot?cjflxa#iefix') format('embedded-opentype'), url('fonts/polestar-icons.ttf?cjflxa') format('truetype'), url('fonts/polestar-icons.woff?cjflxa') format('woff'), url('fonts/polestar-icons.svg?cjflxa#polestar-icons') format('svg');
+@font-face {
+  font-family: 'polestar-icons';
+  src:
+    url('fonts/polestar-icons.ttf?2mo2p3') format('truetype'),
+    url('fonts/polestar-icons.woff?2mo2p3') format('woff'),
+    url('fonts/polestar-icons.svg?2mo2p3#polestar-icons') format('svg');
+  font-weight: normal;
+  font-style: normal;
 }
 
-[class^="icon-"],
-[class*=" icon-"] {
-    font-family: 'polestar-icons' !important;
-    font-style: normal;
-    font-variant: normal;
-    font-weight: normal;
-    line-height: 1;
-    speak: none;
-    text-transform: none;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
+[class^="icon-"], [class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'polestar-icons' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
-.icon-pencil:before {
-    content: "\f040";
+.icon-chevron-left:before {
+  content: "\f053";
 }
-
 .icon-chevron-right:before {
-    content: "\f054";
+  content: "\f054";
 }
-
 .icon-chevron-down:before {
-    content: "\f078";
+  content: "\f078";
 }
-
 .icon-twitter:before {
-    content: "\f099";
+  content: "\f099";
 }
-
 .icon-facebook:before {
-    content: "\f09a";
+  content: "\f09a";
 }
-
 .icon-facebook-f:before {
-    content: "\f09a";
+  content: "\f09a";
 }
-
 .icon-github:before {
-    content: "\f09b";
+  content: "\f09b";
 }
-
 .icon-pinterest:before {
-    content: "\f0d2";
+  content: "\f0d2";
 }
-
 .icon-google-plus:before {
-    content: "\f0d5";
+  content: "\f0d5";
 }
-
 .icon-linkedin:before {
-    content: "\f0e1";
+  content: "\f0e1";
 }
-
-.icon-circle:before {
-    content: "\f111";
-}
-
-.icon-circle:before {
-    content: "\f111";
-}
-
 .icon-xing:before {
-    content: "\f168";
+  content: "\f168";
 }
-
 .icon-youtube-play:before {
-    content: "\f16a";
+  content: "\f16a";
 }
-
 .icon-stack-overflow:before {
-    content: "\f16c";
+  content: "\f16c";
 }
-
 .icon-instagram:before {
-    content: "\f16d";
+  content: "\f16d";
 }
-
 .icon-flickr:before {
-    content: "\f16e";
+  content: "\f16e";
 }
-
 .icon-tumblr:before {
-    content: "\f173";
+  content: "\f173";
 }
-
-.icon-long-arrow-left:before {
-    content: "\f177";
-}
-
-.icon-long-arrow-right:before {
-    content: "\f178";
-}
-
 .icon-dribbble:before {
-    content: "\f17d";
+  content: "\f17d";
 }
-
 .icon-foursquare:before {
-    content: "\f180";
+  content: "\f180";
 }
-
 .icon-vk:before {
-    content: "\f189";
+  content: "\f189";
 }
-
 .icon-weibo:before {
-    content: "\f18a";
+  content: "\f18a";
 }
-
 .icon-stack-exchange:before {
-    content: "\f18d";
+  content: "\f18d";
 }
-
 .icon-wordpress:before {
-    content: "\f19a";
+  content: "\f19a";
 }
-
 .icon-delicious:before {
-    content: "\f1a5";
+  content: "\f1a5";
 }
-
 .icon-digg:before {
-    content: "\f1a6";
+  content: "\f1a6";
 }
-
 .icon-behance2:before {
-    content: "\f1b4";
+  content: "\f1b4";
 }
-
 .icon-deviantart:before {
-    content: "\f1bd";
+  content: "\f1bd";
 }
-
 .icon-soundcloud:before {
-    content: "\f1be";
+  content: "\f1be";
 }
-
 .icon-vine:before {
-    content: "\f1ca";
+  content: "\f1ca";
 }
-
 .icon-codepen:before {
-    content: "\f1cb";
+  content: "\f1cb";
 }
-
-.icon-circle-o-notch:before {
-    content: "\f1ce";
-}
-
 .icon-vimeo:before {
-    content: "\f27d";
+  content: "\f27d";
 }
-
 .icon-reddit-alien:before {
-    content: "\f281";
+  content: "\f281";
 }
-
 .icon-behance:before {
-    content: "\eaa8";
+  content: "\eaa8";
 }

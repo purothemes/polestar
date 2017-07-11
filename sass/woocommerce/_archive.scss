@@ -56,6 +56,7 @@
 		.ordering-selector-wrapper {
 			border: 1px solid $color__background-hr-dark;
 			border-radius: 2px;
+			cursor: pointer;
 			font-size: 13px;
 			line-height: normal;
 			padding: 10px 15px;
@@ -78,12 +79,8 @@
 			&:hover {
 				color: $color__text-dark;
 				
-				svg {
-					transform: rotate(180deg);
-				
-					path {
-						fill: $color__text-dark;
-					}
+				svg path {
+					fill: $color__text-dark;
 				}
 			}
 
@@ -126,13 +123,21 @@
 				}
 			}
 
-			&:hover {
+			&.open-dropdown {
 
 				.ordering-dropdown {
 					opacity: 1;
 					transform: scale(1);
 					visibility: visible;	
 				}
+
+				svg {
+					transform: rotate(180deg);
+				
+					path {
+						fill: $color__text-dark;
+					}
+				}				
 			}
 		}
 	}	

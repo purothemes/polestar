@@ -285,6 +285,7 @@ input.button.added:after,
   .woocommerce .woocommerce-ordering .ordering-selector-wrapper {
     border: 1px solid #ebebeb;
     border-radius: 2px;
+    cursor: pointer;
     font-size: 13px;
     line-height: normal;
     padding: 10px 15px;
@@ -299,10 +300,8 @@ input.button.added:after,
         fill: #626262; }
     .woocommerce .woocommerce-ordering .ordering-selector-wrapper:hover {
       color: #2d2d2d; }
-      .woocommerce .woocommerce-ordering .ordering-selector-wrapper:hover svg {
-        transform: rotate(180deg); }
-        .woocommerce .woocommerce-ordering .ordering-selector-wrapper:hover svg path {
-          fill: #2d2d2d; }
+      .woocommerce .woocommerce-ordering .ordering-selector-wrapper:hover svg path {
+        fill: #2d2d2d; }
     .woocommerce .woocommerce-ordering .ordering-selector-wrapper .ordering-dropdown-container {
       left: -1px;
       min-height: 1px;
@@ -334,10 +333,14 @@ input.button.added:after,
         white-space: nowrap; }
         .woocommerce .woocommerce-ordering .ordering-selector-wrapper .ordering-dropdown li:hover {
           color: #2d2d2d; }
-    .woocommerce .woocommerce-ordering .ordering-selector-wrapper:hover .ordering-dropdown {
+    .woocommerce .woocommerce-ordering .ordering-selector-wrapper.open-dropdown .ordering-dropdown {
       opacity: 1;
       transform: scale(1);
       visibility: visible; }
+    .woocommerce .woocommerce-ordering .ordering-selector-wrapper.open-dropdown svg {
+      transform: rotate(180deg); }
+      .woocommerce .woocommerce-ordering .ordering-selector-wrapper.open-dropdown svg path {
+        fill: #2d2d2d; }
 
 .woocommerce .onsale {
   background: #4d8ffb;
@@ -1223,11 +1226,11 @@ input.button.added:after,
         color: #4d8ffb; }
       .site-header .shopping-cart-dropdown .widget li a {
         color: #626262; }
-      .site-header .shopping-cart-dropdown .widget li.empty {
-        font-size: .95em;
-        font-weight: 600;
-        line-height: 1;
-        padding-bottom: 0; }
+    .site-header .shopping-cart-dropdown .widget .woocommerce-mini-cart__empty-message {
+      display: block;
+      font-size: .95em;
+      font-weight: 600;
+      padding-bottom: 0; }
   .site-header .shopping-cart-dropdown .buttons {
     text-align: center; }
     .site-header .shopping-cart-dropdown .buttons a {
@@ -1245,9 +1248,9 @@ input.button.added:after,
 #mobile-navigation .shopping-cart-link {
   margin-bottom: 15px; }
   #mobile-navigation .shopping-cart-link svg {
-    margin: 0;
+    margin: -3px 0 0;
     padding: 0;
-    vertical-align: top; }
+    vertical-align: middle; }
   #mobile-navigation .shopping-cart-link .shopping-cart-count {
     top: 2px;
     right: -25px; }

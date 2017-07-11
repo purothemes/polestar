@@ -6,11 +6,11 @@
 jQuery( function( $ ) {
 
 	// Product archive order drop-down.
-	$('.woocommerce-ordering select').each( function() {
-		var $$ = $( this );
+	$( '.woocommerce-ordering select' ).each( function() {
+		var $$ = $(this);
 
 		var c = $( '<div></div>' )
-			.html( '<span class="current">' + $$.find( ':selected' ).html() + '</span>' + polestar_data.chevron_down )
+			.html( '<span class="current">' + $$.find(':selected').html() + '</span>' + polestar_data.chevron_down )
 			.addClass('ordering-selector-wrapper')
 			.insertAfter( $$ );
 
@@ -26,7 +26,7 @@ jQuery( function( $ ) {
 		$$.find( 'option' ).each( function() {
 			var $o = $(this);
 			dropdown.append(
-				$( "<li></li>" )
+				$( '<li></li>' )
 					.html( $o.html() )
 					.data( 'val', $o.attr( 'value' ) )
 					.click( function() {
@@ -35,15 +35,27 @@ jQuery( function( $ ) {
 					} )
 			);
 
-			widest = Math.max( c.find( '.current' ).html( $o.html() ).width(), widest );
+			widest = Math.max( c.find( '.current' ).html( $o.html() ).width(), widest);
 
 		} );
 
-		c.find( '.current' ).html( $$.find( ':selected' ).html() ).width( widest );
+		c.find('.current').html( $$.find( ':selected' ).html() ).width( widest );
 
 		$$.hide();
 	} );
 
+	// Open dropdown on click.
+	$( '.ordering-selector-wrapper' ).click( function() {
+		$( this ).toggleClass( 'open-dropdown' );
+	} );
+
+	// Close dropdown on click outside dropdown wrapper.
+	$( window ).click( function( e ) {
+		if ( ! $( e.target ).closest( '.ordering-selector-wrapper.open-dropdown' ).length ) {
+			$( '.ordering-selector-wrapper.open-dropdown' ).removeClass( 'open-dropdown' );
+		}
+	} );	
+	
 	// Quick View modal.
 	$( '.product-quick-view-button' ).click( function( e ) {
 		e.preventDefault();
