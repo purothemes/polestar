@@ -2365,6 +2365,8 @@ object {
 --------------------------------------------------------------*/
 .featured-posts-slider {
   margin-bottom: 60px; }
+  .widget_siteorigin-panels-postloop .featured-posts-slider {
+    margin-bottom: 0; }
   .featured-posts-slider .slides .slide {
     background-color: #626262;
     background-position: center;
@@ -2391,6 +2393,8 @@ object {
       @media (max-width: 768px) {
         .featured-posts-slider .slides .slide .slide-content {
           padding-top: 7%; } }
+      .widget_siteorigin-panels-postloop .featured-posts-slider .slides .slide .slide-content {
+        padding: 15% 10%; }
       .featured-posts-slider .slides .slide .slide-content .entry-title {
         font-size: 46px;
         margin-bottom: 0;

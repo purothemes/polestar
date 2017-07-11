@@ -1,6 +1,8 @@
 <?php
 /**
  * Loop Name: Blog
+  *
+ * Post loop for use with the SiteOrigin Post Loop widget in Page Builder.
  *
  * @package polestar
  * @license GPL 2.0 

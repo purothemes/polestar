@@ -1,5 +1,9 @@
 .featured-posts-slider {
-	margin-bottom: 60px; 
+	margin-bottom: 60px;
+	
+	.widget_siteorigin-panels-postloop & {
+		margin-bottom: 0;
+	}
 	 
 	.slides .slide {
 		background-color: $color__text-medium;
@@ -32,7 +36,11 @@
 			
 			@media (max-width: 768px) {
 				padding-top: 7%; 
-			}	
+			}
+
+			@at-root .widget_siteorigin-panels-postloop & {
+				padding: 15% 10%;
+			}
 
 			.entry-title {
 				font-size: 46px;
