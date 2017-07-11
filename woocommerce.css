@@ -1248,9 +1248,9 @@ input.button.added:after,
 #mobile-navigation .shopping-cart-link {
   margin-bottom: 15px; }
   #mobile-navigation .shopping-cart-link svg {
-    margin: 0;
+    margin: -3px 0 0;
     padding: 0;
-    vertical-align: top; }
+    vertical-align: middle; }
   #mobile-navigation .shopping-cart-link .shopping-cart-count {
     top: 2px;
     right: -25px; }
