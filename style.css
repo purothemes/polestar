@@ -266,6 +266,8 @@ h6 {
   clear: both;
   color: #2d2d2d;
   font-family: "Montserrat", sans-serif;
+  -webkit-font-smoothing: subpixel-antialiased;
+  -moz-osx-font-smoothing: auto;
   font-weight: 400;
   margin: 25px 0; }
 
