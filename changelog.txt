@@ -1,5 +1,10 @@
 == Changelog ==
 
+= 1.0.3 - 11 July 2017 =
+* Added posts slider as loop file to used with Page Builder by SiteOrigin Post Loop widget.
+* Resolved mobile menu scroll bug.
+* Minor WooCommerce style fixes.
+
 = 1.0.2 - 03 July 2017 =
 * WooCommerce style improvements for Add to Cart button and login form.
 * Comment reply style improvements.
