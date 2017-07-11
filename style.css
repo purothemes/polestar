@@ -839,17 +839,12 @@ a {
   overflow-y: scroll;
   padding: 0 25px 25px;
   position: absolute;
-  overflow: hidden;
   top: 100%;
+  -webkit-overflow-scrolling: touch;
   width: 100%;
   z-index: 10; }
   #mobile-navigation::-webkit-scrollbar {
-    width: 4px; }
-  #mobile-navigation::-webkit-scrollbar-track {
-    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3); }
-  #mobile-navigation::-webkit-scrollbar-thumb {
-    background-color: darkgrey;
-    outline: 1px solid slategrey; }
+    display: none; }
   #mobile-navigation ul {
     list-style: none;
     margin: 0;
