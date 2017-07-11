@@ -288,14 +288,14 @@
 				a {
 					color: $color__text-medium;
 				}
-
-				&.empty {
-					font-size: .95em; 
-					font-weight: 600;
-					line-height: 1;
-					padding-bottom: 0; 
-				}
 			}
+
+			.woocommerce-mini-cart__empty-message {
+				display: block;
+				font-size: .95em; 
+				font-weight: 600;
+				padding-bottom: 0;
+			}			
 		}
 
 		.buttons {

@@ -1223,11 +1223,11 @@ input.button.added:after,
         color: #4d8ffb; }
       .site-header .shopping-cart-dropdown .widget li a {
         color: #626262; }
-      .site-header .shopping-cart-dropdown .widget li.empty {
-        font-size: .95em;
-        font-weight: 600;
-        line-height: 1;
-        padding-bottom: 0; }
+    .site-header .shopping-cart-dropdown .widget .woocommerce-mini-cart__empty-message {
+      display: block;
+      font-size: .95em;
+      font-weight: 600;
+      padding-bottom: 0; }
   .site-header .shopping-cart-dropdown .buttons {
     text-align: center; }
     .site-header .shopping-cart-dropdown .buttons a {
