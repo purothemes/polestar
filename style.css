@@ -644,6 +644,7 @@ a {
           padding-top: 15px; }
         .main-navigation ul .sub-menu li:last-of-type > a,
         .main-navigation ul .children li:last-of-type > a {
+          border-bottom: none;
           padding-bottom: 15px; }
         .main-navigation ul .sub-menu li:only-of-type > a,
         .main-navigation ul .children li:only-of-type > a {
