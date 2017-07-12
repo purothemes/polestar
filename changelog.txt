@@ -1,5 +1,8 @@
 == Changelog ==
 
+= 1.0.4 - 12 July 2017 =
+* Fix missing CSS icons.
+
 = 1.0.3 - 11 July 2017 =
 * Added posts slider as loop file to used with Page Builder by SiteOrigin Post Loop widget.
 * Resolved mobile menu scroll bug.

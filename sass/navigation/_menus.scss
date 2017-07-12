@@ -58,7 +58,8 @@
 				}
 
 				&:last-of-type > a {
-					padding-bottom: 15px; 
+					border-bottom: none; 
+					padding-bottom: 15px;
 				}	
 
 				&:only-of-type > a {
