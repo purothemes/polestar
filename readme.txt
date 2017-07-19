@@ -88,6 +88,7 @@ Polestar includes support for the following plugins:
 * [Breadcrumb NavXT](https://wordpress.org/plugins/breadcrumb-navxt/)
 * [Jetpack Featured Content](https://jetpack.com/support/featured-content/)
 * [Jetpack Infinite Scroll](https://jetpack.com/support/infinite-scroll/)
+* [Jetpack Related Posts](https://jetpack.com/support/related-posts/)
 * [Jetpack Responsive Videos](https://jetpack.com/support/responsive-videos/)
 * [Max Mega Menu](https://wordpress.org/plugins/megamenu/)
 * [Page Builder by SiteOrigin](https://wordpress.org/plugins/siteorigin-panels/)
