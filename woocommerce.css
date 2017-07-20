@@ -65,7 +65,7 @@ input.button.loading::after,
   font-family: 'WooCommerce';
   font-size: .9em;
   font-weight: 400;
-  margin: .2em 0 0 .3em;
+  margin: .3em 0 0 .3em;
   position: absolute;
   vertical-align: middle; }
 
@@ -552,7 +552,7 @@ input.button.added:after,
           margin-right: 0; }
         .woocommerce .product .images .flex-control-thumbs li img {
           display: block;
-          box-shadow: #000 0em 0em 0em;
+          box-shadow: #000 0 0 0;
           opacity: .5; }
           .woocommerce .product .images .flex-control-thumbs li img.flex-active, .woocommerce .product .images .flex-control-thumbs li img:hover {
             opacity: 1; }
