@@ -1,5 +1,9 @@
 == Changelog ==
 
+= 1.0.5 - 20 July 2017 =
+* Added support for Jetpack Related Posts.
+* Minor WooCommerce style fixes.
+
 = 1.0.4 - 12 July 2017 =
 * Fix missing CSS icons.
 
