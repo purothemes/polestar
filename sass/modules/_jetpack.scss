@@ -39,6 +39,34 @@
 }
 
 /*--------------------------------------------------------------
+## - Related Posts
+--------------------------------------------------------------*/
+#main #jp-relatedposts {
+	margin-top: 0; 
+	padding-top: 0; 
+	
+	.jp-relatedposts-items-visual .jp-relatedposts-post img.jp-relatedposts-post-img {
+ 		margin-bottom: 10px; 
+ 	}	
+
+	h4.jp-relatedposts-post-title {
+		font-size: 16px;
+		 
+		a {
+			color: #2d2d2d;
+			font-family: Montserrat,sans-serif;
+	    	font-weight: 400;
+	    	line-height: normal;
+	    	margin: 0 0 3px;
+	    	
+	    	&:hover {
+	    		text-decoration: none;
+	    	}
+	    }
+	} 	
+}
+
+/*--------------------------------------------------------------
 ## - Sharing
 --------------------------------------------------------------*/
 .site-content #primary .sharedaddy {
