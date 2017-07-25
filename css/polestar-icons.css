@@ -1,9 +1,9 @@
 @font-face {
   font-family: 'polestar-icons';
   src:
-    url('fonts/polestar-icons.ttf?rrps4') format('truetype'),
-    url('fonts/polestar-icons.woff?rrps4') format('woff'),
-    url('fonts/polestar-icons.svg?rrps4#polestar-icons') format('svg');
+    url('fonts/polestar-icons.ttf?j97mj1') format('truetype'),
+    url('fonts/polestar-icons.woff?j97mj1') format('woff'),
+    url('fonts/polestar-icons.svg?j97mj1#polestar-icons') format('svg');
   font-weight: normal;
   font-style: normal;
 }
@@ -121,6 +121,9 @@
 }
 .icon-codepen:before {
   content: "\f1cb";
+}
+.icon-yelp:before {
+  content: "\f1e9";
 }
 .icon-vimeo:before {
   content: "\f27d";

@@ -79,6 +79,7 @@ Available icons:
 * Weibo
 * WordPress.com
 * Xing
+* Yelp
 * YouTube
 
 == Plugin Support ==
