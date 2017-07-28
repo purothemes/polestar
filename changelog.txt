@@ -4,6 +4,7 @@
 * Added Yelp icon as an option for the social icon footer menu.
 * Fixed FlexSlider bugs when multiple sliders displayed on a single page.
 * Fixed blog posts slider padding bug.
+* Added Stripped page layout option. 
 * Added WooCommerce demo store notice styling.
 * Fixed WooCommerce Stripe payment gateway icon display.
 * Fixed WooCommerce archive category display.
