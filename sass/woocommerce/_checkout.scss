@@ -128,7 +128,7 @@
 					margin-right: 5px;
 				}
 				
-				img {
+				img:only-of-type {
 					max-height: 50px;
 				    position: absolute;
 				    right: 0;
@@ -142,6 +142,27 @@
 					&.payment_method_paypal {
 						padding-top: 20px; 
 					}
+				}
+
+				&.payment_method_stripe {
+					
+					img {
+						margin-top: -10px; 
+						position: absolute;
+						top: 50%;
+						
+						&:nth-of-type(3) {
+							right: 0;
+						}
+
+						&:nth-of-type(2) {
+							right: 37px;
+						}	
+
+						&:nth-of-type(1) {
+							right: 74px;
+						}											
+					}				
 				}
 			}
 		}

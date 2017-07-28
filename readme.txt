@@ -4,8 +4,8 @@ Contributors: Puro
 
 Tags: two-columns, right-sidebar, custom-background, custom-menu, custom-logo, featured-images, footer-widgets, sticky-post, threaded-comments, translation-ready, blog, e-commerce
 
-Requires at least: 4.6
-Tested up to: 4.7.2
+Requires at least: 4.7
+Tested up to: 4.8
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -79,6 +79,7 @@ Available icons:
 * Weibo
 * WordPress.com
 * Xing
+* Yelp
 * YouTube
 
 == Plugin Support ==

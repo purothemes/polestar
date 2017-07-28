@@ -40,8 +40,9 @@
 	}
 }
 
-// No Sidebar page layout setting.
-.page-layout-no-sidebar .content-area {
+// No Sidebar and Stripped page layout setting.
+.page-layout-no-sidebar .site-content .content-area,
+.page-layout-stripped .site-content .content-area {
 	float: none;
 	width: 100%; 
 }
@@ -49,7 +50,7 @@
 // Full Width page layout setting.
 .page-layout-full-width-no-sidebar {
 
-	.content-area {
+	.site-content .content-area {
 		float: none;
 		width: 100%; 
 	}

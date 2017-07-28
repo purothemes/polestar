@@ -76,20 +76,15 @@ jQuery( function( $ ) {
     }
 
 	// FlexSlider.
-	$( document ).ready( function() {
-		if ( $.isFunction( $.fn.flexslider ) ) {
-			$( '.featured-posts-slider' ).flexslider( {
-				animation: "slide",
-				controlNav: false,
-				customDirectionNav: $( ".flex-direction-nav a" )
-			} );
-			$( '.gallery-format-slider' ).flexslider( {
-				animation: "slide",
-				controlNav: false,
-				customDirectionNav: $( ".flex-direction-nav a" )
-			} );			
-		}
-	} );
+	$( window ).on( 'load', function() {
+	    $( '.flexslider' ).each( function() {
+	        $( this ).flexslider( {
+	        	animation: 'slide',
+	        	controlNav: false,
+	        	customDirectionNav: $( this ).find( '.flex-direction-nav a' )
+	        } );
+	    } );
+	} );	
 
 	// Scroll to top.
 	var sttWindowScroll = function () {
