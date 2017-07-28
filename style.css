@@ -2471,13 +2471,16 @@ object {
       width: 100%; }
     .featured-posts-slider .slides .slide .slide-content {
       text-align: center;
-      padding: 10% 10%;
+      padding: 160px 10% 0;
       position: absolute;
       width: 100%;
       z-index: 3; }
       @media (max-width: 768px) {
         .featured-posts-slider .slides .slide .slide-content {
-          padding-top: 7%; } }
+          padding-top: 80px; } }
+      @media (max-width: 480px) {
+        .featured-posts-slider .slides .slide .slide-content {
+          padding-top: 30px; } }
       .widget_siteorigin-panels-postloop .featured-posts-slider .slides .slide .slide-content {
         padding: 15% 10%; }
       .featured-posts-slider .slides .slide .slide-content .entry-title {
