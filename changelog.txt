@@ -1,5 +1,10 @@
 == Changelog ==
 
+= 1.0.6 - 28 July 2017 =
+* Added Yelp icon as an option for the social icon footer menu.
+* Fixed FlexSlider bugs when multiple sliders displayed on a single page.
+* Added WooCommerce demo store notice styling.
+
 = 1.0.5 - 20 July 2017 =
 * Added support for Jetpack Related Posts.
 * Minor WooCommerce style fixes.
