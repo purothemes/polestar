@@ -3,8 +3,10 @@
 = 1.0.6 - 28 July 2017 =
 * Added Yelp icon as an option for the social icon footer menu.
 * Fixed FlexSlider bugs when multiple sliders displayed on a single page.
+* Fixed blog posts slider padding bug.
 * Added WooCommerce demo store notice styling.
 * Fixed WooCommerce Stripe payment gateway icon display.
+* Fixed WooCommerce archive category display.
 
 = 1.0.5 - 20 July 2017 =
 * Added support for Jetpack Related Posts.
