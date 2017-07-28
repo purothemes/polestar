@@ -40,8 +40,9 @@
 	}
 }
 
-// No Sidebar page layout setting.
-.page-layout-no-sidebar .site-content .content-area {
+// No Sidebar and Stripped page layout setting.
+.page-layout-no-sidebar .site-content .content-area,
+.page-layout-stripped .site-content .content-area {
 	float: none;
 	width: 100%; 
 }

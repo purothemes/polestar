@@ -36,27 +36,42 @@
 
 					<nav id="site-navigation" class="main-navigation" role="navigation">
 
-						<?php $mega_menu_active = function_exists( 'max_mega_menu_is_enabled' ) && max_mega_menu_is_enabled( 'menu-1' ); ?>
+						<?php if ( puro_page_setting( 'layout' ) !== 'stripped' ) : ?>
 
-						<?php if ( get_theme_mod( 'mobile_menu', true ) && ! $mega_menu_active ) : ?>	
-							<a href="#menu" id="mobile-menu-button">
-								<?php polestar_display_icon( 'menu' ); ?>							
-								<span class="screen-reader-text"><?php esc_html_e( 'Menu', 'polestar' ); ?></span>
-							</a>
-						<?php endif; ?>
-					
-						<?php if ( get_theme_mod( 'header_menu', true ) ) : ?>
-							<?php wp_nav_menu( array( 'theme_location' => 'menu-1', 'menu_id' => 'primary-menu' ) ); ?>
+							<?php $mega_menu_active = function_exists( 'max_mega_menu_is_enabled' ) && max_mega_menu_is_enabled( 'menu-1' ); ?>
+
+							<?php if ( get_theme_mod( 'mobile_menu', true ) && ! $mega_menu_active ) : ?>	
+								<a href="#menu" id="mobile-menu-button">
+									<?php polestar_display_icon( 'menu' ); ?>							
+									<span class="screen-reader-text"><?php esc_html_e( 'Menu', 'polestar' ); ?></span>
+								</a>
+							<?php endif; ?>
+						
+							<?php if ( get_theme_mod( 'header_menu', true ) ) : ?>
+								<?php wp_nav_menu( array( 'theme_location' => 'menu-1', 'menu_id' => 'primary-menu' ) ); ?>
+							<?php endif; ?>
+
+							<?php if ( get_theme_mod( 'mini_cart', false ) && ! $mega_menu_active ) polestar_mini_cart(); ?>	
+
+							<?php if ( get_theme_mod( 'menu_search', true ) && ! $mega_menu_active ) : ?>
+								<a class="search-icon">
+									<label class="screen-reader-text"><?php esc_html_e( 'Open search bar', 'polestar' ); ?></label>
+									<?php polestar_display_icon( 'search' ); ?>
+								</a>
+							<?php endif; ?>
+
 						<?php endif; ?>
 
-						<?php if ( get_theme_mod( 'mini_cart', false ) && ! $mega_menu_active ) polestar_mini_cart(); ?>	
+						<?php if ( puro_page_setting( 'layout' ) == 'stripped' ) : ?>
+							<ul>
+								<li>
+									<a href="" class="stripped-backlink" onclick="window.history.go( -1 ); return false;">
+										<?php esc_html_e( 'Go back', 'polestar' ); ?>
+									</a>
+								</li>
+							</ul>
+						<?php endif; ?>						
 
-						<?php if ( get_theme_mod( 'menu_search', true ) && ! $mega_menu_active ) : ?>
-							<a class="search-icon">
-								<label class="screen-reader-text"><?php esc_html_e( 'Open search bar', 'polestar' ); ?></label>
-								<?php polestar_display_icon( 'search' ); ?>
-							</a>
-						<?php endif; ?>
 					</nav><!-- #site-navigation -->
 
 					<?php if ( get_theme_mod( 'menu_search', true ) ) : ?>	
