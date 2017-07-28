@@ -1,6 +1,7 @@
 .woocommerce-message,
 .woocommerce-error,
-.woocommerce-info {
+.woocommerce-info,
+.woocommerce-store-notice {
 	align-items: center;
 	background: $color__background-hr;
 	@include clearfix();
@@ -49,4 +50,21 @@
 	~ p {
 		margin-bottom: 26px; 
 	}
+}
+
+.woocommerce-store-notice {
+	justify-content: center;
+	position: absolute;
+	text-align: center;
+	top: 0;
+	width: 100%;
+	z-index: 9999;
+	
+	@at-root .admin-bar & {
+		top: 32px; 
+	}
+
+	@media (max-width: 768px) {
+		display: flex;
+	}	
 }

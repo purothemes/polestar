@@ -991,7 +991,8 @@ input.button.added:after,
 --------------------------------------------------------------*/
 .woocommerce-message,
 .woocommerce-error,
-.woocommerce-info {
+.woocommerce-info,
+.woocommerce-store-notice {
   align-items: center;
   background: #f6f6f6;
   color: #2d2d2d;
@@ -1005,32 +1006,37 @@ input.button.added:after,
   word-wrap: break-word; }
   .woocommerce-message::after,
   .woocommerce-error::after,
-  .woocommerce-info::after {
+  .woocommerce-info::after,
+  .woocommerce-store-notice::after {
     clear: both;
     content: "";
     display: table; }
   @media (max-width: 768px) {
     .woocommerce-message,
     .woocommerce-error,
-    .woocommerce-info {
+    .woocommerce-info,
+    .woocommerce-store-notice {
       display: block;
       font-size: 14px; } }
   .woocommerce-message .button,
   .woocommerce-error .button,
-  .woocommerce-info .button {
+  .woocommerce-info .button,
+  .woocommerce-store-notice .button {
     position: absolute;
     right: 20px;
     top: 15px; }
     @media (max-width: 768px) {
       .woocommerce-message .button,
       .woocommerce-error .button,
-      .woocommerce-info .button {
+      .woocommerce-info .button,
+      .woocommerce-store-notice .button {
         float: right;
         font-size: 13px;
         position: static; } }
   .woocommerce-message a,
   .woocommerce-error a,
-  .woocommerce-info a {
+  .woocommerce-info a,
+  .woocommerce-store-notice a {
     margin-left: 5px; }
 
 .woocommerce-error {
@@ -1042,6 +1048,19 @@ input.button.added:after,
     line-height: 2.5; }
   .woocommerce-error ~ p {
     margin-bottom: 26px; }
+
+.woocommerce-store-notice {
+  justify-content: center;
+  position: absolute;
+  text-align: center;
+  top: 0;
+  width: 100%;
+  z-index: 9999; }
+  .admin-bar .woocommerce-store-notice {
+    top: 32px; }
+  @media (max-width: 768px) {
+    .woocommerce-store-notice {
+      display: flex; } }
 
 /*--------------------------------------------------------------
 # Cart
