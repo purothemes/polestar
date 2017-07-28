@@ -563,12 +563,6 @@ fieldset legend {
   font-size: 18px;
   padding: 10px 0; }
 
-@media (-webkit-min-device-pixel-ratio: 0) {
-  select,
-  textarea,
-  input {
-    font-size: 16px; } }
-
 /*--------------------------------------------------------------
 # - Navigation
 --------------------------------------------------------------*/
@@ -1559,7 +1553,7 @@ a {
       padding-right: 0;
       width: 100%; } }
 
-.page-layout-no-sidebar .content-area {
+.page-layout-no-sidebar .site-content .content-area {
   float: none;
   width: 100%; }
 
