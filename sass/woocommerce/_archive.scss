@@ -30,7 +30,6 @@
 		font-size: 13px;
 		height: 37px; 
 		justify-content: left;
-		margin-bottom: 30px; 
 		text-align: left;
 		
 		@media (max-width: 768px) {
@@ -43,7 +42,6 @@
 	.woocommerce-ordering {
 		display: block;
 		float: right;
-		margin-bottom: 30px; 
 
 		select {
 			font-size: 13px;		
@@ -204,6 +202,10 @@
 		list-style: none;
 		margin: 0;
 		
+		@at-root .post-type-archive-product#{&} {
+			padding-top: 30px; 
+		}
+		
 		// Product list item.
 		.product {
 			float: left;
@@ -324,8 +326,9 @@
 				width: 100%; 
 			}
 
-			// Product title.
-			.woocommerce-loop-product__title {
+			// Product or category title.
+			.woocommerce-loop-product__title,
+			.woocommerce-loop-category__title {
 				font-size: 1.0666em; 
 				margin: 15px 0 5px;
 				
@@ -342,6 +345,10 @@
 
 				&:hover {
 					color: $color__text-medium;
+				}
+
+				mark {
+					background: none;
 				}
 			}
 

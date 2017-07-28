@@ -266,7 +266,6 @@ input.button.added:after,
   font-size: 13px;
   height: 37px;
   justify-content: left;
-  margin-bottom: 30px;
   text-align: left; }
   @media (max-width: 768px) {
     .woocommerce .woocommerce-result-count {
@@ -275,8 +274,7 @@ input.button.added:after,
 
 .woocommerce .woocommerce-ordering {
   display: block;
-  float: right;
-  margin-bottom: 30px; }
+  float: right; }
   .woocommerce .woocommerce-ordering select {
     font-size: 13px; }
   @media (max-width: 768px) {
@@ -394,6 +392,8 @@ input.button.added:after,
     clear: both;
     content: "";
     display: table; }
+  .post-type-archive-product.woocommerce .products {
+    padding-top: 30px; }
   .woocommerce .products .product {
     float: left;
     margin: 0 3.5% 50px 0;
@@ -454,15 +454,20 @@ input.button.added:after,
       display: block;
       margin: 0 auto;
       width: 100%; }
-    .woocommerce .products .product .woocommerce-loop-product__title {
+    .woocommerce .products .product .woocommerce-loop-product__title,
+    .woocommerce .products .product .woocommerce-loop-category__title {
       font-size: 1.0666em;
       margin: 15px 0 5px; }
-      .wc-columns-2.woocommerce .products .product .woocommerce-loop-product__title {
+      .wc-columns-2.woocommerce .products .product .woocommerce-loop-product__title, .woocommerce .products .product .woocommerce-loop-category__title {
         font-size: 1.2em; }
-      .wc-columns-5.woocommerce .products .product .woocommerce-loop-product__title {
+      .wc-columns-5.woocommerce .products .product .woocommerce-loop-product__title, .woocommerce .products .product .woocommerce-loop-category__title {
         font-size: 1em; }
-      .woocommerce .products .product .woocommerce-loop-product__title:hover {
+      .woocommerce .products .product .woocommerce-loop-product__title:hover,
+      .woocommerce .products .product .woocommerce-loop-category__title:hover {
         color: #626262; }
+      .woocommerce .products .product .woocommerce-loop-product__title mark,
+      .woocommerce .products .product .woocommerce-loop-category__title mark {
+        background: none; }
     .woocommerce .products .product .star-rating {
       display: block;
       float: left;
