@@ -10,8 +10,8 @@ jQuery( function( $ ) {
 		var $$ = $(this);
 
 		var c = $( '<div></div>' )
-			.html( '<span class="current">' + $$.find(':selected').html() + '</span>' + polestar_data.chevron_down )
-			.addClass('ordering-selector-wrapper')
+			.html( '<span class="current">' + $$.find( ':selected' ).html() + '</span>' + polestar_data.chevron_down )
+			.addClass( 'ordering-selector-wrapper' )
 			.insertAfter( $$ );
 
 		var dropdownContainer = $( '<div/>' )
