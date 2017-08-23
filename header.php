@@ -38,7 +38,7 @@
 
 						<?php if ( puro_page_setting( 'layout' ) !== 'stripped' ) : ?>
 
-							<?php $mega_menu_active = function_exists( 'max_mega_menu_is_enabled' ) && max_mega_menu_is_enabled( 'menu-1' ); ?>
+							<?php $mega_menu_active = function_exists( 'ubermenu' ) || function_exists( 'max_mega_menu_is_enabled' ) && max_mega_menu_is_enabled( 'menu-1' ); ?>
 
 							<?php if ( get_theme_mod( 'mobile_menu', true ) && ! $mega_menu_active ) : ?>	
 								<a href="#menu" id="mobile-menu-button">
