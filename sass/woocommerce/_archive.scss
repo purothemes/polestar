@@ -316,6 +316,23 @@
 						opacity: 1;
 						visibility: visible;
 					}
+
+					* {
+						
+						@at-root .is_mobile#{&} {
+							opacity: 0;
+							visibility: hidden;
+						}
+					}
+
+					img {
+
+						@at-root .is_mobile#{&} {
+							opacity: 1;
+							visibility: visible;
+						}
+
+					}
 				}
 			}						
 
