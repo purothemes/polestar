@@ -205,6 +205,10 @@
 		@at-root .post-type-archive-product#{&} {
 			padding-top: 30px; 
 		}
+
+		@at-root .tax-product_cat#{&} {
+			padding-top: 30px; 
+		}
 		
 		// Product list item.
 		.product {

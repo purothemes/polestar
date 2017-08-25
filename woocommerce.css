@@ -394,6 +394,8 @@ input.button.added:after,
     display: table; }
   .post-type-archive-product.woocommerce .products {
     padding-top: 30px; }
+  .tax-product_cat.woocommerce .products {
+    padding-top: 30px; }
   .woocommerce .products .product {
     float: left;
     margin: 0 3.5% 50px 0;
