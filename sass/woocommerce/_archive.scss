@@ -205,6 +205,10 @@
 		@at-root .post-type-archive-product#{&} {
 			padding-top: 30px; 
 		}
+
+		@at-root .tax-product_cat#{&} {
+			padding-top: 30px; 
+		}
 		
 		// Product list item.
 		.product {
@@ -315,6 +319,23 @@
 					.product_type_variable {
 						opacity: 1;
 						visibility: visible;
+					}
+
+					* {
+						
+						@at-root .is_mobile#{&} {
+							opacity: 0;
+							visibility: hidden;
+						}
+					}
+
+					img {
+
+						@at-root .is_mobile#{&} {
+							opacity: 1;
+							visibility: visible;
+						}
+
 					}
 				}
 			}						

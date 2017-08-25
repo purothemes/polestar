@@ -606,7 +606,7 @@ function polestar_mobile_menu_collapse() {
 		
 	    Customizer_Library_Styles()->add( array(    	
 	        'selectors' => array(
-	            'body:not(.page-layout-stripped) #masthead.mobile-menu .main-navigation ul',
+	            'body:not(.page-layout-stripped) #masthead.mobile-menu .main-navigation ul:not(.ubermenu-nav)',
 	            '#masthead.mobile-menu .main-navigation .search-icon'
 	        ),
 	        'declarations' => array(

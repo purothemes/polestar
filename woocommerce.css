@@ -4,27 +4,27 @@ Version: dev
 /*--------------------------------------------------------------
 # Layout
 --------------------------------------------------------------*/
-.woocommerce .content-area {
+.woocommerce.woocommerce-page .content-area {
   width: 100%; }
 
-.woocommerce.woocommerce-sidebar .content-area {
+.woocommerce.woocommerce-page.woocommerce-sidebar .content-area {
   float: right;
   width: 70%; }
   @media (max-width: 768px) {
-    .woocommerce.woocommerce-sidebar .content-area {
+    .woocommerce.woocommerce-page.woocommerce-sidebar .content-area {
       border: 0;
       padding-right: 0;
       width: 100%; } }
 
-.woocommerce.woocommerce-sidebar .widget-area {
+.woocommerce.woocommerce-page.woocommerce-sidebar .widget-area {
   float: left;
   padding-right: 4%;
   padding-left: 0; }
 
-.woocommerce.woocommerce-sidebar-right .content-area {
+.woocommerce.woocommerce-page.woocommerce-sidebar-right .content-area {
   float: left; }
 
-.woocommerce.woocommerce-sidebar-right .widget-area {
+.woocommerce.woocommerce-page.woocommerce-sidebar-right .widget-area {
   float: right;
   padding-right: 0;
   padding-left: 4%; }
@@ -394,6 +394,8 @@ input.button.added:after,
     display: table; }
   .post-type-archive-product.woocommerce .products {
     padding-top: 30px; }
+  .tax-product_cat.woocommerce .products {
+    padding-top: 30px; }
   .woocommerce .products .product {
     float: left;
     margin: 0 3.5% 50px 0;
@@ -448,6 +450,12 @@ input.button.added:after,
       .woocommerce .products .product .loop-product-thumbnail:hover .product-quick-view-button,
       .woocommerce .products .product .loop-product-thumbnail:hover .product_type_grouped,
       .woocommerce .products .product .loop-product-thumbnail:hover .product_type_variable {
+        opacity: 1;
+        visibility: visible; }
+      .is_mobile.woocommerce .products .product .loop-product-thumbnail:hover * {
+        opacity: 0;
+        visibility: hidden; }
+      .is_mobile.woocommerce .products .product .loop-product-thumbnail:hover img {
         opacity: 1;
         visibility: visible; }
     .woocommerce .products .product img {

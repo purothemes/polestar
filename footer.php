@@ -30,7 +30,7 @@ $footer_widgets_page_setting = puro_page_setting( 'footer_widgets', true );
 					if ( is_active_sidebar( 'sidebar-footer' ) ) {
 						$polestar_footer_sidebars = wp_get_sidebars_widgets();
 						?>
-						<div class="widgets widgets-<?php echo count( $polestar_footer_sidebars['sidebar-footer'] ) ?>" role="complementary" aria-label="<?php esc_html_e( 'Footer Widgets', 'polestar' ); ?>">
+						<div class="widgets widgets-<?php echo count( $polestar_footer_sidebars['sidebar-footer'] ) ?>" role="complementary" aria-label="<?php esc_attr_e( 'Footer Widgets', 'polestar' ); ?>">
 							<?php dynamic_sidebar( 'sidebar-footer' ); ?>
 						</div>
 						<?php
@@ -57,7 +57,7 @@ $footer_widgets_page_setting = puro_page_setting( 'footer_widgets', true );
 					?>
 				</div><!-- .site-info -->
 				<?php wp_nav_menu( array( 'theme_location' => 'menu-2', 'container_class' => 'footer-menu', 'depth' => 1, 'fallback_cb' => '' ) ); ?>
-			</div></div><!-- .polestar-container -->
+			</div><!-- .polestar-container -->
 		</div><!-- .bottom-bar -->
 
 		<?php do_action( 'polestar_footer_bottom' ); ?>

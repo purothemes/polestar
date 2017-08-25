@@ -1,5 +1,12 @@
 == Changelog ==
 
+= 1.0.7 - 25 August 2017 =
+* Added minimal UberMenu support.
+* Removed WooCommerce product hover buttons on mobile.
+* Fixed WooCommerce content container width issues.
+* Fixed WoooCommerce taxonomy page top spacing issue.
+* Minor code style improvements.
+
 = 1.0.6 - 28 July 2017 =
 * Added Yelp icon as an option for the social icon footer menu.
 * Fixed FlexSlider bugs when multiple sliders displayed on a single page.
