@@ -4,27 +4,27 @@ Version: dev
 /*--------------------------------------------------------------
 # Layout
 --------------------------------------------------------------*/
-.woocommerce .content-area {
+.woocommerce.woocommerce-page .content-area {
   width: 100%; }
 
-.woocommerce.woocommerce-sidebar .content-area {
+.woocommerce.woocommerce-page.woocommerce-sidebar .content-area {
   float: right;
   width: 70%; }
   @media (max-width: 768px) {
-    .woocommerce.woocommerce-sidebar .content-area {
+    .woocommerce.woocommerce-page.woocommerce-sidebar .content-area {
       border: 0;
       padding-right: 0;
       width: 100%; } }
 
-.woocommerce.woocommerce-sidebar .widget-area {
+.woocommerce.woocommerce-page.woocommerce-sidebar .widget-area {
   float: left;
   padding-right: 4%;
   padding-left: 0; }
 
-.woocommerce.woocommerce-sidebar-right .content-area {
+.woocommerce.woocommerce-page.woocommerce-sidebar-right .content-area {
   float: left; }
 
-.woocommerce.woocommerce-sidebar-right .widget-area {
+.woocommerce.woocommerce-page.woocommerce-sidebar-right .widget-area {
   float: right;
   padding-right: 0;
   padding-left: 4%; }
