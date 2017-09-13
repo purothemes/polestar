@@ -1,5 +1,8 @@
 == Changelog ==
 
+= 1.0.8 - 13 September 2017 =
+* Added support for the WooCommerce store notice.
+
 = 1.0.7 - 25 August 2017 =
 * Added minimal UberMenu support.
 * Removed WooCommerce product hover buttons on mobile.
