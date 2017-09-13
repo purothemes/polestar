@@ -1064,13 +1064,11 @@ input.button.added:after,
 
 .woocommerce-store-notice {
   justify-content: center;
-  position: absolute;
+  margin: 0;
   text-align: center;
   top: 0;
   width: 100%;
   z-index: 9999; }
-  .admin-bar .woocommerce-store-notice {
-    top: 32px; }
   @media (max-width: 768px) {
     .woocommerce-store-notice {
       display: flex; } }

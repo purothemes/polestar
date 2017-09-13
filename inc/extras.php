@@ -57,6 +57,11 @@ function polestar_body_classes( $classes ) {
 		 $classes[] = 'sidebar-left';
 	}
 
+	// WooCommerce top bar.
+	if ( class_exists( 'Woocommerce' ) && ! is_store_notice_showing() ) {
+		$classes[] = 'no-topbar';
+	}	
+
 	// WooCommerce columns.
 	if ( get_theme_mod( 'archive_columns' ) ) {
 		$classes[] = 'wc-columns-' . get_theme_mod( 'archive_columns' );
@@ -69,7 +74,7 @@ function polestar_body_classes( $classes ) {
 
 	if ( get_theme_mod( 'woocommerce_sidebar_position' ) == 'right' ) {
 		 $classes[] = 'woocommerce-sidebar-right';
-	}		
+	}
 
 	return $classes;
 }

@@ -10,6 +10,29 @@
 	.no-header-margin & {
 		margin-bottom: 0;
 	}
+
+	@at-root {
+
+		.topbar-out & {
+			@include clearfix;
+			top: 0;
+			left: 0;
+			width: 100%;
+		}
+
+		.topbar-out.admin-bar & {
+			top: 32px;
+
+			@media (max-width: 782px) {
+				top: 46px;
+			}
+
+			@media (max-width: 600px) {
+				position: fixed;
+				top: 0;
+			}
+		}		
+	}
 	
 	@media (max-width: 600px) {
 
@@ -203,4 +226,10 @@
 	.no-header-margin & {
 		margin-bottom: 0;
 	}
+}
+
+#topbar {
+	position: relative;
+	width: 100%;
+	z-index: 1000;
 }
