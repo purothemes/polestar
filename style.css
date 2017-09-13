@@ -1594,6 +1594,23 @@ a {
   z-index: 9999; }
   .no-header-margin .site-header {
     margin-bottom: 0; }
+  .topbar-out .site-header {
+    top: 0;
+    left: 0;
+    width: 100%; }
+    .topbar-out .site-header::after {
+      clear: both;
+      content: "";
+      display: table; }
+  .topbar-out.admin-bar .site-header {
+    top: 32px; }
+    @media (max-width: 782px) {
+      .topbar-out.admin-bar .site-header {
+        top: 46px; } }
+    @media (max-width: 600px) {
+      .topbar-out.admin-bar .site-header {
+        position: fixed;
+        top: 0; } }
   @media (max-width: 600px) {
     .admin-bar .site-header.sticky.stuck {
       top: 0; } }
@@ -1707,6 +1724,11 @@ a {
   margin-bottom: 60px; }
   .no-header-margin .masthead-sentinel {
     margin-bottom: 0; }
+
+#topbar {
+  position: relative;
+  width: 100%;
+  z-index: 1000; }
 
 /*--------------------------------------------------------------
 ## - Posts and pages

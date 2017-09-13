@@ -44,9 +44,29 @@ function polestar_woocommerce_change_hooks() {
 	add_action( 'polestar_woocommerce_quick_view_content', 'woocommerce_template_single_excerpt', 15 );
 	add_action( 'polestar_woocommerce_quick_view_content', 'woocommerce_template_single_add_to_cart', 20 );	
 
+	// Remove store notice hook.
+	remove_action( 'wp_footer', 'woocommerce_demo_store' );
+
 }
 endif;
 add_action( 'after_setup_theme', 'polestar_woocommerce_change_hooks' );
+
+/**
+ * Output the store notification.
+ */
+function polestar_woocommerce_demo_store() {
+	if ( ! is_store_notice_showing() ) {
+		return;
+	}
+
+	$notice = get_option( 'woocommerce_demo_store_notice' );
+
+	if ( empty( $notice ) ) {
+		$notice = __( 'This is a demo store for testing purposes &mdash; no orders shall be fulfilled.', 'polestar' );
+	}
+
+	echo '<p class="woocommerce-store-notice demo_store">' . wp_kses_post( $notice ) . ' <a href="#" class="woocommerce-store-notice__dismiss-link">' . esc_html__( 'Dismiss', 'polestar' ) . '</a></p>';
+}
 
 if ( ! function_exists( 'polestar_woocommerce_archive_product_image' ) ) :
 /**

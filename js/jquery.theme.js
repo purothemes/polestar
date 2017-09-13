@@ -6,15 +6,15 @@
 jQuery( function( $ ) {
 
 	// Element viewport visibility.
-	$.fn.isVisible = function() {
+	$.fn.polestarIsVisible = function() {
 		var rect = this[0].getBoundingClientRect();
 		return (
 			rect.bottom >= 0 &&
 			rect.right >= 0 &&
-			rect.top <= ( window.innerHeight || document.documentElement.clientHeight ) &&
-			rect.left <= ( window.innerWidth || document.documentElement.clientWidth )
+			rect.top <= (window.innerHeight || document.documentElement.clientHeight) &&
+			rect.left <= (window.innerWidth || document.documentElement.clientWidth)
 		);
-	};		
+	};	
 
 	// Entry thumbnail container size.
 	$( window ).load( function() {
@@ -110,7 +110,9 @@ jQuery( function( $ ) {
 	if ( $( '#masthead' ).hasClass( 'sticky' ) ) {
 		var $mhs = false,
 			pageTop = $( '#page' ).offset().top,
-			$mh = $( '#masthead' );
+			$mh = $( '#masthead' ),
+			$tb = $( '#topbar' ),
+			$tbwc = $('#topbar .woocommerce-store-notice[style*="display: none"]');
 
 		var smSetup = function() {
 
@@ -119,7 +121,24 @@ jQuery( function( $ ) {
 				$mhs.css( 'height', $mh.outerHeight() );
 			}
 
-			$mh.css( 'position', 'fixed' );
+			if ( ! $( 'body' ).hasClass( 'no-topbar' ) && ! $tb.polestarIsVisible() ) {
+				$( 'body' ).addClass( 'topbar-out' );
+			}
+
+			if ( $tb.length && $( 'body' ).hasClass( 'topbar-out' ) && $tb.polestarIsVisible() ) {
+				$( 'body' ).removeClass( 'topbar-out' );
+			}
+
+			if ( $( 'body' ).hasClass( 'no-topbar' ) && ! $( window ).scrollTop() ) {
+				$( 'body' ).addClass( 'topbar-out' );
+			}			
+
+			if ( $( 'body' ).hasClass( 'no-topbar' ) || ( ! $( 'body' ).hasClass( 'no-topbar' ) &&  $( 'body' ).hasClass( 'topbar-out' ) ) || $tbwc.length ) {
+				$mh.css( 'position', 'fixed' );
+			} else if ( ! $( 'body' ).hasClass( 'no-topbar' ) && ! $( 'body' ).hasClass( 'topbar-out' ) ) {
+				$mh.css( 'position', 'absolute' );
+			}											
+
 		};
 		smSetup();
 		$( window ).resize( smSetup ).scroll( smSetup );

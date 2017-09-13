@@ -54,15 +54,16 @@
 
 .woocommerce-store-notice {
 	justify-content: center;
-	position: absolute;
+	margin: 0;
+	// position: absolute;
 	text-align: center;
 	top: 0;
 	width: 100%;
 	z-index: 9999;
 	
-	@at-root .admin-bar & {
-		top: 32px; 
-	}
+	// @at-root .admin-bar & {
+	// 	top: 32px; 
+	// }
 
 	@media (max-width: 768px) {
 		display: flex;
