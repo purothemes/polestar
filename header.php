@@ -29,7 +29,7 @@
 				<?php polestar_woocommerce_demo_store(); ?>
 			</div><!-- #topbar -->
 		<?php endif; ?>
-		<header id="masthead" class="site-header<?php if ( get_theme_mod( 'header_layout' ) == 'centered' ) echo ' centered'; if ( get_theme_mod( 'sticky_header', true ) ) echo ' sticky'; if ( get_theme_mod( 'mobile_menu', true ) ) echo ' mobile-menu'; ?>" role="banner" <?php if ( get_theme_mod( 'sticky_header_scaling', true ) ) echo 'data-scale-logo="true"' ?> >
+		<header id="masthead" class="site-header<?php if ( get_theme_mod( 'header_layout' ) == 'centered' ) echo ' centered'; if ( get_theme_mod( 'sticky_header', true ) ) echo ' sticky'; if ( get_theme_mod( 'mobile_menu', true ) ) echo ' mobile-menu'; ?>" <?php if ( get_theme_mod( 'sticky_header_scaling', true ) ) echo 'data-scale-logo="true"' ?> >
 
 			<div class="polestar-container">
 		
@@ -39,7 +39,7 @@
 						<?php polestar_display_logo(); ?>
 					</div><!-- .site-branding -->
 
-					<nav id="site-navigation" class="main-navigation" role="navigation">
+					<nav id="site-navigation" class="main-navigation">
 
 						<?php if ( puro_page_setting( 'layout' ) !== 'stripped' ) : ?>
 

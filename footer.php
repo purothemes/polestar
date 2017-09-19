@@ -20,7 +20,7 @@ $footer_widgets_page_setting = puro_page_setting( 'footer_widgets', true );
 
 	<?php do_action( 'polestar_footer_before' ); ?>
 
-	<footer id="colophon" class="site-footer <?php if ( ! is_page() && $footer_widgets || is_page() && ( $footer_widgets && $footer_widgets_page_setting ) ) echo 'footer-active-sidebar'; if ( get_theme_mod( 'footer_layout' ) == 'full-width' ) echo ' full-width';  ?>" role="contentinfo">
+	<footer id="colophon" class="site-footer <?php if ( ! is_page() && $footer_widgets || is_page() && ( $footer_widgets && $footer_widgets_page_setting ) ) echo 'footer-active-sidebar'; if ( get_theme_mod( 'footer_layout' ) == 'full-width' ) echo ' full-width';  ?>">
 
 		<?php do_action( 'polestar_footer_top' ); ?>
 
@@ -30,7 +30,7 @@ $footer_widgets_page_setting = puro_page_setting( 'footer_widgets', true );
 					if ( is_active_sidebar( 'sidebar-footer' ) ) {
 						$polestar_footer_sidebars = wp_get_sidebars_widgets();
 						?>
-						<div class="widgets widgets-<?php echo count( $polestar_footer_sidebars['sidebar-footer'] ) ?>" role="complementary" aria-label="<?php esc_attr_e( 'Footer Widgets', 'polestar' ); ?>">
+						<div class="widgets widgets-<?php echo count( $polestar_footer_sidebars['sidebar-footer'] ) ?>" aria-label="<?php esc_attr_e( 'Footer Widgets', 'polestar' ); ?>">
 							<?php dynamic_sidebar( 'sidebar-footer' ); ?>
 						</div>
 						<?php
