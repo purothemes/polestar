@@ -47,7 +47,7 @@ $footer_widgets_page_setting = puro_page_setting( 'footer_widgets', true );
 
 					$credit_text = apply_filters(
 						'polestar_footer_credits',
-						sprintf( esc_html__( 'Theme by %s', 'polestar' ), '<a href="https://purothemes.com/" rel="designer">Puro</a>' )
+						sprintf( esc_html__( 'Theme by %s', 'polestar' ), '<a href="https://purothemes.com/">Puro</a>' )
 					);
 
 					if ( ! empty( $credit_text ) ) {
