@@ -59,7 +59,15 @@
 		max-width: none;
 		padding: 0;  
 	}
-} 
+}
+
+// Constrained layout page setting.
+.page-layout-constrained .content-area {
+	float: none;
+	margin: 0 auto;
+	max-width: 870px;
+	width: 100%; 
+}
 
 // Sidebar.
 .widget-area {

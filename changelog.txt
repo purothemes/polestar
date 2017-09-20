@@ -1,5 +1,11 @@
 == Changelog ==
 
+= 1.0.9 - 20 September 2017 =
+* Minor code enhancements. 
+* Added constrained page layout setting.
+* Enabled keyboard accessibility for the header search icon.
+* Updated Customizer Library to include Poppins Google Font.
+
 = 1.0.8 - 13 September 2017 =
 * Added support for the WooCommerce store notice.
 

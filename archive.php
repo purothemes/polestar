@@ -11,7 +11,7 @@
 get_header(); ?>
 
 	<div id="primary" class="content-area">
-		<main id="main" class="site-main" role="main">
+		<main id="main" class="site-main">
 			<header class="page-header">
 				<?php 
 					the_archive_title( '<h1 class="page-title"><span>', '</span></h1>' ); 

@@ -70,7 +70,7 @@ add_action( 'wp_enqueue_scripts', 'polestar_woocommerce_scripts' );
  * Markup to be outputted before WooCommerce content.
  */
 function polestar_woocommerce_wrapper_before() {
-	echo '<div id="primary" class="content-area"><main id="main" class="site-main" role="main">';
+	echo '<div id="primary" class="content-area"><main id="main" class="site-main">';
 }
 add_action( 'woocommerce_before_main_content', 'polestar_woocommerce_wrapper_before' );
 

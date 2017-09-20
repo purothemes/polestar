@@ -21,11 +21,6 @@ function polestar_body_classes( $classes ) {
 	$classes[] = 'no-js';
 	$classes[] = 'no-touch';
 
-	// Group blog.
-	if ( is_multi_author() ) {
-		$classes[] = 'group-blog';
-	}
-
 	// Non-singlar pages.
 	if ( ! is_singular() ) {
 		$classes[] = 'hfeed';

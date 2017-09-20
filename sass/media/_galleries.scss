@@ -9,6 +9,7 @@
 	vertical-align: top;
 	width: 100%;
 	
+	// Loops to enumerate the classes for gallery columns.
 	@for $i from 2 through 9 {
 		$margin: ($i - 1) * 2.5;
 		.gallery-columns-#{$i} & {

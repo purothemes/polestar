@@ -256,9 +256,11 @@
 	}
 
 	.search-icon {
-		display: inline-block;
+		background: none;
+		border-radius: none;
 		cursor: pointer;
 		margin-left: 27px; 
+		padding: 0;
 		position: relative;
 		top: 3px;
 		

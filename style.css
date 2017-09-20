@@ -249,6 +249,7 @@ body,
 button,
 input,
 select,
+optgroup,
 textarea {
   color: #626262;
   font-size: 15px;
@@ -371,11 +372,6 @@ html {
 
 body {
   background: #fff; }
-
-blockquote, q {
-  quotes: "" ""; }
-  blockquote:before, blockquote:after, q:before, q:after {
-    content: ""; }
 
 hr {
   background-color: #f6f6f6;
@@ -761,9 +757,11 @@ a {
   .main-navigation .current-menu-ancestor > a {
     color: #4d8ffb; }
   .main-navigation .search-icon {
-    display: inline-block;
+    background: none;
+    border-radius: none;
     cursor: pointer;
     margin-left: 27px;
+    padding: 0;
     position: relative;
     top: 3px; }
     .main-navigation .search-icon svg {
@@ -1565,6 +1563,12 @@ a {
 .page-layout-full-width-no-sidebar .site-content .polestar-container {
   max-width: none;
   padding: 0; }
+
+.page-layout-constrained .content-area {
+  float: none;
+  margin: 0 auto;
+  max-width: 870px;
+  width: 100%; }
 
 .widget-area {
   float: right;
