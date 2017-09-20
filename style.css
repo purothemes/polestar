@@ -757,9 +757,11 @@ a {
   .main-navigation .current-menu-ancestor > a {
     color: #4d8ffb; }
   .main-navigation .search-icon {
-    display: inline-block;
+    background: none;
+    border-radius: none;
     cursor: pointer;
     margin-left: 27px;
+    padding: 0;
     position: relative;
     top: 3px; }
     .main-navigation .search-icon svg {

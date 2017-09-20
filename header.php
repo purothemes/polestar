@@ -59,10 +59,10 @@
 							<?php if ( get_theme_mod( 'mini_cart', false ) && ! $mega_menu_active ) polestar_mini_cart(); ?>	
 
 							<?php if ( get_theme_mod( 'menu_search', true ) && ! $mega_menu_active ) : ?>
-								<a class="search-icon">
+								<button class="search-icon">
 									<label class="screen-reader-text"><?php esc_html_e( 'Open search bar', 'polestar' ); ?></label>
 									<?php polestar_display_icon( 'search' ); ?>
-								</a>
+								</button>
 							<?php endif; ?>
 
 						<?php endif; ?>
