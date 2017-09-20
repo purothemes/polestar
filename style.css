@@ -372,11 +372,6 @@ html {
 body {
   background: #fff; }
 
-blockquote, q {
-  quotes: "" ""; }
-  blockquote:before, blockquote:after, q:before, q:after {
-    content: ""; }
-
 hr {
   background-color: #f6f6f6;
   border: 0;
