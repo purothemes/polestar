@@ -25,6 +25,7 @@ function polestar_page_settings( $settings, $type, $id ) {
 			'default'     			=> esc_html__( 'Default', 'polestar' ),
 			'no-sidebar'  			=> esc_html__( 'No Sidebar', 'polestar' ),
 			'full-width-no-sidebar'	=> esc_html__( 'Full Width, No Sidebar', 'polestar' ),
+			'constrained'			=> esc_html__( 'Constrained', 'polestar' ),	
 			'stripped'				=> esc_html__( 'Stripped', 'polestar' ),
 		),
 	);

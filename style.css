@@ -1562,6 +1562,12 @@ a {
   max-width: none;
   padding: 0; }
 
+.page-layout-constrained .content-area {
+  float: none;
+  margin: 0 auto;
+  max-width: 870px;
+  width: 100%; }
+
 .widget-area {
   float: right;
   padding-left: 4%;
