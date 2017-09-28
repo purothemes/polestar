@@ -27,20 +27,30 @@ if ( post_password_required() ) {
 	if ( have_comments() ) : ?>
 		<h2 class="comments-title">
 			<?php
-				printf( // WPCS: XSS OK.
-					esc_html( _nx( '%1$s Comment', '%1$s Comments', get_comments_number(), 'comments title', 'polestar' ) ),
-					number_format_i18n( get_comments_number() ),
+			$comment_count = get_comments_number();
+			if ( 1 === $comment_count ) {
+				printf(
+					/* Translators: 1: title. */
+					esc_html_e( '1 Comment', 'polestar' ),
 					'<span>' . get_the_title() . '</span>'
 				);
+			} else {
+				printf( // WPCS: XSS OK.
+					/* Translators: 1: comment count number, 2: title. */
+					esc_html( _nx( '%1$s Comment', '%1$s Comments', $comment_count, 'comments title', 'polestar' ) ),
+					number_format_i18n( $comment_count ),
+					'<span>' . get_the_title() . '</span>'
+				);
+			}
 			?>
-		</h2>
+		</h2><!--. comments-title -->
 
 		<?php 
-		$args = array(
-			'prev_text' => '<span class="icon-long-arrow-left"></span> ' . esc_html__( 'Older comments', 'polestar' ),
-			'next_text' => esc_html__( 'Newer comments', 'polestar' ) . ' <span class="icon-long-arrow-right"></span>',
-		);
-		the_comments_navigation( $args ); 
+			$args = array(
+				'prev_text' => '<span class="icon-long-arrow-left"></span> ' . esc_html__( 'Older comments', 'polestar' ),
+				'next_text' => esc_html__( 'Newer comments', 'polestar' ) . ' <span class="icon-long-arrow-right"></span>',
+			);
+			the_comments_navigation( $args ); 
 		?>
 
 		<ol class="comment-list">
@@ -60,10 +70,13 @@ if ( post_password_required() ) {
 			);
 			the_comments_navigation( $args ); 
 
+	endif; // Check for have_comments().
+
+
 	// If comments are closed and there are comments, let's leave a little note, shall we?
 	if ( ! comments_open() && get_comments_number() && post_type_supports( get_post_type(), 'comments' ) ) : ?>
 
-		<p class="no-comments"><?php esc_html_e( 'Comments are closed.', 'polestar' ); ?></p>
+		<p class="no-comments"><?php esc_html_e( 'Comments are closed.', 'siteorigin-corp' ); ?></p>
 	<?php
 	endif;
 
