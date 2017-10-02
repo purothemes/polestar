@@ -77,7 +77,8 @@ function polestar_build_styles() {
 				'.pagination .page-numbers:hover',
 				'.page-links a span:hover',
 				'.tags-links a:hover',
-				'#page .widget_tag_cloud a:hover'
+				'#page .widget_tag_cloud a:hover',
+				'.main-navigation ul .menu-button a'
 			),
 			'declarations' => array(
 				'background' => $color
@@ -94,7 +95,8 @@ function polestar_build_styles() {
 				'.added_to_cart:hover',
 				'input[type="button"]:hover',
 				'input[type="reset"]:hover',
-				'input[type="submit"]:hover'
+				'input[type="submit"]:hover',
+				'.main-navigation ul .menu-button a:hover'
 			),
 			'declarations' => array(
 				'background-color' => 'rgba(' . $color_rgb . ', 0.8)'
