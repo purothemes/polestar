@@ -64,7 +64,7 @@
 
 				&:only-of-type > a {
 					padding: 15px 0;
-				}										
+				}									
 			}
 		}
 
@@ -150,7 +150,29 @@
 					}			
 				}
 			}					
-		}		
+		}	
+
+		// If a class of .menu-button is added to a menu item, style it as a button.
+		.menu-button {
+			margin-bottom: 0;
+			padding-bottom: 0;
+
+			a {
+				background: $color__accent;
+				border-radius: 2px;
+				color: #fff; 
+				display: inline-block;
+				font-size: .95em;
+				letter-spacing: .5px; 
+				line-height: normal;
+				padding: 6.5px 13px 5.5px;
+			
+				&:hover {
+					background-color: rgba(77, 143, 251, .8);
+					color: #fff;
+				}	
+			}		
+		}				
 
 		@at-root body.no-touch & {
 
