@@ -184,8 +184,7 @@ jQuery( function( $ ) {
 							height: imgHeight * scale,
 							'max-width' : 'none'
 						} );
-					}
-					else {
+					} else {
 						$branding.css( 'transform', 'scale(' + scale + ')' );
 					}
 
@@ -193,8 +192,7 @@ jQuery( function( $ ) {
 						'padding-top': mhPadding.top * scale,
 						'padding-bottom': mhPadding.bottom * scale
 					} ).addClass( 'stuck' );
-				}
-				else {
+				} else {
 					if ( ! $img.length ) {
 						$branding.css( 'transform', 'scale(1)' );
 					}
@@ -253,7 +251,7 @@ jQuery( function( $ ) {
 		var polestarResetMenu = function() {
 			$( '.main-navigation ul ul' ).each( function() {
 				var $$ = $( this );
-				var width = Math.max.apply( Math, $$.find( '> li > a' ).map( function() {
+				var width = Math.max.apply( Math, $$.find( '> li:not(.mini_cart_item) > a' ).map( function() {
 					return $( this ).width();
 				} ).get() );
 				$$.find( '> li > a' ).width( width );
