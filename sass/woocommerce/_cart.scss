@@ -272,7 +272,7 @@
 		}
 		
 		.widget {
-			margin: 25px 25px;
+			margin: 25px;
 			max-height: 70vh;
 			overflow-y: auto;
 			
@@ -281,12 +281,12 @@
 				line-height: 2; 
 				width: 100%;
 				
-				&:hover a {
-					color: $color__accent;
-				}
-				
 				a {
 					color: $color__text-medium;
+					
+					&:hover {
+						color: $color__accent;
+					}
 				}
 			}
 

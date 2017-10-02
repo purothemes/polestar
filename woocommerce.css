@@ -1248,17 +1248,17 @@ input.button.added:after,
   .site-header .shopping-cart-dropdown * {
     font-family: "Open Sans", sans-serif; }
   .site-header .shopping-cart-dropdown .widget {
-    margin: 25px 25px;
+    margin: 25px;
     max-height: 70vh;
     overflow-y: auto; }
     .site-header .shopping-cart-dropdown .widget li {
       font-weight: normal;
       line-height: 2;
       width: 100%; }
-      .site-header .shopping-cart-dropdown .widget li:hover a {
-        color: #4d8ffb; }
       .site-header .shopping-cart-dropdown .widget li a {
         color: #626262; }
+        .site-header .shopping-cart-dropdown .widget li a:hover {
+          color: #4d8ffb; }
     .site-header .shopping-cart-dropdown .widget .woocommerce-mini-cart__empty-message {
       display: block;
       font-size: .95em;
