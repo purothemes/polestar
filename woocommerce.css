@@ -948,6 +948,9 @@ input.button.added:after,
     list-style: none;
     margin: 0;
     padding: 10px 0; }
+    .cart_list li:first-of-type,
+    .product_list_widget li:first-of-type {
+      padding-top: 0; }
     .cart_list li a,
     .product_list_widget li a {
       display: block;
@@ -1245,7 +1248,7 @@ input.button.added:after,
   .site-header .shopping-cart-dropdown * {
     font-family: "Open Sans", sans-serif; }
   .site-header .shopping-cart-dropdown .widget {
-    margin: 15px 25px 25px;
+    margin: 25px 25px;
     max-height: 70vh;
     overflow-y: auto; }
     .site-header .shopping-cart-dropdown .widget li {

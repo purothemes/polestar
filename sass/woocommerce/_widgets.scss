@@ -45,6 +45,10 @@
 		margin: 0;
 		padding: 10px 0;
 		
+		&:first-of-type {
+			padding-top: 0; 
+		}
+		
 		a {
 			display: block;
 			font-weight: 600;
