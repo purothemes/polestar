@@ -449,6 +449,8 @@ jQuery( function( $ ) {
 			$$.removeClass( 'to-close' );
 		} );
 
+		$( '#mobile-navigation a[href*="#"]:not([href="#"])' ).polestarSmoothScroll();
+
 	} );   
 
 } );	
