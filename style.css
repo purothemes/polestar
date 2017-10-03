@@ -1653,6 +1653,8 @@ a {
     .site-header .site-branding img {
       display: inline-block;
       vertical-align: middle; }
+      .tagline.site-header .site-branding img {
+        padding-bottom: 5px; }
     .site-header .site-branding .site-description {
       color: #626262;
       font-family: "Montserrat", sans-serif;

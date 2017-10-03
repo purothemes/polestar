@@ -71,6 +71,10 @@
 		img {
 			display: inline-block;
 			vertical-align: middle;
+			
+			@at-root .tagline#{&} {
+				padding-bottom: 5px;
+			}	
 		}
 
 		.site-description {
