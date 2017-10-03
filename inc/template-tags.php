@@ -350,7 +350,9 @@ function polestar_display_logo() {
 		?><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
 			<span class="screen-reader-text"><?php esc_html_e( 'Home', 'polestar' ); ?></span><?php
 			echo wp_get_attachment_image( $logo, 'full', false, $attrs );
-		?></a><?php
+		?></a><?php if ( get_theme_mod( 'tagline' ) ) : ?>
+			<p class="site-description"><?php bloginfo( 'description' ); ?></p>
+		<?php endif;
 
 	} elseif ( function_exists( 'has_custom_logo' ) && has_custom_logo() ) {
 		?><?php the_custom_logo();
