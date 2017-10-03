@@ -146,10 +146,9 @@ jQuery( function( $ ) {
 		// Sticky header shadow.
 		var smShadow = function() {
             if ( $( window ).scrollTop() > 0 ) {
-                $( $mh ).addClass( 'stuck' );
-            }
-            else {
-                $( $mh ).removeClass( 'stuck' );
+            	$( $mh ).addClass( 'stuck' );
+            } else {
+            	$( $mh ).removeClass( 'stuck' );
             }			
 		};
 		smShadow();
@@ -309,7 +308,7 @@ jQuery( function( $ ) {
         var headerHeight = 0;
     }    	
 
-	$.fn.polestarSmoothScroll = function () {
+	$.fn.polestarSmoothScroll = function() {
 		$( this ).click( function ( e ) {
 
 	        var hash    = this.hash;
