@@ -6,6 +6,7 @@
 * Minor code enhancements.
 * Added a class for menu buttons.
 * Fixed smooth scroll from mobile menu bug.
+* Fixed one page menu item selection bug.
 * Added tagline when setting is enabled and a logo has been added.
 
 = 1.0.9 - 20 September 2017 =
