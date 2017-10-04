@@ -119,7 +119,7 @@ if ( ! function_exists( 'polestar_entry_footer' ) ) :
 function polestar_entry_footer() {
 
 	if ( is_single() && has_tag() && get_theme_mod( 'post_tags', true ) ) {
-		echo '<footer class="entry-footer"><span class="tags-links">' . get_the_tag_list( '', esc_html__( '', 'polestar' ) ) . '</span></footer>';
+		echo '<footer class="entry-footer"><span class="tags-links">' . get_the_tag_list() . '</span></footer>';
 	}	
 }
 endif;
@@ -350,7 +350,9 @@ function polestar_display_logo() {
 		?><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
 			<span class="screen-reader-text"><?php esc_html_e( 'Home', 'polestar' ); ?></span><?php
 			echo wp_get_attachment_image( $logo, 'full', false, $attrs );
-		?></a><?php
+		?></a><?php if ( get_theme_mod( 'tagline' ) ) : ?>
+			<p class="site-description"><?php bloginfo( 'description' ); ?></p>
+		<?php endif;
 
 	} elseif ( function_exists( 'has_custom_logo' ) && has_custom_logo() ) {
 		?><?php the_custom_logo();

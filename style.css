@@ -694,6 +694,21 @@ a {
         left: initial;
         left: auto;
         right: 100%; }
+    .main-navigation ul .menu-button {
+      margin-bottom: 0;
+      padding-bottom: 0; }
+      .main-navigation ul .menu-button a {
+        background: #4d8ffb;
+        border-radius: 2px;
+        color: #fff;
+        display: inline-block;
+        font-size: .95em;
+        letter-spacing: .5px;
+        line-height: normal;
+        padding: 6.5px 13px 5.5px; }
+        .main-navigation ul .menu-button a:hover {
+          background-color: rgba(77, 143, 251, 0.8);
+          color: #fff; }
     body.no-touch .main-navigation ul li:hover > ul,
     body.no-touch .main-navigation ul li.focus > ul {
       opacity: 1;
@@ -1638,6 +1653,8 @@ a {
     .site-header .site-branding img {
       display: inline-block;
       vertical-align: middle; }
+      .tagline.site-header .site-branding img {
+        padding-bottom: 5px; }
     .site-header .site-branding .site-description {
       color: #626262;
       font-family: "Montserrat", sans-serif;

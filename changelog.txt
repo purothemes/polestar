@@ -1,5 +1,14 @@
 == Changelog ==
 
+= 1.0.10 - 03 October 2017 =
+* Updated comments navigation function.
+* Removed core HTML5 searchform support.
+* Minor code enhancements.
+* Added a class for menu buttons.
+* Fixed smooth scroll from mobile menu bug.
+* Fixed one page menu item selection bug.
+* Added tagline when setting is enabled and a logo has been added.
+
 = 1.0.9 - 20 September 2017 =
 * Minor code enhancements. 
 * Added constrained page layout setting.

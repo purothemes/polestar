@@ -157,11 +157,3 @@ function polestar_siteorigin_premium( $id ) {
     return 1;
 }
 add_filter( 'siteorigin_premium_affiliate_id', 'polestar_siteorigin_premium' );
-
-/**
- * Add our Meta Slider affiliate link.
- */
-function polestar_metaslider_affiliate() {
-	return 'https://getdpd.com/cart/hoplink/15318?referrer=1ag7po4k2uas40wowgw';
-}
-add_filter( 'metaslider_hoplink', 'polestar_metaslider_affiliate' );

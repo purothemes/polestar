@@ -11,8 +11,8 @@ jQuery( function( $ ) {
 		return (
 			rect.bottom >= 0 &&
 			rect.right >= 0 &&
-			rect.top <= (window.innerHeight || document.documentElement.clientHeight) &&
-			rect.left <= (window.innerWidth || document.documentElement.clientWidth)
+			rect.top <= ( window.innerHeight || document.documentElement.clientHeight ) &&
+			rect.left <= ( window.innerWidth || document.documentElement.clientWidth )
 		);
 	};	
 
@@ -70,20 +70,20 @@ jQuery( function( $ ) {
 		} );
 	};	
 
-    // Setup FitVids for entry content, Page Builder by SiteOrigin and WooCommerce. Ignore Tableau.
-    if ( typeof $.fn.fitVids !== 'undefined' ) {
-        $( '.entry-content, .entry-content .panel, .woocommerce #main' ).fitVids( { ignore: '.tableauViz' } );
-    }
+	// Setup FitVids for entry content, Page Builder by SiteOrigin and WooCommerce. Ignore Tableau.
+	if ( typeof $.fn.fitVids !== 'undefined' ) {
+		$( '.entry-content, .entry-content .panel, .woocommerce #main' ).fitVids( { ignore: '.tableauViz' } );
+	}
 
 	// FlexSlider.
 	$( window ).on( 'load', function() {
-	    $( '.flexslider' ).each( function() {
-	        $( this ).flexslider( {
-	        	animation: 'slide',
-	        	controlNav: false,
-	        	customDirectionNav: $( this ).find( '.flex-direction-nav a' )
-	        } );
-	    } );
+		$( '.flexslider' ).each( function() {
+			$( this ).flexslider( {
+				animation: 'slide',
+				controlNav: false,
+				customDirectionNav: $( this ).find( '.flex-direction-nav a' )
+			} );
+		} );
 	} );	
 
 	// Scroll to top.
@@ -145,17 +145,16 @@ jQuery( function( $ ) {
 
 		// Sticky header shadow.
 		var smShadow = function() {
-            if ( $( window ).scrollTop() > 0 ) {
-                $( $mh ).addClass( 'stuck' );
-            }
-            else {
-                $( $mh ).removeClass( 'stuck' );
-            }			
+			if ( $( window ).scrollTop() > 0 ) {
+				$( $mh ).addClass( 'stuck' );
+			} else {
+				$( $mh ).removeClass( 'stuck' );
+			}			
 		};
 		smShadow();
-        $( window ).scroll( smShadow );
+		$( window ).scroll( smShadow );
 
-        // Header padding to be used if logo scaling is enabled.
+		// Header padding to be used if logo scaling is enabled.
 		var mhPadding = {
 			top: parseInt( $mh.css( 'padding-top' ) ),
 			bottom: parseInt( $mh.css( 'padding-bottom' ) )
@@ -184,8 +183,7 @@ jQuery( function( $ ) {
 							height: imgHeight * scale,
 							'max-width' : 'none'
 						} );
-					}
-					else {
+					} else {
 						$branding.css( 'transform', 'scale(' + scale + ')' );
 					}
 
@@ -193,8 +191,7 @@ jQuery( function( $ ) {
 						'padding-top': mhPadding.top * scale,
 						'padding-bottom': mhPadding.bottom * scale
 					} ).addClass( 'stuck' );
-				}
-				else {
+				} else {
 					if ( ! $img.length ) {
 						$branding.css( 'transform', 'scale(1)' );
 					}
@@ -253,7 +250,7 @@ jQuery( function( $ ) {
 		var polestarResetMenu = function() {
 			$( '.main-navigation ul ul' ).each( function() {
 				var $$ = $( this );
-				var width = Math.max.apply( Math, $$.find( '> li > a' ).map( function() {
+				var width = Math.max.apply( Math, $$.find( '> li:not(.mini_cart_item) > a' ).map( function() {
 					return $( this ).width();
 				} ).get() );
 				$$.find( '> li > a' ).width( width );
@@ -283,58 +280,58 @@ jQuery( function( $ ) {
 		} );
 	}
 
-    // Main menu current menu item indication.
-    jQuery( document ).ready( function( $ ) {
-        if ( window.location.hash ) {
-            return;
-        } else {
-            $( '#site-navigation a[href="'+ window.location.href +'"]' ).parent( 'li' ).addClass( 'current-menu-item' );
-        }
-        $( window ).scroll( function() {
-            if ( $( '#site-navigation ul li' ).hasClass( 'current' ) ) {
-               $( '#site-navigation li' ).removeClass( 'current-menu-item' ); 
-            }
-        } );
-    } ); 
+	// Main menu current menu item indication.
+	jQuery( document ).ready( function( $ ) { 	
+		if ( window.location.hash ) {
+			return;
+		} else {
+			$( '#site-navigation a[href="'+ window.location.href +'"]' ).parent( 'li' ).addClass( 'current-menu-item' );
+		}
+		$( window ).scroll( function() {
+			if ( $( '#site-navigation ul li' ).hasClass( 'current' ) ) {
+			   $( '#site-navigation li' ).removeClass( 'current-menu-item' ); 
+			}
+		} );
+	} ); 
 
 	// Smooth scroll from internal page anchors.
-    var adminBarHeight = $( '#wpadminbar' ).outerHeight(),
-    	isAdminBar = $( 'body' ).hasClass( 'admin-bar' ),
-    	isStickyHeader = $( 'header' ).hasClass( 'sticky' );
+	var adminBarHeight = $( '#wpadminbar' ).outerHeight(),
+		isAdminBar = $( 'body' ).hasClass( 'admin-bar' ),
+		isStickyHeader = $( 'header' ).hasClass( 'sticky' );
 
-    // Header height. 2px to account for header shadow.
-    if ( isStickyHeader && isAdminBar && jQuery( window ).width() > 600 ) { // From 600px the admin bar isn't sticky so we shouldn't take its height into account.
-    	var headerHeight = adminBarHeight + $( 'header' ).outerHeight() - 2;
-    } else if ( isStickyHeader ) {
-    	var headerHeight = $( 'header' ).outerHeight() - 2;              
-    } else {
-        var headerHeight = 0;
-    }    	
+	// Header height. 2px to account for header shadow.
+	if ( isStickyHeader && isAdminBar && jQuery( window ).width() > 600 ) { // From 600px the admin bar isn't sticky so we shouldn't take its height into account.
+		var headerHeight = adminBarHeight + $( 'header' ).outerHeight() - 2;
+	} else if ( isStickyHeader ) {
+		var headerHeight = $( 'header' ).outerHeight() - 2;              
+	} else {
+		var headerHeight = 0;
+	}    	
 
-	$.fn.polestarSmoothScroll = function () {
-		$( this ).click( function ( e ) {
+	$.fn.polestarSmoothScroll = function() {
+		$( this ).click( function( e ) {
 
-	        var hash    = this.hash;
-	        var idName  = hash.substring( 1 );      // Get ID name.
-	        var alink   = this;                     // This button pressed.
+			var hash    = this.hash;
+			var idName  = hash.substring( 1 );	// Get ID name.
+			var alink   = this;                 // This button pressed.
 
-	        // Check if there is a section that had same id as the button pressed.
-	        if ( jQuery( '.panel-grid [id*=' + idName + ']' ).length > 0 ) {
-	            jQuery( '#site-navigation .current' ).removeClass( 'current' );
-	            jQuery( alink ).parent( 'li' ).addClass( 'current' );
-	        } else {
-	            jQuery( '#site-navigation .current' ).removeClass( 'current' );
-	        }
-	        if ( location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname ) {
-	            var target = jQuery( this.hash );
-	            target = target.length ? target : jQuery( '[name=' + this.hash.slice(1) +']' );
-	            if ( target.length ) {
-	                jQuery( 'html, body' ).animate( {
-	                    scrollTop: target.offset().top - headerHeight
-	                }, 1200 );
-	                return false; 
-	            }
-	        }
+			// Check if there is a section that had same id as the button pressed.
+			if ( jQuery( '.panel-grid [id*=' + idName + ']' ).length > 0 ) {
+				jQuery( '#site-navigation .current' ).removeClass('current');
+				jQuery( alink).parent( 'li' ).addClass( 'current' );
+			} else {
+				jQuery( '#site-navigation .current' ).removeClass( 'current' );
+			}
+			if ( location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname ) {
+				var target = jQuery( this.hash );
+				target = target.length ? target : jQuery( '[name=' + this.hash.slice( 1 ) +']' );
+				if ( target.length ) {
+					jQuery( 'html, body' ).animate( {
+						scrollTop: target.offset().top - headerHeight
+					}, 1200 );
+					return false; 
+				}
+			}
 		} );
 	};
 
@@ -342,62 +339,63 @@ jQuery( function( $ ) {
 		$( '#site-navigation a[href*="#"]:not([href="#"]), .comments-link a[href*="#"]:not([href="#"]), .puro-scroll[href*="#"]:not([href="#"])' ).polestarSmoothScroll();
 	} );
 
-    // Smooth scroll from external anchors.
-    jQuery( window ).load( function() {
+	// Smooth scroll from external anchors.
+	jQuery( window ).load( function() {
 
-        if ( location.pathname.replace( /^\//,'' ) == window.location.pathname.replace( /^\//,'' ) && location.hostname == window.location.hostname ) {
-            var target = jQuery( window.location.hash );
-            if ( target.length ) {
-               $( document ).scrollTop( 0 ); // The late loading of certain SiteOrigin widgets, unfortunately, makes this necessary. If a better method is known, please, submit a PR or reach out.
-                jQuery( 'html, body' ).animate( {
-                    scrollTop: target.offset().top - headerHeight
-                }, 1200 );
-                return false;
-            }
-        }
-    } );
+		if ( location.pathname.replace( /^\//,'' ) == window.location.pathname.replace( /^\//,'' ) && location.hostname == window.location.hostname ) {
+			var target = jQuery( window.location.hash );
+			if ( target.length ) {
+			   $( document ).scrollTop( 0 ); // The late loading of certain SiteOrigin widgets, unfortunately, makes this necessary. If a better method is known, please, submit a PR or reach out.
+				jQuery( 'html, body' ).animate( {
+					scrollTop: target.offset().top - headerHeight
+				}, 1200 );
+				return false;
+			}
+		}
+	} );
 
-    // Indicate which section of the page we're viewing with selected menu classes.
-    function polestarSelected() {  
+	// Indicate which section of the page we're viewing with selected menu classes.
+	function polestarSelected() {  
 
-        // Cursor position.
-        var scrollTop = jQuery( window ).scrollTop();       
+		// Cursor position.
+		var scrollTop = jQuery( window ).scrollTop();       
 
-        // Used for checking if the cursor is in one section or not.
-        var isInOneSection = 'no';                                        
+		// Used for checking if the cursor is in one section or not.
+		var isInOneSection = 'no';                                        
 
-        // For all sections check if the cursor is inside a section.
-        jQuery( ".panel-grid" ).each( function() {
+		// For all sections check if the cursor is inside a section.
+		jQuery( '.panel-row-style, .menu' ).each( function() {
 
-            // Section ID.
-            var thisID = '#' + jQuery( this ).attr( 'id' );    
+			// Section ID.
+			var thisID = '#' + jQuery( this ).attr( 'id' );    
 
-            // Distance between top and our section. Minus 2px to compensate for an extra pixel produced when a Page Builder row bottom margin is set to 0.              
-            var offset = jQuery( this ).offset().top - 2;   
+			// Distance between top and our section. Minus 2px to compensate for an extra pixel produced when a Page Builder row bottom margin is set to 0.              
+			var offset = jQuery( this ).offset().top - 2;   
 
-            // Section height.                      
-            var thisHeight = jQuery( this ).outerHeight();                     
-            
-            // Where the section begins.
-            var thisBegin = offset - headerHeight;
-                  
-            // Where the section ends.                            
-            var thisEnd = offset + thisHeight - headerHeight;               
+			// Section height.                      
+			var thisHeight = jQuery( this ).outerHeight();                     
+			
+			// Where the section begins.
+			var thisBegin = offset - headerHeight;
+				  
+			// Where the section ends.                            
+			var thisEnd = offset + thisHeight - headerHeight;               
 
-            // If position of the cursor is inside of the this section.
-            if ( scrollTop >= thisBegin && scrollTop <= thisEnd ) {
-                jQuery( '#site-navigation .current' ).removeClass( 'current' );
-                // Find the menu button with the same ID section.
-                jQuery( '#site-navigation a[href$="' + thisID + '"]' ).parent( 'li' ).addClass( 'current' );
-                return false;
-            }
-            if ( isInOneSection == 'no' ) {
-                jQuery( '#site-navigation .current' ).removeClass( 'current' );
-            }
-        } );
-    }
+			// If position of the cursor is inside of the this section.
+			if ( scrollTop >= thisBegin && scrollTop <= thisEnd ) {
+				isInOneSection = 'yes';
+				jQuery( '#site-navigation .current' ).removeClass( 'current' );
+				// Find the menu button with the same ID section.
+				jQuery( '#site-navigation a[href$="' + thisID + '"]' ).parent( 'li' ).addClass( 'current' );	// Find the menu button with the same ID section.
+				return false;
+			}
+			if ( isInOneSection === 'no' ) {
+				jQuery( '#site-navigation .current' ).removeClass( 'current' );
+			}
+		} );
+	}
 
-    jQuery( window ).on( 'scroll', polestarSelected );   	
+	jQuery( window ).on( 'scroll', polestarSelected );
 
 	// Mobile menu.
 	var $mobileMenu = false;
@@ -420,7 +418,7 @@ jQuery( function( $ ) {
 				$mobileMenu.append( $( '.main-navigation .shopping-cart .shopping-cart-link' ).clone() );
 			}
 			
-        	$mobileMenu.find( '#primary-menu' ).show().css( 'opacity', 1 );
+			$mobileMenu.find( '#primary-menu' ).show().css( 'opacity', 1 );
 			$mobileMenu.find( '.menu-item-has-children > a, .page_item_has_children > a' ).after( '<button class="dropdown-toggle" aria-expanded="false"><i class="icon-chevron-down" aria-hidden="true"></i></button>' );
 			$mobileMenu.find( '.dropdown-toggle' ).click( function( e ) {
 				e.preventDefault();
@@ -451,6 +449,8 @@ jQuery( function( $ ) {
 			
 			$$.removeClass( 'to-close' );
 		} );
+
+		$( '#mobile-navigation a[href*="#"]:not([href="#"])' ).polestarSmoothScroll();
 
 	} );   
 
