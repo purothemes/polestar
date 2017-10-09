@@ -608,7 +608,7 @@ function polestar_mobile_menu_collapse() {
 		
 	    Customizer_Library_Styles()->add( array(    	
 	        'selectors' => array(
-	            'body:not(.page-layout-stripped) #masthead.mobile-menu .main-navigation ul:not(.ubermenu-nav)',
+	            'body:not(.page-layout-stripped) #masthead.mobile-menu .main-navigation ul.menu',
 	            '#masthead.mobile-menu .main-navigation .search-icon'
 	        ),
 	        'declarations' => array(
@@ -619,10 +619,10 @@ function polestar_mobile_menu_collapse() {
 
 	    Customizer_Library_Styles()->add( array(    	
 	        'selectors' => array(
-	            '#masthead.mobile-menu #mobile-menu-button'
-	            	        ),
+	        	'#masthead.mobile-menu #mobile-menu-button'
+	        ),
 	        'declarations' => array(
-	            'display' => 'inline-block',
+	        	'display' => 'inline-block',
 	        ),
 	        'media' => '(max-width:' . $number . 'px)'
 	    ) );
@@ -630,9 +630,9 @@ function polestar_mobile_menu_collapse() {
 	    Customizer_Library_Styles()->add( array(    	
 	        'selectors' => array(
 	            '.site-header #mobile-navigation'
-	            	        ),
+	        ),
 	        'declarations' => array(
-	            'display' => 'none !important',
+	        	'display' => 'none !important',
 	        ),
 	        'media' => '(min-width:' . $number_min . 'px)'
 	    ) );
