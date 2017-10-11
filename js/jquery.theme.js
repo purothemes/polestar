@@ -364,7 +364,7 @@ jQuery( function( $ ) {
 		var isInOneSection = 'no';                                        
 
 		// For all sections check if the cursor is inside a section.
-		jQuery( '.panel-row-style, .menu' ).each( function() {
+		jQuery( '.panel-row-style' ).each( function() {
 
 			// Section ID.
 			var thisID = '#' + jQuery( this ).attr( 'id' );    
