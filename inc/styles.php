@@ -614,7 +614,7 @@ function polestar_mobile_menu_collapse() {
 	        'declarations' => array(
 	            'display' => 'none',
 	        ),
-	        'media' => '(max-width:' . $number . 'px)'
+	        'media' => 'screen and (max-width:' . $number . 'px)'
 	    ) );
 
 	    Customizer_Library_Styles()->add( array(    	
@@ -624,7 +624,7 @@ function polestar_mobile_menu_collapse() {
 	        'declarations' => array(
 	        	'display' => 'inline-block',
 	        ),
-	        'media' => '(max-width:' . $number . 'px)'
+	        'media' => 'screen and (max-width:' . $number . 'px)'
 	    ) );
 
 	    Customizer_Library_Styles()->add( array(    	
@@ -634,7 +634,7 @@ function polestar_mobile_menu_collapse() {
 	        'declarations' => array(
 	        	'display' => 'none !important',
 	        ),
-	        'media' => '(min-width:' . $number_min . 'px)'
+	        'media' => 'screen and (min-width:' . $number_min . 'px)'
 	    ) );
 }
 add_action( 'customizer_library_styles', 'polestar_mobile_menu_collapse' );
