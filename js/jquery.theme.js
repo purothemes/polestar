@@ -38,7 +38,7 @@ jQuery( function( $ ) {
 		};
 	} );
 
-	$.fn.burstAnimation = function( options ) {
+	$.fn.polestarBurstAnimation = function( options ) {
 		var settings = $.extend( {
 			event: "click",
 			container: "parent"
@@ -208,7 +208,7 @@ jQuery( function( $ ) {
 	}
 
 	// Header search.
-	$( '.search-field' ).burstAnimation( {
+	$( '.search-field' ).polestarBurstAnimation( {
 		event: "focus",
 		container: ".search-form"
 	} );
@@ -242,7 +242,7 @@ jQuery( function( $ ) {
 	$( 'body.no-js' ).removeClass( 'no-js' );	
 	if ( $( 'body' ).hasClass( 'css3-animations' ) ) {
 		// Display the burst animation.
-		$( '.search-field' ).burstAnimation( {
+		$( '.search-field' ).polestarBurstAnimation( {
 			event: "focus",
 			container: ".search-form"
 		} );
@@ -274,7 +274,7 @@ jQuery( function( $ ) {
 		} );
 
 		// Burst animation when the user clicks on a sub link.
-		$( '.main-navigation ul ul li a' ).burstAnimation( {
+		$( '.main-navigation ul ul li a' ).polestarBurstAnimation( {
 			event: "click",
 			container: "parent"
 		} );
