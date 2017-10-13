@@ -350,25 +350,25 @@ function polestar_display_logo() {
 		?><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
 			<span class="screen-reader-text"><?php esc_html_e( 'Home', 'polestar' ); ?></span><?php
 			echo wp_get_attachment_image( $logo, 'full', false, $attrs );
-		?></a><?php if ( get_theme_mod( 'tagline' ) ) : ?>
+		?></a><?php if ( get_theme_mod( 'tagline' ) && get_bloginfo( 'description' ) ) : ?>
 			<p class="site-description"><?php bloginfo( 'description' ); ?></p>
 		<?php endif;
 
 	} elseif ( function_exists( 'has_custom_logo' ) && has_custom_logo() ) {
 		?><?php the_custom_logo();
-		if ( get_theme_mod( 'tagline' ) ) : ?>
+		if ( get_theme_mod( 'tagline' ) && get_bloginfo( 'description' ) ) : ?>
 			<p class="site-description"><?php bloginfo( 'description' ); ?></p>
 		<?php endif;
 	}
 	else {
 		if ( is_front_page() ) : ?>
 			<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
-			<?php if ( get_theme_mod( 'tagline' ) ) : ?>
+			<?php if ( get_theme_mod( 'tagline' ) && get_bloginfo( 'description' ) ) : ?>
 				<p class="site-description"><?php bloginfo( 'description' ); ?></p>
 			<?php endif; ?>				
 		<?php else : ?>
 			<p class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></p>
-			<?php if ( get_theme_mod( 'tagline' ) ) : ?>
+			<?php if ( get_theme_mod( 'tagline' ) && get_bloginfo( 'description' ) ) : ?>
 				<p class="site-description"><?php bloginfo( 'description' ); ?></p>
 			<?php endif; ?>			
 		<?php endif;
