@@ -582,7 +582,6 @@ a {
 ## - Menus
 --------------------------------------------------------------*/
 .main-navigation {
-  margin-left: auto;
   text-align: right; }
   .main-navigation > div {
     display: inline-block; }
@@ -1631,8 +1630,9 @@ a {
   .site-header.stuck {
     box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075); }
   .site-header .site-header-inner {
-    display: flex;
     align-items: center;
+    display: flex;
+    justify-content: space-between;
     width: 100%; }
   .site-header .site-branding {
     padding-right: 20px; }
