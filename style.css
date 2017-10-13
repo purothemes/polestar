@@ -1626,23 +1626,17 @@ a {
     @media (max-width: 782px) {
       .topbar-out.admin-bar .site-header {
         top: 46px; } }
-    @media (max-width: 600px) {
-      .topbar-out.admin-bar .site-header {
-        position: fixed;
-        top: 0; } }
   @media (max-width: 600px) {
     .admin-bar .site-header.sticky.stuck {
       top: 0; } }
   .site-header.stuck {
     box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075); }
   .site-header .site-header-inner {
-    display: table;
-    vertical-align: middle;
+    display: flex;
+    align-items: center;
     width: 100%; }
   .site-header .site-branding {
-    display: table-cell;
-    padding-right: 20px;
-    vertical-align: middle; }
+    padding-right: 20px; }
     .site-header .site-branding .site-title {
       font-family: "Montserrat", sans-serif;
       font-size: 29px;
