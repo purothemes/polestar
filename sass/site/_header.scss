@@ -42,15 +42,13 @@
     }
 
 	.site-header-inner {
-		display: table;
-		vertical-align: middle;
+		display: flex;
+		align-items: center;
 		width: 100%; 
 	}
 	
 	.site-branding {
-		display: table-cell;
 		padding-right: 20px; 
-		vertical-align: middle;
 
 		.site-title {
 			font-family: $font__headings;

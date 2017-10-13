@@ -582,9 +582,8 @@ a {
 ## - Menus
 --------------------------------------------------------------*/
 .main-navigation {
-  display: table-cell;
-  text-align: right;
-  vertical-align: middle; }
+  margin-left: auto;
+  text-align: right; }
   .main-navigation > div {
     display: inline-block; }
   .main-navigation ul {
