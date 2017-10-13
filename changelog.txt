@@ -4,6 +4,7 @@
 * Fixed mini-cart displaying in header on mobile.
 * Updated WooCommerce reviews template to latest version.
 * Prevented site description markup from outputting when field is empty.
+* Changed header to flex-box to solve IE 11 bug.
 * Minor code enhancements. 
 
 = 1.0.11 - 11 October 2017 =
