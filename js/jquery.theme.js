@@ -112,10 +112,12 @@ jQuery( function( $ ) {
 			pageTop = $( '#page' ).offset().top,
 			$mh = $( '#masthead' ),
 			$tb = $( '#topbar' ),
-			$tbwc = $('#topbar .woocommerce-store-notice[style*="display: none"]');
+			$tbwc = $( '#topbar .woocommerce-store-notice[style*="display: none"]' );
 
 		var smSetup = function() {
 
+			if ( $( 'body' ).hasClass( 'mobile-header-ns' ) && ( $( window ).width() < polestar_resp_menu_params.collapse ) ) return;
+			
 			if ( $mhs === false ) {
 				$mhs = $( '<div class="masthead-sentinel"></div>' ).insertAfter( $mh );
 				$mhs.css( 'height', $mh.outerHeight() );
