@@ -51,7 +51,7 @@ $footer_widgets_page_setting = puro_page_setting( 'footer_widgets', true );
 					);
 
 					if ( ! empty( $credit_text ) ) {
-						?> &ndash; </span><?php
+						?> &ndash; <?php
 						echo wp_kses_post( $credit_text );
 					}
 					?>
