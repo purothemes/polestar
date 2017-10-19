@@ -60,11 +60,11 @@ function polestar_mini_cart() {
 		<?php global $woocommerce; ?>
 		<ul class="shopping-cart">
 			<li>
-				<a class="shopping-cart-link" href="<?php echo $woocommerce->cart->get_cart_url(); ?>">
+				<a class="shopping-cart-link" href="<?php echo esc_url( wc_get_cart_url() ); ?>" title="<?php esc_attr_e( 'View shopping cart', 'polestar' ); ?>">
 					<span class="screen-reader-text"><?php esc_html_e( 'View shopping cart', 'polestar' ); ?></span>
 					<?php polestar_display_icon( 'cart' ); ?>
 					<span class="shopping-cart-text"><?php esc_html_e( 'View Cart', 'polestar' ); ?></span>
-					<span class="shopping-cart-count"><?php echo WC()->cart->cart_contents_count; ?></span>
+					<span class="shopping-cart-count"><?php echo wp_kses_data( sprintf( _n( '%d item', '%d items', WC()->cart->get_cart_contents_count(), 'polestar' ), WC()->cart->get_cart_contents_count() ) );?></span>
 				</a>
 				<ul class="shopping-cart-dropdown" id="cart-drop">
 					<?php the_widget( 'WC_Widget_Cart' );?>
