@@ -55,7 +55,8 @@
 	}
 	
 	.site-branding {
-		padding-right: 20px; 
+		flex-shrink: 0; // Fix for Safari.
+		padding-right: 20px;
 
 		.site-title {
 			font-family: $font__headings;
