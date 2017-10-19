@@ -1,8 +1,6 @@
 .main-navigation {
-	display: table-cell;
 	text-align: right;
-	vertical-align: middle;
-	
+		
 	> div {
 		display: inline-block;
 	}
@@ -279,7 +277,7 @@
 
 	.search-icon {
 		background: none;
-		border-radius: none;
+		border-radius: 0;
 		cursor: pointer;
 		margin-left: 27px; 
 		padding: 0;

@@ -166,6 +166,18 @@ function polestar_scripts() {
     // Theme JavaScript.
     wp_enqueue_script( 'polestar-script', get_template_directory_uri() . '/js/jquery.theme' . PURO_THEME_JS_PREFIX . '.js', array( 'jquery' ), PURO_THEME_VERSION, true );
 
+	// Mobile menu collapse localisation.
+	if ( get_theme_mod( 'mobile_menu_collapse' ) ) {
+		$collapse_array = array( 
+			'collapse' => get_theme_mod( 'mobile_menu_collapse' )
+		);	
+	} else {
+		$collapse_array = array( 
+			'collapse' => 768
+		);		
+	}
+	wp_localize_script( 'polestar-script', 'polestar_resp_menu_params', $collapse_array );    
+
 	// Theme icons.
 	wp_enqueue_style( 'polestar-icons', get_template_directory_uri() . '/css/polestar-icons' . PURO_THEME_CSS_PREFIX . '.css', array(), PURO_THEME_VERSION );    
 

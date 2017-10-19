@@ -60,11 +60,11 @@ function polestar_mini_cart() {
 		<?php global $woocommerce; ?>
 		<ul class="shopping-cart">
 			<li>
-				<a class="shopping-cart-link" href="<?php echo $woocommerce->cart->get_cart_url(); ?>">
+				<a class="shopping-cart-link" href="<?php echo esc_url( wc_get_cart_url() ); ?>" title="<?php esc_attr_e( 'View shopping cart', 'polestar' ); ?>">
 					<span class="screen-reader-text"><?php esc_html_e( 'View shopping cart', 'polestar' ); ?></span>
 					<?php polestar_display_icon( 'cart' ); ?>
 					<span class="shopping-cart-text"><?php esc_html_e( 'View Cart', 'polestar' ); ?></span>
-					<span class="shopping-cart-count"><?php echo WC()->cart->cart_contents_count; ?></span>
+					<span class="shopping-cart-count"><?php echo wp_kses_data( sprintf( _n( '%d item', '%d items', WC()->cart->get_cart_contents_count(), 'polestar' ), WC()->cart->get_cart_contents_count() ) );?></span>
 				</a>
 				<ul class="shopping-cart-dropdown" id="cart-drop">
 					<?php the_widget( 'WC_Widget_Cart' );?>
@@ -350,25 +350,25 @@ function polestar_display_logo() {
 		?><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
 			<span class="screen-reader-text"><?php esc_html_e( 'Home', 'polestar' ); ?></span><?php
 			echo wp_get_attachment_image( $logo, 'full', false, $attrs );
-		?></a><?php if ( get_theme_mod( 'tagline' ) ) : ?>
+		?></a><?php if ( get_theme_mod( 'tagline' ) && get_bloginfo( 'description' ) ) : ?>
 			<p class="site-description"><?php bloginfo( 'description' ); ?></p>
 		<?php endif;
 
 	} elseif ( function_exists( 'has_custom_logo' ) && has_custom_logo() ) {
 		?><?php the_custom_logo();
-		if ( get_theme_mod( 'tagline' ) ) : ?>
+		if ( get_theme_mod( 'tagline' ) && get_bloginfo( 'description' ) ) : ?>
 			<p class="site-description"><?php bloginfo( 'description' ); ?></p>
 		<?php endif;
 	}
 	else {
 		if ( is_front_page() ) : ?>
 			<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
-			<?php if ( get_theme_mod( 'tagline' ) ) : ?>
+			<?php if ( get_theme_mod( 'tagline' ) && get_bloginfo( 'description' ) ) : ?>
 				<p class="site-description"><?php bloginfo( 'description' ); ?></p>
 			<?php endif; ?>				
 		<?php else : ?>
 			<p class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></p>
-			<?php if ( get_theme_mod( 'tagline' ) ) : ?>
+			<?php if ( get_theme_mod( 'tagline' ) && get_bloginfo( 'description' ) ) : ?>
 				<p class="site-description"><?php bloginfo( 'description' ); ?></p>
 			<?php endif; ?>			
 		<?php endif;

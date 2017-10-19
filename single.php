@@ -22,13 +22,13 @@ get_header(); ?>
 				echo sharing_display();
 			}
 
-			if ( get_theme_mod( 'post_navigation', true ) ) :
+			if ( get_theme_mod( 'post_navigation', true ) ) {
 				the_post_navigation( array(
 					'prev_text' => '<span class="sub-title"> ' . esc_html__( 'Previous Post', 'polestar' ) . '</span> <div>%title</div>',
 					'next_text' => '<span class="sub-title">' . esc_html__( 'Next Post', 'polestar' ) . ' </span> <div>%title</div>',
 				) );
-			endif;
-
+			}
+			
 			if ( get_theme_mod( 'post_author_box', true ) ) polestar_author_box();
 
 			if ( get_theme_mod( 'related_posts', true ) && ! is_attachment() ) polestar_related_posts( $post->ID );
