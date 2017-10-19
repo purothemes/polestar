@@ -1,7 +1,8 @@
 == Changelog ==
 
-= 1.0.12 - 13 October 2017 =
+= 1.0.12 - 19 October 2017 =
 * Fixed mini-cart displaying in header on mobile.
+* Updated mini-cart function.
 * Updated WooCommerce reviews template to latest version.
 * Prevented site description markup from outputting when field is empty.
 * Changed header to flex-box to solve IE 11 bug.
