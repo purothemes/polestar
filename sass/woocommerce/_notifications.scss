@@ -16,7 +16,6 @@
 	word-wrap: break-word;
 	
 	@media (max-width: 768px) {
-		display: block;
 		font-size: 14px; 
 	}
 
@@ -55,17 +54,8 @@
 .woocommerce-store-notice {
 	justify-content: center;
 	margin: 0;
-	// position: absolute;
 	text-align: center;
 	top: 0;
 	width: 100%;
 	z-index: 9999;
-	
-	// @at-root .admin-bar & {
-	// 	top: 32px; 
-	// }
-
-	@media (max-width: 768px) {
-		display: flex;
-	}	
 }
