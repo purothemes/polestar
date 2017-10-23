@@ -51,7 +51,11 @@
 		display: flex;
 		-webkit-justify-content: space-between;
 		justify-content: space-between;
-		width: 100%; 
+		width: 100%;
+		
+		@at-root .centered#{&} {
+			flex-direction: column;
+		}
 	}
 	
 	.site-branding {
@@ -169,10 +173,6 @@
 
 	&.centered {
 
-		.container-inner {
-			display: block;
-		}
-
 		.site-branding {
 			margin: 0 auto 20px auto;
 			padding: 0;
@@ -182,46 +182,27 @@
 		.main-navigation {
 			text-align: center;
 		}
-
-		.site-branding, 
-		.main-navigation {
-			display: block;
-		}
 	}
 
 	@media (max-width: 768px) {
 
 		&:not(.mobile-menu) {
 
-			.container-inner {
-				display: block;
+			.site-header-inner {
+				flex-direction: column;
 			}
 
 			.site-branding {
 				margin: 0 auto 20px auto;
 				padding: 0;
 				text-align: center;
-
-				img {
-					display: inline-block;
-					max-width: 100%;
-				}
 			}
 
 			.main-navigation {
 				text-align: center;
 			}
-
-			.site-branding, 
-			.main-navigation {
-				display: block;
-			}
 		}		
 	}
-
-	body.responsive & {
-		min-width: 0;
-	}		
 }
 
 // Sticky header sentinel.
