@@ -1,5 +1,9 @@
 == Changelog ==
 
+= 1.0.13 - 23 October 2017 =
+* Resolved centered header layout bug.
+* Minor code improvements.
+
 = 1.0.12 - 19 October 2017 =
 * Fixed mini-cart displaying in header on mobile.
 * Updated mini-cart function.
