@@ -77,10 +77,10 @@ function polestar_woocommerce_archive_product_image() { ?>
 		<?php woocommerce_template_loop_product_link_open(); ?>
 		<?php woocommerce_template_loop_product_thumbnail(); ?>
 		<?php woocommerce_template_loop_product_link_close(); ?>
-		<?php if ( get_theme_mod( 'quick_view', true ) ) {
+		<?php if ( get_theme_mod( 'quick_view', true ) && ! ( get_theme_mod( 'archive_columns' ) == 5 ) ) {
 			polestar_woocommerce_quick_view_button();
 		} ?>		
-		<?php if ( get_theme_mod( 'add_to_cart', true ) ) {
+		<?php if ( get_theme_mod( 'add_to_cart', true ) && ! ( get_theme_mod( 'archive_columns' ) == 5 ) ) {
 			woocommerce_template_loop_add_to_cart();
 		} ?>
 	</div>
