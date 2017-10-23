@@ -214,7 +214,6 @@
 		.product {
 			float: left;
 			margin: 0 3.5% 50px 0;
-			position: relative;
 			text-align: center;
 			width: 31%;
 			
@@ -234,7 +233,6 @@
 			}
 
 			@at-root .wc-columns-3#{&} {
-				width: 31%;
 				
 				@media (min-width: 769px) {			
 				
