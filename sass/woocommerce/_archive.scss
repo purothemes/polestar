@@ -215,9 +215,14 @@
 			float: left;
 			margin: 0 3.5% 50px 0;
 			text-align: center;
-			width: 31%;
+			width: 100%;
 			
-			@at-root .wc-columns-2#{&} {
+			@at-root .columns-1#{&} {
+				float: none;
+				margin-right: 0; 
+			}			
+			
+			@at-root .columns-2#{&} {
 				width: 48.25%;
 				
 				@media (min-width: 769px) {			
@@ -232,7 +237,8 @@
 				}					
 			}
 
-			@at-root .wc-columns-3#{&} {
+			@at-root .columns-3#{&} {
+				width: 31%; 
 				
 				@media (min-width: 769px) {			
 				
@@ -246,7 +252,7 @@
 				}									
 			}			
 
-			@at-root .wc-columns-4#{&} {
+			@at-root .columns-4#{&} {
 				width: 22.375%;
 				
 				@media (min-width: 769px) {			
@@ -261,7 +267,7 @@
 				}						
 			}				
 
-			@at-root .wc-columns-5#{&} {
+			@at-root .columns-5#{&} {
 				width: 17.2%;
 				
 				@media (min-width: 769px) {			
@@ -279,10 +285,10 @@
 			@media (max-width: 768px) {
 
 				@at-root {
-					.wc-columns-2#{&},
-					.wc-columns-3#{&},
-					.wc-columns-4#{&},
-					.wc-columns-5#{&} {
+					.columns-2#{&},
+					.columns-3#{&},
+					.columns-4#{&},
+					.columns-5#{&} {
 						width: 48.25%;
 					}
 				}				
@@ -296,10 +302,10 @@
 			@media (max-width: 480px) {
 
 				@at-root {
-					.wc-columns-2#{&},
-					.wc-columns-3#{&},
-					.wc-columns-4#{&},
-					.wc-columns-5#{&} {
+					.columns-2#{&},
+					.columns-3#{&},
+					.columns-4#{&},
+					.columns-5#{&} {
 						width: 100%;
 					}
 				}				

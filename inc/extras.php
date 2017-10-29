@@ -61,7 +61,7 @@ function polestar_body_classes( $classes ) {
 
 	// WooCommerce columns.
 	if ( get_theme_mod( 'archive_columns' ) ) {
-		$classes[] = 'wc-columns-' . get_theme_mod( 'archive_columns' );
+		$classes[] = 'columns-' . get_theme_mod( 'archive_columns' );
 	}		
 
 	// WooCommerce sidebar.
