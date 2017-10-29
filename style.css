@@ -1862,7 +1862,7 @@ a {
     padding: 16px 0 0 0;
     position: absolute;
     top: 50%;
-    transition: all 0.15s;
+    transition: all .15s;
     transform: scale(0, 0);
     width: 60px;
     z-index: 5; }
