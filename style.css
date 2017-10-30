@@ -2184,6 +2184,10 @@ a {
       .comment-list .comment .comment-content a,
       .comment-list .pingback .comment-content a {
         word-wrap: break-word; }
+      .comment-list .comment .comment-content .comment-awaiting-moderation,
+      .comment-list .pingback .comment-content .comment-awaiting-moderation {
+        font-weight: bold;
+        font-weight: 600; }
     .comment-list .comment .comment-reply-link,
     .comment-list .pingback .comment-reply-link {
       color: #2d2d2d;

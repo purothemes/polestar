@@ -1,5 +1,9 @@
 == Changelog ==
 
+= 1.0.14 - 30 October 2017 =
+* Added support for WooCommerce products shortcode columns.
+* Added comment moderation notification.
+
 = 1.0.13 - 23 October 2017 =
 * Resolved centered header layout bug.
 * Minor code improvements.

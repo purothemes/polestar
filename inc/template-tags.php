@@ -100,6 +100,11 @@ function polestar_comment( $comment, $args, $depth ) {
 				</div>
 
 				<div class="comment-content content">
+				<?php if ( ! $comment->comment_approved ) : ?>
+					<p class="comment-awaiting-moderation">
+						<?php esc_html_e( 'Your comment is awaiting moderation.', 'polestar' ); ?>
+					</p>
+				<?php endif; ?>					
 					<?php comment_text() ?>
 				</div>
 
