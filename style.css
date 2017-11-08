@@ -2032,10 +2032,14 @@ a {
       width: 80px; }
       @media (max-width: 480px) {
         .author-box .author-avatar img {
-          margin: 0 auto 15px; } }
+          margin: 0 0 15px; } }
   .author-box .author-description {
     display: table-cell;
     vertical-align: top; }
+    @media (max-width: 480px) {
+      .author-box .author-description {
+        display: block;
+        width: 100%; } }
     .author-box .author-description h3 {
       font-size: 18px;
       line-height: normal;
