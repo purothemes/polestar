@@ -235,7 +235,7 @@ function polestar_theme_options() {
 	    'label' => esc_html__( 'Archive Featured Image', 'polestar' ),
 	    'section' => $section,
 	    'type' => 'checkbox',
-	    'description' => esc_html__( 'Display the featured image on the archive and single post pages.', 'polestar' ),
+	    'description' => esc_html__( 'Display the featured image on archive and single post pages.', 'polestar' ),
 	    'default' => true,
 	);
 
@@ -293,7 +293,7 @@ function polestar_theme_options() {
 	    'label' => esc_html__( 'Post Date', 'polestar' ),
 	    'section' => $section,
 	    'type' => 'checkbox',
-	    'description' => esc_html__( 'Display the post date on the archive and single post pages.', 'polestar' ),
+	    'description' => esc_html__( 'Display the post date on archive and single post pages.', 'polestar' ),
 	    'default' => true,
 	);		
 
@@ -302,7 +302,7 @@ function polestar_theme_options() {
 	    'label' => esc_html__( 'Post Author', 'polestar' ),
 	    'section' => $section,
 	    'type' => 'checkbox',
-	    'description' => esc_html__( 'Display the post author on the archive and single post pages.', 'polestar' ),
+	    'description' => esc_html__( 'Display the post author on archive and single post pages.', 'polestar' ),
 	    'default' => true,
 	);				
 
@@ -311,7 +311,7 @@ function polestar_theme_options() {
 	    'label' => esc_html__( 'Post Categories', 'polestar' ),
 	    'section' => $section,
 	    'type' => 'checkbox',
-	    'description' => esc_html__( 'Display the post categories on the archive and single post pages.', 'polestar' ),
+	    'description' => esc_html__( 'Display the post categories on archive and single post pages.', 'polestar' ),
 	    'default' => true,
 	);	
 
@@ -320,7 +320,7 @@ function polestar_theme_options() {
 	    'label' => esc_html__( 'Post Comment Count', 'polestar' ),
 	    'section' => $section,
 	    'type' => 'checkbox',
-	    'description' => esc_html__( 'Display the post comment count on the archive and single post pages.', 'polestar' ),
+	    'description' => esc_html__( 'Display the post comment count on archive and single post pages.', 'polestar' ),
 	    'default' => true,
 	);	
 
