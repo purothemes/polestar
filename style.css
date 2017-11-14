@@ -1643,7 +1643,6 @@ a {
     .centered.site-header .site-header-inner {
       flex-direction: column; }
   .site-header .site-branding {
-    flex-shrink: 0;
     padding-right: 20px; }
     .site-header .site-branding .site-title {
       font-family: "Montserrat", sans-serif;
