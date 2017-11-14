@@ -168,7 +168,7 @@ function polestar_scripts() {
 
 	// Mobile menu collapse localisation.
 	$collapse_array = array( 
-		'collapse' => get_theme_mod( 'mobile_menu_collapse' )
+		'collapse' => get_theme_mod( 'mobile_menu_collapse', 768 )
 	);
 	wp_localize_script( 'polestar-script', 'polestar_resp_menu_params', $collapse_array );    
 
