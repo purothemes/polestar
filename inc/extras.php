@@ -60,10 +60,10 @@ function polestar_body_classes( $classes ) {
 	}
 
 	// WooCommerce columns.
-	if ( get_theme_mod( 'archive_columns' ) ) {
-		$classes[] = 'columns-' . get_theme_mod( 'archive_columns' );
-	}		
-
+	if ( function_exists( 'is_woocommerce' ) ) {
+		$classes[] = 'columns-' . get_theme_mod( 'archive_columns', 3 );
+	}
+	
 	// WooCommerce sidebar.
 	if ( is_active_sidebar( 'sidebar-shop' ) && ( function_exists( 'is_woocommerce' ) && ! is_product() ) ) {
 		 $classes[] = 'woocommerce-sidebar';

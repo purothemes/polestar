@@ -1,5 +1,10 @@
 == Changelog ==
 
+= 1.0.15 - 14 November 2017 =
+* Fixed author avatar issue on mobile.
+* Fixed large logo bug on mobile.
+* Minor code improvements.
+
 = 1.0.14 - 30 October 2017 =
 * Added support for WooCommerce products shortcode columns.
 * Added comment moderation notification.

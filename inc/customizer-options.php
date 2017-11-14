@@ -79,7 +79,7 @@ function polestar_theme_options() {
 	    'label' => esc_html__( 'Sticky Header', 'polestar' ),
 	    'section' => $section,
 	    'type' => 'checkbox',
-	    'description' => esc_html__( 'Sticks the header to the top of the screen as the user scrolls down.', 'polestar' ),
+	    'description' => esc_html__( 'Sticks the header to the top of the screen on scroll.', 'polestar' ),
 	    'default' => true,
 	    'priority' => '40'
 	);
@@ -109,7 +109,7 @@ function polestar_theme_options() {
 	    'label' => esc_html__( 'Header Menu', 'polestar' ),
 	    'section' => $section,
 	    'type' => 'checkbox',
-	    'description' => esc_html__( 'Display the main menu in the header.', 'polestar' ),
+	    'description' => esc_html__( 'Display the header menu.', 'polestar' ),
 	    'default' => true,
 	    'priority' => '10'
 	);
@@ -139,7 +139,7 @@ function polestar_theme_options() {
 	    'label' => esc_html__( 'Post Navigation', 'polestar' ),
 	    'section' => $section,
 	    'type' => 'checkbox',
-	    'description' => esc_html__( 'Display the next/previous post navigation.', 'polestar' ),
+	    'description' => esc_html__( 'Display next/previous navigation on single post pages.', 'polestar' ),
 	    'default' => true,
 	    'priority' => '40'
 	);		
@@ -235,7 +235,7 @@ function polestar_theme_options() {
 	    'label' => esc_html__( 'Archive Featured Image', 'polestar' ),
 	    'section' => $section,
 	    'type' => 'checkbox',
-	    'description' => esc_html__( 'Display the featured image on the archive and single post pages.', 'polestar' ),
+	    'description' => esc_html__( 'Display the featured image on blog and archive pages.', 'polestar' ),
 	    'default' => true,
 	);
 
@@ -284,7 +284,7 @@ function polestar_theme_options() {
 	    'label' => esc_html__( 'Post Featured Image', 'polestar' ),
 	    'section' => $section,
 	    'type' => 'checkbox',
-	    'description' => esc_html__( 'Display the featured image on the single post page.', 'polestar' ),
+	    'description' => esc_html__( 'Display the featured image on single post pages.', 'polestar' ),
 	    'default' => true,
 	);
 
@@ -293,7 +293,7 @@ function polestar_theme_options() {
 	    'label' => esc_html__( 'Post Date', 'polestar' ),
 	    'section' => $section,
 	    'type' => 'checkbox',
-	    'description' => esc_html__( 'Display the post date on the archive and single post pages.', 'polestar' ),
+	    'description' => esc_html__( 'Display the post date on blog, archive and single post pages.', 'polestar' ),
 	    'default' => true,
 	);		
 
@@ -302,7 +302,7 @@ function polestar_theme_options() {
 	    'label' => esc_html__( 'Post Author', 'polestar' ),
 	    'section' => $section,
 	    'type' => 'checkbox',
-	    'description' => esc_html__( 'Display the post author on the archive and single post pages.', 'polestar' ),
+	    'description' => esc_html__( 'Display the post author on blog, archive and single post pages.', 'polestar' ),
 	    'default' => true,
 	);				
 
@@ -311,7 +311,7 @@ function polestar_theme_options() {
 	    'label' => esc_html__( 'Post Categories', 'polestar' ),
 	    'section' => $section,
 	    'type' => 'checkbox',
-	    'description' => esc_html__( 'Display the post categories on the archive and single post pages.', 'polestar' ),
+	    'description' => esc_html__( 'Display the post categories on blog, archive and single post pages.', 'polestar' ),
 	    'default' => true,
 	);	
 
@@ -320,7 +320,7 @@ function polestar_theme_options() {
 	    'label' => esc_html__( 'Post Comment Count', 'polestar' ),
 	    'section' => $section,
 	    'type' => 'checkbox',
-	    'description' => esc_html__( 'Display the post comment count on the archive and single post pages.', 'polestar' ),
+	    'description' => esc_html__( 'Display the post comment count on blog, archive and single post pages.', 'polestar' ),
 	    'default' => true,
 	);	
 
@@ -338,7 +338,7 @@ function polestar_theme_options() {
 	    'label' => esc_html__( 'Post Author Box', 'polestar' ),
 	    'section' => $section,
 	    'type' => 'checkbox',
-	    'description' => esc_html__( 'Display the post author biographical info.', 'polestar' ),
+	    'description' => esc_html__( 'Display the post author biographical info on single post pages.', 'polestar' ),
 	    'default' => true,
 	);
 
@@ -347,7 +347,7 @@ function polestar_theme_options() {
 	    'label' => esc_html__( 'Related Posts', 'polestar' ),
 	    'section' => $section,
 	    'type' => 'checkbox',
-	    'description' => esc_html__( 'Display related posts on the single post page.', 'polestar' ),
+	    'description' => esc_html__( 'Display related posts on single post pages.', 'polestar' ),
 	    'default' => true,
 	);			
 
@@ -470,7 +470,7 @@ function polestar_theme_options() {
 		    'label' => esc_html__( 'Mini Cart', 'polestar' ),
 		    'section' => $section,
 		    'type' => 'checkbox',
-		    'description' => esc_html__( 'Display the WooCommerce mini cart in the main menu.', 'polestar' ),
+		    'description' => esc_html__( 'Display the WooCommerce mini cart in the header menu.', 'polestar' ),
 		    'default' => false,
 		    'priority' => '40'
 		);
