@@ -759,7 +759,8 @@ a {
       margin-right: 0; }
     .main-navigation li a {
       color: #2d2d2d;
-      display: block; }
+      display: block;
+      font-weight: 500; }
     .main-navigation li:hover > a,
     .main-navigation li.focus > a {
       color: #626262; }
