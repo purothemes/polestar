@@ -182,7 +182,7 @@ function polestar_scripts() {
 	$site_tagline_font = get_theme_mod( 'site_tagline_font' );
 
 	if ( $heading_font == 'Montserrat' || $site_title_font == 'Montserrat' || $site_tagline_font == 'Montserrat' ) {
-		wp_enqueue_style( 'google-font-montserrat', '//fonts.googleapis.com/css?family=Montserrat:400,500,600,700' );	
+		wp_enqueue_style( 'google-font-montserrat', '//fonts.googleapis.com/css?family=Montserrat:400,500,700' );	
 	}
 
 	if ( $body_font == 'Open Sans' ) {
