@@ -269,7 +269,7 @@ h6 {
   font-family: "Montserrat", sans-serif;
   -webkit-font-smoothing: subpixel-antialiased;
   -moz-osx-font-smoothing: auto;
-  font-weight: 400;
+  font-weight: 500;
   margin: 25px 0; }
 
 h1 {
@@ -759,7 +759,8 @@ a {
       margin-right: 0; }
     .main-navigation li a {
       color: #2d2d2d;
-      display: block; }
+      display: block;
+      font-weight: 500; }
     .main-navigation li:hover > a,
     .main-navigation li.focus > a {
       color: #626262; }
@@ -1679,6 +1680,7 @@ a {
     .site-header #header-search .polestar-container {
       height: 100%; }
     .site-header #header-search form {
+      background: #fff;
       height: 48px;
       left: 20px;
       position: absolute;
@@ -2112,7 +2114,6 @@ a {
       .yarpp-related ol li .related-post-title,
       .related-posts-section ol li .related-post-title {
         font-size: 16px;
-        font-weight: normal;
         line-height: normal;
         margin: 0 0 3px; }
         .yarpp-related ol li .related-post-title:hover,
