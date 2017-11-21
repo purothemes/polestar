@@ -1813,7 +1813,8 @@ a {
   display: inline; }
 
 .entry-thumbnail,
-.entry-video {
+.entry-video,
+.gallery-format-slider {
   margin-bottom: 25px; }
 
 .entry-thumbnail {
@@ -2454,6 +2455,9 @@ object {
   .flexslider .flex-direction-nav {
     list-style: none;
     margin: 0; }
+  .flexslider .slides img {
+    display: block;
+    width: 100%; }
   .flexslider .slide {
     background-repeat: no-repeat;
     display: none;
