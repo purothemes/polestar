@@ -46,4 +46,3 @@ if ( have_posts() ) : ?>
 	</div><!-- .featured-posts-slider -->
 
 <?php endif; ?>
-

@@ -7,6 +7,11 @@
 		margin: 0;		
 	}
 
+	.slides img {
+		display: block;
+		width: 100%; 
+	}
+
 	.slide {
 		background-repeat: no-repeat;
 		display: none;

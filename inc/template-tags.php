@@ -259,7 +259,7 @@ function polestar_strip_gallery( $content ) {
 		foreach ( $matches as $shortcode ) {
 			if ( 'gallery' === $shortcode[2] ) {
 				$pos = strpos( $content, $shortcode[0] );
-				if( false !== $pos ) {
+				if ( false !== $pos ) {
 					return substr_replace( $content, '', $pos, strlen( $shortcode[0] ) );
 				}
 			}
@@ -267,6 +267,20 @@ function polestar_strip_gallery( $content ) {
 	}
 
 	return $content;
+}
+endif;
+
+if ( ! function_exists( 'polestar_get_gallery' ) ) :
+/**
+ * Get gallery from content for gallery format posts.
+ */
+function polestar_get_gallery() {
+	$gallery = get_post_gallery( get_the_ID(), false );
+	if ( ! empty( $gallery ) && ! has_action( 'wp_footer', 'polestar_enqueue_flexslider' ) ) {
+		add_action( 'wp_footer', 'polestar_enqueue_flexslider' );
+	}
+
+	return ( '' !== $gallery ) ? $gallery : false;
 }
 endif;
 

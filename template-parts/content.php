@@ -17,7 +17,7 @@
 			<?php if ( get_theme_mod( 'post_categories', true ) ) polestar_entry_thumbnail_meta(); ?>
 			<?php the_post_thumbnail(); ?>			
 		</div>
-	<?php elseif ( has_post_thumbnail() && get_theme_mod( 'archive_featured_image', true ) ) : ?>
+	<?php elseif ( ! is_single() && has_post_thumbnail() && get_theme_mod( 'archive_featured_image', true ) ) : ?>
 		<div class="entry-thumbnail">
 			<?php if ( get_theme_mod( 'post_categories', true ) ) polestar_entry_thumbnail_meta(); ?>
 			<a href="<?php the_permalink(); ?>">			

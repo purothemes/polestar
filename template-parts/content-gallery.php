@@ -8,11 +8,6 @@
  * @license GPL 2.0 
  */
 
-$gallery = get_post_gallery( get_the_ID(), false );
-if ( ! empty( $gallery ) && ! has_action( 'wp_footer', 'polestar_enqueue_flexslider' ) ) {
-	add_action( 'wp_footer', 'polestar_enqueue_flexslider' );
-}
-
 $content = polestar_strip_gallery( get_the_content() );
 $content = str_replace( ']]>', ']]&gt;', apply_filters( 'the_content', $content ) );
 
@@ -21,7 +16,8 @@ $post_class = ( is_singular() ) ? 'entry' : 'archive-entry';
 
 <article id="post-<?php the_ID(); ?>" <?php post_class( $post_class ); ?>>
 
-	<?php if ( $gallery != '' ) : ?>
+	<?php if ( polestar_get_gallery() ) : ?>
+		<?php $gallery = polestar_get_gallery(); ?>
 		<div class="flexslider gallery-format-slider">
 			<ul class="slides">
 				<?php foreach ( $gallery['src'] as $image ) : ?>
