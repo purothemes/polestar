@@ -54,7 +54,7 @@ function polestar_setup() {
 	/*
 	 * Enable support for the custom logo.
 	 */
-	add_theme_support( 'custom-logo' );	
+	add_theme_support( 'custom-logo' );
 
 	// This theme uses wp_nav_menu() in two locations.
 	register_nav_menus( array(
@@ -106,7 +106,7 @@ function polestar_content_width() {
 add_action( 'after_setup_theme', 'polestar_content_width', 0 );
 
 /**
- * Register widget area.
+ * Register widget areas.
  *
  * @link https://developer.wordpress.org/themes/functionality/sidebars/#registering-a-sidebar
  */

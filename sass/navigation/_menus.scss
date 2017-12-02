@@ -1,5 +1,9 @@
 .main-navigation {
 	text-align: right;
+	
+	&.widget_nav_menu {
+		text-align: initial; 
+	}
 		
 	> div {
 		display: inline-block;
