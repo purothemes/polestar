@@ -583,6 +583,8 @@ a {
 --------------------------------------------------------------*/
 .main-navigation {
   text-align: right; }
+  .main-navigation.widget_nav_menu {
+    text-align: initial; }
   .main-navigation > div {
     display: inline-block; }
   .main-navigation ul {
@@ -1730,6 +1732,66 @@ a {
       text-align: center; }
     .site-header:not(.mobile-menu) .main-navigation {
       text-align: center; } }
+  .site-header .widgets {
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    -webkit-box-align: center;
+    align-items: center;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-justify-content: space-between;
+    justify-content: space-between;
+    width: 100%; }
+    @media (max-width: 768px) {
+      .site-header .widgets {
+        flex-direction: column; } }
+    .site-header .widgets.widgets-1 .widget {
+      width: 100%; }
+    .site-header .widgets.widgets-2 .widget {
+      width: 48.625%; }
+    .site-header .widgets.widgets-3 .widget {
+      width: 31.5%; }
+    .site-header .widgets.widgets-4 .widget {
+      width: 22.9375%; }
+    .site-header .widgets.widgets-5 .widget {
+      width: 17.8%; }
+    .site-header .widgets.widgets-6 .widget {
+      width: 14.375%; }
+    .site-header .widgets.widgets-7 .widget {
+      width: 11.92857%; }
+    .site-header .widgets.widgets-8 .widget {
+      width: 10.09375%; }
+    .site-header .widgets.widgets-9 .widget {
+      width: 8.66667%; }
+    .site-header .widgets.widgets-10 .widget {
+      width: 7.525%; }
+    .site-header .widgets .widget {
+      box-sizing: content-box;
+      margin: 0 2.75% 0 0; }
+      .site-header .widgets .widget:last-of-type {
+        margin-right: 0; }
+      @media (max-width: 768px) {
+        .site-header .widgets .widget {
+          margin-bottom: 5%;
+          text-align: center;
+          width: 100% !important; }
+          .site-header .widgets .widget:last-of-type {
+            margin-bottom: 0; } }
+      .site-header .widgets .widget .widget-title {
+        font-size: 16px;
+        margin: 0 0 5px; }
+        .site-header .widgets .widget .widget-title ~ * {
+          font-size: 14px; }
+      .site-header .widgets .widget .textwidget {
+        font-size: 14px; }
+      .site-header .widgets .widget p:only-of-type,
+      .site-header .widgets .widget p:last-of-type {
+        margin-bottom: 0; }
+      .site-header .widgets .widget ul {
+        margin-bottom: 0; }
+      .site-header .widgets .widget input[type="search"] {
+        font-size: 14px; }
 
 .masthead-sentinel {
   margin-bottom: 60px; }
