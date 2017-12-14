@@ -1790,6 +1790,8 @@ a {
         margin-bottom: 0; }
       .site-header .widgets .widget ul {
         margin-bottom: 0; }
+      .site-header .widgets .widget input[type="search"] {
+        font-size: 14px; }
 
 .masthead-sentinel {
   margin-bottom: 60px; }
