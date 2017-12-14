@@ -1,5 +1,8 @@
 == Changelog ==
 
+= 1.0.18 - 14 December 2017 =
+* Resolved WooCommerce PayPal logo issue impacting child themes.
+
 = 1.0.17 - 26 November 2017 =
 * Fixed featured image setting on single post page.
 * Minor style fixes for menu mini-cart.
