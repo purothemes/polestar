@@ -102,7 +102,7 @@ if ( ! function_exists( 'polestar_woocommerce_paypal_icon' ) ) :
  * Add a consistent PayPal icon.
  */
 function polestar_woocommerce_paypal_icon( $url ) {
-	return get_stylesheet_directory_uri() . '/woocommerce/images/paypal-icon.png';
+	return get_template_directory_uri() . '/woocommerce/images/paypal-icon.png';
 }
 endif;
 add_filter( 'woocommerce_paypal_icon', 'polestar_woocommerce_paypal_icon' );
