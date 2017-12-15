@@ -217,7 +217,15 @@
 			position: relative;
 			height: auto;
 			vertical-align: text-bottom;
-			width: 20px; 
+			width: 20px;
+			
+			.overlap-light & {
+				fill: #fff; 
+			}
+
+			.overlap-dark & {
+				fill: #2d2d2d;
+			}				
 		}
 
 		.shopping-cart-count {
@@ -230,6 +238,7 @@
 		    padding: 5.5px 0 0;
 		    position: absolute;
 		    right: -19px;
+		    transition: .3s;
 		    text-align: center;
 		    top: -9px;
 		    width: 18px;
@@ -239,6 +248,14 @@
 
 			svg {
 				fill: $color__text-medium;
+				
+				.overlap-light & {
+					fill: rgba(255, 255, 255, .8); 
+				}
+
+				.overlap-dark & {
+					fill: rgba(45, 45, 45, .8); 
+				}						
 			}
 			
 			.shopping-cart-count {

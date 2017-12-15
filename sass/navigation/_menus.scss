@@ -255,7 +255,7 @@
 		padding: 0 0 10px; 
 		position: relative;
 		text-align: left;
-		
+	
 		&:last-of-type {
 			margin-right: 0;
 		}
@@ -268,8 +268,8 @@
 
 		&:hover > a,
 		&.focus > a {
-			color: $color__text-medium;
-		}
+			color: $color__text-medium;				
+		}	
 	}
 
 	.current a,
@@ -295,17 +295,58 @@
 			
 			path {
 				fill: $color__text-dark;
-				transition: .3s;				
+				transition: .3s;
+			
+				.overlap-light & {
+					fill: #fff; 
+				}
+
+				.overlap-dark & {
+					fill: #2d2d2d;
+				}										
 			}
 
 			&:hover {
 
 				path {
-					fill: $color__text-medium;			
+					fill: $color__text-medium;
+					
+					.overlap-light & {
+						fill: rgba(255, 255, 255, .8); 
+					}
+
+					.overlap-dark & {
+						fill: rgba(45, 45, 45, .8); 
+					}									
 				}
 			}		
 		}		
 	}
+
+	// First level items.
+	div > ul > li {
+
+		// Page Settings: Overlap with colors.
+		.overlap-light & > a {
+			color: #fff; 
+		}
+
+		.overlap-dark & > a {
+			color: #2d2d2d; 
+		}
+
+		&:hover > a,
+		&.focus > a {
+			
+			.overlap-light & {
+				color: rgba(255, 255, 255, .8); 
+			}
+
+			.overlap-dark & {
+				color: rgba(45, 45, 45, .8); 
+			}				
+		}				
+	}	
 
 	// Max Mega menu
 	#mega-menu-wrap-primary {
