@@ -75,7 +75,7 @@
 	padding-left: 4%;
 	width: 30%;
 	
-	@at-root .sidebar-left & {
+	.sidebar-left & {
 		float: left;
 		padding-right: 4%; 
 		padding-left: 0; 
