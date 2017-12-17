@@ -74,15 +74,7 @@
 			margin: 0;
 			
 			a {
-				color: $color__text-dark;
-					
-				.overlap-light & {
-					color: #fff; 
-				}
-
-				.overlap-dark & {
-					color: #2d2d2d;
-				}					
+				color: $color__text-dark;					
 			}			
 		}
 
@@ -102,15 +94,7 @@
 			font-size: 13px; 
 			line-height: normal;
 			margin: 0; 
-		}
-
-		.overlap-light & {
-			color: #fff; 
-		}
-
-		.overlap-dark & {
-			color: #2d2d2d;
-		}		
+		}	
 
 		> * {
 			transform-origin: left center;
@@ -305,6 +289,23 @@
 			}
 		}
 	}	
+}
+
+// Overlap.
+.overlap-light .site-header:not(.stuck) .site-branding {
+	
+	.site-title a,
+	.site-description {
+		color: #fff;
+	}
+}
+
+.overlap-dark .site-header:not(.stuck) .site-branding {
+
+	.site-title a,
+	.site-description {
+		color: #2d2d2d;
+	}
 }
 
 // Sticky header sentinel.
