@@ -1431,55 +1431,51 @@ a {
 /*--------------------------------------------------------------
 # - Widgets
 --------------------------------------------------------------*/
-.widget {
+.widget-area .widget,
+.site-footer .widget {
   margin: 0 0 45px; }
-
-.widget-area .widget .widget-title,
-.site-footer .widget .widget-title {
-  font-size: 16px;
-  margin: 0 0 20px;
-  text-transform: uppercase; }
-  .widget-area .widget .widget-title ~ *,
-  .site-footer .widget .widget-title ~ * {
-    font-size: 14px; }
-
-.widget-area .widget a,
-.site-footer .widget a {
-  color: #626262; }
-  .widget-area .widget a:hover,
-  .site-footer .widget a:hover {
-    color: #4d8ffb; }
-
-.widget-area .widget .button, .widget-area .widget .pagination .page-numbers, .pagination .widget-area .widget .page-numbers, .widget-area .widget #infinite-handle span button, #infinite-handle span .widget-area .widget button, .widget-area .widget .page-links span, .page-links .widget-area .widget span,
-.site-footer .widget .button,
-.site-footer .widget .pagination .page-numbers, .pagination
-.site-footer .widget .page-numbers,
-.site-footer .widget #infinite-handle span button, #infinite-handle span
-.site-footer .widget button,
-.site-footer .widget .page-links span, .page-links
-.site-footer .widget span {
-  color: #fff; }
-  .widget-area .widget .button:hover, .widget-area .widget .pagination .page-numbers:hover, .pagination .widget-area .widget .page-numbers:hover, .widget-area .widget #infinite-handle span button:hover, #infinite-handle span .widget-area .widget button:hover, .widget-area .widget .page-links span:hover, .page-links .widget-area .widget span:hover,
-  .site-footer .widget .button:hover,
-  .site-footer .widget .pagination .page-numbers:hover, .pagination
-  .site-footer .widget .page-numbers:hover,
-  .site-footer .widget #infinite-handle span button:hover, #infinite-handle span
-  .site-footer .widget button:hover,
-  .site-footer .widget .page-links span:hover, .page-links
-  .site-footer .widget span:hover {
+  .widget-area .widget .widget-title,
+  .site-footer .widget .widget-title {
+    font-size: 16px;
+    margin: 0 0 20px;
+    text-transform: uppercase; }
+    .widget-area .widget .widget-title ~ *,
+    .site-footer .widget .widget-title ~ * {
+      font-size: 14px; }
+  .widget-area .widget a,
+  .site-footer .widget a {
+    color: #626262; }
+    .widget-area .widget a:hover,
+    .site-footer .widget a:hover {
+      color: #4d8ffb; }
+  .widget-area .widget .button, .widget-area .widget .pagination .page-numbers, .pagination .widget-area .widget .page-numbers, .widget-area .widget #infinite-handle span button, #infinite-handle span .widget-area .widget button, .widget-area .widget .page-links span, .page-links .widget-area .widget span,
+  .site-footer .widget .button,
+  .site-footer .widget .pagination .page-numbers, .pagination
+  .site-footer .widget .page-numbers,
+  .site-footer .widget #infinite-handle span button, #infinite-handle span
+  .site-footer .widget button,
+  .site-footer .widget .page-links span, .page-links
+  .site-footer .widget span {
     color: #fff; }
-
-.widget-area .widget ul,
-.site-footer .widget ul {
-  list-style: none;
-  margin: 0; }
-  .widget-area .widget ul li,
-  .site-footer .widget ul li {
-    line-height: 2; }
-
-.widget-area .widget input,
-.site-footer .widget input {
-  font-size: 14px; }
+    .widget-area .widget .button:hover, .widget-area .widget .pagination .page-numbers:hover, .pagination .widget-area .widget .page-numbers:hover, .widget-area .widget #infinite-handle span button:hover, #infinite-handle span .widget-area .widget button:hover, .widget-area .widget .page-links span:hover, .page-links .widget-area .widget span:hover,
+    .site-footer .widget .button:hover,
+    .site-footer .widget .pagination .page-numbers:hover, .pagination
+    .site-footer .widget .page-numbers:hover,
+    .site-footer .widget #infinite-handle span button:hover, #infinite-handle span
+    .site-footer .widget button:hover,
+    .site-footer .widget .page-links span:hover, .page-links
+    .site-footer .widget span:hover {
+      color: #fff; }
+  .widget-area .widget ul,
+  .site-footer .widget ul {
+    list-style: none;
+    margin: 0; }
+    .widget-area .widget ul li,
+    .site-footer .widget ul li {
+      line-height: 2; }
+  .widget-area .widget input,
+  .site-footer .widget input {
+    font-size: 14px; }
 
 /*--------------------------------------------------------------
 ## - Calendar Widget
