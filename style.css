@@ -786,8 +786,26 @@ a {
       .main-navigation .search-icon svg path {
         fill: #2d2d2d;
         transition: .3s; }
+        .overlap-light .site-header:not(.stuck) .main-navigation .search-icon svg path {
+          fill: #fff; }
+        .overlap-dark .site-header:not(.stuck) .main-navigation .search-icon svg path {
+          fill: #2d2d2d; }
       .main-navigation .search-icon svg:hover path {
         fill: #626262; }
+        .overlap-light .main-navigation .search-icon svg:hover path {
+          fill: rgba(255, 255, 255, 0.8); }
+        .overlap-dark .main-navigation .search-icon svg:hover path {
+          fill: rgba(45, 45, 45, 0.8); }
+  .overlap-light .site-header:not(.stuck) .main-navigation div:not(.widget_shopping_cart_content) > ul > li > a {
+    color: #fff; }
+  .overlap-dark .site-header:not(.stuck) .main-navigation div:not(.widget_shopping_cart_content) > ul > li > a {
+    color: #2d2d2d; }
+  .overlap-light .site-header:not(.stuck) .main-navigation div:not(.widget_shopping_cart_content) > ul > li:hover > a, .overlap-light .site-header:not(.stuck)
+  .main-navigation div:not(.widget_shopping_cart_content) > ul > li.focus > a {
+    color: rgba(255, 255, 255, 0.8); }
+  .overlap-dark .site-header:not(.stuck) .main-navigation div:not(.widget_shopping_cart_content) > ul > li:hover > a, .overlap-dark .site-header:not(.stuck)
+  .main-navigation div:not(.widget_shopping_cart_content) > ul > li.focus > a {
+    color: rgba(45, 45, 45, 0.8); }
   .main-navigation #mega-menu-wrap-primary {
     display: inline-block; }
     .main-navigation #mega-menu-wrap-primary .mega-sub-menu li {
@@ -1413,55 +1431,51 @@ a {
 /*--------------------------------------------------------------
 # - Widgets
 --------------------------------------------------------------*/
-.widget {
+.widget-area .widget,
+.site-footer .widget {
   margin: 0 0 45px; }
-
-.widget-area .widget .widget-title,
-.site-footer .widget .widget-title {
-  font-size: 16px;
-  margin: 0 0 20px;
-  text-transform: uppercase; }
-  .widget-area .widget .widget-title ~ *,
-  .site-footer .widget .widget-title ~ * {
-    font-size: 14px; }
-
-.widget-area .widget a,
-.site-footer .widget a {
-  color: #626262; }
-  .widget-area .widget a:hover,
-  .site-footer .widget a:hover {
-    color: #4d8ffb; }
-
-.widget-area .widget .button, .widget-area .widget .pagination .page-numbers, .pagination .widget-area .widget .page-numbers, .widget-area .widget #infinite-handle span button, #infinite-handle span .widget-area .widget button, .widget-area .widget .page-links span, .page-links .widget-area .widget span,
-.site-footer .widget .button,
-.site-footer .widget .pagination .page-numbers, .pagination
-.site-footer .widget .page-numbers,
-.site-footer .widget #infinite-handle span button, #infinite-handle span
-.site-footer .widget button,
-.site-footer .widget .page-links span, .page-links
-.site-footer .widget span {
-  color: #fff; }
-  .widget-area .widget .button:hover, .widget-area .widget .pagination .page-numbers:hover, .pagination .widget-area .widget .page-numbers:hover, .widget-area .widget #infinite-handle span button:hover, #infinite-handle span .widget-area .widget button:hover, .widget-area .widget .page-links span:hover, .page-links .widget-area .widget span:hover,
-  .site-footer .widget .button:hover,
-  .site-footer .widget .pagination .page-numbers:hover, .pagination
-  .site-footer .widget .page-numbers:hover,
-  .site-footer .widget #infinite-handle span button:hover, #infinite-handle span
-  .site-footer .widget button:hover,
-  .site-footer .widget .page-links span:hover, .page-links
-  .site-footer .widget span:hover {
+  .widget-area .widget .widget-title,
+  .site-footer .widget .widget-title {
+    font-size: 16px;
+    margin: 0 0 20px;
+    text-transform: uppercase; }
+    .widget-area .widget .widget-title ~ *,
+    .site-footer .widget .widget-title ~ * {
+      font-size: 14px; }
+  .widget-area .widget a,
+  .site-footer .widget a {
+    color: #626262; }
+    .widget-area .widget a:hover,
+    .site-footer .widget a:hover {
+      color: #4d8ffb; }
+  .widget-area .widget .button, .widget-area .widget .pagination .page-numbers, .pagination .widget-area .widget .page-numbers, .widget-area .widget #infinite-handle span button, #infinite-handle span .widget-area .widget button, .widget-area .widget .page-links span, .page-links .widget-area .widget span,
+  .site-footer .widget .button,
+  .site-footer .widget .pagination .page-numbers, .pagination
+  .site-footer .widget .page-numbers,
+  .site-footer .widget #infinite-handle span button, #infinite-handle span
+  .site-footer .widget button,
+  .site-footer .widget .page-links span, .page-links
+  .site-footer .widget span {
     color: #fff; }
-
-.widget-area .widget ul,
-.site-footer .widget ul {
-  list-style: none;
-  margin: 0; }
-  .widget-area .widget ul li,
-  .site-footer .widget ul li {
-    line-height: 2; }
-
-.widget-area .widget input,
-.site-footer .widget input {
-  font-size: 14px; }
+    .widget-area .widget .button:hover, .widget-area .widget .pagination .page-numbers:hover, .pagination .widget-area .widget .page-numbers:hover, .widget-area .widget #infinite-handle span button:hover, #infinite-handle span .widget-area .widget button:hover, .widget-area .widget .page-links span:hover, .page-links .widget-area .widget span:hover,
+    .site-footer .widget .button:hover,
+    .site-footer .widget .pagination .page-numbers:hover, .pagination
+    .site-footer .widget .page-numbers:hover,
+    .site-footer .widget #infinite-handle span button:hover, #infinite-handle span
+    .site-footer .widget button:hover,
+    .site-footer .widget .page-links span:hover, .page-links
+    .site-footer .widget span:hover {
+      color: #fff; }
+  .widget-area .widget ul,
+  .site-footer .widget ul {
+    list-style: none;
+    margin: 0; }
+    .widget-area .widget ul li,
+    .site-footer .widget ul li {
+      line-height: 2; }
+  .widget-area .widget input,
+  .site-footer .widget input {
+    font-size: 14px; }
 
 /*--------------------------------------------------------------
 ## - Calendar Widget
@@ -1612,6 +1626,10 @@ a {
   position: relative;
   width: 100%;
   z-index: 9999; }
+  body[class*="overlap-"] .site-header:not(.stuck) {
+    background: transparent;
+    border: none;
+    position: absolute; }
   .no-header-margin .site-header {
     margin-bottom: 0; }
   .topbar-out .site-header {
@@ -1679,6 +1697,8 @@ a {
     top: 0;
     width: 100%;
     z-index: 99999; }
+    body[class*="overlap-"] .site-header #header-search {
+      background: transparent; }
     .site-header #header-search .polestar-container {
       height: 100%; }
     .site-header #header-search form {
@@ -1711,7 +1731,11 @@ a {
       .site-header #header-search #close-search svg {
         height: 24px;
         width: 24px; }
+        body[class*="overlap-"] .site-header #header-search #close-search svg {
+          background: #fff;
+          border-radius: 50%; }
         .site-header #header-search #close-search svg path {
+          transition: .3s;
           fill: #2d2d2d; }
         .site-header #header-search #close-search svg:hover path {
           fill: #626262; }
@@ -1793,8 +1817,18 @@ a {
       .site-header .widgets .widget input[type="search"] {
         font-size: 14px; }
 
+.overlap-light .site-header:not(.stuck) .site-branding .site-title a,
+.overlap-light .site-header:not(.stuck) .site-branding .site-description {
+  color: #fff; }
+
+.overlap-dark .site-header:not(.stuck) .site-branding .site-title a,
+.overlap-dark .site-header:not(.stuck) .site-branding .site-description {
+  color: #2d2d2d; }
+
 .masthead-sentinel {
   margin-bottom: 60px; }
+  body[class*="overlap-"] .masthead-sentinel {
+    display: none; }
   .no-header-margin .masthead-sentinel {
     margin-bottom: 0; }
 

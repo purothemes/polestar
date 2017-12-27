@@ -34,6 +34,7 @@ function polestar_body_classes( $classes ) {
 
 	if ( ! empty( $page_settings ) ) {
 		if ( ! empty( $page_settings['layout'] ) ) $classes[] = 'page-layout-' . $page_settings['layout'];
+		if ( ! empty( $page_settings['overlap'] ) && ( $page_settings['overlap'] != 'disabled' ) ) $classes[] = 'overlap-' . $page_settings['overlap'];
 		if ( empty( $page_settings['header_margin'] ) ) $classes[] = 'no-header-margin';
 		if ( empty( $page_settings['footer_margin'] ) ) $classes[] = 'no-footer-margin';
 	}	

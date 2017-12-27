@@ -30,6 +30,17 @@ function polestar_page_settings( $settings, $type, $id ) {
 		),
 	);
 
+	$settings['overlap'] = array(
+		'type'    => 'select',
+		'label'   => esc_html__( 'Header Overlap', 'polestar' ),
+		'options' => array(
+			'disabled'	=> esc_html__( 'Disabled', 'polestar' ),
+			'enabled'	=> esc_html__( 'Enabled', 'polestar' ),
+			'light'		=> esc_html__( 'Enabled - Light Text', 'polestar' ),
+			'dark'		=> esc_html__( 'Enabled - Dark Text', 'polestar' ),
+		),
+	);	
+
 	$settings['header_margin'] = array(
 		'type'           => 'checkbox',
 		'label'          => esc_html__( 'Header Bottom Margin', 'polestar' ),
@@ -67,6 +78,7 @@ add_action( 'puro_page_settings', 'polestar_page_settings', 10, 3 );
  */
 function polestar_setup_page_setting_defaults( $defaults, $type, $id ) {
 	$defaults['layout']         = 'default';
+	$defaults['overlap']		= 'disabled';
 	$defaults['page_title']     = true;
 	$defaults['header_margin']  = true;
 	$defaults['footer_margin']  = true;

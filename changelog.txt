@@ -1,5 +1,9 @@
 == Changelog ==
 
+= 1.1 - 27 December 2017 =
+* Added header overlap setting.
+* Minor WooCommerce mini cart style fixes.
+
 = 1.0.18 - 14 December 2017 =
 * Resolved WooCommerce PayPal logo issue impacting child themes.
 
