@@ -12,8 +12,6 @@ Version: dev
   width: 70%; }
   @media (max-width: 768px) {
     .woocommerce.woocommerce-page.woocommerce-sidebar .content-area {
-      border: 0;
-      padding-right: 0;
       width: 100%; } }
 
 .woocommerce.woocommerce-page.woocommerce-sidebar .widget-area {

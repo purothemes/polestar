@@ -1577,8 +1577,6 @@ a {
     float: right; }
   @media (max-width: 768px) {
     .sidebar .content-area {
-      border: 0;
-      padding-right: 0;
       width: 100%; } }
 
 .page-layout-no-sidebar .site-content .content-area,
