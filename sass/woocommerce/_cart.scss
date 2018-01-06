@@ -57,8 +57,9 @@
 			
 			a {
 				color: $color__text-medium;
-				font-weight: bold;
+				display: block;
 				font-weight: 600;
+				line-height: 1; 
 				
 				&:hover {
 					color: $color__text-light;
