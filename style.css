@@ -629,6 +629,9 @@ a {
           max-width: 100%;
           padding: 10px 0;
           white-space: nowrap; }
+          .main-navigation ul .sub-menu li a:not([href]),
+          .main-navigation ul .children li a:not([href]) {
+            cursor: pointer; }
         .main-navigation ul .sub-menu li:first-of-type > a,
         .main-navigation ul .children li:first-of-type > a {
           padding-top: 15px; }
