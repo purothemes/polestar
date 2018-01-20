@@ -2334,7 +2334,8 @@ a {
 #commentform label {
   display: block;
   line-height: normal;
-  margin-bottom: 8px; }
+  margin-bottom: 8px;
+  text-transform: capitalize; }
 
 #commentform textarea {
   width: 100%; }
