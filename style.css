@@ -269,7 +269,7 @@ h6 {
   font-family: "Montserrat", sans-serif;
   -webkit-font-smoothing: subpixel-antialiased;
   -moz-osx-font-smoothing: auto;
-  font-weight: 500;
+  font-weight: 600;
   margin: 25px 0; }
 
 h1 {
@@ -762,7 +762,7 @@ a {
     .main-navigation li a {
       color: #2d2d2d;
       display: block;
-      font-weight: 500; }
+      font-weight: 600; }
     .main-navigation li:hover > a,
     .main-navigation li.focus > a {
       color: #626262; }
@@ -1667,6 +1667,7 @@ a {
     padding-right: 20px; }
     .site-header .site-branding .site-title {
       font-family: "Montserrat", sans-serif;
+      font-weight: 600;
       font-size: 29px;
       line-height: normal;
       margin: 0; }
