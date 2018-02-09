@@ -254,6 +254,8 @@ input.button.added:after,
   font-size: 29px;
   line-height: normal;
   margin: 0; }
+  .search-no-results.woocommerce.archive .page-title {
+    margin-bottom: 25px; }
   @media (max-width: 768px) {
     .woocommerce.archive .page-title {
       font-size: 26px; } }
@@ -1209,7 +1211,7 @@ input.button.added:after,
   .site-header .shopping-cart-link svg {
     display: inline-block;
     position: relative;
-    height: auto;
+    height: 18.75px;
     vertical-align: text-bottom;
     width: 20px; }
     .overlap-light .site-header:not(.stuck) .shopping-cart-link svg {
@@ -1220,16 +1222,15 @@ input.button.added:after,
     background: #4d8ffb;
     border-radius: 50%;
     color: #fff;
-    height: 18px;
     font-size: 9px;
+    height: 18px;
     line-height: 1;
-    padding: 5px 0 0;
+    padding: 4px 5px;
     position: absolute;
-    right: -19px;
+    right: -18px;
     transition: .3s;
     text-align: center;
-    top: -9px;
-    width: 18px; }
+    top: -8px; }
   .site-header .shopping-cart-link:hover svg {
     fill: #626262; }
     .overlap-light .site-header:not(.stuck) .site-header .shopping-cart-link:hover svg {

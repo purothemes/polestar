@@ -215,7 +215,7 @@
 		svg {
 			display: inline-block;
 			position: relative;
-			height: auto;
+			height: 18.75px;
 			vertical-align: text-bottom;
 			width: 20px;
 			
@@ -232,16 +232,15 @@
 		    background: $color__accent;
 		    border-radius: 50%;
 		    color: #fff;
-		    height: 18px;
 		    font-size: 9px;
+		    height: 18px;
 		    line-height: 1;
-		    padding: 5px 0 0;
+		    padding: 4px 5px;
 		    position: absolute;
-		    right: -19px;
+		    right: -18px;
 		    transition: .3s;
 		    text-align: center;
-		    top: -9px;
-		    width: 18px;
+		    top: -8px;
 		}
 
 		&:hover {

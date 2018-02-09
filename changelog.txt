@@ -1,5 +1,9 @@
 == Changelog ==
 
+= 1.1.1 - 09 February 2018 =
+* Updated WooCommerce template files to latest version.
+* Minor styling fixes.
+
 = 1.1 - 27 December 2017 =
 * Added header overlap setting.
 * Minor WooCommerce mini cart style fixes.

@@ -100,6 +100,19 @@ endif;
 add_filter( 'add_to_cart_fragments', 'polestar_woocommerce_update_cart_count' );
 
 /**
+ * Filter the product archive pagination.
+ */
+function polestar_woocommerce_pagination_args( $array ) {
+	$array = array(
+		'prev_text'    => '<span class="icon-long-arrow-left"></span>', 
+		'next_text'    => '<span class="icon-long-arrow-right"></span>', 
+		'type'         => 'list',
+	);
+	return $array;
+}
+add_filter( 'woocommerce_pagination_args', 'polestar_woocommerce_pagination_args', 10, 1 );
+
+/**
  * Custom WooCommerce template tags.
  */
 include get_template_directory() . '/woocommerce/template-tags.php';
