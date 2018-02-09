@@ -1,5 +1,5 @@
 /*!
-Version: dev
+Version: 1.1.1
 */
 /*--------------------------------------------------------------
 # Layout
@@ -12,8 +12,6 @@ Version: dev
   width: 70%; }
   @media (max-width: 768px) {
     .woocommerce.woocommerce-page.woocommerce-sidebar .content-area {
-      border: 0;
-      padding-right: 0;
       width: 100%; } }
 
 .woocommerce.woocommerce-page.woocommerce-sidebar .widget-area {
@@ -254,6 +252,8 @@ input.button.added:after,
   font-size: 29px;
   line-height: normal;
   margin: 0; }
+  .search-no-results.woocommerce.archive .page-title {
+    margin-bottom: 25px; }
   @media (max-width: 768px) {
     .woocommerce.archive .page-title {
       font-size: 26px; } }
@@ -657,6 +657,12 @@ input.button.added:after,
     .woocommerce .product .product-info-wrapper .variations {
       font-size: 14px;
       margin-bottom: 30px; }
+      .woocommerce .product .summary .variations tr td,
+      .woocommerce .product .product-info-wrapper .variations tr td {
+        padding-bottom: 15px; }
+      .woocommerce .product .summary .variations tr:only-of-type td,
+      .woocommerce .product .product-info-wrapper .variations tr:only-of-type td {
+        padding-bottom: 0; }
       .woocommerce .product .summary .variations .label,
       .woocommerce .product .product-info-wrapper .variations .label {
         text-transform: capitalize; }
@@ -744,6 +750,16 @@ input.button.added:after,
           border-bottom: 2px solid #4d8ffb; }
     .woocommerce .product .woocommerce-tabs .wc-tab {
       padding-top: 25px; }
+  .woocommerce .product .shop_attributes tr th {
+    color: #2d2d2d;
+    text-align: left;
+    text-transform: capitalize; }
+  .woocommerce .product .shop_attributes tr th,
+  .woocommerce .product .shop_attributes tr td {
+    padding-bottom: 8px; }
+  .woocommerce .product .shop_attributes tr:last-of-type th,
+  .woocommerce .product .shop_attributes tr:last-of-type td {
+    padding-bottom: 0; }
   .woocommerce .product .woocommerce-Reviews .woocommerce-noreviews {
     font-size: 14px;
     margin-bottom: 16px; }
@@ -1119,8 +1135,9 @@ input.button.added:after,
         padding-bottom: 30px; } }
     .woocommerce-cart table.cart .cart_item a {
       color: #626262;
-      font-weight: bold;
-      font-weight: 600; }
+      display: block;
+      font-weight: 600;
+      line-height: 1; }
       .woocommerce-cart table.cart .cart_item a:hover {
         color: #828282; }
     .woocommerce-cart table.cart .cart_item .product-remove {
@@ -1193,6 +1210,12 @@ input.button.added:after,
   .woocommerce-cart .cart_totals .checkout-button {
     float: right;
     font-size: 16px; }
+    @media (max-width: 768px) {
+      .woocommerce-cart .cart_totals .checkout-button {
+        display: block;
+        float: none;
+        text-align: center;
+        width: 100%; } }
 
 .site-header .shopping-cart {
   display: inline-block;
@@ -1209,7 +1232,7 @@ input.button.added:after,
   .site-header .shopping-cart-link svg {
     display: inline-block;
     position: relative;
-    height: auto;
+    height: 18.75px;
     vertical-align: text-bottom;
     width: 20px; }
     .overlap-light .site-header:not(.stuck) .shopping-cart-link svg {
@@ -1220,16 +1243,14 @@ input.button.added:after,
     background: #4d8ffb;
     border-radius: 50%;
     color: #fff;
-    height: 18px;
     font-size: 9px;
-    line-height: 1;
-    padding: 5.5px 0 0;
+    line-height: 0;
+    padding: 9px 7px 8px;
     position: absolute;
-    right: -19px;
+    right: -21px;
     transition: .3s;
     text-align: center;
-    top: -9px;
-    width: 18px; }
+    top: -9px; }
   .site-header .shopping-cart-link:hover svg {
     fill: #626262; }
     .overlap-light .site-header:not(.stuck) .site-header .shopping-cart-link:hover svg {
@@ -1287,6 +1308,8 @@ input.button.added:after,
 #mobile-navigation .shopping-cart-text {
   color: #2d2d2d;
   display: inline-block;
+  font-size: 14px;
+  font-weight: 600;
   margin-left: 5px; }
 
 #mobile-navigation .shopping-cart-link {
@@ -1544,5 +1567,3 @@ input.button.added:after,
 --------------------------------------------------------------*/
 .track_order p {
   margin-bottom: 26px; }
-
-/*# sourceMappingURL=sass/maps/woocommerce.css.map */

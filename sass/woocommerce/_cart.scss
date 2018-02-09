@@ -57,8 +57,9 @@
 			
 			a {
 				color: $color__text-medium;
-				font-weight: bold;
+				display: block;
 				font-weight: 600;
+				line-height: 1; 
 				
 				&:hover {
 					color: $color__text-light;
@@ -189,7 +190,14 @@
 
 		.checkout-button {
 			float: right;
-			font-size: 16px; 
+			font-size: 16px;
+			
+			@media (max-width: 768px) {
+				display: block;
+				float: none;
+				text-align: center;
+				width: 100%; 
+			}			 
 		}
 	}
 }
@@ -215,7 +223,7 @@
 		svg {
 			display: inline-block;
 			position: relative;
-			height: auto;
+			height: 18.75px;
 			vertical-align: text-bottom;
 			width: 20px;
 			
@@ -229,19 +237,17 @@
 		}
 
 		.shopping-cart-count {
-		    background: $color__accent;
-		    border-radius: 50%;
-		    color: #fff;
-		    height: 18px;
-		    font-size: 9px;
-		    line-height: 1;
-		    padding: 5.5px 0 0;
-		    position: absolute;
-		    right: -19px;
-		    transition: .3s;
-		    text-align: center;
-		    top: -9px;
-		    width: 18px;
+			background: $color__accent;
+			border-radius: 50%;
+			color: #fff;
+			font-size: 9px;
+			line-height: 0;
+			padding: 9px 7px 8px;
+			position: absolute;
+			right: -21px;
+			transition: .3s;
+			text-align: center;
+			top: -9px;
 		}
 
 		&:hover {
@@ -337,6 +343,8 @@
 	.shopping-cart-text {
 		color: $color__text-dark;
 		display: inline-block;
+		font-size: 14px;
+		font-weight: 600;
 		margin-left: 5px;
 	}	
 

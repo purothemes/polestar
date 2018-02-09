@@ -150,7 +150,18 @@
 
 			.variations {
 				font-size: 14px;
-				margin-bottom: 30px; 
+				margin-bottom: 30px;
+				
+				tr {
+
+					td {
+						padding-bottom: 15px; 
+					}
+
+					&:only-of-type td {
+						padding-bottom: 0;
+					}
+				}				
 
 				.label {
 					text-transform: capitalize;
@@ -270,6 +281,31 @@
 				padding-top: 25px; 
 			}			
 		}
+
+		.shop_attributes {
+
+			tr {
+
+				th {
+					color: $color__text-dark;
+					text-align: left;
+					text-transform: capitalize;
+				}		
+				
+				th,
+				td {
+					padding-bottom: 8px;
+				}	
+
+				&:last-of-type {
+
+					th,
+					td {
+						padding-bottom: 0 
+					}	
+				}
+			}
+		}		
 
 		.woocommerce-Reviews {
 

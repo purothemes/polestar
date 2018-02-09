@@ -175,20 +175,6 @@ function polestar_scripts() {
 	// Theme icons.
 	wp_enqueue_style( 'polestar-icons', get_template_directory_uri() . '/css/polestar-icons' . PURO_THEME_CSS_PREFIX . '.css', array(), PURO_THEME_VERSION );    
 
-	// Google Fonts.
-	$heading_font = get_theme_mod( 'heading_font' );
-	$body_font = get_theme_mod( 'body_font' );
-	$site_title_font = get_theme_mod( 'site_title_font' );
-	$site_tagline_font = get_theme_mod( 'site_tagline_font' );
-
-	if ( $heading_font == 'Montserrat' || $site_title_font == 'Montserrat' || $site_tagline_font == 'Montserrat' ) {
-		wp_enqueue_style( 'google-font-montserrat', '//fonts.googleapis.com/css?family=Montserrat:400,500,700' );	
-	}
-
-	if ( $body_font == 'Open Sans' ) {
-		wp_enqueue_style( 'google-font-open-sans', '//fonts.googleapis.com/css?family=Open+Sans:400,600,700' );	
-	}
-
 	// Comment reply.
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
