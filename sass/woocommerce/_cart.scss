@@ -57,8 +57,9 @@
 			
 			a {
 				color: $color__text-medium;
-				font-weight: bold;
+				display: block;
 				font-weight: 600;
+				line-height: 1; 
 				
 				&:hover {
 					color: $color__text-light;
@@ -189,7 +190,14 @@
 
 		.checkout-button {
 			float: right;
-			font-size: 16px; 
+			font-size: 16px;
+			
+			@media (max-width: 768px) {
+				display: block;
+				float: none;
+				text-align: center;
+				width: 100%; 
+			}			 
 		}
 	}
 }

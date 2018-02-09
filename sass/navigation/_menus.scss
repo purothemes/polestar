@@ -53,6 +53,10 @@
 	    			max-width: 100%;
 	    			padding: 10px 0;
 	    			white-space: nowrap;
+	    			
+					&:not([href]) {
+ 						cursor: pointer;
+					}	    			
 				}
 
 				&:first-of-type > a {

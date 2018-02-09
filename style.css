@@ -8,7 +8,7 @@ Version: dev
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Text Domain: polestar
-Tags: two-columns, right-sidebar, custom-background, custom-menu, custom-logo, featured-images, footer-widgets, sticky-post, threaded-comments, translation-ready, blog, e-commerce
+Tags: one-column, two-columns, left-sidebar, right-sidebar, custom-background, custom-colors, custom-menu, custom-logo, featured-images, footer-widgets, full-width-template, post-formats, sticky-post, theme-options, threaded-comments, translation-ready, blog, e-commerce
 */
 /*--------------------------------------------------------------
 >>> IMPORTANT NOTICE:
@@ -629,6 +629,9 @@ a {
           max-width: 100%;
           padding: 10px 0;
           white-space: nowrap; }
+          .main-navigation ul .sub-menu li a:not([href]),
+          .main-navigation ul .children li a:not([href]) {
+            cursor: pointer; }
         .main-navigation ul .sub-menu li:first-of-type > a,
         .main-navigation ul .children li:first-of-type > a {
           padding-top: 15px; }
@@ -1578,8 +1581,6 @@ a {
     float: right; }
   @media (max-width: 768px) {
     .sidebar .content-area {
-      border: 0;
-      padding-right: 0;
       width: 100%; } }
 
 .page-layout-no-sidebar .site-content .content-area,
@@ -2338,7 +2339,8 @@ a {
 #commentform label {
   display: block;
   line-height: normal;
-  margin-bottom: 8px; }
+  margin-bottom: 8px;
+  text-transform: capitalize; }
 
 #commentform textarea {
   width: 100%; }
