@@ -229,18 +229,17 @@
 		}
 
 		.shopping-cart-count {
-		    background: $color__accent;
-		    border-radius: 50%;
-		    color: #fff;
-		    font-size: 9px;
-		    height: 18px;
-		    line-height: 1;
-		    padding: 4px 5px;
-		    position: absolute;
-		    right: -18px;
-		    transition: .3s;
-		    text-align: center;
-		    top: -8px;
+			background: $color__accent;
+			border-radius: 50%;
+			color: #fff;
+			font-size: 9px;
+			line-height: 0;
+			padding: 9px 7px 8px;
+			position: absolute;
+			right: -21px;
+			transition: .3s;
+			text-align: center;
+			top: -9px;
 		}
 
 		&:hover {
@@ -336,6 +335,8 @@
 	.shopping-cart-text {
 		color: $color__text-dark;
 		display: inline-block;
+		font-size: 14px;
+		font-weight: 600;
 		margin-left: 5px;
 	}	
 

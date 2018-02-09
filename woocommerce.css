@@ -1223,14 +1223,13 @@ input.button.added:after,
     border-radius: 50%;
     color: #fff;
     font-size: 9px;
-    height: 18px;
-    line-height: 1;
-    padding: 4px 5px;
+    line-height: 0;
+    padding: 9px 7px 8px;
     position: absolute;
-    right: -18px;
+    right: -21px;
     transition: .3s;
     text-align: center;
-    top: -8px; }
+    top: -9px; }
   .site-header .shopping-cart-link:hover svg {
     fill: #626262; }
     .overlap-light .site-header:not(.stuck) .site-header .shopping-cart-link:hover svg {
@@ -1288,6 +1287,8 @@ input.button.added:after,
 #mobile-navigation .shopping-cart-text {
   color: #2d2d2d;
   display: inline-block;
+  font-size: 14px;
+  font-weight: 600;
   margin-left: 5px; }
 
 #mobile-navigation .shopping-cart-link {

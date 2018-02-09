@@ -886,6 +886,7 @@ a {
         border-bottom: 1px solid #f6f6f6;
         color: #2d2d2d;
         display: block;
+        font-weight: 600;
         text-decoration: none;
         width: 100% !important; }
         #mobile-navigation ul li a:hover {
