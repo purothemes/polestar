@@ -496,7 +496,7 @@ function polestar_theme_options() {
 		);							
 	}
 
-	if ( ! function_exists( 'polestar_premium_init' ) ) {
+	if ( ! function_exists( 'polestar_premium_setup' ) ) {
 
 		$section = 'more_options';
 
