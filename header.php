@@ -34,10 +34,10 @@
 
 			<div class="polestar-container">
 
-					<?php if ( is_active_sidebar( 'sidebar-header' ) ) : ?>
+					<?php if ( function_exists( 'polestar_premium_setup' ) && is_active_sidebar( 'sidebar-polestar-header' ) ) : ?>
 						<?php $polestar_header_sidebars = wp_get_sidebars_widgets(); ?>
-						<div class="widgets widgets-<?php echo count( $polestar_header_sidebars['sidebar-header'] ) ?>" aria-label="<?php esc_attr_e( 'Header Widgets', 'polestar' ); ?>">
-							<?php dynamic_sidebar( 'sidebar-header' ); ?>
+						<div class="widgets widgets-<?php echo count( $polestar_header_sidebars['sidebar-polestar-header'] ) ?>" aria-label="<?php esc_attr_e( 'Header Widgets', 'polestar' ); ?>">
+							<?php dynamic_sidebar( 'sidebar-polestar-header' ); ?>
 						</div>
 					<?php else : ?>
 
