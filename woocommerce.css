@@ -1,5 +1,5 @@
 /*!
-Version: 1.1.1
+Version: dev
 */
 /*--------------------------------------------------------------
 # Layout
@@ -1244,13 +1244,15 @@ input.button.added:after,
     border-radius: 50%;
     color: #fff;
     font-size: 9px;
+    height: 18px;
     line-height: 0;
-    padding: 9px 7px 8px;
+    padding-top: 9px;
     position: absolute;
-    right: -21px;
+    right: -19px;
     transition: .3s;
     text-align: center;
-    top: -9px; }
+    top: -9px;
+    width: 18px; }
   .site-header .shopping-cart-link:hover svg {
     fill: #626262; }
     .overlap-light .site-header:not(.stuck) .site-header .shopping-cart-link:hover svg {
@@ -1567,3 +1569,5 @@ input.button.added:after,
 --------------------------------------------------------------*/
 .track_order p {
   margin-bottom: 26px; }
+
+/*# sourceMappingURL=sass/maps/woocommerce.css.map */
