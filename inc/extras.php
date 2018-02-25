@@ -133,7 +133,7 @@ function polestar_post_class_filter( $classes ) {
 endif;
 add_filter( 'post_class', 'polestar_post_class_filter' );
 
-if ( ! function_exists( 'polestar_premium_init' ) ) :
+if ( ! function_exists( 'polestar_premium_setup' ) ) :
 /**
  * Polestar upsell notice.
  */
