@@ -1,6 +1,6 @@
 == Changelog ==
 
-= 1.1.2 - 09 February 2018 =
+= 1.2 - 25 February 2018 =
 * Added additional compatibility for Page Builder by SiteOrigin.
 * Removed smooth scrolling from external page anchors.
 * Minor WooCommerce styling fixes.
