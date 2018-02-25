@@ -100,7 +100,9 @@ function polestar_about_page( $about ) {
 
 	$about['review'] = true;
 
-	$about[ 'no_video' ] = true;
+	$about['no_video'] = true;
+	
+	$about['video_url'] = 'https://purothemes.com/themes/polestar/';
 
 	$about['description'] = esc_html__( 'Lead the way with Polestar. It\'s fast loading, responsive, lightweight and flexible design is perfectly suited for building dynamic pages with SiteOrigin\'s Page Builder and selling with WooCommerce.', 'polestar' );
 
