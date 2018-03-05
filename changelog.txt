@@ -1,5 +1,8 @@
 == Changelog ==
 
+= 1.2.1 - 27 February 2018 =
+* Temporarily removed the SiteOrigin layouts folder setup.
+
 = 1.2 - 25 February 2018 =
 * Added additional compatibility for Page Builder by SiteOrigin.
 * Removed smooth scrolling from external page anchors.
