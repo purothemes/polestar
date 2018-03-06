@@ -29,47 +29,6 @@ jQuery( function( $ ) {
 		} );		
 	} );
 
-	// Burst animation.
-	var mousePos = {x: 0, y: 0};
-	$( document ).mousemove( function( e ) {
-		mousePos = {
-			x: e.pageX,
-			y: e.pageY
-		};
-	} );
-
-	$.fn.polestarBurstAnimation = function( options ) {
-		var settings = $.extend( {
-			event: "click",
-			container: "parent"
-		}, options );
-
-		return $( this ).each( function() {
-			var $$ = $( this ),
-				$p = settings.container === 'parent' ? $$.parent() : $$.closest( settings.container ),
-				$o = $( '<div class="burst-animation-overlay"></div>' ),
-				$c = $( '<div class="burst-circle"></div>' ).appendTo( $o );
-
-			$$.on( settings.event, function () {
-				$o.appendTo( $p );
-				$c
-					.css( {
-						top: mousePos.y - $p.offset().top,
-						left: mousePos.x - $p.offset().left,
-						opacity: 0.1,
-						scale: 1
-					} )
-					.transition( {
-						opacity: 0,
-						scale: $p.width()
-					}, 500, 'ease', function () {
-						$o.detach();
-					} );
-			} );
-
-		} );
-	};	
-
 	// Setup FitVids for entry content, Page Builder by SiteOrigin and WooCommerce. Ignore Tableau.
 	if ( typeof $.fn.fitVids !== 'undefined' ) {
 		$( '.entry-content, .entry-content .panel, .woocommerce #main' ).fitVids( { ignore: '.tableauViz' } );
@@ -210,11 +169,6 @@ jQuery( function( $ ) {
 	}
 
 	// Header search.
-	$( '.search-field' ).polestarBurstAnimation( {
-		event: "focus",
-		container: ".search-form"
-	} );
-
 	var $hs = $( '#header-search' );
 	$( '#masthead .search-icon' ).click( function() {
 		$hs.fadeIn( 'fast' );
@@ -243,11 +197,6 @@ jQuery( function( $ ) {
 	// Remove the no-js body class.
 	$( 'body.no-js' ).removeClass( 'no-js' );	
 	if ( $( 'body' ).hasClass( 'css3-animations' ) ) {
-		// Display the burst animation.
-		$( '.search-field' ).polestarBurstAnimation( {
-			event: "focus",
-			container: ".search-form"
-		} );
 
 		var polestarResetMenu = function() {
 			$( '.main-navigation ul ul' ).each( function() {
@@ -274,16 +223,10 @@ jQuery( function( $ ) {
 		$( '.menu-item' ).children( 'a' ).focusout( function() {
 			$( this ).parents( 'ul, li' ).removeClass( 'focus' );
 		} );
-
-		// Burst animation when the user clicks on a sub link.
-		$( '.main-navigation ul ul li a' ).polestarBurstAnimation( {
-			event: "click",
-			container: "parent"
-		} );
 	}
 
 	// Main menu current menu item indication.
-	jQuery( document ).ready( function( $ ) { 	
+	jQuery( document ).ready( function( $ ) {
 		if ( window.location.hash ) {
 			return;
 		} else {
@@ -451,13 +394,13 @@ jQuery( function( $ ) {
 
 		$mobileMenu.slideToggle( 'fast' );
 
-		$( '#mobile-navigation a' ).click(function( e ) {
-			if ( typeof $( this ).hasClass( 'has-dropdown' ).attr( 'href' ) !== "undefined" ) {
-				if ( $mobileMenu.is( ':visible' ) ) {
+		$( '#mobile-navigation a' ).click( function( e ) {
+			if ( ! $( this ).hasClass( 'has-dropdown' ) || ( typeof $( this ).attr( 'href' ) !== "undefined" && $( this ).attr( 'href' )  !== "#" ) ) {
+				if ( $mobileMenu.is(' :visible' ) ) {
 					$mobileMenu.slideUp( 'fast' );
 				}
-				$$.removeClass( 'to-close' );
 			}
+			$$.removeClass( 'to-close' );
 		} );
 
 		$( '#mobile-navigation a[href*="#"]:not([href="#"])' ).polestarSmoothScroll();
