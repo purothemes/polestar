@@ -40,7 +40,10 @@ jQuery( function( $ ) {
 			$( this ).flexslider( {
 				animation: 'slide',
 				controlNav: false,
-				customDirectionNav: $( this ).find( '.flex-direction-nav a' )
+				customDirectionNav: $( this ).find( '.flex-direction-nav a' ),
+				start: function() {
+         			$( '.flexslider .slides img' ).show();
+				}				
 			} );
 		} );
 	} );	

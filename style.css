@@ -2556,7 +2556,7 @@ object {
     list-style: none;
     margin: 0; }
   .flexslider .slides img {
-    display: block;
+    display: none;
     width: 100%; }
   .flexslider .slide {
     background-repeat: no-repeat;
