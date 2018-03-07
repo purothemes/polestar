@@ -743,7 +743,7 @@ input.button.added:after,
         text-transform: uppercase; }
         .woocommerce .product .woocommerce-tabs .wc-tabs li a {
           color: #2d2d2d;
-          font-weight: 500;
+          font-weight: 600;
           display: inline-block;
           outline: 0; }
         .woocommerce .product .woocommerce-tabs .wc-tabs li.active {
