@@ -113,6 +113,19 @@ function polestar_woocommerce_pagination_args( $array ) {
 add_filter( 'woocommerce_pagination_args', 'polestar_woocommerce_pagination_args', 10, 1 );
 
 /**
+ * Change the gallery thumbnail image size.
+ * @link https://github.com/woocommerce/woocommerce/wiki/Customizing-image-sizes-in-3.3-
+ */
+function polestar_woocommerce_single_gallery_thumbnail_size( $size ) {
+    return array(
+        'width'  => 150,
+        'height' => 150,
+        'crop'   => 1,
+    );	
+}
+add_filter( 'woocommerce_get_image_size_gallery_thumbnail', 'polestar_woocommerce_single_gallery_thumbnail_size' );
+
+/**
  * Custom WooCommerce template tags.
  */
 include get_template_directory() . '/woocommerce/template-tags.php';
