@@ -842,6 +842,10 @@ a {
     transform: rotate(0deg);
     transition: .25s ease-in-out;
     width: 100%; }
+    .overlap-light .site-header:not(.stuck) #mobile-menu-button span {
+      background: #fff; }
+    .overlap-dark .site-header:not(.stuck) #mobile-menu-button span {
+      background: #2d2d2d; }
     #mobile-menu-button span:nth-child(1) {
       top: 8px; }
     #mobile-menu-button span:nth-child(2), #mobile-menu-button span:nth-child(3) {
