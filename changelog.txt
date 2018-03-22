@@ -1,5 +1,14 @@
 == Changelog ==
 
+= 1.2.2 - 22 March 2018 =
+* Removed `polestarBurstAnimation not` being used.
+* Minor WooCommerce single product page styling fixes.
+* Added a step to ensure FlexSlider galleries don't flash on load.
+* Removed duplicate WooCommerce actions.
+* Added SiteOrigin layouts folder setup back. Page Builder should prevent error from occuring from version `2.6.3`.
+* Fixed mobile menu icon color when header set to overlap and light text.
+* Added WooCommerce grouped product styling.
+
 = 1.2.1 - 27 February 2018 =
 * Temporarily removed the SiteOrigin layouts folder setup.
 
