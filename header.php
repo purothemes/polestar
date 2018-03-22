@@ -21,6 +21,7 @@
 </head>
 
 <body <?php body_class(); ?>>
+<?php do_action( 'polestar_body_top' ); ?>
 <div id="page" class="site">
 	<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'polestar' ); ?></a>
 
@@ -29,6 +30,8 @@
 				<?php polestar_woocommerce_demo_store(); ?>
 			</div><!-- #topbar -->
 		<?php endif; ?>
+		
+		<?php do_action( 'polestar_header_before' ); ?>
 		
 		<header id="masthead" class="site-header<?php if ( get_theme_mod( 'header_layout' ) == 'centered' ) echo ' centered'; if ( get_theme_mod( 'sticky_header', true ) ) echo ' sticky'; if ( get_theme_mod( 'tagline' ) && get_bloginfo( 'description' ) ) echo ' tagline'; if ( get_theme_mod( 'mobile_menu', true ) ) echo ' mobile-menu'; ?>" <?php if ( get_theme_mod( 'sticky_header_scaling' ) ) echo 'data-scale-logo="true"' ?> >
 

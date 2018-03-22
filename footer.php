@@ -73,6 +73,7 @@ $footer_widgets_page_setting = puro_page_setting( 'footer_widgets', true );
 <?php endif; ?>
 
 <?php wp_footer(); ?>
+<?php do_action( 'polestar_footer_after' ); ?>
 
 </body>
 </html>
