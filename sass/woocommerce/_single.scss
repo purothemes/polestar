@@ -198,6 +198,10 @@
 				
 				td {
 					
+					input {
+						margin-right: 10px;
+					}
+
 					label {
 						font-size: 14px;
 					}
@@ -206,8 +210,6 @@
 						padding-bottom: 5px;
 						width: 60px;
 					}
-
-
 
 					a {
 						color: $color__text-medium;
