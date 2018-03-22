@@ -8,6 +8,7 @@
 * Added SiteOrigin layouts folder setup back. Page Builder should prevent error from occuring from version `2.6.3`.
 * Fixed mobile menu icon color when header set to overlap and light text.
 * Added WooCommerce grouped product styling.
+* Added additional theme action hooks.
 
 = 1.2.1 - 27 February 2018 =
 * Temporarily removed the SiteOrigin layouts folder setup.
