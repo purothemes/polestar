@@ -1,5 +1,11 @@
 == Changelog ==
 
+= 1.2.3 - 28 March 2018 =
+* Added WooCommerce grouped product styling.
+* Fixed paragraph spacing in single WooCommerce product tab descriptions.
+* Moved the viewport tag from `header.php` into `functions.php` to allow for easy removal.
+* Removed the `responsive` body class no longer required. 
+
 = 1.2.2 - 22 March 2018 =
 * Removed `polestarBurstAnimation not` being used.
 * Minor WooCommerce single product page styling fixes.
