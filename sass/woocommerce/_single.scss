@@ -311,7 +311,7 @@
 			}
 
 			.wc-tab {
-				padding-top: 25px; 
+				padding-top: 25px;
 			}			
 		}
 
@@ -338,7 +338,16 @@
 					}	
 				}
 			}
-		}		
+		}
+
+		#tab-description p {
+			margin-bottom: 26px;
+			
+			&:only-of-type,
+			&:last-of-type {
+				margin-bottom: 0;
+			}			
+		}
 
 		.woocommerce-Reviews {
 

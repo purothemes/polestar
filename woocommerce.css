@@ -690,6 +690,9 @@ input.button.added:after,
         .woocommerce .product .summary .woocommerce-grouped-product-list,
         .woocommerce .product .product-info-wrapper .woocommerce-grouped-product-list {
           width: 75%; } }
+      .woocommerce .product .summary .woocommerce-grouped-product-list td input,
+      .woocommerce .product .product-info-wrapper .woocommerce-grouped-product-list td input {
+        margin-right: 10px; }
       .woocommerce .product .summary .woocommerce-grouped-product-list td label,
       .woocommerce .product .product-info-wrapper .woocommerce-grouped-product-list td label {
         font-size: 14px; }
@@ -781,6 +784,10 @@ input.button.added:after,
   .woocommerce .product .shop_attributes tr:last-of-type th,
   .woocommerce .product .shop_attributes tr:last-of-type td {
     padding-bottom: 0; }
+  .woocommerce .product #tab-description p {
+    margin-bottom: 26px; }
+    .woocommerce .product #tab-description p:only-of-type, .woocommerce .product #tab-description p:last-of-type {
+      margin-bottom: 0; }
   .woocommerce .product .woocommerce-Reviews .woocommerce-noreviews {
     font-size: 14px;
     margin-bottom: 16px; }
