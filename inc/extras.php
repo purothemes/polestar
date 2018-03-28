@@ -24,11 +24,8 @@ function polestar_body_classes( $classes ) {
 	// Non-singlar pages.
 	if ( ! is_singular() ) {
 		$classes[] = 'hfeed';
-	}		
-
-	// Responsive layout.
-	$classes[] = 'responsive';
-
+	}
+	
 	// Add the page setting classes.
 	$page_settings = puro_page_setting();
 

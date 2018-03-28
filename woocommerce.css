@@ -922,7 +922,7 @@ input.button.added:after,
     vertical-align: middle;
     width: 100%; }
     @media (max-width: 1100px) {
-      .responsive #quick-view-container .quick-view {
+      #quick-view-container .quick-view {
         width: 85%; } }
   #quick-view-container .quickview-close-icon {
     color: #2d2d2d;
@@ -1221,10 +1221,10 @@ input.button.added:after,
   .woocommerce-cart .cart_totals h2 {
     margin-top: 0; }
     @media (max-width: 768px) {
-      .responsive .woocommerce-cart .cart_totals h2 {
+      .woocommerce-cart .cart_totals h2 {
         font-size: 23px; } }
     @media (max-width: 480px) {
-      .responsive .woocommerce-cart .cart_totals h2 {
+      .woocommerce-cart .cart_totals h2 {
         font-size: 20px; } }
   .woocommerce-cart .cart_totals table {
     margin-bottom: 30px; }

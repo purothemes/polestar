@@ -64,11 +64,7 @@
 		div:only-of-type {
 			float: none;
 			text-align: center;
-			width: 1190px; // 1140px container.
-		}	
-
-		@at-root .responsive & div:only-of-type {
-			width: 100%; 
+			width: 100%;
 		}
 
 		a {
