@@ -88,6 +88,7 @@ function polestar_setup() {
 		'default-color' => 'ffffff',
 		'default-image' => '',
 	) ) );
+
 }
 endif;
 // polestar_setup
@@ -104,6 +105,14 @@ function polestar_content_width() {
 	$GLOBALS['content_width'] = apply_filters( 'polestar_content_width', 1140 );
 }
 add_action( 'after_setup_theme', 'polestar_content_width', 0 );
+
+/**
+ * Add the viewport tag.
+ */
+function polestar_viewport_tag() { ?>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+<?php }
+add_action( 'wp_head', 'polestar_viewport_tag' );
 
 /**
  * Register widget areas.
