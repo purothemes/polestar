@@ -943,7 +943,7 @@ input.button.added:after,
     #quick-view-container .product-content-wrapper .product-image-wrapper img {
       vertical-align: middle; }
     @media (max-width: 768px) {
-      .responsive #quick-view-container .product-content-wrapper .product-image-wrapper {
+      #quick-view-container .product-content-wrapper .product-image-wrapper {
         float: none;
         width: 100%; } }
   #quick-view-container .product-content-wrapper .product-info-wrapper {
@@ -953,10 +953,9 @@ input.button.added:after,
     width: 50%; }
     @media (max-width: 768px) {
       #quick-view-container .product-content-wrapper .product-info-wrapper {
-        padding-top: 0; }
-        .responsive #quick-view-container .product-content-wrapper .product-info-wrapper {
-          float: none;
-          width: 100%; } }
+        float: none;
+        padding-top: 0;
+        width: 100%; } }
     #quick-view-container .product-content-wrapper .product-info-wrapper .entry-title {
       line-height: normal;
       margin: 0; }
