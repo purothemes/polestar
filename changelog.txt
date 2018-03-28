@@ -4,7 +4,8 @@
 * Added WooCommerce grouped product styling.
 * Fixed paragraph spacing in single WooCommerce product tab descriptions.
 * Moved the viewport tag from `header.php` into `functions.php` to allow for easy removal.
-* Removed the `responsive` body class no longer required. 
+* Removed the `responsive` body class no longer required.
+* Updated searchform URL to prevent a 404 error when site and WordPress URL differs. 
 
 = 1.2.2 - 22 March 2018 =
 * Removed `polestarBurstAnimation not` being used.
