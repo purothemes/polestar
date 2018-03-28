@@ -30,15 +30,11 @@
 	margin: 0;
 	
 	@media (max-width: 768px) {
-		.responsive & {
-			font-size: 26px; 	
-		}
+		font-size: 26px; 	
 	}		
 	
 	@media (max-width: 480px) {
-		.responsive & {
-			font-size: 23px; 	
-		}
+		font-size: 23px; 	
 	}	
 
 	a {
