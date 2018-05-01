@@ -397,6 +397,8 @@ input.button.added:after,
     display: table; }
   .post-type-archive-product.woocommerce .products {
     padding-top: 30px; }
+  .post-type-archive-product .infinite-wrap .products {
+    padding-top: 0; }
   .tax-product_cat.woocommerce .products {
     padding-top: 30px; }
   .woocommerce .products .product {
