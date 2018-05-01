@@ -1383,7 +1383,9 @@ a {
   display: block; }
 
 #infinite-handle {
-  text-align: center; }
+  clear: both;
+  text-align: center;
+  width: 100%; }
   #infinite-handle span {
     background: none;
     display: block;
@@ -1394,8 +1396,12 @@ a {
         line-height: normal;
         padding: 11px 25px; }
 
-.infinite-loader .spinner {
-  margin: 0 auto; }
+.infinite-scroll .infinite-loader {
+  display: block;
+  clear: both;
+  width: 100%; }
+  .infinite-scroll .infinite-loader .spinner {
+    margin: 0 auto; }
 
 /*--------------------------------------------------------------
 ## - Related Posts
@@ -1560,10 +1566,9 @@ a {
 --------------------------------------------------------------*/
 .polestar-container {
   margin: 0 auto;
-  max-width: none;
+  max-width: 1190px;
   padding: 0 25px;
   position: relative;
-  max-width: 1190px;
   width: 100%; }
   .full-width .polestar-container {
     max-width: none; }
