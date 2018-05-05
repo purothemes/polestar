@@ -1385,7 +1385,8 @@ input.button.added:after,
     text-align: center; }
     .site-header .shopping-cart-dropdown .buttons a {
       color: #fff;
-      display: inline-block; }
+      display: inline-block;
+      font-weight: normal; }
       .site-header .shopping-cart-dropdown .buttons a.button {
         font-size: 12px;
         padding: 10px 24px; }
