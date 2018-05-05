@@ -163,7 +163,13 @@
 		}
 
 		.button {
+			background: $color__background-hr-dark;
+			color: $color__text-medium;
 			float: right;
+			
+			&:hover {
+				background: $color__accent;
+			}
 		}
 	}
 }

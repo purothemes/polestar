@@ -1081,7 +1081,11 @@ input.button.added:after,
     .widget_price_filter .price_slider_amount .price_label span {
       font-weight: bold; }
   .widget_price_filter .price_slider_amount .button {
+    background: #ebebeb;
+    color: #626262;
     float: right; }
+    .widget_price_filter .price_slider_amount .button:hover {
+      background: #4d8ffb; }
 
 /*--------------------------------------------------------------
 ## - Search Widget
@@ -1405,6 +1409,12 @@ input.button.added:after,
       .site-header .shopping-cart-dropdown .buttons a.button {
         font-size: 12px;
         padding: 10px 24px; }
+      .site-header .shopping-cart-dropdown .buttons a:first-of-type {
+        background: #ebebeb;
+        color: #626262; }
+        .site-header .shopping-cart-dropdown .buttons a:first-of-type:hover {
+          background: #4d8ffb;
+          color: #fff; }
 
 #mobile-navigation .shopping-cart-text {
   color: #2d2d2d;
