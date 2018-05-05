@@ -967,61 +967,6 @@ input.button.added:after,
 # Widgets
 --------------------------------------------------------------*/
 /*--------------------------------------------------------------
-## - Price Filter Widget
---------------------------------------------------------------*/
-.widget_price_filter .ui-slider {
-  background: #ebebeb;
-  height: 3px;
-  margin: 21px 3.5px 26px;
-  position: relative; }
-  .widget_price_filter .ui-slider .ui-slider-range {
-    background: #4d8ffb;
-    height: 100%;
-    position: absolute;
-    top: 0;
-    z-index: 1; }
-  .widget_price_filter .ui-slider .ui-slider-handle {
-    background: #4d8ffb;
-    cursor: ew-resize;
-    height: 15px;
-    margin-left: -3.5px;
-    outline: none;
-    position: absolute;
-    top: -6px;
-    width: 7px;
-    z-index: 2; }
-
-.widget_price_filter .price_slider_amount {
-  overflow: auto; }
-  .widget_price_filter .price_slider_amount .price_label {
-    font-weight: normal;
-    padding-top: 10px; }
-    .widget_price_filter .price_slider_amount .price_label span {
-      font-weight: bold; }
-  .widget_price_filter .price_slider_amount .button {
-    float: right; }
-
-/*--------------------------------------------------------------
-## - Search Widget
---------------------------------------------------------------*/
-.widget_product_search .woocommerce-product-search input[type="search"] {
-  padding-right: 43px; }
-
-.widget_product_search .woocommerce-product-search button[type="submit"] {
-  background: none;
-  border: none;
-  color: inherit;
-  padding: 0;
-  position: relative;
-  right: 36px;
-  top: 2px; }
-  .widget_product_search .woocommerce-product-search button[type="submit"] svg {
-    height: 16px;
-    width: 16px; }
-    .widget_product_search .woocommerce-product-search button[type="submit"] svg path {
-      fill: #828282; }
-
-/*--------------------------------------------------------------
 ## - Cart and Product List Widget
 --------------------------------------------------------------*/
 .cart_list,
@@ -1088,6 +1033,75 @@ input.button.added:after,
       padding: 10px 24px; }
     .widget_shopping_cart .buttons a.checkout {
       margin-left: 5px; }
+
+/*--------------------------------------------------------------
+## Product Categories Widget
+--------------------------------------------------------------*/
+.widget_product_categories .product-categories li {
+  color: #828282; }
+  .widget_product_categories .product-categories li a {
+    color: #2d2d2d;
+    display: inline-block;
+    margin-bottom: 8px; }
+  .widget_product_categories .product-categories li span {
+    color: #828282; }
+  .widget_product_categories .product-categories li .children {
+    margin-left: 12px; }
+
+/*--------------------------------------------------------------
+## - Price Filter Widget
+--------------------------------------------------------------*/
+.widget_price_filter .ui-slider {
+  background: #ebebeb;
+  height: 3px;
+  margin: 21px 3.5px 26px;
+  position: relative; }
+  .widget_price_filter .ui-slider .ui-slider-range {
+    background: #4d8ffb;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    z-index: 1; }
+  .widget_price_filter .ui-slider .ui-slider-handle {
+    background: #4d8ffb;
+    cursor: ew-resize;
+    height: 15px;
+    margin-left: -3.5px;
+    outline: none;
+    position: absolute;
+    top: -6px;
+    width: 7px;
+    z-index: 2; }
+
+.widget_price_filter .price_slider_amount {
+  overflow: auto; }
+  .widget_price_filter .price_slider_amount .price_label {
+    font-weight: normal;
+    padding-top: 10px; }
+    .widget_price_filter .price_slider_amount .price_label span {
+      font-weight: bold; }
+  .widget_price_filter .price_slider_amount .button {
+    float: right; }
+
+/*--------------------------------------------------------------
+## - Search Widget
+--------------------------------------------------------------*/
+.widget_product_search .woocommerce-product-search input[type="search"] {
+  padding-right: 43px; }
+
+.widget_product_search .woocommerce-product-search button[type="submit"] {
+  background: none;
+  border: none;
+  color: inherit;
+  padding: 0;
+  position: relative;
+  right: 36px;
+  top: 2px; }
+  .widget_product_search .woocommerce-product-search button[type="submit"] svg {
+    height: 16px;
+    width: 16px; }
+    .widget_product_search .woocommerce-product-search button[type="submit"] svg path {
+      fill: #828282; }
 
 /*--------------------------------------------------------------
 ## - Product Tag Cloud Widget
