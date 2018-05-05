@@ -210,6 +210,11 @@
 			padding-top: 30px; 
 		}
 
+		// Remove the products list top padding within the Infinite Wrap container if we're using Jetpack Infinite Scroll.
+		@at-root .post-type-archive-product .infinite-wrap .products {
+			padding-top: 0; 
+		}		
+
 		@at-root .tax-product_cat#{&} {
 			padding-top: 30px; 
 		}

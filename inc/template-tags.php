@@ -292,6 +292,7 @@ function polestar_get_image() {
 	$first_image = '';
 
 	$output = preg_match_all( '/<img[^>]+\>/i', get_the_content(), $images );
+	if ( ! empty( $images ) ) return;
 	$first_image = $images[0][0];
 
 	return ( '' !== $first_image ) ? $first_image : false;
@@ -378,8 +379,7 @@ function polestar_display_logo() {
 		if ( get_theme_mod( 'tagline' ) && get_bloginfo( 'description' ) ) : ?>
 			<p class="site-description"><?php bloginfo( 'description' ); ?></p>
 		<?php endif;
-	}
-	else {
+	} else {
 		if ( is_front_page() ) : ?>
 			<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
 			<?php if ( get_theme_mod( 'tagline' ) && get_bloginfo( 'description' ) ) : ?>

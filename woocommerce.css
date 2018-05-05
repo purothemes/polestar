@@ -397,6 +397,8 @@ input.button.added:after,
     display: table; }
   .post-type-archive-product.woocommerce .products {
     padding-top: 30px; }
+  .post-type-archive-product .infinite-wrap .products {
+    padding-top: 0; }
   .tax-product_cat.woocommerce .products {
     padding-top: 30px; }
   .woocommerce .products .product {
@@ -963,6 +965,41 @@ input.button.added:after,
 /*--------------------------------------------------------------
 # Widgets
 --------------------------------------------------------------*/
+/*--------------------------------------------------------------
+## - Price Filter Widget
+--------------------------------------------------------------*/
+.widget_price_filter .ui-slider {
+  background: #ebebeb;
+  height: 3px;
+  margin: 21px 3.5px 26px;
+  position: relative; }
+  .widget_price_filter .ui-slider .ui-slider-range {
+    background: #4d8ffb;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    z-index: 1; }
+  .widget_price_filter .ui-slider .ui-slider-handle {
+    background: #4d8ffb;
+    cursor: ew-resize;
+    height: 15px;
+    margin-left: -3.5px;
+    outline: none;
+    position: absolute;
+    top: -6px;
+    width: 7px;
+    z-index: 2; }
+
+.widget_price_filter .price_slider_amount {
+  overflow: auto; }
+  .widget_price_filter .price_slider_amount .price_label {
+    font-weight: normal;
+    padding-top: 10px; }
+    .widget_price_filter .price_slider_amount .price_label span {
+      font-weight: bold; }
+  .widget_price_filter .price_slider_amount .button {
+    float: right; }
+
 /*--------------------------------------------------------------
 ## - Search Widget
 --------------------------------------------------------------*/

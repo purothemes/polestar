@@ -31,7 +31,7 @@ function polestar_jetpack_setup() {
 		'container' => 'main',
 		'render' => 'polestar_infinite_scroll_render',
 		'footer' => 'page',
-		'posts_per_page' => 9
+		'posts_per_page' => get_option( 'jetpack_portfolio_posts_per_page' )
 	) );
 
 	/*

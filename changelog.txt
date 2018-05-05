@@ -1,5 +1,10 @@
 == Changelog ==
 
+= 1.2.4 - 05 May 2018 =
+* Adjusted Jetpack Infinite Scroll to use posts per page setting.
+* Minor Jetpack Infinite Scroll styling fixes.
+* Added style support for the WooCommerce Price Filter widget.
+
 = 1.2.3 - 28 March 2018 =
 * Added WooCommerce grouped product styling.
 * Fixed paragraph spacing in single WooCommerce product tab descriptions.

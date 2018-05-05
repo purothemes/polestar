@@ -1,9 +1,8 @@
 .polestar-container {
 	margin: 0 auto;
-	max-width: none; 
+	max-width: 1190px; // 1140px container.
 	padding: 0 25px;
 	position: relative;
-	max-width: 1190px; // 1140px container.
 	width: 100%; 
 	
 	.full-width & {

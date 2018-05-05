@@ -1,4 +1,54 @@
 /*--------------------------------------------------------------
+## - Price Filter Widget
+--------------------------------------------------------------*/
+.widget_price_filter {
+
+	.ui-slider {
+		background: $color__background-hr-dark;
+		height: 3px;
+		margin: 21px 3.5px 26px;
+		position: relative;
+		
+		.ui-slider-range {
+			background: $color__accent;
+			height: 100%;
+			position: absolute;
+			top: 0;
+			z-index: 1;
+		}			
+		
+		.ui-slider-handle {
+			background: $color__accent;
+			cursor: ew-resize;
+			height: 15px;
+			margin-left: -3.5px;
+			outline: none;
+			position: absolute;
+			top: -6px;
+			width: 7px;
+			z-index: 2;
+		}		
+	}
+
+	.price_slider_amount {
+		overflow: auto;
+
+		.price_label {
+			font-weight: normal;
+			padding-top: 10px;
+
+			span {
+				font-weight: bold;
+			}
+		}
+
+		.button {
+			float: right;
+		}
+	}
+}
+
+/*--------------------------------------------------------------
 ## - Search Widget
 --------------------------------------------------------------*/
 .widget_product_search {
