@@ -1540,6 +1540,24 @@ a {
       text-align: right; }
 
 /*--------------------------------------------------------------
+## Archives and Categories Widgets
+--------------------------------------------------------------*/
+.widget_archive li,
+.widget_categories li {
+  color: #828282; }
+  .widget_archive li a,
+  .widget_categories li a {
+    color: #2d2d2d;
+    display: inline-block;
+    margin-bottom: 8px; }
+  .widget_archive li span,
+  .widget_categories li span {
+    color: #828282; }
+  .widget_archive li .children,
+  .widget_categories li .children {
+    margin-left: 12px; }
+
+/*--------------------------------------------------------------
 ## - Search Widget
 --------------------------------------------------------------*/
 .widget .search-form {
