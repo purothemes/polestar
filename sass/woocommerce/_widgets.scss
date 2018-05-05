@@ -174,3 +174,27 @@
 		}
 	}	
 }
+
+/*--------------------------------------------------------------
+## - Product Tag Cloud Widget
+--------------------------------------------------------------*/
+.widget.widget_product_tag_cloud {
+	margin-right: -6px;
+
+	.tagcloud a {
+		background: $color__background-hr-dark;
+		border-radius: 2px;
+		color: $color__text-medium;
+		display: inline-block;
+		font-size: 13px; 
+		line-height: normal;
+		margin: 0 6px 8px 0;
+		padding: 6px 10px;
+		transition: .3s;
+
+		&:hover {
+			background: $color__accent;
+			color: #fff;
+		}
+	}
+}

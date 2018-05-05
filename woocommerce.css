@@ -1089,6 +1089,25 @@ input.button.added:after,
       margin-left: 5px; }
 
 /*--------------------------------------------------------------
+## - Product Tag Cloud Widget
+--------------------------------------------------------------*/
+.widget.widget_product_tag_cloud {
+  margin-right: -6px; }
+  .widget.widget_product_tag_cloud .tagcloud a {
+    background: #ebebeb;
+    border-radius: 2px;
+    color: #626262;
+    display: inline-block;
+    font-size: 13px;
+    line-height: normal;
+    margin: 0 6px 8px 0;
+    padding: 6px 10px;
+    transition: .3s; }
+    .widget.widget_product_tag_cloud .tagcloud a:hover {
+      background: #4d8ffb;
+      color: #fff; }
+
+/*--------------------------------------------------------------
 # Notifications
 --------------------------------------------------------------*/
 .woocommerce-message,
