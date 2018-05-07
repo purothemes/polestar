@@ -1561,17 +1561,9 @@ a {
 ## - Search Widget
 --------------------------------------------------------------*/
 .widget .search-form {
-  position: relative; }
+  width: 100%; }
   .widget .search-form input[type="search"] {
-    padding-right: 40px;
     width: 100%; }
-  .widget .search-form button[type="submit"] {
-    position: absolute;
-    right: 14px;
-    top: 12px; }
-    .widget .search-form button[type="submit"] svg {
-      height: 16px;
-      width: 16px; }
 
 /*--------------------------------------------------------------
 ## - Tag Cloud Widget
@@ -2115,21 +2107,24 @@ a {
 /*--------------------------------------------------------------
 ## - Search Form
 --------------------------------------------------------------*/
-.search-form input[type="search"] {
-  padding-right: 43px; }
-
-.search-form button[type="submit"] {
-  background: none;
-  border: none;
-  padding: 0;
-  position: relative;
-  right: 36px;
-  top: 2px; }
-  .search-form button[type="submit"] svg {
-    height: 16px;
-    width: 16px; }
-    .search-form button[type="submit"] svg path {
-      fill: #828282; }
+.search-form {
+  display: inline-block;
+  position: relative; }
+  .search-form input[type="search"] {
+    min-width: 300px;
+    padding-right: 46px; }
+  .search-form button[type="submit"] {
+    background: none;
+    border: none;
+    padding: 12px 15px 10px;
+    position: absolute;
+    right: 0;
+    top: 0; }
+    .search-form button[type="submit"] svg {
+      height: 16px;
+      width: 16px; }
+      .search-form button[type="submit"] svg path {
+        fill: #828282; }
 
 /*--------------------------------------------------------------
 ## - Author Box

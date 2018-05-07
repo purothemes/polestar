@@ -967,6 +967,25 @@ input.button.added:after,
 # Widgets
 --------------------------------------------------------------*/
 /*--------------------------------------------------------------
+## Active Product Filters Widget
+--------------------------------------------------------------*/
+.widget.widget_layered_nav_filters .chosen a {
+  padding-left: 20px;
+  position: relative; }
+  .widget.widget_layered_nav_filters .chosen a:before {
+    color: #4d8ffb;
+    content: "\e900";
+    display: inline-block;
+    font-family: "polestar-icons";
+    font-size: 15px;
+    left: 0;
+    line-height: 1;
+    position: absolute;
+    top: 3px; }
+  .widget.widget_layered_nav_filters .chosen a:hover {
+    color: #2d2d2d; }
+
+/*--------------------------------------------------------------
 ## - Cart and Product List Widget
 --------------------------------------------------------------*/
 .cart_list,
@@ -991,6 +1010,9 @@ input.button.added:after,
     .cart_list li ins,
     .product_list_widget li ins {
       background: none; }
+    .cart_list li .star-rating,
+    .product_list_widget li .star-rating {
+      margin-top: 4px; }
     .cart_list li .amount,
     .cart_list li .quantity,
     .product_list_widget li .amount,
@@ -1037,15 +1059,19 @@ input.button.added:after,
 /*--------------------------------------------------------------
 ## Product Categories Widget
 --------------------------------------------------------------*/
-.widget_product_categories .product-categories li {
+.widget_product_categories .product-categories li,
+.woocommerce-widget-layered-nav-list li {
   color: #828282; }
-  .widget_product_categories .product-categories li a {
+  .widget_product_categories .product-categories li a,
+  .woocommerce-widget-layered-nav-list li a {
     color: #2d2d2d;
     display: inline-block;
     margin-bottom: 8px; }
-  .widget_product_categories .product-categories li span {
+  .widget_product_categories .product-categories li span,
+  .woocommerce-widget-layered-nav-list li span {
     color: #828282; }
-  .widget_product_categories .product-categories li .children {
+  .widget_product_categories .product-categories li .children,
+  .woocommerce-widget-layered-nav-list li .children {
     margin-left: 12px; }
 
 /*--------------------------------------------------------------
@@ -1088,24 +1114,15 @@ input.button.added:after,
       background: #4d8ffb; }
 
 /*--------------------------------------------------------------
-## - Search Widget
+## - Filter Products by Rating Widget
 --------------------------------------------------------------*/
-.widget_product_search .woocommerce-product-search input[type="search"] {
-  padding-right: 43px; }
-
-.widget_product_search .woocommerce-product-search button[type="submit"] {
-  background: none;
-  border: none;
-  color: inherit;
-  padding: 0;
-  position: relative;
-  right: 36px;
-  top: 2px; }
-  .widget_product_search .woocommerce-product-search button[type="submit"] svg {
-    height: 16px;
-    width: 16px; }
-    .widget_product_search .woocommerce-product-search button[type="submit"] svg path {
-      fill: #828282; }
+.widget.widget_rating_filter .wc-layered-nav-rating a {
+  align-items: center;
+  color: #828282;
+  display: flex; }
+  .widget.widget_rating_filter .wc-layered-nav-rating a .star-rating {
+    display: inline-block;
+    margin-right: 3px; }
 
 /*--------------------------------------------------------------
 ## - Product Tag Cloud Widget

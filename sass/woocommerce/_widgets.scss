@@ -1,4 +1,31 @@
 /*--------------------------------------------------------------
+## Active Product Filters Widget
+--------------------------------------------------------------*/
+.widget.widget_layered_nav_filters {
+	
+	.chosen a {
+		padding-left: 20px;
+		position: relative;
+
+		&:before {
+			color: $color__accent;
+			content: "\e900";
+			display: inline-block;
+			font-family: $font__icon;
+			font-size: 15px;
+			left: 0;
+			line-height: 1;
+			position: absolute;
+			top: 3px;
+		}
+
+		&:hover {
+			color: $color__text-dark;
+		}
+	}
+}
+
+/*--------------------------------------------------------------
 ## - Cart and Product List Widget
 --------------------------------------------------------------*/
 .cart_list,
@@ -26,6 +53,10 @@
 		ins {
 			background: none; 
 		}
+
+		.star-rating {
+			margin-top: 4px;
+		}	
 
 		.amount,
 		.quantity {
@@ -96,7 +127,8 @@
 /*--------------------------------------------------------------
 ## Product Categories Widget
 --------------------------------------------------------------*/
-.widget_product_categories .product-categories {
+.widget_product_categories .product-categories,
+.woocommerce-widget-layered-nav-list {
 
 	li {
 		color: $color__text-light;
@@ -175,37 +207,18 @@
 }
 
 /*--------------------------------------------------------------
-## - Search Widget
+## - Filter Products by Rating Widget
 --------------------------------------------------------------*/
-.widget_product_search {
+.widget.widget_rating_filter .wc-layered-nav-rating a {
+	align-items: center;
+	color: $color__text-light;
+	display: flex;
 
-	.woocommerce-product-search {
-
-		input[type="search"] {
-			padding-right: 43px; 
-		}
-
-		button[type="submit"] {
-			background: none; 
-			border: none;
-			color: inherit;
-			padding: 0;
-			position: relative;
-			right: 36px;
-			top: 2px;
-
-			svg {
-				height: 16px;
-				width: 16px;
-				
-				path {
-					fill: $color__text-light;
-				}
-			}
-		}
+	.star-rating {
+		display: inline-block;
+		margin-right: 3px;
 	}
 }
-
 
 /*--------------------------------------------------------------
 ## - Product Tag Cloud Widget
