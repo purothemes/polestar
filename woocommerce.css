@@ -148,7 +148,7 @@ input.button.added:after,
     display: block;
     margin-bottom: 4px; }
     .woocommerce form .form-row label .required {
-      color: rgba(255, 0, 0, 0.6);
+      color: rgba(255, 0, 0, 0.7);
       text-decoration: none; }
     .woocommerce form .form-row label.inline {
       font-weight: normal; }
@@ -160,15 +160,15 @@ input.button.added:after,
     box-sizing: border-box;
     width: 100%; }
   .woocommerce form .form-row.woocommerce-invalid label {
-    color: rgba(255, 0, 0, 0.6); }
+    color: rgba(255, 0, 0, 0.7); }
   .woocommerce form .form-row.woocommerce-invalid .select2-container,
   .woocommerce form .form-row.woocommerce-invalid input.input-text,
   .woocommerce form .form-row.woocommerce-invalid select {
-    border-color: rgba(255, 0, 0, 0.6); }
+    border-color: rgba(255, 0, 0, 0.7); }
   .woocommerce form .form-row.woocommerce-validated .select2-container,
   .woocommerce form .form-row.woocommerce-validated input.input-text,
   .woocommerce form .form-row.woocommerce-validated select {
-    border-color: rgba(0, 128, 0, 0.6); }
+    border-color: rgba(0, 128, 0, 0.7); }
 
 .woocommerce form .form-row-first,
 .woocommerce form .form-row-last {
@@ -1548,6 +1548,8 @@ input.button.added:after,
       padding: 10px 0 0; }
       .woocommerce #payment .payment_methods li .payment_box.payment_method_paypal {
         padding-top: 20px; }
+      .woocommerce #payment .payment_methods li .payment_box p {
+        margin-bottom: 0; }
     .woocommerce #payment .payment_methods li.payment_method_stripe img {
       margin-top: -10px;
       position: absolute;
@@ -1562,11 +1564,10 @@ input.button.added:after,
 .woocommerce #payment .form-row select {
   width: auto; }
 
-.woocommerce #payment .wc-terms-and-conditions,
-.woocommerce #payment .terms {
-  float: left;
-  padding: 0 1em 0 0;
-  text-align: left; }
+.woocommerce #payment .wc-terms-and-conditions {
+  border-bottom: 1px solid #ebebeb;
+  padding: 20px;
+  margin-bottom: 0; }
 
 .woocommerce #payment #place_order {
   float: right;
@@ -1595,6 +1596,12 @@ input.button.added:after,
   .woocommerce-order-received table td {
     border: 1px solid #f6f6f6;
     padding: 8px 16px; }
+    .woocommerce-order-received table th a,
+    .woocommerce-order-received table td a {
+      color: #626262; }
+      .woocommerce-order-received table th a:hover,
+      .woocommerce-order-received table td a:hover {
+        color: #4d8ffb; }
 
 .woocommerce-order-received section {
   margin-bottom: 50px; }
@@ -1668,6 +1675,8 @@ input.button.added:after,
     margin-top: 0; }
   .woocommerce-account .woocommerce-MyAccount-content p {
     margin-bottom: 26px; }
+    .woocommerce-account .woocommerce-MyAccount-content p span em {
+      font-size: 13px; }
   .woocommerce-account .woocommerce-MyAccount-content .col2-set {
     float: none;
     width: 100%; }
@@ -1689,6 +1698,19 @@ input.button.added:after,
       @media (max-width: 768px) {
         .woocommerce-account .woocommerce-MyAccount-content .woocommerce-Address.col-2 {
           padding-left: 0; } }
+  .woocommerce-account .woocommerce-MyAccount-content .password-change {
+    margin-bottom: 15px; }
+  .woocommerce-account .woocommerce-MyAccount-content .woocommerce-password-strength {
+    font-size: 14px;
+    font-weight: 600; }
+    .woocommerce-account .woocommerce-MyAccount-content .woocommerce-password-strength.strong {
+      color: rgba(0, 128, 0, 0.7); }
+    .woocommerce-account .woocommerce-MyAccount-content .woocommerce-password-strength.short {
+      color: rgba(255, 0, 0, 0.7); }
+    .woocommerce-account .woocommerce-MyAccount-content .woocommerce-password-strength.bad {
+      color: rgba(255, 0, 0, 0.7); }
+    .woocommerce-account .woocommerce-MyAccount-content .woocommerce-password-strength.good {
+      color: rgba(0, 0, 128, 0.7); }
 
 /*--------------------------------------------------------------
 # Order Tracking

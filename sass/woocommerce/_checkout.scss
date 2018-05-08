@@ -142,6 +142,10 @@
 					&.payment_method_paypal {
 						padding-top: 20px; 
 					}
+
+					p {
+						margin-bottom: 0;;
+					}
 				}
 
 				&.payment_method_stripe {
@@ -174,17 +178,16 @@
 			}
 		}
 
-		.wc-terms-and-conditions, 
-		.terms {
-			float: left;
-			padding: 0 1em 0 0;
-			text-align: left;
-		}
+		.wc-terms-and-conditions {
+			border-bottom: 1px solid $color__background-hr-dark;
+			padding: 20px;
+			margin-bottom: 0;		
+		}	
 
 		#place_order {
 			float: right;
 			font-size: 16px;
-			margin-top: 30px;  
+			margin-top: 30px;
 		}
 	}
 }
