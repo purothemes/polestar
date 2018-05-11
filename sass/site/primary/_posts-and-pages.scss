@@ -268,7 +268,7 @@
 	border-radius: 2px;
 	color: $color__text-medium;
 	display: inline-block;
-	font-size: 12px; 
+	font-size: 13px; 
 	line-height: normal;
 	margin: 0 6px 8px 0;
 	padding: 6px 10px;
@@ -312,24 +312,27 @@
 		font-size: 13px; 
 		margin-top: 15px; 
 	}
-	
-	.entry-title {
-		font-size: 29px; 
-	}
 }
 
-.search-results article {
-	border-bottom: 1px solid $color__background-hr-dark;
-	margin: 0 0 50px;
-	padding: 0 0 30px;
-	
-	&:last-of-type {
-		border: 0;
+.search-results {
+
+	.entry-title {
+		font-size: 26px;
 	}
 
-	&:only-of-type {
-		border: 0;
-		margin: 0; 
+	article {
+		border-bottom: 1px solid $color__background-hr-dark;
+		margin: 0 0 50px;
+		padding: 0 0 30px;
+		
+		&:last-of-type {
+			border: 0;
+		}
+
+		&:only-of-type {
+			border: 0;
+			margin: 0; 
+		}
 	}
 }
 
@@ -337,18 +340,21 @@
 ## - Search Form
 --------------------------------------------------------------*/
 .search-form {
+	display: inline-block;
+	position: relative;	
 
 	input[type="search"] {
-		padding-right: 43px; 
+		min-width: 300px;
+		padding-right: 46px;
 	}
 
 	button[type="submit"] {
 		background: none; 
 		border: none;
-		padding: 0;
-		position: relative;
-		right: 36px;
-		top: 2px;
+		padding: 12px 15px 10px;
+		position: absolute;
+		right: 0;
+		top: 0;
 
 		svg {
 			height: 16px;

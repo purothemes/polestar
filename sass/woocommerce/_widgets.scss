@@ -1,81 +1,26 @@
 /*--------------------------------------------------------------
-## - Price Filter Widget
+## Active Product Filters Widget
 --------------------------------------------------------------*/
-.widget_price_filter {
-
-	.ui-slider {
-		background: $color__background-hr-dark;
-		height: 3px;
-		margin: 21px 3.5px 26px;
+.widget.widget_layered_nav_filters {
+	
+	.chosen a {
+		padding-left: 20px;
 		position: relative;
-		
-		.ui-slider-range {
-			background: $color__accent;
-			height: 100%;
+
+		&:before {
+			color: $color__accent;
+			content: "\e900";
+			display: inline-block;
+			font-family: $font__icon;
+			font-size: 15px;
+			left: 0;
+			line-height: 1;
 			position: absolute;
-			top: 0;
-			z-index: 1;
-		}			
-		
-		.ui-slider-handle {
-			background: $color__accent;
-			cursor: ew-resize;
-			height: 15px;
-			margin-left: -3.5px;
-			outline: none;
-			position: absolute;
-			top: -6px;
-			width: 7px;
-			z-index: 2;
-		}		
-	}
-
-	.price_slider_amount {
-		overflow: auto;
-
-		.price_label {
-			font-weight: normal;
-			padding-top: 10px;
-
-			span {
-				font-weight: bold;
-			}
+			top: 3px;
 		}
 
-		.button {
-			float: right;
-		}
-	}
-}
-
-/*--------------------------------------------------------------
-## - Search Widget
---------------------------------------------------------------*/
-.widget_product_search {
-
-	.woocommerce-product-search {
-
-		input[type="search"] {
-			padding-right: 43px; 
-		}
-
-		button[type="submit"] {
-			background: none; 
-			border: none;
-			color: inherit;
-			padding: 0;
-			position: relative;
-			right: 36px;
-			top: 2px;
-
-			svg {
-				height: 16px;
-				width: 16px;
-				
-				path {
-					fill: $color__text-light;
-				}
-			}
+		&:hover {
+			color: $color__text-dark;
 		}
 	}
 }
@@ -108,6 +53,10 @@
 		ins {
 			background: none; 
 		}
+
+		.star-rating {
+			margin-top: 4px;
+		}	
 
 		.amount,
 		.quantity {
@@ -173,4 +122,124 @@
 			}
 		}
 	}	
+}
+
+/*--------------------------------------------------------------
+## Product Categories Widget
+--------------------------------------------------------------*/
+.widget_product_categories .product-categories,
+.woocommerce-widget-layered-nav-list {
+
+	li {
+		color: $color__text-light;
+		
+		a {
+			color: $color__text-dark;
+			display: inline-block;
+			margin-bottom: 8px;
+		}
+
+		span {
+			color: $color__text-light;
+		}			
+
+		.children {
+			margin-left: 12px;
+		}
+
+	}
+}
+
+/*--------------------------------------------------------------
+## - Price Filter Widget
+--------------------------------------------------------------*/
+.widget_price_filter {
+
+	.ui-slider {
+		background: $color__background-hr-dark;
+		height: 3px;
+		margin: 21px 3.5px 26px;
+		position: relative;
+		
+		.ui-slider-range {
+			background: $color__accent;
+			height: 100%;
+			position: absolute;
+			top: 0;
+			z-index: 1;
+		}			
+		
+		.ui-slider-handle {
+			background: $color__accent;
+			cursor: ew-resize;
+			height: 15px;
+			margin-left: -3.5px;
+			outline: none;
+			position: absolute;
+			top: -6px;
+			width: 7px;
+			z-index: 2;
+		}		
+	}
+
+	.price_slider_amount {
+		overflow: auto;
+
+		.price_label {
+			font-weight: normal;
+			padding-top: 10px;
+
+			span {
+				font-weight: bold;
+			}
+		}
+
+		.button {
+			background: $color__background-hr-dark;
+			color: $color__text-medium;
+			float: right;
+			
+			&:hover {
+				background: $color__accent;
+			}
+		}
+	}
+}
+
+/*--------------------------------------------------------------
+## - Filter Products by Rating Widget
+--------------------------------------------------------------*/
+.widget.widget_rating_filter .wc-layered-nav-rating a {
+	align-items: center;
+	color: $color__text-light;
+	display: flex;
+
+	.star-rating {
+		display: inline-block;
+		margin-right: 3px;
+	}
+}
+
+/*--------------------------------------------------------------
+## - Product Tag Cloud Widget
+--------------------------------------------------------------*/
+.widget.widget_product_tag_cloud {
+	margin-right: -6px;
+
+	.tagcloud a {
+		background: $color__background-hr-dark;
+		border-radius: 2px;
+		color: $color__text-medium;
+		display: inline-block;
+		font-size: 13px; 
+		line-height: normal;
+		margin: 0 6px 8px 0;
+		padding: 6px 10px;
+		transition: .3s;
+
+		&:hover {
+			background: $color__accent;
+			color: #fff;
+		}
+	}
 }

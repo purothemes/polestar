@@ -122,25 +122,43 @@
 }
 
 /*--------------------------------------------------------------
+## Archives and Categories Widgets
+--------------------------------------------------------------*/
+.widget_archive,
+.widget_categories {
+
+	li {
+		color: $color__text-light;
+		
+		a {
+			color: $color__text-dark;
+			display: inline-block;
+			margin-bottom: 8px;
+		}
+
+		span {
+			color: $color__text-light;
+		}			
+
+		.children {
+			margin-left: 12px;
+		}
+
+	}
+}
+
+/*--------------------------------------------------------------
 ## - Search Widget
 --------------------------------------------------------------*/
 .widget .search-form {
-	position: relative;
+	width: 100%;
 
 	input[type="search"] {
-		padding-right: 40px;
 		width: 100%;
-	}
-
-	button[type="submit"] {
-		position: absolute;
-		right: 14px;
-		top: 12px;
 		
-		svg {
-			height: 16px;
-			width: 16px;
-		}
+		@at-root #secondary & {
+			min-width: 0;
+		}		
 	}
 }
 

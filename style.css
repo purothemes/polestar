@@ -445,7 +445,7 @@ input[type="submit"] {
   border-radius: 2px;
   color: #fff;
   display: inline-block;
-  font-size: .95em;
+  font-size: 14px;
   letter-spacing: .5px;
   line-height: normal;
   padding: 11px 25px;
@@ -539,7 +539,7 @@ textarea {
     border-color: #d9d9d9; }
 
 input[type="checkbox"] {
-  margin-right: 2px; }
+  margin-right: 5px; }
 
 select {
   border: 1px solid #ebebeb;
@@ -1540,20 +1540,32 @@ a {
       text-align: right; }
 
 /*--------------------------------------------------------------
+## Archives and Categories Widgets
+--------------------------------------------------------------*/
+.widget_archive li,
+.widget_categories li {
+  color: #828282; }
+  .widget_archive li a,
+  .widget_categories li a {
+    color: #2d2d2d;
+    display: inline-block;
+    margin-bottom: 8px; }
+  .widget_archive li span,
+  .widget_categories li span {
+    color: #828282; }
+  .widget_archive li .children,
+  .widget_categories li .children {
+    margin-left: 12px; }
+
+/*--------------------------------------------------------------
 ## - Search Widget
 --------------------------------------------------------------*/
 .widget .search-form {
-  position: relative; }
+  width: 100%; }
   .widget .search-form input[type="search"] {
-    padding-right: 40px;
     width: 100%; }
-  .widget .search-form button[type="submit"] {
-    position: absolute;
-    right: 14px;
-    top: 12px; }
-    .widget .search-form button[type="submit"] svg {
-      height: 16px;
-      width: 16px; }
+    #secondary .widget .search-form input[type="search"] {
+      min-width: 0; }
 
 /*--------------------------------------------------------------
 ## - Tag Cloud Widget
@@ -2046,7 +2058,7 @@ a {
   border-radius: 2px;
   color: #626262;
   display: inline-block;
-  font-size: 12px;
+  font-size: 13px;
   line-height: normal;
   margin: 0 6px 8px 0;
   padding: 6px 10px;
@@ -2080,9 +2092,8 @@ a {
   font-size: 13px;
   margin-top: 15px; }
 
-.archive .entry-title,
 .search-results .entry-title {
-  font-size: 29px; }
+  font-size: 26px; }
 
 .search-results article {
   border-bottom: 1px solid #ebebeb;
@@ -2097,21 +2108,24 @@ a {
 /*--------------------------------------------------------------
 ## - Search Form
 --------------------------------------------------------------*/
-.search-form input[type="search"] {
-  padding-right: 43px; }
-
-.search-form button[type="submit"] {
-  background: none;
-  border: none;
-  padding: 0;
-  position: relative;
-  right: 36px;
-  top: 2px; }
-  .search-form button[type="submit"] svg {
-    height: 16px;
-    width: 16px; }
-    .search-form button[type="submit"] svg path {
-      fill: #828282; }
+.search-form {
+  display: inline-block;
+  position: relative; }
+  .search-form input[type="search"] {
+    min-width: 300px;
+    padding-right: 46px; }
+  .search-form button[type="submit"] {
+    background: none;
+    border: none;
+    padding: 12px 15px 10px;
+    position: absolute;
+    right: 0;
+    top: 0; }
+    .search-form button[type="submit"] svg {
+      height: 16px;
+      width: 16px; }
+      .search-form button[type="submit"] svg path {
+        fill: #828282; }
 
 /*--------------------------------------------------------------
 ## - Author Box

@@ -15,7 +15,7 @@
 				margin-bottom: 4px;   
 
 				.required {
-					color: rgba(255, 0, 0, .6);
+					color: $error;
 					text-decoration: none;
 				}
 
@@ -40,13 +40,13 @@
 			&.woocommerce-invalid {
 
 				label {
-					color: rgba(255, 0, 0, .6);
+					color: $error;
 				}
 				
 				.select2-container,
 				input.input-text,
 				select {
-					border-color: rgba(255, 0, 0, .6);
+					border-color: $error;
 				}
 			}
 
@@ -55,7 +55,7 @@
 				.select2-container,
 				input.input-text,
 				select {
-					border-color: rgba(0, 128, 0, .6);
+					border-color: $success;
 				}
 			}			
 		}

@@ -321,12 +321,24 @@
 			text-align: center;
 			
 			a {
-				color: #fff; 
+				color: #fff;
 				display: inline-block;
+				font-weight: normal;
 			
 				&.button {
 					font-size: 12px;
 					padding: 10px 24px;
+				}
+
+
+				&:first-of-type {
+					background: $color__background-hr-dark;
+					color: $color__text-medium;
+					
+					&:hover {
+						background: $color__accent;
+						color: #fff;
+					}
 				}
 			}
 		}

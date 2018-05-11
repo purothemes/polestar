@@ -1,9 +1,9 @@
 @font-face {
   font-family: 'polestar-icons';
   src:
-    url('fonts/polestar-icons.ttf?42eey4') format('truetype'),
-    url('fonts/polestar-icons.woff?42eey4') format('woff'),
-    url('fonts/polestar-icons.svg?42eey4#polestar-icons') format('svg');
+    url('fonts/polestar-icons.ttf?1ixikj') format('truetype'),
+    url('fonts/polestar-icons.woff?1ixikj') format('woff'),
+    url('fonts/polestar-icons.svg?1ixikj#polestar-icons') format('svg');
   font-weight: normal;
   font-style: normal;
 }
@@ -133,6 +133,9 @@
 }
 .icon-reddit-alien:before {
   content: "\f281";
+}
+.icon-close:before {
+  content: "\e900";
 }
 .icon-behance:before {
   content: "\eaa8";
