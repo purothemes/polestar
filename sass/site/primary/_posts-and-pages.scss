@@ -312,24 +312,27 @@
 		font-size: 13px; 
 		margin-top: 15px; 
 	}
-	
-	.entry-title {
-		font-size: 29px; 
-	}
 }
 
-.search-results article {
-	border-bottom: 1px solid $color__background-hr-dark;
-	margin: 0 0 50px;
-	padding: 0 0 30px;
-	
-	&:last-of-type {
-		border: 0;
+.search-results {
+
+	.entry-title {
+		font-size: 26px;
 	}
 
-	&:only-of-type {
-		border: 0;
-		margin: 0; 
+	article {
+		border-bottom: 1px solid $color__background-hr-dark;
+		margin: 0 0 50px;
+		padding: 0 0 30px;
+		
+		&:last-of-type {
+			border: 0;
+		}
+
+		&:only-of-type {
+			border: 0;
+			margin: 0; 
+		}
 	}
 }
 
