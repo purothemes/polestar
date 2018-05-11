@@ -25,7 +25,7 @@ function polestar_body_classes( $classes ) {
 	if ( ! is_singular() ) {
 		$classes[] = 'hfeed';
 	}
-	
+		
 	// Add the page setting classes.
 	$page_settings = puro_page_setting();
 
@@ -34,7 +34,7 @@ function polestar_body_classes( $classes ) {
 		if ( ! empty( $page_settings['overlap'] ) && ( $page_settings['overlap'] != 'disabled' ) ) $classes[] = 'overlap-' . $page_settings['overlap'];
 		if ( empty( $page_settings['header_margin'] ) ) $classes[] = 'no-header-margin';
 		if ( empty( $page_settings['footer_margin'] ) ) $classes[] = 'no-footer-margin';
-	}	
+	}
 
 	// Header margin.
 	if ( is_home() && polestar_has_featured_posts() ) {
@@ -70,7 +70,7 @@ function polestar_body_classes( $classes ) {
 	// WooCommerce columns.
 	if ( function_exists( 'is_woocommerce' ) && is_woocommerce() ) {
 		$classes[] = 'columns-' . get_theme_mod( 'archive_columns', 3 );
-	}			
+	}
 
 	return $classes;
 }
