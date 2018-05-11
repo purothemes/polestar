@@ -4,25 +4,43 @@ Version: dev
 /*--------------------------------------------------------------
 # Layout
 --------------------------------------------------------------*/
-.woocommerce.woocommerce-page .content-area {
+.woocommerce .clear {
+  clear: both; }
+
+.woocommerce .content-area {
   width: 100%; }
 
-.woocommerce.woocommerce-page.woocommerce-sidebar .content-area {
+.woocommerce .col2-set {
+  width: 100%; }
+  .woocommerce .col2-set .col-1 {
+    float: left;
+    width: 48%; }
+    @media (max-width: 768px) {
+      .woocommerce .col2-set .col-1 {
+        width: 100%; } }
+  .woocommerce .col2-set .col-2 {
+    float: right;
+    width: 48%; }
+    @media (max-width: 768px) {
+      .woocommerce .col2-set .col-2 {
+        width: 100%; } }
+
+.woocommerce.woocommerce-sidebar .content-area {
   float: right;
   width: 70%; }
   @media (max-width: 768px) {
-    .woocommerce.woocommerce-page.woocommerce-sidebar .content-area {
+    .woocommerce.woocommerce-sidebar .content-area {
       width: 100%; } }
 
-.woocommerce.woocommerce-page.woocommerce-sidebar .widget-area {
+.woocommerce.woocommerce-sidebar .widget-area {
   float: left;
   padding-right: 4%;
   padding-left: 0; }
 
-.woocommerce.woocommerce-page.woocommerce-sidebar-right .content-area {
+.woocommerce.woocommerce-sidebar-right .content-area {
   float: left; }
 
-.woocommerce.woocommerce-page.woocommerce-sidebar-right .widget-area {
+.woocommerce.woocommerce-sidebar-right .widget-area {
   float: right;
   padding-right: 0;
   padding-left: 4%; }
@@ -1197,6 +1215,7 @@ input.button.added:after,
 
 .woocommerce-error {
   display: block;
+  color: rgba(255, 0, 0, 0.7);
   font-size: 14px;
   list-style: none;
   padding: 20px 20px; }
@@ -1474,14 +1493,6 @@ input.button.added:after,
     .woocommerce .checkout_coupon .form-row-last {
       width: 50%; } }
 
-.woocommerce .col2-set {
-  float: left;
-  width: 47.8260869565%; }
-  @media (max-width: 768px) {
-    .woocommerce .col2-set {
-      float: none;
-      width: 100%; } }
-
 .woocommerce #order_review_heading,
 .woocommerce #order_review {
   clear: right;
@@ -1700,17 +1711,18 @@ input.button.added:after,
           padding-left: 0; } }
   .woocommerce-account .woocommerce-MyAccount-content .password-change {
     margin-bottom: 15px; }
-  .woocommerce-account .woocommerce-MyAccount-content .woocommerce-password-strength {
-    font-size: 14px;
-    font-weight: 600; }
-    .woocommerce-account .woocommerce-MyAccount-content .woocommerce-password-strength.strong {
-      color: rgba(0, 128, 0, 0.7); }
-    .woocommerce-account .woocommerce-MyAccount-content .woocommerce-password-strength.short {
-      color: rgba(255, 0, 0, 0.7); }
-    .woocommerce-account .woocommerce-MyAccount-content .woocommerce-password-strength.bad {
-      color: rgba(255, 0, 0, 0.7); }
-    .woocommerce-account .woocommerce-MyAccount-content .woocommerce-password-strength.good {
-      color: rgba(0, 0, 128, 0.7); }
+
+.woocommerce-password-strength {
+  font-size: 14px;
+  font-weight: 600; }
+  .woocommerce-password-strength.strong {
+    color: rgba(0, 128, 0, 0.7); }
+  .woocommerce-password-strength.short {
+    color: rgba(255, 0, 0, 0.7); }
+  .woocommerce-password-strength.bad {
+    color: rgba(255, 0, 0, 0.7); }
+  .woocommerce-password-strength.good {
+    color: rgba(0, 0, 128, 0.7); }
 
 /*--------------------------------------------------------------
 # Order Tracking

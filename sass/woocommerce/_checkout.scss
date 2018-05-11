@@ -27,17 +27,6 @@
 		
 	}
 
-	// Billing and shipping details.
-	.col2-set {
-		float: left;
-		width: 47.8260869565%;
-		
-		@media (max-width: 768px) {
-			float: none;
-			width: 100%; 
-		}
-	}	
-
 	// Order review.
 	#order_review_heading,
 	#order_review {

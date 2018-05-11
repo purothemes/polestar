@@ -113,28 +113,29 @@
 		// Password Change.
 		.password-change {
 			margin-bottom: 15px;
-		}
-
-		// Password Strength.
-		.woocommerce-password-strength {
-			font-size: 14px;
-			font-weight: 600;
-
-			&.strong {
-				color: $success;
-			}
-
-			&.short {
-				color: $error;
-			}
-
-			&.bad {
-				color: $error;
-			}
-
-			&.good {
-				color: $info;
-			}
-		}		
+		}	
 	}	
 }
+
+// Password Strength.
+.woocommerce-password-strength {
+	font-size: 14px;
+	font-weight: 600;
+
+	&.strong {
+		color: $success;
+	}
+
+	&.short {
+		color: $error;
+	}
+
+	&.bad {
+		color: $error;
+	}
+
+	&.good {
+		color: $info;
+	}
+}	
+		
