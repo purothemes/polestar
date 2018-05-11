@@ -1,5 +1,8 @@
 == Changelog ==
 
+= 1.2.6 - 11 May 2018 =
+* Corrected sidebar body class conditional statements.
+
 = 1.2.5 - 11 May 2018 =
 * Added styling for all WooCommerce core widgets that didn't have styling added previously.
 * Minor styling updates for the WooCommerce checkout, login, dashboard and mini-cart.

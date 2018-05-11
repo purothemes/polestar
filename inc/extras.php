@@ -25,7 +25,7 @@ function polestar_body_classes( $classes ) {
 	if ( ! is_singular() ) {
 		$classes[] = 'hfeed';
 	}
-	
+		
 	// Add the page setting classes.
 	$page_settings = puro_page_setting();
 
@@ -34,7 +34,7 @@ function polestar_body_classes( $classes ) {
 		if ( ! empty( $page_settings['overlap'] ) && ( $page_settings['overlap'] != 'disabled' ) ) $classes[] = 'overlap-' . $page_settings['overlap'];
 		if ( empty( $page_settings['header_margin'] ) ) $classes[] = 'no-header-margin';
 		if ( empty( $page_settings['footer_margin'] ) ) $classes[] = 'no-footer-margin';
-	}	
+	}
 
 	// Header margin.
 	if ( is_home() && polestar_has_featured_posts() ) {
@@ -42,13 +42,22 @@ function polestar_body_classes( $classes ) {
 	}
 
 	// Sidebar.
-	if ( is_active_sidebar( 'sidebar-main' ) && ! is_404() && ( function_exists( 'is_woocommerce' ) && ! is_woocommerce() ) ) {
-		 $classes[] = 'sidebar';
+	if ( is_active_sidebar( 'sidebar-main' ) && ! is_404() && ! ( function_exists( 'is_woocommerce' ) && is_woocommerce() ) ) {
+		$classes[] = 'sidebar';
 	}
 
 	// Sidebar left.
-	if ( get_theme_mod( 'sidebar_position' ) == 'left' && ! is_404() && $page_settings['layout'] != "constrained" && ( function_exists( 'is_woocommerce' ) && ! is_woocommerce() ) ) {
+	if ( get_theme_mod( 'sidebar_position' ) == 'left' && ! is_404() && $page_settings['layout'] != "constrained" && ! ( function_exists( 'is_woocommerce' ) && is_woocommerce() ) ) {
 		 $classes[] = 'sidebar-left';
+	}
+
+	// WooCommerce sidebar.
+	if ( is_active_sidebar( 'sidebar-shop' ) && ( function_exists( 'is_woocommerce' ) && is_woocommerce() && ! is_product() ) ) {
+		$classes[] = 'woocommerce-sidebar';
+
+		if ( get_theme_mod( 'woocommerce_sidebar_position' ) == 'right' ) {
+			$classes[] = 'woocommerce-sidebar-right';
+		}	
 	}
 
 	// WooCommerce top bar.
@@ -62,15 +71,6 @@ function polestar_body_classes( $classes ) {
 	if ( function_exists( 'is_woocommerce' ) && is_woocommerce() ) {
 		$classes[] = 'columns-' . get_theme_mod( 'archive_columns', 3 );
 	}
-
-	// WooCommerce sidebar.
-	if ( is_active_sidebar( 'sidebar-shop' ) && ( function_exists( 'is_woocommerce' ) && is_woocommerce() && ! is_product() ) ) {
-		$classes[] = 'woocommerce-sidebar';
-
-		if ( get_theme_mod( 'woocommerce_sidebar_position' ) == 'right' ) {
-			$classes[] = 'woocommerce-sidebar-right';
-		}	
-	}		
 
 	return $classes;
 }
