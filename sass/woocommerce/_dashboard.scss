@@ -6,20 +6,28 @@
 	}
 	
 	.login {
-		max-width: 50%;
+
+		@media (min-width: 769px) {
+			max-width: 75%;
+		}
 		
 		label[for*="rememberme"] {
 			font-size: 13px; 
 			font-weight: normal; 
 			line-height: normal;
 			margin-top: 10px;
-			
-			input {
-			}
 		}
 		
 		.lost_password {
-			font-size: 13px; 
+			font-size: 13px;
+			margin-top: -14px;
+		}
+	}
+
+	.register {
+
+		@media (min-width: 769px) {
+			max-width: 75%;
 		}
 	}
 

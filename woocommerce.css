@@ -1642,15 +1642,23 @@ input.button.added:after,
   font-size: 23px;
   margin-bottom: 10px; }
 
-.woocommerce-account .login {
-  max-width: 50%; }
-  .woocommerce-account .login label[for*="rememberme"] {
-    font-size: 13px;
-    font-weight: normal;
-    line-height: normal;
-    margin-top: 10px; }
-  .woocommerce-account .login .lost_password {
-    font-size: 13px; }
+@media (min-width: 769px) {
+  .woocommerce-account .login {
+    max-width: 75%; } }
+
+.woocommerce-account .login label[for*="rememberme"] {
+  font-size: 13px;
+  font-weight: normal;
+  line-height: normal;
+  margin-top: 10px; }
+
+.woocommerce-account .login .lost_password {
+  font-size: 13px;
+  margin-top: -14px; }
+
+@media (min-width: 769px) {
+  .woocommerce-account .register {
+    max-width: 75%; } }
 
 .woocommerce-account .woocommerce-MyAccount-navigation {
   border: 1px solid #ebebeb;
