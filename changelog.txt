@@ -1,5 +1,9 @@
 == Changelog ==
 
+= 1.2.5 - 11 May 2018 =
+* Added styling for all WooCommerce core widgets that didn't have styling added previously.
+* Minor styling updates for the WooCommerce checkout dashboard and mini-cart.
+
 = 1.2.4 - 05 May 2018 =
 * Adjusted Jetpack Infinite Scroll to use posts per page setting.
 * Minor Jetpack Infinite Scroll styling fixes.
