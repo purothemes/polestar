@@ -48,7 +48,7 @@ function polestar_body_classes( $classes ) {
 
 	// Sidebar left.
 	if ( get_theme_mod( 'sidebar_position' ) == 'left' && ! is_404() && $page_settings['layout'] != "constrained" && ! ( function_exists( 'is_woocommerce' ) && is_woocommerce() ) ) {
-		 $classes[] = 'sidebar-left';
+		$classes[] = 'sidebar-left';
 	}
 
 	// WooCommerce sidebar.

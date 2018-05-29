@@ -59,8 +59,12 @@ $post_class = ( is_singular() ) ? 'entry' : 'archive-entry';
 	</header><!-- .entry-header -->	
 
 	<div class="entry-content">
-		<?php echo $content;
-
+		<?php if ( is_single() || get_theme_mod( 'archive_post_content' ) == 'full' ) {
+			echo $content;
+		} else {
+			polestar_excerpt();
+		}
+		
 		wp_link_pages( array(
 				'before' => '<div class="page-links"><span class="page-links-title">' . esc_html__( 'Pages:', 'polestar' ) . '</span>',
 				'after'  => '</div>',

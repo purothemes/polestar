@@ -46,8 +46,13 @@ $post_class = ( is_singular() ) ? 'entry' : 'archive-entry';
 	</header><!-- .entry-header -->	
 
 	<div class="entry-content">
-		<?php echo apply_filters( 'the_content', polestar_strip_image( get_the_content() ) ); ?>
-		<?php
+		<?php 
+			if ( is_single() || get_theme_mod( 'archive_post_content' ) == 'full' ) {
+				echo apply_filters( 'the_content', polestar_strip_image( get_the_content() ) );
+			} else {
+				polestar_excerpt();
+			}
+
 			wp_link_pages( array(
 				'before' => '<div class="page-links"><span class="page-links-title">' . esc_html__( 'Pages:', 'polestar' ) . '</span>',
 				'after'  => '</div>',

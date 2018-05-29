@@ -33,30 +33,29 @@
 
 	<header class="entry-header">
 		<?php
-		if ( is_single() ) :
-			the_title( '<h1 class="entry-title">', '</h1>' );
-		else :
-			the_title( '<h2 class="entry-title"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h2>' );
-		endif;
+			if ( is_single() ) {
+				the_title( '<h1 class="entry-title">', '</h1>' );
+			} else {
+				the_title( '<h2 class="entry-title"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h2>' );
+			}
+		?>
 
-		if ( 'post' === get_post_type() ) : ?>
-		<div class="entry-meta">
-			<?php polestar_post_meta(); ?>
-		</div><!-- .entry-meta -->
-		<?php
-		endif; ?>
+		<?php 
+			if ( 'post' === get_post_type() ) : ?>
+			<div class="entry-meta">
+				<?php polestar_post_meta(); ?>
+			</div><!-- .entry-meta -->
+		<?php endif; ?>
 	</header><!-- .entry-header -->	
 
 	<div class="entry-content">
 		<?php
-			if ( is_single() ) :
+			if ( is_single() || get_theme_mod( 'archive_post_content' ) == 'full' ) {
 				the_content();
-			elseif ( get_theme_mod( 'archive_post_content' ) == 'excerpt' ) : 
-				the_excerpt();
-			else : 
-				the_content();
-			endif;
-
+			} else {
+				polestar_excerpt();
+			}
+		
 			wp_link_pages( array(
 				'before' => '<div class="page-links"><span class="page-links-title">' . esc_html__( 'Pages:', 'polestar' ) . '</span>',
 				'after'  => '</div>',

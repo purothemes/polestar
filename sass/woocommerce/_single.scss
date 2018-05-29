@@ -384,9 +384,12 @@
 			.meta {
 				color: $color__text-dark;
 				font-size: 14px;
-				font-weight: bold; 
 				font-weight: 600;
-				line-height: normal; 
+				line-height: normal;
+				
+				strong {
+					font-weight: 600;
+				}
 
 				a {
 					color: $color__text-dark;

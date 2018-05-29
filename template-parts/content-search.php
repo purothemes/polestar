@@ -22,7 +22,7 @@
 	</header><!-- .entry-header -->
 
 	<div class="entry-summary">
-		<?php the_excerpt(); ?>
+		<?php polestar_excerpt(); ?>
 	</div><!-- .entry-summary -->
 
 </article><!-- #post-## -->

@@ -28,14 +28,6 @@
 	font-size: 29px;
 	line-height: normal;
 	margin: 0;
-	
-	@media (max-width: 768px) {
-		font-size: 26px; 	
-	}		
-	
-	@media (max-width: 480px) {
-		font-size: 23px; 	
-	}	
 
 	a {
 		color: $color__text-dark;
