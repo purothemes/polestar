@@ -2402,6 +2402,18 @@ a {
     #commentform .logged-in-as a:hover {
       color: #4d8ffb; }
 
+#commentform .comment-form-cookies-consent {
+  align-items: center;
+  clear: both;
+  display: flex; }
+  #commentform .comment-form-cookies-consent input {
+    line-height: 1;
+    margin-right: 5px; }
+  #commentform .comment-form-cookies-consent label {
+    display: inline-block;
+    font-weight: normal;
+    margin-bottom: 0; }
+
 #commentform .form-submit {
   margin: 0;
   clear: both; }
