@@ -246,6 +246,11 @@ if ( defined( 'SITEORIGIN_PANELS_VERSION' ) ) {
 }
 
 /**
+ * Deprecated functions.
+ */
+require get_template_directory() . '/inc/deprecated.php';
+
+/**
  * WooCommerce compatibility.
  */
 if ( function_exists( 'is_woocommerce' ) ) {

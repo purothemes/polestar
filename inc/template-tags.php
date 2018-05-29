@@ -359,30 +359,6 @@ function polestar_display_logo() {
 }
 endif;
 
-if ( ! function_exists( 'polestar_excerpt_length' ) ) :
-/**
- * Filter the excerpt length.
- */
-function polestar_excerpt_length( $length ) {
-	return get_theme_mod( 'excerpt_length', 55 );
-}
-add_filter( 'excerpt_length', 'polestar_excerpt_length', 10 );
-endif;
-
-if ( ! function_exists( 'polestar_excerpt_more' ) ) :
-/**
- * Add a more link to the excerpt.
- */
-function polestar_excerpt_more( $more ) {
-	if ( is_search() ) return;
-	if ( get_theme_mod( 'archive_post_content' ) == 'excerpt' && get_theme_mod( 'excerpt_more', true ) ) {
-		$read_more_text = get_theme_mod( 'read_more_text', esc_html__( 'Continue reading', 'polestar' ) );
-		return the_title( '<span class="screen-reader-text">"', '"</span>', false ) . '<p><span class="more-wrapper"><a href="' . esc_url( get_permalink() ) . '">' . $read_more_text . ' <span class="icon-long-arrow-right"></span></a></span></p>';
-	}
-}
-endif;
-add_filter( 'excerpt_more', 'polestar_excerpt_more' );
-
 if ( ! function_exists( 'polestar_read_more_link' ) ) :
 /**
  * Filter the read more link.
@@ -393,6 +369,44 @@ function polestar_read_more_link() {
 }
 endif;
 add_filter( 'the_content_more_link', 'polestar_read_more_link' );
+
+if ( ! function_exists( 'polestar_excerpt' ) ) :
+/**
+ * Outputs the excerpt.
+ */
+function polestar_excerpt() {
+
+	if ( ( get_theme_mod( 'archive_post_content' ) == 'excerpt' && get_theme_mod( 'excerpt_more', true ) ) && ! is_search() ) {
+		$read_more_text = get_theme_mod( 'read_more_text', esc_html__( 'Continue reading', 'polestar' ) );
+		$read_more_text = the_title( '<span class="screen-reader-text">"', '"</span>', false ) . '<span class="more-wrapper"><a href="' . esc_url( get_permalink() ) . '">' . $read_more_text . ' <span class="icon-long-arrow-right"></span></a></span>';
+	} else {
+		$read_more_text = '';
+	}
+	$ellipsis = '...';
+	$length = get_theme_mod( 'excerpt_length', 55 );
+	$excerpt = explode( ' ', get_the_excerpt(), $length );
+
+	if ( $length ) {
+
+		if ( count( $excerpt ) >= $length ) {
+			array_pop( $excerpt );
+			$excerpt = '<p>' . implode( " ", $excerpt ) . $ellipsis . '</p>' . $read_more_text;
+		} else {
+			$excerpt = '<p>' . implode( " ", $excerpt ) . $ellipsis . '</p>';
+		}
+
+	} else {
+		
+		$excerpt = get_the_excerpt();
+
+	}
+
+	$excerpt = preg_replace( '`\[[^\]]*\]`','', $excerpt );
+
+	echo $excerpt;
+
+}
+endif;
 
 if ( ! function_exists( 'polestar_post_meta' ) ) :
 /**

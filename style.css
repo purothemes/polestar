@@ -2677,5 +2677,7 @@ object {
         @media (max-width: 480px) {
           .featured-posts-slider .slides .slide .slide-content .entry-excerpt {
             display: none; } }
+        .featured-posts-slider .slides .slide .slide-content .entry-excerpt .more-wrapper {
+          display: none; }
 
 /*# sourceMappingURL=sass/maps/style.css.map */
