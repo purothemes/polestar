@@ -1,5 +1,8 @@
 == Changelog ==
 
+= 1.2.8 - 30 May 2018 =
+* Resolved post slider function error when Jetpack not activated.
+
 = 1.2.7 - 29 May 2018 =
 * Updated WooCommerce review meta file for WooCommerce version `3.4.0`.
 * Minor style adjustments.
