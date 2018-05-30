@@ -44,44 +44,6 @@ endif;
 // polestar_jetpack_setup
 add_action( 'after_setup_theme', 'polestar_jetpack_setup' );
 
-/**
- * Add a filter for Jetpack Featured Content.
- */
-function polestar_get_featured_posts() {
-	return apply_filters( 'polestar_get_featured_posts', array() );
-}
-
-/**
- * Check the Jetpack Featured Content.
- */
-function polestar_has_featured_posts( $minimum = 1 ) {
-	if ( is_paged() )
-		return false;
-
-	$minimum = absint( $minimum );
-	$featured_posts = apply_filters( 'polestar_get_featured_posts', array() );
-
-	if ( ! is_array( $featured_posts ) )
-		return false;
-
-	if ( $minimum > count( $featured_posts ) )
-		return false;
-
-	return true;
-}
-
-if ( ! function_exists( 'polestar_display_featured_posts' ) ) :
-/**
- * Output the Jetpack Featured Content.
- */
-function polestar_display_featured_posts() {
-	if ( is_home() && polestar_has_featured_posts() ) {
-		get_template_part( 'template-parts/featured', 'slider' );
-	}
-}
-endif;
-add_action( 'polestar_content_before', 'polestar_display_featured_posts' );
-
 if ( ! function_exists( 'polestar_infinite_scroll_render' ) ) :
 /**
  * Custom render function for Infinite Scroll.
