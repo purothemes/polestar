@@ -534,11 +534,12 @@ input.button.added:after,
         .wc-columns-4.woocommerce .products .product .product-quick-view-button,
         .wc-columns-5.woocommerce .products .product .product-quick-view-button {
           display: none; } }
-    .woocommerce .products .product .add_to_cart_button {
+    .woocommerce .products .product .add_to_cart_button,
+    .woocommerce .products .product .product_type_grouped {
       bottom: 25%; }
       @media (min-width: 768px) and (max-width: 1024px) {
-        .wc-columns-4.woocommerce .products .product .add_to_cart_button,
-        .wc-columns-5.woocommerce .products .product .add_to_cart_button {
+        .wc-columns-4.woocommerce .products .product .add_to_cart_button, .woocommerce .products .product .product_type_grouped,
+        .wc-columns-5.woocommerce .products .product .add_to_cart_button, .woocommerce .products .product .product_type_grouped {
           display: none; } }
     .woocommerce .products .product .product_type_variable {
       padding: 11px 15px; }
