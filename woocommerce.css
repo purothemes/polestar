@@ -1013,17 +1013,25 @@ input.button.added:after,
   .cart_list li,
   .product_list_widget li {
     border-bottom: 1px solid #f6f6f6;
+    line-height: 2;
     list-style: none;
     margin: 0;
-    padding: 10px 0; }
+    overflow: auto;
+    padding: 15px 0;
+    position: relative;
+    width: 100%; }
     .cart_list li:first-of-type,
     .product_list_widget li:first-of-type {
       padding-top: 0; }
     .cart_list li a,
     .product_list_widget li a {
+      color: #626262;
       display: block;
       font-weight: 600;
       line-height: normal; }
+      .cart_list li a:hover,
+      .product_list_widget li a:hover {
+        color: #4d8ffb; }
     .cart_list li ins,
     .product_list_widget li ins {
       background: none; }
@@ -1038,21 +1046,13 @@ input.button.added:after,
     .cart_list li img,
     .product_list_widget li img {
       float: right;
-      height: auto;
       margin-left: 4px;
-      width: 45px; }
+      width: 65px; }
 
 .widget_shopping_cart .cart_list li {
-  line-height: 2;
-  padding-left: 25px;
-  position: relative;
-  width: 100%; }
+  padding-left: 25px; }
   .widget_shopping_cart .cart_list li:last-of-type {
     border-bottom: 0; }
-  .widget_shopping_cart .cart_list li a {
-    color: #626262; }
-    .widget_shopping_cart .cart_list li a:hover {
-      color: #4d8ffb; }
   .widget_shopping_cart .cart_list li .remove {
     font-size: 16px;
     left: 0;
@@ -1075,8 +1075,8 @@ input.button.added:after,
     display: inline-block;
     font-weight: normal; }
     .widget_shopping_cart .buttons a.button {
-      font-size: 12px;
-      padding: 10px 24px; }
+      font-size: 13px;
+      padding: 10px 19px; }
     .widget_shopping_cart .buttons a:first-of-type {
       background: #ebebeb;
       color: #626262; }
@@ -1435,6 +1435,8 @@ input.button.added:after,
     margin: 25px;
     max-height: 70vh;
     overflow-y: auto; }
+    .site-header .shopping-cart-dropdown .widget li {
+      overflow: initial; }
     .site-header .shopping-cart-dropdown .widget .woocommerce-mini-cart__empty-message {
       display: block;
       font-size: .95em;
