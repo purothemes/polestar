@@ -236,14 +236,13 @@
 			color: #fff;
 			font-size: 9px;
 			height: 18px;
-			line-height: 0;
-			padding-top: 9px;
+			line-height: 18px;
+			min-width: 18px;
 			position: absolute;
-			right: -19px;
+			right: -18px;
 			transition: .3s;
 			text-align: center;
 			top: -9px;
-			width: 18px;			
 		}
 
 		&:hover {
