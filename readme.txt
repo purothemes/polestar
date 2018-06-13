@@ -117,15 +117,11 @@ Screenshot image "Half Dome Village, Yosemite Valley, United States" sourced fro
 
 The `polestar-icons` font family was created using IcoMoon and contains icons from Font Awesome.
 
-`/inc/template-tags.php` contains SVG icons created using IcoMoon and includes icons from Font Awesome and Material Design Icons by Google.
+`/inc/template-tags.php` contains SVG icons created using IcoMoon and includes icons from Font Awesome.
 
 Font Awesome by Dave Gandy
 Font released under the SIL OFL 1.1, CSS released under the MIT License
 [Source](http://fontawesome.io)
-
-Material Design Icons by Google
-Released under the Apache License Version 2.0. license
-[Source](https://github.com/google/material-design-icons)
 
 == Bundled Resources ==
 
