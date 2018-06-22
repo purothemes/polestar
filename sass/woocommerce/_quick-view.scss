@@ -63,6 +63,23 @@
 				float: none;
 				width: 100%;
 			}
+
+			.flex-direction-nav a {
+				
+				&:hover {
+					
+					svg path {
+						fill: rgba(130, 130, 130, .8);
+					}
+				}
+
+				svg {
+								
+					path {
+						fill: rgba(130, 130, 130, .5);
+					}
+				}
+			}		
 		}
 
 		.product-info-wrapper {

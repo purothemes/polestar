@@ -42,7 +42,7 @@ jQuery( function( $ ) {
 				controlNav: false,
 				customDirectionNav: $( this ).find( '.flex-direction-nav a' ),
 				start: function() {
-         			$( '.flexslider .slides img' ).show();
+					$( '.flexslider .slides img' ).show();
 				}				
 			} );
 		} );
@@ -287,19 +287,19 @@ jQuery( function( $ ) {
 		$( '#site-navigation a[href*="#"]:not([href="#"]), .comments-link a[href*="#"]:not([href="#"]), .puro-scroll[href*="#"]:not([href="#"])' ).polestarSmoothScroll();
 	} );
 
-        // Adjust for sticky header when linking from external anchors.
-        jQuery( window ).load( function() {
+	// Adjust for sticky header when linking from external anchors.
+	jQuery( window ).load( function() {
 
-            if ( location.pathname.replace( /^\//,'' ) == window.location.pathname.replace( /^\//,'' ) && location.hostname == window.location.hostname ) {
-                var target = jQuery( window.location.hash );
-                if ( target.length ) {
-                    jQuery( 'html, body' ).animate( {
-                        scrollTop: target.offset().top - headerHeight
-                    }, 0 );
-                    return false;
-                }
-            }
-        } );   
+		if ( location.pathname.replace( /^\//,'' ) == window.location.pathname.replace( /^\//,'' ) && location.hostname == window.location.hostname ) {
+			var target = jQuery( window.location.hash );
+			if ( target.length ) {
+				jQuery( 'html, body' ).animate( {
+					scrollTop: target.offset().top - headerHeight
+				}, 0 );
+				return false;
+			}
+		}
+	} );
 
 	// Indicate which section of the page we're viewing with selected menu classes.
 	function polestarSelected() {  
@@ -376,9 +376,9 @@ jQuery( function( $ ) {
 			$mobileMenu.find( '.has-dropdown' ).click( function( e ) {
 				if ( typeof $( this ).attr( 'href' ) === "undefined" ) {
 					e.preventDefault();
-					$( this ). siblings( '.dropdown-toggle' ).trigger( 'click' );
+					$( this ).siblings( '.dropdown-toggle' ).trigger( 'click' );
 				}
-  			} );			
+			} );			
 
 			var mmOverflow = function() {
 				if ( $( '#masthead' ).hasClass( 'sticky' ) ) {

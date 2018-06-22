@@ -966,6 +966,10 @@ input.button.added:after,
       #quick-view-container .product-content-wrapper .product-image-wrapper {
         float: none;
         width: 100%; } }
+    #quick-view-container .product-content-wrapper .product-image-wrapper .flex-direction-nav a:hover svg path {
+      fill: rgba(130, 130, 130, 0.8); }
+    #quick-view-container .product-content-wrapper .product-image-wrapper .flex-direction-nav a svg path {
+      fill: rgba(130, 130, 130, 0.5); }
   #quick-view-container .product-content-wrapper .product-info-wrapper {
     float: right;
     padding: 30px 20px 20px 15px;
