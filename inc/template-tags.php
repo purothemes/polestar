@@ -288,7 +288,7 @@ endif;
 
 if ( ! function_exists( 'polestar_get_image' ) ) :
 /**
- * Removes the first image from the page.
+ * Gets the first image from the page.
  */
 function polestar_get_image()  {
 
