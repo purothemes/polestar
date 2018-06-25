@@ -49,7 +49,8 @@ function polestar_setup() {
 
 	// Custom image sizes.
 	add_image_size( 'polestar-247x164-crop', 247, 163, true );
-	add_image_size( 'polestar-354x234-crop', 354, 234, true );	
+	add_image_size( 'polestar-354x234-crop', 354, 234, true );
+	add_image_size( 'polestar-720x480-crop', 720, 480, true );
 
 	/*
 	 * Enable support for the custom logo.

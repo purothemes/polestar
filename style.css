@@ -2101,6 +2101,36 @@ a {
     border: 0;
     margin: 0; }
 
+.search-results .hentry {
+  overflow: auto; }
+  .search-results .hentry .entry-title {
+    font-size: 18px; }
+  .search-results .hentry .entry-thumbnail {
+    box-sizing: border-box;
+    float: left;
+    margin: 0 4% 0 0;
+    width: 40%; }
+    @media (max-width: 1024px) {
+      .search-results .hentry .entry-thumbnail {
+        float: none;
+        margin-bottom: 25px;
+        text-align: center;
+        width: auto; } }
+  .search-results .hentry .entry-summary {
+    font-size: 15px; }
+    .search-results .hentry .entry-summary p:last-of-type {
+      margin: 0; }
+    .search-results .hentry .entry-summary p:only-of-type {
+      margin: 0; }
+  .search-results .hentry.has-post-thumbnail .polestar-content-wrapper {
+    box-sizing: border-box;
+    float: right;
+    width: 56%; }
+    @media (max-width: 1024px) {
+      .search-results .hentry.has-post-thumbnail .polestar-content-wrapper {
+        float: none;
+        width: 100%; } }
+
 /*--------------------------------------------------------------
 ## - Search Form
 --------------------------------------------------------------*/

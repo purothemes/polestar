@@ -426,18 +426,14 @@ function polestar_excerpt() {
 	$excerpt = explode( ' ', get_the_excerpt(), $length );
 
 	if ( $length ) {
-
 		if ( count( $excerpt ) >= $length ) {
 			array_pop( $excerpt );
 			$excerpt = '<p>' . implode( " ", $excerpt ) . $ellipsis . '</p>' . $read_more_text;
 		} else {
 			$excerpt = '<p>' . implode( " ", $excerpt ) . $ellipsis . '</p>';
 		}
-
 	} else {
-		
 		$excerpt = get_the_excerpt();
-
 	}
 
 	$excerpt = preg_replace( '`\[[^\]]*\]`','', $excerpt );
