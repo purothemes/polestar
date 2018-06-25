@@ -488,6 +488,15 @@ function polestar_entry_thumbnail_meta() {
 }
 endif;
 
+if ( ! function_exists( 'polestar_is_post_loop_widget' ) ) :
+/**
+ * Checks if we're currently rendering a post loop widget
+ */
+function polestar_is_post_loop_widget() {
+	return method_exists( 'SiteOrigin_Panels_Widgets_PostLoop', 'is_rendering_loop' ) && SiteOrigin_Panels_Widgets_PostLoop::is_rendering_loop();
+}
+endif;
+
 if ( ! function_exists( 'polestar_related_posts' ) ) :
 /**
  * Display related posts on single posts.
