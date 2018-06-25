@@ -3,6 +3,9 @@
  *
  * Handles the primary JavaScript functions for the theme.
  */
+
+/* globals jQuery, polestar_resp_menu_params */
+
 jQuery( function( $ ) {
 
 	// Element viewport visibility.
@@ -191,7 +194,7 @@ jQuery( function( $ ) {
 
 	// Close the header search with the escape key.
 	$( document ).keyup( function( e ) {
-		if ( e.keyCode == 27 ) { // Escape key maps to keycode 27.
+		if ( e.keyCode === 27 ) { // Escape key maps to keycode 27.
 			$( '#close-search.animate-in' ).trigger( 'click' );
 		}
 	} );	
@@ -241,20 +244,20 @@ jQuery( function( $ ) {
 			}
 		} );
 	} ); 
-
 	// Smooth scroll from internal page anchors.
 	var adminBarHeight = $( '#wpadminbar' ).outerHeight(),
 		isAdminBar = $( 'body' ).hasClass( 'admin-bar' ),
-		isStickyHeader = $( 'header' ).hasClass( 'sticky' );
+		isStickyHeader = $( 'header' ).hasClass( 'sticky' ),
+		headerHeight;
 
 	// Header height. 2px to account for header shadow.
 	if ( isStickyHeader && isAdminBar && jQuery( window ).width() > 600 ) { // From 600px the admin bar isn't sticky so we shouldn't take its height into account.
-		var headerHeight = adminBarHeight + $( 'header' ).outerHeight() - 2;
+		headerHeight = adminBarHeight + $( 'header' ).outerHeight() - 2;
 	} else if ( isStickyHeader ) {
-		var headerHeight = $( 'header' ).outerHeight() - 2;              
+		headerHeight = $( 'header' ).outerHeight() - 2;
 	} else {
-		var headerHeight = 0;
-	}    	
+		headerHeight = 0;
+	}
 
 	$.fn.polestarSmoothScroll = function() {
 		$( this ).click( function( e ) {
@@ -277,7 +280,7 @@ jQuery( function( $ ) {
 					jQuery( 'html, body' ).animate( {
 						scrollTop: target.offset().top - headerHeight
 					}, 1200 );
-					return false; 
+					return false;
 				}
 			}
 		} );
@@ -302,31 +305,31 @@ jQuery( function( $ ) {
 	} );
 
 	// Indicate which section of the page we're viewing with selected menu classes.
-	function polestarSelected() {  
+	function polestarSelected() {
 
 		// Cursor position.
-		var scrollTop = jQuery( window ).scrollTop();       
+		var scrollTop = jQuery( window ).scrollTop();
 
 		// Used for checking if the cursor is in one section or not.
-		var isInOneSection = 'no';                                        
+		var isInOneSection = 'no';
 
 		// For all sections check if the cursor is inside a section.
 		jQuery( '.panel-row-style' ).each( function() {
 
 			// Section ID.
-			var thisID = '#' + jQuery( this ).attr( 'id' );    
+			var thisID = '#' + jQuery( this ).attr( 'id' );
 
-			// Distance between top and our section. Minus 2px to compensate for an extra pixel produced when a Page Builder row bottom margin is set to 0.              
-			var offset = jQuery( this ).offset().top - 2;   
+			// Distance between top and our section. Minus 2px to compensate for an extra pixel produced when a Page Builder row bottom margin is set to 0.
+			var offset = jQuery( this ).offset().top - 2;
 
-			// Section height.                      
-			var thisHeight = jQuery( this ).outerHeight();                     
-			
+			// Section height.
+			var thisHeight = jQuery( this ).outerHeight();
+
 			// Where the section begins.
 			var thisBegin = offset - headerHeight;
-				  
-			// Where the section ends.                            
-			var thisEnd = offset + thisHeight - headerHeight;               
+
+			// Where the section ends.
+			var thisEnd = offset + thisHeight - headerHeight;
 
 			// If position of the cursor is inside of the this section.
 			if ( scrollTop >= thisBegin && scrollTop <= thisEnd ) {
