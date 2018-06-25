@@ -288,12 +288,11 @@ endif;
 
 if ( ! function_exists( 'polestar_get_image' ) ) :
 /**
- * Gets the first image on the page.
+ * Removes the first image from the page.
  */
-function polestar_get_image() {
-	$first_image = '';
+function polestar_get_image()  {
 
-	$output = preg_match_all( '/<img[^>]+\>/i', get_the_content(), $images );
+	preg_match_all( '/<img[^>]+\>/i', get_the_content(), $images );
 
 	if ( empty( $images[0] ) ) return false;
 
