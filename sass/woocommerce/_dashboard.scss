@@ -92,25 +92,10 @@
 			font-size: 14px;
 
 			thead {
-				background: $color__background-hr;
-
-				th {
-					padding: 16px;
-				}
 				
 				@media (max-width: 768px) {
 					display: none;
 				}
-			}
-
-			tr {
-				border-bottom: 1px solid $color__background-hr-dark; 
-			}
-
-			th,
-			td {
-				border: none;
-				padding: 8px 16px;
 			}
 			
 			tr {
