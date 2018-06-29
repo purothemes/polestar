@@ -4,7 +4,8 @@
 * Added a new WooCommerce mini-cart icon.
 * Minor mobile menu style fixes.
 * Minor WooCommerce style fixes.
-* Added galleries to the WooCommerce Quick View modal. 
+* Added galleries to the WooCommerce Quick View modal.
+* Improved search results design.
 
 = 1.2.8 - 30 May 2018 =
 * Resolved post slider function error when Jetpack not activated.
