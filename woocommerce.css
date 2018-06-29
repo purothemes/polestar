@@ -1019,14 +1019,14 @@ input.button.added:after,
     border-bottom: 1px solid #f6f6f6;
     line-height: 2;
     list-style: none;
-    margin: 0;
+    margin: 15px 0;
     overflow: auto;
-    padding: 15px 0;
+    padding: 0;
     position: relative;
     width: 100%; }
     .cart_list li:first-of-type,
     .product_list_widget li:first-of-type {
-      padding-top: 0; }
+      margin-top: 0; }
     .cart_list li a,
     .product_list_widget li a {
       color: #626262;
@@ -1061,7 +1061,7 @@ input.button.added:after,
     font-size: 16px;
     left: 0;
     position: absolute;
-    top: 7px; }
+    top: 14px; }
 
 .widget_shopping_cart .total {
   border: 1px solid #f6f6f6;
