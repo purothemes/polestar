@@ -1,6 +1,7 @@
 table {
 	border: 1px solid $color__background-hr-dark;
 	margin: 0 0 26px;
+	text-align: left;
 	width: 100%;
 	
 	a {
@@ -9,17 +10,25 @@ table {
 
 	thead th {
 		padding: 16px;
-		text-transform: uppercase;
-	}		
-
-	th {
-		color: $color__text-dark;
-		font-weight: 600; 
+		
+		@media (max-width: 768px) {
+			padding: 2%;
+		}			
 	}
 
-	th,
-	td {
+	th {
 		border: 1px solid $color__background-hr-dark; 
+		color: $color__text-dark;
+		font-weight: 600;
+		padding: 8px 16px;
+		text-transform: uppercase;
+		
+		@media (max-width: 768px) {
+			padding: 2%;
+		}			
+	}
+
+	td {
 		padding: 8px 16px;
 		
 		@media (max-width: 768px) {

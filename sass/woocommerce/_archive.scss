@@ -461,8 +461,9 @@
 				}																													
 			}
 
-			// Add to Cart button.
-			.add_to_cart_button  {
+			// Add to Cart button and grouped products View Products button.
+			.add_to_cart_button,
+			.product_type_grouped {
 				bottom: 25%;
 
 				@media (min-width: 768px) and (max-width: 1024px) {

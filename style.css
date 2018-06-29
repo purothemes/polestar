@@ -421,21 +421,27 @@ figure {
 table {
   border: 1px solid #ebebeb;
   margin: 0 0 26px;
+  text-align: left;
   width: 100%; }
   table a {
     text-decoration: none; }
   table thead th {
-    padding: 16px;
-    text-transform: uppercase; }
+    padding: 16px; }
+    @media (max-width: 768px) {
+      table thead th {
+        padding: 2%; } }
   table th {
-    color: #2d2d2d;
-    font-weight: 600; }
-  table th,
-  table td {
     border: 1px solid #ebebeb;
+    color: #2d2d2d;
+    font-weight: 600;
+    padding: 8px 16px;
+    text-transform: uppercase; }
+    @media (max-width: 768px) {
+      table th {
+        padding: 2%; } }
+  table td {
     padding: 8px 16px; }
     @media (max-width: 768px) {
-      table th,
       table td {
         padding: 2%; } }
 
@@ -932,20 +938,11 @@ a {
     margin-bottom: 15px; }
   #mobile-navigation .search-form {
     margin-bottom: 15px;
-    position: relative; }
+    width: 100%; }
     #mobile-navigation .search-form[style] {
       margin-top: 0 !important; }
     #mobile-navigation .search-form input[type="search"] {
-      font-size: 14px;
-      padding-right: 40px;
       width: 100%; }
-    #mobile-navigation .search-form button[type="submit"] {
-      position: absolute;
-      right: 14px;
-      top: 12px; }
-      #mobile-navigation .search-form button[type="submit"] svg {
-        height: 16px;
-        width: 16px; }
 
 #mobile-navigation ul ul li a {
   padding-left: 25px; }
@@ -1702,6 +1699,9 @@ a {
       margin: 0; }
       .site-header .site-branding .site-title a {
         color: #2d2d2d; }
+    .site-header .site-branding .custom-logo-link {
+      display: block;
+      line-height: 0; }
     .site-header .site-branding img {
       display: inline-block;
       vertical-align: middle; }
@@ -2106,6 +2106,36 @@ a {
   .search-results article:only-of-type {
     border: 0;
     margin: 0; }
+
+.search-results .hentry {
+  overflow: auto; }
+  .search-results .hentry .entry-title {
+    font-size: 18px; }
+  .search-results .hentry .entry-thumbnail {
+    box-sizing: border-box;
+    float: left;
+    margin: 0 4% 0 0;
+    width: 40%; }
+    @media (max-width: 1024px) {
+      .search-results .hentry .entry-thumbnail {
+        float: none;
+        margin-bottom: 25px;
+        text-align: center;
+        width: auto; } }
+  .search-results .hentry .entry-summary {
+    font-size: 15px; }
+    .search-results .hentry .entry-summary p:last-of-type {
+      margin: 0; }
+    .search-results .hentry .entry-summary p:only-of-type {
+      margin: 0; }
+  .search-results .hentry.has-post-thumbnail .polestar-content-wrapper {
+    box-sizing: border-box;
+    float: right;
+    width: 56%; }
+    @media (max-width: 1024px) {
+      .search-results .hentry.has-post-thumbnail .polestar-content-wrapper {
+        float: none;
+        width: 100%; } }
 
 /*--------------------------------------------------------------
 ## - Search Form

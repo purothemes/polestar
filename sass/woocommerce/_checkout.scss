@@ -55,6 +55,7 @@
 		
 		th,
 		td {
+			border: none;
 			padding: 20px;
 			text-align: left;
 		}
@@ -167,11 +168,18 @@
 			}
 		}
 
-		.wc-terms-and-conditions {
+		.woocommerce-terms-and-conditions-wrapper {
 			border-bottom: 1px solid $color__background-hr-dark;
 			padding: 20px;
-			margin-bottom: 0;		
-		}	
+			
+			p {
+				margin-bottom: 14px;
+				
+				&.validate-required {
+					margin-bottom: 0;
+				}
+			}
+		}		
 
 		#place_order {
 			float: right;

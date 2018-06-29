@@ -328,6 +328,58 @@
 	}
 }
 
+
+.search-results {	
+
+	.hentry {
+		overflow: auto;
+
+		.entry-title {
+			font-size: 18px;
+		}
+
+		.entry-thumbnail {
+			box-sizing: border-box;
+			float: left;
+			margin: 0 4% 0 0;
+			width: 40%;
+			
+			@media (max-width: 1024px) {
+				float: none;
+				margin-bottom: 25px;
+				text-align: center;
+				width: auto;
+			}
+		}
+
+		.entry-summary {
+			font-size: 15px;
+
+			p:last-of-type {
+				margin: 0;
+			}
+
+			p:only-of-type {
+				margin: 0;
+			}
+		}
+
+		&.has-post-thumbnail {
+
+			.polestar-content-wrapper {
+				box-sizing: border-box;
+				float: right;
+				width: 56%;
+				
+				@media (max-width: 1024px) {
+					float: none;
+					width: 100%;
+				}				
+			}
+		}	
+	}		
+}
+
 /*--------------------------------------------------------------
 ## - Search Form
 --------------------------------------------------------------*/

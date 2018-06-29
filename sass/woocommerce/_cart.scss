@@ -9,12 +9,14 @@
 	}
 
 	table.cart {
+		border: none;
+		margin: 0;
 		text-align: left;
 		
 		thead {
 			background: $color__background-hr; 
 			border: 1px solid $color__background-hr-dark;
-			
+
 			@media (max-width: 768px) {
 				display: none;
 			}			
@@ -26,6 +28,7 @@
 		
 		th,
 		td {
+			border: none;
 			padding: 16px;
 			
 			@media (max-width: 768px) {
@@ -36,7 +39,6 @@
 
 		.cart_item {
 			border: 1px solid $color__background-hr-dark;
-			font-size: 14px;
 			
 			@media (max-width: 768px) {
 
@@ -98,6 +100,10 @@
 					width: 60px; 
 				}
 			}
+		}
+
+		tbody tr {
+			border-bottom: none;
 		}
 
 		td.actions {
@@ -166,6 +172,7 @@
 		}
 		
 		table {
+			border: none;
 			margin-bottom: 30px;
 			
 			tr {
@@ -174,6 +181,7 @@
 			
 			th,
 			td {
+				border: none;
 				padding: 8px 0;
 			}
 			
@@ -236,14 +244,13 @@
 			color: #fff;
 			font-size: 9px;
 			height: 18px;
-			line-height: 0;
-			padding-top: 9px;
+			line-height: 18px;
+			min-width: 18px;
 			position: absolute;
-			right: -19px;
+			right: -18px;
 			transition: .3s;
 			text-align: center;
 			top: -9px;
-			width: 18px;			
 		}
 
 		&:hover {
@@ -296,18 +303,8 @@
 			overflow-y: auto;
 			
 			li {
-				font-weight: normal;
-				line-height: 2; 
-				width: 100%;
-				
-				a {
-					color: $color__text-medium;
-					
-					&:hover {
-						color: $color__accent;
-					}
-				}
-			}
+				overflow: initial;
+			}			
 
 			.woocommerce-mini-cart__empty-message {
 				display: block;
@@ -315,32 +312,6 @@
 				font-weight: 600;
 				padding-bottom: 0;
 			}			
-		}
-
-		.buttons {
-			text-align: center;
-			
-			a {
-				color: #fff;
-				display: inline-block;
-				font-weight: normal;
-			
-				&.button {
-					font-size: 12px;
-					padding: 10px 24px;
-				}
-
-
-				&:first-of-type {
-					background: $color__background-hr-dark;
-					color: $color__text-medium;
-					
-					&:hover {
-						background: $color__accent;
-						color: #fff;
-					}
-				}
-			}
 		}
 	}
 }
