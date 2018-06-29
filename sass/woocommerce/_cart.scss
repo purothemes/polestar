@@ -9,12 +9,14 @@
 	}
 
 	table.cart {
+		border: none;
+		margin: 0;
 		text-align: left;
 		
 		thead {
 			background: $color__background-hr; 
 			border: 1px solid $color__background-hr-dark;
-			
+
 			@media (max-width: 768px) {
 				display: none;
 			}			
@@ -26,6 +28,7 @@
 		
 		th,
 		td {
+			border: none;
 			padding: 16px;
 			
 			@media (max-width: 768px) {
@@ -36,7 +39,6 @@
 
 		.cart_item {
 			border: 1px solid $color__background-hr-dark;
-			font-size: 14px;
 			
 			@media (max-width: 768px) {
 
@@ -98,6 +100,10 @@
 					width: 60px; 
 				}
 			}
+		}
+
+		tbody tr {
+			border-bottom: none;
 		}
 
 		td.actions {
@@ -166,6 +172,7 @@
 		}
 		
 		table {
+			border: none;
 			margin-bottom: 30px;
 			
 			tr {
@@ -174,6 +181,7 @@
 			
 			th,
 			td {
+				border: none;
 				padding: 8px 0;
 			}
 			

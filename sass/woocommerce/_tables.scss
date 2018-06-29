@@ -1,0 +1,20 @@
+.woocommerce {
+
+	table {
+		font-size: 14px;
+		margin-bottom: 0;
+
+		thead th {
+			background: $color__background-hr;
+		}
+				
+		tr {
+			border-bottom: 1px solid $color__background-hr-dark; 
+		}
+			
+		th,
+		td {
+			border: none;
+		}
+	}
+}

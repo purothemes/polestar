@@ -11,19 +11,20 @@
 
 	table {
 		border: 1px solid $color__background-hr-dark;
-		margin: 0 0 25px;
+		margin: 0;
 		text-align: left;
 		
 		thead th {
 			background: $color__background-hr;
-			border: 1px solid $color__background-hr-dark;  
-			padding: 16px;
-		}		
+		}
+
+		tr {
+			border-bottom: 1px solid $color__background-hr-dark;  
+		}
 		
 		th,
 		td {
-			border: 1px solid $color__background-hr;  
-			padding: 8px 16px;
+			border: none;
 			
 			a {
 				color: $color__text-medium;
