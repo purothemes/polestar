@@ -96,7 +96,7 @@ function polestar_comment( $comment, $args, $depth ) {
 			<div class="comment-container">
 				<div class="info">
 					<span class="author"><?php comment_author_link(); ?></span><br>
-					<span class="date"><?php comment_date( apply_filters( 'polestar_date_format', 'F d, Y' ) ); ?></span>
+					<span class="date"><?php comment_date(); ?></span>
 				</div>
 
 				<div class="comment-content content">
@@ -142,7 +142,7 @@ function polestar_footer_text() {
 		array( get_bloginfo( 'sitename' ), date_i18n( esc_html__( 'Y', 'polestar' ) ) ),
 		$text
 	);
-	echo wp_kses_post( $text );
+	echo wp_kses_post( $text ) . '&nbsp;';
 }
 endif;
 
@@ -449,11 +449,11 @@ if ( ! function_exists( 'polestar_post_meta' ) ) :
  */
 function polestar_post_meta() {
 	if ( ( is_home() || is_archive() || is_search() ) && get_theme_mod( 'post_date', true ) ) {
-		echo '<span class="entry-date"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark"><time class="published" datetime="' . esc_attr( get_the_date( 'c' ) ) . '">' . esc_html( get_the_date( apply_filters( 'polestar_date_format', 'F d, Y' ) ) ) . '</time><time class="updated" datetime="' . esc_attr( get_the_modified_date( 'c' ) ) . '">' . esc_html( get_the_modified_date() ) . '</time></span></a>';
+		echo '<span class="entry-date"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark"><time class="published" datetime="' . esc_attr( get_the_date( 'c' ) ) . '">' . esc_html( get_the_date() ) . '</time><time class="updated" datetime="' . esc_attr( get_the_modified_date( 'c' ) ) . '">' . esc_html( get_the_modified_date() ) . '</time></span></a>';
 	}
 
 	if ( is_single() && get_theme_mod( 'post_date', true ) ) {
-		echo '<span class="entry-date"><time class="published" datetime="' . esc_attr( get_the_date( 'c' ) ) . '">' . esc_html( get_the_date( apply_filters( 'polestar_date_format', 'F d, Y' ) ) ) . '</time><time class="updated" datetime="' . esc_attr( get_the_modified_date( 'c' ) ) . '">' . esc_html( get_the_modified_date() ) . '</time></span>';
+		echo '<span class="entry-date"><time class="published" datetime="' . esc_attr( get_the_date( 'c' ) ) . '">' . esc_html( get_the_date() ) . '</time><time class="updated" datetime="' . esc_attr( get_the_modified_date( 'c' ) ) . '">' . esc_html( get_the_modified_date() ) . '</time></span>';
 	}
 
 	if ( get_theme_mod( 'post_author', true ) ) {
@@ -526,7 +526,7 @@ function polestar_related_posts( $post_id ) {
 										the_post_thumbnail( 'polestar-354x234-crop' );
 									?>
 									<h3 class="related-post-title"><?php the_title(); ?></h3>
-									<p class="related-post-date"><?php the_time( apply_filters( 'polestar_date_format', 'F d, Y' ) ); ?></p>
+									<p class="related-post-date"><?php the_date(); ?></p>
 								</a>
 							</li>
 						<?php endwhile; ?>
