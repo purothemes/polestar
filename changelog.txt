@@ -1,5 +1,11 @@
 == Changelog ==
 
+= 1.3 - 11 August 2018 =
+* Ensured the user set date format is respected in post meta.
+* Updated the available Google Fonts array.
+* Added the privacy page link to the bottom bar if a privacy page is selected.
+* Added Jetpack Like compatibility.
+
 = 1.2.9 - 28 June 2018 =
 * Added a new WooCommerce mini-cart icon.
 * Minor mobile menu style fixes.
