@@ -405,7 +405,7 @@ function polestar_theme_options() {
 	    'section' => $section,
 	    'type' => 'text',
 	    'description' => esc_html__( '{site-title} and {year} can be used to display your website title and the current year.', 'polestar' ),
-	    'default' => esc_html__( 'Copyright &copy; {year} {sitename}', 'polestar' ),
+	    'default' => esc_html__( 'Copyright &copy; {year} {sitename}.', 'polestar' ),
 	    'priority' => '20'
 	);
 
