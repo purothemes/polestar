@@ -137,7 +137,7 @@ if ( ! function_exists( 'polestar_woocommerce_output_upsells' ) ) {
 
 if ( ! function_exists( 'polestar_woocommerce_quick_view_button' ) ) :
 /**
- * Quick view button for the products in loop
+ * Quick view button.
  */
 function polestar_woocommerce_quick_view_button() {
 	global $product;

@@ -102,7 +102,7 @@
 							</div><!-- #header-search -->
 						<?php endif; ?>
 
-					</div><!-- .site-header-inner -->					
+					</div><!-- .site-header-inner -->
 
 				<?php endif; // is_active_sidebar ?>
 		
