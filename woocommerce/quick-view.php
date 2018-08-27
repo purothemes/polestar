@@ -20,7 +20,7 @@ while ( have_posts() ) : the_post();
 		return $classes;
 	}
 	endif;
-	add_filter('post_class', 'polestar_woocommerce_quick_view_class');
+	add_filter( 'post_class', 'polestar_woocommerce_quick_view_class' );
 
 	?>
 	<div class="woocommerce">
