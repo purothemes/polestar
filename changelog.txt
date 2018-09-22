@@ -1,10 +1,13 @@
 == Changelog ==
 
-= 1.3 - 11 August 2018 =
+= 1.2.10 - 24 September 2018 =
 * Ensured the user set date format is respected in post meta.
 * Updated the available Google Fonts array.
 * Added the privacy page link to the bottom bar if a privacy page is selected.
 * Added Jetpack Like compatibility.
+* Updated the header search to close on click outside the container.
+* Changed related posts date to `get_the_date`.
+* Added WooCommerce check before adding the mini-cart.
 
 = 1.2.9 - 28 June 2018 =
 * Added a new WooCommerce mini-cart icon.
