@@ -66,7 +66,7 @@
 									<?php wp_nav_menu( array( 'theme_location' => 'menu-1', 'menu_id' => 'primary-menu' ) ); ?>
 								<?php endif; ?>
 
-								<?php if ( get_theme_mod( 'mini_cart', false ) && ! $mega_menu_active ) polestar_mini_cart(); ?>	
+								<?php if ( function_exists( 'is_woocommerce' ) && get_theme_mod( 'mini_cart', false ) && ! $mega_menu_active ) polestar_mini_cart(); ?>	
 
 								<?php if ( get_theme_mod( 'menu_search', true ) && ! $mega_menu_active ) : ?>
 									<button class="search-icon">
@@ -102,7 +102,7 @@
 							</div><!-- #header-search -->
 						<?php endif; ?>
 
-					</div><!-- .site-header-inner -->					
+					</div><!-- .site-header-inner -->
 
 				<?php endif; // is_active_sidebar ?>
 		

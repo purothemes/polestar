@@ -1434,11 +1434,13 @@ a {
   margin-bottom: 50px; }
   .site-content #primary .sharedaddy h3 {
     font-size: 16px;
-    font-weight: 400;
+    font-weight: 600;
     line-height: 1.7333;
     margin-bottom: 15px; }
     .site-content #primary .sharedaddy h3:before {
       content: none; }
+  .site-content #primary .sharedaddy ul {
+    margin-bottom: 0 !important; }
 
 /*--------------------------------------------------------------
 # - Contact Form 7

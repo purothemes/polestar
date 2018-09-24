@@ -188,10 +188,15 @@ jQuery( function( $ ) {
 		$hs.fadeOut( 350 );
 		$( this ).removeClass( 'animate-in' );
 	} );
-	$( window ).scroll( function () {
+	$( window ).scroll( function() {
 		if ( $hs.is( ':visible' ) ) {
 			$hs.find( 'form' ).css( 'margin-top', - $hs.find( 'form' ).outerHeight() / 2 );
 		}
+	} );
+
+	// Close the header search when clicking outside of the search field or open search button.
+	$( '#header-search input[type=search]' ).on( 'focusout', function( e ) {
+		$( '#close-search.animate-in' ).trigger( 'click' );
 	} );
 
 	// Close the header search with the escape key.

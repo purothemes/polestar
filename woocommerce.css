@@ -478,7 +478,8 @@ input.button.added:after,
       .woocommerce .products .product .loop-product-thumbnail:hover .add_to_cart_button,
       .woocommerce .products .product .loop-product-thumbnail:hover .product-quick-view-button,
       .woocommerce .products .product .loop-product-thumbnail:hover .product_type_grouped,
-      .woocommerce .products .product .loop-product-thumbnail:hover .product_type_variable {
+      .woocommerce .products .product .loop-product-thumbnail:hover .product_type_variable,
+      .woocommerce .products .product .loop-product-thumbnail:hover .product_type_external {
         opacity: 1;
         visibility: visible; }
       .is_mobile.woocommerce .products .product .loop-product-thumbnail:hover * {
@@ -542,13 +543,15 @@ input.button.added:after,
         .wc-columns-5.woocommerce .products .product .product-quick-view-button {
           display: none; } }
     .woocommerce .products .product .add_to_cart_button,
-    .woocommerce .products .product .product_type_grouped {
+    .woocommerce .products .product .product_type_grouped,
+    .woocommerce .products .product .product_type_external {
       bottom: 25%; }
       @media (min-width: 768px) and (max-width: 1024px) {
-        .wc-columns-4.woocommerce .products .product .add_to_cart_button, .woocommerce .products .product .product_type_grouped,
-        .wc-columns-5.woocommerce .products .product .add_to_cart_button, .woocommerce .products .product .product_type_grouped {
+        .wc-columns-4.woocommerce .products .product .add_to_cart_button, .woocommerce .products .product .product_type_grouped, .woocommerce .products .product .product_type_external,
+        .wc-columns-5.woocommerce .products .product .add_to_cart_button, .woocommerce .products .product .product_type_grouped, .woocommerce .products .product .product_type_external {
           display: none; } }
-    .woocommerce .products .product .product_type_variable {
+    .woocommerce .products .product .product_type_variable,
+    .woocommerce .products .product .product_type_external {
       padding: 11px 15px; }
     .woocommerce .products .product .added_to_cart {
       bottom: 1%;
@@ -1045,7 +1048,7 @@ input.button.added:after,
   padding: 0; }
   .cart_list li,
   .product_list_widget li {
-    border-bottom: 1px solid #f6f6f6;
+    border-bottom: 1px solid #ebebeb;
     line-height: 2;
     list-style: none;
     margin: 0;

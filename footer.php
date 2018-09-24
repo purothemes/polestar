@@ -42,16 +42,19 @@ $footer_widgets_page_setting = puro_page_setting( 'footer_widgets', true );
 		<div class="bottom-bar">
 			<div class="polestar-container">
 				<div class="site-info">
-					<?php 
+					<?php
 					polestar_footer_text();
 
+					if ( function_exists( 'the_privacy_policy_link' ) ) {
+						the_privacy_policy_link( '', '.&nbsp;' );
+					}
+					
 					$credit_text = apply_filters(
 						'polestar_footer_credits',
-						sprintf( esc_html__( 'Theme by %s', 'polestar' ), '<a href="https://purothemes.com/">Puro</a>' )
+						sprintf( esc_html__( 'Theme by %s', 'polestar' ), '<a href="https://purothemes.com/">Puro</a>.' )
 					);
 
 					if ( ! empty( $credit_text ) ) {
-						?> &ndash; <?php
 						echo wp_kses_post( $credit_text );
 					}
 					?>

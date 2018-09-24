@@ -96,7 +96,7 @@ function polestar_comment( $comment, $args, $depth ) {
 			<div class="comment-container">
 				<div class="info">
 					<span class="author"><?php comment_author_link(); ?></span><br>
-					<span class="date"><?php comment_date( apply_filters( 'polestar_date_format', 'F d, Y' ) ); ?></span>
+					<span class="date"><?php comment_date(); ?></span>
 				</div>
 
 				<div class="comment-content content">
@@ -142,7 +142,7 @@ function polestar_footer_text() {
 		array( get_bloginfo( 'sitename' ), date_i18n( esc_html__( 'Y', 'polestar' ) ) ),
 		$text
 	);
-	echo wp_kses_post( $text );
+	echo wp_kses_post( $text ) . '&nbsp;';
 }
 endif;
 
@@ -202,7 +202,7 @@ function polestar_display_icon( $type ) {
 				<path d="M22 21c0 1.105-0.895 2-2 2s-2-0.895-2-2c0-1.105 0.895-2 2-2s2 0.895 2 2z"></path>
 				<path d="M23.8 5.4c-0.2-0.3-0.5-0.4-0.8-0.4h-16.2l-0.8-4.2c-0.1-0.5-0.5-0.8-1-0.8h-4c-0.6 0-1 0.4-1 1s0.4 1 1 1h3.2l0.8 4.2c0 0 0 0.1 0 0.1l1.7 8.3c0.3 1.4 1.5 2.4 2.9 2.4 0 0 0 0 0.1 0h9.7c1.5 0 2.7-1 3-2.4l1.6-8.4c0-0.3 0-0.6-0.2-0.8zM20.4 14.2c-0.1 0.5-0.5 0.8-1 0.8h-9.7c-0.5 0-0.9-0.3-1-0.8l-1.5-7.2h14.6l-1.4 7.2z"></path>
 			</svg>
-		<?php break;		
+		<?php break;
 
 		case 'close' : ?>
 			<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24" height="24" viewBox="0 0 24 24">
@@ -214,13 +214,13 @@ function polestar_display_icon( $type ) {
 			<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="21" height="28" viewBox="0 0 21 28">
 				<path d="M18.297 4.703l-8.297 8.297 8.297 8.297c0.391 0.391 0.391 1.016 0 1.406l-2.594 2.594c-0.391 0.391-1.016 0.391-1.406 0l-11.594-11.594c-0.391-0.391-0.391-1.016 0-1.406l11.594-11.594c0.391-0.391 1.016-0.391 1.406 0l2.594 2.594c0.391 0.391 0.391 1.016 0 1.406z"></path>
 			</svg>
-		<?php break;			
+		<?php break;
 
 		case 'menu': ?>
 			<span></span>
 			<span></span>
 			<span></span>
-			<span></span>		
+			<span></span>
 		<?php break;
 
 		case 'pin': ?>
@@ -233,7 +233,7 @@ function polestar_display_icon( $type ) {
 			<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="19" height="28" viewBox="0 0 19 28">
 				<path d="M17.297 13.703l-11.594 11.594c-0.391 0.391-1.016 0.391-1.406 0l-2.594-2.594c-0.391-0.391-0.391-1.016 0-1.406l8.297-8.297-8.297-8.297c-0.391-0.391-0.391-1.016 0-1.406l2.594-2.594c0.391-0.391 1.016-0.391 1.406 0l11.594 11.594c0.391 0.391 0.391 1.016 0 1.406z"></path>
 			</svg>
-		<?php break;				
+		<?php break;
 
 		case 'search': ?>
 			<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="16" height="16" viewBox="0 0 16 16">
@@ -245,7 +245,7 @@ function polestar_display_icon( $type ) {
 			<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="28" height="28" viewBox="0 0 28 28">
 				<path d="M26.297 20.797l-2.594 2.578c-0.391 0.391-1.016 0.391-1.406 0l-8.297-8.297-8.297 8.297c-0.391 0.391-1.016 0.391-1.406 0l-2.594-2.578c-0.391-0.391-0.391-1.031 0-1.422l11.594-11.578c0.391-0.391 1.016-0.391 1.406 0l11.594 11.578c0.391 0.391 0.391 1.031 0 1.422z"></path>
 			</svg>
-		<?php break;		
+		<?php break;
 	}
 }
 endif;
@@ -449,11 +449,11 @@ if ( ! function_exists( 'polestar_post_meta' ) ) :
  */
 function polestar_post_meta() {
 	if ( ( is_home() || is_archive() || is_search() ) && get_theme_mod( 'post_date', true ) ) {
-		echo '<span class="entry-date"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark"><time class="published" datetime="' . esc_attr( get_the_date( 'c' ) ) . '">' . esc_html( get_the_date( apply_filters( 'polestar_date_format', 'F d, Y' ) ) ) . '</time><time class="updated" datetime="' . esc_attr( get_the_modified_date( 'c' ) ) . '">' . esc_html( get_the_modified_date() ) . '</time></span></a>';
+		echo '<span class="entry-date"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark"><time class="published" datetime="' . esc_attr( get_the_date( 'c' ) ) . '">' . esc_html( get_the_date() ) . '</time><time class="updated" datetime="' . esc_attr( get_the_modified_date( 'c' ) ) . '">' . esc_html( get_the_modified_date() ) . '</time></span></a>';
 	}
 
 	if ( is_single() && get_theme_mod( 'post_date', true ) ) {
-		echo '<span class="entry-date"><time class="published" datetime="' . esc_attr( get_the_date( 'c' ) ) . '">' . esc_html( get_the_date( apply_filters( 'polestar_date_format', 'F d, Y' ) ) ) . '</time><time class="updated" datetime="' . esc_attr( get_the_modified_date( 'c' ) ) . '">' . esc_html( get_the_modified_date() ) . '</time></span>';
+		echo '<span class="entry-date"><time class="published" datetime="' . esc_attr( get_the_date( 'c' ) ) . '">' . esc_html( get_the_date() ) . '</time><time class="updated" datetime="' . esc_attr( get_the_modified_date( 'c' ) ) . '">' . esc_html( get_the_modified_date() ) . '</time></span>';
 	}
 
 	if ( get_theme_mod( 'post_author', true ) ) {
@@ -526,7 +526,7 @@ function polestar_related_posts( $post_id ) {
 										the_post_thumbnail( 'polestar-354x234-crop' );
 									?>
 									<h3 class="related-post-title"><?php the_title(); ?></h3>
-									<p class="related-post-date"><?php the_time( apply_filters( 'polestar_date_format', 'F d, Y' ) ); ?></p>
+									<p class="related-post-date"><?php echo get_the_date(); ?></p>
 								</a>
 							</li>
 						<?php endwhile; ?>

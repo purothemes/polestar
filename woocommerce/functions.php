@@ -53,9 +53,7 @@ function polestar_woocommerce_scripts() {
 	wp_enqueue_style( 'polestar-woocommerce-style', get_template_directory_uri() . '/woocommerce' . PURO_THEME_CSS_PREFIX . '.css', array(), PURO_THEME_VERSION );
 
 	// WooCommerce JavaScript.
-	if ( is_woocommerce() || is_cart() ) {
-		wp_enqueue_script( 'polestar-woocommerce-script', get_template_directory_uri() . '/woocommerce/js/jquery.woocommerce'  . PURO_THEME_JS_PREFIX .  '.js', array( 'jquery' ), PURO_THEME_VERSION, true );
-	}
+	wp_enqueue_script( 'polestar-woocommerce-script', get_template_directory_uri() . '/woocommerce/js/jquery.woocommerce'  . PURO_THEME_JS_PREFIX .  '.js', array( 'jquery' ), PURO_THEME_VERSION, true );
 
 	$script_data = array(
 		'chevron_down' => '<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="10" height="10" viewBox="0 0 32 32"><path d="M30.054 14.429l-13.25 13.232q-0.339 0.339-0.804 0.339t-0.804-0.339l-13.25-13.232q-0.339-0.339-0.339-0.813t0.339-0.813l2.964-2.946q0.339-0.339 0.804-0.339t0.804 0.339l9.482 9.482 9.482-9.482q0.339-0.339 0.804-0.339t0.804 0.339l2.964 2.946q0.339 0.339 0.339 0.813t-0.339 0.813z"></path></svg>',
