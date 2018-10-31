@@ -90,6 +90,12 @@ function polestar_setup() {
 		'default-image' => '',
 	) ) );
 
+	/*
+	 * Enable support for Gutenberg Editor Styles.
+	 * https://wordpress.org/gutenberg/handbook/extensibility/theme-support/#editor-styles
+	 */
+	add_theme_support( 'editor-styles' );
+
 }
 endif;
 // polestar_setup
