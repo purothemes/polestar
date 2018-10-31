@@ -503,7 +503,7 @@ function polestar_related_posts( $post_id ) {
 	} else { // The fallback loop.
 		$categories = get_the_category( $post_id );
 		$first_cat = $categories[0]->cat_ID;
-		$args=array(
+		$args = array(
 			'category__in' => array( $first_cat ),
 			'post__not_in' => array( $post_id ),
 			'posts_per_page' => 3,
