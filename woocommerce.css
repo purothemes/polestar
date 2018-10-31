@@ -1399,6 +1399,8 @@ input.button.added:after,
       padding: 8px 0; }
     .woocommerce-cart .cart_totals table td {
       text-align: right; }
+  .woocommerce-cart .cart_totals .shipping-calculator-form {
+    margin: 6px 0; }
   .woocommerce-cart .cart_totals .checkout-button {
     float: right;
     font-size: 16px; }

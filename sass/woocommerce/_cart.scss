@@ -19,11 +19,11 @@
 
 			@media (max-width: 768px) {
 				display: none;
-			}			
+			}
 			
 			th {
 				font-size: 14px;
-			}		
+			}
 		}
 		
 		th,
@@ -43,9 +43,9 @@
 			@media (max-width: 768px) {
 
 				td:before {
-				    content: attr(data-title) ": ";
-				    font-weight: 700;
-				    float: left;						
+					content: attr(data-title) ": ";
+					font-weight: 700;
+					float: left;
 				}	
 
 				td:first-of-type {
@@ -90,7 +90,7 @@
 				
 				&:before {
 					content: none; 
-				}			
+				}
 			}
 
 			.product-quantity {
@@ -130,7 +130,7 @@
 					
 					@media (max-width: 768px) {
 						display: none;
-					}				
+					}
 				}
 
 				input {
@@ -167,7 +167,7 @@
 			
 			@media (max-width: 480px) {
 				font-size: 20px; 	
-			}			
+			}
 			
 		}
 		
@@ -190,6 +190,10 @@
 			}
 		}
 
+		.shipping-calculator-form {
+			margin: 6px 0;
+		}
+
 		.checkout-button {
 			float: right;
 			font-size: 16px;
@@ -199,7 +203,7 @@
 				float: none;
 				text-align: center;
 				width: 100%; 
-			}			 
+			}
 		}
 	}
 }
@@ -210,7 +214,7 @@
 	.shopping-cart {
 		display: inline-block;
 		margin: 0 20px -10px 30px;
-	    padding: 0 0 10px;		
+	    padding: 0 0 10px;
 	}
 
 	.shopping-cart-text {
@@ -220,7 +224,7 @@
 	.shopping-cart-link {
 		display: inline-block;
 		font-family: $font__headings; 
-		position: relative;		
+		position: relative;
 
 		svg {
 			display: inline-block;
@@ -235,7 +239,7 @@
 
 			.overlap-dark .site-header:not(.stuck) & {
 				fill: #2d2d2d;
-			}				
+			}
 		}
 
 		.shopping-cart-count {
@@ -264,7 +268,7 @@
 
 				.overlap-dark .site-header:not(.stuck) & {
 					fill: rgba(45, 45, 45, .8); 
-				}						
+				}
 			}
 			
 			.shopping-cart-count {
@@ -304,14 +308,14 @@
 			
 			li {
 				overflow: initial;
-			}			
+			}
 
 			.woocommerce-mini-cart__empty-message {
 				display: block;
 				font-size: .95em; 
 				font-weight: 600;
 				padding-bottom: 0;
-			}			
+			}
 		}
 	}
 }
@@ -333,18 +337,18 @@
 		svg {
 			margin: -3px 0 0;
 			padding: 0;
-			vertical-align: middle; 
+			vertical-align: middle;
 		}
 		
 		.shopping-cart-count {
 			top: 2px;
-			right: -25px; 
+			right: -25px;
 		}
 
 		&:hover {
 			
 			.shopping-cart-text {
-				color: $color__text-medium; 
+				color: $color__text-medium;
 			}
 		}
 	}
