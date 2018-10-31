@@ -142,7 +142,7 @@ function polestar_footer_text() {
 		array( get_bloginfo( 'sitename' ), date_i18n( esc_html__( 'Y', 'polestar' ) ) ),
 		$text
 	);
-	echo wp_kses_post( $text ) . '&nbsp;';
+	echo wp_kses_post( $text ) . '.&nbsp;';
 }
 endif;
 

@@ -400,13 +400,23 @@ function polestar_theme_options() {
 	);
 
 	$options['footer_text'] = array(
-	    'id' => 'footer_text',
-	    'label' => esc_html__( 'Footer Text', 'polestar' ),
-	    'section' => $section,
-	    'type' => 'text',
-	    'description' => esc_html__( '{site-title} and {year} can be used to display your website title and the current year.', 'polestar' ),
-	    'default' => esc_html__( 'Copyright &copy; {year} {sitename}.', 'polestar' ),
-	    'priority' => '20'
+		'id' => 'footer_text',
+		'label' => esc_html__( 'Footer Text', 'polestar' ),
+		'section' => $section,
+		'type' => 'text',
+		'description' => esc_html__( '{site-title} and {year} can be used to display your website title and the current year.', 'polestar' ),
+		'default' => esc_html__( 'Copyright &copy; {year} {sitename}.', 'polestar' ),
+		'priority' => '20'
+	);
+
+	$options['footer_privacy_policy_link'] = array(
+		'id' => 'footer_privacy_policy_link',
+		'label' => esc_html__( 'Privacy Policy Link', 'polestar' ),
+		'section' => $section,
+		'type' => 'checkbox',
+		'description' => esc_html__( 'Display the Privacy Policy page link.', 'polestar' ),
+		'default' => true,
+		'priority' => '25'
 	);
 
 	// WooCommerce.
