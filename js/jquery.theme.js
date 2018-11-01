@@ -273,6 +273,11 @@ jQuery( function( $ ) {
 	}
 
 	$.fn.polestarSmoothScroll = function() {
+
+		if ( $( 'body' ).hasClass( 'disable-smooth-scroll' ) ) {
+			return;
+		}
+		
 		$( this ).click( function( e ) {
 
 			var hash    = this.hash;
