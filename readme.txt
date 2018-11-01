@@ -4,8 +4,8 @@ Contributors: Puro
 
 Tags: one-column, two-columns, left-sidebar, right-sidebar, custom-background, custom-colors, custom-menu, custom-logo, featured-images, footer-widgets, full-width-template, post-formats, sticky-post, theme-options, threaded-comments, translation-ready, blog, e-commerce
 
-Requires at least: 4.7
-Tested up to: 4.9.6
+Requires at least: 4.7+
+Tested up to: 4.9.9
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -148,3 +148,228 @@ Released under [GPL version 2](https://www.gnu.org/licenses/old-licenses/gpl-2.0
 TGM Plugin Activation, Copyright 2011 Thomas Griffin
 Released under [GPL version 2](https://www.gnu.org/licenses/old-licenses/gpl-2.0.en.html)
 [Source](https://github.com/TGMPA/TGM-Plugin-Activation)
+
+== Changelog ==
+
+= 1.3 - 01 November 2018 =
+* Prevented FitVids loading on Gutenberg pages.
+* Added Gutenberg editor styles.
+* Updated WooCommerce templates to version `3.5.0`.
+* Added a setting for the footer privacy policy link located at `Customize > Theme Settings > Footer`.
+
+= 1.2.10 - 24 September 2018 =
+* Ensured the user set date format is respected in post meta.
+* Updated the available Google Fonts array.
+* Added the privacy page link to the bottom bar if a privacy page is selected.
+* Added Jetpack Like compatibility.
+* Updated the header search to close on click outside the container.
+* Changed related posts date to `get_the_date`.
+* Added WooCommerce check before adding the mini-cart.
+
+= 1.2.9 - 28 June 2018 =
+* Added a new WooCommerce mini-cart icon.
+* Minor mobile menu style fixes.
+* Minor WooCommerce style fixes.
+* Added galleries to the WooCommerce Quick View modal.
+* Improved search results design.
+
+= 1.2.8 - 30 May 2018 =
+* Resolved post slider function error when Jetpack not activated.
+
+= 1.2.7 - 29 May 2018 =
+* Updated WooCommerce review meta file for WooCommerce version `3.4.0`.
+* Minor style adjustments.
+* Overhauled excerpt function. `polestar_excerpt_length` and `polestar_unwind_excerpt_more` deprecated.
+* Styled comment form cookie consent setting.
+
+= 1.2.6 - 11 May 2018 =
+* Corrected sidebar body class conditional statements.
+
+= 1.2.5 - 11 May 2018 =
+* Added styling for all WooCommerce core widgets that didn't have styling added previously.
+* Minor styling updates for the WooCommerce checkout, login, dashboard and mini-cart.
+
+= 1.2.4 - 05 May 2018 =
+* Adjusted Jetpack Infinite Scroll to use posts per page setting.
+* Minor Jetpack Infinite Scroll styling fixes.
+* Added style support for the WooCommerce Price Filter widget.
+
+= 1.2.3 - 28 March 2018 =
+* Added WooCommerce grouped product styling.
+* Fixed paragraph spacing in single WooCommerce product tab descriptions.
+* Moved the viewport tag from `header.php` into `functions.php` to allow for easy removal.
+* Removed the `responsive` body class no longer required.
+* Updated searchform URL to prevent a 404 error when site and WordPress URL differs. 
+
+= 1.2.2 - 22 March 2018 =
+* Removed `polestarBurstAnimation not` being used.
+* Minor WooCommerce single product page styling fixes.
+* Added a step to ensure FlexSlider galleries don't flash on load.
+* Removed duplicate WooCommerce actions.
+* Added SiteOrigin layouts folder setup back. Page Builder should prevent error from occuring from version `2.6.3`.
+* Fixed mobile menu icon color when header set to overlap and light text.
+* Added WooCommerce grouped product styling.
+* Added additional theme action hooks.
+
+= 1.2.1 - 27 February 2018 =
+* Temporarily removed the SiteOrigin layouts folder setup.
+
+= 1.2 - 25 February 2018 =
+* Added additional compatibility for Page Builder by SiteOrigin.
+* Removed smooth scrolling from external page anchors.
+* Minor WooCommerce styling fixes.
+
+= 1.1.1 - 09 February 2018 =
+* Updated WooCommerce template files to latest version.
+* Minor styling fixes.
+
+= 1.1 - 27 December 2017 =
+* Added header overlap setting.
+* Minor WooCommerce mini cart style fixes.
+
+= 1.0.18 - 14 December 2017 =
+* Resolved WooCommerce PayPal logo issue impacting child themes.
+
+= 1.0.17 - 26 November 2017 =
+* Fixed featured image setting on single post page.
+* Minor style fixes for menu mini-cart.
+* Gallery post format code enhancements. 
+
+= 1.0.16 - 15 November 2017 =
+* Resolved main menu mini-cart display problem.
+* Minor styling adjustments.
+
+= 1.0.15 - 14 November 2017 =
+* Fixed author avatar issue on mobile.
+* Fixed large logo bug on mobile.
+* Minor code improvements.
+
+= 1.0.14 - 30 October 2017 =
+* Added support for WooCommerce products shortcode columns.
+* Added comment moderation notification.
+
+= 1.0.13 - 23 October 2017 =
+* Resolved centered header layout bug.
+* Minor code improvements.
+
+= 1.0.12 - 19 October 2017 =
+* Fixed mini-cart displaying in header on mobile.
+* Updated mini-cart function.
+* Updated WooCommerce reviews template to latest version.
+* Prevented site description markup from outputting when field is empty.
+* Changed header to flex-box to solve IE 11 bug.
+* Minor code enhancements. 
+
+= 1.0.11 - 11 October 2017 =
+* Resolved Android footer scroll bug.
+
+= 1.0.10 - 03 October 2017 =
+* Updated comments navigation function.
+* Removed core HTML5 searchform support.
+* Minor code enhancements.
+* Added a class for menu buttons.
+* Fixed smooth scroll from mobile menu bug.
+* Fixed one page menu item selection bug.
+* Added tagline when setting is enabled and a logo has been added.
+
+= 1.0.9 - 20 September 2017 =
+* Minor code enhancements. 
+* Added constrained page layout setting.
+* Enabled keyboard accessibility for the header search icon.
+* Updated Customizer Library to include Poppins Google Font.
+
+= 1.0.8 - 13 September 2017 =
+* Added support for the WooCommerce store notice.
+
+= 1.0.7 - 25 August 2017 =
+* Added minimal UberMenu support.
+* Removed WooCommerce product hover buttons on mobile.
+* Fixed WooCommerce content container width issues.
+* Fixed WoooCommerce taxonomy page top spacing issue.
+* Minor code style improvements.
+
+= 1.0.6 - 28 July 2017 =
+* Added Yelp icon as an option for the social icon footer menu.
+* Fixed FlexSlider bugs when multiple sliders displayed on a single page.
+* Fixed blog posts slider padding bug.
+* Added Stripped page layout option. 
+* Added WooCommerce demo store notice styling.
+* Fixed WooCommerce Stripe payment gateway icon display.
+* Fixed WooCommerce archive category display.
+
+= 1.0.5 - 20 July 2017 =
+* Added support for Jetpack Related Posts.
+* Minor WooCommerce style fixes.
+
+= 1.0.4 - 12 July 2017 =
+* Fix missing CSS icons.
+
+= 1.0.3 - 11 July 2017 =
+* Added posts slider as loop file to used with Page Builder by SiteOrigin Post Loop widget.
+* Resolved mobile menu scroll bug.
+* Minor WooCommerce style fixes.
+
+= 1.0.2 - 03 July 2017 =
+* WooCommerce style improvements for Add to Cart button and login form.
+* Comment reply style improvements.
+* Added support for Max Mega Menu plugin.
+
+= 1.0.1 - 13 June 2017 =
+* Added overflow to WooCommerce mini-cart to ensure all products can be viewed when cart has many items in it.
+* Expanded Page Settings to include posts.
+* Added Full Width No Sidebar page layout option to accommodate non-SiteOrigin Page Builders.
+
+= 1.0.0 - 04 June 2017 =
+* Added WooCommerce product Quick View.
+* Added Customizer settings for Quick View and Add to Cart buttons on product hover. WooCommerce settings only appear if WooCommerce is activated. 
+
+= 0.9.9 - 22 May 2017 =
+* Improved WooCommerce archive page type responsive behaviour.
+* Updated WooCommerce gallery to slideshow and lightbox.
+* Added setting for all WooCommerce gallery combinations.
+* Small style adjustments to WooCommerce Cart, Checkout and Order Received pages.
+
+= 0.9.8 - 16 May 2017 =
+* Improved WooCommerce mini-cart styling. Fixed hover area bug.
+* Added WooCommerce shop archive columns setting.
+
+= 0.9.7 - 04 May 2017 =
+* Added ability to close header search using the escape key.
+* Fixed table cell border color.
+* Minor style adjustments to buttons and the blog posts slider.
+* Added WooCommerce mini cart and related setting.
+
+= 0.9.6 - 16 April 2017 =
+* Fixed incorrect Sass partial imports for Flexslider and the blog posts slider.
+* Fixed mobile search field missing border.
+* Fixed related posts Customizer default value.
+* Updated WooCommerce template files.
+* Refactored content padding to allow the footer margin page setting to function properly.
+
+= 0.9.5 - 09 April 2017 =
+* Added About page.
+* Added plugin recommendations.
+* Added WooCommerce Customizer settings.
+* Added Page Settings.
+* Added new Customizer settings.
+
+= 0.9.4 - 09 March 2017 =
+* Added readme.txt to release build.
+
+= 0.9.3 - 09 March 2017 =
+* Added internationalization to footer copyright text date.
+* Added missing escaping of links.
+* Changed to core WP function for single post navigation.
+* Optimized related posts function.
+* Added missing prefix to theme menu JavaScript.
+
+= 0.9.2 - 27 February 2017 =
+* Changed the mobile menu collapse default to 768px.
+* Corrected Footer Text setting description.
+* Updated screenshot.
+
+= 0.9.1 - 11 February 2017 =
+* Various changes and improvements for release.
+
+= 0.9 - 25 November 2016 =
+* Initial release.

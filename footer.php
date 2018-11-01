@@ -36,7 +36,7 @@ $footer_widgets_page_setting = puro_page_setting( 'footer_widgets', true );
 						<?php
 					}
 				?>
-			</div><!-- .polestar-container -->				
+			</div><!-- .polestar-container -->
 		<?php endif; ?>	
 			
 		<div class="bottom-bar">
@@ -45,7 +45,7 @@ $footer_widgets_page_setting = puro_page_setting( 'footer_widgets', true );
 					<?php
 					polestar_footer_text();
 
-					if ( function_exists( 'the_privacy_policy_link' ) ) {
+					if ( function_exists( 'the_privacy_policy_link' ) && get_theme_mod( 'footer_privacy_policy_link', true ) ) {
 						the_privacy_policy_link( '', '.&nbsp;' );
 					}
 					

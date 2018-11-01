@@ -90,6 +90,12 @@ function polestar_setup() {
 		'default-image' => '',
 	) ) );
 
+	/*
+	 * Enable support for Gutenberg Editor Styles.
+	 * https://wordpress.org/gutenberg/handbook/extensibility/theme-support/#editor-styles
+	 */
+	add_theme_support( 'editor-styles' );
+
 }
 endif;
 // polestar_setup
@@ -162,7 +168,7 @@ function polestar_scripts() {
 	wp_enqueue_style( 'polestar-style', get_template_directory_uri() . '/style' . PURO_THEME_CSS_PREFIX . '.css', array(), PURO_THEME_VERSION );
 
 	// FitVids.
-	if ( ! class_exists( 'Jetpack' ) ) {
+	if ( ! class_exists( 'Jetpack' ) && ! ( function_exists( 'has_blocks' ) && has_blocks() ) ) {
 		wp_enqueue_script( 'jquery-fitvids', get_template_directory_uri() . '/js/jquery.fitvids' . PURO_THEME_JS_PREFIX . '.js', array( 'jquery' ), '1.1', true );
 	}
 	
