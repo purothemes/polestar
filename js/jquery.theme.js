@@ -49,7 +49,7 @@ jQuery( function( $ ) {
 				}
 			} );
 		} );
-	} );	
+	} );
 
 	// Scroll to top.
 	var sttWindowScroll = function () {
@@ -118,7 +118,7 @@ jQuery( function( $ ) {
 				$( $mh ).addClass( 'stuck' );
 			} else {
 				$( $mh ).removeClass( 'stuck' );
-			}			
+			}
 		};
 		smShadow();
 		$( window ).scroll( smShadow );
