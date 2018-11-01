@@ -4,7 +4,7 @@
  * Handles the primary JavaScript functions for the theme.
  */
 
-/* globals jQuery, polestar_resp_menu_params */
+/* globals jQuery, polestar */
 
 jQuery( function( $ ) {
 
@@ -52,7 +52,7 @@ jQuery( function( $ ) {
 	} );
 
 	// Scroll to top.
-	var sttWindowScroll = function () {
+	var sttWindowScroll = function() {
 		var top = window.pageYOffset || document.documentElement.scrollTop;
 
 		if ( top > $( '#masthead' ).outerHeight() ) {
@@ -67,24 +67,23 @@ jQuery( function( $ ) {
 	};
 	sttWindowScroll();
 	$( window ).scroll( sttWindowScroll );
-	$( '#scroll-to-top' ).click( function () {
+	$( '#scroll-to-top' ).click( function() {
 		$( 'html, body' ).animate( { scrollTop: 0 } );
 	} );
 
 	// Sticky header.
 	if ( $( '#masthead' ).hasClass( 'sticky' ) ) {
 		var $mhs = false,
-			pageTop = $( '#page' ).offset().top,
 			$mh = $( '#masthead' ),
 			$tb = $( '#topbar' ),
 			$tbwc = $( '#topbar .woocommerce-store-notice[style*="display: none"]' );
 
 		var smSetup = function() {
 
-			if ( $( 'body' ).hasClass( 'mobile-header-ns' ) && ( $( window ).width() < polestar_resp_menu_params.collapse ) ) {
+			if ( $( 'body' ).hasClass( 'mobile-header-ns' ) && ( $( window ).width() < polestar.collapse ) ) {
 				return;
 			}
-			
+
 			if ( $mhs === false ) {
 				$mhs = $( '<div class="masthead-sentinel"></div>' ).insertAfter( $mh );
 				$mhs.css( 'height', $mh.outerHeight() );
@@ -100,9 +99,9 @@ jQuery( function( $ ) {
 
 			if ( $( 'body' ).hasClass( 'no-topbar' ) && ! $( window ).scrollTop() ) {
 				$( 'body' ).addClass( 'topbar-out' );
-			}			
+			}
 
-			if ( $( 'body' ).hasClass( 'no-topbar' ) || ( ! $( 'body' ).hasClass( 'no-topbar' ) &&  $( 'body' ).hasClass( 'topbar-out' ) ) || $tbwc.length ) {
+			if ( $( 'body' ).hasClass( 'no-topbar' ) || ( ! $( 'body' ).hasClass( 'no-topbar' ) && $( 'body' ).hasClass( 'topbar-out' ) ) || $tbwc.length ) {
 				$mh.css( 'position', 'fixed' );
 			} else if ( ! $( 'body' ).hasClass( 'no-topbar' ) && ! $( 'body' ).hasClass( 'topbar-out' ) ) {
 				$mh.css( 'position', 'absolute' );
@@ -131,50 +130,56 @@ jQuery( function( $ ) {
 
 		// Sticky header logo scaling.
 		if ( $mh.data( 'scale-logo' ) ) {
-			var smResizeLogo = function () {
-				var top = window.pageYOffset || document.documentElement.scrollTop;
-				top -= pageTop;
+			var $img = $mh.find( '.site-branding img' ),
+				imgWidth = $img.width(),
+				imgHeight = $img.height();
+				scaledWidth = imgWidth * polestar.logoScale;
+				scaledHeight = imgHeight * polestar.logoScale;
 
-				var $img = $mh.find( '.site-branding img' ),
-					$branding = $mh.find( '.site-branding > *' );
+			var smResizeLogo = function() {
+				var $branding = $mh.find( '.site-branding > *' ),
+					top = window.pageYOffset || document.documentElement.scrollTop;
 
-				$img.removeAttr( 'style' );
-				var imgWidth = $img.width(),
-					imgHeight = $img.height();
-
+				// Check if the menu is meant to be sticky or not, and if it is apply padding/class.
 				if ( top > 0 ) {
-					var scale = 0.775 + ( Math.max( 0, 48 - top ) / 48 * ( 1 - 0.775 ) );
-
-					if ( $img.length ) {
-
-						$img.css( {
-							width: imgWidth * scale,
-							height: imgHeight * scale,
-							'max-width' : 'none'
-						} );
-					} else {
-						$branding.css( 'transform', 'scale(' + scale + ')' );
-					}
-
 					$mh.css( {
-						'padding-top': mhPadding.top * scale,
-						'padding-bottom': mhPadding.bottom * scale
+						'padding-top': mhPadding.top * polestar.logoScale,
+						'padding-bottom': mhPadding.bottom * polestar.logoScale
 					} ).addClass( 'stuck' );
-				} else {
-					if ( ! $img.length ) {
-						$branding.css( 'transform', 'scale(1)' );
-					}
 
+				} else {
 					$mh.css( {
 						'padding-top': mhPadding.top,
 						'padding-bottom': mhPadding.bottom
 					} ).removeClass( 'stuck' );
+				}
+
+				if ( $img.length ) {
+					// If Scale == polestar.logoScale, logo is completely scaled.
+					if ( $img.height() != scaledHeight || $img.width() != scaledWidth ) {
+						var scale = polestar.logoScale + ( Math.max( 0, 48 - top ) / 48 * ( 1 - polestar.logoScale ) );
+						$('.site-branding img').css( {
+							width: imgWidth * scale,
+							height: imgHeight * scale,
+							'max-width' : 'none'
+						} );
+					}
+				} else {
+					if ( top > 0 ) {
+						$branding.css( 'transform', 'scale(' + polestar.logoScale + ')' );
+					} else {
+						$branding.css( 'transform', 'scale(1)' );
+					}
 				}
 			};
 			smResizeLogo();
 			$( window ).scroll( smResizeLogo ).resize( smResizeLogo );
 		}
 	}
+
+	jQuery( window ).load( function() {
+		polestar.logoScale = parseFloat( polestar.logoScale );
+	} );
 
 	// Header search.
 	var $hs = $( '#header-search' );
@@ -247,10 +252,11 @@ jQuery( function( $ ) {
 		}
 		$( window ).scroll( function() {
 			if ( $( '#site-navigation ul li' ).hasClass( 'current' ) ) {
-			   $( '#site-navigation li' ).removeClass( 'current-menu-item' ); 
+				$( '#site-navigation li' ).removeClass( 'current-menu-item' ); 
 			}
 		} );
-	} ); 
+	} );
+
 	// Smooth scroll from internal page anchors.
 	var adminBarHeight = $( '#wpadminbar' ).outerHeight(),
 		isAdminBar = $( 'body' ).hasClass( 'admin-bar' ),
@@ -356,7 +362,7 @@ jQuery( function( $ ) {
 
 	// Mobile menu.
 	var $mobileMenu = false;
-	$( '#mobile-menu-button' ).click( function ( e ) {
+	$( '#mobile-menu-button' ).click( function( e ) {
 		e.preventDefault();
 		var $$ = $( this );
 		$$.toggleClass( 'to-close' );
