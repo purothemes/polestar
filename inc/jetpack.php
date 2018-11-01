@@ -73,10 +73,23 @@ endif;
  * Remove sharing buttons from their default locations.
  */
  function polestar_remove_sharing() {
-    remove_filter( 'the_content', 'sharing_display', 19 );
-    remove_filter( 'the_excerpt', 'sharing_display', 19 );
-    if ( class_exists( 'Jetpack_Likes' ) ) {
-        remove_filter( 'the_content', array( Jetpack_Likes::init(), 'post_likes' ), 30, 1 );
-    }
+	remove_filter( 'the_content', 'sharing_display', 19 );
+	remove_filter( 'the_excerpt', 'sharing_display', 19 );
+	if ( class_exists( 'Jetpack_Likes' ) ) {
+		remove_filter( 'the_content', array( Jetpack_Likes::init(), 'post_likes' ), 30, 1 );
+	}
 }
 add_action( 'loop_start', 'polestar_remove_sharing' );
+
+/**
+ * Prevent the logo image from being lazy loaded.
+ */
+if ( Jetpack::is_module_active( 'lazy-images' ) ) :
+	if ( ! function_exists( 'polestar_jetpack_logo_not_lazy' ) ) {
+		function polestar_jetpack_logo_not_lazy( $blacklisted_classes ) {
+			$blacklisted_classes[] = 'custom-logo';
+			return $blacklisted_classes;
+		}
+		add_filter( 'jetpack_lazy_images_blacklisted_classes', 'polestar_jetpack_logo_not_lazy' );
+	}
+endif;
