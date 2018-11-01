@@ -15,21 +15,21 @@
 	if ( is_single() && has_post_thumbnail() && get_theme_mod( 'post_featured_image', true ) ) : ?>
 		<div class="entry-thumbnail">
 			<?php if ( get_theme_mod( 'post_categories', true ) ) polestar_entry_thumbnail_meta(); ?>
-			<?php the_post_thumbnail(); ?>			
+			<?php the_post_thumbnail(); ?>
 		</div>
 	<?php elseif ( ! is_single() && has_post_thumbnail() && get_theme_mod( 'archive_featured_image', true ) ) : ?>
 		<div class="entry-thumbnail">
 			<?php if ( get_theme_mod( 'post_categories', true ) ) polestar_entry_thumbnail_meta(); ?>
-			<a href="<?php the_permalink(); ?>">			
+			<a href="<?php the_permalink(); ?>">
 				<span class="screen-reader-text"><?php esc_html_e( 'Open post', 'polestar' ); ?></span>
 				<span class="overlay"></span>
 				<span class="icon-add">
 					<?php polestar_display_icon( 'add' ); ?>
 				</span>
-				<?php the_post_thumbnail(); ?>			
+				<?php the_post_thumbnail(); ?>
 			</a>
 		</div>
-	<?php endif; ?>	
+	<?php endif; ?>
 
 	<header class="entry-header">
 		<?php

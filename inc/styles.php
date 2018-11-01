@@ -21,7 +21,7 @@ function polestar_build_styles() {
 	if ( $mod !== customizer_library_get_default( $setting ) ) {
 
 		$color = sanitize_hex_color( $mod );
-		$color_rgb = join( ', ', customizer_library_hex_to_rgb( $color ) );		
+		$color_rgb = join( ', ', customizer_library_hex_to_rgb( $color ) );
 
 		// Color.
 		Customizer_Library_Styles()->add( array(
@@ -39,7 +39,7 @@ function polestar_build_styles() {
 				'.footer-menu .menu li a:hover:before',
 				'.breadcrumbs a:hover',
 				'.widget-area .widget a:hover',
-  				'.site-footer .widget a:hover',
+				'.site-footer .widget a:hover',
 				'.widget #wp-calendar tfoot #prev a:hover',
 				'.widget #wp-calendar tfoot #next a:hover',
 				'.entry-meta > span a:hover',
@@ -59,7 +59,7 @@ function polestar_build_styles() {
 			'declarations' => array(
 				'color' => $color
 			)
-		) );		
+		) );
 
 		// Background Hex.
 		Customizer_Library_Styles()->add( array(
@@ -101,7 +101,7 @@ function polestar_build_styles() {
 			'declarations' => array(
 				'background-color' => 'rgba(' . $color_rgb . ', 0.8)'
 			)
-		) );				
+		) );
 
 		// Border Color.
 		Customizer_Library_Styles()->add( array(
@@ -161,7 +161,7 @@ function polestar_build_styles() {
 				'declarations' => array(
 					'background' => 'rgba(' . $color_rgb . ', 0.8)'
 				)
-			) );			
+			) );
 
 			// Border Color.
 			Customizer_Library_Styles()->add( array(
@@ -171,7 +171,7 @@ function polestar_build_styles() {
 				'declarations' => array(
 					'border-color' => $color
 				)
-			) );								
+			) );
 
 		} // endif is_woocommerce.
 		
@@ -231,7 +231,7 @@ function polestar_build_styles() {
 				'declarations' => array(
 					'color' => $color
 				)
-			) );			
+			) );
 
 			// Fill.
 			Customizer_Library_Styles()->add( array(
@@ -243,7 +243,7 @@ function polestar_build_styles() {
 				)
 			) );
 
-		} // endif is_woocommerce.	
+		} // endif is_woocommerce.
 
 		if ( ! function_exists( 'polestar_premium_setup' ) ) {
 
@@ -254,7 +254,7 @@ function polestar_build_styles() {
 				'declarations' => array(
 					'color' => $color
 				)
-			) );							
+			) );
 
 		}
 
@@ -309,9 +309,9 @@ function polestar_build_styles() {
 				'declarations' => array(
 					'fill' => $color
 				)
-			) );								
+			) );
 
-		} // endif is_woocommerce.				
+		} // endif is_woocommerce.
 	}
 
 	// Text Color.
@@ -372,9 +372,9 @@ function polestar_build_styles() {
 				'declarations' => array(
 					'color' => $color
 				)
-			) );							
+			) );
 
-		}		
+		}
 
 		// Border Color.
 		Customizer_Library_Styles()->add( array(
@@ -430,9 +430,9 @@ function polestar_build_styles() {
 				'declarations' => array(
 					'fill' => $color
 				)
-			) );								
+			) );
 
-		} // endif is_woocommerce.				
+		} // endif is_woocommerce.
 	}
 
 	// Secondary Text Color.
@@ -470,7 +470,7 @@ function polestar_build_styles() {
 			'declarations' => array(
 				'fill' => $color
 			)
-		) );		
+		) );
 
 		// WooCommerce
 		if ( function_exists( 'is_woocommerce' ) ) {
@@ -499,10 +499,10 @@ function polestar_build_styles() {
 				'declarations' => array(
 					'fill' => $color
 				)
-			) );								
+			) );
 
-		} // endif is_woocommerce.				
-	}		
+		} // endif is_woocommerce.
+	}
 
 	// Heading Font.
 	$setting = 'heading_font';
@@ -537,7 +537,7 @@ function polestar_build_styles() {
 				'declarations' => array(
 					'font-family' => $stack
 				)
-			) );							
+			) );
 
 		}
 
@@ -552,9 +552,9 @@ function polestar_build_styles() {
 				'declarations' => array(
 					'font-family' => $stack
 				)
-			) );							
+			) );
 
-		} // endif is_woocommerce.			
+		} // endif is_woocommerce.
 	}
 
 	// Body Font.
@@ -577,7 +577,7 @@ function polestar_build_styles() {
 		) );
 
 		if ( function_exists( 'is_woocommerce' ) ) {
-									
+
 			Customizer_Library_Styles()->add( array(
 				'selectors' => array(
 					'.site-header .shopping-cart-dropdown *'
@@ -587,9 +587,9 @@ function polestar_build_styles() {
 				)
 			) );
 
-		} // endif is_woocommerce.			
-	}			
-		
+		} // endif is_woocommerce.
+	}
+
 }
 endif;
 add_action( 'customizer_library_styles', 'polestar_build_styles' );
@@ -602,41 +602,41 @@ function polestar_mobile_menu_collapse() {
 			$number = 780;
 		} else {
 			$number = customizer_library_sanitize_number_absint( $mod, $setting );
-		}		
+		}
 
 		$number_min = $number + 1;
 		
-	    Customizer_Library_Styles()->add( array(    	
-	        'selectors' => array(
-	            'body:not(.page-layout-stripped) #masthead.mobile-menu .main-navigation > div:not(.mega-menu-wrap)',
-	            '#masthead.mobile-menu .main-navigation .shopping-cart',
-	            '#masthead.mobile-menu .main-navigation .search-icon'
-	        ),
-	        'declarations' => array(
-	            'display' => 'none',
-	        ),
-	        'media' => '(max-width:' . $number . 'px)'
-	    ) );
+		Customizer_Library_Styles()->add( array(
+			'selectors' => array(
+				'body:not(.page-layout-stripped) #masthead.mobile-menu .main-navigation > div:not(.mega-menu-wrap)',
+				'#masthead.mobile-menu .main-navigation .shopping-cart',
+				'#masthead.mobile-menu .main-navigation .search-icon'
+			),
+			'declarations' => array(
+				'display' => 'none',
+			),
+			'media' => '(max-width:' . $number . 'px)'
+		) );
 
-	    Customizer_Library_Styles()->add( array(    	
-	        'selectors' => array(
-	        	'#masthead.mobile-menu #mobile-menu-button'
-	        ),
-	        'declarations' => array(
-	        	'display' => 'inline-block',
-	        ),
-	        'media' => '(max-width:' . $number . 'px)'
-	    ) );
+		Customizer_Library_Styles()->add( array(
+			'selectors' => array(
+				'#masthead.mobile-menu #mobile-menu-button'
+			),
+			'declarations' => array(
+				'display' => 'inline-block',
+			),
+			'media' => '(max-width:' . $number . 'px)'
+		) );
 
-	    Customizer_Library_Styles()->add( array(    	
-	        'selectors' => array(
-	            '.site-header #mobile-navigation'
-	        ),
-	        'declarations' => array(
-	        	'display' => 'none !important',
-	        ),
-	        'media' => '(min-width:' . $number_min . 'px)'
-	    ) );
+		Customizer_Library_Styles()->add( array(
+			'selectors' => array(
+				'.site-header #mobile-navigation'
+			),
+			'declarations' => array(
+				'display' => 'none !important',
+			),
+			'media' => '(min-width:' . $number_min . 'px)'
+		) );
 }
 add_action( 'customizer_library_styles', 'polestar_mobile_menu_collapse' );
 

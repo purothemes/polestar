@@ -147,13 +147,13 @@ function polestar_widgets_init() {
 	) );
 	if ( function_exists( 'is_woocommerce' ) ) {
 		register_sidebar( array(
-			'name' 			=> esc_html__( 'Shop Sidebar', 'polestar' ),
-			'id' 			=> 'sidebar-shop',
+			'name'          => esc_html__( 'Shop Sidebar', 'polestar' ),
+			'id'            => 'sidebar-shop',
 			'description' 	=> esc_html__( 'Displays on WooCommerce pages.', 'polestar' ),
 			'before_widget' => '<aside id="%1$s" class="widget %2$s">',
-			'after_widget' 	=> '</aside>',
-			'before_title' 	=> '<h3 class="widget-title">',
-			'after_title' 	=> '</h3>',
+			'after_widget'  => '</aside>',
+			'before_title'  => '<h3 class="widget-title">',
+			'after_title'   => '</h3>',
 		) );
 	}		
 }
@@ -179,14 +179,14 @@ function polestar_scripts() {
 		wp_enqueue_script( 'jquery-flexslider' );
 	}
 
-    // Theme JavaScript.
-    wp_enqueue_script( 'polestar-script', get_template_directory_uri() . '/js/jquery.theme' . PURO_THEME_JS_PREFIX . '.js', array( 'jquery' ), PURO_THEME_VERSION, true );
+	// Theme JavaScript.
+	wp_enqueue_script( 'polestar-script', get_template_directory_uri() . '/js/jquery.theme' . PURO_THEME_JS_PREFIX . '.js', array( 'jquery' ), PURO_THEME_VERSION, true );
 
 	// Mobile menu collapse localisation.
 	$collapse_array = array( 
 		'collapse' => get_theme_mod( 'mobile_menu_collapse', 768 )
 	);
-	wp_localize_script( 'polestar-script', 'polestar_resp_menu_params', $collapse_array );    
+	wp_localize_script( 'polestar-script', 'polestar_resp_menu_params', $collapse_array );
 
 	// Theme icons.
 	wp_enqueue_style( 'polestar-icons', get_template_directory_uri() . '/css/polestar-icons' . PURO_THEME_CSS_PREFIX . '.css', array(), PURO_THEME_VERSION );
@@ -194,7 +194,7 @@ function polestar_scripts() {
 	// Comment reply.
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
-	}	
+	}
 
 	// Skip link focus fix.
 	wp_enqueue_script( 'polestar-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix' . PURO_THEME_JS_PREFIX . '.js', array(), PURO_THEME_VERSION, true );

@@ -55,9 +55,9 @@
 
 								<?php $mega_menu_active = function_exists( 'ubermenu' ) || function_exists( 'max_mega_menu_is_enabled' ) && max_mega_menu_is_enabled( 'menu-1' ); ?>
 
-								<?php if ( get_theme_mod( 'mobile_menu', true ) && ! $mega_menu_active ) : ?>	
+								<?php if ( get_theme_mod( 'mobile_menu', true ) && ! $mega_menu_active ) : ?>
 									<a href="#menu" id="mobile-menu-button">
-										<?php polestar_display_icon( 'menu' ); ?>							
+										<?php polestar_display_icon( 'menu' ); ?>
 										<span class="screen-reader-text"><?php esc_html_e( 'Menu', 'polestar' ); ?></span>
 									</a>
 								<?php endif; ?>
@@ -85,7 +85,7 @@
 										</a>
 									</li>
 								</ul>
-							<?php endif; ?>						
+							<?php endif; ?>
 
 						</nav><!-- #site-navigation -->
 
