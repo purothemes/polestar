@@ -149,7 +149,7 @@ function polestar_widgets_init() {
 		register_sidebar( array(
 			'name'          => esc_html__( 'Shop Sidebar', 'polestar' ),
 			'id'            => 'sidebar-shop',
-			'description' 	=> esc_html__( 'Displays on WooCommerce pages.', 'polestar' ),
+			'description'   => esc_html__( 'Displays on WooCommerce pages.', 'polestar' ),
 			'before_widget' => '<aside id="%1$s" class="widget %2$s">',
 			'after_widget'  => '</aside>',
 			'before_title'  => '<h3 class="widget-title">',
