@@ -151,6 +151,12 @@ Released under [GPL version 2](https://www.gnu.org/licenses/old-licenses/gpl-2.0
 
 == Changelog ==
 
+= 1.3 - 01 November 2018 =
+* Prevented FitVids loading on Gutenberg pages.
+* Added Gutenberg editor styles.
+* Updated WooCommerce templates to version `3.5.0`.
+* Added a setting for the footer privacy policy link located at `Customize > Theme Settings > Footer`.
+
 = 1.2.10 - 24 September 2018 =
 * Ensured the user set date format is respected in post meta.
 * Updated the available Google Fonts array.
