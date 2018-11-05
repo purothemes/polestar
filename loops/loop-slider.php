@@ -27,7 +27,7 @@ if ( have_posts() ) : ?>
 						<div class="entry-excerpt">
 							<?php polestar_excerpt(); ?>
 						</div>
-					</div>				
+					</div>
 				</li>
 
 			<?php endwhile; ?>

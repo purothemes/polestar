@@ -799,6 +799,7 @@ a {
     top: 3px; }
     .main-navigation .search-icon svg {
       height: 16px;
+      overflow: visible;
       width: 16px; }
       .main-navigation .search-icon svg path {
         fill: #2d2d2d;

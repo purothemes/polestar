@@ -151,6 +151,12 @@ Released under [GPL version 2](https://www.gnu.org/licenses/old-licenses/gpl-2.0
 
 == Changelog ==
 
+= 1.3.1 - 05 November 2018 =
+* Prevented Jetpack Lazy Images from loading the logo image.
+* Improved sticky header logo scaling.
+* Fixed search icon SVG cut off in Firefox.
+* Enqueued Gutenberg block editor style.
+
 = 1.3 - 01 November 2018 =
 * Prevented FitVids loading on Gutenberg pages.
 * Added Gutenberg editor styles.

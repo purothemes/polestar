@@ -60,7 +60,7 @@ $post_class = ( is_singular() ) ? 'entry' : 'archive-entry';
 				'link_after'  => '</span>',
 			) );
 		?>
-	</div><!-- .entry-content -->	
+	</div><!-- .entry-content -->
 
 	<?php polestar_entry_footer(); ?>
 </article><!-- #post-## -->

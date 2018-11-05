@@ -104,7 +104,7 @@ function polestar_comment( $comment, $args, $depth ) {
 					<p class="comment-awaiting-moderation">
 						<?php esc_html_e( 'Your comment is awaiting moderation.', 'polestar' ); ?>
 					</p>
-				<?php endif; ?>					
+				<?php endif; ?>
 					<?php comment_text() ?>
 				</div>
 
@@ -462,8 +462,8 @@ function polestar_post_meta() {
 	
 	if ( comments_open() && get_theme_mod( 'post_comment_count', true ) ) { 
 		echo '<span class="comments-link">';
-  		comments_popup_link( esc_html__( 'Leave a comment', 'polestar' ), esc_html__( 'One Comment', 'polestar' ), esc_html__( '% Comments', 'polestar' ) );
-  		echo '</span>';
+		comments_popup_link( esc_html__( 'Leave a comment', 'polestar' ), esc_html__( 'One Comment', 'polestar' ), esc_html__( '% Comments', 'polestar' ) );
+		echo '</span>';
 	}
 }
 endif;

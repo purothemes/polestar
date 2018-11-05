@@ -72,7 +72,7 @@ function polestar_woocommerce_archive_product_image() { ?>
 		<?php woocommerce_template_loop_product_link_close(); ?>
 		<?php if ( get_theme_mod( 'quick_view', true ) && ! ( get_theme_mod( 'archive_columns' ) == 5 ) ) {
 			polestar_woocommerce_quick_view_button();
-		} ?>		
+		} ?>
 		<?php if ( get_theme_mod( 'add_to_cart', true ) && ! ( get_theme_mod( 'archive_columns' ) == 5 ) ) {
 			woocommerce_template_loop_add_to_cart();
 		} ?>
@@ -119,7 +119,7 @@ function polestar_woocommerce_tag_cloud_widget() {
 	$args['largest'] = 12;
 	$args['smallest'] = 12;
 	$args['taxonomy'] = 'product_tag';
-	return $args;	
+	return $args;
 }
 endif;
 add_filter( 'woocommerce_product_tag_cloud_widget_args', 'polestar_woocommerce_tag_cloud_widget' );
@@ -193,7 +193,7 @@ function polestar_woocommerce_quick_view_image() {
 				<li class="flex-nav-next">
 					<a class="flex-next" href="#"><?php polestar_display_icon( 'right-arrow' ); ?></a>
 				</li>
-			</ul>			
+			</ul>
 		</div>
 	<?php
 	}

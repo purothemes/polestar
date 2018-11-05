@@ -56,7 +56,7 @@ $post_class = ( is_singular() ) ? 'entry' : 'archive-entry';
 		<div class="entry-meta">
 			<?php polestar_post_meta(); ?>
 		</div><!-- .entry-meta -->
-	</header><!-- .entry-header -->	
+	</header><!-- .entry-header -->
 
 	<div class="entry-content">
 		<?php if ( is_single() || get_theme_mod( 'archive_post_content' ) == 'full' ) {
