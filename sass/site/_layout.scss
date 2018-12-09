@@ -3,8 +3,8 @@
 	max-width: 1190px; // 1140px container.
 	padding: 0 25px;
 	position: relative;
-	width: 100%; 
-	
+	width: 100%;
+
 	.full-width & {
 		max-width: none;
 	}
@@ -16,20 +16,20 @@
 
 // Content area without sidebar.
 .content-area {
-	width: 100%; 
+	width: 100%;
 }
 
 // Content area with sidebar.
 .sidebar .content-area {
 	float: left;
-	width: 70%;	
-	
+	width: 70%;
+
 	@at-root .sidebar-left#{&} {
 		float: right;
-	}		 	
-	
+	}
+
 	@media (max-width: 768px) {
-		width: 100%; 	
+		width: 100%;
 	}
 }
 
@@ -37,7 +37,7 @@
 .page-layout-no-sidebar .site-content .content-area,
 .page-layout-stripped .site-content .content-area {
 	float: none;
-	width: 100%; 
+	width: 100%;
 }
 
 // Full Width page layout setting.
@@ -45,12 +45,12 @@
 
 	.site-content .content-area {
 		float: none;
-		width: 100%; 
+		width: 100%;
 	}
 
 	.site-content .polestar-container {
 		max-width: none;
-		padding: 0;  
+		padding: 0;
 	}
 }
 
@@ -59,7 +59,7 @@
 	float: none;
 	margin: 0 auto;
 	max-width: 870px;
-	width: 100%; 
+	width: 100%;
 }
 
 // Sidebar.
@@ -67,17 +67,17 @@
 	float: right;
 	padding-left: 4%;
 	width: 30%;
-	
+
 	.sidebar-left & {
 		float: left;
-		padding-right: 4%; 
-		padding-left: 0; 
-	}	
-	
+		padding-right: 4%;
+		padding-left: 0;
+	}
+
 	@media (max-width: 768px) {
-    	border-top: 1px solid $color__background-hr-dark;
-    	margin-top: 50px;
-		padding: 50px 0 0;		
+		border-top: 1px solid $color__background-hr-dark;
+		margin-top: 50px;
+		padding: 50px 0 0;
 		width: 100%;
 	}
 }

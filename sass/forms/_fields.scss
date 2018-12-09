@@ -17,21 +17,21 @@ textarea {
 	border: 1px solid $color__background-hr-dark;
 	border-radius: 2px;
 	box-sizing: border-box;
-	font-weight: normal; 
+	font-weight: normal;
 	line-height: normal;
 	outline: none;
 	padding: 9px 13px 10px;
 	transition: .3s;
 	max-width: 100%;
 	-webkit-appearance: none;
-	
+
 	&:focus {
 		border-color: darken($color__background-hr-dark, 7%);
 	}
 }
 
 input[type="checkbox"] {
-	margin-right: 5px; 
+	margin-right: 5px;
 }
 
 select {
@@ -46,7 +46,7 @@ textarea {
 label {
 	color: $color__text-dark;
 	font-size: .9em;
-	font-weight: 600;  
+	font-weight: 600;
 }
 
 fieldset legend {

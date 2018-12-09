@@ -18,12 +18,12 @@
 	clear: both;
 	text-align: center;
 	width: 100%;
-	
+
 	span {
 		background: none;
 		display: block;
 		padding: 0;
-		
+
 		button {
 			@extend .button;
 			font-size: 1em; 
@@ -40,7 +40,7 @@
 	display: block;
 	clear: both;
 	width: 100%;
-	
+
 	.spinner {
 		margin: 0 auto;
 	}
@@ -50,43 +50,43 @@
 ## - Related Posts
 --------------------------------------------------------------*/
 #main #jp-relatedposts {
-	margin-top: 0; 
-	padding-top: 0; 
+	margin-top: 0;
+	padding-top: 0;
 	
 	.jp-relatedposts-items-visual .jp-relatedposts-post img.jp-relatedposts-post-img {
- 		margin-bottom: 10px; 
- 	}	
+		margin-bottom: 10px;
+	}	
 
 	h4.jp-relatedposts-post-title {
 		font-size: 16px;
-		 
+
 		a {
 			color: #2d2d2d;
 			font-family: Montserrat,sans-serif;
-	    	font-weight: 400;
-	    	line-height: normal;
-	    	margin: 0 0 3px;
-	    	
-	    	&:hover {
-	    		text-decoration: none;
-	    	}
-	    }
-	} 	
+			font-weight: 400;
+			line-height: normal;
+			margin: 0 0 3px;
+
+			&:hover {
+				text-decoration: none;
+			}
+		}
+	}
 }
 
 /*--------------------------------------------------------------
 ## - Sharing
 --------------------------------------------------------------*/
 .site-content #primary .sharedaddy {
-	margin-bottom: 50px; 
+	margin-bottom: 50px;
 
 	h3 {
 		@extend .underline;
 		font-size: 16px;
 		font-weight: 600;
-		line-height: $font__line-height-body; 
+		line-height: $font__line-height-body;
 		margin-bottom: 15px;
-		
+
 		&:before {
 			content: none;
 		}

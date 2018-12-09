@@ -1,19 +1,19 @@
 .site-footer {
 	background: #fff;
 	margin-top: 75px;
-	
+
 	&.footer-active-sidebar {
 		border-top: 1px solid $color__background-hr-dark;
 	}
 
 	.no-footer-margin & {
 		margin-top: 0;
-	}	
-	
+	}
+
 	.widgets {
 		@include clearfix;
 		padding: 50px 0;
-		width: 100%; 
+		width: 100%;
 
 		@for $i from 1 through 10 {
 			$margin: ($i - 1) * 2.75;
@@ -33,9 +33,9 @@
 
 			@media (max-width: 768px) {
 				float: none;
-				margin-bottom: 25px; 
+				margin-bottom: 25px;
 				width: 100% !important;
-				
+
 				&:last-of-type {
 					margin-bottom: 0;
 				}
@@ -45,15 +45,15 @@
 
 	.site-info {
 		float: left;
-		font-size: 13px; 
+		font-size: 13px;
 		text-align: left;
 		width: 30%;
-		
+
 		@media (max-width: 768px) {
 			float: none;
 			text-align: center;
 			width: 100%;
-		} 		
+		}
 	}
 
 	.bottom-bar {
@@ -69,7 +69,7 @@
 
 		a {
 			color: inherit;
-			
+
 			&:hover {
 				color: $color__accent;
 			} 
