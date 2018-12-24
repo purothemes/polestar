@@ -1703,8 +1703,7 @@ a {
       .site-header .site-branding .site-title a {
         color: #2d2d2d; }
     .site-header .site-branding .custom-logo-link {
-      display: block;
-      line-height: 0; }
+      display: block; }
     .site-header .site-branding img {
       display: inline-block;
       vertical-align: middle; }
