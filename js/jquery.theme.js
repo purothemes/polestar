@@ -392,8 +392,8 @@ jQuery( function( $ ) {
 		// Sticky header logo scaling.
 		if ( $mh.data( 'scale-logo' ) ) {
 			var $img = $mh.find( '.site-branding img' ),
-				imgWidth = $img.width(),
-				imgHeight = $img.height();
+				imgWidth = $img.attr( 'width' ),
+				imgHeight = $img.attr( 'height' ),
 				scaledWidth = imgWidth * polestar.logoScale;
 				scaledHeight = imgHeight * polestar.logoScale;
 
