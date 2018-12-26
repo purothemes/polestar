@@ -54,8 +54,10 @@
 			float: left;
 			padding: 20px 15px 20px 20px;
 			width: 50%;
-			
+
 			img {
+				height: auto;
+				max-width: 100%;
 				vertical-align: middle;
 			}
 
