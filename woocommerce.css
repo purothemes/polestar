@@ -1375,7 +1375,7 @@ input.button.added:after,
 
 .woocommerce-cart .cross-sells {
   float: left;
-  margin-top: 60px;
+  margin: 60px 0 -50px;
   padding-right: 5%;
   width: 50%; }
   @media (max-width: 768px) {
@@ -1386,9 +1386,7 @@ input.button.added:after,
     font-size: 23px;
     margin-top: 0; }
   .woocommerce-cart .cross-sells .product {
-    float: left;
-    margin: 0 3.5% 0 0;
-    text-align: center;
+    margin-bottom: 25px;
     width: 48.25%; }
     @media (min-width: 769px) {
       .woocommerce-cart .cross-sells .product:nth-of-type(2n+2) {

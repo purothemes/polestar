@@ -149,7 +149,7 @@
 
 	.cross-sells {
 		float: left;
-		margin-top: 60px;
+		margin: 60px 0 -50px;
 		padding-right: 5%;
 		width: 50%;
 		
@@ -164,9 +164,7 @@
 		}
 
 		.product {
-			float: left;
-			margin: 0 3.5% 0 0;
-			text-align: center;
+			margin-bottom: 25px;
 			width: 48.25%;
 				
 			@media (min-width: 769px) {
