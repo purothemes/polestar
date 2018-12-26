@@ -108,6 +108,7 @@ jQuery( function( $ ) {
 			}
 
 		};
+
 		smSetup();
 		$( window ).resize( smSetup ).scroll( smSetup );
 
@@ -122,64 +123,7 @@ jQuery( function( $ ) {
 		smShadow();
 		$( window ).scroll( smShadow );
 
-		// Header padding to be used if logo scaling is enabled.
-		var mhPadding = {
-			top: parseInt( $mh.css( 'padding-top' ) ),
-			bottom: parseInt( $mh.css( 'padding-bottom' ) )
-		};
-
-		// Sticky header logo scaling.
-		if ( $mh.data( 'scale-logo' ) ) {
-			var $img = $mh.find( '.site-branding img' ),
-				imgWidth = $img.width(),
-				imgHeight = $img.height();
-				scaledWidth = imgWidth * polestar.logoScale;
-				scaledHeight = imgHeight * polestar.logoScale;
-
-			var smResizeLogo = function() {
-				var $branding = $mh.find( '.site-branding > *' ),
-					top = window.pageYOffset || document.documentElement.scrollTop;
-
-				// Check if the menu is meant to be sticky or not, and if it is apply padding/class.
-				if ( top > 0 ) {
-					$mh.css( {
-						'padding-top': mhPadding.top * polestar.logoScale,
-						'padding-bottom': mhPadding.bottom * polestar.logoScale
-					} ).addClass( 'stuck' );
-
-				} else {
-					$mh.css( {
-						'padding-top': mhPadding.top,
-						'padding-bottom': mhPadding.bottom
-					} ).removeClass( 'stuck' );
-				}
-
-				if ( $img.length ) {
-					// If Scale == polestar.logoScale, logo is completely scaled.
-					if ( $img.height() != scaledHeight || $img.width() != scaledWidth ) {
-						var scale = polestar.logoScale + ( Math.max( 0, 48 - top ) / 48 * ( 1 - polestar.logoScale ) );
-						$('.site-branding img').css( {
-							width: imgWidth * scale,
-							height: imgHeight * scale,
-							'max-width' : 'none'
-						} );
-					}
-				} else {
-					if ( top > 0 ) {
-						$branding.css( 'transform', 'scale(' + polestar.logoScale + ')' );
-					} else {
-						$branding.css( 'transform', 'scale(1)' );
-					}
-				}
-			};
-			smResizeLogo();
-			$( window ).scroll( smResizeLogo ).resize( smResizeLogo );
-		}
 	}
-
-	jQuery( window ).load( function() {
-		polestar.logoScale = parseFloat( polestar.logoScale );
-	} );
 
 	// Header search.
 	var $hs = $( '#header-search' );
@@ -277,7 +221,7 @@ jQuery( function( $ ) {
 		if ( $( 'body' ).hasClass( 'disable-smooth-scroll' ) ) {
 			return;
 		}
-		
+
 		$( this ).click( function( e ) {
 
 			var hash    = this.hash;
@@ -376,7 +320,7 @@ jQuery( function( $ ) {
 			$mobileMenu = $( '<div></div>' )
 				.append( $( '.main-navigation ul' ).first().clone() )
 				.attr( 'id', 'mobile-navigation' )
-				.appendTo( '#masthead' ).hide();	
+				.appendTo( '#masthead' ).hide();
 
 			if ( $( '#header-search form' ).length ) {
 				$mobileMenu.append( $( '#header-search form' ).clone() );
@@ -432,3 +376,66 @@ jQuery( function( $ ) {
 	} );
 
 } );
+
+( function( $ ) {
+	$( window ).load( function() {
+
+		polestar.logoScale = parseFloat( polestar.logoScale );
+
+		// Header padding to be used if logo scaling is enabled.
+		var $mh = $( '#masthead' ),
+			mhPadding = {
+				top: parseInt( $mh.css( 'padding-top' ) ),
+				bottom: parseInt( $mh.css( 'padding-bottom' ) )
+			};
+
+		// Sticky header logo scaling.
+		if ( $mh.data( 'scale-logo' ) ) {
+			var $img = $mh.find( '.site-branding img' ),
+				imgWidth = $img.width(),
+				imgHeight = $img.height();
+				scaledWidth = imgWidth * polestar.logoScale;
+				scaledHeight = imgHeight * polestar.logoScale;
+
+			var smResizeLogo = function() {
+				var $branding = $mh.find( '.site-branding > *' ),
+					top = window.pageYOffset || document.documentElement.scrollTop;
+
+				// Check if the menu is meant to be sticky or not, and if it is apply padding/class.
+				if ( top > 0 ) {
+					$mh.css( {
+						'padding-top': mhPadding.top * polestar.logoScale,
+						'padding-bottom': mhPadding.bottom * polestar.logoScale
+					} ).addClass( 'stuck' );
+
+				} else {
+					$mh.css( {
+						'padding-top': mhPadding.top,
+						'padding-bottom': mhPadding.bottom
+					} ).removeClass( 'stuck' );
+				}
+
+				if ( $img.length ) {
+					// If Scale == polestar.logoScale, logo is completely scaled.
+					if ( $img.height() != scaledHeight || $img.width() != scaledWidth ) {
+						var scale = polestar.logoScale + ( Math.max( 0, 48 - top ) / 48 * ( 1 - polestar.logoScale ) );
+						$('.site-branding img').css( {
+							width: imgWidth * scale,
+							height: imgHeight * scale,
+							'max-width' : 'none'
+						} );
+					}
+				} else {
+					if ( top > 0 ) {
+						$branding.css( 'transform', 'scale(' + polestar.logoScale + ')' );
+					} else {
+						$branding.css( 'transform', 'scale(1)' );
+					}
+				}
+			};
+			smResizeLogo();
+			$( window ).scroll( smResizeLogo ).resize( smResizeLogo );
+		}
+
+	} );
+} )( jQuery );
