@@ -1594,6 +1594,11 @@ input.button.added:after,
   border: none;
   padding: 20px;
   text-align: left; }
+  .woocommerce table.woocommerce-checkout-review-order-table th ul,
+  .woocommerce table.woocommerce-checkout-review-order-table td ul {
+    font-size: 1rem;
+    list-style: none;
+    margin: 0; }
 
 .woocommerce table.woocommerce-checkout-review-order-table .cart_item {
   border: 1px solid #ebebeb;
@@ -1631,7 +1636,7 @@ input.button.added:after,
     .woocommerce #payment .payment_methods li img:only-of-type {
       max-height: 50px;
       position: absolute;
-      right: 0;
+      right: 20px;
       top: 8px; }
     .woocommerce #payment .payment_methods li .payment_box {
       font-size: 14px;
@@ -1640,16 +1645,16 @@ input.button.added:after,
         padding-top: 20px; }
       .woocommerce #payment .payment_methods li .payment_box p {
         margin-bottom: 0; }
-    .woocommerce #payment .payment_methods li.payment_method_stripe img {
-      margin-top: -10px;
-      position: absolute;
-      top: 50%; }
-      .woocommerce #payment .payment_methods li.payment_method_stripe img:nth-of-type(3) {
-        right: 0; }
-      .woocommerce #payment .payment_methods li.payment_method_stripe img:nth-of-type(2) {
-        right: 37px; }
-      .woocommerce #payment .payment_methods li.payment_method_stripe img:nth-of-type(1) {
-        right: 74px; }
+    .woocommerce #payment .payment_methods li.payment_method_stripe .form-row-first,
+    .woocommerce #payment .payment_methods li.payment_method_stripe .form-row-last {
+      margin-bottom: 0; }
+    .woocommerce #payment .payment_methods li.payment_method_stripe .stripe-icon {
+      float: right;
+      margin-left: 5px; }
+    .woocommerce #payment .payment_methods li.payment_method_stripe #wc-stripe-cc-form {
+      margin-top: 13px; }
+    .woocommerce #payment .payment_methods li.payment_method_stripe .clear {
+      display: none; }
 
 .woocommerce #payment .form-row select {
   width: auto; }
