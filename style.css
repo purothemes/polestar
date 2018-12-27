@@ -420,7 +420,7 @@ figure {
   margin: 15px 0; }
 
 table {
-  border: 1px solid #ebebeb;
+  border: 1px solid #e3e3e3;
   margin: 0 0 26px;
   text-align: left;
   width: 100%; }
@@ -431,20 +431,18 @@ table {
     @media (max-width: 768px) {
       table thead th {
         padding: 2%; } }
-  table th {
-    border: 1px solid #ebebeb;
-    color: #2d2d2d;
-    font-weight: 600;
-    padding: 8px 16px;
-    text-transform: uppercase; }
-    @media (max-width: 768px) {
-      table th {
-        padding: 2%; } }
+  table th,
   table td {
+    border: 1px solid #e3e3e3;
     padding: 8px 16px; }
     @media (max-width: 768px) {
+      table th,
       table td {
         padding: 2%; } }
+  table th {
+    color: #2d2d2d;
+    font-weight: 600;
+    text-transform: uppercase; }
 
 /*--------------------------------------------------------------
 # - Forms
