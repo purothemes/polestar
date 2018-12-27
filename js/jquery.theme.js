@@ -156,36 +156,37 @@ jQuery( function( $ ) {
 	} );
 
 	// Main menu.
-	// Remove the no-js body class.
-	$( 'body.no-js' ).removeClass( 'no-js' );
-	if ( $( 'body' ).hasClass( 'css3-animations' ) ) {
+	$( window ).load( function() {
+		$( 'body.no-js' ).removeClass( 'no-js' );
+		if ( $( 'body' ).hasClass( 'css3-animations' ) ) {
 
-		var polestarResetMenu = function() {
-			$( '.main-navigation ul ul' ).each( function() {
-				var $$ = $( this );
-				var width = Math.max.apply( Math, $$.find( '> li:not(.mini_cart_item) > a' ).map( function() {
-					return $( this ).width();
-				} ).get() );
-				$$.find( '> li > a' ).width( width );
+			var polestarResetMenu = function() {
+				$( '.main-navigation ul ul' ).each( function() {
+					var $$ = $( this );
+					var width = Math.max.apply( Math, $$.find( '> li:not(.mini_cart_item) > a' ).map( function() {
+						return $( this ).width();
+					} ).get() );
+					$$.find( '> li > a' ).width( width );
+				} );
+			};
+			polestarResetMenu();
+			$( window ).resize( polestarResetMenu );
+
+			// Add keyboard access to the menu.
+			$( '.menu-item' ).children( 'a' ).focus( function() {
+				$( this ).parents( 'ul, li' ).addClass( 'focus' );
 			} );
-		};
-		polestarResetMenu();
-		$( window ).resize( polestarResetMenu );
 
-		// Add keyboard access to the menu.
-		$( '.menu-item' ).children( 'a' ).focus( function() {
-			$( this ).parents( 'ul, li' ).addClass( 'focus' );
-		} );
-
-		// Click event fires after focus event.
-		$( '.menu-item' ).children( 'a' ).click( function() {
-			$( this ).parents( 'ul, li' ).removeClass( 'focus' );
-		} );
-		
-		$( '.menu-item' ).children( 'a' ).focusout( function() {
-			$( this ).parents( 'ul, li' ).removeClass( 'focus' );
-		} );
-	}
+			// Click event fires after focus event.
+			$( '.menu-item' ).children( 'a' ).click( function() {
+				$( this ).parents( 'ul, li' ).removeClass( 'focus' );
+			} );
+			
+			$( '.menu-item' ).children( 'a' ).focusout( function() {
+				$( this ).parents( 'ul, li' ).removeClass( 'focus' );
+			} );
+		}
+	} );
 
 	// Main menu current menu item indication.
 	jQuery( document ).ready( function( $ ) {
