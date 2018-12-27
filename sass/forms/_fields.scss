@@ -14,7 +14,7 @@ input[type="datetime"],
 input[type="datetime-local"],
 input[type="color"],
 textarea {
-	border: 1px solid $color__background-hr-dark;
+	border: 1px solid darken($color__background-hr-dark, 5%);
 	border-radius: 2px;
 	box-sizing: border-box;
 	font-weight: normal;
@@ -26,7 +26,7 @@ textarea {
 	-webkit-appearance: none;
 
 	&:focus {
-		border-color: darken($color__background-hr-dark, 7%);
+		border-color: darken($color__background-hr-dark, 10%);
 	}
 }
 
