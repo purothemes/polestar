@@ -2290,20 +2290,30 @@ a {
 .comment-list {
   margin: 0 0 30px;
   padding: 0; }
+  .comment-list ol.children {
+    margin: 0; }
+  @media (min-width: 1025px) {
+    .comment-list li .comment {
+      margin-left: 80px; } }
   .comment-list .comment,
   .comment-list .pingback {
     color: #626262;
     display: block; }
     .comment-list .comment .comment-box,
     .comment-list .pingback .comment-box {
-      border-bottom: 1px solid #f6f6f6;
+      border-bottom: 1px solid #f1f1f1;
       padding: 25px 0; }
-    .comment-list .comment .comment-container,
-    .comment-list .pingback .comment-container {
-      margin-left: 80px; }
+    @media (min-width: 481px) {
+      .comment-list .comment .comment-container,
+      .comment-list .pingback .comment-container {
+        margin-left: 80px; } }
     .comment-list .comment .avatar-container,
     .comment-list .pingback .avatar-container {
       float: left; }
+      @media (max-width: 480px) {
+        .comment-list .comment .avatar-container,
+        .comment-list .pingback .avatar-container {
+          display: none; } }
       .comment-list .comment .avatar-container img,
       .comment-list .pingback .avatar-container img {
         display: block;
@@ -2357,10 +2367,6 @@ a {
       .comment-list .comment .comment-reply-link:hover,
       .comment-list .pingback .comment-reply-link:hover {
         color: #4d8ffb; }
-    @media (min-width: 481px) {
-      .comment-list .comment .children,
-      .comment-list .pingback .children {
-        margin-left: 5px; } }
   .comment-list .pingback {
     list-style: none; }
     .comment-list .pingback .comment-container {

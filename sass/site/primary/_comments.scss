@@ -1,6 +1,17 @@
 .comment-list {
 	margin: 0 0 30px;
 	padding: 0;
+	
+	ol.children {
+		margin: 0;
+	}
+
+	@media (min-width: 1025px) {
+
+		li .comment {
+			margin-left: 80px;
+		}
+	}
 
 	.comment,
 	.pingback {
@@ -12,12 +23,19 @@
 			padding: 25px 0;
 		}
 
-		.comment-container {
-			margin-left: 80px;
+		@media (min-width: 481px) {
+
+			.comment-container {
+				margin-left: 80px;
+			}
 		}
 
 		.avatar-container {
 			float: left;
+			
+			@media (max-width: 480px) {
+				display: none;
+			}
 
 			img {
 				display: block;
@@ -84,13 +102,6 @@
 
 			&:hover {
 				color: $color__accent;
-			}
-		}
-
-		@media (min-width: 481px) {
-
-			.children {
-				margin-left: 5px;
 			}
 		}
 	}
