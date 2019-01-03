@@ -21,8 +21,7 @@ hr {
 
 @import "lists";
 
-.site-main img,
-.site-footer img {
+img:not(.size-full):not(.custom-logo) {
 	height: auto; // Make sure images are scaled correctly.
 	max-width: 100%; // Adhere to container width.
 }
