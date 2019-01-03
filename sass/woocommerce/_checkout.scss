@@ -44,7 +44,7 @@
 	table.woocommerce-checkout-review-order-table {
 		
 		thead {
-			border: 1px solid $color__background-hr-dark;		
+			border: 1px solid $color__background-hr;		
 			
 			th {
 				background: $color__background-hr;
@@ -67,7 +67,7 @@
 		}
 
 		.cart_item {
-			border: 1px solid $color__background-hr-dark;
+			border: 1px solid $color__background-hr;
 			font-size: 14px;
 			
 			@media (max-width: 768px) {
@@ -85,7 +85,7 @@
 		tfoot {
 
 			tr {
-				border-bottom: 1px solid $color__background-hr-dark; 
+				border-bottom: 1px solid $color__background-hr; 
 			}
 			
 			th,
@@ -106,7 +106,7 @@
 			margin: 0;
 			
 			li {
-				border-bottom: 1px solid $color__background-hr-dark;
+				border-bottom: 1px solid $color__background-hr;
 				padding: 20px;
 				position: relative;
 				text-align: left;
@@ -175,7 +175,7 @@
 		}
 
 		.woocommerce-terms-and-conditions-wrapper {
-			border-bottom: 1px solid $color__background-hr-dark;
+			border-bottom: 1px solid $color__background-hr;
 			padding: 20px;
 			
 			p {

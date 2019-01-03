@@ -17,7 +17,7 @@
 		.sub-menu,
 		.children {
 			background: #fff;
-			border: 1px solid $color__background-hr-dark;
+			border: 1px solid $color__background-hr;
 			box-shadow: 0 1px 1px rgba(0, 0, 0, .075);
 			opacity: 0;
 			position: absolute;
@@ -589,7 +589,7 @@ $sel: '';
 	
 	.page-numbers {
 		@extend .button;
-		background: $color__background-hr-dark;
+		background: $color__background-hr;
 		color: $color__text-medium;
 		display: inline-block;
 		margin-right: 3px;
@@ -651,7 +651,7 @@ $sel: '';
 		}
 
 		.sub-title {
-			border-bottom: 2px solid $color__background-hr-dark;
+			border-bottom: 2px solid $color__background-hr;
 			color: $color__text-light;
 			display: inline-block;
 			font-size: 14px;

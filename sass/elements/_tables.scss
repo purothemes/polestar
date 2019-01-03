@@ -1,5 +1,5 @@
 table {
-	border: 1px solid $color__background-hr-dark;
+	border: 1px solid $color__background-hr;
 	margin: 0 0 26px;
 	text-align: left;
 	width: 100%;
@@ -18,7 +18,7 @@ table {
 
 	th, 
 	td {
-		border: 1px solid $color__background-hr-dark; 
+		border: 1px solid $color__background-hr; 
 		padding: 8px 16px;
 		
 		@media (max-width: 768px) {

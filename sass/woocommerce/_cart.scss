@@ -12,20 +12,20 @@
 		border: none;
 		margin: 0;
 		text-align: left;
-		
+
 		thead {
 			background: $color__background-hr; 
-			border: 1px solid $color__background-hr-dark;
+			border: 1px solid $color__background-hr;
 
 			@media (max-width: 768px) {
 				display: none;
 			}
-			
+
 			th {
 				font-size: 14px;
 			}
 		}
-		
+
 		th,
 		td {
 			border: none;
@@ -34,19 +34,19 @@
 			@media (max-width: 768px) {
 				display: block;
 				text-align: right;
-			}		
+			}
 		}
 
 		.cart_item {
-			border: 1px solid $color__background-hr-dark;
-			
+			border: 1px solid $color__background-hr;
+
 			@media (max-width: 768px) {
 
 				td:before {
 					content: attr(data-title) ": ";
 					font-weight: 700;
 					float: left;
-				}	
+				}
 
 				td:first-of-type {
 					padding-top: 30px;
@@ -56,13 +56,13 @@
 					padding-bottom: 30px; 
 				}
 			}
-			
+
 			a {
 				color: $color__text-medium;
 				display: block;
 				font-weight: 600;
 				line-height: 1; 
-				
+
 				&:hover {
 					color: $color__text-light;
 				}
@@ -71,7 +71,7 @@
 			.product-remove {
 				font-size: 20px; 
 				text-align: center;
-				
+
 				&:before {
 					content: none; 
 				}
@@ -82,11 +82,11 @@
 			}
 
 			.product-thumbnail {
-				
+
 				img {
 					width: 80px;
 				}
-				
+
 				&:before {
 					content: none; 
 				}
@@ -108,25 +108,25 @@
 		td.actions {
 			padding: 30px 0 0; 
 			text-align: right;
-			
+
 			@media (max-width: 768px) {
 				display: block;
-				
+
 				* {
 					width: 100%; 
 				}
 			}
-			
+
 			.coupon {
 				float: left;
-				
+
 				@media (max-width: 768px) {
 					float: none;
 					margin-bottom: 5px;
 				}
 
 				label {
-					
+
 					@media (max-width: 768px) {
 						display: none;
 					}
@@ -134,7 +134,7 @@
 
 				input {
 					margin-right: 5px; 
-					
+
 					@media (max-width: 768px) {
 						margin-bottom: 10px; 
 					}
@@ -152,12 +152,12 @@
 		margin: 60px 0 -50px;
 		padding-right: 5%;
 		width: 50%;
-		
+
 		@media (max-width: 768px) {
 			padding-right: 0;
 			width: 100%;
-		}		
-		
+		}
+
 		h2 {
 			font-size: 23px;
 			margin-top: 0;
@@ -166,18 +166,18 @@
 		.product {
 			margin-bottom: 25px;
 			width: 48.25%;
-				
+
 			@media (min-width: 769px) {
-			
+
 				&:nth-of-type(2n+2) {
 					margin-right: 0;
-				}	
+				}
 
 				&:nth-child(2n+3) {
 					clear: left;
 				}
 			}
-			
+
 			@media (max-width: 768px) {
 				width: 48.25%;
 
@@ -185,7 +185,7 @@
 					margin-right: 0;
 				}
 			}
-			
+
 			@media (max-width: 480px) {
 				width: 100%;
 			}
@@ -208,31 +208,30 @@
 
 			@media (max-width: 768px) {
 				font-size: 23px;
-			}		
-			
+			}
+
 			@media (max-width: 480px) {
 				font-size: 20px;
 			}
-			
 		}
-		
+
 		table {
 			border: none;
 			margin-bottom: 30px;
-			
+
 			tr {
-				border-bottom: 1px solid $color__background-hr-dark;
+				border-bottom: 1px solid $color__background-hr;
 			}
-			
+
 			th,
 			td {
 				border: none;
 				padding: 8px 0;
 			}
-			
+
 			td {
 				text-align: right;
-				
+
 				ul {
 					list-style: none;
 					margin: 0 0 8px;
@@ -244,7 +243,7 @@
 							margin-bottom: 0;
 						}
 					}
-					
+
 					input {	
 						margin-right: 6px;
 					}
@@ -267,7 +266,7 @@
 		.checkout-button {
 			float: right;
 			font-size: 16px;
-			
+
 			@media (max-width: 768px) {
 				display: block;
 				float: none;
@@ -302,7 +301,7 @@
 			height: 18.75px;
 			vertical-align: text-bottom;
 			width: 20px;
-			
+
 			@at-root .overlap-light .site-header:not(.stuck) .shopping-cart-link svg {
 				fill: #fff; 
 			}
@@ -331,7 +330,7 @@
 
 			svg {
 				fill: $color__text-medium;
-				
+
 				.overlap-light .site-header:not(.stuck) & {
 					fill: rgba(255, 255, 255, .8); 
 				}
@@ -340,7 +339,7 @@
 					fill: rgba(45, 45, 45, .8); 
 				}
 			}
-			
+
 			.shopping-cart-count {
 				background: rgba(77, 143, 251, .8);
 			}
@@ -353,7 +352,7 @@
 
 	.shopping-cart-dropdown {
 		background: #fff; 
-		border: 1px solid $color__background-hr-dark;
+		border: 1px solid $color__background-hr;
 		box-shadow: 0 1px 1px rgba(0, 0, 0, .075);
 		opacity: 0;
 		position: absolute;
@@ -366,16 +365,16 @@
 		visibility: hidden;
 		width: 303px;
 		z-index: 99999;
-		
+
 		* {
 			font-family: $font__main;
 		}
-		
+
 		.widget {
 			margin: 25px;
 			max-height: 70vh;
 			overflow-y: auto;
-			
+
 			li {
 				overflow: initial;
 			}
@@ -399,24 +398,24 @@
 		font-size: 14px;
 		font-weight: 600;
 		margin-left: 5px;
-	}	
+	}
 
 	.shopping-cart-link {
 		margin-bottom: 15px;
-		
+
 		svg {
 			margin: -3px 0 0;
 			padding: 0;
 			vertical-align: middle;
 		}
-		
+
 		.shopping-cart-count {
 			top: 2px;
 			right: -25px;
 		}
 
 		&:hover {
-			
+
 			.shopping-cart-text {
 				color: $color__text-medium;
 			}

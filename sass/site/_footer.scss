@@ -3,7 +3,7 @@
 	margin-top: 75px;
 
 	&.footer-active-sidebar {
-		border-top: 1px solid $color__background-hr-dark;
+		border-top: 1px solid $color__background-hr;
 	}
 
 	.no-footer-margin & {
@@ -57,7 +57,7 @@
 	}
 
 	.bottom-bar {
-		border-top: 1px solid $color__background-hr-dark;
+		border-top: 1px solid $color__background-hr;
 		overflow: auto;
 		padding: 25px 0;
 

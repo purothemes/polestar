@@ -302,7 +302,7 @@ h6 {
 .site-footer .widget .widget-title, .archive:not(.woocommerce) .page-title, .yarpp-related .related-posts,
 .related-posts-section .related-posts, .comments-title,
 .comment-reply-title {
-  border-bottom: 2px solid #e3e3e3;
+  border-bottom: 2px solid #e6e6e6;
   display: inline-block;
   margin: 0 0 20px;
   padding-bottom: 3px;
@@ -382,7 +382,7 @@ body {
   background: #fff; }
 
 hr {
-  background-color: #f1f1f1;
+  background-color: #e6e6e6;
   border: 0;
   height: 1px;
   margin-bottom: 26px; }
@@ -522,7 +522,7 @@ input[type="datetime"],
 input[type="datetime-local"],
 input[type="color"],
 textarea {
-  border: 1px solid #d6d6d6;
+  border: 1px solid #d9d9d9;
   border-radius: 2px;
   box-sizing: border-box;
   font-weight: normal;
@@ -548,13 +548,13 @@ textarea {
   input[type="datetime-local"]:focus,
   input[type="color"]:focus,
   textarea:focus {
-    border-color: #cacaca; }
+    border-color: #cdcdcd; }
 
 input[type="checkbox"] {
   margin-right: 5px; }
 
 select {
-  border: 1px solid #e3e3e3;
+  border: 1px solid #e6e6e6;
   max-width: 100%; }
 
 textarea {
@@ -606,7 +606,7 @@ a {
     .main-navigation ul .sub-menu,
     .main-navigation ul .children {
       background: #fff;
-      border: 1px solid #e3e3e3;
+      border: 1px solid #e6e6e6;
       box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075);
       opacity: 0;
       position: absolute;
@@ -634,7 +634,7 @@ a {
           left: 100%; }
         .main-navigation ul .sub-menu li a,
         .main-navigation ul .children li a {
-          border-bottom: 1px solid #f1f1f1;
+          border-bottom: 1px solid #e6e6e6;
           font-size: 13px;
           outline: none;
           margin: 0 25px;
@@ -880,7 +880,7 @@ a {
 
 #mobile-navigation {
   background: #fff;
-  border-bottom: 1px solid #f1f1f1;
+  border-bottom: 1px solid #e6e6e6;
   left: 0;
   overflow-x: hidden;
   overflow-y: scroll;
@@ -903,7 +903,7 @@ a {
       position: relative;
       width: 100%; }
       #mobile-navigation ul li a {
-        border-bottom: 1px solid #f1f1f1;
+        border-bottom: 1px solid #e6e6e6;
         color: #2d2d2d;
         display: block;
         font-weight: 600;
@@ -1000,7 +1000,7 @@ a {
 .pagination {
   text-align: center; }
   .pagination .page-numbers {
-    background: #e3e3e3;
+    background: #e6e6e6;
     color: #626262;
     display: inline-block;
     margin-right: 3px;
@@ -1041,7 +1041,7 @@ a {
     .site-content .post-navigation a:hover {
       color: #4d8ffb; }
     .site-content .post-navigation a .sub-title {
-      border-bottom: 2px solid #e3e3e3;
+      border-bottom: 2px solid #e6e6e6;
       color: #828282;
       display: inline-block;
       font-size: 14px;
@@ -1516,7 +1516,7 @@ a {
     border: 0;
     padding: 0; }
   .widget #wp-calendar thead {
-    border-bottom: 2px solid #f1f1f1; }
+    border-bottom: 2px solid #e6e6e6; }
     .widget #wp-calendar thead tr {
       background: none; }
     .widget #wp-calendar thead th {
@@ -1637,7 +1637,7 @@ a {
     padding-left: 0; }
   @media (max-width: 768px) {
     .widget-area {
-      border-top: 1px solid #e3e3e3;
+      border-top: 1px solid #e6e6e6;
       margin-top: 50px;
       padding: 50px 0 0;
       width: 100%; } }
@@ -1647,7 +1647,7 @@ a {
 --------------------------------------------------------------*/
 .site-header {
   background: #fff;
-  border-bottom: 1px solid #e3e3e3;
+  border-bottom: 1px solid #e6e6e6;
   margin-bottom: 60px;
   padding: 25px 0;
   position: relative;
@@ -1739,7 +1739,7 @@ a {
       right: 59px;
       top: 50%; }
     .site-header #header-search input[type="search"] {
-      background: rgba(0, 0, 0, 0.035);
+      background: rgba(0, 0, 0, 0.055);
       border: 0;
       box-sizing: border-box;
       height: 48px;
@@ -1747,7 +1747,7 @@ a {
       right: 15px;
       width: 100%; }
       .site-header #header-search input[type="search"]:-webkit-autofill {
-        -webkit-box-shadow: 0 0 0 50px #f1f1f1 inset !important; }
+        -webkit-box-shadow: 0 0 0 50px #e6e6e6 inset !important; }
     .site-header #header-search button[type="submit"] {
       display: none; }
     .site-header #header-search #close-search {
@@ -1871,7 +1871,7 @@ a {
 ## - Posts and pages
 --------------------------------------------------------------*/
 .hentry {
-  border-bottom: 1px solid #e3e3e3;
+  border-bottom: 1px solid #e6e6e6;
   margin: 0 0 50px;
   padding: 0 0 25px; }
   .hentry:last-of-type {
@@ -2045,7 +2045,7 @@ a {
     padding-right: 17px;
     padding-left: 17px; }
   .page-links a span {
-    background: #e3e3e3;
+    background: #e6e6e6;
     display: inline-block;
     color: #626262; }
     .page-links a span:hover {
@@ -2056,7 +2056,7 @@ a {
   margin: 0 0 50px; }
 
 .tags-links a, #page .widget_tag_cloud a {
-  background: #e3e3e3;
+  background: #e6e6e6;
   border-radius: 2px;
   color: #626262;
   display: inline-block;
@@ -2098,7 +2098,7 @@ a {
   font-size: 26px; }
 
 .search-results article {
-  border-bottom: 1px solid #e3e3e3;
+  border-bottom: 1px solid #e6e6e6;
   margin: 0 0 50px;
   padding: 0 0 30px; }
   .search-results article:last-of-type {
@@ -2164,7 +2164,7 @@ a {
 --------------------------------------------------------------*/
 .author-box {
   display: table;
-  border: 2px solid #f1f1f1;
+  border: 2px solid #e6e6e6;
   border-right: 0;
   border-left: 0;
   margin: 0;
@@ -2300,7 +2300,7 @@ a {
     display: block; }
     .comment-list .comment .comment-box,
     .comment-list .pingback .comment-box {
-      border-bottom: 1px solid #f1f1f1;
+      border-bottom: 1px solid #e6e6e6;
       padding: 25px 0; }
     @media (min-width: 481px) {
       .comment-list .comment .comment-container,
@@ -2482,7 +2482,7 @@ a {
   background: #fff;
   margin-top: 75px; }
   .site-footer.footer-active-sidebar {
-    border-top: 1px solid #e3e3e3; }
+    border-top: 1px solid #e6e6e6; }
   .no-footer-margin .site-footer {
     margin-top: 0; }
   .site-footer .widgets {
@@ -2536,7 +2536,7 @@ a {
         text-align: center;
         width: 100%; } }
   .site-footer .bottom-bar {
-    border-top: 1px solid #e3e3e3;
+    border-top: 1px solid #e6e6e6;
     overflow: auto;
     padding: 25px 0; }
     .site-footer .bottom-bar div:only-of-type {
