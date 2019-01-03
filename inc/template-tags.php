@@ -26,7 +26,7 @@ function polestar_author_box() { ?>
 					<?php esc_html_e( 'View posts by ', 'polestar' );
 					echo get_the_author(); ?>
 				</a>
-			</span>	
+			</span>
 			<?php if ( get_the_author_meta( 'description' ) ) : ?>
 				<div><?php echo wp_kses_post( get_the_author_meta( 'description' ) ); ?></div>
 			<?php endif; ?>
@@ -81,7 +81,7 @@ if ( ! function_exists( 'polestar_comment' ) ) :
  * The callback function for wp_list_comments in comments.php.
  *
  * @link https://codex.wordpress.org/Function_Reference/wp_list_comments.
- */		
+ */
 function polestar_comment( $comment, $args, $depth ) {
 	?>
 	<li <?php comment_class() ?> id="comment-<?php comment_ID() ?>">
@@ -125,7 +125,7 @@ function polestar_entry_footer() {
 
 	if ( is_single() && has_tag() && get_theme_mod( 'post_tags', true ) ) {
 		echo '<footer class="entry-footer"><span class="tags-links">' . get_the_tag_list() . '</span></footer>';
-	}	
+	}
 }
 endif;
 
@@ -189,7 +189,7 @@ if ( ! function_exists( 'polestar_display_icon' ) ) :
  * Display theme icons.
  */
 function polestar_display_icon( $type ) {
-	switch( $type ) {
+	switch ( $type ) {
 		case 'add': ?>
 			<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24" height="24" viewBox="0 0 24 24">
 				<path d="M18.984 12.984h-6v6h-1.969v-6h-6v-1.969h6v-6h1.969v6h6v1.969z"></path>
@@ -459,7 +459,7 @@ function polestar_post_meta() {
 	if ( get_theme_mod( 'post_author', true ) ) {
 		echo '<span class="byline"><span class="author vcard"><a class="url fn n" href="' . esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ) . '" rel="author">' . esc_html( get_the_author() ) . '</a></span></span>';
 	}
-	
+
 	if ( comments_open() && get_theme_mod( 'post_comment_count', true ) ) { 
 		echo '<span class="comments-link">';
 		comments_popup_link( esc_html__( 'Leave a comment', 'polestar' ), esc_html__( 'One Comment', 'polestar' ), esc_html__( '% Comments', 'polestar' ) );
