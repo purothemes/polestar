@@ -368,7 +368,7 @@ function polestar_display_logo() {
 	$logo = get_theme_mod( 'logo' );
 
 	if ( $logo ) {
-		$attrs = apply_filters( 'polestar_logo_attributes', array() );
+		$attrs = apply_filters( 'polestar_logo_attributes', array( 'class' => 'custom-logo' ) );
 
 		?><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
 			<span class="screen-reader-text"><?php esc_html_e( 'Home', 'polestar' ); ?></span><?php
