@@ -26,9 +26,6 @@ function polestar_woocommerce_change_hooks() {
 	remove_action( 'woocommerce_after_single_product_summary', 'woocommerce_upsell_display', 15 );
 	add_action( 'woocommerce_after_single_product_summary', 'polestar_woocommerce_output_upsells', 15 );
 
-	// Remove the cross-sell display.
-	remove_action( 'woocommerce_cart_collaterals', 'woocommerce_cross_sell_display' );
-
 	// Add Quick View hooks.
 	add_action( 'polestar_woocommerce_quick_view_images', 'polestar_woocommerce_quick_view_image', 5 );
 	add_action( 'polestar_woocommerce_quick_view_title', 'woocommerce_template_single_title', 5 );

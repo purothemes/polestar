@@ -44,7 +44,7 @@
 	table.woocommerce-checkout-review-order-table {
 		
 		thead {
-			border: 1px solid $color__background-hr-dark;		
+			border: 1px solid $color__background-hr;		
 			
 			th {
 				background: $color__background-hr;
@@ -58,10 +58,16 @@
 			border: none;
 			padding: 20px;
 			text-align: left;
+			
+			ul {
+				font-size: 1rem;
+				list-style: none;
+				margin: 0;
+			}
 		}
 
 		.cart_item {
-			border: 1px solid $color__background-hr-dark;
+			border: 1px solid $color__background-hr;
 			font-size: 14px;
 			
 			@media (max-width: 768px) {
@@ -79,7 +85,7 @@
 		tfoot {
 
 			tr {
-				border-bottom: 1px solid $color__background-hr-dark; 
+				border-bottom: 1px solid $color__background-hr; 
 			}
 			
 			th,
@@ -100,7 +106,7 @@
 			margin: 0;
 			
 			li {
-				border-bottom: 1px solid $color__background-hr-dark;
+				border-bottom: 1px solid $color__background-hr;
 				padding: 20px;
 				position: relative;
 				text-align: left;
@@ -121,7 +127,7 @@
 				img:only-of-type {
 					max-height: 50px;
 				    position: absolute;
-				    right: 0;
+				    right: 20px;
 				    top: 8px; 
 				}
 
@@ -134,29 +140,29 @@
 					}
 
 					p {
-						margin-bottom: 0;;
+						margin-bottom: 0;
 					}
 				}
 
 				&.payment_method_stripe {
-					
-					img {
-						margin-top: -10px; 
-						position: absolute;
-						top: 50%;
-						
-						&:nth-of-type(3) {
-							right: 0;
-						}
 
-						&:nth-of-type(2) {
-							right: 37px;
-						}	
+					.form-row-first,
+					.form-row-last {
+						margin-bottom: 0;
+					}
 
-						&:nth-of-type(1) {
-							right: 74px;
-						}											
-					}				
+					.stripe-icon {
+						float: right;
+						margin-left: 5px;
+					}
+
+					#wc-stripe-cc-form {
+						margin-top: 13px;
+					}
+
+					.clear {
+						display: none;
+					}
 				}
 			}
 		}
@@ -169,7 +175,7 @@
 		}
 
 		.woocommerce-terms-and-conditions-wrapper {
-			border-bottom: 1px solid $color__background-hr-dark;
+			border-bottom: 1px solid $color__background-hr;
 			padding: 20px;
 			
 			p {

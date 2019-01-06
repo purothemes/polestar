@@ -22,11 +22,9 @@ function polestar_woocommerce_setup() {
 
 	if ( get_theme_mod( 'product_gallery' ) == 'slider_lightbox' )  {
 		add_theme_support( 'wc-product-gallery-lightbox' );
-	}
-	elseif ( get_theme_mod( 'product_gallery' ) == 'slider_zoom' ) {
+	} elseif ( get_theme_mod( 'product_gallery' ) == 'slider_zoom' ) {
 		add_theme_support( 'wc-product-gallery-zoom' );
-	}
-	elseif ( get_theme_mod( 'product_gallery' ) == 'slider_lightbox_zoom' ) {
+	} elseif ( get_theme_mod( 'product_gallery' ) == 'slider_lightbox_zoom' ) {
 		add_theme_support( 'wc-product-gallery-lightbox' );
 		add_theme_support( 'wc-product-gallery-zoom' );
 	}

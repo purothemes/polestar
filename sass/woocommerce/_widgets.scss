@@ -2,7 +2,7 @@
 ## Active Product Filters Widget
 --------------------------------------------------------------*/
 .widget.widget_layered_nav_filters {
-	
+
 	.chosen a {
 		padding-left: 20px;
 		position: relative;
@@ -35,7 +35,7 @@
 	padding: 0;
 	
 	li {
-		border-bottom: 1px solid $color__background-hr-dark;
+		border-bottom: 1px solid $color__background-hr;
 		line-height: 2;
 		list-style: none;
 		margin: 0;
@@ -101,7 +101,7 @@
 	}
 
 	.total {
-		border: 1px solid $color__background-hr-dark;
+		border: 1px solid $color__background-hr;
 		border-right: 0;
 		border-left: 0;
 		margin-bottom: 20px; 
@@ -126,7 +126,7 @@
 			}
 
 			&:first-of-type {
-				background: $color__background-hr-dark;
+				background: $color__background-hr;
 				color: $color__text-medium;
 				
 				&:hover {
@@ -174,7 +174,7 @@
 .widget_price_filter {
 
 	.ui-slider {
-		background: $color__background-hr-dark;
+		background: $color__background-hr;
 		height: 3px;
 		margin: 21px 3.5px 26px;
 		position: relative;
@@ -213,7 +213,7 @@
 		}
 
 		.button {
-			background: $color__background-hr-dark;
+			background: $color__background-hr;
 			color: $color__text-medium;
 			float: right;
 			
@@ -245,7 +245,7 @@
 	margin-right: -6px;
 
 	.tagcloud a {
-		background: $color__background-hr-dark;
+		background: $color__background-hr;
 		border-radius: 2px;
 		color: $color__text-medium;
 		display: inline-block;

@@ -1,6 +1,6 @@
 .site-header {
 	background: #fff;
-	border-bottom: 1px solid $color__background-hr-dark;
+	border-bottom: 1px solid $color__background-hr;
 	margin-bottom: 60px;
 	padding: 25px 0;
 	position: relative;
@@ -12,7 +12,7 @@
 		border: none;
 		position: absolute;
 	}	
-	
+
 	.no-header-margin & {
 		margin-bottom: 0;
 	}
@@ -32,38 +32,38 @@
 			@media (max-width: 782px) {
 				top: 46px;
 			}
-		}		
+		}
 	}
-	
+
 	@media (max-width: 600px) {
 
 		@at-root .admin-bar .site-header.sticky.stuck {
 			top: 0;
-		}						
-	}			 
+		}
+	}
 
 	// A class added after scroll.
 	&.stuck {
-    	box-shadow: 0 1px 1px rgba(0, 0, 0, .075);	
-    }
+		box-shadow: 0 1px 1px rgba(0, 0, 0, .075);
+	}
 
 	.site-header-inner {
 		-ms-flex-align: center;
 		-webkit-align-items: center;
 		-webkit-box-align: center;
-	    align-items: center;
+		align-items: center;
 		display: -ms-flexbox;
 		display: -webkit-flex;
 		display: flex;
 		-webkit-justify-content: space-between;
 		justify-content: space-between;
 		width: 100%;
-		
+
 		@at-root .centered#{&} {
 			flex-direction: column;
 		}
 	}
-	
+
 	.site-branding {
 		padding-right: 20px;
 
@@ -73,34 +73,33 @@
 			font-size: 29px;
 			line-height: normal;
 			margin: 0;
-			
+
 			a {
-				color: $color__text-dark;					
-			}			
+				color: $color__text-dark;
+			}
 		}
 
 		.custom-logo-link {
 			display: block;
-			line-height: 0;
 		}
 
 		img {
 			display: inline-block;
 			vertical-align: middle;
-			
+
 			@at-root .tagline#{&} {
 				padding-bottom: 5px;
-			}	
+			}
 		}
 
 		.site-description {
-			color: $color__text-medium; 
+			color: $color__text-medium;
 			font-family: $font__headings;
-			font-weight: normal; 
-			font-size: 13px; 
+			font-weight: normal;
+			font-size: 13px;
 			line-height: normal;
-			margin: 0; 
-		}	
+			margin: 0;
+		}
 
 		> * {
 			transform-origin: left center;
@@ -108,7 +107,7 @@
 			@at-root .centered#{&} {
 				transform-origin: center center;
 			}
-		}		
+		}
 	}
 
 	#header-search {
@@ -120,14 +119,14 @@
 		top: 0;
 		width: 100%;
 		z-index: 99999;
-		
+
 		body[class*="overlap-"] & {
 			background: transparent;
-		}			
-		
+		}
+
 		.polestar-container {
 			height: 100%; 
-		}		
+		}
 
 		form {
 			background: #fff;
@@ -139,17 +138,17 @@
 		}
 
 		input[type="search"] {
-			background: rgba(0, 0, 0, .035);
+			background: rgba(0, 0, 0, .055);
 			border: 0;
 			box-sizing: border-box;
-			height: 48px; 
+			height: 48px;
 			padding: 0 15px;
 			right: 15px;
 			width: 100%;
-			
+
 			&:-webkit-autofill {
-		    	-webkit-box-shadow: 0 0 0 50px #f6f6f6 inset !important;
-			}				
+				-webkit-box-shadow: 0 0 0 50px $color__background-hr inset !important;
+			}
 		}
 
 		button[type="submit"] {
@@ -162,8 +161,8 @@
 			position: absolute;
 			right: 20px;
 			top: 50%;
-  			transform: scale(0, 0);
-  			transition: .35s;  			
+			transform: scale(0, 0);
+			transition: .35s;
 
 			svg {
 				height: 24px;
@@ -171,25 +170,25 @@
 
 				body[class*="overlap-"] & {
 					background: #fff;
-					border-radius: 50%;				
-				}						
+					border-radius: 50%;
+				}
 
 				path {
 					transition: .3s;
-					fill: $color__text-dark;						
+					fill: $color__text-dark;
 				}
 
 				&:hover {
 
 					path {
-						fill: $color__text-medium;							
+						fill: $color__text-medium;
 					}
-				}					
+				}
 			}
 
 			&.animate-in {
 				transform: scale(1, 1);
-			}		
+			}
 		}
 	}
 
@@ -223,7 +222,7 @@
 			.main-navigation {
 				text-align: center;
 			}
-		}		
+		}
 	}
 
 	.widgets {
@@ -237,10 +236,10 @@
 		-webkit-justify-content: space-between;
 		justify-content: space-between;
 		width: 100%;
-		
+
 		@media (max-width: 768px) {
 			flex-direction: column;
-		}		
+		}
 
 		@for $i from 1 through 10 {
 			$margin: ($i - 1) * 2.75;
@@ -261,7 +260,7 @@
 				margin-bottom: 5%;
 				text-align: center;
 				width: 100% !important;
-				
+
 				&:last-of-type {
 					margin-bottom: 0;
 				}
@@ -270,15 +269,15 @@
 			.widget-title {
 				font-size: 16px;
 				margin: 0 0 5px;
-				
+
 				// Set the font size of elements below the widget title to 14px.
 				~ * {
 					font-size: 14px;
-				}						
+				}
 			}
 
 			.textwidget {
-				font-size: 14px; 
+				font-size: 14px;
 			}
 
 			p:only-of-type,
@@ -291,10 +290,10 @@
 			}
 
 			input[type="search"] {
-				font-size: 14px; 
+				font-size: 14px;
 			}
 		}
-	}	
+	}
 }
 
 // Overlap.
@@ -317,11 +316,11 @@
 // Sticky header sentinel.
 .masthead-sentinel {
 	margin-bottom: 60px;
-	
+
 	body[class*="overlap-"] & {
 		display: none;
 	}	
-	
+
 	.no-header-margin & {
 		margin-bottom: 0;
 	}

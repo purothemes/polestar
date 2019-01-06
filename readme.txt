@@ -5,7 +5,7 @@ Contributors: Puro
 Tags: one-column, two-columns, left-sidebar, right-sidebar, custom-background, custom-colors, custom-menu, custom-logo, featured-images, footer-widgets, full-width-template, post-formats, sticky-post, theme-options, threaded-comments, translation-ready, blog, e-commerce
 
 Requires at least: 4.7+
-Tested up to: 4.9.9
+Tested up to: 5.0.2
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -150,6 +150,14 @@ Released under [GPL version 2](https://www.gnu.org/licenses/old-licenses/gpl-2.0
 [Source](https://github.com/TGMPA/TGM-Plugin-Activation)
 
 == Changelog ==
+
+= 1.3.2 - 06 January 2019 =
+* Fixed missing WooCommerce cart cross-sells.
+* Minor WooCommerce cart styling improvements.
+* Minor WooCommerce checkout styling improvements.
+* Improved logo scaling function.
+* Slightly darkened default background and border colors for improved usability.
+* Changed the page order of the title and featured images to match posts.
 
 = 1.3.1 - 05 November 2018 =
 * Prevented Jetpack Lazy Images from loading the logo image.

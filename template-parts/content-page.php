@@ -12,16 +12,16 @@
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 
-	<?php if ( puro_page_setting( 'page_title' ) ) : ?>
-		<header class="entry-header">
-			<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
-		</header><!-- .entry-header -->
-	<?php endif; ?>
-
 	<?php if ( has_post_thumbnail() ) : ?>
 		<div class="entry-thumbnail">
 			<?php the_post_thumbnail(); ?>
 		</div>
+	<?php endif; ?>	
+
+	<?php if ( puro_page_setting( 'page_title' ) ) : ?>
+		<header class="entry-header">
+			<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
+		</header><!-- .entry-header -->
 	<?php endif; ?>
 
 	<div class="entry-content">

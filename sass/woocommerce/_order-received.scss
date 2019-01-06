@@ -10,7 +10,7 @@
 	}
 
 	table {
-		border: 1px solid $color__background-hr-dark;
+		border: 1px solid $color__background-hr;
 		margin: 0;
 		text-align: left;
 		
@@ -19,7 +19,7 @@
 		}
 
 		tr {
-			border-bottom: 1px solid $color__background-hr-dark;  
+			border-bottom: 1px solid $color__background-hr;  
 		}
 		
 		th,
@@ -47,7 +47,7 @@
 		padding: 13px 26px;
 		
 		li {
-			border-bottom: 1px solid $color__background-hr-dark;
+			border-bottom: 1px solid $color__background-hr;
 			font-size: 12px; 
 			padding: 13px 0;
 			text-transform: uppercase;

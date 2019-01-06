@@ -1,5 +1,5 @@
 html {
-  font-size: 93.8%;
+	font-size: 93.8%;
 }
 
 body,
@@ -12,7 +12,7 @@ textarea {
 	font-size: 15px;
 	font-family: $font__main;
 	@include font-smoothing(subpixel-antialiased);
-	line-height: $font__line-height-body; 
+	line-height: $font__line-height-body;
 }
 
 @import "headings";
