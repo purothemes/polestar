@@ -25,7 +25,7 @@ function polestar_body_classes( $classes ) {
 	if ( ! is_singular() ) {
 		$classes[] = 'hfeed';
 	}
-		
+
 	// Add the page setting classes.
 	$page_settings = puro_page_setting();
 
@@ -89,7 +89,7 @@ add_action( 'wp_head', 'polestar_pingback_header' );
 if ( ! function_exists( 'polestar_unset_current_menu_class' ) ) :
 /**
  * Unset the current menu class.
- */	
+ */
 function polestar_unset_current_menu_class( $classes ) {
 	$disallowed_class_names = array(
 		'current-menu-item',
@@ -153,6 +153,6 @@ endif;
  * Add our SiteOrigin Premium affiliate ID.
  */
 function polestar_siteorigin_premium( $id ) {
-    return 1;
+	return 1;
 }
 add_filter( 'siteorigin_premium_affiliate_id', 'polestar_siteorigin_premium' );

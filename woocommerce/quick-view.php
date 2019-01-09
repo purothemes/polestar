@@ -28,7 +28,7 @@ while ( have_posts() ) : the_post();
 		<div id="product-<?php the_ID(); ?>" <?php post_class(); ?>>
 
 			<div class="product-content-wrapper">
-		
+
 				<div class="product-image-wrapper">
 
 					<?php do_action( 'polestar_woocommerce_quick_view_images' ); ?>

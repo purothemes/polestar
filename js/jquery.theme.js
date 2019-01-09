@@ -17,7 +17,7 @@ jQuery( function( $ ) {
 			rect.top <= ( window.innerHeight || document.documentElement.clientHeight ) &&
 			rect.left <= ( window.innerWidth || document.documentElement.clientWidth )
 		);
-	};	
+	};
 
 	// Entry thumbnail container size.
 	$( window ).load( function() {
