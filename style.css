@@ -1825,13 +1825,6 @@ a {
       margin: 0 2.75% 0 0; }
       .site-header .widgets .widget:last-of-type {
         margin-right: 0; }
-      @media (max-width: 768px) {
-        .site-header .widgets .widget {
-          margin-bottom: 5%;
-          text-align: center;
-          width: 100% !important; }
-          .site-header .widgets .widget:last-of-type {
-            margin-bottom: 0; } }
       .site-header .widgets .widget .widget-title {
         font-size: 16px;
         margin: 0 0 5px; }
