@@ -66,6 +66,10 @@
 
 	.site-branding {
 		padding-right: 20px;
+		
+		.custom-logo-wrapper {
+			display: inline-block;
+		}
 
 		.site-title {
 			font-family: $font__headings;
