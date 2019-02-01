@@ -5,7 +5,7 @@ Contributors: Puro
 Tags: one-column, two-columns, left-sidebar, right-sidebar, custom-background, custom-colors, custom-menu, custom-logo, featured-images, footer-widgets, full-width-template, post-formats, sticky-post, theme-options, threaded-comments, translation-ready, blog, e-commerce
 
 Requires at least: 4.7+
-Tested up to: 5.0.2
+Tested up to: 5.0.3
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -150,6 +150,11 @@ Released under [GPL version 2](https://www.gnu.org/licenses/old-licenses/gpl-2.0
 [Source](https://github.com/TGMPA/TGM-Plugin-Activation)
 
 == Changelog ==
+
+= 1.3.3 - 01 February 2019 =
+* Logo scaling and sticky header sentinel improvements.
+* Removed `h1` - `h6` tag clearing.
+* Premium: Linked header widget styles to menu breakpoint.
 
 = 1.3.2 - 06 January 2019 =
 * Fixed missing WooCommerce cart cross-sells.
