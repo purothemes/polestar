@@ -11,7 +11,7 @@
 			float: left;
 			padding-right: 5px; 
 			width: 25%;
-			
+
 			@media (max-width: 768px) {
 				width: 50%;
 			}
@@ -22,18 +22,18 @@
 			
 			@media (max-width: 768px) {
 				width: 50%;
-			}			
-		}		
-		
+			}
+		}
+
 	}
 
 	// Order review.
 	#order_review_heading,
 	#order_review {
-		clear: right; 
+		clear: right;
 		float: right;
 		width: 47.8260869565%;
-		
+
 		@media (max-width: 768px) {
 			clear: none;
 			float: none;
@@ -42,23 +42,23 @@
 	}
 
 	table.woocommerce-checkout-review-order-table {
-		
+
 		thead {
-			border: 1px solid $color__background-hr;		
-			
+			border: 1px solid $color__background-hr;
+
 			th {
 				background: $color__background-hr;
 				font-size: 14px;
-			}		
+			}
 		}
-		
-		
+
+
 		th,
 		td {
 			border: none;
 			padding: 20px;
 			text-align: left;
-			
+
 			ul {
 				font-size: 1rem;
 				list-style: none;
@@ -69,7 +69,7 @@
 		.cart_item {
 			border: 1px solid $color__background-hr;
 			font-size: 14px;
-			
+
 			@media (max-width: 768px) {
 
 				td:first-of-type {
@@ -81,21 +81,21 @@
 				}
 			}
 		}
-		
+
 		tfoot {
 
 			tr {
 				border-bottom: 1px solid $color__background-hr; 
 			}
-			
+
 			th,
 			td {
 				padding: 20px;
 			}
-			
+
 			td {
 				text-align: left;
-			}			
+			}
 		}
 	}
 
@@ -104,37 +104,37 @@
 		.payment_methods {
 			list-style: none;
 			margin: 0;
-			
+
 			li {
 				border-bottom: 1px solid $color__background-hr;
 				padding: 20px;
 				position: relative;
 				text-align: left;
-				
+
 				label {
-					
+
 					a {
 						font-size: 12px; 
 						font-weight: normal;
 						margin-left: 5px; 
-					} 
+					}
 				}
 
 				input {
 					margin-right: 5px;
 				}
-				
+
 				img:only-of-type {
 					max-height: 50px;
-				    position: absolute;
-				    right: 20px;
-				    top: 8px; 
+					position: absolute;
+					right: 20px;
+					top: 8px; 
 				}
 
 				.payment_box {
 					font-size: 14px; 
 					padding: 10px 0 0;
-					
+
 					&.payment_method_paypal {
 						padding-top: 20px; 
 					}
@@ -177,15 +177,15 @@
 		.woocommerce-terms-and-conditions-wrapper {
 			border-bottom: 1px solid $color__background-hr;
 			padding: 20px;
-			
+
 			p {
 				margin-bottom: 14px;
-				
+
 				&.validate-required {
 					margin-bottom: 0;
 				}
 			}
-		}		
+		}
 
 		#place_order {
 			float: right;

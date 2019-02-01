@@ -18,7 +18,7 @@
 				<?php the_post_thumbnail( 'polestar-720x480-crop' ); ?>
 			</a>
 		</div>
-	<?php endif; ?>	
+	<?php endif; ?>
 
 		<div class="polestar-content-wrapper">
 			<header class="entry-header">

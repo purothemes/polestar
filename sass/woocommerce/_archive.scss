@@ -9,14 +9,14 @@
 		@at-root .search-no-results#{&} {
 			margin-bottom: 25px;
 		} 
-		
+
 		@media (max-width: 768px) {
 
 			@at-root .woocommerce.archive .page-title {
 				font-size: 26px;
 			}
 		}
-		
+
 		@media (max-width: 480px) {
 
 			@at-root .woocommerce.archive .page-title {
@@ -35,7 +35,7 @@
 		height: 37px;
 		justify-content: left;
 		text-align: left;
-		
+
 		@media (max-width: 768px) {
 			float: none;
 			margin-bottom: 15px;
@@ -53,8 +53,8 @@
 
 		@media (max-width: 768px) {
 			float: none;
-		}		
-	
+		}
+
 		.ordering-selector-wrapper {
 			border: 1px solid $color__background-hr;
 			border-radius: 2px;
@@ -80,7 +80,7 @@
 
 			&:hover {
 				color: $color__text-dark;
-				
+
 				svg path {
 					fill: $color__text-dark;
 				}
@@ -111,7 +111,7 @@
 				transform: scale(0.95);
 				visibility: hidden;
 				width: 100%;
-				
+
 				li {
 					color: $color__text-light;
 					cursor: pointer;
@@ -135,14 +135,14 @@
 
 				svg {
 					transform: rotate(180deg);
-				
+
 					path {
 						fill: $color__text-dark;
 					}
 				}
 			}
 		}
-	}	
+	}
 
 	// Sale Sticker.
 	.onsale {
@@ -194,10 +194,10 @@
 			top: 0;
 		}
 	}
-	
+
 	a .star-rating {
 		color: $color__accent;
-	}	
+	}
 
 	// Products list.
 	.products {
@@ -205,7 +205,7 @@
 		@include clearfix;
 		list-style: none;
 		margin: 0;
-		
+
 		@at-root .post-type-archive-product#{&} {
 			padding-top: 30px; 
 		}
@@ -218,27 +218,27 @@
 		@at-root .tax-product_cat#{&} {
 			padding-top: 30px; 
 		}
-		
+
 		// Product list item.
 		.product {
 			float: left;
 			margin: 0 3.5% 50px 0;
 			text-align: center;
 			width: 100%;
-			
+
 			@at-root .columns-1#{&} {
 				float: none;
 				margin-right: 0;
 			}
-			
+
 			@at-root .columns-2#{&} {
 				width: 48.25%;
-				
+
 				@media (min-width: 769px) {
-				
+
 					&:nth-of-type(2n+2) {
 						margin-right: 0;
-					}	
+					}
 
 					&:nth-child(2n+3) {
 						clear: left;
@@ -248,9 +248,9 @@
 
 			@at-root .columns-3#{&} {
 				width: 31%;
-				
+
 				@media (min-width: 769px) {
-				
+
 					&:nth-of-type(3n+3) {
 						margin-right: 0;
 					}
@@ -263,9 +263,9 @@
 
 			@at-root .columns-4#{&} {
 				width: 22.375%;
-				
+
 				@media (min-width: 769px) {
-				
+
 					&:nth-of-type(4n+4) {
 						margin-right: 0;
 					}
@@ -278,9 +278,9 @@
 
 			@at-root .columns-5#{&} {
 				width: 17.2%;
-				
+
 				@media (min-width: 769px) {
-				
+
 					&:nth-of-type(5n+5) {
 						margin-right: 0;
 					}
@@ -290,7 +290,7 @@
 					}
 				}
 			}
-			
+
 			@media (max-width: 768px) {
 
 				@at-root {
@@ -306,7 +306,7 @@
 					margin-right: 0;
 				}
 			}
-			
+
 			@media (max-width: 480px) {
 
 				@at-root {
@@ -322,7 +322,7 @@
 			// Product thumbnail container.
 			.loop-product-thumbnail {
 				position: relative;
-				
+
 				&:hover {
 
 					.add_to_cart_button,
@@ -335,7 +335,7 @@
 					}
 
 					* {
-						
+
 						@at-root .is_mobile#{&} {
 							opacity: 0;
 							visibility: hidden;
@@ -364,9 +364,9 @@
 			.woocommerce-loop-category__title {
 				font-size: 1.0666em;
 				margin: 15px 0 5px;
-				
+
 				@at-root {
-					
+
 					.wc-columns-2#{&} {
 						font-size: 1.2em;
 					}
@@ -391,16 +391,16 @@
 				float: left;
 				font-size: 13px;
 				margin: 0 auto 10px;
-			}		
+			}
 
 			// Product price.
 			.price {
 				display: block;
 				font-size: 0.9333em;
 				margin-bottom: 10px;
-				
+
 				@at-root {
-					
+
 					.wc-columns-2#{&} {
 						font-size: 1.0666em;
 					}
@@ -422,7 +422,7 @@
 				visibility: hidden;
 				white-space: nowrap;
 				z-index: 2;
-				
+
 				@media (min-width: 768px) and (max-width: 1024px) {
 
 					@at-root {
@@ -466,7 +466,7 @@
 				bottom: 25%;
 
 				@media (min-width: 768px) and (max-width: 1024px) {
-					
+
 					@at-root {
 
 						.wc-columns-4#{&},
@@ -482,7 +482,7 @@
 			.product_type_external {
 				padding: 11px 15px;
 			}
-			
+
 			// Added to Cart button.
 			.added_to_cart {
 				bottom: 1%;
@@ -494,7 +494,7 @@
 
 	.price {
 		color: $color__text-medium;
-		
+
 		ins {
 			background: none;
 			color: $color__accent;

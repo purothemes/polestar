@@ -586,7 +586,7 @@ $sel: '';
 
 .pagination {
 	text-align: center;
-	
+
 	.page-numbers {
 		@extend .button;
 		background: $color__background-hr;
@@ -726,7 +726,7 @@ $sel: '';
 
 			&:last-of-type {
 				margin-right: 0;
-				
+
 				a {
 					margin-right: 0;
 				}

@@ -57,7 +57,7 @@ function polestar_body_classes( $classes ) {
 
 		if ( get_theme_mod( 'woocommerce_sidebar_position' ) == 'right' ) {
 			$classes[] = 'woocommerce-sidebar-right';
-		}	
+		}
 	}
 
 	// WooCommerce top bar.

@@ -6,12 +6,12 @@
 	position: relative;
 	width: 100%;
 	z-index: 9999;
-	
+
 	body[class*="overlap-"] &:not(.stuck) {
 		background: transparent;
 		border: none;
 		position: absolute;
-	}	
+	}
 
 	.no-header-margin & {
 		margin-bottom: 0;

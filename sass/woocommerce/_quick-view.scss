@@ -37,15 +37,15 @@
 		display: block;
 		cursor: pointer;
 		font-size: 35px;
-		line-height: 1;  
+		line-height: 1;
 		position: absolute;
 		right: 15px;
 		top: 8px;
 		transform: rotate(45deg);
-		
+
 		&:hover {
 			color: $color__text-medium;
-		}	
+		}
 	}
 
 	.product-content-wrapper {
@@ -67,21 +67,21 @@
 			}
 
 			.flex-direction-nav a {
-				
+
 				&:hover {
-					
+
 					svg path {
 						fill: rgba(130, 130, 130, .8);
 					}
 				}
 
 				svg {
-								
+
 					path {
 						fill: rgba(130, 130, 130, .5);
 					}
 				}
-			}		
+			}
 		}
 
 		.product-info-wrapper {
@@ -99,7 +99,7 @@
 			.entry-title {
 				line-height: normal; 
 				margin: 0; 
-			}			
+			}
 		}
 	}
 }

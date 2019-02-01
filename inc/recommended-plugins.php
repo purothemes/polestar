@@ -41,7 +41,7 @@ function polestar_register_required_plugins() {
 			'name'      => 'SiteOrigin Widgets Bundle',
 			'slug'      => 'so-widgets-bundle',
 			'required'  => false,
-		),		
+		),
 
 	);
 

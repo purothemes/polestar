@@ -13,31 +13,31 @@
 		border: 1px solid $color__background-hr;
 		margin: 0;
 		text-align: left;
-		
+
 		thead th {
 			background: $color__background-hr;
 		}
 
 		tr {
-			border-bottom: 1px solid $color__background-hr;  
+			border-bottom: 1px solid $color__background-hr;
 		}
-		
+
 		th,
 		td {
 			border: none;
-			
+
 			a {
 				color: $color__text-medium;
-				
+
 				&:hover {
 					color: $color__accent;
 				}
-			}				
+			}
 		}
 	}
 
 	section {
-		margin-bottom: 50px; 
+		margin-bottom: 50px;
 	}
 
 	.woocommerce-thankyou-order-details {
@@ -45,24 +45,23 @@
 		list-style: none;
 		margin: 0 0 25px;
 		padding: 13px 26px;
-		
+
 		li {
 			border-bottom: 1px solid $color__background-hr;
-			font-size: 12px; 
+			font-size: 12px;
 			padding: 13px 0;
 			text-transform: uppercase;
-			
+
 			strong {
 				display: block;
 				font-size: 15px;
 				padding-top: 3px;
-				text-transform: none; 
+				text-transform: none;
 			}
 
 			&:last-of-type {
-				border: 0; 
+				border: 0;
 			}
 		}
 	}
-	
 }
