@@ -5,7 +5,7 @@
 	}
 
 	.cart-empty {
-		margin-bottom: 26px; 
+		margin-bottom: 26px;
 	}
 
 	table.cart {
@@ -30,7 +30,7 @@
 		td {
 			border: none;
 			padding: 16px;
-			
+
 			@media (max-width: 768px) {
 				display: block;
 				text-align: right;
@@ -61,7 +61,7 @@
 				color: $color__text-medium;
 				display: block;
 				font-weight: 600;
-				line-height: 1; 
+				line-height: 1;
 
 				&:hover {
 					color: $color__text-light;
@@ -69,11 +69,11 @@
 			}
 
 			.product-remove {
-				font-size: 20px; 
+				font-size: 20px;
 				text-align: center;
 
 				&:before {
-					content: none; 
+					content: none;
 				}
 
 				@media (max-width: 768px) {
@@ -88,15 +88,15 @@
 				}
 
 				&:before {
-					content: none; 
+					content: none;
 				}
 			}
 
 			.product-quantity {
 
 				input {
-					font-size: 14px; 
-					width: 60px; 
+					font-size: 14px;
+					width: 60px;
 				}
 			}
 		}
@@ -113,7 +113,7 @@
 				display: block;
 
 				* {
-					width: 100%; 
+					width: 100%;
 				}
 			}
 
@@ -136,7 +136,7 @@
 					margin-right: 5px; 
 
 					@media (max-width: 768px) {
-						margin-bottom: 10px; 
+						margin-bottom: 10px;
 					}
 				}
 			}
@@ -144,7 +144,7 @@
 	}
 
 	.cart-collaterals {
-		width: 100%; 
+		width: 100%;
 	}
 
 	.cross-sells {

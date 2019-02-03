@@ -39,7 +39,7 @@ function polestar_page_settings( $settings, $type, $id ) {
 			'light'    => esc_html__( 'Enabled - Light Text', 'polestar' ),
 			'dark'     => esc_html__( 'Enabled - Dark Text', 'polestar' ),
 		),
-	);	
+	);
 
 	$settings['header_margin'] = array(
 		'type'           => 'checkbox',

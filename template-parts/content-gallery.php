@@ -64,7 +64,7 @@ $post_class = ( is_singular() ) ? 'entry' : 'archive-entry';
 		} else {
 			polestar_excerpt();
 		}
-		
+
 		wp_link_pages( array(
 				'before' => '<div class="page-links"><span class="page-links-title">' . esc_html__( 'Pages:', 'polestar' ) . '</span>',
 				'after'  => '</div>',

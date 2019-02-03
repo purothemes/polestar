@@ -8,7 +8,7 @@
 
 		a {
 			color: $color__text-light;
-			
+
 			&:hover {
 				color: $color__accent;
 			}
@@ -19,10 +19,10 @@
 	.woocommerce-pagination {
 		border: none !important;
 		text-align: center;
-		
+
 		ul {
 			margin: 0;
-			
+
 			li {
 				display: inline-block;
 				border: none !important;
@@ -55,13 +55,13 @@
 				.prev {
 					font-size: 14px; 
 					padding: 12px 14.3px 12px;
-					
+
 					span:before {
 						position: relative;
 						top: 1px;
 					}
 				}
 			}
-		}	
+		}
 	}
 }

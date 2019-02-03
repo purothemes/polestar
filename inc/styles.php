@@ -595,48 +595,73 @@ endif;
 add_action( 'customizer_library_styles', 'polestar_build_styles' );
 
 function polestar_mobile_menu_collapse() {
-		$setting = 'mobile_menu_collapse';
-		$mod = get_theme_mod( $setting, customizer_library_get_default( $setting ) );
+	$setting = 'mobile_menu_collapse';
+	$mod = get_theme_mod( $setting, customizer_library_get_default( $setting ) );
 
-		if ( ! $mod ) {
-			$number = 780;
-		} else {
-			$number = customizer_library_sanitize_number_absint( $mod, $setting );
-		}
+	if ( ! $mod ) {
+		$number = 780;
+	} else {
+		$number = customizer_library_sanitize_number_absint( $mod, $setting );
+	}
 
-		$number_min = $number + 1;
-		
+	$number_min = $number + 1;
+	
+	Customizer_Library_Styles()->add( array(
+		'selectors' => array(
+			'body:not(.page-layout-stripped) #masthead.mobile-menu .main-navigation > div:not(.mega-menu-wrap)',
+			'#masthead.mobile-menu .main-navigation .shopping-cart',
+			'#masthead.mobile-menu .main-navigation .search-icon'
+		),
+		'declarations' => array(
+			'display' => 'none'
+		),
+		'media' => '(max-width:' . $number . 'px)'
+	) );
+
+	Customizer_Library_Styles()->add( array(
+		'selectors' => array(
+			'#masthead.mobile-menu #mobile-menu-button'
+		),
+		'declarations' => array(
+			'display' => 'inline-block'
+		),
+		'media' => '(max-width:' . $number . 'px)'
+	) );
+
+	Customizer_Library_Styles()->add( array(
+		'selectors' => array(
+			'.site-header #mobile-navigation'
+		),
+		'declarations' => array(
+			'display' => 'none !important'
+		),
+		'media' => '(min-width:' . $number_min . 'px)'
+	) );
+
+	if ( is_active_sidebar( 'sidebar-polestar-header' ) ) {
+
 		Customizer_Library_Styles()->add( array(
 			'selectors' => array(
-				'body:not(.page-layout-stripped) #masthead.mobile-menu .main-navigation > div:not(.mega-menu-wrap)',
-				'#masthead.mobile-menu .main-navigation .shopping-cart',
-				'#masthead.mobile-menu .main-navigation .search-icon'
+				'.site-header .widgets .widget'
 			),
 			'declarations' => array(
-				'display' => 'none',
+				'margin' => '0 0 5% 0',
+				'text-align' => 'center',
+				'width' => '100% !important'
 			),
 			'media' => '(max-width:' . $number . 'px)'
 		) );
 
 		Customizer_Library_Styles()->add( array(
 			'selectors' => array(
-				'#masthead.mobile-menu #mobile-menu-button'
+				'.site-header .widgets .widget:last-of-type'
 			),
 			'declarations' => array(
-				'display' => 'inline-block',
+				'margin-bottom' => '0',
 			),
 			'media' => '(max-width:' . $number . 'px)'
 		) );
-
-		Customizer_Library_Styles()->add( array(
-			'selectors' => array(
-				'.site-header #mobile-navigation'
-			),
-			'declarations' => array(
-				'display' => 'none !important',
-			),
-			'media' => '(min-width:' . $number_min . 'px)'
-		) );
+	}
 }
 add_action( 'customizer_library_styles', 'polestar_mobile_menu_collapse' );
 

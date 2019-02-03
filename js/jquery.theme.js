@@ -17,7 +17,7 @@ jQuery( function( $ ) {
 			rect.top <= ( window.innerHeight || document.documentElement.clientHeight ) &&
 			rect.left <= ( window.innerWidth || document.documentElement.clientWidth )
 		);
-	};	
+	};
 
 	// Entry thumbnail container size.
 	$( window ).load( function() {
@@ -70,60 +70,6 @@ jQuery( function( $ ) {
 	$( '#scroll-to-top' ).click( function() {
 		$( 'html, body' ).animate( { scrollTop: 0 } );
 	} );
-
-	// Sticky header.
-	if ( $( '#masthead' ).hasClass( 'sticky' ) ) {
-		var $mhs = false,
-			$mh = $( '#masthead' ),
-			$tb = $( '#topbar' ),
-			$tbwc = $( '#topbar .woocommerce-store-notice[style*="display: none"]' );
-
-		var smSetup = function() {
-
-			if ( $( 'body' ).hasClass( 'mobile-header-ns' ) && ( $( window ).width() < polestar.collapse ) ) {
-				return;
-			}
-
-			if ( $mhs === false ) {
-				$mhs = $( '<div class="masthead-sentinel"></div>' ).insertAfter( $mh );
-				$mhs.css( 'height', $mh.outerHeight() );
-			}
-
-			if ( ! $( 'body' ).hasClass( 'no-topbar' ) && ! $tb.polestarIsVisible() ) {
-				$( 'body' ).addClass( 'topbar-out' );
-			}
-
-			if ( $tb.length && $( 'body' ).hasClass( 'topbar-out' ) && $tb.polestarIsVisible() ) {
-				$( 'body' ).removeClass( 'topbar-out' );
-			}
-
-			if ( $( 'body' ).hasClass( 'no-topbar' ) && ! $( window ).scrollTop() ) {
-				$( 'body' ).addClass( 'topbar-out' );
-			}
-
-			if ( $( 'body' ).hasClass( 'no-topbar' ) || ( ! $( 'body' ).hasClass( 'no-topbar' ) && $( 'body' ).hasClass( 'topbar-out' ) ) || $tbwc.length ) {
-				$mh.css( 'position', 'fixed' );
-			} else if ( ! $( 'body' ).hasClass( 'no-topbar' ) && ! $( 'body' ).hasClass( 'topbar-out' ) ) {
-				$mh.css( 'position', 'absolute' );
-			}
-
-		};
-
-		smSetup();
-		$( window ).resize( smSetup ).scroll( smSetup );
-
-		// Sticky header shadow.
-		var smShadow = function() {
-			if ( $( window ).scrollTop() > 0 ) {
-				$( $mh ).addClass( 'stuck' );
-			} else {
-				$( $mh ).removeClass( 'stuck' );
-			}
-		};
-		smShadow();
-		$( window ).scroll( smShadow );
-
-	}
 
 	// Header search.
 	var $hs = $( '#header-search' );
@@ -392,50 +338,112 @@ jQuery( function( $ ) {
 
 		// Sticky header logo scaling.
 		if ( $mh.data( 'scale-logo' ) ) {
+
 			var $img = $mh.find( '.site-branding img' ),
-				imgWidth = $img.attr( 'width' ),
-				imgHeight = $img.attr( 'height' ),
+				imgWidth = $img.width(),
+				imgHeight = $img.height(),
 				scaledWidth = imgWidth * polestar.logoScale;
 				scaledHeight = imgHeight * polestar.logoScale;
+
+			$( ".site-branding img" ).wrap( "<div class='custom-logo-wrapper'></div>");
 
 			var smResizeLogo = function() {
 				var $branding = $mh.find( '.site-branding > *' ),
 					top = window.pageYOffset || document.documentElement.scrollTop;
 
-				// Check if the menu is meant to be sticky or not, and if it is apply padding/class.
+				// Check if the menu is meant to be sticky or not, and if it is apply padding/class
 				if ( top > 0 ) {
 					$mh.css( {
 						'padding-top': mhPadding.top * polestar.logoScale,
 						'padding-bottom': mhPadding.bottom * polestar.logoScale
-					} ).addClass( 'stuck' );
+					} );
 
 				} else {
 					$mh.css( {
 						'padding-top': mhPadding.top,
 						'padding-bottom': mhPadding.bottom
-					} ).removeClass( 'stuck' );
+					} );
 				}
 
 				if ( $img.length ) {
-					// If Scale == polestar.logoScale, logo is completely scaled.
-					if ( $img.height() != scaledHeight || $img.width() != scaledWidth ) {
-						var scale = polestar.logoScale + ( Math.max( 0, 48 - top ) / 48 * ( 1 - polestar.logoScale ) );
-						$('.site-branding img').css( {
-							width: imgWidth * scale,
-							height: imgHeight * scale,
-							'max-width' : 'none'
+					// Are we at the top of the page?
+					if ( top > 0 ) {
+						// Calulate scale amount based on distance from the top of the page.
+						var logoScale = polestar.logoScale + ( Math.max( 0, 48 - top ) / 48 * ( 1 - polestar.logoScale ) );
+						if ( $img.height() != scaledHeight || $img.width() != scaledWidth || logoScale != polestar.logoScale ) {
+							$( '.site-branding img' ).css( {
+								width: logoScale * 100 + '%',
+							} );
+						}
+					} else {
+						// Ensure no scaling is present.
+						$( '.site-branding img' ).css( {
+							width: '',
 						} );
 					}
+
+				} else if ( top > 0 ) {
+					$branding.css( 'transform', 'scale(' + polestar.logoScale + ')' );
+
 				} else {
-					if ( top > 0 ) {
-						$branding.css( 'transform', 'scale(' + polestar.logoScale + ')' );
-					} else {
-						$branding.css( 'transform', 'scale(1)' );
-					}
+					$branding.css( 'transform', 'scale(1)' );
 				}
 			};
 			smResizeLogo();
 			$( window ).scroll( smResizeLogo ).resize( smResizeLogo );
+		}
+
+		// Sticky header.
+		if ( $( '#masthead' ).hasClass( 'sticky' ) ) {
+			var $mh = $( '#masthead' ),
+				$mhs = $( '<div class="masthead-sentinel"></div>' ).insertAfter( $mh ),
+				$tb = $( '#topbar' ),
+				$tbwc = $( '#topbar .woocommerce-store-notice[style*="display: none"]' );
+
+			var smSetup = function() {
+
+				if ( $( 'body' ).hasClass( 'mobile-header-ns' ) && ( $( window ).width() < polestar.collapse ) ) {
+					return;
+				}
+
+				if ( $mhs !== false ) {
+					$mhs.css( 'height', $mh.outerHeight() );
+				}
+
+				if ( ! $( 'body' ).hasClass( 'no-topbar' ) && ! $tb.polestarIsVisible() ) {
+					$( 'body' ).addClass( 'topbar-out' );
+				}
+
+				if ( $tb.length && $( 'body' ).hasClass( 'topbar-out' ) && $tb.polestarIsVisible() ) {
+					$( 'body' ).removeClass( 'topbar-out' );
+				}
+
+				if ( $( 'body' ).hasClass( 'no-topbar' ) && ! $( window ).scrollTop() ) {
+					$( 'body' ).addClass( 'topbar-out' );
+				}
+
+				if ( $( 'body' ).hasClass( 'no-topbar' ) || ( ! $( 'body' ).hasClass( 'no-topbar' ) && $( 'body' ).hasClass( 'topbar-out' ) ) || $tbwc.length ) {
+					$mh.css( 'position', 'fixed' );
+				} else if ( ! $( 'body' ).hasClass( 'no-topbar' ) && ! $( 'body' ).hasClass( 'topbar-out' ) ) {
+					$mh.css( 'position', 'absolute' );
+				}
+
+			};
+
+			smSetup();
+			$( window ).resize( smSetup ).scroll( smSetup );
+
+			// Sticky header shadow.
+			var smShadow = function() {
+				if ( $( window ).scrollTop() > 0 ) {
+					$( $mh ).addClass( 'stuck' );
+				} else {
+					$( $mh ).removeClass( 'stuck' );
+				}
+			};
+			smShadow();
+			$( window ).scroll( smShadow );
+
 		}
 
 	} );

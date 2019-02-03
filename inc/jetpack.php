@@ -56,7 +56,7 @@ function polestar_infinite_scroll_render() {
 			wc_get_template_part( 'content', 'product' );
 		}
 		echo '</ul>';
-	} else {	
+	} else {
 		while ( have_posts() ) {
 			the_post();
 			if ( is_search() ) :
@@ -104,5 +104,5 @@ if ( Jetpack::is_module_active( 'lazy-images' ) ) :
 			return $attrs;
 		}
 		add_filter( 'polestar_logo_attributes', 'polestar_jetpack_logo_not_lazy_class' );
-	}	
+	}
 endif;

@@ -264,7 +264,6 @@ h3,
 h4,
 h5,
 h6 {
-  clear: both;
   color: #2d2d2d;
   font-family: "Montserrat", sans-serif;
   -webkit-font-smoothing: subpixel-antialiased;
@@ -411,7 +410,7 @@ dl {
   dl dd {
     margin: 0 0 0 25px; }
 
-img:not(.custom-logo) {
+img {
   height: auto;
   max-width: 100%; }
 
@@ -1692,6 +1691,8 @@ a {
       flex-direction: column; }
   .site-header .site-branding {
     padding-right: 20px; }
+    .site-header .site-branding .custom-logo-wrapper {
+      display: inline-block; }
     .site-header .site-branding .site-title {
       font-family: "Montserrat", sans-serif;
       font-weight: 600;
@@ -1825,13 +1826,6 @@ a {
       margin: 0 2.75% 0 0; }
       .site-header .widgets .widget:last-of-type {
         margin-right: 0; }
-      @media (max-width: 768px) {
-        .site-header .widgets .widget {
-          margin-bottom: 5%;
-          text-align: center;
-          width: 100% !important; }
-          .site-header .widgets .widget:last-of-type {
-            margin-bottom: 0; } }
       .site-header .widgets .widget .widget-title {
         font-size: 16px;
         margin: 0 0 5px; }

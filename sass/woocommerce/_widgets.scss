@@ -33,7 +33,7 @@
 	list-style: none;
 	margin: 0;
 	padding: 0;
-	
+
 	li {
 		border-bottom: 1px solid $color__background-hr;
 		line-height: 2;
@@ -47,25 +47,25 @@
 		&:first-of-type {
 			margin-top: -15px;
 		}
-		
+
 		a {
 			color: $color__text-medium;
 			display: block;
 			font-weight: 600;
 			line-height: normal;
-			
+
 			&:hover {
 				color: $color__accent;
 			}
-		}			
+		}
 
 		ins {
-			background: none; 
+			background: none;
 		}
 
 		.star-rating {
 			margin-top: 4px;
-		}	
+		}
 
 		.amount,
 		.quantity {
@@ -86,13 +86,13 @@
 
 		li {
 			padding-left: 25px;
-			
+
 			&:last-of-type {
-				border-bottom: 0; 
+				border-bottom: 0;
 			}
 
 			.remove {
-				font-size: 16px; 
+				font-size: 16px;
 				left: 0;
 				position: absolute;
 				top: 22px;
@@ -104,22 +104,22 @@
 		border: 1px solid $color__background-hr;
 		border-right: 0;
 		border-left: 0;
-		margin-bottom: 20px; 
+		margin-bottom: 20px;
 		padding: 10px 0;
 
 		strong {
-			font-weight: 600; 
+			font-weight: 600;
 		}
-	}	
+	}
 
 	.buttons {
 		text-align: center;
-		
+
 		a {
 			color: #fff;
 			display: inline-block;
 			font-weight: normal;
-		
+
 			&.button {
 				font-size: 13px;
 				padding: 10px 19px;
@@ -128,18 +128,18 @@
 			&:first-of-type {
 				background: $color__background-hr;
 				color: $color__text-medium;
-				
+
 				&:hover {
 					background: $color__accent;
 					color: #fff;
 				}
-			}			
+			}
 
 			&.checkout {
 				margin-left: 10px;
 			}
 		}
-	}	
+	}
 }
 
 /*--------------------------------------------------------------
@@ -150,7 +150,7 @@
 
 	li {
 		color: $color__text-light;
-		
+
 		a {
 			color: $color__text-dark;
 			display: inline-block;
@@ -159,12 +159,11 @@
 
 		span {
 			color: $color__text-light;
-		}			
+		}
 
 		.children {
 			margin-left: 12px;
 		}
-
 	}
 }
 
@@ -178,14 +177,14 @@
 		height: 3px;
 		margin: 21px 3.5px 26px;
 		position: relative;
-		
+
 		.ui-slider-range {
 			background: $color__accent;
 			height: 100%;
 			position: absolute;
 			top: 0;
 			z-index: 1;
-		}			
+		}
 		
 		.ui-slider-handle {
 			background: $color__accent;
@@ -216,7 +215,7 @@
 			background: $color__background-hr;
 			color: $color__text-medium;
 			float: right;
-			
+
 			&:hover {
 				background: $color__accent;
 			}

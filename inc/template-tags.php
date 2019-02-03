@@ -290,7 +290,7 @@ if ( ! function_exists( 'polestar_get_image' ) ) :
 /**
  * Gets the first image from the page.
  */
-function polestar_get_image()  {
+function polestar_get_image() {
 
 	preg_match_all( '/<img[^>]+\>/i', get_the_content(), $images );
 

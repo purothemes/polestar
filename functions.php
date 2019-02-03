@@ -82,7 +82,7 @@ function polestar_setup() {
 		'gallery',
 		'image',
 		'video',
-	) );	
+	) );
 
 	// Setup the WordPress core custom background feature.
 	add_theme_support( 'custom-background', apply_filters( 'polestar_custom_background_args', array(
@@ -155,7 +155,7 @@ function polestar_widgets_init() {
 			'before_title'  => '<h3 class="widget-title">',
 			'after_title'   => '</h3>',
 		) );
-	}		
+	}
 }
 add_action( 'widgets_init', 'polestar_widgets_init' );
 
@@ -171,7 +171,7 @@ function polestar_scripts() {
 	if ( ! class_exists( 'Jetpack' ) && ! ( function_exists( 'has_blocks' ) && has_blocks() ) ) {
 		wp_enqueue_script( 'jquery-fitvids', get_template_directory_uri() . '/js/jquery.fitvids' . PURO_THEME_JS_PREFIX . '.js', array( 'jquery' ), '1.1', true );
 	}
-	
+
 	// Flexslider.
 	wp_register_script( 'jquery-flexslider', get_template_directory_uri() . '/js/jquery.flexslider' . PURO_THEME_JS_PREFIX . '.js', array( 'jquery' ), '2.6.3', true );
 
@@ -187,7 +187,7 @@ function polestar_scripts() {
 	wp_localize_script( 'polestar-script', 'polestar', array(
 		'collapse' => get_theme_mod( 'mobile_menu_collapse', 768 ),
 		'logoScale' => is_numeric( $logo_sticky_scale ) ? $logo_sticky_scale : 0.775,
-	) );		
+	) );
 
 	// Theme icons.
 	wp_enqueue_style( 'polestar-icons', get_template_directory_uri() . '/css/polestar-icons' . PURO_THEME_CSS_PREFIX . '.css', array(), PURO_THEME_VERSION );

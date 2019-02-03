@@ -6,12 +6,12 @@
 	position: relative;
 	width: 100%;
 	z-index: 9999;
-	
+
 	body[class*="overlap-"] &:not(.stuck) {
 		background: transparent;
 		border: none;
 		position: absolute;
-	}	
+	}
 
 	.no-header-margin & {
 		margin-bottom: 0;
@@ -66,6 +66,10 @@
 
 	.site-branding {
 		padding-right: 20px;
+		
+		.custom-logo-wrapper {
+			display: inline-block;
+		}
 
 		.site-title {
 			font-family: $font__headings;
@@ -229,7 +233,7 @@
 		-ms-flex-align: center;
 		-webkit-align-items: center;
 		-webkit-box-align: center;
-	    align-items: center;
+		align-items: center;
 		display: -ms-flexbox;
 		display: -webkit-flex;
 		display: flex;
@@ -256,16 +260,6 @@
 				margin-right: 0;
 			}
 
-			@media (max-width: 768px) {
-				margin-bottom: 5%;
-				text-align: center;
-				width: 100% !important;
-
-				&:last-of-type {
-					margin-bottom: 0;
-				}
-			}
-
 			.widget-title {
 				font-size: 16px;
 				margin: 0 0 5px;
@@ -286,7 +280,7 @@
 			}
 
 			ul {
-				margin-bottom: 0; 
+				margin-bottom: 0;
 			}
 
 			input[type="search"] {
@@ -319,7 +313,7 @@
 
 	body[class*="overlap-"] & {
 		display: none;
-	}	
+	}
 
 	.no-header-margin & {
 		margin-bottom: 0;

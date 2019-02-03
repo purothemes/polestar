@@ -121,16 +121,16 @@ function polestar_woocommerce_tag_cloud_widget() {
 endif;
 add_filter( 'woocommerce_product_tag_cloud_widget_args', 'polestar_woocommerce_tag_cloud_widget' );
 
-if ( ! function_exists( 'polestar_woocommerce_output_upsells' ) ) {
-	/*
-	 * Change the number of up-sell items.
-	 *
-	 * @link https://docs.woocommerce.com/document/change-number-of-upsells-output/
-	 */
-	function polestar_woocommerce_output_upsells() {
-		woocommerce_upsell_display( 4, 4 );
-	}
+if ( ! function_exists( 'polestar_woocommerce_output_upsells' ) ) :
+/*
+ * Change the number of up-sell items.
+ *
+ * @link https://docs.woocommerce.com/document/change-number-of-upsells-output/
+ */
+function polestar_woocommerce_output_upsells() {
+	woocommerce_upsell_display( 4, 4 );
 }
+endif;
 
 if ( ! function_exists( 'polestar_woocommerce_quick_view_button' ) ) :
 /**
@@ -142,7 +142,7 @@ function polestar_woocommerce_quick_view_button() {
 	$gallery = $product->get_gallery_image_ids();
 	if ( ! empty( $gallery ) && ! has_action( 'wp_footer', 'polestar_enqueue_flexslider' ) ) {
 		add_action( 'wp_footer', 'polestar_enqueue_flexslider' );
-	}	
+	}
 }
 endif;
 

@@ -20,7 +20,7 @@ function polestar_woocommerce_setup() {
 	 */
 	add_theme_support( 'wc-product-gallery-slider' );
 
-	if ( get_theme_mod( 'product_gallery' ) == 'slider_lightbox' )  {
+	if ( get_theme_mod( 'product_gallery' ) == 'slider_lightbox' ) {
 		add_theme_support( 'wc-product-gallery-lightbox' );
 	} elseif ( get_theme_mod( 'product_gallery' ) == 'slider_zoom' ) {
 		add_theme_support( 'wc-product-gallery-zoom' );
@@ -37,7 +37,7 @@ function polestar_woocommerce_setup() {
 
 	// Remove the default WooCommerce containers.
 	remove_action( 'woocommerce_before_main_content', 'woocommerce_output_content_wrapper' );
-	remove_action( 'woocommerce_after_main_content', 'woocommerce_output_content_wrapper_end' );	
+	remove_action( 'woocommerce_after_main_content', 'woocommerce_output_content_wrapper_end' );
 
 }
 add_action( 'after_setup_theme', 'polestar_woocommerce_setup' );
@@ -100,8 +100,8 @@ add_filter( 'add_to_cart_fragments', 'polestar_woocommerce_update_cart_count' );
  */
 function polestar_woocommerce_pagination_args( $array ) {
 	$array = array(
-		'prev_text'    => '<span class="icon-long-arrow-left"></span>', 
-		'next_text'    => '<span class="icon-long-arrow-right"></span>', 
+		'prev_text'    => '<span class="icon-long-arrow-left"></span>',
+		'next_text'    => '<span class="icon-long-arrow-right"></span>',
 		'type'         => 'list',
 	);
 	return $array;
@@ -113,11 +113,11 @@ add_filter( 'woocommerce_pagination_args', 'polestar_woocommerce_pagination_args
  * @link https://github.com/woocommerce/woocommerce/wiki/Customizing-image-sizes-in-3.3-
  */
 function polestar_woocommerce_single_gallery_thumbnail_size( $size ) {
-    return array(
-        'width'  => 150,
-        'height' => 150,
-        'crop'   => 1,
-    );	
+	return array(
+		'width'  => 150,
+		'height' => 150,
+		'crop'   => 1,
+	);
 }
 add_filter( 'woocommerce_get_image_size_gallery_thumbnail', 'polestar_woocommerce_single_gallery_thumbnail_size' );
 
