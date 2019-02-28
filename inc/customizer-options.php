@@ -44,7 +44,7 @@ function polestar_theme_options() {
 		'label'       => esc_html__( 'Logo', 'polestar' ),
 		'section'     => $section,
 		'type'        => 'media',
-		'description' => esc_html__( 'A custom logo to be displayed instead of the site title.', 'polestar' ),
+		'description' => esc_html__( 'A logo to be displayed instead of the site title.', 'polestar' ),
 		'default'     => '',
 		'mime_type'   => 'image',
 		'priority'    => '10',
