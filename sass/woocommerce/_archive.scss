@@ -1,5 +1,5 @@
 .woocommerce {
-	
+
 	// Page Title.
 	&.archive .page-title {
 		font-size: 29px;
@@ -8,7 +8,7 @@
 
 		@at-root .search-no-results#{&} {
 			margin-bottom: 25px;
-		} 
+		}
 
 		@media (max-width: 768px) {
 

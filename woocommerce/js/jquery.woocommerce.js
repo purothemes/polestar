@@ -113,8 +113,8 @@ jQuery( function( $ ) {
 				$( 'body' ).css( 'overflow', '' );
 				$( 'body' ).css( 'margin-right', '' );
 			}
-		} );		
+		} );
 
-	} );	
+	} );
 
 } );

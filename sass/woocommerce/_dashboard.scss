@@ -1,5 +1,5 @@
 .woocommerce-account {
-		
+
 	h2 {
 		font-size: 23px;
 		margin-bottom: 10px;
@@ -10,14 +10,14 @@
 		@media (min-width: 769px) {
 			max-width: 75%;
 		}
-		
+
 		label[for*="rememberme"] {
-			font-size: 13px; 
-			font-weight: normal; 
+			font-size: 13px;
+			font-weight: normal;
 			line-height: normal;
 			margin-top: 10px;
 		}
-		
+
 		.lost_password {
 			font-size: 13px;
 			margin-top: -14px;
@@ -34,13 +34,13 @@
 	.woocommerce-MyAccount-navigation {
 		border: 1px solid $color__background-hr;
 		float: left;
-		margin-right: 4%; 
+		margin-right: 4%;
 		width: 26%;
 
 		@media (max-width: 768px) {
 			float: none;
 			margin: 0;
-			width: 100%; 
+			width: 100%;
 		}
 
 		ul {
@@ -70,7 +70,7 @@
 		@media (max-width: 768px) {
 			float: none;
 			margin-top: 50px;
-			width: 100%; 
+			width: 100%;
 		}
 
 		h3 {
@@ -122,7 +122,7 @@
 						}
 
 						&:last-of-type {
-							padding-bottom: 30px; 
+							padding-bottom: 30px;
 						}
 					}
 				}

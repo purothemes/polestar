@@ -11,7 +11,7 @@
 }
 
 @media (max-width: 480px) {
-	.alignleft, 
+	.alignleft,
 	.alignright {
 		clear: both;
 		@include center-block;

@@ -29,9 +29,9 @@
 				<?php polestar_woocommerce_demo_store(); ?>
 			</div><!-- #topbar -->
 		<?php endif; ?>
-		
+
 		<?php do_action( 'polestar_header_before' ); ?>
-		
+
 		<header id="masthead" class="site-header<?php if ( get_theme_mod( 'header_layout' ) == 'centered' ) echo ' centered'; if ( get_theme_mod( 'sticky_header', true ) ) echo ' sticky'; if ( get_theme_mod( 'tagline' ) && get_bloginfo( 'description' ) ) echo ' tagline'; if ( get_theme_mod( 'mobile_menu', true ) ) echo ' mobile-menu'; ?>" <?php if ( get_theme_mod( 'sticky_header_scaling' ) ) echo 'data-scale-logo="true"' ?> >
 
 			<div class="polestar-container">
@@ -44,7 +44,7 @@
 					<?php else : ?>
 
 					<div class="site-header-inner">
-			
+
 						<div class="site-branding">
 							<?php polestar_display_logo(); ?>
 						</div><!-- .site-branding -->
@@ -66,7 +66,7 @@
 									<?php wp_nav_menu( array( 'theme_location' => 'menu-1', 'menu_id' => 'primary-menu' ) ); ?>
 								<?php endif; ?>
 
-								<?php if ( function_exists( 'is_woocommerce' ) && get_theme_mod( 'mini_cart', false ) && ! $mega_menu_active ) polestar_mini_cart(); ?>	
+								<?php if ( function_exists( 'is_woocommerce' ) && get_theme_mod( 'mini_cart', false ) && ! $mega_menu_active ) polestar_mini_cart(); ?>
 
 								<?php if ( get_theme_mod( 'menu_search', true ) && ! $mega_menu_active ) : ?>
 									<button class="search-icon">
@@ -111,9 +111,9 @@
 		</header><!-- #masthead -->
 
 		<?php do_action( 'polestar_content_before' ); ?>
-		
+
 		<div id="content" class="site-content">
 
 			<div class="polestar-container">
-	
+
 				<?php do_action( 'polestar_content_top' ); ?>

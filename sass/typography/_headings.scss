@@ -1,8 +1,8 @@
 h1,
-h2, 
-h3, 
-h4, 
-h5, 
+h2,
+h3,
+h4,
+h5,
 h6 {
 	color: $color__text-dark;
 	font-family: $font__headings;
@@ -12,7 +12,7 @@ h6 {
 
 	@media (max-width: 480px) {
 		line-height: normal;
-	}	
+	}
 }
 
 h1 {
