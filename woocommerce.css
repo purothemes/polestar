@@ -1638,6 +1638,9 @@ input.button.added:after,
       font-size: 12px;
       font-weight: normal;
       margin-left: 5px; }
+      @media (max-width: 480px) {
+        .woocommerce #payment .payment_methods li label a {
+          margin-left: 0; } }
     .woocommerce #payment .payment_methods li input {
       margin-right: 5px; }
     .woocommerce #payment .payment_methods li img:only-of-type {
@@ -1645,6 +1648,11 @@ input.button.added:after,
       position: absolute;
       right: 20px;
       top: 8px; }
+      @media (max-width: 480px) {
+        .woocommerce #payment .payment_methods li img:only-of-type {
+          display: block;
+          padding-top: 5px;
+          position: static; } }
     .woocommerce #payment .payment_methods li .payment_box {
       font-size: 14px;
       padding: 10px 0 0; }
@@ -1657,22 +1665,33 @@ input.button.added:after,
       margin-bottom: 0; }
     .woocommerce #payment .payment_methods li.payment_method_stripe .stripe-icon {
       float: right;
-      margin-left: 5px; }
+      margin-left: 5px;
+      padding-left: 0; }
     .woocommerce #payment .payment_methods li.payment_method_stripe #wc-stripe-cc-form {
       margin-top: 13px; }
     .woocommerce #payment .payment_methods li.payment_method_stripe .clear {
       display: none; }
+    .woocommerce #payment .payment_methods li.payment_method_paylike img {
+      float: right;
+      margin-left: 5px;
+      padding-left: 0; }
 
 .woocommerce #payment .form-row select {
   width: auto; }
 
-.woocommerce #payment .woocommerce-terms-and-conditions-wrapper {
-  border-bottom: 1px solid #e6e6e6;
+.woocommerce #payment .woocommerce-terms-and-conditions-wrapper p {
+  margin-bottom: 14px;
   padding: 20px; }
-  .woocommerce #payment .woocommerce-terms-and-conditions-wrapper p {
-    margin-bottom: 14px; }
-    .woocommerce #payment .woocommerce-terms-and-conditions-wrapper p.validate-required {
-      margin-bottom: 0; }
+  .woocommerce #payment .woocommerce-terms-and-conditions-wrapper p:first-of-type {
+    padding-bottom: 0; }
+  .woocommerce #payment .woocommerce-terms-and-conditions-wrapper p:last-of-type {
+    border-bottom: 1px solid #e6e6e6;
+    margin-bottom: 0;
+    padding-top: 0; }
+  .woocommerce #payment .woocommerce-terms-and-conditions-wrapper p:only-of-type {
+    border-bottom: 1px solid #e6e6e6;
+    margin-bottom: 0;
+    padding: 20px; }
 
 .woocommerce #payment #place_order {
   float: right;
