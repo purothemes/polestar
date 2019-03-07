@@ -367,11 +367,11 @@
 
 				@at-root {
 
-					.wc-columns-2#{&} {
+					.columns-2#{&} {
 						font-size: 1.2em;
 					}
 
-					.wc-columns-5#{&} {
+					.columns-5#{&} {
 						font-size: 1em;
 					}
 				}
@@ -401,11 +401,11 @@
 
 				@at-root {
 
-					.wc-columns-2#{&} {
+					.columns-2#{&} {
 						font-size: 1.0666em;
 					}
 
-					.wc-columns-5#{&} {
+					.columns-5#{&} {
 						font-size: 0.8666em;
 					}
 				}
@@ -427,7 +427,7 @@
 
 					@at-root {
 
-						.wc-columns-3#{&} {
+						.columns-3#{&} {
 							font-size: .8666em;
 						}
 					}
@@ -447,12 +447,12 @@
 
 					@at-root {
 
-						.wc-columns-3#{&} {
+						.columns-3#{&} {
 							top: 15%;
 						}
 
-						.wc-columns-4#{&},
-						.wc-columns-5#{&} {
+						.columns-4#{&},
+						.columns-5#{&} {
 							display: none;
 						}
 					}
@@ -469,8 +469,8 @@
 
 					@at-root {
 
-						.wc-columns-4#{&},
-						.wc-columns-5#{&} {
+						.columns-4#{&},
+						.columns-5#{&} {
 							display: none;
 						}
 					}
