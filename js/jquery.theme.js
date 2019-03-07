@@ -106,18 +106,6 @@ jQuery( function( $ ) {
 		$( 'body.no-js' ).removeClass( 'no-js' );
 		if ( $( 'body' ).hasClass( 'css3-animations' ) ) {
 
-			var polestarResetMenu = function() {
-				$( '.main-navigation ul ul' ).each( function() {
-					var $$ = $( this );
-					var width = Math.max.apply( Math, $$.find( '> li:not(.mini_cart_item) > a' ).map( function() {
-						return $( this ).width();
-					} ).get() );
-					$$.find( '> li > a' ).width( width );
-				} );
-			};
-			polestarResetMenu();
-			$( window ).resize( polestarResetMenu );
-
 			// Add keyboard access to the menu.
 			$( '.menu-item' ).children( 'a' ).focus( function() {
 				$( this ).parents( 'ul, li' ).addClass( 'focus' );
