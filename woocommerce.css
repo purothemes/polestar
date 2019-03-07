@@ -923,25 +923,22 @@ input.button.added:after,
   @media (min-width: 769px) {
     .woocommerce .product .related .product {
       margin-bottom: 0; } }
-  .woocommerce .product .woocommerce-tabs ~ .products .product {
-    margin-right: 3.5%;
-    width: 22.37%; }
-    @media (min-width: 769px) {
-      .woocommerce .product .woocommerce-tabs ~ .products .product:nth-of-type(3n+1) {
-        clear: none; }
-      .woocommerce .product .woocommerce-tabs ~ .products .product:nth-of-type(3n+3) {
-        margin-right: 3.5%; }
-      .woocommerce .product .woocommerce-tabs ~ .products .product:nth-of-type(3n+4) {
+  @media (min-width: 769px) {
+    .woocommerce .product .woocommerce-tabs ~ .products .product {
+      clear: none;
+      margin-right: 3.5%;
+      width: 22.37%; }
+      .woocommerce .product .woocommerce-tabs ~ .products .product:nth-of-type(4n+4) {
         margin-right: 0; } }
-    @media (max-width: 768px) {
-      .woocommerce .product .woocommerce-tabs ~ .products .product {
-        width: 48.25%; }
-        .woocommerce .product .woocommerce-tabs ~ .products .product:nth-of-type(3n+2) {
-          margin-right: 0; } }
-    @media (max-width: 480px) {
-      .woocommerce .product .woocommerce-tabs ~ .products .product {
-        margin-right: 0;
-        width: 100%; } }
+  @media (max-width: 768px) {
+    .woocommerce .product .woocommerce-tabs ~ .products .product {
+      width: 48.25%; }
+      .woocommerce .product .woocommerce-tabs ~ .products .product:nth-of-type(2n+2) {
+        margin-right: 0; } }
+  @media (max-width: 480px) {
+    .woocommerce .product .woocommerce-tabs ~ .products .product {
+      margin-right: 0;
+      width: 100%; } }
 
 /*--------------------------------------------------------------
 # Quick View
