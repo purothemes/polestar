@@ -999,7 +999,7 @@ a {
 .pagination {
   text-align: center; }
   .pagination .page-numbers {
-    background: #e6e6e6;
+    background: #f1f1f1;
     color: #626262;
     display: inline-block;
     margin-right: 3px;
@@ -2039,7 +2039,7 @@ a {
     padding-right: 17px;
     padding-left: 17px; }
   .page-links a span {
-    background: #e6e6e6;
+    background: #f1f1f1;
     display: inline-block;
     color: #626262; }
     .page-links a span:hover {
@@ -2050,7 +2050,7 @@ a {
   margin: 0 0 50px; }
 
 .tags-links a, #page .widget_tag_cloud a {
-  background: #e6e6e6;
+  background: #f1f1f1;
   border-radius: 2px;
   color: #626262;
   display: inline-block;
