@@ -150,13 +150,14 @@ Released under [GPL version 2](https://www.gnu.org/licenses/old-licenses/gpl-2.0
 
 == Changelog ==
 
-= 1.3.4 - 08 March 2019 =
+= 1.3.4 - 09 March 2019 =
 * Mobile Menu: Allow empty parent links to open the sub-menu.
 * WooCommerce single product page responsive improvements.
 * WooCommerce checkout payment options styling improvements.
 * WooCommerce archives minor styling improvements.
 * Removed Jetpack Responsive Videos. FitVids will now be allowed to run with Jetpack activated.
 * Removed `polestarResetMenu` function not being used. Resolves a sub-menu width edge case issue.
+* Adjusted element background colors slightly by introducing `$color__background-element`.
 
 = 1.3.3 - 01 February 2019 =
 * Logo scaling and sticky header sentinel improvements.
