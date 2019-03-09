@@ -103,7 +103,7 @@
 			list-style: none;
 			margin: 0;
 
-			li {
+			> li {
 				border-bottom: 1px solid $color__background-hr;
 				padding: 20px;
 				position: relative;
@@ -168,10 +168,6 @@
 					#wc-stripe-cc-form {
 						margin-top: 13px;
 					}
-
-					.clear {
-						display: none;
-					}
 				}
 
 				&.payment_method_paylike {
@@ -182,6 +178,11 @@
 						padding-left: 0;
 					}
 				}
+			}
+
+			.woocommerce-error {
+				clear: both;
+				margin-bottom: 0;
 			}
 		}
 
