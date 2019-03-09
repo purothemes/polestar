@@ -589,7 +589,7 @@ $sel: '';
 
 	.page-numbers {
 		@extend .button;
-		background: $color__background-hr;
+		background: $color__background-element;
 		color: $color__text-medium;
 		display: inline-block;
 		margin-right: 3px;

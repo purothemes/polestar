@@ -422,8 +422,8 @@ function polestar_excerpt() {
 		$read_more_text = '';
 	}
 	$ellipsis = '...';
-	$length = get_theme_mod( 'excerpt_length', 55 );
-	$excerpt = explode( ' ', get_the_excerpt(), $length );
+	$length   = get_theme_mod( 'excerpt_length', 55 );
+	$excerpt  = explode( ' ', get_the_excerpt(), $length );
 
 	if ( $length ) {
 		if ( count( $excerpt ) >= $length ) {
@@ -546,8 +546,8 @@ if ( ! function_exists( 'polestar_tag_cloud' ) ) :
  * Filter the Tag Cloud widget.
  */
 function polestar_tag_cloud( $args ) {
-	$args['unit'] = 'px';
-	$args['largest'] = 12;
+	$args['unit']     = 'px';
+	$args['largest']  = 12;
 	$args['smallest'] = 12;
 	return $args;
 }

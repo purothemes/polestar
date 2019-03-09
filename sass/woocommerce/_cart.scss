@@ -14,7 +14,7 @@
 		text-align: left;
 
 		thead {
-			background: $color__background-hr; 
+			background: $color__background-element; 
 			border: 1px solid $color__background-hr;
 
 			@media (max-width: 768px) {
@@ -53,7 +53,7 @@
 				}
 
 				td:last-of-type {
-					padding-bottom: 30px; 
+					padding-bottom: 30px;
 				}
 			}
 

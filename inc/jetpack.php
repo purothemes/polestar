@@ -33,12 +33,6 @@ function polestar_jetpack_setup() {
 		'footer' => 'page',
 		'posts_per_page' => get_option( 'jetpack_portfolio_posts_per_page' )
 	) );
-
-	/*
-	 * Enable support for Responsive Videos.
-	 * See: https://jetpack.com/support/responsive-videos/
-	 */
-	add_theme_support( 'jetpack-responsive-videos' );
 }
 endif;
 // polestar_jetpack_setup

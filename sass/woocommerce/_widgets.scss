@@ -126,7 +126,7 @@
 			}
 
 			&:first-of-type {
-				background: $color__background-hr;
+				background: $color__background-element;
 				color: $color__text-medium;
 
 				&:hover {
@@ -173,7 +173,7 @@
 .widget_price_filter {
 
 	.ui-slider {
-		background: $color__background-hr;
+		background: $color__background-element;
 		height: 3px;
 		margin: 21px 3.5px 26px;
 		position: relative;
@@ -212,7 +212,7 @@
 		}
 
 		.button {
-			background: $color__background-hr;
+			background: $color__background-element;
 			color: $color__text-medium;
 			float: right;
 
@@ -244,7 +244,7 @@
 	margin-right: -6px;
 
 	.tagcloud a {
-		background: $color__background-hr;
+		background: $color__background-element;
 		border-radius: 2px;
 		color: $color__text-medium;
 		display: inline-block;

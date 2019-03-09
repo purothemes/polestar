@@ -42,6 +42,6 @@ if ( '0' === $comment->comment_approved ) { ?>
 
 	<p class="comment-date">
 		<time class="woocommerce-review__published-date" datetime="<?php echo esc_attr( get_comment_date( 'c' ) ); ?>"><?php echo esc_html( get_comment_date( wc_date_format() ) ); ?></time>
-	</p>	
+	</p>
 
 <?php }

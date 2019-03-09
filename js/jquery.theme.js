@@ -106,18 +106,6 @@ jQuery( function( $ ) {
 		$( 'body.no-js' ).removeClass( 'no-js' );
 		if ( $( 'body' ).hasClass( 'css3-animations' ) ) {
 
-			var polestarResetMenu = function() {
-				$( '.main-navigation ul ul' ).each( function() {
-					var $$ = $( this );
-					var width = Math.max.apply( Math, $$.find( '> li:not(.mini_cart_item) > a' ).map( function() {
-						return $( this ).width();
-					} ).get() );
-					$$.find( '> li > a' ).width( width );
-				} );
-			};
-			polestarResetMenu();
-			$( window ).resize( polestarResetMenu );
-
 			// Add keyboard access to the menu.
 			$( '.menu-item' ).children( 'a' ).focus( function() {
 				$( this ).parents( 'ul, li' ).addClass( 'focus' );
@@ -279,14 +267,15 @@ jQuery( function( $ ) {
 			
 			$mobileMenu.find( '#primary-menu' ).show().css( 'opacity', 1 );
 			$mobileMenu.find( '.menu-item-has-children > a' ).addClass( 'has-dropdown' );
-			$mobileMenu.find( '.menu-item-has-children > a, .page_item_has_children > a' ).after( '<button class="dropdown-toggle" aria-expanded="false"><i class="icon-chevron-down" aria-hidden="true"></i></button>' );
+			$mobileMenu.find( '.page_item_has_children > a' ).addClass( 'has-dropdown' );
+			$mobileMenu.find( '.has-dropdown' ).after( '<button class="dropdown-toggle" aria-expanded="false"><i class="icon-chevron-down" aria-hidden="true"></i></button>' );
 			$mobileMenu.find( '.dropdown-toggle' ).click( function( e ) {
 				e.preventDefault();
 				$( this ).toggleClass( 'toggle-open' ).next( '.children, .sub-menu' ).slideToggle( 'fast' );
 			} );
 
 			$mobileMenu.find( '.has-dropdown' ).click( function( e ) {
-				if ( typeof $( this ).attr( 'href' ) === "undefined" ) {
+				if ( typeof $( this ).attr( 'href' ) === "undefined" || $( this ).attr( 'href' ) == "#" ) {
 					e.preventDefault();
 					$( this ).siblings( '.dropdown-toggle' ).trigger( 'click' );
 				}

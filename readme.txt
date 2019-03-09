@@ -5,7 +5,7 @@ Contributors: Puro
 Tags: one-column, two-columns, left-sidebar, right-sidebar, custom-background, custom-colors, custom-menu, custom-logo, featured-images, footer-widgets, full-width-template, post-formats, sticky-post, theme-options, threaded-comments, translation-ready, blog, e-commerce
 
 Requires at least: 4.7+
-Tested up to: 5.0.3
+Tested up to: 5.1
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -90,7 +90,6 @@ Polestar includes support for the following plugins:
 * [Jetpack Featured Content](https://jetpack.com/support/featured-content/)
 * [Jetpack Infinite Scroll](https://jetpack.com/support/infinite-scroll/)
 * [Jetpack Related Posts](https://jetpack.com/support/related-posts/)
-* [Jetpack Responsive Videos](https://jetpack.com/support/responsive-videos/)
 * [Max Mega Menu](https://wordpress.org/plugins/megamenu/)
 * [Page Builder by SiteOrigin](https://wordpress.org/plugins/siteorigin-panels/)
 * [Yet Another Related Posts Plugin (YARPP)](https://wordpress.org/plugins/yet-another-related-posts-plugin/)
@@ -150,6 +149,15 @@ Released under [GPL version 2](https://www.gnu.org/licenses/old-licenses/gpl-2.0
 [Source](https://github.com/TGMPA/TGM-Plugin-Activation)
 
 == Changelog ==
+
+= 1.3.4 - 09 March 2019 =
+* Mobile Menu: Allow empty parent links to open the sub-menu.
+* WooCommerce single product page responsive improvements.
+* WooCommerce checkout payment options styling improvements.
+* WooCommerce archives minor styling improvements.
+* Removed Jetpack Responsive Videos. FitVids will now be allowed to run with Jetpack activated.
+* Removed `polestarResetMenu` function not being used. Resolves a sub-menu width edge case issue.
+* Adjusted element background colors slightly by introducing `$color__background-element`.
 
 = 1.3.3 - 01 February 2019 =
 * Logo scaling and sticky header sentinel improvements.

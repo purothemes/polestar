@@ -1,5 +1,5 @@
 .woocommerce-checkout .entry-content {
-	padding: 0; 
+	padding: 0;
 }
 
 .woocommerce {
@@ -9,7 +9,7 @@
 		.form-row-first,
 		.form-row-last {
 			float: left;
-			padding-right: 5px; 
+			padding-right: 5px;
 			width: 25%;
 
 			@media (max-width: 768px) {
@@ -19,12 +19,11 @@
 
 		.form-row-last {
 			width: 60%;
-			
+
 			@media (max-width: 768px) {
 				width: 50%;
 			}
 		}
-
 	}
 
 	// Order review.
@@ -37,7 +36,7 @@
 		@media (max-width: 768px) {
 			clear: none;
 			float: none;
-			width: 100%; 
+			width: 100%;
 		}
 	}
 
@@ -47,11 +46,10 @@
 			border: 1px solid $color__background-hr;
 
 			th {
-				background: $color__background-hr;
+				background: $color__background-element;
 				font-size: 14px;
 			}
 		}
-
 
 		th,
 		td {
@@ -77,7 +75,7 @@
 				}
 
 				td:last-of-type {
-					padding-bottom: 30px; 
+					padding-bottom: 30px;
 				}
 			}
 		}
@@ -85,7 +83,7 @@
 		tfoot {
 
 			tr {
-				border-bottom: 1px solid $color__background-hr; 
+				border-bottom: 1px solid $color__background-hr;
 			}
 
 			th,
@@ -117,6 +115,10 @@
 						font-size: 12px; 
 						font-weight: normal;
 						margin-left: 5px; 
+
+						@media (max-width: 480px) {
+							margin-left: 0;
+						}
 					}
 				}
 
@@ -128,15 +130,21 @@
 					max-height: 50px;
 					position: absolute;
 					right: 20px;
-					top: 8px; 
+					top: 8px;
+
+					@media (max-width: 480px) {
+						display: block;
+						padding-top: 5px;
+						position: static;
+					}
 				}
 
 				.payment_box {
-					font-size: 14px; 
+					font-size: 14px;
 					padding: 10px 0 0;
 
 					&.payment_method_paypal {
-						padding-top: 20px; 
+						padding-top: 20px;
 					}
 
 					p {
@@ -154,6 +162,7 @@
 					.stripe-icon {
 						float: right;
 						margin-left: 5px;
+						padding-left: 0;
 					}
 
 					#wc-stripe-cc-form {
@@ -162,6 +171,15 @@
 
 					.clear {
 						display: none;
+					}
+				}
+
+				&.payment_method_paylike {
+
+					img {
+						float: right;
+						margin-left: 5px;
+						padding-left: 0;
 					}
 				}
 			}
@@ -175,14 +193,25 @@
 		}
 
 		.woocommerce-terms-and-conditions-wrapper {
-			border-bottom: 1px solid $color__background-hr;
-			padding: 20px;
 
 			p {
 				margin-bottom: 14px;
+				padding: 20px;
 
-				&.validate-required {
+				&:first-of-type {
+					padding-bottom: 0;
+				}
+
+				&:last-of-type {
+					border-bottom: 1px solid $color__background-hr;
 					margin-bottom: 0;
+					padding-top: 0;
+				}
+
+				&:only-of-type {
+					border-bottom: 1px solid $color__background-hr;
+					margin-bottom: 0;
+					padding: 20px;
 				}
 			}
 		}
