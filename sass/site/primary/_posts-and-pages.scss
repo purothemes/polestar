@@ -219,17 +219,9 @@
 	text-align: left;
 
 	.page-links-title {
-		background: none;
 		color: $color__text-dark;
 		font-size: 14px;
 		font-weight: 600;
-		padding: 0;
-		text-transform: none;
-
-		&:hover {
-			background: none;
-			color: $color__text-medium;
-		}
 	}
 
 	.post-page-numbers {
@@ -238,17 +230,12 @@
 		color: $color__text-medium;
 		display: inline-block;
 		font-size: 14px;
-		letter-spacing: .5px;
 		line-height: normal;
 		margin-right: 3px;
 		padding: 11px 17px;
 		transition: .3s;
 
-		&:hover {
-			background: $color__accent;
-			color: #fff;
-		}
-
+		&:hover,
 		&.current {
 			background: $color__accent;
 			color: #fff;

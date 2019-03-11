@@ -2015,30 +2015,20 @@ a {
 .page-links {
   text-align: left; }
   .page-links .page-links-title {
-    background: none;
     color: #2d2d2d;
     font-size: 14px;
-    font-weight: 600;
-    padding: 0;
-    text-transform: none; }
-    .page-links .page-links-title:hover {
-      background: none;
-      color: #626262; }
+    font-weight: 600; }
   .page-links .post-page-numbers {
     background: #f1f1f1;
     border-radius: 2px;
     color: #626262;
     display: inline-block;
     font-size: 14px;
-    letter-spacing: .5px;
     line-height: normal;
     margin-right: 3px;
     padding: 11px 17px;
     transition: .3s; }
-    .page-links .post-page-numbers:hover {
-      background: #4d8ffb;
-      color: #fff; }
-    .page-links .post-page-numbers.current {
+    .page-links .post-page-numbers:hover, .page-links .post-page-numbers.current {
       background: #4d8ffb;
       color: #fff; }
 
