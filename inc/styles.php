@@ -91,7 +91,6 @@ function polestar_build_styles() {
 			'selectors' => array(
 				'.button:hover',
 				'#infinite-handle span button:hover',
-				'.page-links span:hover',
 				'button:hover',
 				'.added_to_cart:hover',
 				'input[type="button"]:hover',
