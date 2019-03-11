@@ -731,12 +731,6 @@ a {
     body.no-touch .main-navigation ul li:hover:after,
     body.no-touch .main-navigation ul li.focus:after {
       content: ''; }
-    .main-navigation ul .touch-drop > ul {
-      opacity: 1;
-      transform: scale(1);
-      visibility: visible; }
-    .main-navigation ul .touch-drop:after {
-      content: ''; }
     .main-navigation ul li:hover > ul,
     .main-navigation ul li.focus > ul {
       opacity: 1;

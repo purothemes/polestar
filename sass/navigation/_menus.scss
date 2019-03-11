@@ -197,19 +197,6 @@
 			}
 		}
 
-		.touch-drop {
-
-			> ul {
-				opacity: 1;
-				transform: scale(1);
-				visibility: visible;
-			}
-
-			&:after {
-				content: '';
-			}
-		}
-
 		li:hover > ul,
 		li.focus > ul {
 			opacity: 1;
@@ -600,7 +587,8 @@ $sel: '';
 			color: $color__text-medium;
 		}
 
-		&:hover {
+		&:hover,
+		&:focus {
 			background: $color__accent;
 			color: #fff;
 		}
