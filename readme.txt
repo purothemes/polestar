@@ -150,6 +150,10 @@ Released under [GPL version 2](https://www.gnu.org/licenses/old-licenses/gpl-2.0
 
 == Changelog ==
 
+= 1.3.5 - 18 March 2019 =
+* Resolved Stripe payment gateway error message alignment.
+* Adjusted page link styling for changed HTML structure.
+
 = 1.3.4 - 09 March 2019 =
 * Mobile Menu: Allow empty parent links to open the sub-menu.
 * WooCommerce single product page responsive improvements.
