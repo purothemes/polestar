@@ -219,32 +219,24 @@
 	text-align: left;
 
 	.page-links-title {
-		background: none;
 		color: $color__text-dark;
 		font-size: 14px;
 		font-weight: 600;
-		padding: 0;
-		text-transform: none;
-
-		&:hover {
-			background: none;
-			color: $color__text-medium;
-		}
 	}
 
-	span {
-		@extend .button;
-		margin-right: 3px;
-		padding-right: 17px;
-		padding-left: 17px;
-	}
-
-	a span {
+	.post-page-numbers {
 		background: $color__background-element;
-		display: inline-block;
+		border-radius: 2px;
 		color: $color__text-medium;
+		display: inline-block;
+		font-size: 14px;
+		line-height: normal;
+		margin-right: 3px;
+		padding: 11px 17px;
+		transition: .3s;
 
-		&:hover {
+		&:hover,
+		&.current {
 			background: $color__accent;
 			color: #fff;
 		}

@@ -64,21 +64,22 @@ function polestar_build_styles() {
 		// Background Hex.
 		Customizer_Library_Styles()->add( array(
 			'selectors' => array(
+				'button',
 				'.button',
+				'.pagination .page-numbers:hover',
+				'.pagination .page-numbers:focus',
+				'.pagination .current',
 				'#infinite-handle span button',
 				'#infinite-handle span button:hover',
-				'.page-links span',
-				'button',
 				'.added_to_cart',
 				'input[type="button"]',
 				'input[type="reset"]',
 				'input[type="submit"]',
-				'.pagination .current',
-				'.pagination .page-numbers:hover',
-				'.page-links a span:hover',
+				'.main-navigation ul .menu-button a',
+				'.page-links .post-page-numbers:hover',
+				'.page-links .post-page-numbers.current',
 				'.tags-links a:hover',
-				'#page .widget_tag_cloud a:hover',
-				'.main-navigation ul .menu-button a'
+				'#page .widget_tag_cloud a:hover'
 			),
 			'declarations' => array(
 				'background' => $color
@@ -90,7 +91,6 @@ function polestar_build_styles() {
 			'selectors' => array(
 				'.button:hover',
 				'#infinite-handle span button:hover',
-				'.page-links span:hover',
 				'button:hover',
 				'.added_to_cart:hover',
 				'input[type="button"]:hover',

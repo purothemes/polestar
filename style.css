@@ -445,7 +445,7 @@ table {
 /*--------------------------------------------------------------
 # - Forms
 --------------------------------------------------------------*/
-.button, .pagination .page-numbers, #infinite-handle span button, .page-links span,
+.button, .pagination .page-numbers, #infinite-handle span button,
 button,
 .added_to_cart,
 input[type="button"],
@@ -462,7 +462,7 @@ input[type="submit"] {
   padding: 11px 25px;
   text-transform: uppercase;
   transition: .3s; }
-  .button:hover, .pagination .page-numbers:hover, #infinite-handle span button:hover, .page-links span:hover,
+  .button:hover, .pagination .page-numbers:hover, #infinite-handle span button:hover,
   button:hover,
   .added_to_cart:hover,
   input[type="button"]:hover,
@@ -470,14 +470,14 @@ input[type="submit"] {
   input[type="submit"]:hover {
     background-color: rgba(77, 143, 251, 0.8);
     color: #fff; }
-  .button:visited, .pagination .page-numbers:visited, #infinite-handle span button:visited, .page-links span:visited,
+  .button:visited, .pagination .page-numbers:visited, #infinite-handle span button:visited,
   button:visited,
   .added_to_cart:visited,
   input[type="button"]:visited,
   input[type="reset"]:visited,
   input[type="submit"]:visited {
     color: #fff; }
-  .button:active, .pagination .page-numbers:active, #infinite-handle span button:active, .page-links span:active, .button:focus, .pagination .page-numbers:focus, #infinite-handle span button:focus, .page-links span:focus,
+  .button:active, .pagination .page-numbers:active, #infinite-handle span button:active, .button:focus, .pagination .page-numbers:focus, #infinite-handle span button:focus,
   button:active,
   button:focus,
   .added_to_cart:active,
@@ -490,14 +490,14 @@ input[type="submit"] {
   input[type="submit"]:focus {
     color: #fff;
     outline: none; }
-  .button[disabled], .pagination [disabled].page-numbers, #infinite-handle span button[disabled], .page-links span[disabled],
+  .button[disabled], .pagination [disabled].page-numbers, #infinite-handle span button[disabled],
   button[disabled],
   .added_to_cart[disabled],
   input[type="button"][disabled],
   input[type="reset"][disabled],
   input[type="submit"][disabled] {
     opacity: 0.6; }
-    .button[disabled]:hover, .pagination [disabled].page-numbers:hover, #infinite-handle span button[disabled]:hover, .page-links span[disabled]:hover,
+    .button[disabled]:hover, .pagination [disabled].page-numbers:hover, #infinite-handle span button[disabled]:hover,
     button[disabled]:hover,
     .added_to_cart[disabled]:hover,
     input[type="button"][disabled]:hover,
@@ -730,12 +730,6 @@ a {
       visibility: visible; }
     body.no-touch .main-navigation ul li:hover:after,
     body.no-touch .main-navigation ul li.focus:after {
-      content: ''; }
-    .main-navigation ul .touch-drop > ul {
-      opacity: 1;
-      transform: scale(1);
-      visibility: visible; }
-    .main-navigation ul .touch-drop:after {
       content: ''; }
     .main-navigation ul li:hover > ul,
     .main-navigation ul li.focus > ul {
@@ -1007,7 +1001,7 @@ a {
     padding-left: 16px; }
     .pagination .page-numbers:visited {
       color: #626262; }
-    .pagination .page-numbers:hover {
+    .pagination .page-numbers:hover, .pagination .page-numbers:focus {
       background: #4d8ffb;
       color: #fff; }
     .pagination .page-numbers.next, .pagination .page-numbers.prev {
@@ -1467,23 +1461,19 @@ a {
     .widget-area .widget a:hover,
     .site-footer .widget a:hover {
       color: #4d8ffb; }
-  .widget-area .widget .button, .widget-area .widget .pagination .page-numbers, .pagination .widget-area .widget .page-numbers, .widget-area .widget #infinite-handle span button, #infinite-handle span .widget-area .widget button, .widget-area .widget .page-links span, .page-links .widget-area .widget span,
+  .widget-area .widget .button, .widget-area .widget .pagination .page-numbers, .pagination .widget-area .widget .page-numbers, .widget-area .widget #infinite-handle span button, #infinite-handle span .widget-area .widget button,
   .site-footer .widget .button,
   .site-footer .widget .pagination .page-numbers, .pagination
   .site-footer .widget .page-numbers,
   .site-footer .widget #infinite-handle span button, #infinite-handle span
-  .site-footer .widget button,
-  .site-footer .widget .page-links span, .page-links
-  .site-footer .widget span {
+  .site-footer .widget button {
     color: #fff; }
-    .widget-area .widget .button:hover, .widget-area .widget .pagination .page-numbers:hover, .pagination .widget-area .widget .page-numbers:hover, .widget-area .widget #infinite-handle span button:hover, #infinite-handle span .widget-area .widget button:hover, .widget-area .widget .page-links span:hover, .page-links .widget-area .widget span:hover,
+    .widget-area .widget .button:hover, .widget-area .widget .pagination .page-numbers:hover, .pagination .widget-area .widget .page-numbers:hover, .widget-area .widget #infinite-handle span button:hover, #infinite-handle span .widget-area .widget button:hover,
     .site-footer .widget .button:hover,
     .site-footer .widget .pagination .page-numbers:hover, .pagination
     .site-footer .widget .page-numbers:hover,
     .site-footer .widget #infinite-handle span button:hover, #infinite-handle span
-    .site-footer .widget button:hover,
-    .site-footer .widget .page-links span:hover, .page-links
-    .site-footer .widget span:hover {
+    .site-footer .widget button:hover {
       color: #fff; }
   .widget-area .widget ul,
   .site-footer .widget ul {
@@ -2025,24 +2015,20 @@ a {
 .page-links {
   text-align: left; }
   .page-links .page-links-title {
-    background: none;
     color: #2d2d2d;
     font-size: 14px;
-    font-weight: 600;
-    padding: 0;
-    text-transform: none; }
-    .page-links .page-links-title:hover {
-      background: none;
-      color: #626262; }
-  .page-links span {
-    margin-right: 3px;
-    padding-right: 17px;
-    padding-left: 17px; }
-  .page-links a span {
+    font-weight: 600; }
+  .page-links .post-page-numbers {
     background: #f1f1f1;
+    border-radius: 2px;
+    color: #626262;
     display: inline-block;
-    color: #626262; }
-    .page-links a span:hover {
+    font-size: 14px;
+    line-height: normal;
+    margin-right: 3px;
+    padding: 11px 17px;
+    transition: .3s; }
+    .page-links .post-page-numbers:hover, .page-links .post-page-numbers.current {
       background: #4d8ffb;
       color: #fff; }
 
