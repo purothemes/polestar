@@ -180,20 +180,12 @@
 			}
 		}
 
-		@at-root body.no-touch & {
-
-			li:hover,
-			li.focus {
-
-				> ul {
-					opacity: 1;
-					transform: scale(1);
-					visibility: visible;
-				}
-
-				&:after {
-					content: '';
-				}
+		@at-root body:not(.ios) & {
+			li:hover > ul,
+			li.focus > ul {
+				opacity: 1;
+				transform: scale(1);
+				visibility: visible;
 			}
 		}
 
