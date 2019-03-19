@@ -131,7 +131,7 @@ jQuery( function( $ ) {
 		}
 		$( window ).scroll( function() {
 			if ( $( '#site-navigation ul li' ).hasClass( 'current' ) ) {
-				$( '#site-navigation li' ).removeClass( 'current-menu-item' ); 
+				$( '#site-navigation li' ).removeClass( 'current-menu-item' );
 			}
 		} );
 	} );
