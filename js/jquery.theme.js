@@ -136,6 +136,38 @@ jQuery( function( $ ) {
 		} );
 	} );
 
+	// Detect if is a touch device. We detect this through ontouchstart, msMaxTouchPoints and MaxTouchPoints.
+	if ( 'ontouchstart' in document.documentElement || window.navigator.msMaxTouchPoints || window.navigator.MaxTouchPoints ) {
+		if ( /iPad|iPhone|iPod/.test( navigator.userAgent ) && ! window.MSStream ) {
+			$( 'body' ).css( 'cursor', 'pointer' );
+			$( 'body' ).addClass( 'ios' );
+		}
+
+		$( '.main-navigation #primary-menu' ).find( '.menu-item-has-children > a' ).each( function() {
+			$( this ).on( 'click touchend', function( e ) {
+				var link = $( this );
+				e.stopPropagation();
+
+				if ( e.type == 'click' ) {
+					return;
+				}
+
+				if ( ! link.parent().hasClass( 'hover' ) ) {
+					// Remove .hover from all other sub menus
+					$( '.menu-item.hover' ).removeClass( 'hover' );
+					link.parents('.menu-item').addClass( 'hover' );
+					e.preventDefault();
+				}
+
+				// Remove .hover class when user clicks outside of sub menu
+				$( document ).one( 'click', function() {
+					link.parent().removeClass( 'hover' );
+				} );
+
+			} );
+		} );
+	}	
+
 	// Smooth scroll from internal page anchors.
 	var adminBarHeight = $( '#wpadminbar' ).outerHeight(),
 		isAdminBar = $( 'body' ).hasClass( 'admin-bar' ),

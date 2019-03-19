@@ -723,14 +723,11 @@ a {
         .main-navigation ul .menu-button a:hover {
           background-color: rgba(77, 143, 251, 0.8);
           color: #fff; }
-    body.no-touch .main-navigation ul li:hover > ul,
-    body.no-touch .main-navigation ul li.focus > ul {
+    body:not(.ios) .main-navigation ul li:hover > ul,
+    body:not(.ios) .main-navigation ul li.focus > ul {
       opacity: 1;
       transform: scale(1);
       visibility: visible; }
-    body.no-touch .main-navigation ul li:hover:after,
-    body.no-touch .main-navigation ul li.focus:after {
-      content: ''; }
     .main-navigation ul li:hover > ul,
     .main-navigation ul li.focus > ul {
       opacity: 1;
