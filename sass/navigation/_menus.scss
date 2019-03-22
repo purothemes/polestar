@@ -181,6 +181,7 @@
 		}
 
 		@at-root body:not(.ios) & {
+
 			li:hover > ul,
 			li.focus > ul {
 				opacity: 1;
