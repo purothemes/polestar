@@ -93,7 +93,7 @@ function polestar_woocommerce_update_cart_count( $fragments ) {
 	return $fragments;
 }
 endif;
-add_filter( 'add_to_cart_fragments', 'polestar_woocommerce_update_cart_count' );
+add_filter( 'woocommerce_add_to_cart_fragments', 'polestar_woocommerce_update_cart_count' );
 
 /**
  * Filter the product archive pagination.

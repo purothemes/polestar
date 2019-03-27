@@ -153,20 +153,20 @@ jQuery( function( $ ) {
 				}
 
 				if ( ! link.parent().hasClass( 'hover' ) ) {
-					// Remove .hover from all other sub menus
+					// Remove .hover from all other sub menus.
 					$( '.menu-item.hover' ).removeClass( 'hover' );
 					link.parents('.menu-item').addClass( 'hover' );
 					e.preventDefault();
 				}
 
-				// Remove .hover class when user clicks outside of sub menu
+				// Remove .hover class when user clicks outside of sub menu.
 				$( document ).one( 'click', function() {
 					link.parent().removeClass( 'hover' );
 				} );
 
 			} );
 		} );
-	}	
+	}
 
 	// Smooth scroll from internal page anchors.
 	var adminBarHeight = $( '#wpadminbar' ).outerHeight(),
