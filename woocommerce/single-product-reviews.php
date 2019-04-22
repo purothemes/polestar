@@ -41,8 +41,8 @@ if ( ! comments_open() ) {
 					apply_filters(
 						'woocommerce_comment_pagination_args',
 						array(
-							'prev_text' => '&larr;',
-							'next_text' => '&rarr;',
+							'prev_text' => '<span class="icon-long-arrow-left"></span>',
+							'next_text' => '<span class="icon-long-arrow-right"></span>',
 							'type'      => 'list',
 						)
 					)
