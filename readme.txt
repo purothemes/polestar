@@ -5,7 +5,7 @@ Contributors: Puro
 Tags: one-column, two-columns, left-sidebar, right-sidebar, custom-background, custom-colors, custom-menu, custom-logo, featured-images, footer-widgets, full-width-template, post-formats, sticky-post, theme-options, threaded-comments, translation-ready, blog, e-commerce
 
 Requires at least: 4.7+
-Tested up to: 5.1
+Tested up to: 5.1.1
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -149,6 +149,9 @@ Released under [GPL version 2](https://www.gnu.org/licenses/old-licenses/gpl-2.0
 [Source](https://github.com/TGMPA/TGM-Plugin-Activation)
 
 == Changelog ==
+
+= 1.3.7 - 22 April 2019 =
+* Updated WooCommerce single product reviews template to version 3.6.0.
 
 = 1.3.6 - 26 March 2019 =
 * Mobile Menu: Allow mobile users to open sub menu when mobile menu is disabled.
