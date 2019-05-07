@@ -229,6 +229,10 @@
 		clear: both;
 		margin: 0 0 8px;
 		overflow: auto;
+		
+		&:last-of-type {
+			margin-bottom: 0;
+		}
 
 		input {
 			margin-right: 0;

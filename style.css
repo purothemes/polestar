@@ -2437,6 +2437,8 @@ a {
   clear: both;
   margin: 0 0 8px;
   overflow: auto; }
+  #commentform .comment-subscription-form:last-of-type {
+    margin-bottom: 0; }
   #commentform .comment-subscription-form input {
     margin-right: 0; }
   #commentform .comment-subscription-form label {
