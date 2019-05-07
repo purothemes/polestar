@@ -150,6 +150,9 @@ Released under [GPL version 2](https://www.gnu.org/licenses/old-licenses/gpl-2.0
 
 == Changelog ==
 
+= 1.3.8 - 08 May 2019 =
+* Removed WooCommerce mini-cart "Cart" title.
+
 = 1.3.7 - 22 April 2019 =
 * Updated WooCommerce single product reviews template to version 3.6.0.
 
