@@ -812,7 +812,7 @@ input.button.added:after,
         margin: 0 30px 0 0;
         padding-bottom: 5px;
         text-transform: uppercase; }
-        @media (max-width: 480px) {
+        @media (max-width: 768px) {
           .woocommerce .product .woocommerce-tabs .wc-tabs li {
             display: block;
             font-size: 0.9333rem;
@@ -824,7 +824,7 @@ input.button.added:after,
           outline: 0; }
         .woocommerce .product .woocommerce-tabs .wc-tabs li.active {
           border-bottom: 2px solid #4d8ffb; }
-          @media (max-width: 480px) {
+          @media (max-width: 768px) {
             .woocommerce .product .woocommerce-tabs .wc-tabs li.active {
               border: none; }
               .woocommerce .product .woocommerce-tabs .wc-tabs li.active a {
@@ -832,13 +832,15 @@ input.button.added:after,
     .woocommerce .product .woocommerce-tabs .wc-tab {
       padding-top: 25px; }
   .woocommerce .product .shop_attributes {
-    border: none; }
+    border: none;
+    width: initial; }
     .woocommerce .product .shop_attributes tr {
       border: none; }
-      .woocommerce .product .shop_attributes tr th {
+      .woocommerce .product .shop_attributes tr th.woocommerce-product-attributes-item__label {
         color: #2d2d2d;
         text-align: left;
-        text-transform: capitalize; }
+        text-transform: capitalize;
+        padding-left: 0; }
       .woocommerce .product .shop_attributes tr th,
       .woocommerce .product .shop_attributes tr td {
         padding: 8px; }
