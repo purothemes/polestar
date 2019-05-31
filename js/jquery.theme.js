@@ -91,6 +91,9 @@ jQuery( function( $ ) {
 
 	// Close the header search when clicking outside of the search field or open search button.
 	$( '#header-search input[type=search]' ).on( 'focusout', function( e ) {
+		if ( $( 'body' ).hasClass( 'disable-search-close' ) ) {
+			return;
+		}		
 		$( '#close-search.animate-in' ).trigger( 'click' );
 	} );
 
