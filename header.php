@@ -94,7 +94,7 @@ do_action( 'polestar_body_top' );
 
 						</nav><!-- #site-navigation -->
 
-						<?php if ( get_theme_mod( 'menu_search', true ) ) : ?>	
+						<?php if ( get_theme_mod( 'menu_search', true ) ) : ?>
 							<div id="header-search">
 								<div class="polestar-container">
 									<label for='s' class='screen-reader-text'><?php esc_html_e( 'Search for:', 'polestar' ); ?></label>
