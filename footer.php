@@ -47,7 +47,7 @@ $footer_widgets_page_setting = puro_page_setting( 'footer_widgets', true );
 
 					$credit_text = apply_filters(
 						'polestar_footer_credits',
-						'<span>' . sprintf( esc_html__( 'Theme by %s', 'polestar' ), '<a href="https://purothemes.com/">Puro</a>' ) . '</span>',
+						'<span>' . sprintf( esc_html__( 'Theme by %s', 'polestar' ), '<a href="https://purothemes.com/">Puro</a>' ) . '</span>'
 					);
 
 					if ( function_exists( 'the_privacy_policy_link' ) && get_theme_mod( 'footer_privacy_policy_link', true ) ) {
