@@ -38,7 +38,7 @@ $footer_widgets_page_setting = puro_page_setting( 'footer_widgets', true );
 				?>
 			</div><!-- .polestar-container -->
 		<?php endif; ?>	
-			
+
 		<div class="bottom-bar">
 			<div class="polestar-container">
 				<div class="site-info">
@@ -64,7 +64,7 @@ $footer_widgets_page_setting = puro_page_setting( 'footer_widgets', true );
 		</div><!-- .bottom-bar -->
 
 		<?php do_action( 'polestar_footer_bottom' ); ?>
-		
+
 	</footer><!-- #colophon -->
 </div><!-- #page -->
 
