@@ -150,6 +150,13 @@ Released under [GPL version 2](https://www.gnu.org/licenses/old-licenses/gpl-2.0
 
 == Changelog ==
 
+= 1.3.9 - 02 September 2019 =
+* Added new core `wp_body_open` hook.
+* Minor WC product data tab styling adjustments.
+* Updated Customizer Library.
+* Added an early return for disabling header search close.
+* Changed bottom bar item separators.
+
 = 1.3.8 - 08 May 2019 =
 * Removed WooCommerce mini-cart "Cart" title.
 
