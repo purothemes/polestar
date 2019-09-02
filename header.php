@@ -20,7 +20,12 @@
 </head>
 
 <body <?php body_class(); ?>>
-<?php do_action( 'polestar_body_top' ); ?>
+<?php if ( function_exists( 'wp_body_open' ) ) {
+	wp_body_open();
+}
+do_action( 'polestar_body_top' );
+?>
+
 <div id="page" class="site">
 	<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'polestar' ); ?></a>
 
@@ -89,7 +94,7 @@
 
 						</nav><!-- #site-navigation -->
 
-						<?php if ( get_theme_mod( 'menu_search', true ) ) : ?>	
+						<?php if ( get_theme_mod( 'menu_search', true ) ) : ?>
 							<div id="header-search">
 								<div class="polestar-container">
 									<label for='s' class='screen-reader-text'><?php esc_html_e( 'Search for:', 'polestar' ); ?></label>

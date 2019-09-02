@@ -49,6 +49,22 @@
 		text-align: left;
 		width: 30%;
 
+		span {
+			
+			&:after {
+				content: "\002d";
+				display: inline-block;
+				padding: 0 5px;
+			}
+
+			&:last-of-type {
+				
+				&:after {
+					content: none;
+				}
+			}
+		}
+
 		@media (max-width: 768px) {
 			float: none;
 			text-align: center;

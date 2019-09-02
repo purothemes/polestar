@@ -2509,6 +2509,12 @@ a {
     font-size: 13px;
     text-align: left;
     width: 30%; }
+    .site-footer .site-info span:after {
+      content: "\002d";
+      display: inline-block;
+      padding: 0 5px; }
+    .site-footer .site-info span:last-of-type:after {
+      content: none; }
     @media (max-width: 768px) {
       .site-footer .site-info {
         float: none;

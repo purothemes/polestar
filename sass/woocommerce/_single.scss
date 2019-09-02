@@ -315,7 +315,7 @@
 					padding-bottom: 5px; 
 					text-transform: uppercase;
 
-					@media (max-width: 480px) {
+					@media (max-width: 768px) {
 						display: block;
 						font-size: 0.9333rem;
 						margin-bottom: 10px;
@@ -331,7 +331,7 @@
 					&.active {
 						border-bottom: 2px solid $color__accent;
 
-						@media (max-width: 480px) {
+						@media (max-width: 768px) {
 							border: none;
 
 							a {
@@ -349,14 +349,16 @@
 
 		.shop_attributes {
 			border: none;
+			width: initial;
 
 			tr {
 				border: none;
 
-				th {
+				th.woocommerce-product-attributes-item__label {
 					color: $color__text-dark;
 					text-align: left;
 					text-transform: capitalize;
+					padding-left: 0;
 				}
 
 				th,

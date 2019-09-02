@@ -38,21 +38,21 @@ $footer_widgets_page_setting = puro_page_setting( 'footer_widgets', true );
 				?>
 			</div><!-- .polestar-container -->
 		<?php endif; ?>	
-			
+
 		<div class="bottom-bar">
 			<div class="polestar-container">
 				<div class="site-info">
 					<?php
 					polestar_footer_text();
 
-					if ( function_exists( 'the_privacy_policy_link' ) && get_theme_mod( 'footer_privacy_policy_link', true ) ) {
-						the_privacy_policy_link( '', '.&nbsp;' );
-					}
-					
 					$credit_text = apply_filters(
 						'polestar_footer_credits',
-						sprintf( esc_html__( 'Theme by %s', 'polestar' ), '<a href="https://purothemes.com/">Puro</a>.' )
+						'<span>' . sprintf( esc_html__( 'Theme by %s', 'polestar' ), '<a href="https://purothemes.com/">Puro</a>' ) . '</span>'
 					);
+
+					if ( function_exists( 'the_privacy_policy_link' ) && get_theme_mod( 'footer_privacy_policy_link', true ) ) {
+						the_privacy_policy_link( '<span>', '</span>' );
+					}
 
 					if ( ! empty( $credit_text ) ) {
 						echo wp_kses_post( $credit_text );
@@ -64,7 +64,7 @@ $footer_widgets_page_setting = puro_page_setting( 'footer_widgets', true );
 		</div><!-- .bottom-bar -->
 
 		<?php do_action( 'polestar_footer_bottom' ); ?>
-		
+
 	</footer><!-- #colophon -->
 </div><!-- #page -->
 
