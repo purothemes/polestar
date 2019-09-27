@@ -1,7 +1,7 @@
 /**
  * File jquery.theme.js.
  *
- * Handles the primary JavaScript functions for the theme.
+ * Handles the primary JavaScript functions for the theme - (c) Puro, freely distributable under the terms of the GPL 2.0 license. 
  */
 
 /* globals jQuery, polestar */
