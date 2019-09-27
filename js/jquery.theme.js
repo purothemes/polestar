@@ -268,7 +268,7 @@ jQuery( function( $ ) {
 				isInOneSection = 'yes';
 				jQuery( '#site-navigation .current' ).removeClass( 'current' );
 				// Find the menu button with the same ID section.
-				jQuery( '#site-navigation a[href$="' + thisID + '"]' ).parent( 'li' ).addClass( 'current' );	// Find the menu button with the same ID section.
+				jQuery( '#site-navigation a[href$="' + thisID + '"]' ).parent( 'li' ).addClass( 'current' ); // Find the menu button with the same ID section.
 				return false;
 			}
 			if ( isInOneSection === 'no' ) {
@@ -299,7 +299,7 @@ jQuery( function( $ ) {
 			if ( $( '.main-navigation .shopping-cart' ).length ) {
 				$mobileMenu.append( $( '.main-navigation .shopping-cart .shopping-cart-link' ).clone() );
 			}
-			
+
 			$mobileMenu.find( '#primary-menu' ).show().css( 'opacity', 1 );
 			$mobileMenu.find( '.menu-item-has-children > a' ).addClass( 'has-dropdown' );
 			$mobileMenu.find( '.page_item_has_children > a' ).addClass( 'has-dropdown' );
