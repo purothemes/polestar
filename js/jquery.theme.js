@@ -32,9 +32,9 @@ jQuery( function( $ ) {
 		} );
 	} );
 
-	// Setup FitVids for entry content, Page Builder by SiteOrigin and WooCommerce. Ignore Tableau.
+	// Setup FitVids for entry content, video post formats, SiteOrigin panels and WooCommerce pages. Ignore Tableau.
 	if ( typeof $.fn.fitVids !== 'undefined' ) {
-		$( '.entry-content, .entry-content .panel, .woocommerce #main' ).fitVids( { ignore: '.tableauViz' } );
+		$( '.entry-content, .entry-content .panel, .entry-video, .woocommerce #main' ).fitVids( { ignore: '.tableauViz' } );
 	}
 
 	// FlexSlider.
