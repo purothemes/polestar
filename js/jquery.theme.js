@@ -126,7 +126,7 @@ jQuery( function( $ ) {
 	} );
 
 	// Main menu current menu item indication.
-	jQuery( document ).ready( function( $ ) {
+	$( document ).ready( function( $ ) {
 		if ( window.location.hash ) {
 			return;
 		} else {
@@ -172,19 +172,22 @@ jQuery( function( $ ) {
 	}
 
 	// Smooth scroll from internal page anchors.
-	var adminBarHeight = $( '#wpadminbar' ).outerHeight(),
-		isAdminBar = $( 'body' ).hasClass( 'admin-bar' ),
-		isStickyHeader = $( 'header' ).hasClass( 'sticky' ),
-		headerHeight;
+	headerHeight = function() {
+		var adminBarHeight = $( '#wpadminbar' ).outerHeight(),
+			isAdminBar = $( 'body' ).hasClass( 'admin-bar' ),
+			isStickyHeader = $( 'header' ).hasClass( 'sticky' ),
+			headerHeight;
 
-	// Header height. 2px to account for header shadow.
-	if ( isStickyHeader && isAdminBar && jQuery( window ).width() > 600 ) { // From 600px the admin bar isn't sticky so we shouldn't take its height into account.
-		headerHeight = adminBarHeight + $( 'header' ).outerHeight() - 2;
-	} else if ( isStickyHeader ) {
-		headerHeight = $( 'header' ).outerHeight() - 2;
-	} else {
-		headerHeight = 0;
-	}
+		// Header height. 1px to account for header shadow.
+		if ( isStickyHeader && isAdminBar && $( window ).width() > 600 ) { // From 600px the admin bar isn't sticky so we shouldn't take its height into account.
+			headerHeight = adminBarHeight + $( 'header' ).outerHeight() - 1;
+		} else if ( isStickyHeader ) {
+			headerHeight = $( 'header' ).outerHeight() - 1;
+		} else {
+			headerHeight = 0;
+		}
+		return headerHeight;
+	};
 
 	$.fn.polestarSmoothScroll = function() {
 
@@ -199,37 +202,48 @@ jQuery( function( $ ) {
 			var alink   = this;                // This button pressed.
 
 			// Check if there is a section that had same id as the button pressed.
-			if ( jQuery( '.panel-grid [id*=' + idName + ']' ).length > 0 ) {
-				jQuery( '#site-navigation .current' ).removeClass('current');
-				jQuery( alink).parent( 'li' ).addClass( 'current' );
+			if ( $( '.panel-grid [id*=' + idName + ']' ).length > 0 ) {
+				$( '#site-navigation .current' ).removeClass( 'current' );
+				$( alink ).parent( 'li' ).addClass( 'current' );
 			} else {
-				jQuery( '#site-navigation .current' ).removeClass( 'current' );
+				$( '#site-navigation .current' ).removeClass( 'current' );
 			}
 			if ( location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname ) {
-				var target = jQuery( this.hash );
-				target = target.length ? target : jQuery( '[name=' + this.hash.slice( 1 ) +']' );
+				var target = $( this.hash );
+				target = target.length ? target : $( '[name=' + this.hash.slice( 1 ) +']' );
 				if ( target.length ) {
-					jQuery( 'html, body' ).animate( {
-						scrollTop: target.offset().top - headerHeight
-					}, 1200 );
+					$( 'html, body' ).animate( {
+						scrollTop: target.offset().top - headerHeight()
+					},
+					{
+						duration: 1200,
+						start: function() {
+							$( 'html, body' ).on( 'wheel touchmove', function() {
+								$( 'html, body' ).stop().off( 'wheel touchmove' );
+							} );
+						},
+						complete: function() {
+							$( 'html, body' ).finish().off( 'wheel touchmove' );
+						},
+					} );
 					return false;
 				}
 			}
 		} );
 	};
 
-	jQuery( window ).load( function() {
+	$( window ).load( function() {
 		$( '#site-navigation a[href*="#"]:not([href="#"]), .comments-link a[href*="#"]:not([href="#"]), .puro-scroll[href*="#"]:not([href="#"])' ).polestarSmoothScroll();
 	} );
 
 	// Adjust for sticky header when linking from external anchors.
-	jQuery( window ).load( function() {
+	$( window ).load( function() {
 
 		if ( location.pathname.replace( /^\//,'' ) == window.location.pathname.replace( /^\//,'' ) && location.hostname == window.location.hostname ) {
-			var target = jQuery( window.location.hash );
+			var target = $( window.location.hash );
 			if ( target.length ) {
-				jQuery( 'html, body' ).animate( {
-					scrollTop: target.offset().top - headerHeight
+				$( 'html, body' ).animate( {
+					scrollTop: target.offset().top - headerHeight()
 				}, 0 );
 				return false;
 			}
@@ -240,44 +254,44 @@ jQuery( function( $ ) {
 	function polestarSelected() {
 
 		// Cursor position.
-		var scrollTop = jQuery( window ).scrollTop();
+		var scrollTop = $( window ).scrollTop();
 
 		// Used for checking if the cursor is in one section or not.
 		var isInOneSection = 'no';
 
 		// For all sections check if the cursor is inside a section.
-		jQuery( '.panel-row-style' ).each( function() {
+		$( '.panel-row-style' ).each( function() {
 
 			// Section ID.
-			var thisID = '#' + jQuery( this ).attr( 'id' );
+			var thisID = '#' + $( this ).attr( 'id' );
 
-			// Distance between top and our section. Minus 2px to compensate for an extra pixel produced when a Page Builder row bottom margin is set to 0.
-			var offset = jQuery( this ).offset().top - 2;
+			// Distance between top and our section. Minus 1px to compensate for an extra pixel produced when a Page Builder row bottom margin is set to 0.
+			var offset = $( this ).offset().top - 1;
 
 			// Section height.
-			var thisHeight = jQuery( this ).outerHeight();
+			var thisHeight = $( this ).outerHeight();
 
 			// Where the section begins.
-			var thisBegin = offset - headerHeight;
+			var thisBegin = offset - headerHeight();
 
 			// Where the section ends.
-			var thisEnd = offset + thisHeight - headerHeight;
+			var thisEnd = offset + thisHeight - headerHeight();
 
 			// If position of the cursor is inside of the this section.
 			if ( scrollTop >= thisBegin && scrollTop <= thisEnd ) {
 				isInOneSection = 'yes';
-				jQuery( '#site-navigation .current' ).removeClass( 'current' );
+				$( '#site-navigation .current' ).removeClass( 'current' );
 				// Find the menu button with the same ID section.
-				jQuery( '#site-navigation a[href$="' + thisID + '"]' ).parent( 'li' ).addClass( 'current' ); // Find the menu button with the same ID section.
+				$( '#site-navigation a[href$="' + thisID + '"]' ).parent( 'li' ).addClass( 'current' ); // Find the menu button with the same ID section.
 				return false;
 			}
 			if ( isInOneSection === 'no' ) {
-				jQuery( '#site-navigation .current' ).removeClass( 'current' );
+				$( '#site-navigation .current' ).removeClass( 'current' );
 			}
 		} );
 	}
 
-	jQuery( window ).on( 'scroll', polestarSelected );
+	$( window ).on( 'scroll', polestarSelected );
 
 	// Mobile menu.
 	var $mobileMenu = false;
