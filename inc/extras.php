@@ -130,24 +130,6 @@ function polestar_post_class_filter( $classes ) {
 endif;
 add_filter( 'post_class', 'polestar_post_class_filter' );
 
-if ( ! function_exists( 'polestar_premium_setup' ) ) :
-/**
- * Polestar upsell notice.
- */
-function polestar_upsell_notice() {
-	wp_enqueue_script( 'polestar-customizer-upsell', get_template_directory_uri() . '/js/polestar-upsell.js', array(), '1.0.0', true );
-	wp_localize_script(
-		'polestar-customizer-upsell',
-		'polestar10n',
-		array(
-			'polestarURL'   => esc_html__( 'https://purothemes.com/themes/polestar/', 'polestar' ),
-			'polestarLabel' => esc_html__( 'Buy Premium Version', 'polestar' ),
-		)
-	);
-}
-add_action( 'customize_controls_enqueue_scripts', 'polestar_upsell_notice' );
-endif;
-
 /**
  * Add our SiteOrigin Premium affiliate ID.
  */
