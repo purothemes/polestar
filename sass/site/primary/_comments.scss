@@ -32,7 +32,7 @@
 
 		.avatar-container {
 			float: left;
-			
+
 			@media (max-width: 480px) {
 				display: none;
 			}
@@ -229,7 +229,7 @@
 		clear: both;
 		margin: 0 0 8px;
 		overflow: auto;
-		
+
 		&:last-of-type {
 			margin-bottom: 0;
 		}

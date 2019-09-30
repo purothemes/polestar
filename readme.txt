@@ -150,6 +150,12 @@ Released under [GPL version 2](https://www.gnu.org/licenses/old-licenses/gpl-2.0
 
 == Changelog ==
 
+= 1.3.10 - 30 September 2019 =
+* Ensured FitVids targets `entry-video` for video post format.
+* Changed sticky header height calculation to allow for re-calculation.
+* Fixed smooth scroll sticky anchor when mobile menu in use.
+* Minor about page and code formatting fixes.
+
 = 1.3.9 - 02 September 2019 =
 * Added new core `wp_body_open` hook.
 * Minor WC product data tab styling adjustments.

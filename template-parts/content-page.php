@@ -16,7 +16,7 @@
 		<div class="entry-thumbnail">
 			<?php the_post_thumbnail(); ?>
 		</div>
-	<?php endif; ?>	
+	<?php endif; ?>
 
 	<?php if ( puro_page_setting( 'page_title' ) ) : ?>
 		<header class="entry-header">

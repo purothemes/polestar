@@ -31,8 +31,8 @@ if ( have_posts() ) :
 	endwhile;
 
 	the_posts_pagination( array( 
-		'prev_text' => '<span class="icon-long-arrow-left"></span>', 
-		'next_text' => '<span class="icon-long-arrow-right"></span>' 
+		'prev_text' => '<span class="icon-long-arrow-left"></span>',
+		'next_text' => '<span class="icon-long-arrow-right"></span>'
 	) );
 
 else :
