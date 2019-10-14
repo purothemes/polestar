@@ -444,7 +444,7 @@ function polestar_theme_options() {
 			),
 			'default'  => 3,
 			'priority' => '10'
-		);			
+		);
 
 		$options['woocommerce_sidebar_position'] = array(
 			'id'          => 'woocommerce_sidebar_position',
@@ -515,7 +515,7 @@ function polestar_theme_options() {
 			'title'    => esc_html__( 'More Options', 'polestar' ),
 			'priority' => '90',
 			'panel'    => $panel
-		);	
+		);
 
 		$options['polestar_premium'] = array(
 			'id'      => 'polestar_premium',
