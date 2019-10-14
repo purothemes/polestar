@@ -142,7 +142,7 @@ if ( ! function_exists( 'polestar_footer_text' ) ) :
 function polestar_footer_text() {
 
 	$text = get_theme_mod( 'footer_text', esc_html__( 'Copyright &copy; {year} {sitename}', 'polestar' ) );
-
+	if ( empty( $text ) ) return;
 	$text = str_replace(
 		array( '{sitename}', '{year}' ),
 		array( get_bloginfo( 'sitename' ), date_i18n( esc_html__( 'Y', 'polestar' ) ) ),
