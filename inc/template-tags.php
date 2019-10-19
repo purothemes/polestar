@@ -40,6 +40,7 @@ if ( ! function_exists( 'polestar_breadcrumbs' ) ) :
  * Display Yoast SEO breadcrumbs or Breadcrumb NavXT below the header.
  */
 function polestar_breadcrumbs() {
+	if ( puro_page_setting( 'overlap' ) != 'disabled' ) return;
 	if ( function_exists( 'bcn_display' ) ) {
 		?><div class="breadcrumbs bcn">
 			<?php bcn_display(); ?>
