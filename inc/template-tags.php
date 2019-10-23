@@ -406,6 +406,20 @@ function polestar_display_logo() {
 }
 endif;
 
+if ( class_exists( 'LiteSpeed_Cache' ) ) :
+	if ( ! function_exists( 'polestar_litespeed_lazy_exclude' ) ) :
+		/**
+		 * Exclude logo from LiteSpeed Cache Lazy Load.
+		 */
+		function polestar_litespeed_lazy_exclude( $attr ) {
+			$attr['data-no-lazy'] = 1;
+
+			return $attr;
+		}
+	endif;
+	add_filter( 'polestar_logo_attributes', 'polestar_litespeed_lazy_exclude' );
+endif;
+
 if ( ! function_exists( 'polestar_read_more_link' ) ) :
 /**
  * Filter the read more link.
