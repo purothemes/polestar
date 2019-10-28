@@ -420,6 +420,26 @@ if ( class_exists( 'LiteSpeed_Cache' ) ) :
 	add_filter( 'polestar_logo_attributes', 'polestar_litespeed_lazy_exclude' );
 endif;
 
+if ( class_exists( 'Smush\WP_Smush' ) ) :
+	if ( ! function_exists( 'polestar_smush_lazy_exclude' ) ) :
+		/**
+		 * Exclude logo from Smush Lazy Load.
+		 */
+		function polestar_smush_lazy_exclude( $attr, $attachment ) {
+			$custom_logo_id = get_theme_mod( 'logo' );
+			if ( empty( $custom_logo_id ) ) {
+				$custom_logo_id = get_theme_mod( 'custom_logo' );
+			}
+
+			if ( ! empty( $custom_logo_id ) && $attachment->ID == $custom_logo_id ) {
+				$attr['class'] .= ' no-lazyload';
+			}
+			return $attr;
+		}
+	endif;
+	add_filter( 'wp_get_attachment_image_attributes', 'polestar_smush_lazy_exclude', 10, 2 );
+endif;
+
 if ( ! function_exists( 'polestar_read_more_link' ) ) :
 /**
  * Filter the read more link.
