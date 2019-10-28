@@ -493,7 +493,7 @@ function polestar_theme_options() {
 			'description' => esc_html__( 'Display a Quick View button on hover on product archive pages.', 'polestar' ),
 			'default'     => true,
 			'priority'    => '50'
-		);	
+		);
 
 		$options['add_to_cart'] = array(
 			'id'          => 'add_to_cart',
