@@ -74,29 +74,3 @@ endif;
 	}
 }
 add_action( 'loop_start', 'polestar_remove_sharing' );
-
-/**
- * Prevent the logo image from being lazy loaded.
- */
-if ( Jetpack::is_module_active( 'lazy-images' ) ) :
-	if ( ! function_exists( 'polestar_jetpack_logo_not_lazy' ) ) {
-		function polestar_jetpack_logo_not_lazy( $blacklisted_classes ) {
-			$blacklisted_classes[] = 'custom-logo';
-			return $blacklisted_classes;
-		}
-		add_filter( 'jetpack_lazy_images_blacklisted_classes', 'polestar_jetpack_logo_not_lazy' );
-	}
-	if ( ! function_exists( 'polestar_jetpack_logo_not_lazy_class' ) ) {
-
-		function polestar_jetpack_logo_not_lazy_class( $attrs ) {
-			if ( ! empty( $attrs['class'] ) ) {
-				$attrs['class'] .= ' skip-lazy';
-			} else {
-				$attrs['class'] = 'skip-lazy';
-			}
-
-			return $attrs;
-		}
-		add_filter( 'polestar_logo_attributes', 'polestar_jetpack_logo_not_lazy_class' );
-	}
-endif;

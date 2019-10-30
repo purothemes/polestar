@@ -406,38 +406,41 @@ function polestar_display_logo() {
 }
 endif;
 
-if ( class_exists( 'LiteSpeed_Cache' ) ) :
-	if ( ! function_exists( 'polestar_litespeed_lazy_exclude' ) ) :
+if (
+	class_exists( 'Smush\Core\Modules\Lazy' ) ||
+	class_exists( 'LiteSpeed_Cache' ) ||
+	class_exists( 'Jetpack_Lazy_Images' )
+) :
+	if ( ! function_exists( 'polestar_lazy_load_exclude' ) ) :
 		/**
-		 * Exclude logo from LiteSpeed Cache Lazy Load.
+		 * Exclude Logo from Lazy Load plugins.
 		 */
-		function polestar_litespeed_lazy_exclude( $attr ) {
-			$attr['data-no-lazy'] = 1;
-
-			return $attr;
-		}
-	endif;
-	add_filter( 'polestar_logo_attributes', 'polestar_litespeed_lazy_exclude' );
-endif;
-
-if ( class_exists( 'Smush\WP_Smush' ) ) :
-	if ( ! function_exists( 'polestar_smush_lazy_exclude' ) ) :
-		/**
-		 * Exclude logo from Smush Lazy Load.
-		 */
-		function polestar_smush_lazy_exclude( $attr, $attachment ) {
-			$custom_logo_id = get_theme_mod( 'logo' );
+		function polestar_lazy_load_exclude( $attr, $attachment ) {
+			$custom_logo_id = siteorigin_setting( 'branding_logo' );
 			if ( empty( $custom_logo_id ) ) {
 				$custom_logo_id = get_theme_mod( 'custom_logo' );
 			}
 
 			if ( ! empty( $custom_logo_id ) && $attachment->ID == $custom_logo_id ) {
-				$attr['class'] .= ' no-lazyload';
+				// Jetpack Lazy Load
+				if ( class_exists( 'Jetpack_Lazy_Images' ) ) {
+					$attr['class'] .= ' skip-lazy';
+				}
+
+				// Smush Lazy Load
+				if ( class_exists( 'Smush\Core\Modules\Lazy' ) ) {
+					$attr['class'] .= ' no-lazyload';
+				}
+
+				// LiteSpeed Cache Lazy Load
+				if ( class_exists( 'LiteSpeed_Cache' ) ) {
+					$attr['data-no-lazy'] = 1;
+				}
 			}
 			return $attr;
 		}
 	endif;
-	add_filter( 'wp_get_attachment_image_attributes', 'polestar_smush_lazy_exclude', 10, 2 );
+	add_filter( 'wp_get_attachment_image_attributes', 'polestar_lazy_load_exclude', 10, 2 );
 endif;
 
 if ( ! function_exists( 'polestar_read_more_link' ) ) :
