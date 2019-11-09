@@ -211,7 +211,7 @@ function polestar_enqueue_flexslider() {
 }
 
 /**
- * Enqueue Gutenberg block editor style.
+ * Enqueue Block Editor styles.
  */
 function polestar_block_editor_styles() {
 	wp_enqueue_style( 'polestar-block-editor-styles', get_template_directory_uri() . '/style-editor' . PURO_THEME_CSS_PREFIX . '.css', PURO_THEME_VERSION );
