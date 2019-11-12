@@ -416,7 +416,7 @@ if (
 		 * Exclude Logo from Lazy Load plugins.
 		 */
 		function polestar_lazy_load_exclude( $attr, $attachment ) {
-			$custom_logo_id = siteorigin_setting( 'branding_logo' );
+			$custom_logo_id = get_theme_mod( 'logo' );
 			if ( empty( $custom_logo_id ) ) {
 				$custom_logo_id = get_theme_mod( 'custom_logo' );
 			}
