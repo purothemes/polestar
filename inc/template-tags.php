@@ -40,6 +40,7 @@ if ( ! function_exists( 'polestar_breadcrumbs' ) ) :
  * Display Yoast SEO breadcrumbs or Breadcrumb NavXT below the header.
  */
 function polestar_breadcrumbs() {
+	if ( puro_page_setting( 'overlap' ) != 'disabled' ) return;
 	if ( function_exists( 'bcn_display' ) ) {
 		?><div class="breadcrumbs bcn">
 			<?php bcn_display(); ?>
@@ -142,7 +143,7 @@ if ( ! function_exists( 'polestar_footer_text' ) ) :
 function polestar_footer_text() {
 
 	$text = get_theme_mod( 'footer_text', esc_html__( 'Copyright &copy; {year} {sitename}', 'polestar' ) );
-
+	if ( empty( $text ) ) return;
 	$text = str_replace(
 		array( '{sitename}', '{year}' ),
 		array( get_bloginfo( 'sitename' ), date_i18n( esc_html__( 'Y', 'polestar' ) ) ),
@@ -403,6 +404,71 @@ function polestar_display_logo() {
 		<?php endif;
 	}
 }
+endif;
+
+if (
+	class_exists( 'Smush\Core\Modules\Lazy' ) ||
+	class_exists( 'LiteSpeed_Cache' ) ||
+	class_exists( 'Jetpack_Lazy_Images' )
+) :
+	if ( ! function_exists( 'polestar_logo_lazy_load_exclude' ) ) :
+		/**
+		 * Exclude Logo from Lazy Load plugins.
+		 */
+		function polestar_logo_lazy_load_exclude( $attr, $attachment ) {
+			$custom_logo_id = get_theme_mod( 'logo' );
+			if ( empty( $custom_logo_id ) ) {
+				$custom_logo_id = get_theme_mod( 'custom_logo' );
+			}
+
+			if ( ! empty( $custom_logo_id ) && $attachment->ID == $custom_logo_id ) {
+				// Jetpack Lazy Load
+				if ( class_exists( 'Jetpack_Lazy_Images' ) ) {
+					$attr['class'] .= ' skip-lazy';
+				}
+
+				// Smush Lazy Load
+				if ( class_exists( 'Smush\Core\Modules\Lazy' ) ) {
+					$attr['class'] .= ' no-lazyload';
+				}
+
+				// LiteSpeed Cache Lazy Load
+				if ( class_exists( 'LiteSpeed_Cache' ) ) {
+					$attr['data-no-lazy'] = 1;
+				}
+			}
+			return $attr;
+		}
+	endif;
+	add_filter( 'wp_get_attachment_image_attributes', 'polestar_logo_lazy_load_exclude', 10, 2 );
+
+	if ( ! function_exists( 'polestar_featured_image_lazy_load_exclude' ) ) :
+		/**
+		 * Exclude Featured Images from Lazy Load plugins.
+		 */
+		function polestar_featured_image_lazy_load_exclude( $attr, $attachment ) {
+			$featured_image_id = get_post_thumbnail_id();
+	
+			if ( ! empty( $featured_image_id ) && $attachment->ID == $featured_image_id ) {
+				// Jetpack Lazy Load
+				if ( class_exists( 'Jetpack_Lazy_Images' ) ) {
+					$attr['class'] .= ' skip-lazy';
+				}
+
+				// Smush Lazy Load
+				if ( class_exists( 'Smush\Core\Modules\Lazy' ) ) {
+					$attr['class'] .= ' no-lazyload';
+				}
+
+				// LiteSpeed Cache Lazy Load
+				if ( class_exists( 'LiteSpeed_Cache' ) ) {
+					$attr['data-no-lazy'] = 1;
+				}
+			}
+			return $attr;
+		}
+	endif;
+	add_filter( 'wp_get_attachment_image_attributes', 'polestar_featured_image_lazy_load_exclude', 10, 2 );
 endif;
 
 if ( ! function_exists( 'polestar_read_more_link' ) ) :

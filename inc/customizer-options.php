@@ -444,7 +444,7 @@ function polestar_theme_options() {
 			),
 			'default'  => 3,
 			'priority' => '10'
-		);			
+		);
 
 		$options['woocommerce_sidebar_position'] = array(
 			'id'          => 'woocommerce_sidebar_position',
@@ -493,7 +493,7 @@ function polestar_theme_options() {
 			'description' => esc_html__( 'Display a Quick View button on hover on product archive pages.', 'polestar' ),
 			'default'     => true,
 			'priority'    => '50'
-		);	
+		);
 
 		$options['add_to_cart'] = array(
 			'id'          => 'add_to_cart',
@@ -515,7 +515,7 @@ function polestar_theme_options() {
 			'title'    => esc_html__( 'More Options', 'polestar' ),
 			'priority' => '90',
 			'panel'    => $panel
-		);	
+		);
 
 		$options['polestar_premium'] = array(
 			'id'      => 'polestar_premium',

@@ -50,7 +50,7 @@
 		width: 30%;
 
 		span {
-			
+
 			&:after {
 				content: "\002d";
 				display: inline-block;
@@ -58,7 +58,7 @@
 			}
 
 			&:last-of-type {
-				
+
 				&:after {
 					content: none;
 				}

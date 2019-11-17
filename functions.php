@@ -130,7 +130,7 @@ function polestar_widgets_init() {
 	register_sidebar( array(
 		'name'          => esc_html__( 'Sidebar', 'polestar' ),
 		'id'            => 'sidebar-main',
-		'description'   => esc_html__( 'Visible on posts and pages that use the default template.', 'polestar' ),
+		'description'   => esc_html__( 'Displays on posts and pages that use the default template.', 'polestar' ),
 		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
 		'after_widget'  => '</aside>',
 		'before_title'  => '<h3 class="widget-title">',
@@ -211,7 +211,7 @@ function polestar_enqueue_flexslider() {
 }
 
 /**
- * Enqueue Gutenberg block editor style.
+ * Enqueue Block Editor styles.
  */
 function polestar_block_editor_styles() {
 	wp_enqueue_style( 'polestar-block-editor-styles', get_template_directory_uri() . '/style-editor' . PURO_THEME_CSS_PREFIX . '.css', PURO_THEME_VERSION );
