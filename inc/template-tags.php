@@ -411,11 +411,11 @@ if (
 	class_exists( 'LiteSpeed_Cache' ) ||
 	class_exists( 'Jetpack_Lazy_Images' )
 ) :
-	if ( ! function_exists( 'polestar_lazy_load_exclude' ) ) :
+	if ( ! function_exists( 'polestar_logo_lazy_load_exclude' ) ) :
 		/**
 		 * Exclude Logo from Lazy Load plugins.
 		 */
-		function polestar_lazy_load_exclude( $attr, $attachment ) {
+		function polestar_logo_lazy_load_exclude( $attr, $attachment ) {
 			$custom_logo_id = get_theme_mod( 'logo' );
 			if ( empty( $custom_logo_id ) ) {
 				$custom_logo_id = get_theme_mod( 'custom_logo' );
@@ -440,7 +440,35 @@ if (
 			return $attr;
 		}
 	endif;
-	add_filter( 'wp_get_attachment_image_attributes', 'polestar_lazy_load_exclude', 10, 2 );
+	add_filter( 'wp_get_attachment_image_attributes', 'polestar_logo_lazy_load_exclude', 10, 2 );
+
+	if ( ! function_exists( 'polestar_featured_image_lazy_load_exclude' ) ) :
+		/**
+		 * Exclude Featured Images from Lazy Load plugins.
+		 */
+		function polestar_featured_image_lazy_load_exclude( $attr, $attachment ) {
+			$featured_image_id = get_post_thumbnail_id();
+	
+			if ( ! empty( $featured_image_id ) && $attachment->ID == $featured_image_id ) {
+				// Jetpack Lazy Load
+				if ( class_exists( 'Jetpack_Lazy_Images' ) ) {
+					$attr['class'] .= ' skip-lazy';
+				}
+
+				// Smush Lazy Load
+				if ( class_exists( 'Smush\Core\Modules\Lazy' ) ) {
+					$attr['class'] .= ' no-lazyload';
+				}
+
+				// LiteSpeed Cache Lazy Load
+				if ( class_exists( 'LiteSpeed_Cache' ) ) {
+					$attr['data-no-lazy'] = 1;
+				}
+			}
+			return $attr;
+		}
+	endif;
+	add_filter( 'wp_get_attachment_image_attributes', 'polestar_featured_image_lazy_load_exclude', 10, 2 );
 endif;
 
 if ( ! function_exists( 'polestar_read_more_link' ) ) :
