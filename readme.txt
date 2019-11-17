@@ -150,6 +150,15 @@ Released under [GPL version 2](https://www.gnu.org/licenses/old-licenses/gpl-2.0
 
 == Changelog ==
 
+= 1.3.11 - 17 November 2019 =
+* Don't display the page title if the header overlap is enabled unless there is a page featured image.
+* Fixed Block Editor admin editor styles.
+* Exclude the logo and featured images from Smush, LiteSpeed and Jetpack lazy loading.
+* Don't load the breadcrumbs if header overlap is enabled.
+* Minor code formatting enhancements.
+* Jetpack Subscriptions minor styling fixes.
+* Updated the sidebar widget area description.
+
 = 1.3.10 - 30 September 2019 =
 * Ensured FitVids targets `entry-video` for video post format.
 * Changed sticky header height calculation to allow for re-calculation.
