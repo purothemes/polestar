@@ -1532,6 +1532,8 @@ input.button.added:after,
     overflow-y: auto; }
     .site-header .shopping-cart-dropdown .widget li {
       overflow: initial; }
+    .site-header .shopping-cart-dropdown .widget .blockOverlay[style] {
+      background-color: #fff !important; }
     .site-header .shopping-cart-dropdown .widget .woocommerce-mini-cart__empty-message {
       display: block;
       font-size: .95em;
