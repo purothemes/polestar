@@ -530,7 +530,9 @@ input.button.added:after,
         .columns-3.woocommerce .products .product .button, .woocommerce .products .product .added_to_cart {
           font-size: .8666em; } }
     .woocommerce .products .product .added_to_cart {
-      font-size: 0.8em; }
+      font-size: 0.8rem;
+      padding-top: 12px;
+      padding-bottom: 10px; }
     .woocommerce .products .product .product-quick-view-button {
       top: 25%; }
       @media (min-width: 768px) and (max-width: 1024px) {
