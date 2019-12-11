@@ -1563,6 +1563,9 @@ input.button.added:after,
 .woocommerce-checkout .entry-content {
   padding: 0; }
 
+form.checkout > .blockUI {
+  position: fixed !important; }
+
 .woocommerce .checkout_coupon .form-row-first,
 .woocommerce .checkout_coupon .form-row-last {
   float: left;
