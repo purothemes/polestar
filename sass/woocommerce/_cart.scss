@@ -302,11 +302,11 @@
 			vertical-align: text-bottom;
 			width: 20px;
 
-			@at-root .overlap-light .site-header:not(.stuck) .shopping-cart-link svg {
+			@at-root .overlap-light .site-header:not(.stuck) :not(#mobile-navigation) .shopping-cart-link svg {
 				fill: #fff; 
 			}
 
-			.overlap-dark .site-header:not(.stuck) & {
+			@at-root .overlap-dark .site-header:not(.stuck) .shopping-cart-link svg {
 				fill: #2d2d2d;
 			}
 		}
