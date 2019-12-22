@@ -552,6 +552,8 @@ input.button.added:after,
     .woocommerce .products .product .product_type_variable,
     .woocommerce .products .product .product_type_external {
       padding: 11px 15px; }
+    .woocommerce .products .product .product_type_external {
+      white-space: normal; }
     .woocommerce .products .product .added_to_cart {
       bottom: 1%;
       opacity: 1;

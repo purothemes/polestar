@@ -479,10 +479,14 @@
 				}
 			}
 
-			// Select Options button.
+			// Select Options and external product button.
 			.product_type_variable,
 			.product_type_external {
 				padding: 11px 15px;
+			}
+
+			.product_type_external {
+				white-space: normal;
 			}
 
 			// Added to Cart button.
