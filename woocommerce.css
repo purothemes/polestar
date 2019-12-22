@@ -255,9 +255,6 @@ input.button.added:after,
   top: 50%;
   width: 30px; }
 
-.woocommerce .blockOverlay[style] {
-  background-color: transparent !important; }
-
 .woocommerce .woocommerce-breadcrumb {
   color: #828282;
   font-size: 0.8666em;
@@ -533,7 +530,9 @@ input.button.added:after,
         .columns-3.woocommerce .products .product .button, .woocommerce .products .product .added_to_cart {
           font-size: .8666em; } }
     .woocommerce .products .product .added_to_cart {
-      font-size: 0.8em; }
+      font-size: 0.8rem;
+      padding-top: 12px;
+      padding-bottom: 10px; }
     .woocommerce .products .product .product-quick-view-button {
       top: 25%; }
       @media (min-width: 768px) and (max-width: 1024px) {
@@ -1533,6 +1532,8 @@ input.button.added:after,
     overflow-y: auto; }
     .site-header .shopping-cart-dropdown .widget li {
       overflow: initial; }
+    .site-header .shopping-cart-dropdown .widget .blockOverlay[style] {
+      background-color: #fff !important; }
     .site-header .shopping-cart-dropdown .widget .woocommerce-mini-cart__empty-message {
       display: block;
       font-size: .95em;
@@ -1563,6 +1564,9 @@ input.button.added:after,
 --------------------------------------------------------------*/
 .woocommerce-checkout .entry-content {
   padding: 0; }
+
+form.checkout > .blockUI {
+  position: fixed !important; }
 
 .woocommerce .checkout_coupon .form-row-first,
 .woocommerce .checkout_coupon .form-row-last {

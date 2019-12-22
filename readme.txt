@@ -150,6 +150,9 @@ Released under [GPL version 2](https://www.gnu.org/licenses/old-licenses/gpl-2.0
 
 == Changelog ==
 
+= 1.3.12 - 22 December 2019 =
+* Resolved WooCommerce checkout overlay issue.
+
 = 1.3.11 - 17 November 2019 =
 * Don't display the page title if the header overlap is enabled unless there is a page featured image.
 * Fixed Block Editor admin editor styles.
