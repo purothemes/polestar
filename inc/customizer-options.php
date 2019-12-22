@@ -351,6 +351,25 @@ function polestar_theme_options() {
 		'default'     => true,
 	);
 
+	// Pages
+	$section = 'pages';
+
+	$sections[] = array(
+		'id'       => $section,
+		'title'    => esc_html__( 'Pages', 'polestar' ),
+		'priority' => '55',
+		'panel'    => $panel
+	);	
+
+	$options['page_featured_image'] = array(
+		'id'          => 'page_featured_image',
+		'label'       => esc_html__( 'Featured Image', 'polestar' ),
+		'section'     => $section,
+		'type'        => 'checkbox',
+		'description' => esc_html__( 'Display the featured image on single pages.', 'polestar' ),
+		'default'     => true,
+	);
+
 	// Sidebar.
 	$section = 'sidebar';
 
