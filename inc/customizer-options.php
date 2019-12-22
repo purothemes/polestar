@@ -26,7 +26,7 @@ function polestar_theme_options() {
 	$panels[] = array(
 		'id'       => $panel,
 		'title'    => esc_html__( 'Theme Settings', 'polestar' ),
-		'priority' => '10'
+		'priority' => '10',
 	);
 
 	// Header.
@@ -36,7 +36,7 @@ function polestar_theme_options() {
 		'id'       => $section,
 		'title'    => esc_html__( 'Header', 'polestar' ),
 		'priority' => '10',
-		'panel'    => $panel
+		'panel'    => $panel,
 	);
 
 	$options['logo'] = array(
@@ -57,7 +57,7 @@ function polestar_theme_options() {
 		'type'        => 'checkbox',
 		'description' => esc_html__( 'Display the website tagline below the logo or site title.', 'polestar' ),
 		'default'     => false,
-		'priority'    => '20'
+		'priority'    => '20',
 	);
 
 	$options['header_layout'] = array(
@@ -71,7 +71,7 @@ function polestar_theme_options() {
 		),
 		'description' => esc_html__( 'Select the header layout.', 'polestar' ),
 		'default'     => 'default',
-		'priority'    => '30'
+		'priority'    => '30',
 	);
 
 	$options['sticky_header'] = array(
@@ -81,7 +81,7 @@ function polestar_theme_options() {
 		'type'        => 'checkbox',
 		'description' => esc_html__( 'Sticks the header to the top of the screen on scroll.', 'polestar' ),
 		'default'     => true,
-		'priority'    => '40'
+		'priority'    => '40',
 	);
 
 	$options['sticky_header_scaling'] = array(
@@ -91,17 +91,17 @@ function polestar_theme_options() {
 		'type'        => 'checkbox',
 		'description' => esc_html__( 'Scales the logo down as the header becomes sticky.', 'polestar' ),
 		'default'     => false,
-		'priority'    => '50'
+		'priority'    => '50',
 	);
 
 	// Navigation.
 	$section = 'navigation';
 
 	$sections[] = array(
-		'id' => $section,
-		'title' => esc_html__( 'Navigation', 'polestar' ),
+		'id'       => $section,
+		'title'    => esc_html__( 'Navigation', 'polestar' ),
 		'priority' => '20',
-		'panel' => $panel
+		'panel'    => $panel,
 	);
 
 	$options['header_menu'] = array(
@@ -111,7 +111,7 @@ function polestar_theme_options() {
 		'type'        => 'checkbox',
 		'description' => esc_html__( 'Display the header menu.', 'polestar' ),
 		'default'     => true,
-		'priority'    => '10'
+		'priority'    => '10',
 	);
 
 	$options['mobile_menu'] = array(
@@ -121,7 +121,7 @@ function polestar_theme_options() {
 		'type'        => 'checkbox',
 		'description' => esc_html__( 'Use a mobile menu for small screen devices. Header Menu setting must be enabled.', 'polestar' ),
 		'default'     => true,
-		'priority'    => '20'
+		'priority'    => '20',
 	);
 
 	$options['menu_search'] = array(
@@ -131,7 +131,7 @@ function polestar_theme_options() {
 		'type'        => 'checkbox',
 		'description' => esc_html__( 'Display a search icon in the main menu.', 'polestar' ),
 		'default'     => true,
-		'priority'    => '30'
+		'priority'    => '30',
 	);
 
 	$options['post_navigation'] = array(
@@ -141,7 +141,7 @@ function polestar_theme_options() {
 		'type'        => 'checkbox',
 		'description' => esc_html__( 'Display next/previous navigation on single post pages.', 'polestar' ),
 		'default'     => true,
-		'priority'    => '40'
+		'priority'    => '40',
 	);
 
 	$options['scroll_to_top'] = array(
@@ -151,7 +151,7 @@ function polestar_theme_options() {
 		'type'        => 'checkbox',
 		'description' => esc_html__( 'Display the scroll to top button.', 'polestar' ),
 		'default'     => true,
-		'priority'    => '50'
+		'priority'    => '50',
 	);
 
 	// Typography.
@@ -161,7 +161,7 @@ function polestar_theme_options() {
 		'id'       => $section,
 		'title'    => esc_html__( 'Typography', 'polestar' ),
 		'priority' => '30',
-		'panel'    => $panel
+		'panel'    => $panel,
 	);
 
 	$options['heading_font'] = array(
@@ -171,7 +171,7 @@ function polestar_theme_options() {
 		'type'     => 'select',
 		'choices'  => customizer_library_get_font_choices(),
 		'default'  => 'Montserrat',
-		'priority' => '10'
+		'priority' => '10',
 	);
 
 	$options['body_font'] = array(
@@ -181,7 +181,7 @@ function polestar_theme_options() {
 		'type'     => 'select',
 		'choices'  => customizer_library_get_font_choices(),
 		'default'  => 'Open Sans',
-		'priority' => '20'
+		'priority' => '20',
 	);
 
 	$options['accent_color'] = array(
@@ -190,7 +190,7 @@ function polestar_theme_options() {
 		'section'  => $section,
 		'type'     => 'color',
 		'default'  => '#4d8ffb',
-		'priority' => '30'
+		'priority' => '30',
 	);
 
 	$options['heading_color'] = array(
@@ -199,7 +199,7 @@ function polestar_theme_options() {
 		'section'  => $section,
 		'type'     => 'color',
 		'default'  => '#2d2d2d',
-		'priority' => '40'
+		'priority' => '40',
 	);
 
 	$options['text_color'] = array(
@@ -208,7 +208,7 @@ function polestar_theme_options() {
 		'section'  => $section,
 		'type'     => 'color',
 		'default'  => '#626262',
-		'priority' => '50'
+		'priority' => '50',
 	);
 
 	$options['secondary_text_color'] = array(
@@ -217,7 +217,7 @@ function polestar_theme_options() {
 		'section'  => $section,
 		'type'     => 'color',
 		'default'  => '#828282',
-		'priority' => '60'
+		'priority' => '60',
 	);
 
 	// Blog.
@@ -227,7 +227,7 @@ function polestar_theme_options() {
 		'id'       => $section,
 		'title'    => esc_html__( 'Blog', 'polestar' ),
 		'priority' => '50',
-		'panel'    => $panel
+		'panel'    => $panel,
 	);
 
 	$options['archive_featured_image'] = array(
@@ -358,7 +358,7 @@ function polestar_theme_options() {
 		'id'       => $section,
 		'title'    => esc_html__( 'Pages', 'polestar' ),
 		'priority' => '55',
-		'panel'    => $panel
+		'panel'    => $panel,
 	);	
 
 	$options['page_featured_image'] = array(
@@ -377,21 +377,21 @@ function polestar_theme_options() {
 		'id'       => $section,
 		'title'    => esc_html__( 'Sidebar', 'polestar' ),
 		'priority' => '60',
-		'panel'    => $panel
+		'panel'    => $panel,
 	);
 
 	$options['sidebar_position'] = array(
-		'id'          => 'sidebar_position',
-		'label'       => esc_html__( 'Position', 'polestar' ),
-		'section'     => $section,
-		'type'        => 'select',
-		'choices'     => array(
+		'id'      => 'sidebar_position',
+		'label'   => esc_html__( 'Position', 'polestar' ),
+		'section' => $section,
+		'type'    => 'select',
+		'choices' => array(
 			'right' => 'Right',
 			'left'  => 'Left',
 		),
 		'description' => esc_html__( 'Choose the sidebar position.', 'polestar' ),
 		'default'     => 'right',
-		'priority'    => '10'
+		'priority'    => '10',
 	);
 
 	// Footer.
@@ -401,21 +401,21 @@ function polestar_theme_options() {
 		'id'       => $section,
 		'title'    => esc_html__( 'Footer', 'polestar' ),
 		'priority' => '70',
-		'panel'    => $panel
+		'panel'    => $panel,
 	);
 
 	$options['footer_layout'] = array(
-		'id'          => 'footer_layout',
-		'label'       => esc_html__( 'Footer Layout', 'polestar' ),
-		'section'     => $section,
-		'type'        => 'select',
-		'choices'     => array(
+		'id'      => 'footer_layout',
+		'label'   => esc_html__( 'Footer Layout', 'polestar' ),
+		'section' => $section,
+		'type'    => 'select',
+		'choices' => array(
 			'default'    => 'Default',
 			'full-width' => 'Full-Width',
 		),
 		'description' => esc_html__( 'Choose the footer layout.', 'polestar' ),
 		'default'     => 'default',
-		'priority'    => '10'
+		'priority'    => '10',
 	);
 
 	$options['footer_text'] = array(
@@ -425,7 +425,7 @@ function polestar_theme_options() {
 		'type'        => 'text',
 		'description' => esc_html__( '{site-title} and {year} can be used to display your website title and the current year.', 'polestar' ),
 		'default'     => esc_html__( 'Copyright &copy; {year} {sitename}.', 'polestar' ),
-		'priority'    => '20'
+		'priority'    => '20',
 	);
 
 	$options['footer_privacy_policy_link'] = array(
@@ -435,7 +435,7 @@ function polestar_theme_options() {
 		'type'        => 'checkbox',
 		'description' => esc_html__( 'Display the Privacy Policy page link.', 'polestar' ),
 		'default'     => true,
-		'priority'    => '25'
+		'priority'    => '25',
 	);
 
 	// WooCommerce.
@@ -447,7 +447,7 @@ function polestar_theme_options() {
 			'id'       => $section,
 			'title'    => esc_html__( 'WooCommerce', 'polestar' ),
 			'priority' => '80',
-			'panel'    => $panel
+			'panel'    => $panel,
 		);
 
 		$options['archive_columns'] = array(
@@ -462,21 +462,21 @@ function polestar_theme_options() {
 				'step' => 1
 			),
 			'default'  => 3,
-			'priority' => '10'
+			'priority' => '10',
 		);
 
 		$options['woocommerce_sidebar_position'] = array(
-			'id'          => 'woocommerce_sidebar_position',
-			'label'       => esc_html__( 'Shop Sidebar Position', 'polestar' ),
-			'section'     => $section,
-			'type'        => 'select',
-			'choices'     => array(
+			'id'      => 'woocommerce_sidebar_position',
+			'label'   => esc_html__( 'Shop Sidebar Position', 'polestar' ),
+			'section' => $section,
+			'type'    => 'select',
+			'choices' => array(
 				'left'  => 'Left',
 				'right' => 'Right',
 			),
 			'description' => esc_html__( 'Choose the shop sidebar position.', 'polestar' ),
 			'default'     => 'left',
-			'priority'    => '20'
+			'priority'    => '20',
 		);
 
 		$options['product_gallery'] = array(
@@ -488,10 +488,10 @@ function polestar_theme_options() {
 				'slider'               => 'Gallery Slider',
 				'slider_lightbox'      => 'Gallery Slider + Lightbox',
 				'slider_zoom'          => 'Gallery Slider + Zoom',
-				'slider_lightbox_zoom' => 'Gallery Slider + Lightbox + Zoom'
+				'slider_lightbox_zoom' => 'Gallery Slider + Lightbox + Zoom',
 			),
 			'default'  => 'slider_lightbox',
-			'priority' => '30'
+			'priority' => '30',
 		);
 
 		$options['mini_cart'] = array(
@@ -501,7 +501,7 @@ function polestar_theme_options() {
 			'type'        => 'checkbox',
 			'description' => esc_html__( 'Display the WooCommerce mini cart in the header menu.', 'polestar' ),
 			'default'     => false,
-			'priority'    => '40'
+			'priority'    => '40',
 		);
 
 		$options['quick_view'] = array(
@@ -511,7 +511,7 @@ function polestar_theme_options() {
 			'type'        => 'checkbox',
 			'description' => esc_html__( 'Display a Quick View button on hover on product archive pages.', 'polestar' ),
 			'default'     => true,
-			'priority'    => '50'
+			'priority'    => '50',
 		);
 
 		$options['add_to_cart'] = array(
@@ -521,7 +521,7 @@ function polestar_theme_options() {
 			'type'        => 'checkbox',
 			'description' => esc_html__( 'Display an Add to Cart button on hover on product archive pages.', 'polestar' ),
 			'default'     => true,
-			'priority'    => '60'
+			'priority'    => '60',
 		);
 	}
 
@@ -533,7 +533,7 @@ function polestar_theme_options() {
 			'id'       => $section,
 			'title'    => esc_html__( 'More Options', 'polestar' ),
 			'priority' => '90',
-			'panel'    => $panel
+			'panel'    => $panel,
 		);
 
 		$options['polestar_premium'] = array(
