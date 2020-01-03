@@ -1080,6 +1080,9 @@ input.button.added:after,
       .cart_list li a:hover,
       .product_list_widget li a:hover {
         color: #4d8ffb; }
+    .cart_list li .product-title,
+    .product_list_widget li .product-title {
+      font-size: 0.933rem; }
     .cart_list li ins,
     .product_list_widget li ins {
       background: none; }
@@ -1088,9 +1091,11 @@ input.button.added:after,
       margin-top: 4px; }
     .cart_list li .amount,
     .cart_list li .quantity,
+    .cart_list li .reviewer,
     .product_list_widget li .amount,
-    .product_list_widget li .quantity {
-      font-size: 13px; }
+    .product_list_widget li .quantity,
+    .product_list_widget li .reviewer {
+      font-size: 0.867rem; }
     .cart_list li img,
     .product_list_widget li img {
       float: right;
@@ -1137,20 +1142,25 @@ input.button.added:after,
 /*--------------------------------------------------------------
 ## Product Categories Widget
 --------------------------------------------------------------*/
-.widget_product_categories .product-categories li,
-.woocommerce-widget-layered-nav-list li {
-  color: #828282; }
-  .widget_product_categories .product-categories li a,
-  .woocommerce-widget-layered-nav-list li a {
-    color: #2d2d2d;
-    display: inline-block;
-    margin-bottom: 8px; }
-  .widget_product_categories .product-categories li span,
-  .woocommerce-widget-layered-nav-list li span {
-    color: #828282; }
-  .widget_product_categories .product-categories li .children,
-  .woocommerce-widget-layered-nav-list li .children {
-    margin-left: 12px; }
+.widget_product_categories .product-categories,
+.woocommerce-widget-layered-nav-list {
+  font-size: 0.933rem;
+  margin: 0; }
+  .widget_product_categories .product-categories li,
+  .woocommerce-widget-layered-nav-list li {
+    color: #828282;
+    list-style: none; }
+    .widget_product_categories .product-categories li a,
+    .woocommerce-widget-layered-nav-list li a {
+      color: #2d2d2d;
+      display: inline-block;
+      margin-bottom: 8px; }
+    .widget_product_categories .product-categories li span,
+    .woocommerce-widget-layered-nav-list li span {
+      color: #828282; }
+    .widget_product_categories .product-categories li .children,
+    .woocommerce-widget-layered-nav-list li .children {
+      margin-left: 12px; }
 
 /*--------------------------------------------------------------
 ## - Price Filter Widget

@@ -43,7 +43,7 @@
 		padding: 15px 0;
 		position: relative;
 		width: 100%;
-		
+
 		&:first-of-type {
 			margin-top: -15px;
 		}
@@ -59,6 +59,10 @@
 			}
 		}
 
+		.product-title {
+			font-size: 0.933rem;
+		}
+
 		ins {
 			background: none;
 		}
@@ -68,8 +72,9 @@
 		}
 
 		.amount,
-		.quantity {
-			font-size: 13px;
+		.quantity,
+		.reviewer {
+			font-size: 0.867rem
 		}
 
 		img {
@@ -148,8 +153,12 @@
 .widget_product_categories .product-categories,
 .woocommerce-widget-layered-nav-list {
 
+	font-size: 0.933rem;
+	margin: 0;
+
 	li {
 		color: $color__text-light;
+		list-style: none;
 
 		a {
 			color: $color__text-dark;
@@ -196,7 +205,7 @@
 			top: -6px;
 			width: 7px;
 			z-index: 2;
-		}		
+		}
 	}
 
 	.price_slider_amount {
