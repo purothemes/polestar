@@ -771,7 +771,7 @@ a {
     .main-navigation li:hover > a,
     .main-navigation li.focus > a {
       color: #626262; }
-  .main-navigation .current a,
+  .main-navigation .current > a,
   .main-navigation .current_page_item > a,
   .main-navigation .current-menu-item > a,
   .main-navigation .current_page_ancestor > a,
