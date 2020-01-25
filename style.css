@@ -802,9 +802,9 @@ a {
           fill: rgba(255, 255, 255, 0.8); }
         .overlap-dark .main-navigation .search-icon svg:hover path {
           fill: rgba(45, 45, 45, 0.8); }
-  .overlap-light .site-header:not(.stuck) .main-navigation div:not(.widget_shopping_cart_content) > ul > li > a {
+  .overlap-light .site-header:not(.stuck) .main-navigation div:not(.widget_shopping_cart_content) > ul > li:not([class*="current"]) > a {
     color: #fff; }
-  .overlap-dark .site-header:not(.stuck) .main-navigation div:not(.widget_shopping_cart_content) > ul > li > a {
+  .overlap-dark .site-header:not(.stuck) .main-navigation div:not(.widget_shopping_cart_content) > ul > li:not([class*="current"]) > a {
     color: #2d2d2d; }
   .overlap-light .site-header:not(.stuck) .main-navigation div:not(.widget_shopping_cart_content) > ul > li:hover > a, .overlap-light .site-header:not(.stuck)
   .main-navigation div:not(.widget_shopping_cart_content) > ul > li.focus > a {

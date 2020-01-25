@@ -312,11 +312,11 @@
 	div:not(.widget_shopping_cart_content) > ul > li {
 
 		// Overlap.
-		.overlap-light .site-header:not(.stuck) & > a {
+		.overlap-light .site-header:not(.stuck) &:not([class*="current"]) > a {
 			color: #fff;
 		}
 
-		.overlap-dark .site-header:not(.stuck) & > a {
+		.overlap-dark .site-header:not(.stuck) &:not([class*="current"]) > a {
 			color: #2d2d2d;
 		}
 
