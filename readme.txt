@@ -150,6 +150,14 @@ Released under [GPL version 2](https://www.gnu.org/licenses/old-licenses/gpl-2.0
 
 == Changelog ==
 
+= 1.4.0 - 16 February 2020 =
+* Added a page Featured Image setting located at `Customize > Theme Settings > Pages > Featured Image`.
+* Fixed header overlap light mobile menu cart icon color.
+* Fixed overlap dark normal menu cart color.
+* Minor WooCommerce archive button hover styling improvement.
+* Minor WooCommerce widget styling improvements.
+* One page menu: re-add current page indicator on scroll.
+
 = 1.3.12 - 22 December 2019 =
 * Resolved WooCommerce checkout overlay issue.
 
