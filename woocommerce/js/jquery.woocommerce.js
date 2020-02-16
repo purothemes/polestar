@@ -54,7 +54,7 @@ jQuery( function( $ ) {
 		if ( ! $( e.target ).closest( '.ordering-selector-wrapper.open-dropdown' ).length ) {
 			$( '.ordering-selector-wrapper.open-dropdown' ).removeClass( 'open-dropdown' );
 		}
-	} );	
+	} );
 	
 	// Quick View modal.
 	$( '.product-quick-view-button' ).click( function( e ) {
@@ -84,7 +84,7 @@ jQuery( function( $ ) {
 					}
 				} );
 			}
-		} );		
+		} );
 
 		if ( $( document ).find( $container ).is( ':hidden' ) ) {
 			$( document ).find( $container ).find( $content ).empty();
