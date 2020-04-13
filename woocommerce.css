@@ -280,6 +280,9 @@ input.button.added:after,
     .woocommerce.archive .page-title {
       font-size: 23px; } }
 
+.woocommerce.archive .woocommerce-info {
+  margin-top: 30px; }
+
 .woocommerce .woocommerce-result-count {
   align-items: flex-end;
   color: #828282;
