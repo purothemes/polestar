@@ -601,8 +601,8 @@ input.button.added:after,
         .woocommerce .product .images .flex-control-thumbs li:nth-of-type(4n+4) {
           margin-right: 0; }
         .woocommerce .product .images .flex-control-thumbs li img {
-          display: block;
           box-shadow: #000 0 0 0;
+          display: block;
           opacity: .5; }
           .woocommerce .product .images .flex-control-thumbs li img.flex-active, .woocommerce .product .images .flex-control-thumbs li img:hover {
             opacity: 1; }
