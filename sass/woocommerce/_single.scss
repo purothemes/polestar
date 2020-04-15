@@ -193,7 +193,7 @@
 			.woocommerce-variation .woocommerce-variation-price .price {
 				display: block;
 				margin-top: -25px;
-				width: 100%; 
+				width: 100%;
 			}
 
 			.woocommerce-grouped-product-list {
@@ -212,7 +212,7 @@
 				td {
 					padding: 0;
 				}
-				
+
 				td {
 
 					input {
@@ -312,7 +312,7 @@
 					display: inline-block;
 					font-family: $font__headings;
 					margin: 0 30px 0 0;
-					padding-bottom: 5px; 
+					padding-bottom: 5px;
 					text-transform: uppercase;
 
 					@media (max-width: 768px) {
@@ -323,9 +323,9 @@
 
 					a {
 						color: $color__text-dark;
-						font-weight: 600; 
+						font-weight: 600;
 						display: inline-block;
-						outline: 0; 
+						outline: 0;
 					}
 
 					&.active {
@@ -370,7 +370,7 @@
 
 					th,
 					td {
-						padding-bottom: 0 
+						padding-bottom: 0;
 					}
 				}
 			}
@@ -388,7 +388,7 @@
 		.woocommerce-Reviews {
 
 			.woocommerce-noreviews {
-				font-size: 14px; 
+				font-size: 14px;
 				margin-bottom: 16px;
 			}
 
@@ -560,7 +560,7 @@
 
 		// Upsells and related products.
 		.woocommerce-tabs ~ .products .product {
-			
+
 			@media (min-width: 769px) {
 				clear: none;
 				margin-right: 3.5%;
