@@ -188,6 +188,18 @@
 						color: $color__accent;
 					}
 				}
+
+				// Variation Swatches for WooCommerce plugin.
+				.woo-variation-items-wrapper {
+					position: relative;
+
+					.reset_variations {
+						bottom: -10px;
+						left: 0;
+						margin-left: 0;
+						position: absolute;
+					}
+				}
 			}
 
 			.woocommerce-variation .woocommerce-variation-price .price {
