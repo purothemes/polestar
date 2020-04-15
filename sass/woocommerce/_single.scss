@@ -321,9 +321,9 @@
 					}
 
 					a {
+						display: inline-block;
 						color: $color__text-dark;
 						font-weight: 600;
-						display: inline-block;
 						outline: 0;
 					}
 
@@ -355,9 +355,9 @@
 
 				th.woocommerce-product-attributes-item__label {
 					color: $color__text-dark;
+					padding-left: 0;
 					text-align: left;
 					text-transform: capitalize;
-					padding-left: 0;
 				}
 
 				th,
