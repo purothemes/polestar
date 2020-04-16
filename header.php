@@ -98,7 +98,7 @@ do_action( 'polestar_body_top' );
 							<div id="header-search">
 								<div class="polestar-container">
 									<label for='s' class='screen-reader-text'><?php esc_html_e( 'Search for:', 'polestar' ); ?></label>
-									<?php get_search_form() ?>
+									<?php get_search_form(); ?>
 									<a id="close-search">
 										<span class="screen-reader-text"><?php esc_html_e( 'Close search bar', 'polestar' ); ?></span>
 										<?php polestar_display_icon( 'close' ); ?>
