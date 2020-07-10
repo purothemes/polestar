@@ -625,7 +625,8 @@ a {
       .main-navigation ul .children li {
         margin: 0;
         padding: 0;
-        min-width: 100%; }
+        min-width: 100%;
+        width: max-content; }
         .main-navigation ul .sub-menu li:hover > ul,
         .main-navigation ul .sub-menu li.focus > ul,
         .main-navigation ul .children li:hover > ul,
