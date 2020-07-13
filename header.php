@@ -68,7 +68,13 @@ do_action( 'polestar_body_top' );
 								<?php endif; ?>
 							
 								<?php if ( get_theme_mod( 'header_menu', true ) ) : ?>
+
+									<?php do_action( 'polestar_menu_before' ); ?>
+
 									<?php wp_nav_menu( array( 'theme_location' => 'menu-1', 'menu_id' => 'primary-menu' ) ); ?>
+
+									<?php do_action( 'polestar_menu_after' ); ?>
+								
 								<?php endif; ?>
 
 								<?php if ( function_exists( 'is_woocommerce' ) && get_theme_mod( 'mini_cart', false ) && ! $mega_menu_active ) polestar_mini_cart(); ?>
