@@ -151,6 +151,15 @@ Released under [GPL version 2](https://www.gnu.org/licenses/old-licenses/gpl-2.0
 
 == Changelog ==
 
+= 1.4.1 - 26 July 2020 =
+* WooCommerce: Adjusted spacing for `No Products` notification.
+* Minor code formatting enhancements.
+* WooCommerce: Removed variation price negative margin on single product page.
+* WooCommerce: Minor improvements for Variation Swatches for WooCommerce plugin
+* WooCommerce: Updated `single-product-reviews.php` template to `4.3.0`.
+* Main Menu: Ensured drop-down width handles additional content such as translation flags.
+* Added new menu before and after action hooks. `polestar_menu_before` and `polestar_menu_after`.
+
 = 1.4.0 - 16 February 2020 =
 * Added a page Featured Image setting located at `Customize > Theme Settings > Pages > Featured Image`.
 * Fixed header overlap light mobile menu cart icon color.
