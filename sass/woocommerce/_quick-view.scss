@@ -14,8 +14,8 @@
 	.quick-view {
 		background: #fff;
 		bottom: 0;
-		height: 575px;
 		display: inline-block;
+		height: 575px;
 		left: 0;
 		margin: auto;
 		max-width: 1140px;
@@ -34,8 +34,8 @@
 
 	.quickview-close-icon {
 		color: $color__text-dark;
-		display: block;
 		cursor: pointer;
+		display: block;
 		font-size: 35px;
 		line-height: 1;
 		position: absolute;
@@ -92,13 +92,25 @@
 
 			@media (max-width: 768px) {
 				float: none;
-				padding-top: 0; 
+				padding-top: 0;
 				width: 100%;
 			}
 
 			.entry-title {
 				line-height: normal;
 				margin: 0; 
+			}
+
+			.variations .value {
+				position: relative;
+			}
+
+			// Variation Swatches for WooCommerce plugin.
+			.variable-items-wrapper ~ .reset_variations {
+				bottom: -10px;
+				left: 0;
+				margin-left: 0;
+				position: absolute;
 			}
 		}
 	}

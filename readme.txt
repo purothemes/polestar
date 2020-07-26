@@ -4,8 +4,9 @@ Contributors: Puro
 
 Tags: one-column, two-columns, left-sidebar, right-sidebar, custom-background, custom-colors, custom-menu, custom-logo, featured-images, footer-widgets, full-width-template, post-formats, sticky-post, theme-options, threaded-comments, translation-ready, blog, e-commerce
 
+Tested up to: 5.5
 Requires at least: 4.7
-Tested up to: 5.3
+Requires PHP: 5.6.20
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -110,7 +111,7 @@ Polestar WordPress Theme is derived from [Underscores WordPress Theme](http://un
 
 == Images ==
 
-Screenshot image "Half Dome Village, Yosemite Valley, United States" sourced from https://unsplash.com by [Billy Chester](https://unsplash.com/@billychester) licensed under [CC0 1.0 Universal (CC0 1.0)](http://creativecommons.org/publicdomain/zero/1.0/).
+Screenshot image "Half Dome Village, Yosemite Valley, United States" sourced from [Stocksnap.io](https://stocksnap.io/photo/mountain-landscape-P1LPBIJDEI) by [Billy Chester](https://stocksnap.io/author/43498) licensed under [CC0 1.0 Universal (CC0 1.0)](http://creativecommons.org/publicdomain/zero/1.0/).
 
 == Fonts and Icons ==
 
@@ -149,6 +150,15 @@ Released under [GPL version 2](https://www.gnu.org/licenses/old-licenses/gpl-2.0
 [Source](https://github.com/TGMPA/TGM-Plugin-Activation)
 
 == Changelog ==
+
+= 1.4.1 - 26 July 2020 =
+* WooCommerce: Adjusted spacing for `No Products` notification.
+* Minor code formatting enhancements.
+* WooCommerce: Removed variation price negative margin on single product page.
+* WooCommerce: Minor improvements for Variation Swatches for WooCommerce plugin
+* WooCommerce: Updated `single-product-reviews.php` template to `4.3.0`.
+* Main Menu: Ensured drop-down width handles additional content such as translation flags.
+* Added new menu before and after action hooks. `polestar_menu_before` and `polestar_menu_after`.
 
 = 1.4.0 - 16 February 2020 =
 * Added a page Featured Image setting located at `Customize > Theme Settings > Pages > Featured Image`.

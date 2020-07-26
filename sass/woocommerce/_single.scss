@@ -45,8 +45,8 @@
 					}
 
 					img {
-						display: block;
 						box-shadow: #000 0 0 0;
+						display: block;
 						opacity: .5;
 
 						&.flex-active,
@@ -71,30 +71,30 @@
 				z-index: 9;
 
 				&:before {
-					content: "";
-					display: block;
-					width: 10px;
-					height: 10px;
 					border: 2px solid #000;
 					border-radius: 100%;
+					box-sizing: content-box;
+					content: "";
+					display: block;
+					height: 10px;
+					left: 9px;
 					position: absolute;
 					top: 9px;
-					left: 9px;
-					box-sizing: content-box;
+					width: 10px;
 				}
 
 				&:after {
-					content: "";
-					display: block;
-					width: 2px;
-					height: 8px;
 					background: #000;
+					content: "";
 					border-radius: 6px;
+					box-sizing: content-box;
+					display: block;
+					height: 8px;
+					left: 22px;
 					position: absolute;
 					top: 19px;
-					left: 22px;
-					@include transform(rotate(-45deg));
-					box-sizing: content-box;
+					@include transform( rotate(-45deg) );
+					width: 2px;
 				}
 			}
 		}
@@ -188,12 +188,23 @@
 						color: $color__accent;
 					}
 				}
+
+				// Variation Swatches for WooCommerce plugin.
+				.woo-variation-items-wrapper {
+					position: relative;
+
+					.reset_variations {
+						bottom: -10px;
+						left: 0;
+						margin-left: 0;
+						position: absolute;
+					}
+				}
 			}
 
 			.woocommerce-variation .woocommerce-variation-price .price {
 				display: block;
-				margin-top: -25px;
-				width: 100%; 
+				width: 100%;
 			}
 
 			.woocommerce-grouped-product-list {
@@ -212,7 +223,7 @@
 				td {
 					padding: 0;
 				}
-				
+
 				td {
 
 					input {
@@ -312,7 +323,7 @@
 					display: inline-block;
 					font-family: $font__headings;
 					margin: 0 30px 0 0;
-					padding-bottom: 5px; 
+					padding-bottom: 5px;
 					text-transform: uppercase;
 
 					@media (max-width: 768px) {
@@ -322,10 +333,10 @@
 					}
 
 					a {
-						color: $color__text-dark;
-						font-weight: 600; 
 						display: inline-block;
-						outline: 0; 
+						color: $color__text-dark;
+						font-weight: 600;
+						outline: 0;
 					}
 
 					&.active {
@@ -356,9 +367,9 @@
 
 				th.woocommerce-product-attributes-item__label {
 					color: $color__text-dark;
+					padding-left: 0;
 					text-align: left;
 					text-transform: capitalize;
-					padding-left: 0;
 				}
 
 				th,
@@ -370,7 +381,7 @@
 
 					th,
 					td {
-						padding-bottom: 0 
+						padding-bottom: 0;
 					}
 				}
 			}
@@ -388,7 +399,7 @@
 		.woocommerce-Reviews {
 
 			.woocommerce-noreviews {
-				font-size: 14px; 
+				font-size: 14px;
 				margin-bottom: 16px;
 			}
 
@@ -461,28 +472,28 @@
 			.stars {
 
 				a {
-					position: relative;
-					height: 1em;
-					width: 1em;
-					text-indent: -999em;
 					display: inline-block;
+					height: 1em;
+					position: relative;
 					text-decoration: none;
+					text-indent: -999em;
+					width: 1em;
 
 					&:hover {
 						color: $color__accent;
 					}
 
 					&:before {
-						display: block;
-						position: absolute;
-						top: 0;
-						left: 0;
-						width: 1em;
-						height: 1em;
-						line-height: 1;
-						font-family: "WooCommerce";
 						content: "\e021";
+						display: block;
+						font-family: "WooCommerce";
+						height: 1em;
+						left: 0;
+						line-height: 1;
+						position: absolute;
 						text-indent: 0;
+						top: 0;
+						width: 1em;
 					}
 
 					&:hover {
@@ -560,7 +571,7 @@
 
 		// Upsells and related products.
 		.woocommerce-tabs ~ .products .product {
-			
+
 			@media (min-width: 769px) {
 				clear: none;
 				margin-right: 3.5%;
