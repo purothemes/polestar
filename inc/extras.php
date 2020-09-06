@@ -129,11 +129,3 @@ function polestar_post_class_filter( $classes ) {
 }
 endif;
 add_filter( 'post_class', 'polestar_post_class_filter' );
-
-/**
- * Add our SiteOrigin Premium affiliate ID.
- */
-function polestar_siteorigin_premium( $id ) {
-	return 1;
-}
-add_filter( 'siteorigin_premium_affiliate_id', 'polestar_siteorigin_premium' );

@@ -12,6 +12,7 @@
 
 .site-content {
 	@include clearfix;
+	overflow: hidden;
 }
 
 // Content area without sidebar.
@@ -79,5 +80,28 @@
 		margin-top: 50px;
 		padding: 50px 0 0;
 		width: 100%;
+	}
+}
+
+// Block Editor Wide and Full widths.
+.page-layout-no-sidebar {
+
+	.alignfull {
+		margin-left: calc(50% - 50vw);
+		width: 100vw;
+	}
+
+	@media (min-width: calc(1140px + 200px)) {
+
+		.alignwide {
+			left: -100px;
+			position: relative;
+			width: calc(100% + 20vw);
+		}
+	}
+
+	.alignfull .wp-block-group__inner-container {
+		margin: auto;
+		max-width: 1140px;
 	}
 }

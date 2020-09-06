@@ -41,6 +41,13 @@ function polestar_setup() {
 	add_theme_support( 'title-tag' );
 
 	/*
+	 * Enable support for Block Editor Wide Alignment.
+	 *
+	 * @link https://developer.wordpress.org/block-editor/developers/themes/theme-support/#wide-alignment
+	 */
+	add_theme_support( 'align-wide' );
+
+	/*
 	 * Enable support for Post Thumbnails on posts and pages.
 	 *
 	 * @link https://developer.wordpress.org/themes/functionality/featured-images-post-thumbnails/

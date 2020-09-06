@@ -56,6 +56,7 @@ or a child theme.
 	## - Posts and pages
 		## - Posts
 		## - Archives, Search Results & 404
+		## - Block Styles		
 		## - Search Form
 		## - Related Posts
 		## - Author Box
@@ -1581,10 +1582,12 @@ a {
   .full-width .polestar-container {
     max-width: none; }
 
-.site-content::after {
-  clear: both;
-  content: "";
-  display: table; }
+.site-content {
+  overflow: hidden; }
+  .site-content::after {
+    clear: both;
+    content: "";
+    display: table; }
 
 .content-area {
   width: 100%; }
@@ -1631,6 +1634,20 @@ a {
       margin-top: 50px;
       padding: 50px 0 0;
       width: 100%; } }
+
+.page-layout-no-sidebar .alignfull {
+  margin-left: calc(50% - 50vw);
+  width: 100vw; }
+
+@media (min-width: calc(1140px + 200px)) {
+  .page-layout-no-sidebar .alignwide {
+    left: -100px;
+    position: relative;
+    width: calc(100% + 20vw); } }
+
+.page-layout-no-sidebar .alignfull .wp-block-group__inner-container {
+  margin: auto;
+  max-width: 1140px; }
 
 /*--------------------------------------------------------------
 ## - Header
@@ -2117,6 +2134,18 @@ a {
       .search-results .hentry.has-post-thumbnail .polestar-content-wrapper {
         float: none;
         width: 100%; } }
+
+/*--------------------------------------------------------------
+## - Block Styles
+--------------------------------------------------------------*/
+.entry-content > div[class^='wp-block-'] {
+  margin-bottom: 50px; }
+
+.wp-block-group.has-background {
+  padding: 30px; }
+  .wp-block-group.has-background.alignfull {
+    padding-right: 0;
+    padding-left: 0; }
 
 /*--------------------------------------------------------------
 ## - Search Form

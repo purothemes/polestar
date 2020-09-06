@@ -151,6 +151,9 @@ Released under [GPL version 2](https://www.gnu.org/licenses/old-licenses/gpl-2.0
 
 == Changelog ==
 
+= 1.4.2 - 06 September 2020 =
+* Added Block Editor support for Wide Alignment.
+
 = 1.4.1 - 26 July 2020 =
 * WooCommerce: Adjusted spacing for `No Products` notification.
 * Minor code formatting enhancements.

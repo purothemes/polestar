@@ -372,6 +372,26 @@
 }
 
 /*--------------------------------------------------------------
+## - Block Styles
+--------------------------------------------------------------*/
+// Apply 50px bottom margin to top level blocks.
+.entry-content > div[class^='wp-block-'] {
+	margin-bottom: 50px;
+}
+
+.wp-block-group {
+
+	&.has-background {
+		padding: 30px;
+
+		&.alignfull {
+			padding-right: 0;
+			padding-left: 0;
+		}
+	}
+}
+
+/*--------------------------------------------------------------
 ## - Search Form
 --------------------------------------------------------------*/
 .search-form {
