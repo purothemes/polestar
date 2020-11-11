@@ -183,6 +183,7 @@ function polestar_woocommerce_quick_view_image() {
 				} ?>
 
 			</ul>
+
 			<ul class="flex-direction-nav">
 				<li class="flex-nav-prev">
 					<a class="flex-prev" href="#"><?php polestar_display_icon( 'left-arrow' ); ?></a>

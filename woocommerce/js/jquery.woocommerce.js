@@ -70,6 +70,8 @@ jQuery( function( $ ) {
 			{ action: 'polestar_product_quick_view', product_id: id },
 			function( data ) {
 				$( document ).find( $container ).find( $content ).html( data );
+				$( document ).find( '#product-quick-view .variations_form' ).wc_variation_form();
+				$( document ).find( '#product-quick-view .variations_form' ).trigger( 'check_variations' );
 			}
 		);
 
@@ -82,6 +84,23 @@ jQuery( function( $ ) {
 					start: function() {
 						$( '.flexslider .slides img' ).show();
 					}
+				} );
+
+				// If variation has image, change to Flexslider slide.
+				$( '#product-quick-view .variations_form' ).on( 'found_variation.wc-variation-form', function( event, variation ) {
+					if ( variation && variation.image && variation.image.full_src ) {
+						var variationItem = $( '#product-quick-view .product-gallery-image' ).find( 'img[src="' + variation.image.full_src + '"]' );
+						if ( variationItem.length > 0 ) {
+							 $( '.product-images-slider' ).flexslider( variationItem.parent().index('.product-images-slider  .slide') - 1 );
+						} else {
+							$( '.product-images-slider' ).flexslider( 0 );
+						}
+					}
+				} );
+
+				// Reset Flexslider when WordPress wants to.
+				$( '#product-quick-view .variations_form' ).on( 'reset_image', function( event, variation ) {
+					$( '.product-images-slider' ).flexslider( 0 );
 				} );
 			}
 		} );
