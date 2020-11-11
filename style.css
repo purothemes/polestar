@@ -56,7 +56,7 @@ or a child theme.
 	## - Posts and pages
 		## - Posts
 		## - Archives, Search Results & 404
-		## - Block Styles		
+		## - Block Editor Styles		
 		## - Search Form
 		## - Related Posts
 		## - Author Box
@@ -2136,7 +2136,7 @@ a {
         width: 100%; } }
 
 /*--------------------------------------------------------------
-## - Block Styles
+## - Block Editor Styles
 --------------------------------------------------------------*/
 .entry-content > div[class^='wp-block-'] {
   margin-bottom: 50px; }
