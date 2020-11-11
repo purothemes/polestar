@@ -20,7 +20,7 @@ jQuery( function( $ ) {
 	};
 
 	// Entry thumbnail container size.
-	$( window ).load( function() {
+	$( window ).on( 'load', function() {
 		$( '.entry-thumbnail' ).each( function() {
 			img = $( this ).find( 'img' );
 			img_width = img.width();
@@ -369,7 +369,7 @@ jQuery( function( $ ) {
 } );
 
 ( function( $ ) {
-	$( window ).load( function() {
+	$( window ).on( 'load', function() {
 
 		polestar.logoScale = parseFloat( polestar.logoScale );
 
