@@ -6,7 +6,7 @@
 
 /* globals jQuery, polestar */
 
-jQuery( function( $ ) {
+( function( $ ) {
 
 	// Element viewport visibility.
 	$.fn.polestarIsVisible = function() {
@@ -73,17 +73,17 @@ jQuery( function( $ ) {
 
 	// Header search.
 	var $hs = $( '#header-search' );
-	$( '#masthead .search-icon' ).click( function() {
+	$( '#masthead .search-icon' ).on( 'click', function() {
 		$hs.fadeIn( 'fast' );
 		$hs.find( 'form' ).css( 'margin-top', - $hs.find( 'form' ).innerHeight() / 2 );
-		$hs.find( 'input[type="search"]' ).focus().select();
+		$hs.find( 'input[type="search"]' ).trigger( 'focus' ).trigger( 'select' );
 		$hs.find( '#close-search' ).addClass( 'animate-in' );
 	} );
-	$hs.find( '#close-search' ).click( function() {
+	$hs.find( '#close-search' ).on( 'click', function() {
 		$hs.fadeOut( 350 );
 		$( this ).removeClass( 'animate-in' );
 	} );
-	$( window ).scroll( function() {
+	$( window ).on( 'scroll', function() {
 		if ( $hs.is( ':visible' ) ) {
 			$hs.find( 'form' ).css( 'margin-top', - $hs.find( 'form' ).outerHeight() / 2 );
 		}
@@ -93,13 +93,13 @@ jQuery( function( $ ) {
 	$( '#header-search input[type=search]' ).on( 'focusout', function( e ) {
 		if ( $( 'body' ).hasClass( 'disable-search-close' ) ) {
 			return;
-		}		
+		}
 		$( '#close-search.animate-in' ).trigger( 'click' );
 	} );
 
-	// Close the header search with the escape key.
-	$( document ).keyup( function( e ) {
-		if ( e.keyCode === 27 ) { // Escape key maps to keycode 27.
+	// Close search with escape key.
+	$( document ).on( 'keyup', function( e ) {
+		if ( e.keyCode == 27 ) { // Escape key maps to keycode `27`.
 			$( '#close-search.animate-in' ).trigger( 'click' );
 		}
 	} );
@@ -110,16 +110,16 @@ jQuery( function( $ ) {
 		if ( $( 'body' ).hasClass( 'css3-animations' ) ) {
 
 			// Add keyboard access to the menu.
-			$( '.menu-item' ).children( 'a' ).focus( function() {
+			$( '.menu-item' ).children( 'a' ).on( 'focusin', function() {
 				$( this ).parents( 'ul, li' ).addClass( 'focus' );
 			} );
 
 			// Click event fires after focus event.
-			$( '.menu-item' ).children( 'a' ).click( function() {
+			$( '.menu-item' ).children( 'a' ).on( 'click', function() {
 				$( this ).parents( 'ul, li' ).removeClass( 'focus' );
 			} );
-			
-			$( '.menu-item' ).children( 'a' ).focusout( function() {
+
+			$( '.menu-item' ).children( 'a' ).on( 'focusout', function() {
 				$( this ).parents( 'ul, li' ).removeClass( 'focus' );
 			} );
 		}
@@ -132,7 +132,7 @@ jQuery( function( $ ) {
 		} else {
 			$( '#site-navigation a[href="'+ window.location.href +'"]' ).parent( 'li' ).addClass( 'current-menu-item' );
 		}
-		$( window ).scroll( function() {
+		$( window ).on( 'click', function() {
 			if ( $( '#site-navigation ul li' ).hasClass( 'current' ) ) {
 				$( '#site-navigation li' ).removeClass( 'current-menu-item' );
 				$( '#site-navigation li.current-menu-ancestor' ).removeClass( 'current-menu-ancestor current-menu-parent' );
@@ -178,10 +178,11 @@ jQuery( function( $ ) {
 	}
 
 	// Smooth scroll from internal page anchors.
-	headerHeight = function() {
+	var calcHeaderHeight = function() {
 		var adminBarHeight = $( '#wpadminbar' ).outerHeight(),
 			isAdminBar = $( 'body' ).hasClass( 'admin-bar' ),
 			isStickyHeader = $( 'header' ).hasClass( 'sticky' ),
+			$mh = $( '.site-header' ),
 			headerHeight;
 
 		// Header height. 1px to account for header shadow.
@@ -192,6 +193,12 @@ jQuery( function( $ ) {
 		} else {
 			headerHeight = 0;
 		}
+
+		if ( $mh.data( 'scale-logo' ) && ! $mh.hasClass( 'stuck' ) ) {
+			var mhPadding = parseInt( $mh.css( 'padding-bottom' ) );
+			headerHeight += mhPadding - mhPadding * polestar.logoScale * 2;
+		}
+
 		return headerHeight;
 	};
 
@@ -201,7 +208,7 @@ jQuery( function( $ ) {
 			return;
 		}
 
-		$( this ).click( function( e ) {
+		$( this ).on( 'click', function( e ) {
 
 			var hash    = this.hash;
 			var idName  = hash.substring( 1 ); // Get ID name.
@@ -219,7 +226,7 @@ jQuery( function( $ ) {
 				target = target.length ? target : $( '[name=' + this.hash.slice( 1 ) +']' );
 				if ( target.length ) {
 					$( 'html, body' ).animate( {
-						scrollTop: target.offset().top - headerHeight()
+						scrollTop: target.offset().top - calcHeaderHeight()
 					},
 					{
 						duration: 1200,
@@ -238,20 +245,27 @@ jQuery( function( $ ) {
 		} );
 	};
 
-	$( window ).load( function() {
-		$( '#site-navigation a[href*="#"]:not([href="#"]), .comments-link a[href*="#"]:not([href="#"]), .puro-scroll[href*="#"]:not([href="#"])' ).polestarSmoothScroll();
-	} );
+	$( window ).on( 'load', function() {
+		$( '#site-navigation a[href*="#"]:not([href="#"]), .comments-link a[href*="#"]:not([href="#"]), .woocommerce-review-link[href*="#"]:not([href="#"]), .puro-scroll[href*="#"]:not([href="#"])' ).polestarSmoothScroll();
 
-	// Adjust for sticky header when linking from external anchors.
-	$( window ).load( function() {
-
+		// Adjust for sticky header when linking from external anchors.
 		if ( location.pathname.replace( /^\//,'' ) == window.location.pathname.replace( /^\//,'' ) && location.hostname == window.location.hostname ) {
 			var target = $( window.location.hash );
 			if ( target.length ) {
-				$( 'html, body' ).animate( {
-					scrollTop: target.offset().top - headerHeight()
-				}, 0 );
-				return false;
+				setTimeout( function() {
+					$( 'html, body' ).animate(
+						{
+							scrollTop: target.offset().top - calcHeaderHeight()
+						},
+						0,
+						function() {
+							if ( $( '#masthead' ).hasClass( 'sticky-menu' ) ) {
+								// Avoid a situation where the logo can be incorrectly sized due to the page jump.
+								smSetup();
+							}
+						}
+					);
+				}, 100 );
 			}
 		}
 	} );
@@ -278,10 +292,10 @@ jQuery( function( $ ) {
 			var thisHeight = $( this ).outerHeight();
 
 			// Where the section begins.
-			var thisBegin = offset - headerHeight();
+			var thisBegin = offset - calcHeaderHeight();
 
 			// Where the section ends.
-			var thisEnd = offset + thisHeight - headerHeight();
+			var thisEnd = offset + thisHeight - calcHeaderHeight();
 
 			// If position of the cursor is inside of the this section.
 			if ( scrollTop >= thisBegin && scrollTop <= thisEnd ) {
@@ -301,7 +315,7 @@ jQuery( function( $ ) {
 
 	// Mobile menu.
 	var $mobileMenu = false;
-	$( '#mobile-menu-button' ).click( function( e ) {
+	$( '#mobile-menu-button' ).on( 'click', function( e ) {
 		e.preventDefault();
 		var $$ = $( this );
 		$$.toggleClass( 'to-close' );
@@ -324,7 +338,7 @@ jQuery( function( $ ) {
 			$mobileMenu.find( '.menu-item-has-children > a' ).addClass( 'has-dropdown' );
 			$mobileMenu.find( '.page_item_has_children > a' ).addClass( 'has-dropdown' );
 			$mobileMenu.find( '.has-dropdown' ).after( '<button class="dropdown-toggle" aria-expanded="false"><i class="icon-chevron-down" aria-hidden="true"></i></button>' );
-			$mobileMenu.find( '.dropdown-toggle' ).click( function( e ) {
+			$mobileMenu.find( '.dropdown-toggle' ).on( 'click', function( e ) {
 				e.preventDefault();
 				$( this ).toggleClass( 'toggle-open' ).next( '.children, .sub-menu' ).slideToggle( 'fast' );
 			} );
@@ -346,14 +360,14 @@ jQuery( function( $ ) {
 			}
 			mmOverflow();
 
-			$( window ).resize( mmOverflow );
+			$( window ).on( 'resize', mmOverflow );
 			$( '#mobile-navigation' ).scroll( mmOverflow );
 
 		}
 
 		$mobileMenu.slideToggle( 'fast' );
 
-		$( '#mobile-navigation a' ).click( function( e ) {
+		$( '#mobile-navigation a' ).on( 'click', function( e ) {
 			if ( ! $( this ).hasClass( 'has-dropdown' ) || ( typeof $( this ).attr( 'href' ) !== "undefined" && $( this ).attr( 'href' )  !== "#" ) ) {
 				if ( $mobileMenu.is(' :visible' ) ) {
 					$mobileMenu.slideUp( 'fast' );
@@ -366,9 +380,6 @@ jQuery( function( $ ) {
 
 	} );
 
-} );
-
-( function( $ ) {
 	$( window ).on( 'load', function() {
 
 		polestar.logoScale = parseFloat( polestar.logoScale );
@@ -475,7 +486,7 @@ jQuery( function( $ ) {
 			};
 
 			smSetup();
-			$( window ).resize( smSetup ).scroll( smSetup );
+			$( window ).on( 'resize scroll', smSetup );
 
 			// Sticky header shadow.
 			var smShadow = function() {
@@ -486,7 +497,7 @@ jQuery( function( $ ) {
 				}
 			};
 			smShadow();
-			$( window ).scroll( smShadow );
+			$( window ).on( 'scroll', smShadow );
 
 		}
 

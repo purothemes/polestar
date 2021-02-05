@@ -4,7 +4,7 @@ Contributors: Puro
 
 Tags: one-column, two-columns, left-sidebar, right-sidebar, custom-background, custom-colors, custom-menu, custom-logo, featured-images, footer-widgets, full-width-template, post-formats, sticky-post, theme-options, threaded-comments, translation-ready, blog, e-commerce
 
-Tested up to: 5.5
+Tested up to: 5.6
 Requires at least: 4.7
 Requires PHP: 5.6.20
 License: GPLv2 or later
@@ -93,6 +93,7 @@ Polestar includes support for the following plugins:
 * [Jetpack Related Posts](https://jetpack.com/support/related-posts/)
 * [Max Mega Menu](https://wordpress.org/plugins/megamenu/)
 * [Page Builder by SiteOrigin](https://wordpress.org/plugins/siteorigin-panels/)
+* [Rank Math Breadcrumbs](https://wordpress.org/plugins/seo-by-rank-math/)
 * [Yet Another Related Posts Plugin (YARPP)](https://wordpress.org/plugins/yet-another-related-posts-plugin/)
 * [Yoast Breadcrumbs](https://wordpress.org/plugins/wordpress-seo/)
 * [WooCommerce](https://wordpress.org/plugins/woocommerce/)
@@ -150,6 +151,12 @@ Released under [GPL version 2](https://www.gnu.org/licenses/old-licenses/gpl-2.0
 [Source](https://github.com/TGMPA/TGM-Plugin-Activation)
 
 == Changelog ==
+
+= 1.5.0 - 04 February 2020 =
+* Added RankMath breadcrumb support.
+* WooCommerce: Linked mini-cart View Cart hover color setting to `Accent Color`.
+* WooCommerce: Improved Quick View gallery variation support.
+* Developer: Added support for jQuery 3.5.
 
 = 1.4.2 - 06 September 2020 =
 * Added Block Editor support for Wide Alignment.

@@ -72,6 +72,7 @@ function polestar_build_styles() {
 				'#infinite-handle span button',
 				'#infinite-handle span button:hover',
 				'.added_to_cart',
+				'.widget_shopping_cart .buttons a:first-of-type:hover',
 				'input[type="button"]',
 				'input[type="reset"]',
 				'input[type="submit"]',

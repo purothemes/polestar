@@ -1021,10 +1021,36 @@ input.button.added:after,
       #quick-view-container .product-content-wrapper .product-image-wrapper {
         float: none;
         width: 100%; } }
-    #quick-view-container .product-content-wrapper .product-image-wrapper .flex-direction-nav a:hover svg path {
-      fill: rgba(130, 130, 130, 0.8); }
     #quick-view-container .product-content-wrapper .product-image-wrapper .flex-direction-nav a svg path {
-      fill: rgba(130, 130, 130, 0.5); }
+      fill: rgba(45, 45, 45, 0.8); }
+    #quick-view-container .product-content-wrapper .product-image-wrapper .flex-direction-nav a:hover svg path {
+      fill: #2d2d2d; }
+    #quick-view-container .product-content-wrapper .product-image-wrapper .flex-control-nav {
+      bottom: 30px;
+      margin: 0;
+      padding: 0;
+      position: absolute;
+      text-align: center;
+      width: 100%; }
+      @media (max-width: 480px) {
+        #quick-view-container .product-content-wrapper .product-image-wrapper .flex-control-nav {
+          display: none; } }
+      #quick-view-container .product-content-wrapper .product-image-wrapper .flex-control-nav li {
+        display: inline-block;
+        margin: 0 5px; }
+        #quick-view-container .product-content-wrapper .product-image-wrapper .flex-control-nav li a {
+          border: 2px solid rgba(45, 45, 45, 0.8);
+          border-radius: 20px;
+          cursor: pointer;
+          display: block;
+          height: 10px;
+          text-indent: -9999px;
+          width: 10px; }
+          #quick-view-container .product-content-wrapper .product-image-wrapper .flex-control-nav li a:hover {
+            background: rgba(45, 45, 45, 0.8); }
+          #quick-view-container .product-content-wrapper .product-image-wrapper .flex-control-nav li a.flex-active {
+            background: rgba(45, 45, 45, 0.8);
+            cursor: default; }
   #quick-view-container .product-content-wrapper .product-info-wrapper {
     float: right;
     padding: 30px 20px 20px 15px;
@@ -1045,6 +1071,8 @@ input.button.added:after,
       left: 0;
       margin-left: 0;
       position: absolute; }
+    #quick-view-container .product-content-wrapper .product-info-wrapper .woocommerce-variation-description {
+      display: none; }
 
 /*--------------------------------------------------------------
 # Widgets
@@ -1920,5 +1948,3 @@ form.checkout > .blockUI {
 --------------------------------------------------------------*/
 .track_order p {
   margin-bottom: 26px; }
-
-/*# sourceMappingURL=sass/maps/woocommerce.css.map */

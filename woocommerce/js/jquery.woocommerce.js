@@ -29,7 +29,7 @@ jQuery( function( $ ) {
 				$( '<li></li>' )
 					.html( $o.html() )
 					.data( 'val', $o.attr( 'value' ) )
-					.click( function() {
+					.on( 'click', function() {
 						$$.val( $( this ).data( 'val' ) );
 						$$.closest( 'form' ).submit();
 					} )
@@ -45,12 +45,12 @@ jQuery( function( $ ) {
 	} );
 
 	// Open dropdown on click.
-	$( '.ordering-selector-wrapper' ).click( function() {
+	$( '.ordering-selector-wrapper' ).on( 'click', function() {
 		$( this ).toggleClass( 'open-dropdown' );
 	} );
 
 	// Close dropdown on click outside dropdown wrapper.
-	$( window ).click( function( e ) {
+	$( window ).on( 'click', function( e ) {
 		if ( ! $( e.target ).closest( '.ordering-selector-wrapper.open-dropdown' ).length ) {
 			$( '.ordering-selector-wrapper.open-dropdown' ).removeClass( 'open-dropdown' );
 		}
@@ -79,7 +79,6 @@ jQuery( function( $ ) {
 			if ( $.isFunction( $.fn.flexslider ) ) {
 				$( '.product-images-slider' ).flexslider( {
 					animation: 'slide',
-					controlNav: false,
 					customDirectionNav: $( this ).find( '.flex-direction-nav a' ),
 					start: function() {
 						$( '.flexslider .slides img' ).show();
@@ -91,7 +90,7 @@ jQuery( function( $ ) {
 					if ( variation && variation.image && variation.image.full_src ) {
 						var variationItem = $( '#product-quick-view .product-gallery-image' ).find( 'img[src="' + variation.image.full_src + '"]' );
 						if ( variationItem.length > 0 ) {
-							 $( '.product-images-slider' ).flexslider( variationItem.parent().index('.product-images-slider  .slide') - 1 );
+							 $( '.product-images-slider' ).flexslider( variationItem.parent().index( '.product-images-slider  .slide' ) - 1 );
 						} else {
 							$( '.product-images-slider' ).flexslider( 0 );
 						}
@@ -114,7 +113,7 @@ jQuery( function( $ ) {
 		$( 'body' ).css( 'margin-right', ( window.innerWidth - $( 'body' ).width() ) + 'px' );
 		$( 'body' ).css( 'overflow', 'hidden' );
 
-		$( window ).mouseup( function( e ) {
+		$( window ).on( 'mouseup', function( e ) {
 			var container = $( $content );
 			if ( ( ! container.is( e.target ) && container.has( e.target ).length === 0 ) || $( '.quickview-close-icon' ).is( e.target ) ) {
 				$( $container).fadeOut( 300 );
@@ -124,7 +123,7 @@ jQuery( function( $ ) {
 			}
 		} );
 
-		$( document ).keyup( function( e ) {
+		$( document ).on( 'keyup', function( e ) {
 			var container = $( $content );
 			if ( e.keyCode == 27 ) { // Escape key maps to keycode 27.
 				$($container).fadeOut( 300 );
