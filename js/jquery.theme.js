@@ -105,7 +105,7 @@
 	} );
 
 	// Main menu.
-	$( window ).load( function() {
+	$( window ).on( 'load', function() {
 		$( 'body.no-js' ).removeClass( 'no-js' );
 		if ( $( 'body' ).hasClass( 'css3-animations' ) ) {
 
