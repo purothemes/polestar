@@ -152,7 +152,7 @@ Released under [GPL version 2](https://www.gnu.org/licenses/old-licenses/gpl-2.0
 
 == Changelog ==
 
-= 1.5.0 - 04 February 2020 =
+= 1.5.0 - 04 February 2021 =
 * Added RankMath breadcrumb support.
 * WooCommerce: Linked mini-cart View Cart hover color setting to `Accent Color`.
 * WooCommerce: Improved Quick View gallery variation support.
