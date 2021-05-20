@@ -435,19 +435,19 @@ if (
 
 			if ( ! empty( $custom_logo_id ) && $attachment->ID == $custom_logo_id ) {
 				// Jetpack Lazy Load
-				if ( class_exists( 'Jetpack_Lazy_Images' ) ) {
+				if ( class_exists( 'Jetpack_Lazy_Images' ) || class_exists( 'Automattic\\Jetpack\\Jetpack_Lazy_Images' ) ) {
 					$attr['class'] .= ' skip-lazy';
 				}
-
 				// Smush Lazy Load
 				if ( class_exists( 'Smush\Core\Modules\Lazy' ) ) {
 					$attr['class'] .= ' no-lazyload';
 				}
-
 				// LiteSpeed Cache Lazy Load
-				if ( class_exists( 'LiteSpeed_Cache' ) ) {
+				if ( class_exists( 'LiteSpeed_Cache' ) || class_exists( 'LiteSpeed\Media' ) ) {
 					$attr['data-no-lazy'] = 1;
 				}
+				// WP 5.5
+				$attr['loading'] = 'eager';
 			}
 			return $attr;
 		}
