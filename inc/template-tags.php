@@ -494,37 +494,41 @@ function polestar_read_more_link() {
 endif;
 add_filter( 'the_content_more_link', 'polestar_read_more_link' );
 
+if ( ! function_exists( 'polestar_excerpt_length' ) ) :
+/**
+ * Filter the excerpt length.
+ */
+function polestar_excerpt_length( $length ) {
+	return ! empty( get_theme_mod( 'excerpt_length' ) ) ? get_theme_mod( 'excerpt_length' ) : 55;
+}
+add_filter( 'excerpt_length', 'polestar_excerpt_length', 10 );
+endif;
+
 if ( ! function_exists( 'polestar_excerpt' ) ) :
 /**
  * Outputs the excerpt.
  */
 function polestar_excerpt() {
-
-	if ( ( get_theme_mod( 'archive_post_content' ) == 'excerpt' && get_theme_mod( 'excerpt_more', true ) ) && ! is_search() ) {
+	if ( ( get_theme_mod( 'archive_post_content' ) == 'excerpt' ) && get_theme_mod( 'excerpt_more', true ) && ! is_search() ) {
 		$read_more_text = get_theme_mod( 'read_more_text', esc_html__( 'Continue reading', 'polestar' ) );
 		$read_more_text = the_title( '<span class="screen-reader-text">"', '"</span>', false ) . '<span class="more-wrapper"><a href="' . esc_url( get_permalink() ) . '">' . $read_more_text . ' <span class="icon-long-arrow-right"></span></a></span>';
 	} else {
 		$read_more_text = '';
 	}
-	$ellipsis = '...';
-	$length   = get_theme_mod( 'excerpt_length', 55 );
-	$excerpt  = explode( ' ', get_the_excerpt(), $length );
 
-	if ( $length ) {
-		if ( count( $excerpt ) >= $length ) {
-			array_pop( $excerpt );
-			$excerpt = '<p>' . implode( " ", $excerpt ) . $ellipsis . '</p>' . $read_more_text;
-		} else {
-			$excerpt = '<p>' . implode( " ", $excerpt ) . $ellipsis . '</p>';
-		}
-	} else {
-		$excerpt = get_the_excerpt();
+	$length = ! empty( get_theme_mod( 'excerpt_length' ) ) ? get_theme_mod( 'excerpt_length' ) : 55;
+	$excerpt = get_the_excerpt();
+	$excerpt_add_read_more = str_word_count( $excerpt ) >= $length;
+
+	if ( ! has_excerpt() ) {
+		$excerpt = '<p>' . wp_trim_words( $excerpt, $length, '...' ) . '</p>';
 	}
 
-	$excerpt = preg_replace( '`\[[^\]]*\]`','', $excerpt );
+	if ( ! empty( $read_more_text ) && ( has_excerpt() || $excerpt_add_read_more ) ) {
+		$excerpt = '<p>' . $excerpt . '</p>' . '<p>' . $read_more_text . '</p>';
+	}
 
-	echo $excerpt;
-
+	echo wp_kses_post( $excerpt );
 }
 endif;
 
