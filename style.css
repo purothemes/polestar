@@ -2098,7 +2098,7 @@ a {
 .search-results article {
   border-bottom: 1px solid #e6e6e6;
   margin: 0 0 50px;
-  padding: 0 0 30px; }
+  padding: 0 0 50px; }
   .search-results article:last-of-type {
     border: 0; }
   .search-results article:only-of-type {
