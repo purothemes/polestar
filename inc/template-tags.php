@@ -65,8 +65,12 @@ if ( ! function_exists( 'polestar_mini_cart' ) ) :
  * Display the WooCommerce mini cart.
  */
 function polestar_mini_cart() {
-	if ( class_exists( 'Woocommerce' ) && ! ( is_cart() || is_checkout() ) ) : ?>
-		<?php global $woocommerce; ?>
+	if (
+		class_exists( 'Woocommerce' ) &&
+		apply_filters( 'polestar_display_mini_cart', ! ( is_cart() || is_checkout() ) )
+	) :
+		global $woocommerce;
+		?>
 		<ul class="shopping-cart">
 			<li>
 				<a class="shopping-cart-link" href="<?php echo esc_url( wc_get_cart_url() ); ?>" title="<?php esc_attr_e( 'View shopping cart', 'polestar' ); ?>">
@@ -431,19 +435,19 @@ if (
 
 			if ( ! empty( $custom_logo_id ) && $attachment->ID == $custom_logo_id ) {
 				// Jetpack Lazy Load
-				if ( class_exists( 'Jetpack_Lazy_Images' ) ) {
+				if ( class_exists( 'Jetpack_Lazy_Images' ) || class_exists( 'Automattic\\Jetpack\\Jetpack_Lazy_Images' ) ) {
 					$attr['class'] .= ' skip-lazy';
 				}
-
 				// Smush Lazy Load
 				if ( class_exists( 'Smush\Core\Modules\Lazy' ) ) {
 					$attr['class'] .= ' no-lazyload';
 				}
-
 				// LiteSpeed Cache Lazy Load
-				if ( class_exists( 'LiteSpeed_Cache' ) ) {
+				if ( class_exists( 'LiteSpeed_Cache' ) || class_exists( 'LiteSpeed\Media' ) ) {
 					$attr['data-no-lazy'] = 1;
 				}
+				// WP 5.5
+				$attr['loading'] = 'eager';
 			}
 			return $attr;
 		}
@@ -459,19 +463,19 @@ if (
 	
 			if ( ! empty( $featured_image_id ) && $attachment->ID == $featured_image_id ) {
 				// Jetpack Lazy Load
-				if ( class_exists( 'Jetpack_Lazy_Images' ) ) {
+				if ( class_exists( 'Jetpack_Lazy_Images' ) || class_exists( 'Automattic\\Jetpack\\Jetpack_Lazy_Images' ) ) {
 					$attr['class'] .= ' skip-lazy';
 				}
-
 				// Smush Lazy Load
 				if ( class_exists( 'Smush\Core\Modules\Lazy' ) ) {
 					$attr['class'] .= ' no-lazyload';
 				}
-
 				// LiteSpeed Cache Lazy Load
-				if ( class_exists( 'LiteSpeed_Cache' ) ) {
+				if ( class_exists( 'LiteSpeed_Cache' ) || class_exists( 'LiteSpeed\Media' ) ) {
 					$attr['data-no-lazy'] = 1;
 				}
+				// WP 5.5
+				$attr['loading'] = 'eager';
 			}
 			return $attr;
 		}
@@ -490,37 +494,41 @@ function polestar_read_more_link() {
 endif;
 add_filter( 'the_content_more_link', 'polestar_read_more_link' );
 
+if ( ! function_exists( 'polestar_excerpt_length' ) ) :
+/**
+ * Filter the excerpt length.
+ */
+function polestar_excerpt_length( $length ) {
+	return ! empty( get_theme_mod( 'excerpt_length' ) ) ? get_theme_mod( 'excerpt_length' ) : 55;
+}
+add_filter( 'excerpt_length', 'polestar_excerpt_length', 10 );
+endif;
+
 if ( ! function_exists( 'polestar_excerpt' ) ) :
 /**
  * Outputs the excerpt.
  */
 function polestar_excerpt() {
-
-	if ( ( get_theme_mod( 'archive_post_content' ) == 'excerpt' && get_theme_mod( 'excerpt_more', true ) ) && ! is_search() ) {
+	if ( ( get_theme_mod( 'archive_post_content' ) == 'excerpt' ) && get_theme_mod( 'excerpt_more', true ) && ! is_search() ) {
 		$read_more_text = get_theme_mod( 'read_more_text', esc_html__( 'Continue reading', 'polestar' ) );
 		$read_more_text = the_title( '<span class="screen-reader-text">"', '"</span>', false ) . '<span class="more-wrapper"><a href="' . esc_url( get_permalink() ) . '">' . $read_more_text . ' <span class="icon-long-arrow-right"></span></a></span>';
 	} else {
 		$read_more_text = '';
 	}
-	$ellipsis = '...';
-	$length   = get_theme_mod( 'excerpt_length', 55 );
-	$excerpt  = explode( ' ', get_the_excerpt(), $length );
 
-	if ( $length ) {
-		if ( count( $excerpt ) >= $length ) {
-			array_pop( $excerpt );
-			$excerpt = '<p>' . implode( " ", $excerpt ) . $ellipsis . '</p>' . $read_more_text;
-		} else {
-			$excerpt = '<p>' . implode( " ", $excerpt ) . $ellipsis . '</p>';
-		}
-	} else {
-		$excerpt = get_the_excerpt();
+	$length = ! empty( get_theme_mod( 'excerpt_length' ) ) ? get_theme_mod( 'excerpt_length' ) : 55;
+	$excerpt = get_the_excerpt();
+	$excerpt_add_read_more = str_word_count( $excerpt ) >= $length;
+
+	if ( ! has_excerpt() ) {
+		$excerpt = '<p>' . wp_trim_words( $excerpt, $length, '...' ) . '</p>';
 	}
 
-	$excerpt = preg_replace( '`\[[^\]]*\]`','', $excerpt );
+	if ( ! empty( $read_more_text ) && ( has_excerpt() || $excerpt_add_read_more ) ) {
+		$excerpt = '<p>' . $excerpt . '</p>' . '<p>' . $read_more_text . '</p>';
+	}
 
-	echo $excerpt;
-
+	echo wp_kses_post( $excerpt );
 }
 endif;
 

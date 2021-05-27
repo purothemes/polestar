@@ -6,17 +6,6 @@
  * @license GPL 2.0
  */
 
-if ( ! function_exists( 'polestar_excerpt_length' ) ) :
-/**
- * Filter the excerpt length.
- * @deprecated 1.2.7 Use polestar_excerpt()
- */
-function polestar_excerpt_length( $length ) {
-	return get_theme_mod( 'excerpt_length', 55 );
-}
-add_filter( 'excerpt_length', 'polestar_excerpt_length', 10 );
-endif;
-
 if ( ! function_exists( 'polestar_excerpt_more' ) ) :
 /**
  * Add a more link to the excerpt.
@@ -30,4 +19,3 @@ function polestar_excerpt_more( $more ) {
 	}
 }
 endif;
-add_filter( 'excerpt_more', 'polestar_excerpt_more' );
