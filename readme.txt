@@ -152,6 +152,16 @@ Released under [GPL version 2](https://www.gnu.org/licenses/old-licenses/gpl-2.0
 
 == Changelog ==
 
+= 1.6.0 - 27 May 2021 =
+* Updated logo lazy loading exclusion function.
+* Updated featured image lazy load function.
+* Minor adjustment to search results spacing.
+* Improved the custom excerpt function.
+* Added FitVids to the Block Editor.
+* Updated Customizer Library.
+* Developer: Added WooCommerce `polestar_display_mini_cart` filter to allow the mini-cart to be hidden when empty.
+* Developer: Updated a theme JS function for jQuery 3.5 that was previously overlooked.
+
 = 1.5.0 - 04 February 2021 =
 * Added RankMath breadcrumb support.
 * WooCommerce: Linked mini-cart View Cart hover color setting to `Accent Color`.
