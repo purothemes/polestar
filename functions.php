@@ -103,6 +103,11 @@ function polestar_setup() {
 	 */
 	add_theme_support( 'editor-styles' );
 
+	// Disable WP 5.8+ Widget Area.
+	if ( apply_filters( 'polestar_disable_new_widget_area', true ) ) {
+		remove_theme_support( 'widgets-block-editor' );
+	}
+
 }
 endif;
 // polestar_setup
