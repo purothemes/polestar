@@ -4,7 +4,7 @@ Contributors: Puro
 
 Tags: one-column, two-columns, left-sidebar, right-sidebar, custom-background, custom-colors, custom-menu, custom-logo, featured-images, footer-widgets, full-width-template, post-formats, sticky-post, theme-options, threaded-comments, translation-ready, blog, e-commerce
 
-Tested up to: 5.7
+Tested up to: 5.8
 Requires at least: 4.7
 Requires PHP: 5.6.20
 License: GPLv2 or later
@@ -151,6 +151,9 @@ Released under [GPL version 2](https://www.gnu.org/licenses/old-licenses/gpl-2.0
 [Source](https://github.com/TGMPA/TGM-Plugin-Activation)
 
 == Changelog ==
+
+= 1.7.0 - 22 July 2021 =
+* Disabled WP 5.8 Block-Based widgets editor. Can be re-enabled using `add_filter( 'polestar_disable_new_widget_area', '__return_false' );`.
 
 = 1.6.0 - 27 May 2021 =
 * Updated logo lazy loading exclusion function.
