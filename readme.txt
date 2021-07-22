@@ -152,6 +152,9 @@ Released under [GPL version 2](https://www.gnu.org/licenses/old-licenses/gpl-2.0
 
 == Changelog ==
 
+= 1.7.0 - 22 July 2021 =
+* Disabled WP 5.8 Block-Based widgets editor. Can be re-enabled using `add_filter( 'polestar_disable_new_widget_area', '__return_false' );`.
+
 = 1.6.0 - 27 May 2021 =
 * Updated logo lazy loading exclusion function.
 * Updated featured image lazy load function.
