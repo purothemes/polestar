@@ -48,6 +48,11 @@
 					$( '.flexslider .slides img' ).show();
 				}
 			} );
+
+			// Prevent a potential sizing issue if a FlexSlider is added inside of a SO Page Builder full-width row.
+			$( window ).one( 'panelsStretchRows', function() {
+				$( 'body:not(.siteorigin-panels-css-container) .siteorigin-panels-stretch .flexslider' ).flexslider().resize();
+			} );
 		} );
 	} );
 
