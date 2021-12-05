@@ -152,6 +152,12 @@ Released under [GPL version 2](https://www.gnu.org/licenses/old-licenses/gpl-2.0
 
 == Changelog ==
 
+= 1.8.0 - 05 December 2021 =
+* Added additional web-safe fonts.
+* FlexSlider: Prevented misalignment on load in SO Page Builder full-width stretched row.
+* Logo Lazy Load Exclusion: Improved Jetpack plugin check.
+* Scroll to Top: Adjusted to function when header has been removed.
+
 = 1.7.0 - 22 July 2021 =
 * Disabled WP 5.8 Block-Based widgets editor. Can be re-enabled using `add_filter( 'polestar_disable_new_widget_area', '__return_false' );`.
 

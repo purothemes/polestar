@@ -421,7 +421,8 @@ endif;
 if (
 	class_exists( 'Smush\Core\Modules\Lazy' ) ||
 	class_exists( 'LiteSpeed_Cache' ) ||
-	class_exists( 'Jetpack_Lazy_Images' )
+	class_exists( 'Jetpack_Lazy_Images' ) ||
+	class_exists( 'Automattic\\Jetpack\\Jetpack_Lazy_Images' )
 ) :
 	if ( ! function_exists( 'polestar_logo_lazy_load_exclude' ) ) :
 		/**

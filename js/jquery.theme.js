@@ -48,26 +48,30 @@
 					$( '.flexslider .slides img' ).show();
 				}
 			} );
+
+			// Prevent a potential sizing issue if a FlexSlider is added inside of a SO Page Builder full-width row.
+			$( window ).one( 'panelsStretchRows', function() {
+				$( 'body:not(.siteorigin-panels-css-container) .siteorigin-panels-stretch .flexslider' ).flexslider().resize();
+			} );
 		} );
 	} );
 
 	// Scroll to top.
-	var sttWindowScroll = function() {
+	var sttWindowScroll = function () {
 		var top = window.pageYOffset || document.documentElement.scrollTop;
+		var scrollOffset = $( '#masthead' ).length ? $( '#masthead' ).outerHeight() : $( window ).outerHeight() / 2;
 
-		if ( top > $( '#masthead' ).outerHeight() ) {
+		if ( top > scrollOffset ) {
 			if ( ! $( '#scroll-to-top' ).hasClass( 'show' ) ) {
 				$( '#scroll-to-top' ).css( 'pointer-events', 'auto' ).addClass( 'show' );
 			}
-		} else {
-			if ( $( '#scroll-to-top' ).hasClass( 'show' ) ) {
-				$( '#scroll-to-top' ).css( 'pointer-events', 'none' ).removeClass( 'show' );
-			}
+		} else if ( $( '#scroll-to-top' ).hasClass( 'show' ) ) {
+			$( '#scroll-to-top' ).css( 'pointer-events', 'none' ).removeClass( 'show' );
 		}
 	};
 	sttWindowScroll();
-	$( window ).scroll( sttWindowScroll );
-	$( '#scroll-to-top' ).click( function() {
+	$( window ).on( 'scroll', sttWindowScroll );
+	$( '#scroll-to-top' ).on( 'click', function() {
 		$( 'html, body' ).animate( { scrollTop: 0 } );
 	} );
 
