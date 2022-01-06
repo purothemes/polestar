@@ -592,6 +592,7 @@ function polestar_related_posts( $post_id ) {
 		related_posts();
 	} else { // The fallback loop.
 		$categories = get_the_category( $post_id );
+		if ( empty( $categories ) ) return;
 		$first_cat = $categories[0]->cat_ID;
 		$args = array(
 			'category__in' => array( $first_cat ),
