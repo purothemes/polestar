@@ -1098,6 +1098,7 @@ a {
 ## Footer Menu Social Icons
 --------------------------------------------------------------*/
 .footer-menu a[href*="behance.net"], .footer-menu a[href*="codepen.io"], .footer-menu a[href*="delicious.com"], .footer-menu a[href*="deviantart.com"], .footer-menu a[href*="digg.com"], .footer-menu a[href*="dribbble.com"], .footer-menu a[href*="facebook.com"], .footer-menu a[href*="flickr.com"], .footer-menu a[href*="foursquare.com"], .footer-menu a[href*="github.com"], .footer-menu a[href*="plus.google.com"], .footer-menu a[href*="instagram.com"], .footer-menu a[href*="linkedin.com"], .footer-menu a[href*="pinterest.com"], .footer-menu a[href*="reddit.com"], .footer-menu a[href*="soundcloud.com"], .footer-menu a[href*="stackexchange.com"], .footer-menu a[href*="stackoverflow.com"], .footer-menu a[href*="tumblr.com"], .footer-menu a[href*="twitter.com"], .footer-menu a[href*="vimeo.com"], .footer-menu a[href*="vine.co"], .footer-menu a[href*="vk.com"], .footer-menu a[href*="weibo.com"], .footer-menu a[href*="wordpress.com"], .footer-menu a[href*="xing"], .footer-menu a[href*="yelp"], .footer-menu a[href*="youtube.com"] {
+  display: block;
   font-size: 0;
   margin-right: -16px;
   text-align: center; }
