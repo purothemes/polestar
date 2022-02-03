@@ -4,7 +4,7 @@ Contributors: Puro
 
 Tags: one-column, two-columns, left-sidebar, right-sidebar, custom-background, custom-colors, custom-menu, custom-logo, featured-images, footer-widgets, full-width-template, post-formats, sticky-post, theme-options, threaded-comments, translation-ready, blog, e-commerce
 
-Tested up to: 5.8
+Tested up to: 5.9
 Requires at least: 4.7
 Requires PHP: 5.6.20
 License: GPLv2 or later
@@ -151,6 +151,11 @@ Released under [GPL version 2](https://www.gnu.org/licenses/old-licenses/gpl-2.0
 [Source](https://github.com/TGMPA/TGM-Plugin-Activation)
 
 == Changelog ==
+
+= 1.8.1 - 03 February 2022 =
+* WooCommerce: Fixed single product variation drop-down alignment.
+* Smooth Scrolling: Update to allow for animation interruption when another page jump is clicked.
+* Footer Social Menu: Fixed last icon alignment.
 
 = 1.8.0 - 05 December 2021 =
 * Added additional web-safe fonts.
