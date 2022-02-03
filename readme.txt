@@ -152,6 +152,11 @@ Released under [GPL version 2](https://www.gnu.org/licenses/old-licenses/gpl-2.0
 
 == Changelog ==
 
+= 1.8.1 - 03 February 2022 =
+* WooCommerce: Fixed single product variation drop-down alignment.
+* Smooth Scrolling: Update to allow for animation interruption when another page jump is clicked.
+* Footer Social Menu: Fixed last icon alignment.
+
 = 1.8.0 - 05 December 2021 =
 * Added additional web-safe fonts.
 * FlexSlider: Prevented misalignment on load in SO Page Builder full-width stretched row.
