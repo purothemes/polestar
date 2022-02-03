@@ -700,7 +700,7 @@ input.button.added:after,
         border: none; }
         .woocommerce .product .summary .variations tr td,
         .woocommerce .product .product-info-wrapper .variations tr td {
-          padding-bottom: 15px; }
+          padding: 7.5px 0; }
         .woocommerce .product .summary .variations tr:only-of-type td,
         .woocommerce .product .product-info-wrapper .variations tr:only-of-type td {
           padding-bottom: 0; }
