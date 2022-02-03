@@ -5,7 +5,7 @@
 	padding: 25px 0;
 	position: relative;
 	width: 100%;
-	z-index: 9999;
+	z-index: 999;
 
 	body[class*="overlap-"] &:not(.stuck) {
 		background: transparent;
