@@ -1523,19 +1523,26 @@ a {
     .widget #wp-calendar tbody td {
       padding-bottom: 8px;
       text-align: center; }
-  .widget #wp-calendar tfoot {
-    font-size: 13px; }
-    .widget #wp-calendar tfoot #prev,
-    .widget #wp-calendar tfoot #next {
-      padding-top: 4px; }
-      .widget #wp-calendar tfoot #prev a,
-      .widget #wp-calendar tfoot #next a {
-        color: #2d2d2d; }
-        .widget #wp-calendar tfoot #prev a:hover,
-        .widget #wp-calendar tfoot #next a:hover {
-          color: #4d8ffb; }
-    .widget #wp-calendar tfoot #next {
-      text-align: right; }
+
+.calendar_wrap .wp-calendar-nav {
+  font-size: 13px; }
+  .calendar_wrap .wp-calendar-nav .wp-calendar-nav-prev,
+  .calendar_wrap .wp-calendar-nav .wp-calendar-nav-next {
+    display: inline-block;
+    padding-top: 4px;
+    padding-bottom: 17px;
+    width: 48%; }
+    .calendar_wrap .wp-calendar-nav .wp-calendar-nav-prev a,
+    .calendar_wrap .wp-calendar-nav .wp-calendar-nav-next a {
+      color: #2d2d2d;
+      margin-left: 10px; }
+      .calendar_wrap .wp-calendar-nav .wp-calendar-nav-prev a:hover,
+      .calendar_wrap .wp-calendar-nav .wp-calendar-nav-next a:hover {
+        color: #4d8ffb; }
+  .calendar_wrap .wp-calendar-nav .wp-calendar-nav-next {
+    text-align: right; }
+    .calendar_wrap .wp-calendar-nav .wp-calendar-nav-next a {
+      margin: 0 10px 0 0; }
 
 /*--------------------------------------------------------------
 ## Archives and Categories Widgets
