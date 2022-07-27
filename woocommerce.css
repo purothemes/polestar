@@ -964,6 +964,31 @@ input.button.added:after,
       margin-right: 0;
       width: 100%; } }
 
+.so-panel .variations {
+  border: none;
+  font-size: 14px;
+  margin-bottom: 30px; }
+  .so-panel .variations th,
+  .so-panel .variations td {
+    padding: 0; }
+  .so-panel .variations tr {
+    border: none; }
+    .so-panel .variations tr td {
+      padding: 7.5px 0; }
+    .so-panel .variations tr:only-of-type td {
+      padding-bottom: 0; }
+  .so-panel .variations label {
+    font-size: 14px;
+    text-transform: capitalize; }
+  .so-panel .variations select {
+    font-size: 14px; }
+  .so-panel .variations .reset_variations {
+    color: #626262;
+    font-size: 13px;
+    margin-left: 10px; }
+    .so-panel .variations .reset_variations:hover {
+      color: #4d8ffb; }
+
 /*--------------------------------------------------------------
 # Quick View
 --------------------------------------------------------------*/
@@ -1948,3 +1973,5 @@ form.checkout > .blockUI {
 --------------------------------------------------------------*/
 .track_order p {
   margin-bottom: 26px; }
+
+/*# sourceMappingURL=sass/maps/woocommerce.css.map */

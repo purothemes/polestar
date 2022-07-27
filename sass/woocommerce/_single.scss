@@ -598,3 +598,49 @@
 		}
 	}
 }
+
+// SiteOrigin WCTB.
+.so-panel {
+
+	.variations {
+		border: none;
+		font-size: 14px;
+		margin-bottom: 30px;
+
+		th,
+		td {
+			padding: 0;
+		}
+
+		tr {
+			border: none;
+
+			td {
+				padding: 7.5px 0;
+			}
+
+			&:only-of-type td {
+				padding-bottom: 0;
+			}
+		}
+
+		label {
+			font-size: 14px;
+			text-transform: capitalize;
+		}
+
+		select {
+			font-size: 14px;
+		}
+
+		.reset_variations {
+			color: $color__text-medium;
+			font-size: 13px;
+			margin-left: 10px;
+
+			&:hover {
+				color: $color__accent;
+			}
+		}
+	}
+}
