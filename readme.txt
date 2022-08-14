@@ -152,6 +152,11 @@ Released under [GPL version 2](https://www.gnu.org/licenses/old-licenses/gpl-2.0
 
 == Changelog ==
 
+= 1.9.0 - 14 August 2022 =
+* Updated Calendar Widget styling for new markup.
+* Updated Customizer Library.
+* WooCommerce: Added custom single product variation styling and functionality.
+
 = 1.8.1 - 03 February 2022 =
 * WooCommerce: Fixed single product variation drop-down alignment.
 * Smooth Scrolling: Update to allow for animation interruption when another page jump is clicked.
