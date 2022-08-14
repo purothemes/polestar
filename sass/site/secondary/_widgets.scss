@@ -98,25 +98,32 @@
 			text-align: center;
 		}
 	}
+}
 
-	tfoot {
-		font-size: 13px;
+.calendar_wrap .wp-calendar-nav {
+	font-size: 13px;
 
-		#prev,
-		#next {
-			padding-top: 4px;
+	.wp-calendar-nav-prev,
+	.wp-calendar-nav-next {
+		display: inline-block;
+		padding-top: 4px;
+		width: 48%;
 
-			a {
-				color: $color__text-dark;
+		a {
+			color: $color__text-dark;
+			margin-left: 10px;
 
-				&:hover {
-					color: $color__accent;
-				}
+			&:hover {
+				color: $color__accent;
 			}
 		}
+	}
 
-		#next {
-			text-align: right;
+	.wp-calendar-nav-next {
+		text-align: right;
+
+		a {
+			margin: 0 10px 0 0;
 		}
 	}
 }

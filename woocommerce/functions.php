@@ -122,6 +122,15 @@ function polestar_woocommerce_single_gallery_thumbnail_size( $size ) {
 add_filter( 'woocommerce_get_image_size_gallery_thumbnail', 'polestar_woocommerce_single_gallery_thumbnail_size' );
 
 /**
+ * Add SVG arrow to single product variation select.
+ */
+function polestar_woocommerce_nest_variation_select( $html, $args ) {
+	return '<div class="polestar-variations-wrapper">' . $html . '</div>';
+
+}
+add_filter( 'woocommerce_dropdown_variation_attribute_options_html', 'polestar_woocommerce_nest_variation_select', 10, 2 );
+
+/**
  * Custom WooCommerce template tags.
  */
 include get_template_directory() . '/woocommerce/template-tags.php';

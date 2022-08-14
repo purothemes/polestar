@@ -40,8 +40,8 @@ function polestar_build_styles() {
 				'.breadcrumbs a:hover',
 				'.widget-area .widget a:hover',
 				'.site-footer .widget a:hover',
-				'.widget #wp-calendar tfoot #prev a:hover',
-				'.widget #wp-calendar tfoot #next a:hover',
+				'.calendar_wrap .wp-calendar-nav .wp-calendar-nav-prev a:hover',
+				'.calendar_wrap .wp-calendar-nav .wp-calendar-nav-next a:hover',
 				'.entry-meta > span a:hover',
 				'.site-content .more-wrapper a:hover',
 				'.yarpp-related ol li .related-post-title:hover',
@@ -128,9 +128,18 @@ function polestar_build_styles() {
 					'.woocommerce a .star-rating',
 					'.woocommerce .price ins',
 					'.woocommerce .product .summary .woocommerce-review-link:hover',
+					'.woocommerce .product .product-info-wrapper .woocommerce-review-link:hover',
 					'.woocommerce .product .summary .variations .reset_variations:hover',
+					'.woocommerce .product .product-info-wrapper .variations .reset_variations:hover',
+					'.so-panel .variations .reset_variations:hover',
+					'.so-panel .variations .reset_variations:hover',
+					'.woocommerce .product .summary .woocommerce-grouped-product-list td a:hover',
+					'.woocommerce .product .product-info-wrapper .woocommerce-grouped-product-list td a:hover', 
 					'.woocommerce .product .summary .stock',
+					'.woocommerce .product .product-info-wrapper .stock',
 					'.woocommerce .product .summary .product_meta a:hover',
+					'.woocommerce .product .product-info-wrapper .product_meta a:hover',
+					'.woocommerce .product .woocommerce-tabs .wc-tabs li.active a',
 					'.woocommerce .product .woocommerce-Reviews .stars a:hover',
 					'.woocommerce-account .woocommerce-MyAccount-navigation ul li a:hover'
 				),
@@ -203,8 +212,8 @@ function polestar_build_styles() {
 				'#mobile-navigation ul li .dropdown-toggle',
 				'.comment-navigation a',
 				'.widget #wp-calendar caption',
-				'.widget #wp-calendar tfoot #prev a',
-				'.widget #wp-calendar tfoot #next a',
+				'.calendar_wrap .wp-calendar-nav .wp-calendar-nav-prev a',
+				'.calendar_wrap .wp-calendar-nav .wp-calendar-nav-next a',
 				'.site-content .entry-title',
 				'.site-content .entry-title a',
 				'.site-content .more-wrapper a',
@@ -227,7 +236,18 @@ function polestar_build_styles() {
 			// Color.
 			Customizer_Library_Styles()->add( array(
 				'selectors' => array(
-					'.site-header .shopping-cart-text'
+					'.site-header .shopping-cart-text',
+					'.woocommerce .product .summary .variations .label label',
+					'.woocommerce .product .product-info-wrapper .variations .label label',
+					'.so-panel .variations .label label',
+					'.woocommerce form.woocommerce-ordering .ordering-selector-wrapper:hover',
+					'.woocommerce form .polestar-variations-wrapper .ordering-selector-wrapper:hover',
+					'.woocommerce form.woocommerce-ordering .ordering-selector-wrapper .ordering-dropdown li:hover', 
+					'.woocommerce form .polestar-variations-wrapper .ordering-selector-wrapper .ordering-dropdown li:hover',
+					'.woocommerce .product .summary .product_meta',
+					'.woocommerce .product .product-info-wrapper .product_meta',
+					'.woocommerce .product .shop_attributes tr th.woocommerce-product-attributes-item__label',
+					'.site-header .shopping-cart-text',
 				),
 				'declarations' => array(
 					'color' => $color
@@ -237,7 +257,9 @@ function polestar_build_styles() {
 			// Fill.
 			Customizer_Library_Styles()->add( array(
 				'selectors' => array(
-					'.site-header .shopping-cart-link svg'
+					'.site-header .shopping-cart-link svg',
+					'.woocommerce form.woocommerce-ordering .ordering-selector-wrapper.open-dropdown svg path',
+					'.woocommerce form .polestar-variations-wrapper .ordering-selector-wrapper.open-dropdown svg path',
 				),
 				'declarations' => array(
 					'fill' => $color
@@ -304,8 +326,8 @@ function polestar_build_styles() {
 			// Fill.
 			Customizer_Library_Styles()->add( array(
 				'selectors' => array(
-					'.woocommerce .woocommerce-ordering .ordering-selector-wrapper:hover',
-					'.woocommerce .woocommerce-ordering .ordering-selector-wrapper:hover svg path'
+					'.woocommerce form.woocommerce-ordering .ordering-selector-wrapper:hover svg path',
+					'.woocommerce form .polestar-variations-wrapper .ordering-selector-wrapper:hover svg path'
 				),
 				'declarations' => array(
 					'fill' => $color
@@ -412,7 +434,12 @@ function polestar_build_styles() {
 					'.woocommerce .products .product .price',
 					'.woocommerce .price',
 					'.woocommerce .product .summary .variations .reset_variations',
+					'.woocommerce .product .product-info-wrapper .variations .reset_variations',
+					'.so-panel .variations .reset_variations',
+					'.woocommerce .product .summary .woocommerce-grouped-product-list td a',
+					'.woocommerce .product .product-info-wrapper .woocommerce-grouped-product-list td a',
 					'.woocommerce .product .summary .product_meta a',
+					'.woocommerce .product .product-info-wrapper .product_meta a',
 					'.woocommerce .product .woocommerce-Reviews .meta a:hover',
 					'.woocommerce-cart table.cart .cart_item a',
 					'.woocommerce-account .woocommerce-MyAccount-navigation ul li a'
@@ -426,7 +453,8 @@ function polestar_build_styles() {
 			Customizer_Library_Styles()->add( array(
 				'selectors' => array(
 					'.site-header .shopping-cart-link:hover svg',
-					'.woocommerce .woocommerce-ordering .ordering-selector-wrapper svg path',
+					'.woocommerce form.woocommerce-ordering .ordering-selector-wrapper svg path',
+					'.woocommerce form .polestar-variations-wrapper .ordering-selector-wrapper svg path',
 				),
 				'declarations' => array(
 					'fill' => $color
@@ -482,8 +510,10 @@ function polestar_build_styles() {
 					'.woocommerce .woocommerce-breadcrumb',
 					'.woocommerce .woocommerce-breadcrumb a',
 					'.woocommerce .woocommerce-result-count',
-					'.woocommerce .woocommerce-ordering .ordering-selector-wrapper .ordering-dropdown li',
+					'.woocommerce form.woocommerce-ordering .ordering-selector-wrapper .ordering-dropdown li',
+					'.woocommerce form .polestar-variations-wrapper .ordering-selector-wrapper .ordering-dropdown li',
 					'.woocommerce .product .summary .woocommerce-review-link',
+					'.woocommerce .product .product-info-wrapper .woocommerce-review-link',
 					'.woocommerce .product .woocommerce-Reviews .comment-date',
 					'.woocommerce-cart table.cart .cart_item a:hover'
 				),

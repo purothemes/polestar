@@ -6,8 +6,8 @@
 jQuery( function( $ ) {
 
 	// Product archive order drop-down.
-	$( '.woocommerce-ordering select' ).each( function() {
-		var $$ = $(this);
+	var setupWCDropdowns = function( dropdown ) {
+		var $$ = $( dropdown );
 
 		var c = $( '<div></div>' )
 			.html( '<span class="current">' + $$.find( ':selected' ).html() + '</span>' + polestar_data.chevron_down )
@@ -29,23 +29,64 @@ jQuery( function( $ ) {
 				$( '<li></li>' )
 					.html( $o.html() )
 					.data( 'val', $o.attr( 'value' ) )
-					.on( 'click', function() {
-						$$.val( $( this ).data( 'val' ) );
-						$$.closest( 'form' ).submit();
-					} )
 			);
 
-			widest = Math.max( c.find( '.current' ).html( $o.html() ).width(), widest);
+			c.find( '.current' ).html( $o.html() );
+			widest = Math.max( c.find( '.current' ).width(), widest );
 
 		} );
-
-		c.find('.current').html( $$.find( ':selected' ).html() ).width( widest );
+    
+		c.find( '.current' ).html( $$.find( ':selected' ).html() );
+		c.find( '.current' ).width( widest );
 
 		$$.hide();
+	}
+
+	// Handle dropdown form submission.
+	$( document ).on( 'click', '.ordering-selector-wrapper .ordering-dropdown li', function() {
+		var $select = $( this ).parents( '.polestar-variations-wrapper, .woocommerce-ordering' ).find( 'select' );
+		$select.val( $( this ).data( 'val' ) ).trigger( 'change' );
+
+		if ( $select.hasClass( 'woocommerce-ordering' ) ) {
+			$select.closest( 'form' ).trigger( 'submit' );
+		} else {
+			// Handle WC variation form update after selection.
+			$variations = $( this ).parents( '.variations' );
+			if ( $variations.length ) {
+				$variations.find( '.polestar-variations-wrapper' ).each( function() {
+					var dropdown = $( this ).find( '.ordering-dropdown' );
+					dropdown.empty();
+
+					// Update variation drop down with correct values.
+					$( this ).find( 'option' ).each( function( index ) {
+						var $$ = $( this );
+						dropdown.append(
+							$( '<li></li>' )
+								.html( $$.html() )
+								.data( 'val', $$.attr( 'value' ) )
+						);
+					} );
+
+					// Update .current if previous current isn't possible anymore.
+					$( this ).find( '.current' ).text(
+						$( this ).find( 'select' ).find( ':selected' ).text()
+					);
+				} );
+			} else {
+				$( this ).parents( '.ordering-selector-wrapper' ).find( '.current' ).text(  $( this ).text() );
+			}
+		}
+	} )
+
+	$( '.woocommerce-ordering select, .polestar-variations-wrapper select' ).each( function() {
+		setupWCDropdowns( this );
 	} );
 
 	// Open dropdown on click.
-	$( '.ordering-selector-wrapper' ).on( 'click', function() {
+	$( document ).on( 'click', '.ordering-selector-wrapper', function() {
+		// Ensure no other dropdowns are already open.
+		$( '.open-dropdown' ).removeClass( 'open-dropdown' );
+		// Open the clicked dropdown.
 		$( this ).toggleClass( 'open-dropdown' );
 	} );
 
@@ -55,9 +96,20 @@ jQuery( function( $ ) {
 			$( '.ordering-selector-wrapper.open-dropdown' ).removeClass( 'open-dropdown' );
 		}
 	} );
-	
+
+	// Reset dropdown when clicking clear.
+	$( document ).on( 'click', '.woocommerce .product .variations .reset_variations', function() {
+		$( this ).parents( '.variations_form' ).find( '.polestar-variations-wrapper' ).each( function() {
+			var $$ = $( this );
+			$$.find( '.current' ).text( $$.find( '.ordering-dropdown li' ).first().text() );
+
+			$$.find( 'select' ).find( ':selected' ).prop( 'selected', false );
+			$$.find( 'select' ).trigger( 'change' );
+		} );
+	} );
+
 	// Quick View modal.
-	$( '.product-quick-view-button' ).click( function( e ) {
+	$( '.product-quick-view-button' ).on( 'click', function( e ) {
 		e.preventDefault();
 
 		var $container = '#quick-view-container';
@@ -72,6 +124,10 @@ jQuery( function( $ ) {
 				$( document ).find( $container ).find( $content ).html( data );
 				$( document ).find( '#product-quick-view .variations_form' ).wc_variation_form();
 				$( document ).find( '#product-quick-view .variations_form' ).trigger( 'check_variations' );
+				// Setup variation drop downs to use the Polestar WC Drop Down.
+				$( '#quick-view-container .polestar-variations-wrapper select' ).each( function() {
+					setupWCDropdowns( this );
+				} );
 			}
 		);
 
@@ -85,22 +141,23 @@ jQuery( function( $ ) {
 					}
 				} );
 
-				// If variation has image, change to Flexslider slide.
+				// If variation has image, change to flexslider slide.
 				$( '#product-quick-view .variations_form' ).on( 'found_variation.wc-variation-form', function( event, variation ) {
 					if ( variation && variation.image && variation.image.full_src ) {
 						var variationItem = $( '#product-quick-view .product-gallery-image' ).find( 'img[src="' + variation.image.full_src + '"]' );
 						if ( variationItem.length > 0 ) {
-							 $( '.product-images-slider' ).flexslider( variationItem.parent().index( '.product-images-slider  .slide' ) - 1 );
+							 $( '.product-images-slider' ).flexslider( variationItem.parent().index('.product-images-slider  .slide') - 1 );
 						} else {
 							$( '.product-images-slider' ).flexslider( 0 );
 						}
 					}
 				} );
 
-				// Reset Flexslider when WordPress wants to.
+				// Reset flexslider when WooCommerce wants to
 				$( '#product-quick-view .variations_form' ).on( 'reset_image', function( event, variation ) {
 					$( '.product-images-slider' ).flexslider( 0 );
 				} );
+
 			}
 		} );
 
@@ -126,7 +183,7 @@ jQuery( function( $ ) {
 		$( document ).on( 'keyup', function( e ) {
 			var container = $( $content );
 			if ( e.keyCode == 27 ) { // Escape key maps to keycode 27.
-				$($container).fadeOut( 300 );
+				$( $container ).fadeOut( 300 );
 				// Enable scrolling.
 				$( 'body' ).css( 'overflow', '' );
 				$( 'body' ).css( 'margin-right', '' );
