@@ -152,6 +152,9 @@ Released under [GPL version 2](https://www.gnu.org/licenses/old-licenses/gpl-2.0
 
 == Changelog ==
 
+= 1.9.1 - 08 November 2022 =
+* WooCommerce: Updated bundled templates to `7.0.1`.
+
 = 1.9.0 - 14 August 2022 =
 * Updated Calendar Widget styling for new markup.
 * Updated Customizer Library.
